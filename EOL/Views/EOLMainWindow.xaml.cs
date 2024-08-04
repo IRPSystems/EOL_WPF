@@ -1,4 +1,5 @@
-﻿using EOL.ViewModels;
+﻿using EOL.Services;
+using EOL.ViewModels;
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,11 @@ namespace EOL.Views
 		{
 			InitializeComponent();
 
-			DataContext = new EOLMainViewModel();
+			UserConfigManager userConfigManager = new UserConfigManager();
+
+			userConfigManager.ReadConfig();
+
+            DataContext = new EOLMainViewModel();
 		}
 	}
 }
