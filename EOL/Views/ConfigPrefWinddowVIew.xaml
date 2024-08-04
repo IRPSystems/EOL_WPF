@@ -10,7 +10,8 @@
                  DataContextChanged="UserControl_DataContextChanged" 
                  ShowCloseButton="False"
                  ShowMinButton="False"
-                 ShowMaxRestoreButton="False">
+                 ShowMaxRestoreButton="False"
+                 WindowStartupLocation="CenterScreen">
 
     
 
