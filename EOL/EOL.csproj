@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" PrivateAssets="All" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevicesInfrastructures\DeviceCommunicators\DeviceCommunicators.csproj" />
+    <ProjectReference Include="..\DevicesInfrastructures\DeviceHandler\DeviceHandler.csproj" />
+    <ProjectReference Include="..\DevicesInfrastructures\DeviceSimulators\DeviceSimulators.csproj" />
+    <ProjectReference Include="..\Infrastructure\Controls\Controls.csproj" />
+    <ProjectReference Include="..\Infrastructure\Services\Services.csproj" />
+    <ProjectReference Include="..\ScriptsInfrastructure\ScriptHandler\ScriptHandler.csproj" />
+    <ProjectReference Include="..\ScriptsInfrastructure\ScriptRunner\ScriptRunner.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir &quot;$(OutDir)Data&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Data\Device Communications&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\Device Communications\*.*&quot; &quot;$(OutDir)Data\Device Communications\*.*&quot;" />
+  </Target>
+
+</Project>

@@ -1,0 +1,143 @@
+﻿<mah:MetroWindow x:Class="EOL.Views.EOLMainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                 xmlns:device_handler_views="clr-namespace:DeviceHandler.Views;assembly=DeviceHandler"
+                 xmlns:local="clr-namespace:EOL.Views"
+                 mc:Ignorable="d"
+                 Title="EOL" Height="650" Width="1000">
+
+    <mah:MetroWindow.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Controls;component/Resources/ButtonWithIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ScriptRunner;component/Resources/ScriptStepTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ScriptHandler;component/Resources/ScriptLogDiagramTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            
+        </ResourceDictionary>
+
+    </mah:MetroWindow.Resources>
+
+    <i:Interaction.Triggers>
+
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Path=DataContext.LoadedCommand, 
+                                                             Mode=OneWay, 
+                                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                                   PassEventArgsToCommand="False"/>
+        </i:EventTrigger>
+
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding Path=DataContext.ClosingCommand, 
+                                                             Mode=OneWay, 
+                                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                                   PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="5,0" >
+
+                <Button Style="{StaticResource ButtonWithIconStyle}"
+                        Width="25"
+                        Height="25"
+                        Margin="0,0,5,0"
+                        ToolTip="Change the background to Dark/Light"
+                        Command="{Binding ChangeDarkLightCommand}"
+                        VerticalAlignment="Center">
+                    <iconPacks:Material Kind="InvertColors" />
+                </Button>
+
+                <Button Style="{StaticResource ButtonWithIconStyle}"
+                        Width="25"
+                        Height="25"
+                        Margin="0,0,5,0"
+                        ToolTip="Communication settings"
+                        Command="{Binding CommunicationSettingsCommand}"
+                        VerticalAlignment="Center">
+                    <iconPacks:Material Kind="Connection" />
+                </Button>
+
+                <Button Style="{StaticResource ButtonWithIconStyle}"
+                        Width="25"
+                        Height="25"
+                        Margin="0,0,50,0"
+                        ToolTip="Settings"
+                        Command="{Binding SettingsCommand}"
+                        VerticalAlignment="Center">
+                    <iconPacks:PackIconOcticons Kind="Gear" />
+                </Button>
+
+                <mah:DropDownButton Content="{Binding SelectedMode}"
+                                    DisplayMemberPath="Name"
+                                    ItemsSource="{Binding ModeTypeList}"
+                                    Margin="0,2,20,2"
+                                    Width="100">
+
+                    <mah:DropDownButton.ItemContainerStyle>
+                        <Style BasedOn="{StaticResource {x:Type MenuItem}}" TargetType="{x:Type MenuItem}">
+                            <Setter Property="Command" Value="{Binding Path=DataContext.ModesDropDownMenuItemCommand, 
+                                                       RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:DropDownButton}} }" />
+                            <Setter Property="CommandParameter" Value="{Binding Name}" />
+                        </Style>
+                    </mah:DropDownButton.ItemContainerStyle>
+
+                    <mah:DropDownButton.Icon>
+                        <iconPacks:PackIconMaterial Kind="AccountMultiple" />
+                    </mah:DropDownButton.Icon>
+
+                </mah:DropDownButton>
+
+            </StackPanel>
+
+            <device_handler_views:CommunicationIndeicatorView DataContext="{Binding DevicesContainter}"
+                                                              Grid.Column="2"/>
+        </Grid>
+
+        <local:OperatorView Grid.Row="2" DataContext="{Binding OperatorVM}" Margin="5"/>
+
+        <Border Grid.Row="4" Background="{DynamicResource MahApps.Brushes.Accent}">
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Text="Version: " 
+                           FontSize="16"
+                           FontWeight="DemiBold" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"
+                           Margin="5,0,5,0"/>
+
+                <TextBlock Text="{Binding Version}" 
+                           FontSize="16"
+                           FontWeight="DemiBold" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</mah:MetroWindow>

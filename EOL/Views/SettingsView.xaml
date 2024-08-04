@@ -1,0 +1,69 @@
+﻿<mah:MetroWindow x:Class="EOL.Views.SettingsView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+                 xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                 xmlns:local="clr-namespace:EOL.Views"
+                 mc:Ignorable="d"
+                 Title="Settings" Height="450" Width="800">
+
+    <i:Interaction.Triggers>
+
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Path=DataContext.LoadedCommand, 
+                                                         Mode=OneWay, 
+                                                         RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                               PassEventArgsToCommand="False"/>
+        </i:EventTrigger>
+
+    </i:Interaction.Triggers>
+
+    <TabControl mah:TabControlHelper.Underlined="SelectedTabItem">
+        
+        <TabItem Header="Files">
+            
+            <ListView ItemsSource="{Binding FilesList}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{Binding DataContext.DescriptsionColumnWidth,
+                                                                  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}" />
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" 
+                                       Text="{Binding Description}" 
+                                       VerticalAlignment="Center" 
+                                       ToolTip="{Binding Description}"
+                                       TextTrimming="CharacterEllipsis"/>
+
+                            <TextBox Grid.Column="2" 
+                                     Text="{Binding Path}" />
+
+                            <Button Grid.Column="4" 
+                                Content="..."
+                                Command="{Binding DataContext.BrowseFilePathCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}"
+                                CommandParameter="{Binding}"/>
+
+
+
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </TabItem>
+
+        <TabItem Header="General" >
+
+        </TabItem>
+        
+    </TabControl>
+</mah:MetroWindow>
