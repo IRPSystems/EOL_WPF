@@ -1,4 +1,6 @@
-﻿using EOL_Tester.Classes;
+﻿using EOL.ViewModels;
+using EOL.Views;
+using EOL_Tester.Classes;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
@@ -66,11 +68,14 @@ namespace EOL.Services
 
         private void RunAutoConfigUI()
         {
-            //Form _autoConfigPref = new ConfigPref();
-            //_autoConfigPref.ShowDialog();
-            //SaveConfig();
-            //_autoConfigPref.Dispose();
-        }
+            ConfigPrefWinddowVIew configPrefWinddowVIew = new ConfigPrefWinddowVIew()
+            {
+                DataContext = new ConfigPrefVIewModel(),
+            };
+
+			configPrefWinddowVIew.ShowDialog();
+			SaveConfig();
+		}
 
         private void TryAutoPackageConfig()
         {
