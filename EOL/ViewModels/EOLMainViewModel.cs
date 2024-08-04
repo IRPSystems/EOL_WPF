@@ -23,6 +23,7 @@ using DeviceHandler.Views;
 using EOL.Views;
 using Syncfusion.DocIO.DLS;
 using System.Xml.Linq;
+using EOL.Services;
 
 namespace EOL.ViewModels
 {
@@ -71,6 +72,12 @@ namespace EOL.ViewModels
 
 		public EOLMainViewModel()
 		{
+
+
+			UserConfigManager userConfigManager = new UserConfigManager();
+
+			userConfigManager.ReadConfig();
+
 			SelectedMode = "Operator";
 
 			Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();

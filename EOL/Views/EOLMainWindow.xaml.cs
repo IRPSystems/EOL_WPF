@@ -27,10 +27,6 @@ namespace EOL.Views
 		{
 			InitializeComponent();
 
-			UserConfigManager userConfigManager = new UserConfigManager();
-
-			userConfigManager.ReadConfig();
-
             DataContext = new EOLMainViewModel();
 		}
 	}
