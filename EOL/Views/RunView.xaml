@@ -78,7 +78,7 @@
                 <RowDefinition Height="5" />
                 <RowDefinition Height="27" />
                 <RowDefinition Height="2" />
-                <RowDefinition Height="27" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -148,15 +148,17 @@
 
             <TextBlock Grid.Row="6" Text="{Binding RunScript.CurrentScript.CurrentStep.Description}" FontSize="16"  Margin="5,0,0,0"/>
 
-            <ProgressBar Grid.Row="8"
-                         Minimum="0"
-                         Maximum="100"
-                         Value="{Binding RunScript.CurrentScript.CurrentStep.ProgressPercentage}"/>
-            <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock VerticalAlignment="Center" Text="{Binding RunScript.CurrentScript.CurrentStep.ProgressPercentage}" 
-                           Foreground="White" FontSize="16"/>
-                <TextBlock VerticalAlignment="Center" Text="%" Foreground="White" FontSize="16"/>
-            </StackPanel>
+            <ContentControl Grid.Row="8" 
+                ContentTemplate="{Binding RunScript.CurrentScript.CurrentStep.Template}">
+
+                <ContentControl.Content>
+                    <MultiBinding Converter="{StaticResource ContentConverter}">
+                        <Binding Path="RunScript.CurrentScript.CurrentStep.Description" />
+                        <Binding Path="RunScript.CurrentScript.CurrentStep"/>
+                    </MultiBinding>
+                </ContentControl.Content>
+
+            </ContentControl>
 
             <ListView Grid.Row="10"
                       FontSize="14" 
