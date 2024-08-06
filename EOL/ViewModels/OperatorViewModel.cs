@@ -31,7 +31,10 @@ namespace EOL.ViewModels
 			ScriptUserData scriptUserData)
 		{
 			RunData = new RunData();
-			Run = new RunViewModel(null, devicesContainer, RunData);
+			Run = new RunViewModel(
+				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr", 
+				devicesContainer, 
+				RunData);
 			RunData.RunScript = Run.RunScript;
 		}		
 

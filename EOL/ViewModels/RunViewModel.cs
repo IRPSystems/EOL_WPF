@@ -60,11 +60,10 @@ namespace EOL.ViewModels
 		#region Constructor
 
 		public RunViewModel(
-			GeneratedScriptData currentScript,
+			string scriptPath,
 			DevicesContainer devicesContainer,
 			RunData runData)
 		{
-			_currentScript = currentScript;
 			_devicesContainer = devicesContainer;
 			_runData = runData;
 
@@ -91,7 +90,7 @@ namespace EOL.ViewModels
 
 			OpenProjectForRunService openProject = new OpenProjectForRunService();
 			GeneratedProjectData project = openProject.Open(
-				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr",
+				scriptPath,
 				devicesContainer,
 				null,
 				stopScriptStep);
@@ -186,6 +185,33 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Aborted;
 			else
 				RunState = RunStateEnum.Ended;
+		}
+
+		private void CountRunSteps()
+		{
+			_runData.NumberOfTested = _currentScript.TotalRunSteps;
+
+			_runData.NumberOfPassed = 0;
+			_runData.NumberOfFailed = 0;
+
+			CountPassFaileRunSteps(_currentScript);
+		}
+
+		private void CountPassFaileRunSteps(GeneratedScriptData script)
+		{
+			if (script == null)
+				return;
+
+			_runData.NumberOfPassed += script.PassRunSteps;
+			_runData.NumberOfFailed += script.FailRunSteps;
+
+			foreach (IScriptItem item in script.ScriptItemsList)
+			{
+				if(item is ISubScript subScript)
+				{
+					CountPassFaileRunSteps(subScript.Script as GeneratedScriptData);
+				}
+			}
 		}
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
