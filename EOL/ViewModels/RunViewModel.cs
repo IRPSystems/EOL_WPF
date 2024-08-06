@@ -2,7 +2,10 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
+using EOL.Models;
+using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
+using ScriptHandler.Models.ScriptSteps;
 using ScriptHandler.Services;
 using ScriptHandler.ViewModels;
 using ScriptRunner.Enums;
@@ -47,17 +50,26 @@ namespace EOL.ViewModels
 		private int _totalNumOfSteps;
 		private int _stepsCounter;
 
+		private RunData _runData;
+
+		private System.Timers.Timer _timerDuration;
+		private DateTime _startTime;
+
 		#endregion Fields
 
 		#region Constructor
 
 		public RunViewModel(
 			GeneratedScriptData currentScript,
-			DevicesContainer devicesContainer)
+			DevicesContainer devicesContainer,
+			RunData runData)
 		{
 			_currentScript = currentScript;
 			_devicesContainer = devicesContainer;
+			_runData = runData;
 
+			_timerDuration = new System.Timers.Timer(300);
+			_timerDuration.Elapsed += _timerDuration_Elapsed;
 
 			IsRunButtonEnabled = true;
 
@@ -79,7 +91,7 @@ namespace EOL.ViewModels
 
 			OpenProjectForRunService openProject = new OpenProjectForRunService();
 			GeneratedProjectData project = openProject.Open(
-				@"C:\Users\smadar\Documents\Scripts\Tests\Simple Script.scr",
+				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr",
 				devicesContainer,
 				null,
 				stopScriptStep);
@@ -93,6 +105,8 @@ namespace EOL.ViewModels
 			_currentScript = project.TestsList[0];
 		}
 
+		
+
 		#endregion Constructor
 
 		#region Methods
@@ -101,6 +115,9 @@ namespace EOL.ViewModels
 		{
 			if(_currentScript == null)
 				return;
+
+			_timerDuration.Start();
+			_startTime = DateTime.Now;
 
 			ScriptDiagram.DrawScript(_currentScript);
 		}
@@ -121,15 +138,36 @@ namespace EOL.ViewModels
 
 		private void Run()
 		{
+			_runData.StartTime = DateTime.Now;
 			IsRunButtonEnabled = false;
 			RunState = RunStateEnum.Running;
 
+			SetSNToScriptTool(_currentScript.ScriptItemsList);
 			RunScript.Run(null, _currentScript, null, false);
 
 			RunPercentage = 0;
 			_totalNumOfSteps = _currentScript.ScriptItemsList.Count + 1;
 			_stepsCounter = 1;
 		}		
+
+		private void SetSNToScriptTool(
+			ObservableCollection<IScriptItem> scriptItemsList)
+		{
+			foreach(IScriptItem scriptItem in scriptItemsList)
+			{
+                if (scriptItem is ISubScript subScript)
+                {
+					SetSNToScriptTool(subScript.Script.ScriptItemsList);
+					continue;
+				}
+
+				if(scriptItem is ScriptStepEOLSendSN sn)
+				{
+					sn.SerialNumber = _runData.SerialNumber;
+					//sn.UserSN = _runData. // TODO?
+				}
+            }
+		}
 
 		private void Abort()
 		{
@@ -138,12 +176,19 @@ namespace EOL.ViewModels
 
 		private void Stop(ScriptStopModeEnum stopeMode)
 		{			
+			_timerDuration.Stop();
+			_runData.EndTime = DateTime.Now;
 			IsRunButtonEnabled = true;
 
 			if (stopeMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 			else
 				RunState = RunStateEnum.Ended;
+		}
+
+		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+		{
+			RunScript.RunTime = DateTime.Now - _startTime;
 		}
 
 		#endregion Methods

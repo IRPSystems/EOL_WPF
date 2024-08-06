@@ -60,7 +60,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Start time" VerticalAlignment="Center"/>
-                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding StartTime, StringFormat={}{0:dd/MMM/yyyy hh:mm:ss}}" VerticalAlignment="Center">
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding StartTime, StringFormat={}{0:dd-MMM-yyyy hh:mm:ss}}" VerticalAlignment="Center">
                     <TextBlock.Resources>
                         <Style TargetType="TextBlock">
                             <Style.Triggers>
@@ -73,10 +73,12 @@
                 </TextBlock>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Duration" VerticalAlignment="Center"/>
-                <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding Duration}" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" 
+                           Text="{Binding RunScript.RunTime, StringFormat=\{0:hh\\:mm\\:ss\\.fff\}}" 
+                           VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Row="4" Grid.Column="0" Text="End time" VerticalAlignment="Center"/>
-                <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding EndTime, StringFormat={}{0:dd/MMM/yyyy hh:mm:ss}}" VerticalAlignment="Center">
+                <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding EndTime, StringFormat={}{0:dd-MMM-yyyy hh:mm:ss}}" VerticalAlignment="Center">
                     <TextBlock.Resources>
                         <Style TargetType="TextBlock">
                             <Style.Triggers>

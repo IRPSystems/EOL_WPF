@@ -31,7 +31,8 @@ namespace EOL.ViewModels
 			ScriptUserData scriptUserData)
 		{
 			RunData = new RunData();
-			Run = new RunViewModel(null, devicesContainer);
+			Run = new RunViewModel(null, devicesContainer, RunData);
+			RunData.RunScript = Run.RunScript;
 		}		
 
 		#endregion Constructor

@@ -8,10 +8,11 @@
                  mc:Ignorable="d"
                  Title="Cofig" Height="{Binding WindowHeight, Mode=TwoWay}" Width="200"
                  DataContextChanged="UserControl_DataContextChanged" 
-                 ShowCloseButton="False"
+                 ShowCloseButton="True"
                  ShowMinButton="False"
                  ShowMaxRestoreButton="False"
-                 WindowStartupLocation="CenterScreen">
+                 WindowStartupLocation="CenterScreen"
+                 MinHeight="50">
 
     
 

@@ -1,5 +1,6 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
+using ScriptRunner.Services;
 using System;
 
 namespace EOL.Models
@@ -17,5 +18,7 @@ namespace EOL.Models
 		public int NumberOfTested { get; set; }
 		public int NumberOfFailed { get; set; }
 		public int NumberOfPassed { get; set; }
+
+		public RunScriptService RunScript { get; set; }
 	}
 }
