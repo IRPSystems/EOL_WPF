@@ -1,0 +1,103 @@
+{
+  "Configurations": {
+    "EOL": {
+      "MainSeq": {
+        "SubfolderName": "EOL_Script",
+        "FileExtension": "*.json",
+        "IsUsed": true
+      },
+      "ProjectSeq": {
+        "SubfolderName": "TP_ProjectFiles",
+        "FileExtension": "*.json",
+        "IsUsed": true
+      },
+      "MonitorLog": {
+        "SubfolderName": "MonitorLog_Config",
+        "FileExtension": "*.json",
+        "IsUsed": true
+      },
+      "FirstFlashFile": {
+        "SubfolderName": "TP_ProjectFiles\\App",
+        "FileExtension": "",
+        "IsUsed": true
+      },
+      "SecondFlashFile": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "OtherPreferences": {
+        "MonitorLog": true,
+        "PrintLabel": true,
+        "PreFlash": false
+      }
+    },
+	
+    "FT": {
+      "MainSeq": {
+        "SubfolderName": "FunctionalTester_Script",
+        "FileExtension": "*.json",
+        "IsUsed": true
+      },
+      "ProjectSeq": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "MonitorLog": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "FirstFlashFile": {
+        "SubfolderName": "Tester_UUT_FW",
+        "FileExtension": "*.irphex",
+        "IsUsed": true
+      },
+      "SecondFlashFile": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "OtherPreferences": {
+        "MonitorLog": false,
+        "PrintLabel": false,
+        "PreFlash": true,
+		"IsTogglePower": true,
+		"AteBoxFlashPower": true,
+      }
+    },
+    "Flasher": {
+      "MainSeq": {
+        "SubfolderName": "TP_ProjectFiles",
+        "FileExtension": "*.json",
+        "IsUsed": true
+      },
+      "ProjectSeq": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "MonitorLog": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "FirstFlashFile": {
+        "SubfolderName": "TP_ProjectFiles\\App",
+        "FileExtension": "",
+        "IsUsed": true
+      },
+      "SecondFlashFile": {
+        "SubfolderName": "",
+        "FileExtension": "",
+        "IsUsed": false
+      },
+      "OtherPreferences": {
+        "MonitorLog": false,
+        "PrintLabel": true,
+        "PreFlash": false
+      }
+    }
+  }
+}

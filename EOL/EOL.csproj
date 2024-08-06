@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(OutDir)Data&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Data\Device Communications&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\Device Communications\*.*&quot; &quot;$(OutDir)Data\Device Communications\*.*&quot;" />
+    <Exec Command="mkdir &quot;$(OutDir)Data&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Data\Device Communications&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\Device Communications\*.*&quot; &quot;$(OutDir)Data\Device Communications\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\PackageConfigs.json&quot; &quot;$(OutDir)PackageConfigs.json&quot;" />
   </Target>
 
 </Project>
