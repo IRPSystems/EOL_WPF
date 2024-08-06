@@ -7,6 +7,6 @@
                  xmlns:device_handler_view="clr-namespace:DeviceHandler.Views;assembly=DeviceHandler"
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
-                 Title="Communication" Height="450" Width="800">
+                 Title="Communication" Height="450" Width="1200">
     <device_handler_view:CommunicationView Margin="10"/>
 </mah:MetroWindow>
