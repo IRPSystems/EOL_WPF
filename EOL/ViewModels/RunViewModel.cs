@@ -178,6 +178,8 @@ namespace EOL.ViewModels
 		{			
 			_timerDuration.Stop();
 			_runData.EndTime = DateTime.Now;
+			_runData.Duration = RunScript.RunTime;
+
 			IsRunButtonEnabled = true;
 
 			if (stopeMode == ScriptStopModeEnum.Aborted)
