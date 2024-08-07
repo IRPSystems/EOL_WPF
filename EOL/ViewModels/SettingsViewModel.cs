@@ -54,7 +54,7 @@ namespace EOL.ViewModels
 					CultureInfo.CurrentCulture,
 					FlowDirection.LeftToRight,
 					new Typeface(textBlock.FontFamily, textBlock.FontStyle, textBlock.FontWeight, textBlock.FontStretch),
-					textBlock.FontSize,
+					14,
 					Brushes.Black,
 					new NumberSubstitution(),
 					VisualTreeHelper.GetDpi(textBlock).PixelsPerDip);
@@ -64,8 +64,8 @@ namespace EOL.ViewModels
 			}
 
 			DescriptsionColumnWidth = maxWidth + 10;
-			if(DescriptsionColumnWidth > 200)
-				DescriptsionColumnWidth = 200;
+			if(DescriptsionColumnWidth > 250)
+				DescriptsionColumnWidth = 250;
 		}
 
 

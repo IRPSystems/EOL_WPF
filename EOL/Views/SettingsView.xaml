@@ -10,6 +10,55 @@
                  Title="Settings" Height="450" Width="800"
                  WindowStartupLocation="CenterOwner">
 
+    <Window.Resources>
+
+        <Style TargetType="ListViewItem" >
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+
+                        <Grid Margin="0,3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{Binding DataContext.DescriptsionColumnWidth,
+                                                                  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}" />
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" 
+                                       Text="{Binding Description}" 
+                                       VerticalAlignment="Center" 
+                                       ToolTip="{Binding Description}"
+                                       TextTrimming="CharacterEllipsis"
+                                       FontSize="14"/>
+
+                            <TextBox Grid.Column="2" 
+                                     Text="{Binding Path}" />
+
+                            <Button Grid.Column="4" 
+                                    Content="..."
+                                    Command="{Binding DataContext.BrowseFilePathCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}"
+                                    CommandParameter="{Binding}"/>
+
+
+
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+            </Style.Resources>
+
+        </Style>
+
+    </Window.Resources>
+
     <i:Interaction.Triggers>
 
         <i:EventTrigger EventName="Loaded">
@@ -26,37 +75,7 @@
         <TabItem Header="Files">
 
             <ListView ItemsSource="{Binding SettingsData.FilesList}" Margin="10">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid >
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="{Binding DataContext.DescriptsionColumnWidth,
-                                                                  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}" />
-                                <ColumnDefinition Width="5" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="5" />
-                                <ColumnDefinition Width="40" />
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Grid.Column="0" 
-                                       Text="{Binding Description}" 
-                                       VerticalAlignment="Center" 
-                                       ToolTip="{Binding Description}"
-                                       TextTrimming="CharacterEllipsis"/>
-
-                            <TextBox Grid.Column="2" 
-                                     Text="{Binding Path}" />
-
-                            <Button Grid.Column="4" 
-                                Content="..."
-                                Command="{Binding DataContext.BrowseFilePathCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}"
-                                CommandParameter="{Binding}"/>
-
-
-
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+                
             </ListView>
 
 
