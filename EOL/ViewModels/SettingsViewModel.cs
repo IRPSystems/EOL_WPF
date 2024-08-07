@@ -13,15 +13,27 @@ namespace EOL.ViewModels
 {
     public class SettingsViewModel: ObservableObject
     {
-        public ObservableCollection<FilesData> FilesList { get; set; }
+		#region Properties
+
+		public SettingsData SettingsData { get; set; }
 		public double DescriptsionColumnWidth { get; set; }
 
-        public SettingsViewModel()
+		#endregion Properties
+
+		#region Constructor
+
+		public SettingsViewModel(SettingsData settingsData)
         {
+			SettingsData = settingsData;
+
 			BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
 			
 		}
+
+		#endregion Constructor
+
+		#region Methods
 
 		private void Loaded()
 		{
@@ -31,7 +43,7 @@ namespace EOL.ViewModels
 		private void GetDescriptsionColumnWidth()
 		{
 			double maxWidth = 0;
-			foreach (FilesData filesData in FilesList)
+			foreach (FilesData filesData in SettingsData.FilesList)
 			{
 				if (filesData == null || string.IsNullOrEmpty(filesData.Description))
 					continue;
@@ -67,9 +79,14 @@ namespace EOL.ViewModels
 			filesData.Path = openFileDialog.FileName;
 		}
 
+		#endregion Methods
+
+		#region Commands
 
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
+
+		#endregion Commands
 
 	}
 }

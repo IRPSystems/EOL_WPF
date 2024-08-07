@@ -63,8 +63,7 @@ namespace EOL.ViewModels
 
 		private EOLSettings _eolSettings;
 
-		private ObservableCollection<FilesData> _filesList;
-
+		private SettingsData _settingsData;
 
 		#endregion Fields
 
@@ -72,7 +71,7 @@ namespace EOL.ViewModels
 
 		public EOLMainViewModel()
 		{
-
+			_settingsData = new SettingsData();
 
 			UserConfigManager userConfigManager = new UserConfigManager();
 
@@ -88,6 +87,7 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
 			ModesDropDownMenuItemCommand = new RelayCommand<string>(ModesDropDownMenuItem);
 
+			
 
 			CommunicationSettingsCommand = new RelayCommand(InitCommunicationSettings);
 			SettingsCommand = new RelayCommand(Settings);
@@ -135,7 +135,7 @@ namespace EOL.ViewModels
 
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				_filesList = new ObservableCollection<FilesData>();
+				_settingsData.FilesList = new ObservableCollection<FilesData>();
 				for (int i = 0; i < 10; i++)
 				{
 					FilesData data = new FilesData()
@@ -143,11 +143,12 @@ namespace EOL.ViewModels
 						Description = $"File {i + 1}"
 					};
 
-					_filesList.Add(data);
+					_settingsData.FilesList.Add(data);
 
 				}
 
-				SettingsVM = new SettingsViewModel();
+				
+				SettingsVM = new SettingsViewModel(_settingsData);
 
 
 				try
@@ -245,7 +246,8 @@ namespace EOL.ViewModels
 		{
 			CommunicationWindowView communicationWindowView = new CommunicationWindowView()
 			{
-				DataContext = CommunicationSettings
+				DataContext = CommunicationSettings,
+				Owner = Application.Current.MainWindow
 			};
 
 			communicationWindowView.Show();
@@ -255,10 +257,10 @@ namespace EOL.ViewModels
 		{
 			SettingsView settingsView = new SettingsView()
 			{
-				DataContext = SettingsVM
+				DataContext = SettingsVM,
+				Owner = Application.Current.MainWindow
 			};
 
-			SettingsVM.FilesList = _filesList;
 
 			settingsView.Show();
 		}

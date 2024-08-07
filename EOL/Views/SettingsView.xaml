@@ -7,7 +7,8 @@
                  xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
-                 Title="Settings" Height="450" Width="800">
+                 Title="Settings" Height="450" Width="800"
+                 WindowStartupLocation="CenterOwner">
 
     <i:Interaction.Triggers>
 
@@ -21,10 +22,10 @@
     </i:Interaction.Triggers>
 
     <TabControl mah:TabControlHelper.Underlined="SelectedTabItem">
-        
+
         <TabItem Header="Files">
-            
-            <ListView ItemsSource="{Binding FilesList}" >
+
+            <ListView ItemsSource="{Binding SettingsData.FilesList}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid >
@@ -63,6 +64,18 @@
 
         <TabItem Header="General" >
 
+            <StackPanel Margin="10">
+
+                <CheckBox Content="Ignore fail" 
+                          IsChecked="{Binding IsIgnorFail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Margin="0,0,0,10"
+                          FontSize="15"/>
+                <CheckBox Content="Print label" 
+                          IsChecked="{Binding IsPrintLabel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                          
+                          FontSize="15"/>
+
+            </StackPanel>
+            
         </TabItem>
         
     </TabControl>
