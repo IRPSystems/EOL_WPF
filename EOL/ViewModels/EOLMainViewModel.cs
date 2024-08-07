@@ -24,6 +24,9 @@ using EOL.Views;
 using Syncfusion.DocIO.DLS;
 using System.Xml.Linq;
 using EOL.Services;
+using ScriptHandler.Interfaces;
+using System.Security.Policy;
+using System.Threading;
 
 namespace EOL.ViewModels
 {
@@ -135,17 +138,16 @@ namespace EOL.ViewModels
 
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				_settingsData.FilesList = new ObservableCollection<FilesData>();
-				for (int i = 0; i < 10; i++)
+				_settingsData.FilesList = new ObservableCollection<FilesData>()
 				{
-					FilesData data = new FilesData()
-					{
-						Description = $"File {i + 1}"
-					};
-
-					_settingsData.FilesList.Add(data);
-
-				}
+					new FilesData() { Description = "Reports Path" },
+					new FilesData() { Description = "Main Script Path" },
+					new FilesData() { Description = "Project Script Path" },
+					new FilesData() { Description = "Monitor Script Path" },
+					new FilesData() { Description = "First Flash File Path" },
+					new FilesData() { Description = "Second Flash File Path" },
+				};
+				
 
 				
 				SettingsVM = new SettingsViewModel(_settingsData);
