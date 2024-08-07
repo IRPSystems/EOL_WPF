@@ -1,4 +1,6 @@
-﻿using ControlzEx.Theming;
+﻿using Controls.Views;
+using ControlzEx.Theming;
+using EOL.Views;
 using Services.Services;
 using System;
 using System.Collections.Generic;
@@ -22,6 +24,22 @@ namespace EOL
 				 "MzM3MDg2M0AzMjM0MmUzMDJlMzBCT2dsKzBPUW9HbXFrM1J3aWxQR2k5UDVOZXNDdE4zdGJCSjI5N2lpWGlJPQ==");
 
 			this.DispatcherUnhandledException += App_DispatcherUnhandledException;
+		}
+
+		protected override void OnStartup(StartupEventArgs e)
+		{
+			System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+			base.OnStartup(e);
+
+			SplashView splash = new SplashView();
+			splash.AppName = "EOL";
+			splash.Show();
+
+			// Right now I'm showing main window right after splash screen but I will eventually wait until splash screen closes.
+			MainWindow = new EOLMainWindow();
+			MainWindow.Show();
+			splash.Close();
 
 
 		}

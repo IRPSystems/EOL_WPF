@@ -1,8 +1,7 @@
 ﻿<Application x:Class="EOL.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:EOL"
-             StartupUri="Views\EOLMainWindow.xaml">
+             xmlns:local="clr-namespace:EOL">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
