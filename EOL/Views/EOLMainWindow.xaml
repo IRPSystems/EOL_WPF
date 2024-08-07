@@ -9,7 +9,7 @@
                  xmlns:device_handler_views="clr-namespace:DeviceHandler.Views;assembly=DeviceHandler"
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
-                 Title="EOL" Height="650" Width="1000"                 
+                 Title="EOL" Height="670" Width="1000"                 
                  WindowStartupLocation="CenterScreen">
 
     <mah:MetroWindow.Resources>

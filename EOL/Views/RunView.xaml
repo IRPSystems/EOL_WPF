@@ -64,7 +64,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="0" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         
@@ -80,7 +80,7 @@
                 <RowDefinition Height="2" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="20" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Border Grid.Row="0" Background="{DynamicResource MahApps.Brushes.Accent}" >
@@ -188,14 +188,10 @@
 
         </Grid>
 
-        <GridSplitter Grid.Column="1" 
-                      Background="Gray" 
-                      Width="5"
-                      Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-
+        
         <ContentControl Grid.Column="2" 
                         Content="{Binding ScriptDiagram}" 
-                        MinWidth="200"
+                        MinWidth="500"
                         Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"/>
 
     </Grid>
