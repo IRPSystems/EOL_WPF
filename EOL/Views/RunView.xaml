@@ -160,20 +160,31 @@
 
             </ContentControl>
 
-            <ListView Grid.Row="10"
+            <DataGrid Grid.Row="10"
                       FontSize="14" 
                       BorderThickness="1"
                       MinHeight="220"
                       Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"
                       BorderBrush="{DynamicResource MahApps.Brushes.Accent2}"
-                      ItemsSource="{Binding TerminalTextsList}"
-                      Margin="5,0">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                      ItemsSource="{Binding RunScript.MainScriptLogger.LogLinesList}"
+                      Margin="5,0"
+                      AutoGenerateColumns="False">
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="{Binding Background}" />
+                        <Setter Property="Foreground" Value="{Binding Foreground}" />
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    
+                    <DataGridTextColumn Header="Time" Binding="{Binding Time, StringFormat=\{0:hh\\:mm\\:ss\\.fff\}}" Width="100"/>
+                    <DataGridTextColumn Header="Data" Binding="{Binding Data}" Width="300"/>
+                    
+                </DataGrid.Columns>
+                
+            </DataGrid>
 
         </Grid>
 
