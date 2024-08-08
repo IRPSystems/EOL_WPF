@@ -13,6 +13,7 @@ using ScriptRunner.Services;
 using ScriptRunner.ViewModels;
 using Services.Services;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace EOL.ViewModels
@@ -187,6 +188,12 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Aborted;
 			else
 				RunState = RunStateEnum.Ended;
+
+
+			List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
+			GetScriptEOLStepSummerys(
+				_currentScript,
+				eolStepSummerysList);
 		}
 
 		private void CountRunSteps()
@@ -219,6 +226,24 @@ namespace EOL.ViewModels
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
 		{
 			RunScript.RunTime.RunTime = DateTime.Now - _startTime;
+		}
+
+		private void GetScriptEOLStepSummerys(
+			IScript script,
+			List<EOLStepSummeryData> eolStepSummerysList)
+		{
+			foreach(IScriptItem item in script.ScriptItemsList)
+			{
+				if (item is ScriptStepBase stepBase)
+					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
+
+				if(item is ISubScript subScript)
+				{
+					GetScriptEOLStepSummerys(
+						subScript.Script,
+						eolStepSummerysList);
+				}
+			}
 		}
 
 		#endregion Methods
