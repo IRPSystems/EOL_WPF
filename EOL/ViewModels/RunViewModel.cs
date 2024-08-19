@@ -195,45 +195,13 @@ namespace EOL.ViewModels
 
 					if(flash.IsEolSource)
 					{
-						SetFlahsToolData(flash);
+						
 					}
 				}
 			}
 		}
 
-		private void SetFlahsToolData(ScriptStepEOLFlash flash)
-		{
-			string fileExtension = flash.FilePath.ToLower();
-			if (fileExtension == ".hex")
-			{
-				if (flash.FilePath.ToLower().EndsWith(".brn.hex"))
-					fileExtension = ".brn.hex";
-			}
-
-			if (fileExtension == ".hex" || fileExtension == ".irphex" ||
-				fileExtension == ".cyacd" || fileExtension == ".irpcyacd")
-				return;
-			else if(fileExtension == ".bin" || fileExtension == ".irpbin")
-			{
-				flash.UdsSequence = UdsSequence.silence;
-				flash.RXId = "0x3FE";
-				flash.TXId = "0x3FF";
-			}
-			else if (fileExtension == ".hex" || fileExtension == ".irpbin")
-			{
-				flash.UdsSequence = UdsSequence.silence;
-				flash.RXId = "0x3FE";
-				flash.TXId = "0x3FF";
-			}
-			else if (fileExtension == ".brn.hex")
-			{// TODO: get the UDS sequence
-				flash.UdsSequence = UdsSequence.generic;
-				flash.RXId = "0x1CFFF9FE";
-				flash.TXId = "0x1CFFFEF9";
-			}
-
-
-		}
+		
 
 		private void Abort()
 		{
