@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
+using EOL_Tester.Classes;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
 using ScriptHandler.Models.ScriptSteps;
@@ -10,7 +11,6 @@ using ScriptHandler.Services;
 using ScriptHandler.ViewModels;
 using ScriptRunner.Enums;
 using ScriptRunner.Services;
-using ScriptRunner.ViewModels;
 using Services.Services;
 using System;
 using System.Collections.Generic;
@@ -56,6 +56,8 @@ namespace EOL.ViewModels
 		private System.Timers.Timer _timerDuration;
 		private DateTime _startTime;
 
+		private UserDefaultSettings _userDefaultSettings;
+
 		#endregion Fields
 
 		#region Constructor
@@ -63,10 +65,12 @@ namespace EOL.ViewModels
 		public RunViewModel(
 			string scriptPath,
 			DevicesContainer devicesContainer,
-			RunData runData)
+			RunData runData,
+			UserDefaultSettings userDefaultSettings)
 		{
 			_devicesContainer = devicesContainer;
 			_runData = runData;
+			_userDefaultSettings = userDefaultSettings;
 
 			_timerDuration = new System.Timers.Timer(300);
 			_timerDuration.Elapsed += _timerDuration_Elapsed;
@@ -143,6 +147,7 @@ namespace EOL.ViewModels
 			RunState = RunStateEnum.Running;
 
 			SetSNToScriptTool(_currentScript.ScriptItemsList);
+			SetFlashFileToScriptTool(_currentScript.ScriptItemsList);
 			RunScript.Run(null, _currentScript, null, false);
 
 			RunPercentage = 0;
@@ -167,6 +172,24 @@ namespace EOL.ViewModels
 					//sn.UserSN = _runData. // TODO?
 				}
             }
+		}
+
+		private void SetFlashFileToScriptTool(
+			ObservableCollection<IScriptItem> scriptItemsList)
+		{
+			foreach (IScriptItem scriptItem in scriptItemsList)
+			{
+				if (scriptItem is ISubScript subScript)
+				{
+					SetFlashFileToScriptTool(subScript.Script.ScriptItemsList);
+					continue;
+				}
+
+				if (scriptItem is ScriptStepEOLFlash flash)
+				{// TODO: first - second?
+					flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+				}
+			}
 		}
 
 		private void Abort()

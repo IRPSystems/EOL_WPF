@@ -16,9 +16,12 @@ namespace EOL.Services
         private readonly string TechLogDirectory = "\\Technician Logs";
         private string ErrorMsg = "Missing file in subfolders:\r\n";
 
-        public void ReadConfig()
+        public UserDefaultSettings ReadConfig()
         {
-            if (File.Exists(ConfigFilePath))
+			UserDefaultSettings userDefaultSettings = new UserDefaultSettings();
+
+
+			if (File.Exists(ConfigFilePath))
             {
                 ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
                 {
@@ -41,32 +44,35 @@ namespace EOL.Services
                     }
                 }
 
-                if (!string.IsNullOrEmpty(UserDefaultSettings.ReportsSavingPath))
+                if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
                 {
-                    UserDefaultSettings.TechLogDirectory = UserDefaultSettings.ReportsSavingPath + TechLogDirectory;
+					userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
                 }
 
-                if (string.IsNullOrEmpty(UserDefaultSettings.AutoConfigPref))
+                if (string.IsNullOrEmpty(userDefaultSettings.AutoConfigPref))
                 {
-                    AutoConfigProcedure();
+                    AutoConfigProcedure(userDefaultSettings);
                 }
             }
             else
             {
-                AutoConfigProcedure();
+                AutoConfigProcedure(userDefaultSettings);
             }
-        }
 
-        private void AutoConfigProcedure()
+            return userDefaultSettings;
+
+		}
+
+        private void AutoConfigProcedure(UserDefaultSettings userDefaultSettings)
         {
-            RunAutoConfigUI();
-            if (!string.IsNullOrEmpty(UserDefaultSettings.AutoConfigPref))
+            RunAutoConfigUI(userDefaultSettings);
+            if (!string.IsNullOrEmpty(userDefaultSettings.AutoConfigPref))
             {
-                TryAutoPackageConfig();
+                TryAutoPackageConfig(userDefaultSettings);
             }
         }
 
-        private void RunAutoConfigUI()
+        private void RunAutoConfigUI(UserDefaultSettings userDefaultSettings)
         {
             ConfigPrefWinddowVIew configPrefWinddowVIew = new ConfigPrefWinddowVIew()
             {
@@ -74,12 +80,12 @@ namespace EOL.Services
             };
 
 			configPrefWinddowVIew.ShowDialog();
-			SaveConfig();
+			SaveConfig(userDefaultSettings);
 		}
 
-        private void TryAutoPackageConfig()
+        private void TryAutoPackageConfig(UserDefaultSettings userDefaultSettings)
         {
-            ResetPackageRelevantConfigs();
+            ResetPackageRelevantConfigs(userDefaultSettings);
             // Get the current directory
             string currentDirectory = Directory.GetCurrentDirectory();
 
@@ -113,56 +119,56 @@ namespace EOL.Services
 
                     Config config;
 
-                    config = packageConfig.GetConfiguration(UserDefaultSettings.AutoConfigPref);
+                    config = packageConfig.GetConfiguration(userDefaultSettings.AutoConfigPref);
 
                     if (config.MainSeq.IsUsed)
                     {
                         SubFolderMainSeq = config.MainSeq.SubfolderName;
                         destFileExtension = config.MainSeq.FileExtension;
-                        UserDefaultSettings.DefaultMainSeqConfigFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
-                        UserDefaultSettings.UseDefaultMainSeqConfigFile = true;
+                        userDefaultSettings.DefaultMainSeqConfigFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.UseDefaultMainSeqConfigFile = true;
                     }
 
                     if (config.ProjectSeq.IsUsed)
                     {
                         SubFolderMainSeq = config.ProjectSeq.SubfolderName;
                         destFileExtension = config.ProjectSeq.FileExtension;
-                        UserDefaultSettings.UseDefaultSubscriptFile = true;
-                        UserDefaultSettings.DefaultSubscriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.UseDefaultSubscriptFile = true;
+                        userDefaultSettings.DefaultSubscriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.MonitorLog.IsUsed)
                     {
                         SubFolderMainSeq = config.MonitorLog.SubfolderName;
                         destFileExtension = config.MonitorLog.FileExtension;
-                        UserDefaultSettings.UseDefaultMonitorLogFile = true;
-                        UserDefaultSettings.DefaultMonitorLogFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.UseDefaultMonitorLogFile = true;
+                        userDefaultSettings.DefaultMonitorLogFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.FirstFlashFile.IsUsed)
                     {
                         SubFolderMainSeq = config.FirstFlashFile.SubfolderName;
                         destFileExtension = config.FirstFlashFile.FileExtension;
-                        UserDefaultSettings.UseDefaultFirstFlashFile = true;
-                        UserDefaultSettings.FirstFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.UseDefaultFirstFlashFile = true;
+                        userDefaultSettings.FirstFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.SecondFlashFile.IsUsed)
                     {
                         SubFolderMainSeq = config.SecondFlashFile.SubfolderName;
                         destFileExtension = config.SecondFlashFile.FileExtension;
-                        UserDefaultSettings.UseDefaultSecondFlashFile = true;
-                        UserDefaultSettings.SecondFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq);
+                        userDefaultSettings.UseDefaultSecondFlashFile = true;
+                        userDefaultSettings.SecondFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq);
                     }
 
 
-                    UserDefaultSettings.preTestFlash = config.OtherPreferences.PreFlash;
-                    UserDefaultSettings.isUseMonitorLog = config.OtherPreferences.MonitorLog;
-                    UserDefaultSettings.isPrintLabel = config.OtherPreferences.PrintLabel;
-                    UserDefaultSettings.isTogglePower = config.OtherPreferences.IsTogglePower;
-                    UserDefaultSettings.FlashPowerEA_PS = config.OtherPreferences.PsFlashPower;
-                    UserDefaultSettings.FlashPowerUsbRelay = config.OtherPreferences.RelayFlashPower;
-                    UserDefaultSettings.FlashPowerATEBox = config.OtherPreferences.AteBoxFlashPower;
+                    userDefaultSettings.preTestFlash = config.OtherPreferences.PreFlash;
+                    userDefaultSettings.isUseMonitorLog = config.OtherPreferences.MonitorLog;
+                    userDefaultSettings.isPrintLabel = config.OtherPreferences.PrintLabel;
+                    userDefaultSettings.isTogglePower = config.OtherPreferences.IsTogglePower;
+                    userDefaultSettings.FlashPowerEA_PS = config.OtherPreferences.PsFlashPower;
+                    userDefaultSettings.FlashPowerUsbRelay = config.OtherPreferences.RelayFlashPower;
+                    userDefaultSettings.FlashPowerATEBox = config.OtherPreferences.AteBoxFlashPower;
                 }
                 catch (Exception ex)
                 {
@@ -176,24 +182,24 @@ namespace EOL.Services
         }
 
 
-        private void ResetPackageRelevantConfigs()
+        private void ResetPackageRelevantConfigs(UserDefaultSettings userDefaultSettings)
         {
-            UserDefaultSettings.UseDefaultMainSeqConfigFile = false;
-            UserDefaultSettings.UseDefaultMonitorLogFile = false;
-            UserDefaultSettings.UseDefaultSubscriptFile = false;
-            UserDefaultSettings.UseDefaultSecondFlashFile = false;
-            UserDefaultSettings.UseDefaultFirstFlashFile = false;
-            UserDefaultSettings.DefaultMainSeqConfigFile = null;
-            UserDefaultSettings.DefaultSubscriptFile = null;
-            UserDefaultSettings.DefaultMonitorLogFile = null;
-            UserDefaultSettings.FirstFlashFilePath = null;
-            UserDefaultSettings.SecondFlashFilePath = null;
-            UserDefaultSettings.isUseMonitorLog = false;
-            UserDefaultSettings.preTestFlash = false;
-            UserDefaultSettings.FlashPowerATEBox = false;
-            UserDefaultSettings.FlashPowerEA_PS = false;
-            UserDefaultSettings.FlashPowerUsbRelay = false;
-            UserDefaultSettings.isPrintLabel = false;
+			userDefaultSettings.UseDefaultMainSeqConfigFile = false;
+			userDefaultSettings.UseDefaultMonitorLogFile = false;
+            userDefaultSettings.UseDefaultSubscriptFile = false;
+            userDefaultSettings.UseDefaultSecondFlashFile = false;
+            userDefaultSettings.UseDefaultFirstFlashFile = false;
+            userDefaultSettings.DefaultMainSeqConfigFile = null;
+            userDefaultSettings.DefaultSubscriptFile = null;
+            userDefaultSettings.DefaultMonitorLogFile = null;
+            userDefaultSettings.FirstFlashFilePath = null;
+            userDefaultSettings.SecondFlashFilePath = null;
+            userDefaultSettings.isUseMonitorLog = false;
+            userDefaultSettings.preTestFlash = false;
+            userDefaultSettings.FlashPowerATEBox = false;
+            userDefaultSettings.FlashPowerEA_PS = false;
+            userDefaultSettings.FlashPowerUsbRelay = false;
+            userDefaultSettings.isPrintLabel = false;
         }
 
         private string SearchPath(string parentDirectory, string subFolderMainSeq, string destFileExtension = null)
@@ -260,7 +266,7 @@ namespace EOL.Services
             }
         }
 
-        public void SaveConfig()
+        public void SaveConfig(UserDefaultSettings userDefaultSettings)
         {
             ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
             {
@@ -289,9 +295,9 @@ namespace EOL.Services
                 }
             }
 
-            if (!string.IsNullOrEmpty(UserDefaultSettings.ReportsSavingPath))
+            if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
             {
-                UserDefaultSettings.TechLogDirectory = UserDefaultSettings.ReportsSavingPath + TechLogDirectory;
+                userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
             }
 
             config.Save(ConfigurationSaveMode.Modified);
