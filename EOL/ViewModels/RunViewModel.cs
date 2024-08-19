@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
 using EOL_Tester.Classes;
+using FlashingToolLib.FlashingTools;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
 using ScriptHandler.Models.ScriptSteps;
@@ -186,10 +187,52 @@ namespace EOL.ViewModels
 				}
 
 				if (scriptItem is ScriptStepEOLFlash flash)
-				{// TODO: first - second?
-					flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+				{
+					if(flash.NumOfFlashFile == 0)
+						flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+					if (flash.NumOfFlashFile == 1)
+						flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
+
+					if(flash.IsEolSource)
+					{
+						SetFlahsToolData(flash);
+					}
 				}
 			}
+		}
+
+		private void SetFlahsToolData(ScriptStepEOLFlash flash)
+		{
+			string fileExtension = flash.FilePath.ToLower();
+			if (fileExtension == ".hex")
+			{
+				if (flash.FilePath.ToLower().EndsWith(".brn.hex"))
+					fileExtension = ".brn.hex";
+			}
+
+			if (fileExtension == ".hex" || fileExtension == ".irphex" ||
+				fileExtension == ".cyacd" || fileExtension == ".irpcyacd")
+				return;
+			else if(fileExtension == ".bin" || fileExtension == ".irpbin")
+			{
+				flash.UdsSequence = UdsSequence.silence;
+				flash.RXId = "0x3FE";
+				flash.TXId = "0x3FF";
+			}
+			else if (fileExtension == ".hex" || fileExtension == ".irpbin")
+			{
+				flash.UdsSequence = UdsSequence.silence;
+				flash.RXId = "0x3FE";
+				flash.TXId = "0x3FF";
+			}
+			else if (fileExtension == ".brn.hex")
+			{// TODO: get the UDS sequence
+				flash.UdsSequence = UdsSequence.generic;
+				flash.RXId = "0x1CFFF9FE";
+				flash.TXId = "0x1CFFFEF9";
+			}
+
+
 		}
 
 		private void Abort()
