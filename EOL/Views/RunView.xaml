@@ -124,6 +124,10 @@
                                     <Setter Property="Background" Value="Red" />
                                 </DataTrigger>
 
+                                <DataTrigger Binding="{Binding RunState}" Value="Failed">
+                                    <Setter Property="Background" Value="Red" />
+                                </DataTrigger>
+
                                 <DataTrigger Binding="{Binding RunState}" Value="None">
                                     <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.Gray3}" />
                                 </DataTrigger>

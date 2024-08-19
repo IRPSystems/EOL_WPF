@@ -22,7 +22,7 @@ namespace EOL.ViewModels
 	{
 		#region Properties
 
-		public enum RunStateEnum { None, Running, Ended, Aborted }
+		public enum RunStateEnum { None, Running, Ended, Aborted, Failed }
 
 		public int RunPercentage { get; set; }
 
@@ -194,6 +194,20 @@ namespace EOL.ViewModels
 			GetScriptEOLStepSummerys(
 				_currentScript,
 				eolStepSummerysList);
+
+			int passed;
+			int failed;
+			GetPassFailed(
+				eolStepSummerysList,
+				out passed,
+				out failed);
+
+			_runData.NumberOfTested = passed + failed;
+			_runData.NumberOfFailed = failed;
+			_runData.NumberOfPassed = passed;
+
+			if (failed > 0)
+				RunState = RunStateEnum.Failed;
 		}
 
 		private void CountRunSteps()
@@ -243,6 +257,22 @@ namespace EOL.ViewModels
 						subScript.Script,
 						eolStepSummerysList);
 				}
+			}
+		}
+
+		private void GetPassFailed(
+			List<EOLStepSummeryData> eolStepSummerysList,
+			out int passed,
+			out int failed)
+		{
+			passed = 0;
+			failed = 0;
+			foreach (EOLStepSummeryData item in eolStepSummerysList)
+			{
+				if (item.IsPass)
+					passed++;
+				else
+					failed++;
 			}
 		}
 
