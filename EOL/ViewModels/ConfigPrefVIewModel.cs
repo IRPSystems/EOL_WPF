@@ -18,8 +18,12 @@ namespace EOL.ViewModels
 		public int WindowHeight { get; set; }
 		public int ButtonHeight { get; set; }
 
-		public ConfigPrefVIewModel() 
+		private UserDefaultSettings _userDefaultSettings;
+
+		public ConfigPrefVIewModel(UserDefaultSettings userDefaultSettings) 
 		{
+			_userDefaultSettings = userDefaultSettings;
+
 			ButtonHeight = 35;
 
 			Button_ClickedCommand = new RelayCommand<string>(Button_Clicked);
@@ -111,9 +115,10 @@ namespace EOL.ViewModels
 			}
 		}
 
-		private void Button_Clicked(string name)
+		private void Button_Clicked(
+			string name)
 		{
-			UserDefaultSettings.AutoConfigPref = name;
+			_userDefaultSettings.AutoConfigPref = name;
 			CloseEvent?.Invoke();
 		}
 

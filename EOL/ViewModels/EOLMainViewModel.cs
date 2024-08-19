@@ -137,7 +137,10 @@ namespace EOL.ViewModels
 				UpdateSetup();
 
 
-				OperatorVM = new OperatorViewModel(DevicesContainter, _eolSettings.ScriptUserData);
+				OperatorVM = new OperatorViewModel(
+					DevicesContainter, 
+					_eolSettings.ScriptUserData,
+					_userDefaultSettings);
 
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 

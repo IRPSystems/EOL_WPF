@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
+using EOL_Tester.Classes;
 using ScriptHandler.Models;
 
 namespace EOL.ViewModels
@@ -20,7 +21,7 @@ namespace EOL.ViewModels
 
 		#region Fields
 
-
+		
 
 		#endregion Fields
 
@@ -28,13 +29,16 @@ namespace EOL.ViewModels
 
 		public OperatorViewModel(
 			DevicesContainer devicesContainer,
-			ScriptUserData scriptUserData)
+			ScriptUserData scriptUserData,
+			UserDefaultSettings userDefaultSettings)
 		{
+
 			RunData = new RunData();
 			Run = new RunViewModel(
 				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr", 
 				devicesContainer, 
-				RunData);
+				RunData,
+				userDefaultSettings);
 			RunData.RunScript = Run.RunScript;
 		}		
 

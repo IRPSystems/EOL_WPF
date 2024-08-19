@@ -76,7 +76,7 @@ namespace EOL.Services
         {
             ConfigPrefWinddowVIew configPrefWinddowVIew = new ConfigPrefWinddowVIew()
             {
-                DataContext = new ConfigPrefVIewModel(),
+                DataContext = new ConfigPrefVIewModel(userDefaultSettings),
             };
 
 			configPrefWinddowVIew.ShowDialog();
