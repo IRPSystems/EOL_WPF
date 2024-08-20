@@ -142,7 +142,7 @@ namespace EOL.Services
                         SubFolderMainSeq = config.MonitorLog.SubfolderName;
                         destFileExtension = config.MonitorLog.FileExtension;
                         userDefaultSettings.UseDefaultMonitorLogFile = true;
-                        userDefaultSettings.DefaultMonitorLogFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.DefaultMonitorLogScript = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.FirstFlashFile.IsUsed)
@@ -160,15 +160,25 @@ namespace EOL.Services
                         userDefaultSettings.UseDefaultSecondFlashFile = true;
                         userDefaultSettings.SecondFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq);
                     }
-
-
-                    userDefaultSettings.preTestFlash = config.OtherPreferences.PreFlash;
+                    
                     userDefaultSettings.isUseMonitorLog = config.OtherPreferences.MonitorLog;
                     userDefaultSettings.isPrintLabel = config.OtherPreferences.PrintLabel;
-                    userDefaultSettings.isTogglePower = config.OtherPreferences.IsTogglePower;
-                    userDefaultSettings.FlashPowerEA_PS = config.OtherPreferences.PsFlashPower;
-                    userDefaultSettings.FlashPowerUsbRelay = config.OtherPreferences.RelayFlashPower;
-                    userDefaultSettings.FlashPowerATEBox = config.OtherPreferences.AteBoxFlashPower;
+                    userDefaultSettings.ProjectBaudRate = config.OtherPreferences.ProjectBaudRate;
+
+                    userDefaultSettings.preTestFlash = config.FlashPreferences.PreRunFlash;
+                    userDefaultSettings.isTogglePower = config.FlashPreferences.IsTogglePower;
+                    userDefaultSettings.FlashPowerEA_PS = config.FlashPreferences.PsFlashPower;
+                    userDefaultSettings.FlashPowerUsbRelay = config.FlashPreferences.RelayFlashPower;
+                    userDefaultSettings.FlashPowerATEBox = config.FlashPreferences.AteBoxFlashPower;
+
+                    userDefaultSettings.FirstFileUdsSequence = config.FlashPreferences.FirstFileArguments.udsSequence;
+                    userDefaultSettings.FirstFileUdsRx = config.FlashPreferences.FirstFileArguments.UdsRx;
+                    userDefaultSettings.FirstFileUdsTx = config.FlashPreferences.FirstFileArguments.UdsTx;
+
+                    userDefaultSettings.SecondFileUdsSequence = config.FlashPreferences.SecondFileArguments.udsSequence;
+                    userDefaultSettings.SecondFileUdsRx = config.FlashPreferences.SecondFileArguments.UdsRx;
+                    userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
+
                 }
                 catch (Exception ex)
                 {
@@ -191,7 +201,7 @@ namespace EOL.Services
             userDefaultSettings.UseDefaultFirstFlashFile = false;
             userDefaultSettings.DefaultMainSeqConfigFile = null;
             userDefaultSettings.DefaultSubscriptFile = null;
-            userDefaultSettings.DefaultMonitorLogFile = null;
+            userDefaultSettings.DefaultMonitorLogScript = null;
             userDefaultSettings.FirstFlashFilePath = null;
             userDefaultSettings.SecondFlashFilePath = null;
             userDefaultSettings.isUseMonitorLog = false;

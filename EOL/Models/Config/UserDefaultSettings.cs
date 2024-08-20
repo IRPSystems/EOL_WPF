@@ -1,4 +1,8 @@
 ﻿
+using FlashingToolLib.FlashingTools;
+using System;
+using System.Diagnostics.Contracts;
+
 namespace EOL_Tester.Classes
 {
     public class UserDefaultSettings
@@ -11,7 +15,7 @@ namespace EOL_Tester.Classes
         public string DefaultSubscriptFile { get; set; }
         public string FirstFlashFilePath { get; set; }
         public string SecondFlashFilePath { get; set; }
-        public string DefaultMonitorLogFile { get; set; }
+        public string DefaultMonitorLogScript { get; set; }
         public string DefaultPowerMeterPort { get; set; }
         public string LastComPortATE { get; set; }
         public string LastComPortNumato { get; set; }
@@ -60,6 +64,13 @@ namespace EOL_Tester.Classes
         public bool isAdmin { get; set; }
         public int AmountOfCycles { get; set; } = 5;
         public int UIPref { get; set; } = 0;
+        public int ProjectBaudRate { get; set; } = 500;
+        public UInt32 FirstFileUdsRx { get; set; }
+        public UInt32 FirstFileUdsTx { get; set; }
+        public UdsSequence FirstFileUdsSequence { get; set; }
+        public UInt32 SecondFileUdsRx { get; set; }
+        public UInt32 SecondFileUdsTx { get; set; }
+        public UdsSequence SecondFileUdsSequence { get; set; }
         public string AutoConfigPref { get; set; }
     }
 }
