@@ -73,6 +73,8 @@ namespace EOL.ViewModels
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
 
+		private ScriptStepSetParameter _stepSetParameter;
+
 		#endregion Fields
 
 		#region Constructor
@@ -103,6 +105,18 @@ namespace EOL.ViewModels
 			TerminalTextsList = new ObservableCollection<string>();
 			RunState = RunStateEnum.None;
 
+			DeviceFullData mcuDeviceFullData = _devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.MCU];
+			_stepSetParameter = new ScriptStepSetParameter()
+			{
+				Parameter = new MCU_ParamData()
+				{
+					Name = "Pass/Fail indication",
+					Cmd = "eolpassflag"
+				},
+
+				Communicator = mcuDeviceFullData.DeviceCommunicator,
+			};
+
 			_stopScriptStep = new StopScriptStepService();
 			RunScript = new RunScriptService(null, _devicesContainer, _stopScriptStep, null);
 			RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
@@ -118,11 +132,12 @@ namespace EOL.ViewModels
 			_generatedProjectsList = null;
 			_stoppedScript = new GeneratedScriptData();
 
-			_userDefaultSettings.DefaultSubscriptFile =
+			_userDefaultSettings.DefaultMainSeqConfigFile =
 				@"C:\Users\smadar\Documents\Scripts\Test scripts\Project 4\Project 4.gprj";
-			LoadProject();
+			_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
 			RegisterEvents();
+			LoadMainScriptFromPath();
 		}
 
 		#endregion Constructor
@@ -139,12 +154,12 @@ namespace EOL.ViewModels
 
 		private void LoadMonitorFromPath()
 		{
-			throw new NotImplementedException();
+			LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
 		}
 
 		private void LoadMainScriptFromPath()
 		{
-			LoadProject();
+			LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
 		}
 
 		#endregion settingsViewModel events
@@ -187,6 +202,15 @@ namespace EOL.ViewModels
 				return; 
 			}
 
+			_totalNumOfSteps = 0;
+			foreach (GeneratedProjectData project in _generatedProjectsList)
+			{
+				foreach (GeneratedScriptData scriptData in project.TestsList)
+				{
+					SetDataToScriptTool(scriptData.ScriptItemsList);
+				}
+			}
+
 			ContinueVisibility = Visibility.Collapsed;
 
 			RunScript.SelectMotor.SelectedController = new ControllerSettingsData();
@@ -212,10 +236,10 @@ namespace EOL.ViewModels
 
 		#region Load project
 
-		private void LoadProject()
+		private void LoadProject(string scriptPath)
 		{
 			GeneratedProjectData project = _openProject.Open(
-				_userDefaultSettings.DefaultSubscriptFile, // TODO:
+				scriptPath,
 				_devicesContainer,
 				null,
 				_stopScriptStep);
@@ -226,13 +250,9 @@ namespace EOL.ViewModels
 				return;
 			}
 
-			_totalNumOfSteps = 0;
-			foreach (GeneratedScriptData scriptData in project.TestsList)
-			{
-				SetDataToScriptTool(scriptData.ScriptItemsList);
-			}
+			
 
-			_generatedProjectsList = new ObservableCollection<GeneratedProjectData> { project };
+			_generatedProjectsList.Add(project);
 		}
 
 		private void SetDataToScriptTool(
@@ -335,7 +355,14 @@ namespace EOL.ViewModels
 			_runData.NumberOfPassed = passed;
 
 			if (failed > 0)
+			{
 				RunState = RunStateEnum.Failed;
+				_stepSetParameter.Parameter.Value = 0;
+			}
+			else
+				_stepSetParameter.Parameter.Value = 1;
+
+			_stepSetParameter.Execute();
 		}
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
