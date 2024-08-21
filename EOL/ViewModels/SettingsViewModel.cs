@@ -25,7 +25,8 @@ namespace EOL.ViewModels
 
         public event Action MainScriptEventChanged;
         public event Action MonitorScriptEventChanged;
-        public event Action ProjectScriptEventChanged;
+        public event Action SubScriptEventChanged;
+        public event Action AbortScriptEventChanged;
 
         #endregion Properties
 
@@ -96,12 +97,17 @@ namespace EOL.ViewModels
 				_userDefaultSettings.DefaultMainSeqConfigFile = filesData.Path;
 				MainScriptEventChanged.Invoke();
             }
-			else if (filesData.Description == "Project Script Path")
+			else if (filesData.Description == "Sub Script Path")
 			{
-				_userDefaultSettings.DefaultSubscriptFile = filesData.Path;
-				ProjectScriptEventChanged.Invoke();
+				_userDefaultSettings.DefaultSubScriptFile = filesData.Path;
+                SubScriptEventChanged.Invoke();
             }
-			else if (filesData.Description == "Monitor Script Path")
+            else if (filesData.Description == "Abort Script Path")
+            {
+                _userDefaultSettings.DefaultAbortScriptFile = filesData.Path;
+                AbortScriptEventChanged.Invoke();
+            }
+            else if (filesData.Description == "Monitor Script Path")
 			{
 				_userDefaultSettings.DefaultMonitorLogScript = filesData.Path;
 				MonitorScriptEventChanged.Invoke();

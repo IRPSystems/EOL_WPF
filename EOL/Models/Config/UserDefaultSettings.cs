@@ -12,7 +12,8 @@ namespace EOL_Tester.Classes
         public string TechLogDirectory { get; set; }
         public string MonitorLogSavingPath { get; set; }
         public string DefaultMainSeqConfigFile { get; set; }
-        public string DefaultSubscriptFile { get; set; }
+        public string DefaultSubScriptFile { get; set; }
+        public string DefaultAbortScriptFile { get; set; }
         public string FirstFlashFilePath { get; set; }
         public string SecondFlashFilePath { get; set; }
         public string DefaultMonitorLogScript { get; set; }

@@ -2,11 +2,13 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceCommunicators.MCU;
+using DeviceCommunicators.Models;
 using DeviceHandler.Models;
 using DeviceHandler.Models.DeviceFullDataModels;
 using EOL.Models;
 using EOL_Tester.Classes;
 using FlashingToolLib.FlashingTools;
+using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
 using ScriptHandler.Models.ScriptSteps;
@@ -73,8 +75,10 @@ namespace EOL.ViewModels
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
+		private ObservableCollection<DeviceParameterData> _parametersList;
 
-		private ScriptStepSetParameter _stepSetParameter;
+
+        private ScriptStepSetParameter _stepSetParameter;
 
 		#endregion Fields
 
@@ -122,7 +126,7 @@ namespace EOL.ViewModels
 				};
 
 				_stopScriptStep = new StopScriptStepService();
-				RunScript = new RunScriptService(null, _devicesContainer, _stopScriptStep, null);
+				RunScript = new RunScriptService(_parametersList, _devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
 				RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
@@ -158,24 +162,41 @@ namespace EOL.ViewModels
 		private void RegisterEvents()
 		{
 			_settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
-			_settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
+            _settingsViewModel.SubScriptEventChanged += LoadSubScriptFromPath;
+            _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
+            _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
 		}
 
-		private void LoadMonitorFromPath()
+        private void LoadMainScriptFromPath()
+        {
+            LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
+        }
+
+        private void LoadSubScriptFromPath()
+        {
+            LoadProject(_userDefaultSettings.DefaultSubScriptFile);
+        }
+
+        private void LoadMonitorFromPath()
 		{
-			LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
-		}
+            string jsonString = System.IO.File.ReadAllText(_userDefaultSettings.DefaultMonitorLogScript);
 
-		private void LoadMainScriptFromPath()
-		{
-			LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
-		}
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            settings.Formatting = Formatting.Indented;
+            settings.TypeNameHandling = TypeNameHandling.All;
+            _parametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
+        }
 
-		#endregion settingsViewModel events
+        private void LoadAbortScriptFromPath()
+        {
+            RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
+        }
 
-		#region Running script events
+        #endregion settingsViewModel events
 
-		private void RunScript_ScriptStartedEvent()
+        #region Running script events
+
+        private void RunScript_ScriptStartedEvent()
 		{
 			ScriptDiagram.DrawScript(RunScript.CurrentScript.CurrentScript);
 		}
