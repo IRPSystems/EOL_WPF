@@ -74,7 +74,7 @@
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Duration" VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="2" Grid.Column="2" 
-                           Text="{Binding RunScript.RunTime.RunTime, StringFormat=\{0:hh\\:mm\\:ss\\.fff\}}" 
+                           Text="{Binding Duration, StringFormat=\{0:hh\\:mm\\:ss\\.fff\}}" 
                            VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Row="4" Grid.Column="0" Text="End time" VerticalAlignment="Center"/>

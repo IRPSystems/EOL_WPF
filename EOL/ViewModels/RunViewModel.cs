@@ -41,6 +41,7 @@ namespace EOL.ViewModels
 
 		public bool IsAdminMode { get; set; }
 
+
 		#endregion Properties
 
 		#region Fields
@@ -225,7 +226,6 @@ namespace EOL.ViewModels
 		{			
 			_timerDuration.Stop();
 			_runData.EndTime = DateTime.Now;
-			_runData.Duration = RunScript.RunTime.RunTime;
 
 			CountRunSteps();
 
@@ -286,7 +286,7 @@ namespace EOL.ViewModels
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
 		{
-			RunScript.RunTime.RunTime = DateTime.Now - _startTime;
+			_runData.Duration = DateTime.Now - _startTime;
 		}
 
 		private void GetScriptEOLStepSummerys(
