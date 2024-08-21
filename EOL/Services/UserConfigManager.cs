@@ -171,13 +171,19 @@ namespace EOL.Services
                     userDefaultSettings.FlashPowerUsbRelay = config.FlashPreferences.RelayFlashPower;
                     userDefaultSettings.FlashPowerATEBox = config.FlashPreferences.AteBoxFlashPower;
 
-                    userDefaultSettings.FirstFileUdsSequence = config.FlashPreferences.FirstFileArguments.udsSequence;
-                    userDefaultSettings.FirstFileUdsRx = config.FlashPreferences.FirstFileArguments.UdsRx;
-                    userDefaultSettings.FirstFileUdsTx = config.FlashPreferences.FirstFileArguments.UdsTx;
+                    if (config.FlashPreferences.FirstFileArguments != null)
+                    {
+                        userDefaultSettings.FirstFileUdsSequence = config.FlashPreferences.FirstFileArguments.udsSequence;
+                        userDefaultSettings.FirstFileUdsRx = config.FlashPreferences.FirstFileArguments.UdsRx;
+                        userDefaultSettings.FirstFileUdsTx = config.FlashPreferences.FirstFileArguments.UdsTx;
+                    }
 
-                    userDefaultSettings.SecondFileUdsSequence = config.FlashPreferences.SecondFileArguments.udsSequence;
-                    userDefaultSettings.SecondFileUdsRx = config.FlashPreferences.SecondFileArguments.UdsRx;
-                    userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
+                    if (config.FlashPreferences.SecondFileArguments != null)
+                    {
+                        userDefaultSettings.SecondFileUdsSequence = config.FlashPreferences.SecondFileArguments.udsSequence;
+                        userDefaultSettings.SecondFileUdsRx = config.FlashPreferences.SecondFileArguments.UdsRx;
+                        userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
+                    }
 
                 }
                 catch (Exception ex)

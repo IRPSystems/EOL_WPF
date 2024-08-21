@@ -212,15 +212,28 @@ namespace EOL.ViewModels
 
 				if (scriptItem is ScriptStepEOLFlash flash)
 				{
-					if(flash.NumOfFlashFile == 0)
-						flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
-					if (flash.NumOfFlashFile == 1)
-						flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
-
-					if(flash.IsEolSource)
+					if (flash.NumOfFlashFile == 0)
 					{
-						
+						flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+						if (flash.IsEolSource)
+						{
+							flash.UdsSequence = _userDefaultSettings.FirstFileUdsSequence;
+							flash.RXId = _userDefaultSettings.FirstFileUdsRx.ToString("X");
+							flash.TXId = _userDefaultSettings.FirstFileUdsTx.ToString("X");
+						}
 					}
+					else if (flash.NumOfFlashFile == 1)
+					{
+						flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
+						if (flash.IsEolSource)
+						{
+							flash.UdsSequence = _userDefaultSettings.SecondFileUdsSequence;
+							flash.RXId = _userDefaultSettings.SecondFileUdsRx.ToString("X");
+							flash.TXId = _userDefaultSettings.SecondFileUdsTx.ToString("X");
+						}
+					}
+
+					
 				}
 			}
 		}
