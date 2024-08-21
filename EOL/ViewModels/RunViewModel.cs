@@ -60,17 +60,23 @@ namespace EOL.ViewModels
 
 		private UserDefaultSettings _userDefaultSettings;
 
-		#endregion Fields
+		private SettingsViewModel _settingsViewModel;
 
-		#region Constructor
+        private RunProjectsListService runProjectsList;
 
-		public RunViewModel(
+        #endregion Fields
+
+        #region Constructor
+
+        public RunViewModel(
 			string scriptPath,
 			DevicesContainer devicesContainer,
 			RunData runData,
-			UserDefaultSettings userDefaultSettings)
+			UserDefaultSettings userDefaultSettings,
+			SettingsViewModel settingsViewModel)
 		{
-			_devicesContainer = devicesContainer;
+            _settingsViewModel = settingsViewModel;
+            _devicesContainer = devicesContainer;
 			_runData = runData;
 			_userDefaultSettings = userDefaultSettings;
 
@@ -95,7 +101,7 @@ namespace EOL.ViewModels
 
 			ScriptDiagram = new ScriptDiagramViewModel();
 
-			OpenProjectForRunService openProject = new OpenProjectForRunService();
+            OpenProjectForRunService openProject = new OpenProjectForRunService();
 			GeneratedProjectData project = openProject.Open(
 				scriptPath,
 				devicesContainer,
@@ -108,16 +114,34 @@ namespace EOL.ViewModels
 				return;
 			}
 
+			RegisterEvents();
+
 			_currentScript = project.TestsList[0];
 		}
 
-		
+        private void RegisterEvents()
+        {
+            _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
+            _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
+        }
 
-		#endregion Constructor
+        private void LoadMonitorFromPath()
+        {
+            throw new NotImplementedException();
+        }
 
-		#region Methods
+        private void LoadMainScriptFromPath()
+		{ 
+            runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
+        }
 
-		private void _runScriptService_ScriptStartedEvent()
+
+
+        #endregion Constructor
+
+        #region Methods
+
+        private void _runScriptService_ScriptStartedEvent()
 		{
 			if(_currentScript == null)
 				return;

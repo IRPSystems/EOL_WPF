@@ -30,7 +30,8 @@ namespace EOL.ViewModels
 		public OperatorViewModel(
 			DevicesContainer devicesContainer,
 			ScriptUserData scriptUserData,
-			UserDefaultSettings userDefaultSettings)
+			UserDefaultSettings userDefaultSettings,
+			SettingsViewModel viewModel)
 		{
 
 			RunData = new RunData();
@@ -38,7 +39,7 @@ namespace EOL.ViewModels
 				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr", 
 				devicesContainer, 
 				RunData,
-				userDefaultSettings);
+				userDefaultSettings, viewModel);
 			RunData.RunScript = Run.RunScript;
 		}		
 

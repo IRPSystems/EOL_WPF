@@ -137,11 +137,6 @@ namespace EOL.ViewModels
 				UpdateSetup();
 
 
-				OperatorVM = new OperatorViewModel(
-					DevicesContainter, 
-					_eolSettings.ScriptUserData,
-					_userDefaultSettings);
-
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
 				_settingsData.FilesList = new ObservableCollection<FilesData>()
@@ -155,9 +150,12 @@ namespace EOL.ViewModels
 				};
 				
 
-				
-				SettingsVM = new SettingsViewModel(_settingsData);
+				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings);
 
+				OperatorVM = new OperatorViewModel(
+					DevicesContainter, 
+					_eolSettings.ScriptUserData,
+					_userDefaultSettings, SettingsVM);
 
 				try
 				{

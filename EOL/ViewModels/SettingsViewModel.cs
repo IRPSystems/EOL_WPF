@@ -2,7 +2,10 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
+using EOL_Tester.Classes;
 using Microsoft.Win32;
+using ScriptHandler.Interfaces;
+using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows;
@@ -18,15 +21,21 @@ namespace EOL.ViewModels
 		public SettingsData SettingsData { get; set; }
 		public double DescriptsionColumnWidth { get; set; }
 
-		#endregion Properties
+		UserDefaultSettings _userDefaultSettings;
 
-		#region Constructor
+        public event Action MainScriptEventChanged;
+        public event Action MonitorScriptEventChanged;
+        public event Action ProjectScriptEventChanged;
 
-		public SettingsViewModel(SettingsData settingsData)
+        #endregion Properties
+
+        #region Constructor
+
+        public SettingsViewModel(SettingsData settingsData, UserDefaultSettings userDefaultSettings)
         {
 			SettingsData = settingsData;
-
-			BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
+            _userDefaultSettings = userDefaultSettings;
+            BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
 			
 		}
@@ -77,7 +86,35 @@ namespace EOL.ViewModels
 				return;
 
 			filesData.Path = openFileDialog.FileName;
-		}
+
+			if (filesData.Description == "Reports Path")
+			{
+				_userDefaultSettings.ReportsSavingPath = filesData.Path;
+			}
+			else if (filesData.Description == "Main Script Path")
+			{
+				_userDefaultSettings.DefaultMainSeqConfigFile = filesData.Path;
+				MainScriptEventChanged.Invoke();
+            }
+			else if (filesData.Description == "Project Script Path")
+			{
+				_userDefaultSettings.DefaultSubscriptFile = filesData.Path;
+				ProjectScriptEventChanged.Invoke();
+            }
+			else if (filesData.Description == "Monitor Script Path")
+			{
+				_userDefaultSettings.DefaultMonitorLogScript = filesData.Path;
+				MonitorScriptEventChanged.Invoke();
+            }
+			else if (filesData.Description == "First Flash File Path")
+			{
+				_userDefaultSettings.FirstFlashFilePath = filesData.Path;
+			}
+			else
+			{
+				_userDefaultSettings.SecondFlashFilePath = filesData.Path;
+			}
+        }
 
 		#endregion Methods
 
