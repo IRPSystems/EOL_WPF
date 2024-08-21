@@ -136,12 +136,9 @@ namespace EOL.ViewModels
 				_generatedProjectsList = null;
 				_stoppedScript = new GeneratedScriptData();
 
-				//_userDefaultSettings.DefaultMainSeqConfigFile =
-				//	@"C:\Users\smadar\Documents\Scripts\Test scripts\Project 4\Project 4.gprj";
 				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
 				RegisterEvents();
-				LoadMainScriptFromPath();
 			}
 			catch (Exception ex)
 			{
@@ -372,17 +369,6 @@ namespace EOL.ViewModels
 				_stepSetParameter.Value = 1;
 
 			_stepSetParameter.Execute();
-
-			_stepSetParameter.Value = -1;
-			ScriptStepGetParamValue getParameter = new ScriptStepGetParamValue()
-			{
-				Parameter = _stepSetParameter.Parameter,
-				Communicator = _stepSetParameter.Communicator,
-			};
-
-			EOLStepSummeryData eOLStepSummeryData;
-			getParameter.SendAndReceive(out eOLStepSummeryData);
-
 		}
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
