@@ -35,8 +35,7 @@ namespace EOL.ViewModels
 		{
 
 			RunData = new RunData();
-			Run = new RunViewModel(
-				@"C:\Users\smadar\Documents\Scripts\Test scripts\EOL.scr", 
+			Run = new RunViewModel( 
 				devicesContainer, 
 				RunData,
 				userDefaultSettings, viewModel);

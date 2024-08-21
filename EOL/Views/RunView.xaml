@@ -8,7 +8,7 @@
              xmlns:script_handler_views="clr-namespace:ScriptHandler.Views;assembly=ScriptHandler"
              xmlns:local="clr-namespace:EOL.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="1100">
 
     <UserControl.Resources>
 
@@ -89,9 +89,11 @@
 
             <Grid Grid.Row="2" Margin="5,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="5" />
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="75" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
@@ -107,7 +109,12 @@
                     Command="{Binding AbortCommand}" 
                     IsEnabled="{Binding IsRunButtonEnabled, Converter={StaticResource InverseBoolConverter}}"/>
 
-                <Border Grid.Column="4" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
+                <Button Grid.Column="4" 
+                        Content="Continue" 
+                        Command="{Binding ContinueCommand}" 
+                        Visibility="{Binding ContinueVisibility}"/>
+
+                <Border Grid.Column="6" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
                     <Border.Resources>
                         <Style TargetType="Border">
                             <Style.Triggers>

@@ -22,8 +22,7 @@
 
     <DataTemplate x:Key="NotificationTemplate">
 
-        <ContentControl Content="{Binding}" ContentTemplate="{StaticResource AutoRunTemplate}"/>
-        <!--<Grid Name="grid">
+        <Grid Name="grid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="5"/>
@@ -55,7 +54,7 @@
                 <Setter TargetName="tb" Property="Foreground" Value="Black"/>
             </DataTrigger>
 
-        </DataTemplate.Triggers>-->
+        </DataTemplate.Triggers>
         
     </DataTemplate>
 

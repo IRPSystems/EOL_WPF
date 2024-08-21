@@ -1,7 +1,9 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DeviceCommunicators.MCU;
 using DeviceHandler.Models;
+using DeviceHandler.Models.DeviceFullDataModels;
 using EOL.Models;
 using EOL_Tester.Classes;
 using FlashingToolLib.FlashingTools;
@@ -16,6 +18,7 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace EOL.ViewModels
 {
@@ -41,12 +44,13 @@ namespace EOL.ViewModels
 
 		public bool IsAdminMode { get; set; }
 
+		public Visibility ContinueVisibility { get; set; }
+
 
 		#endregion Properties
 
 		#region Fields
 
-		private GeneratedScriptData _currentScript;
 
 		private DevicesContainer _devicesContainer;
 
@@ -62,14 +66,18 @@ namespace EOL.ViewModels
 
 		private SettingsViewModel _settingsViewModel;
 
-        private RunProjectsListService runProjectsList;
+        private RunProjectsListService _runProjectsList;
 
-        #endregion Fields
+		private OpenProjectForRunService _openProject;
+		private StopScriptStepService _stopScriptStep;
+		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
+		private GeneratedScriptData _stoppedScript; // TODO: initiate
 
-        #region Constructor
+		#endregion Fields
 
-        public RunViewModel(
-			string scriptPath,
+		#region Constructor
+
+		public RunViewModel(
 			DevicesContainer devicesContainer,
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
@@ -85,74 +93,72 @@ namespace EOL.ViewModels
 
 			IsRunButtonEnabled = true;
 
+			ContinueVisibility = Visibility.Collapsed;
+
 			RunCommand = new RelayCommand(Run);
 			AbortCommand = new RelayCommand(Abort);
+			ContinueCommand = new RelayCommand(Continue);
 
 			RunPercentage = 0;
 			TerminalTextsList = new ObservableCollection<string>();
 			RunState = RunStateEnum.None;
 
-			StopScriptStepService stopScriptStep = new StopScriptStepService();
-			RunScript = new RunScriptService(null, _devicesContainer, stopScriptStep, null);
-			RunScript.ScriptEndedEvent += _runScriptService_ScriptEndedEvent;
-			RunScript.ScriptStartedEvent += _runScriptService_ScriptStartedEvent;
+			_stopScriptStep = new StopScriptStepService();
+			RunScript = new RunScriptService(null, _devicesContainer, _stopScriptStep, null);
+			RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 			RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
+			RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
 
 
 			ScriptDiagram = new ScriptDiagramViewModel();
 
-            OpenProjectForRunService openProject = new OpenProjectForRunService();
-			GeneratedProjectData project = openProject.Open(
-				scriptPath,
-				devicesContainer,
-				null,
-				stopScriptStep);
-			if (project == null ||
-				project.TestsList == null || project.TestsList.Count == 0)
-			{
-				LoggerService.Error(this, "Failed to open the script", "Error");
-				return;
-			}
+            _openProject = new OpenProjectForRunService();
+			_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
+			_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
+			_generatedProjectsList = null;
+			_stoppedScript = new GeneratedScriptData();
+
+			_userDefaultSettings.DefaultSubscriptFile =
+				@"C:\Users\smadar\Documents\Scripts\Test scripts\Project 4\Project 4.gprj";
+			LoadProject();
 
 			RegisterEvents();
-
-			_currentScript = project.TestsList[0];
 		}
 
-        private void RegisterEvents()
-        {
-            _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
-            _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
-        }
+		#endregion Constructor
 
-        private void LoadMonitorFromPath()
-        {
-            throw new NotImplementedException();
-        }
+		#region Methods
 
-        private void LoadMainScriptFromPath()
-		{ 
-            runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
-        }
+		#region settingsViewModel events
 
-
-
-        #endregion Constructor
-
-        #region Methods
-
-        private void _runScriptService_ScriptStartedEvent()
+		private void RegisterEvents()
 		{
-			if(_currentScript == null)
-				return;
-
-			_timerDuration.Start();
-			_startTime = DateTime.Now;
-
-			ScriptDiagram.DrawScript(_currentScript);
+			_settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
+			_settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
 		}
 
-		private void _runScriptService_ScriptEndedEvent(ScriptStopModeEnum stopeMode)
+		private void LoadMonitorFromPath()
+		{
+			throw new NotImplementedException();
+		}
+
+		private void LoadMainScriptFromPath()
+		{
+			LoadProject();
+		}
+
+		#endregion settingsViewModel events
+
+		#region Running script events
+
+		private void RunScript_ScriptStartedEvent()
+		{
+			ScriptDiagram.DrawScript(RunScript.CurrentScript.CurrentScript);
+		}
+
+		private void _runProjectsList_ScriptEndedEvent(
+			ScriptStopModeEnum stopeMode,
+			GeneratedScriptData endedScript)
 		{
 			if (stopeMode == ScriptStopModeEnum.Ended)
 				RunPercentage = 100;
@@ -160,86 +166,130 @@ namespace EOL.ViewModels
 			Stop(stopeMode);
 		}
 
-		private void RunScript_CurrentStepChangedEvent(ScriptStepBase obj)
+		private void RunScript_CurrentStepChangedEvent(ScriptStepBase step)
 		{
-			RunPercentage = (int)(((double)_stepsCounter / (double)_currentScript.ScriptItemsList.Count) * 100);
+			if (step is ScriptStepNotification)
+				ContinueVisibility = Visibility.Visible;
+			else
+				ContinueVisibility = Visibility.Collapsed;
+
+			RunPercentage = (int)(((double)_stepsCounter / (double)_totalNumOfSteps) * 100);
 			_stepsCounter++;
 		}
 
+		#endregion Running script events
+
 		private void Run()
 		{
+			if(_generatedProjectsList == null || _generatedProjectsList.Count == 0)
+			{
+				LoggerService.Error(this, "There is not project defined for running", "Error");
+				return; 
+			}
+
+			ContinueVisibility = Visibility.Collapsed;
+
+			RunScript.SelectMotor.SelectedController = new ControllerSettingsData();
+			RunScript.SelectMotor.SelectedMotor = new MotorSettingsData();
+
 			_runData.StartTime = DateTime.Now;
 			IsRunButtonEnabled = false;
 			RunState = RunStateEnum.Running;
 
-			SetSNToScriptTool(_currentScript.ScriptItemsList);
-			SetFlashFileToScriptTool(_currentScript.ScriptItemsList);
-			RunScript.Run(null, _currentScript, null, false);
+			_timerDuration.Start();
+			_startTime = DateTime.Now;
+
+
+
+			_runProjectsList.StartAll(
+				_generatedProjectsList,
+				false,
+				_stoppedScript);
 
 			RunPercentage = 0;
-			_totalNumOfSteps = _currentScript.ScriptItemsList.Count + 1;
 			_stepsCounter = 1;
-		}		
+		}
 
-		private void SetSNToScriptTool(
+		#region Load project
+
+		private void LoadProject()
+		{
+			GeneratedProjectData project = _openProject.Open(
+				_userDefaultSettings.DefaultSubscriptFile, // TODO:
+				_devicesContainer,
+				null,
+				_stopScriptStep);
+			if (project == null ||
+				project.TestsList == null || project.TestsList.Count == 0)
+			{
+				LoggerService.Error(this, "Failed to open the script", "Error");
+				return;
+			}
+
+			_totalNumOfSteps = 0;
+			foreach (GeneratedScriptData scriptData in project.TestsList)
+			{
+				SetDataToScriptTool(scriptData.ScriptItemsList);
+			}
+
+			_generatedProjectsList = new ObservableCollection<GeneratedProjectData> { project };
+		}
+
+		private void SetDataToScriptTool(
 			ObservableCollection<IScriptItem> scriptItemsList)
 		{
 			foreach(IScriptItem scriptItem in scriptItemsList)
 			{
                 if (scriptItem is ISubScript subScript)
                 {
-					SetSNToScriptTool(subScript.Script.ScriptItemsList);
+					SetDataToScriptTool(subScript.Script.ScriptItemsList);
 					continue;
 				}
 
-				if(scriptItem is ScriptStepEOLSendSN sn)
+				_totalNumOfSteps++;
+
+				if (scriptItem is ScriptStepEOLSendSN sn)
 				{
 					sn.SerialNumber = _runData.SerialNumber;
 					//sn.UserSN = _runData. // TODO?
 				}
-            }
-		}
-
-		private void SetFlashFileToScriptTool(
-			ObservableCollection<IScriptItem> scriptItemsList)
-		{
-			foreach (IScriptItem scriptItem in scriptItemsList)
-			{
-				if (scriptItem is ISubScript subScript)
+				else if (scriptItem is ScriptStepEOLFlash flash)
 				{
-					SetFlashFileToScriptTool(subScript.Script.ScriptItemsList);
-					continue;
-				}
-
-				if (scriptItem is ScriptStepEOLFlash flash)
-				{
-					if (flash.NumOfFlashFile == 0)
-					{
-						flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
-						if (flash.IsEolSource)
-						{
-							flash.UdsSequence = _userDefaultSettings.FirstFileUdsSequence;
-							flash.RXId = _userDefaultSettings.FirstFileUdsRx.ToString("X");
-							flash.TXId = _userDefaultSettings.FirstFileUdsTx.ToString("X");
-						}
-					}
-					else if (flash.NumOfFlashFile == 1)
-					{
-						flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
-						if (flash.IsEolSource)
-						{
-							flash.UdsSequence = _userDefaultSettings.SecondFileUdsSequence;
-							flash.RXId = _userDefaultSettings.SecondFileUdsRx.ToString("X");
-							flash.TXId = _userDefaultSettings.SecondFileUdsTx.ToString("X");
-						}
-					}
-
-					
+					SetFlashData(flash);
 				}
 			}
 		}
 
-		
+		private void SetFlashData(ScriptStepEOLFlash flash)
+		{
+			if (flash == null)
+				return;
+
+			if (flash.NumOfFlashFile == 0)
+			{
+				flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+				if (flash.IsEolSource)
+				{
+					flash.UdsSequence = _userDefaultSettings.FirstFileUdsSequence;
+					flash.RXId = _userDefaultSettings.FirstFileUdsRx.ToString("X");
+					flash.TXId = _userDefaultSettings.FirstFileUdsTx.ToString("X");
+				}
+			}
+			else if (flash.NumOfFlashFile == 1)
+			{
+				flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
+				if (flash.IsEolSource)
+				{
+					flash.UdsSequence = _userDefaultSettings.SecondFileUdsSequence;
+					flash.RXId = _userDefaultSettings.SecondFileUdsRx.ToString("X");
+					flash.TXId = _userDefaultSettings.SecondFileUdsTx.ToString("X");
+				}
+			}
+		}
+
+		#endregion Load project
+
+
 
 		private void Abort()
 		{
@@ -251,7 +301,6 @@ namespace EOL.ViewModels
 			_timerDuration.Stop();
 			_runData.EndTime = DateTime.Now;
 
-			CountRunSteps();
 
 			IsRunButtonEnabled = true;
 
@@ -262,9 +311,17 @@ namespace EOL.ViewModels
 
 
 			List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
-			GetScriptEOLStepSummerys(
-				_currentScript,
-				eolStepSummerysList);
+			foreach (GeneratedProjectData project in _generatedProjectsList)
+			{
+				foreach (GeneratedScriptData script in project.TestsList)
+				{
+					GetScriptEOLStepSummerys(
+						script,
+						eolStepSummerysList);
+				}
+			}
+
+			
 
 			int passed;
 			int failed;
@@ -281,37 +338,18 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Failed;
 		}
 
-		private void CountRunSteps()
-		{
-			_runData.NumberOfTested = _currentScript.TotalRunSteps;
-
-			_runData.NumberOfPassed = 0;
-			_runData.NumberOfFailed = 0;
-
-			CountPassFaileRunSteps(_currentScript);
-		}
-
-		private void CountPassFaileRunSteps(GeneratedScriptData script)
-		{
-			if (script == null)
-				return;
-
-			_runData.NumberOfPassed += script.PassRunSteps;
-			_runData.NumberOfFailed += script.FailRunSteps;
-
-			foreach (IScriptItem item in script.ScriptItemsList)
-			{
-				if(item is ISubScript subScript)
-				{
-					CountPassFaileRunSteps(subScript.Script as GeneratedScriptData);
-				}
-			}
-		}
-
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
 		{
 			_runData.Duration = DateTime.Now - _startTime;
 		}
+
+		private void Continue()
+		{
+			RunScript.User_Next();
+		}
+
+
+		#region Handle EOL Step Summery
 
 		private void GetScriptEOLStepSummerys(
 			IScript script,
@@ -347,12 +385,15 @@ namespace EOL.ViewModels
 			}
 		}
 
+		#endregion Handle EOL Step Summery
+
 		#endregion Methods
 
 		#region Commands
 
 		public RelayCommand RunCommand { get; private set; }
 		public RelayCommand AbortCommand { get; private set; }
+		public RelayCommand ContinueCommand { get; private set; }
 
 		#endregion Commands
 	}
