@@ -18,6 +18,7 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Reflection.Metadata;
 using System.Windows;
 
 namespace EOL.ViewModels
@@ -90,54 +91,62 @@ namespace EOL.ViewModels
 			_runData = runData;
 			_userDefaultSettings = userDefaultSettings;
 
-			_timerDuration = new System.Timers.Timer(300);
-			_timerDuration.Elapsed += _timerDuration_Elapsed;
-
-			IsRunButtonEnabled = true;
-
-			ContinueVisibility = Visibility.Collapsed;
-
-			RunCommand = new RelayCommand(Run);
-			AbortCommand = new RelayCommand(Abort);
-			ContinueCommand = new RelayCommand(Continue);
-
-			RunPercentage = 0;
-			TerminalTextsList = new ObservableCollection<string>();
-			RunState = RunStateEnum.None;
-
-			DeviceFullData mcuDeviceFullData = _devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.MCU];
-			_stepSetParameter = new ScriptStepSetParameter()
+			try
 			{
-				Parameter = new MCU_ParamData()
+
+				_timerDuration = new System.Timers.Timer(300);
+				_timerDuration.Elapsed += _timerDuration_Elapsed;
+
+				IsRunButtonEnabled = true;
+
+				ContinueVisibility = Visibility.Collapsed;
+
+				RunCommand = new RelayCommand(Run);
+				AbortCommand = new RelayCommand(Abort);
+				ContinueCommand = new RelayCommand(Continue);
+
+				RunPercentage = 0;
+				TerminalTextsList = new ObservableCollection<string>();
+				RunState = RunStateEnum.None;
+
+				DeviceFullData mcuDeviceFullData = _devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.MCU];
+				_stepSetParameter = new ScriptStepSetParameter()
 				{
-					Name = "Pass/Fail indication",
-					Cmd = "eolpassflag"
-				},
+					Parameter = new MCU_ParamData()
+					{
+						Name = "Pass/Fail indication",
+						Cmd = "eolpassflag"
+					},
 
-				Communicator = mcuDeviceFullData.DeviceCommunicator,
-			};
+					Communicator = mcuDeviceFullData.DeviceCommunicator,
+				};
 
-			_stopScriptStep = new StopScriptStepService();
-			RunScript = new RunScriptService(null, _devicesContainer, _stopScriptStep, null);
-			RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
-			RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
-			RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
+				_stopScriptStep = new StopScriptStepService();
+				RunScript = new RunScriptService(null, _devicesContainer, _stopScriptStep, null);
+				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
+				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
+				RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
 
 
-			ScriptDiagram = new ScriptDiagramViewModel();
+				ScriptDiagram = new ScriptDiagramViewModel();
 
-            _openProject = new OpenProjectForRunService();
-			_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
-			_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
-			_generatedProjectsList = null;
-			_stoppedScript = new GeneratedScriptData();
+				_openProject = new OpenProjectForRunService();
+				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
+				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
+				_generatedProjectsList = null;
+				_stoppedScript = new GeneratedScriptData();
 
-			_userDefaultSettings.DefaultMainSeqConfigFile =
-				@"C:\Users\smadar\Documents\Scripts\Test scripts\Project 4\Project 4.gprj";
-			_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
+				//_userDefaultSettings.DefaultMainSeqConfigFile =
+				//	@"C:\Users\smadar\Documents\Scripts\Test scripts\Project 4\Project 4.gprj";
+				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
-			RegisterEvents();
-			LoadMainScriptFromPath();
+				RegisterEvents();
+				LoadMainScriptFromPath();
+			}
+			catch (Exception ex)
+			{
+				LoggerService.Error(this, "C'tor failed", ex);
+			}
 		}
 
 		#endregion Constructor
@@ -357,12 +366,23 @@ namespace EOL.ViewModels
 			if (failed > 0)
 			{
 				RunState = RunStateEnum.Failed;
-				_stepSetParameter.Parameter.Value = 0;
+				_stepSetParameter.Value = 0;
 			}
 			else
-				_stepSetParameter.Parameter.Value = 1;
+				_stepSetParameter.Value = 1;
 
 			_stepSetParameter.Execute();
+
+			_stepSetParameter.Value = -1;
+			ScriptStepGetParamValue getParameter = new ScriptStepGetParamValue()
+			{
+				Parameter = _stepSetParameter.Parameter,
+				Communicator = _stepSetParameter.Communicator,
+			};
+
+			EOLStepSummeryData eOLStepSummeryData;
+			getParameter.SendAndReceive(out eOLStepSummeryData);
+
 		}
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
