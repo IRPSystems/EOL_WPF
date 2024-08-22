@@ -134,7 +134,7 @@ namespace EOL.Services
                         SubFolderMainSeq = config.ProjectSeq.SubfolderName;
                         destFileExtension = config.ProjectSeq.FileExtension;
                         userDefaultSettings.UseDefaultSubscriptFile = true;
-                        userDefaultSettings.DefaultSubscriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.DefaultSubScriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.MonitorLog.IsUsed)
@@ -161,7 +161,7 @@ namespace EOL.Services
                         userDefaultSettings.SecondFlashFilePath = SearchPath(parentDirectoryPath, SubFolderMainSeq);
                     }
                     
-                    userDefaultSettings.isUseMonitorLog = config.OtherPreferences.MonitorLog;
+                    userDefaultSettings.isRecordMonitor = config.OtherPreferences.MonitorLog;
                     userDefaultSettings.isPrintLabel = config.OtherPreferences.PrintLabel;
                     userDefaultSettings.ProjectBaudRate = config.OtherPreferences.ProjectBaudRate;
 
@@ -206,11 +206,11 @@ namespace EOL.Services
             userDefaultSettings.UseDefaultSecondFlashFile = false;
             userDefaultSettings.UseDefaultFirstFlashFile = false;
             userDefaultSettings.DefaultMainSeqConfigFile = null;
-            userDefaultSettings.DefaultSubscriptFile = null;
+            userDefaultSettings.DefaultSubScriptFile = null;
             userDefaultSettings.DefaultMonitorLogScript = null;
             userDefaultSettings.FirstFlashFilePath = null;
             userDefaultSettings.SecondFlashFilePath = null;
-            userDefaultSettings.isUseMonitorLog = false;
+            userDefaultSettings.isRecordMonitor = false;
             userDefaultSettings.preTestFlash = false;
             userDefaultSettings.FlashPowerATEBox = false;
             userDefaultSettings.FlashPowerEA_PS = false;
