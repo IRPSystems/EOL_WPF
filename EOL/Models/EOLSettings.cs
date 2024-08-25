@@ -3,6 +3,7 @@ using System.IO;
 using System;
 using Newtonsoft.Json;
 using ScriptHandler.Models;
+using DeviceHandler.Models;
 
 namespace EOL.Models
 {
@@ -10,6 +11,8 @@ namespace EOL.Models
 	{
 		public bool IsLightTheme { get; set; }
 		public ScriptUserData ScriptUserData { get; set; }
+
+		public DeviceSetupUserData DeviceSetupUserData { get; set; }
 
 		public EOLSettings()
 		{
@@ -21,6 +24,7 @@ namespace EOL.Models
 			EOLSettings eolSettings = new EOLSettings();
 			eolSettings.IsLightTheme = false;
 			eolSettings.ScriptUserData = new ScriptUserData();
+			eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
 
 
 			return eolSettings;
@@ -53,6 +57,9 @@ namespace EOL.Models
 
 			if (eolSettings.ScriptUserData == null)
 				eolSettings.ScriptUserData = new ScriptUserData();
+
+			if (eolSettings.DeviceSetupUserData == null)
+				eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
 
 			if (eolSettings != null)
 				return eolSettings;

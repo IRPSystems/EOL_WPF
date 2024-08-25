@@ -173,7 +173,9 @@ namespace EOL.ViewModels
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
         }
 
-        private void LoadMainScriptFromPath()
+		
+
+		private void LoadMainScriptFromPath()
         {
 			if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
 			{
