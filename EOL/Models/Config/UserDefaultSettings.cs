@@ -3,7 +3,7 @@ using FlashingToolLib.FlashingTools;
 using System;
 using System.Diagnostics.Contracts;
 
-namespace EOL_Tester.Classes
+namespace EOL.Models
 {
     public class UserDefaultSettings
     {

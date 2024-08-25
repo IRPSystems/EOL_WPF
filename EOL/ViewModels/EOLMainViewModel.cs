@@ -18,7 +18,6 @@ using DeviceHandler.ViewModels;
 using System.Windows;
 using EOL.Views;
 using EOL.Services;
-using EOL_Tester.Classes;
 using DeviceHandler.Views;
 
 namespace EOL.ViewModels
@@ -67,6 +66,8 @@ namespace EOL.ViewModels
 
 		private SetupSelectionViewModel _setupSelectionVM;
 
+		private UserConfigManager _userConfigManager;
+
 		#endregion Fields
 
 		#region Constructor
@@ -75,9 +76,11 @@ namespace EOL.ViewModels
 		{
 			_settingsData = new SettingsData();
 
-			UserConfigManager userConfigManager = new UserConfigManager();
+			_userConfigManager = new UserConfigManager();
 
-			_userDefaultSettings = userConfigManager.ReadConfig();
+			_userDefaultSettings = new UserDefaultSettings();
+
+			_userConfigManager.ReadConfig(_userDefaultSettings);
 
 			SelectedMode = "Operator";
 
@@ -161,7 +164,7 @@ namespace EOL.ViewModels
 				};
 				
 
-				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings);
+				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings, _userConfigManager);
 
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
