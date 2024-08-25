@@ -14,20 +14,12 @@ using DeviceHandler.Models.DeviceFullDataModels;
 using Entities.Enums;
 using DeviceCommunicators.Services;
 using System.Linq;
-using ScriptHandler.ViewModels;
-using ScriptRunner.ViewModels;
 using DeviceHandler.ViewModels;
 using System.Windows;
-using DeviceSimulators.ViewModels;
-using DeviceHandler.Views;
 using EOL.Views;
-using Syncfusion.DocIO.DLS;
-using System.Xml.Linq;
 using EOL.Services;
-using ScriptHandler.Interfaces;
-using System.Security.Policy;
-using System.Threading;
 using EOL_Tester.Classes;
+using DeviceHandler.Views;
 
 namespace EOL.ViewModels
 {
@@ -70,6 +62,10 @@ namespace EOL.ViewModels
 		private SettingsData _settingsData;
 
 		private UserDefaultSettings _userDefaultSettings;
+
+		private ReadDevicesFileService _readDevicesFile;
+
+		private SetupSelectionViewModel _setupSelectionVM;
 
 		#endregion Fields
 
@@ -130,6 +126,20 @@ namespace EOL.ViewModels
 				_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
 				ChangeDarkLight();
 
+
+				_readDevicesFile = new ReadDevicesFileService();
+				_setupSelectionVM =
+					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, false);
+				SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
+				setupSelectionView.SetDataContext(_setupSelectionVM);
+				bool? resutl = setupSelectionView.ShowDialog();
+				if (resutl != true)
+				{
+					Closing(null);
+					Application.Current.Shutdown();
+					return;
+				}
+
 				DevicesContainter = new DevicesContainer();
 				DevicesContainter.DevicesFullDataList = new ObservableCollection<DeviceFullData>();
 				DevicesContainter.DevicesList = new ObservableCollection<DeviceData>();
@@ -180,14 +190,7 @@ namespace EOL.ViewModels
 		private void UpdateSetup()
 		{
 
-			ReadDevicesFileService readDevicesFile = new ReadDevicesFileService();
-			ObservableCollection<DeviceData> deviceList = readDevicesFile.ReadAllFiles(
-				@"Data\Device Communications\",
-				@"Data\Device Communications\param_defaults.json",
-				null,
-				null,
-				null,
-				false);
+			ObservableCollection<DeviceData> deviceList = _setupSelectionVM.DevicesList;
 
 
 			List<DeviceData> newDevices = new List<DeviceData>();
