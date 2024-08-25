@@ -134,7 +134,7 @@ namespace EOL.Services
                         SubFolderMainSeq = config.ProjectSeq.SubfolderName;
                         destFileExtension = config.ProjectSeq.FileExtension;
                         userDefaultSettings.UseDefaultSubscriptFile = true;
-                        userDefaultSettings.DefaultSubscriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
+                        userDefaultSettings.DefaultSubScriptFile = SearchPath(parentDirectoryPath, SubFolderMainSeq, destFileExtension);
                     }
 
                     if (config.MonitorLog.IsUsed)
