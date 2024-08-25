@@ -179,22 +179,22 @@ namespace EOL.ViewModels
                 if (filesData.Description == "Main Script Path")
                 {
                     _userDefaultSettings.DefaultMainSeqConfigFile = filesData.Path;
-                    MainScriptEventChanged.Invoke();
+                    MainScriptEventChanged?.Invoke();
                 }
                 else if (filesData.Description == "Sub Script Path")
                 {
                     _userDefaultSettings.DefaultSubScriptFile = filesData.Path;
-                    SubScriptEventChanged.Invoke();
+                    SubScriptEventChanged?.Invoke();
                 }
                 else if (filesData.Description == "Abort Script Path")
                 {
                     _userDefaultSettings.DefaultAbortScriptFile = filesData.Path;
-                    AbortScriptEventChanged.Invoke();
+                    AbortScriptEventChanged?.Invoke();
                 }
                 else if (filesData.Description == "Monitor Script Path")
                 {
                     _userDefaultSettings.DefaultMonitorLogScript = filesData.Path;
-                    MonitorScriptEventChanged.Invoke();
+                    MonitorScriptEventChanged?.Invoke();
                 }
                 else if (filesData.Description == "First Flash File Path")
                 {
