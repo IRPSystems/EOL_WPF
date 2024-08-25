@@ -8,6 +8,7 @@ using DeviceHandler.Models.DeviceFullDataModels;
 using EOL.Models;
 using EOL_Tester.Classes;
 using FlashingToolLib.FlashingTools;
+using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -22,6 +23,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection.Metadata;
 using System.Windows;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
@@ -67,6 +69,8 @@ namespace EOL.ViewModels
 
 		private UserDefaultSettings _userDefaultSettings;
 
+		private FlashingHandler _flashingHandler;
+
 		private SettingsViewModel _settingsViewModel;
 
         private RunProjectsListService _runProjectsList;
@@ -75,7 +79,7 @@ namespace EOL.ViewModels
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
-		private ObservableCollection<DeviceParameterData> _parametersList;
+		private ObservableCollection<DeviceParameterData> _logParametersList;
 
 
         private ScriptStepSetParameter _stepSetParameter;
@@ -93,12 +97,12 @@ namespace EOL.ViewModels
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
 			_runData = runData;
-			_userDefaultSettings = userDefaultSettings;
-
-			try
-			{
-
-				_timerDuration = new System.Timers.Timer(300);
+            _userDefaultSettings = userDefaultSettings;
+            try
+            {
+				//PackageConfig
+				PackageJsonFileGenerator.GenerateJsonFile();
+                _timerDuration = new System.Timers.Timer(300);
 				_timerDuration.Elapsed += _timerDuration_Elapsed;
 
 				IsRunButtonEnabled = true;
@@ -126,7 +130,7 @@ namespace EOL.ViewModels
 				};
 
 				_stopScriptStep = new StopScriptStepService();
-				RunScript = new RunScriptService(_parametersList, _devicesContainer, _stopScriptStep, null);
+				RunScript = new RunScriptService(_logParametersList, _devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
 				RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
@@ -138,11 +142,13 @@ namespace EOL.ViewModels
 				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
 				_generatedProjectsList = null;
-				_stoppedScript = new GeneratedScriptData();
 
 				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
-				RegisterEvents();
+				_flashingHandler = new FlashingHandler(devicesContainer);
+
+
+                RegisterEvents();
 			}
 			catch (Exception ex)
 			{
@@ -181,12 +187,12 @@ namespace EOL.ViewModels
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.Formatting = Formatting.Indented;
             settings.TypeNameHandling = TypeNameHandling.All;
-            _parametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
+            _logParametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
         }
 
         private void LoadAbortScriptFromPath()
         {
-            RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
+			_stoppedScript = _openProject.GetSingleScript(_userDefaultSettings.DefaultAbortScriptFile, _devicesContainer, null);
         }
 
         #endregion settingsViewModel events
@@ -250,12 +256,10 @@ namespace EOL.ViewModels
 			_timerDuration.Start();
 			_startTime = DateTime.Now;
 
-
-
 			_runProjectsList.StartAll(
 				_generatedProjectsList,
-				false,
-				_stoppedScript);
+				_userDefaultSettings.isRecordMonitor,
+				_stoppedScript, _logParametersList);
 
 			RunPercentage = 0;
 			_stepsCounter = 1;
@@ -268,7 +272,7 @@ namespace EOL.ViewModels
 			GeneratedProjectData project = _openProject.Open(
 				scriptPath,
 				_devicesContainer,
-				null,
+                _flashingHandler,
 				_stopScriptStep);
 			if (project == null ||
 				project.TestsList == null || project.TestsList.Count == 0)
@@ -276,8 +280,6 @@ namespace EOL.ViewModels
 				LoggerService.Error(this, "Failed to open the script", "Error");
 				return;
 			}
-
-			
 
 			_generatedProjectsList.Add(project);
 		}

@@ -52,7 +52,7 @@ namespace EOL_Tester.Classes
         public bool FlashPowerATEBox { get; set; }
         public bool FlashPowerEA_PS { get; set; }
         public bool FlashPowerUsbRelay { get; set; }
-        public bool isUseMonitorLog { get; set; } = true;
+        public bool isRecordMonitor { get; set; } = true;
         public bool preTestFlash { get; set; }
         public bool isStandAloneFlasher { get; set; }
         public bool isDecryptFile { get; set; }
