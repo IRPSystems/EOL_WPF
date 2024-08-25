@@ -133,7 +133,7 @@ namespace EOL.ViewModels
 
 				_readDevicesFile = new ReadDevicesFileService();
 				_setupSelectionVM =
-					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, Visibility.Collapsed, false);
+					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, false);
 
 				if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
@@ -290,6 +290,7 @@ namespace EOL.ViewModels
 				Owner = Application.Current.MainWindow
 			};
 
+			_setupSelectionVM.ButtonsVisibility = Visibility.Collapsed;
 
 			settingsView.Show();
 		}
