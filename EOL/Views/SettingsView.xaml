@@ -67,6 +67,12 @@
                                                          RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
                                PassEventArgsToCommand="False"/>
         </i:EventTrigger>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding Path=DataContext.ClosingCommand, 
+                                                             Mode=OneWay, 
+                                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" 
+                                   PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
 
     </i:Interaction.Triggers>
 

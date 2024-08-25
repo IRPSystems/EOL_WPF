@@ -3,7 +3,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
-using EOL_Tester.Classes;
 using ScriptHandler.Models;
 
 namespace EOL.ViewModels

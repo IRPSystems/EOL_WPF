@@ -6,7 +6,6 @@ using DeviceCommunicators.Models;
 using DeviceHandler.Models;
 using DeviceHandler.Models.DeviceFullDataModels;
 using EOL.Models;
-using EOL_Tester.Classes;
 using FlashingToolLib.FlashingTools;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
@@ -133,7 +132,7 @@ namespace EOL.ViewModels
 				RunScript = new RunScriptService(_logParametersList, _devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
-				RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
+				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
 
 
 				ScriptDiagram = new ScriptDiagramViewModel();
@@ -192,7 +191,8 @@ namespace EOL.ViewModels
 
         private void LoadAbortScriptFromPath()
         {
-			_stoppedScript = _openProject.GetSingleScript(_userDefaultSettings.DefaultAbortScriptFile, _devicesContainer, null);
+			RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
+            _stoppedScript = _openProject.GetSingleScript(_userDefaultSettings.DefaultAbortScriptFile, _devicesContainer, null);
         }
 
         #endregion settingsViewModel events

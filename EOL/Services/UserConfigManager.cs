@@ -1,6 +1,6 @@
-﻿using EOL.ViewModels;
+﻿using EOL.Models;
+using EOL.ViewModels;
 using EOL.Views;
-using EOL_Tester.Classes;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
@@ -12,16 +12,13 @@ namespace EOL.Services
 {
     public class UserConfigManager
     {
-        private readonly string ConfigFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "user.config");
+        private readonly string ConfigFilePath = Path.Combine(Environment.CurrentDirectory, "user.config");
         private readonly string TechLogDirectory = "\\Technician Logs";
         private string ErrorMsg = "Missing file in subfolders:\r\n";
 
-        public UserDefaultSettings ReadConfig()
+        public void ReadConfig(UserDefaultSettings userDefaultSettings)
         {
-			UserDefaultSettings userDefaultSettings = new UserDefaultSettings();
-
-
-			if (File.Exists(ConfigFilePath))
+            if (File.Exists(ConfigFilePath))
             {
                 ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
                 {
@@ -29,24 +26,33 @@ namespace EOL.Services
                 };
 
                 Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
-
                 var appSettings = config.AppSettings.Settings;
 
                 foreach (string key in appSettings.AllKeys)
                 {
                     string value = appSettings[key]?.Value;
 
-                    // Use reflection to assign the value to the corresponding variable in UserDefaultSettings
-                    var variable = typeof(UserDefaultSettings).GetProperty(key, BindingFlags.Public | BindingFlags.Static);
-                    if (variable != null && value != null)
+                    // Use reflection to assign the value to the corresponding property in UserDefaultSettings
+                    var property = typeof(UserDefaultSettings).GetProperty(key, BindingFlags.Public | BindingFlags.Instance);
+                    if (property != null && value != null)
                     {
-                        variable.SetValue(null, Convert.ChangeType(value, variable.PropertyType));
+                        try
+                        {
+                            // Convert value to the correct type and set the property value
+                            object convertedValue = Convert.ChangeType(value, property.PropertyType);
+                            property.SetValue(userDefaultSettings, convertedValue);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Log or handle the exception
+                            Console.WriteLine($"Error setting property '{key}': {ex.Message}");
+                        }
                     }
                 }
 
                 if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
                 {
-					userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
+                    userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
                 }
 
                 if (string.IsNullOrEmpty(userDefaultSettings.AutoConfigPref))
@@ -58,10 +64,7 @@ namespace EOL.Services
             {
                 AutoConfigProcedure(userDefaultSettings);
             }
-
-            return userDefaultSettings;
-
-		}
+        }
 
         private void AutoConfigProcedure(UserDefaultSettings userDefaultSettings)
         {
@@ -293,10 +296,10 @@ namespace EOL.Services
 
             var appSettings = config.AppSettings.Settings;
 
-            foreach (PropertyInfo property in typeof(UserDefaultSettings).GetProperties(BindingFlags.Public | BindingFlags.Static))
+            foreach (PropertyInfo property in typeof(UserDefaultSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance))
             {
                 string key = property.Name;
-                object value = property.GetValue(null);
+                object value = property.GetValue(userDefaultSettings);
                 if (value != null)
                 {
                     string valueString = Convert.ToString(value);

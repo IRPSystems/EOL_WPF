@@ -27,7 +27,6 @@ using EOL.Services;
 using ScriptHandler.Interfaces;
 using System.Security.Policy;
 using System.Threading;
-using EOL_Tester.Classes;
 
 namespace EOL.ViewModels
 {
@@ -71,6 +70,8 @@ namespace EOL.ViewModels
 
 		private UserDefaultSettings _userDefaultSettings;
 
+		private UserConfigManager _userConfigManager;
+
 		#endregion Fields
 
 		#region Constructor
@@ -79,9 +80,11 @@ namespace EOL.ViewModels
 		{
 			_settingsData = new SettingsData();
 
-			UserConfigManager userConfigManager = new UserConfigManager();
+			_userConfigManager = new UserConfigManager();
 
-			_userDefaultSettings = userConfigManager.ReadConfig();
+			_userDefaultSettings = new UserDefaultSettings();
+
+			_userConfigManager.ReadConfig(_userDefaultSettings);
 
 			SelectedMode = "Operator";
 
@@ -151,7 +154,7 @@ namespace EOL.ViewModels
 				};
 				
 
-				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings);
+				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings, _userConfigManager);
 
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
