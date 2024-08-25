@@ -1,17 +1,12 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
-using Microsoft.Win32;
-using ScriptHandler.Interfaces;
 using System;
-using System.CodeDom;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
-using System.Runtime.InteropServices;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -27,23 +22,43 @@ namespace EOL.ViewModels
 		public SettingsData SettingsData { get; set; }
 		public double DescriptsionColumnWidth { get; set; }
 
+		public SetupSelectionViewModel SetupSelectionVM { get; set; }
+
+		#endregion Properties
+
+		#region Fields
+
 		UserDefaultSettings _userDefaultSettings;
         UserConfigManager _userConfigManager;
 
-        public event Action MainScriptEventChanged;
+		#endregion Fields
+
+		#region Events
+
+		public event Action MainScriptEventChanged;
         public event Action MonitorScriptEventChanged;
         public event Action SubScriptEventChanged;
         public event Action AbortScriptEventChanged;
 
-        #endregion Properties
+		public event Action SettingsWindowClosedEvent;
 
-        #region Constructor
+		#endregion Events
 
-        public SettingsViewModel(SettingsData settingsData, UserDefaultSettings userDefaultSettings, UserConfigManager userConfigManager)
+
+
+		#region Constructor
+
+		public SettingsViewModel(
+            SettingsData settingsData, 
+            UserDefaultSettings userDefaultSettings, 
+            UserConfigManager userConfigManager,
+			SetupSelectionViewModel setupSelectionVM)
         {
 			SettingsData = settingsData;
             _userDefaultSettings = userDefaultSettings;
             _userConfigManager = userConfigManager;
+            SetupSelectionVM = setupSelectionVM;
+
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
@@ -58,7 +73,11 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
         {
             _userConfigManager.SaveConfig(_userDefaultSettings);
-        }
+
+            SetupSelectionVM.CloseOKCommand.Execute(null);
+			SettingsWindowClosedEvent?.Invoke();
+
+		}
 
         private void Loaded()
 		{

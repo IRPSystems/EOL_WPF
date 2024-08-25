@@ -5,6 +5,7 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
                  xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                 xmlns:device_handler_views="clr-namespace:DeviceHandler.Views;assembly=DeviceHandler"
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
                  Title="Settings" Height="450" Width="800"
@@ -12,7 +13,7 @@
 
     <Window.Resources>
 
-        <Style TargetType="ListViewItem" >
+        <Style x:Key="FilesListStyle" TargetType="ListViewItem" >
 
             <Setter Property="Template">
                 <Setter.Value>
@@ -80,9 +81,12 @@
 
         <TabItem Header="Files">
 
-            <ListView ItemsSource="{Binding SettingsData.FilesList}" Margin="10">
-                
-            </ListView>
+            <ListView 
+                ItemsSource="{Binding SettingsData.FilesList}" 
+                Margin="10"
+                ItemContainerStyle="{StaticResource FilesListStyle}"/>
+
+
 
 
         </TabItem>
@@ -101,6 +105,10 @@
 
             </StackPanel>
             
+        </TabItem>
+
+        <TabItem Header="Devices">
+            <device_handler_views:SetupSelectionView DataContext="{Binding SetupSelectionVM}" />
         </TabItem>
         
     </TabControl>

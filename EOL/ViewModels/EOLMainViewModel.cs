@@ -19,6 +19,7 @@ using System.Windows;
 using EOL.Views;
 using EOL.Services;
 using DeviceHandler.Views;
+using Syncfusion.DocIO.DLS;
 
 namespace EOL.ViewModels
 {
@@ -132,15 +133,20 @@ namespace EOL.ViewModels
 
 				_readDevicesFile = new ReadDevicesFileService();
 				_setupSelectionVM =
-					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, false);
-				SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
-				setupSelectionView.SetDataContext(_setupSelectionVM);
-				bool? resutl = setupSelectionView.ShowDialog();
-				if (resutl != true)
+					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, Visibility.Collapsed, false);
+
+				if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
 				{
-					Closing(null);
-					Application.Current.Shutdown();
-					return;
+					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
+					setupSelectionView.SetDataContext(_setupSelectionVM);
+					bool? resutl = setupSelectionView.ShowDialog();
+					if (resutl != true)
+					{
+						Closing(null);
+						Application.Current.Shutdown();
+						return;
+					}
 				}
 
 				DevicesContainter = new DevicesContainer();
@@ -164,7 +170,12 @@ namespace EOL.ViewModels
 				};
 				
 
-				SettingsVM = new SettingsViewModel(_settingsData, _userDefaultSettings, _userConfigManager);
+				SettingsVM = new SettingsViewModel(
+					_settingsData, 
+					_userDefaultSettings, 
+					_userConfigManager,
+					_setupSelectionVM);
+				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
@@ -188,6 +199,11 @@ namespace EOL.ViewModels
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
+		}
+
+		private void SettingsVM_SettingsWindowClosedEvent()
+		{
+			UpdateSetup();
 		}
 
 		private void UpdateSetup()

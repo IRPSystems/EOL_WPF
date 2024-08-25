@@ -169,7 +169,9 @@ namespace EOL.ViewModels
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
 		}
 
-        private void LoadMainScriptFromPath()
+		
+
+		private void LoadMainScriptFromPath()
         {
             LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
         }
