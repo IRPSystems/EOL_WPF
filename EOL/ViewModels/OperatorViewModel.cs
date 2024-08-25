@@ -30,15 +30,14 @@ namespace EOL.ViewModels
 			DevicesContainer devicesContainer,
 			ScriptUserData scriptUserData,
 			UserDefaultSettings userDefaultSettings,
-			SettingsViewModel viewModel)
+			SettingsViewModel viewModel, RunData runData)
 		{
-
-			RunData = new RunData();
-			Run = new RunViewModel( 
-				devicesContainer, 
-				RunData,
+            RunData = runData;
+            Run = new RunViewModel( 
+				devicesContainer,
+                RunData,
 				userDefaultSettings, viewModel);
-			RunData.RunScript = Run.RunScript;
+            RunData.RunScript = Run.RunScript;
 		}		
 
 		#endregion Constructor

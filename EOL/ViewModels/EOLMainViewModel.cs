@@ -72,6 +72,8 @@ namespace EOL.ViewModels
 
 		private UserConfigManager _userConfigManager;
 
+		private RunData _runData;
+
 		#endregion Fields
 
 		#region Constructor
@@ -84,7 +86,11 @@ namespace EOL.ViewModels
 
 			_userDefaultSettings = new UserDefaultSettings();
 
+			_runData = new RunData();
+
 			_userConfigManager.ReadConfig(_userDefaultSettings);
+
+			LoadConfigToUI();
 
 			SelectedMode = "Operator";
 
@@ -96,8 +102,6 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
 			ModesDropDownMenuItemCommand = new RelayCommand<string>(ModesDropDownMenuItem);
 
-			
-
 			CommunicationSettingsCommand = new RelayCommand(InitCommunicationSettings);
 			SettingsCommand = new RelayCommand(Settings);
 
@@ -108,13 +112,20 @@ namespace EOL.ViewModels
 				};
 		}
 
-		#endregion Constructor
+        private void LoadConfigToUI()
+        {
+            _runData.OperatorName = _userDefaultSettings.OperatorName;
+			_runData.PartNumber = _userDefaultSettings.PartNumber;
+        }
 
-		#region Methods
+        #endregion Constructor
 
-		private void Closing(CancelEventArgs e)
+        #region Methods
+
+        private void Closing(CancelEventArgs e)
 		{
 			EOLSettings.SaveEvvaUserData("EOL", _eolSettings);
+			_userConfigManager.SaveConfig(_userDefaultSettings);
 		}
 
 		#region Load
@@ -159,7 +170,7 @@ namespace EOL.ViewModels
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
-					_userDefaultSettings, SettingsVM);
+					_userDefaultSettings, SettingsVM, _runData);
 
 				try
 				{

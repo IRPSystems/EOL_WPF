@@ -48,7 +48,7 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
 
-            LoadUserConfigToSettingsView();
+            //LoadUserConfigToSettingsView();
         }
 
         #endregion Constructor
@@ -65,7 +65,7 @@ namespace EOL.ViewModels
 			GetDescriptsionColumnWidth();
 		}
 
-        private void LoadUserConfigToSettingsView()
+        public void LoadUserConfigToSettingsView()
         {
             foreach(FilesData fileData in SettingsData.FilesList)
             {

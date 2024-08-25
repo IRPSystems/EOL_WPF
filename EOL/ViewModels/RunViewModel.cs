@@ -20,6 +20,7 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Reflection.Metadata;
 using System.Windows;
 using static System.Net.Mime.MediaTypeNames;
@@ -79,7 +80,8 @@ namespace EOL.ViewModels
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
 		private ObservableCollection<DeviceParameterData> _logParametersList;
-
+		private string MainScriptReportSubFolder = "\\Main Script Reports";
+        private string MonitorLogSubFolder = "\\Monitor Logs";
 
         private ScriptStepSetParameter _stepSetParameter;
 
@@ -148,6 +150,8 @@ namespace EOL.ViewModels
 
 
                 RegisterEvents();
+
+				_settingsViewModel.LoadUserConfigToSettingsView();
 			}
 			catch (Exception ex)
 			{
@@ -167,31 +171,48 @@ namespace EOL.ViewModels
             _settingsViewModel.SubScriptEventChanged += LoadSubScriptFromPath;
             _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
-		}
+        }
 
         private void LoadMainScriptFromPath()
         {
+			if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
+			{
+				return;
+            }
             LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
         }
 
         private void LoadSubScriptFromPath()
         {
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultSubScriptFile))
+            {
+                return;
+            }
             LoadProject(_userDefaultSettings.DefaultSubScriptFile);
         }
 
         private void LoadMonitorFromPath()
 		{
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMonitorLogScript))
+            {
+                return;
+            }
             string jsonString = System.IO.File.ReadAllText(_userDefaultSettings.DefaultMonitorLogScript);
 
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.Formatting = Formatting.Indented;
             settings.TypeNameHandling = TypeNameHandling.All;
             _logParametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
+			RunScript.ParamRecording.RecordDirectory = _userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder;
         }
 
         private void LoadAbortScriptFromPath()
         {
-			RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultAbortScriptFile))
+            {
+                return;
+            }
+            RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
             _stoppedScript = _openProject.GetSingleScript(_userDefaultSettings.DefaultAbortScriptFile, _devicesContainer, null);
         }
 
@@ -212,9 +233,16 @@ namespace EOL.ViewModels
 				RunPercentage = 100;
 
 			Stop(stopeMode);
+
+			PostRunActions();
 		}
 
-		private void RunScript_CurrentStepChangedEvent(ScriptStepBase step)
+        private void PostRunActions()
+        {
+			_runData.SerialNumber = string.Empty;
+        }
+
+        private void RunScript_CurrentStepChangedEvent(ScriptStepBase step)
 		{
 			if (step is ScriptStepNotification)
 				ContinueVisibility = Visibility.Visible;
@@ -229,6 +257,10 @@ namespace EOL.ViewModels
 
 		private void Run()
 		{
+			if(!PreRunValidations())
+			{
+				return;
+			}
 			if(_generatedProjectsList == null || _generatedProjectsList.Count == 0)
 			{
 				LoggerService.Error(this, "There is not project defined for running", "Error");
@@ -265,9 +297,112 @@ namespace EOL.ViewModels
 			_stepsCounter = 1;
 		}
 
-		#region Load project
+        #region Pre Run Validations
+        private bool PreRunValidations()
+		{ 
+            if (!ValidateRequiredOperatorInfo())
+            {
+                return false;
+            }
+            if (!ValidateRequiredFiles())
+            {
+                return false;
+            }
+			if (!CreateDirectories())
+			{
+                return false;
+            }
+            return true;
+        }
 
-		private void LoadProject(string scriptPath)
+        private bool CreateDirectories()
+        {
+            if(!Directory.Exists(_userDefaultSettings.ReportsSavingPath))
+			{
+				MessageBox.Show("Report path doesnt exist:" + _userDefaultSettings.ReportsSavingPath + "\r\n" + "Please choose a valid path");
+				return false;
+			}
+			try
+			{
+				if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder))
+				{
+					Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder);
+				}
+                if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder))
+                {
+                    Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+                }
+				return true;
+            }
+			catch (Exception ex)
+			{
+				MessageBox.Show("Reports folder creation exception:\r\n " + ex.Message);
+                return false;
+			}
+        }
+
+        private bool ValidateRequiredOperatorInfo()
+        {
+            string ErrorMsg = "Missing operation info:\r\n";
+            bool isValid = true;
+
+            //Validate Directories Exists
+            if (String.IsNullOrEmpty(_runData.OperatorName))
+            {
+                ErrorMsg += "Operator Name\r\n";
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(_runData.SerialNumber))
+            {
+                ErrorMsg += "SerialNumber\r\n";
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(_runData.OperatorName))
+            {
+                ErrorMsg += "Part Number\r\n";
+                isValid = false;
+            }
+            if (!isValid)
+            {
+                MessageBox.Show(ErrorMsg);
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidateRequiredFiles()
+        {
+            string ErrorMsg = "Missing Files&Paths:\r\n";
+            bool isValid = true;
+
+            //Validate Directories Exists
+            if (String.IsNullOrEmpty(_userDefaultSettings.ReportsSavingPath))
+            {
+                ErrorMsg += "Reports export path\r\n";
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
+            {
+                ErrorMsg += "Main script file\r\n";
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultAbortScriptFile))
+            {
+                ErrorMsg += "Abort script file\r\n";
+                isValid = false;
+            }
+            if (!isValid)
+            {
+                MessageBox.Show(ErrorMsg);
+                return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region Load project
+
+        private void LoadProject(string scriptPath)
 		{
 			GeneratedProjectData project = _openProject.Open(
 				scriptPath,
