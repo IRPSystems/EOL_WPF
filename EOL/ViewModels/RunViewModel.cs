@@ -1,11 +1,13 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CsvHelper;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using DeviceHandler.Models;
 using DeviceHandler.Models.DeviceFullDataModels;
 using EOL.Models;
+using EOL.Services;
 using FlashingToolLib.FlashingTools;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
@@ -74,6 +76,11 @@ namespace EOL.ViewModels
 		private SettingsViewModel _settingsViewModel;
 
         private RunProjectsListService _runProjectsList;
+
+		//Create also a backup list of list TestResults
+		private TestResult _singleTestResult;
+
+		private CSVWriter _csvWritter;
 
 		private OpenProjectForRunService _openProject;
 		private StopScriptStepService _stopScriptStep;
@@ -148,6 +155,9 @@ namespace EOL.ViewModels
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
+				_singleTestResult = new TestResult();
+
+				_csvWritter = new CSVWriter();
 
                 RegisterEvents();
 
@@ -167,15 +177,27 @@ namespace EOL.ViewModels
 
 		private void RegisterEvents()
 		{
-			_settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
+            _settingsViewModel.ReportsPathEventChanged += ReportsPathChangeEvent;
+            _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
             _settingsViewModel.SubScriptEventChanged += LoadSubScriptFromPath;
             _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
         }
 
-		
+        private void ReportsPathChangeEvent()
+        {
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
+            {
+                return;
+            }
+            _csvWritter._csvFilePath = _userDefaultSettings.ReportsSavingPath
+                + MainScriptReportSubFolder
+                + "\\Tester Report - PackageName - "
+                + DateTime.Now.ToString("yyyy-MM-dd")
+                + ".csv";
+        }
 
-		private void LoadMainScriptFromPath()
+        private void LoadMainScriptFromPath()
         {
 			if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
 			{
@@ -507,9 +529,13 @@ namespace EOL.ViewModels
 				}
 			}
 
-			
+			_singleTestResult.SerialNumber = _runData.SerialNumber;
+			_singleTestResult.PartNumber = _runData.PartNumber;
+			_singleTestResult.OperatorName = _runData.OperatorName;
+            _singleTestResult.Steps = eolStepSummerysList;
+            _csvWritter.WriteTestResult(_singleTestResult);
 
-			int passed;
+            int passed;
 			int failed;
 			GetPassFailed(
 				eolStepSummerysList,

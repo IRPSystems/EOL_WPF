@@ -31,15 +31,14 @@ namespace EOL.ViewModels
 		UserDefaultSettings _userDefaultSettings;
         UserConfigManager _userConfigManager;
 
-		#endregion Fields
+        #endregion Fields
 
-		#region Events
-
-		public event Action MainScriptEventChanged;
+        #region Events
+        public event Action ReportsPathEventChanged;
+        public event Action MainScriptEventChanged;
         public event Action MonitorScriptEventChanged;
         public event Action SubScriptEventChanged;
         public event Action AbortScriptEventChanged;
-
 		public event Action SettingsWindowClosedEvent;
 
 		#endregion Events
@@ -91,7 +90,7 @@ namespace EOL.ViewModels
                 if (fileData.Description == "Reports Path")
                 {
                     fileData.Path = _userDefaultSettings.ReportsSavingPath;
-                    MainScriptEventChanged?.Invoke();
+                    ReportsPathEventChanged?.Invoke();
                 }
                 else if (fileData.Description == "Main Script Path")
                 {
@@ -166,6 +165,7 @@ namespace EOL.ViewModels
                     return;
                 filesData.Path = folderBrowserDialog.SelectedPath;
                 _userDefaultSettings.ReportsSavingPath = filesData.Path;
+                ReportsPathEventChanged?.Invoke();
             }
 			else
 			{

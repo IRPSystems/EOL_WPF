@@ -33,6 +33,8 @@ namespace EOL.Models
         public bool isRecordMonitor { get; set; } = true;
         public bool preTestFlash { get; set; }
         public bool isPrintLabel { get; set; }
+        public bool isSofIgnore { get; set; }
+        public bool isTogglePower {  get; set; }
         public int ProjectBaudRate { get; set; } = 500;
         public UInt32 FirstFileUdsRx { get; set; }
         public UInt32 FirstFileUdsTx { get; set; }
