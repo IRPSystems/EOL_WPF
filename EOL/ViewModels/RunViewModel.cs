@@ -332,14 +332,14 @@ namespace EOL.ViewModels
             {
                 return false;
             }
-			if (!CreateDirectories())
+			if (!Directories())
 			{
                 return false;
             }
             return true;
         }
 
-        private bool CreateDirectories()
+        private bool Directories()
         {
             if(!Directory.Exists(_userDefaultSettings.ReportsSavingPath))
 			{
@@ -355,7 +355,12 @@ namespace EOL.ViewModels
                 if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder))
                 {
                     Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+					
                 }
+				if(IsFileInUse(_csvWritter._csvFilePath))
+				{
+					return false;
+				}
 				return true;
             }
 			catch (Exception ex)
@@ -363,6 +368,35 @@ namespace EOL.ViewModels
 				MessageBox.Show("Reports folder creation exception:\r\n " + ex.Message);
                 return false;
 			}
+        }
+
+        private bool IsFileInUse(string filePath)
+        {
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    return false;
+                }
+                using (FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    // The file is not locked (not opened in another process).
+                    return false;
+                }
+            }
+            catch (IOException e)
+            {
+                if (e.Message.Contains("is being used"))
+                {
+                    MessageBox.Show("Report file is open, please close it to proceed");
+                }
+                else
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+                return true;
+            }
         }
 
         private bool ValidateRequiredOperatorInfo()
