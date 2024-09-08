@@ -493,7 +493,6 @@ namespace EOL.ViewModels
 				if (scriptItem is ScriptStepEOLSendSN sn)
 				{
 					sn.SerialNumber = _runData.SerialNumber;
-					//sn.UserSN = _runData. // TODO?
 				}
 				if (scriptItem is ScriptStepEOLPrint print)
 				{
