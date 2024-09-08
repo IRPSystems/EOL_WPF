@@ -495,6 +495,10 @@ namespace EOL.ViewModels
 					sn.SerialNumber = _runData.SerialNumber;
 					//sn.UserSN = _runData. // TODO?
 				}
+				if (scriptItem is ScriptStepEOLPrint print)
+				{
+					print.SerialNumber = _runData.SerialNumber;
+				}
 				else if (scriptItem is ScriptStepEOLFlash flash)
 				{
 					SetFlashData(flash);
