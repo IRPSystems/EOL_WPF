@@ -16,7 +16,7 @@ namespace EOL.Services
         private readonly string TechLogDirectory = "\\Technician Logs";
         private string ErrorMsg = "Missing file in subfolders:\r\n";
 
-        public void ReadConfig(UserDefaultSettings userDefaultSettings)
+        public void ReadConfig(EOLSettings eolSettings)
         {
             if (File.Exists(ConfigFilePath))
             {
@@ -40,7 +40,7 @@ namespace EOL.Services
                         {
                             // Convert value to the correct type and set the property value
                             object convertedValue = Convert.ChangeType(value, property.PropertyType);
-                            property.SetValue(userDefaultSettings, convertedValue);
+                            property.SetValue(eolSettings.UserDefaultSettings, convertedValue);
                         }
                         catch (Exception ex)
                         {
@@ -50,19 +50,19 @@ namespace EOL.Services
                     }
                 }
 
-                if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
+                if (!string.IsNullOrEmpty(eolSettings.UserDefaultSettings.ReportsSavingPath))
                 {
-                    userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
+                    eolSettings.UserDefaultSettings.TechLogDirectory = eolSettings.UserDefaultSettings.ReportsSavingPath + TechLogDirectory;
                 }
 
-                if (string.IsNullOrEmpty(userDefaultSettings.AutoConfigPref))
+                if (string.IsNullOrEmpty(eolSettings.UserDefaultSettings.AutoConfigPref))
                 {
-                    AutoConfigProcedure(userDefaultSettings);
+                    AutoConfigProcedure(eolSettings.UserDefaultSettings);
                 }
             }
             else
             {
-                AutoConfigProcedure(userDefaultSettings);
+                AutoConfigProcedure(eolSettings.UserDefaultSettings);
             }
         }
 

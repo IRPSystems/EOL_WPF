@@ -59,9 +59,7 @@ namespace EOL.ViewModels
 
 		private EOLSettings _eolSettings;
 
-		private SettingsData _settingsData;
-
-		private UserDefaultSettings _userDefaultSettings;
+		//private UserDefaultSettings _eolSettings.UserDefaultSettings;
 
 		private ReadDevicesFileService _readDevicesFile;
 
@@ -77,15 +75,14 @@ namespace EOL.ViewModels
 
 		public EOLMainViewModel()
 		{
-			_settingsData = new SettingsData();
 
 			_userConfigManager = new UserConfigManager();
 
-			_userDefaultSettings = new UserDefaultSettings();
+			_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
 
 			_runData = new RunData();
 
-			_userConfigManager.ReadConfig(_userDefaultSettings);
+			_userConfigManager.ReadConfig(_eolSettings);
 
 			LoadConfigToUI();
 
@@ -111,8 +108,8 @@ namespace EOL.ViewModels
 
         private void LoadConfigToUI()
         {
-            _runData.OperatorName = _userDefaultSettings.OperatorName;
-			_runData.PartNumber = _userDefaultSettings.PartNumber;
+            _runData.OperatorName = _eolSettings.UserDefaultSettings.OperatorName;
+			_runData.PartNumber = _eolSettings.UserDefaultSettings.PartNumber;
         }
 
         #endregion Constructor
@@ -122,7 +119,7 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
 		{
 			EOLSettings.SaveEvvaUserData("EOL", _eolSettings);
-			_userConfigManager.SaveConfig(_userDefaultSettings);
+			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 		}
 
 		#region Load
@@ -138,7 +135,7 @@ namespace EOL.ViewModels
 
 				LoggerService.Inforamtion(this, "Starting Loaded of EOLMainViewModel");
 
-				_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
+				
 				ChangeDarkLight();
 
 
@@ -169,21 +166,26 @@ namespace EOL.ViewModels
 
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				_settingsData.FilesList = new ObservableCollection<FilesData>()
+				if (_eolSettings.GeneralData == null)
 				{
-					new FilesData() { Description = "Reports Path" },
-					new FilesData() { Description = "Main Script Path" },
-					new FilesData() { Description = "Sub Script Path" },
-					new FilesData() { Description = "Monitor Script Path" },
-                    new FilesData() { Description = "Abort Script Path" },
-                    new FilesData() { Description = "First Flash File Path" },
-					new FilesData() { Description = "Second Flash File Path" },
-				};
-				
+					_eolSettings.GeneralData = new SettingsData()
+					{
+						FilesList = new ObservableCollection<FilesData>()
+						{
+							new FilesData() { Description = "Reports Path" },
+							new FilesData() { Description = "Main Script Path" },
+							new FilesData() { Description = "Sub Script Path" },
+							new FilesData() { Description = "Monitor Script Path" },
+							new FilesData() { Description = "Abort Script Path" },
+							new FilesData() { Description = "First Flash File Path" },
+							new FilesData() { Description = "Second Flash File Path" },
+						}
+					};
+				}
 
 				SettingsVM = new SettingsViewModel(
-					_settingsData, 
-					_userDefaultSettings, 
+					_eolSettings.GeneralData, 
+					_eolSettings.UserDefaultSettings, 
 					_userConfigManager,
 					_setupSelectionVM);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
@@ -191,7 +193,7 @@ namespace EOL.ViewModels
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
-					_userDefaultSettings, SettingsVM, _runData);
+					_eolSettings.UserDefaultSettings, SettingsVM, _runData);
 
 				try
 				{
