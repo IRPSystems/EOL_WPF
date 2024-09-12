@@ -61,7 +61,7 @@ namespace EOL.ViewModels
 
 		private SettingsData _settingsData;
 
-		private UserDefaultSettings _userDefaultSettings;
+		//private UserDefaultSettings _eolSettings.UserDefaultSettings;
 
 		private ReadDevicesFileService _readDevicesFile;
 
@@ -81,11 +81,11 @@ namespace EOL.ViewModels
 
 			_userConfigManager = new UserConfigManager();
 
-			_userDefaultSettings = new UserDefaultSettings();
+			_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
 
 			_runData = new RunData();
 
-			_userConfigManager.ReadConfig(_userDefaultSettings);
+			_userConfigManager.ReadConfig(_eolSettings);
 
 			LoadConfigToUI();
 
@@ -111,8 +111,8 @@ namespace EOL.ViewModels
 
         private void LoadConfigToUI()
         {
-            _runData.OperatorName = _userDefaultSettings.OperatorName;
-			_runData.PartNumber = _userDefaultSettings.PartNumber;
+            _runData.OperatorName = _eolSettings.UserDefaultSettings.OperatorName;
+			_runData.PartNumber = _eolSettings.UserDefaultSettings.PartNumber;
         }
 
         #endregion Constructor
@@ -122,7 +122,7 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
 		{
 			EOLSettings.SaveEvvaUserData("EOL", _eolSettings);
-			_userConfigManager.SaveConfig(_userDefaultSettings);
+			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 		}
 
 		#region Load
@@ -138,7 +138,7 @@ namespace EOL.ViewModels
 
 				LoggerService.Inforamtion(this, "Starting Loaded of EOLMainViewModel");
 
-				_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
+				
 				ChangeDarkLight();
 
 
@@ -183,7 +183,7 @@ namespace EOL.ViewModels
 
 				SettingsVM = new SettingsViewModel(
 					_settingsData, 
-					_userDefaultSettings, 
+					_eolSettings.UserDefaultSettings, 
 					_userConfigManager,
 					_setupSelectionVM);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
@@ -191,7 +191,7 @@ namespace EOL.ViewModels
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
-					_userDefaultSettings, SettingsVM, _runData);
+					_eolSettings.UserDefaultSettings, SettingsVM, _runData);
 
 				try
 				{

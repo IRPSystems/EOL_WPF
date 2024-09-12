@@ -14,6 +14,8 @@ namespace EOL.Models
 
 		public DeviceSetupUserData DeviceSetupUserData { get; set; }
 
+		public UserDefaultSettings UserDefaultSettings { get; set; }
+
 		public EOLSettings()
 		{
 			IsLightTheme = false;
@@ -25,6 +27,7 @@ namespace EOL.Models
 			eolSettings.IsLightTheme = false;
 			eolSettings.ScriptUserData = new ScriptUserData();
 			eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
+			eolSettings.UserDefaultSettings = new UserDefaultSettings();
 
 
 			return eolSettings;
@@ -60,6 +63,9 @@ namespace EOL.Models
 
 			if (eolSettings.DeviceSetupUserData == null)
 				eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
+
+			if (eolSettings.UserDefaultSettings == null)
+				eolSettings.UserDefaultSettings = new UserDefaultSettings();
 
 			if (eolSettings != null)
 				return eolSettings;

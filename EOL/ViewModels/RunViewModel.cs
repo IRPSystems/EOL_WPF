@@ -302,8 +302,8 @@ namespace EOL.ViewModels
 
 			ContinueVisibility = Visibility.Collapsed;
 
-			RunScript.SelectMotor.SelectedController = new ControllerSettingsData();
-			RunScript.SelectMotor.SelectedMotor = new MotorSettingsData();
+			//RunScript.SelectMotor.SelectedController = new ControllerSettingsData();
+			//RunScript.SelectMotor.SelectedMotor = new MotorSettingsData();
 
 			_runData.StartTime = DateTime.Now;
 			IsRunButtonEnabled = false;
@@ -315,7 +315,7 @@ namespace EOL.ViewModels
 			_runProjectsList.StartAll(
 				_generatedProjectsList,
 				_userDefaultSettings.isRecordMonitor,
-				_stoppedScript, _logParametersList);
+				_stoppedScript, null);// _logParametersList); TODO:?
 
 			RunPercentage = 0;
 			_stepsCounter = 1;
