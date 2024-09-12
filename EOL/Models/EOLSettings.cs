@@ -16,6 +16,8 @@ namespace EOL.Models
 
 		public UserDefaultSettings UserDefaultSettings { get; set; }
 
+		public SettingsData GeneralData { get; set; }
+
 		public EOLSettings()
 		{
 			IsLightTheme = false;

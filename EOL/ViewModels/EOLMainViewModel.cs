@@ -59,8 +59,6 @@ namespace EOL.ViewModels
 
 		private EOLSettings _eolSettings;
 
-		private SettingsData _settingsData;
-
 		//private UserDefaultSettings _eolSettings.UserDefaultSettings;
 
 		private ReadDevicesFileService _readDevicesFile;
@@ -77,7 +75,6 @@ namespace EOL.ViewModels
 
 		public EOLMainViewModel()
 		{
-			_settingsData = new SettingsData();
 
 			_userConfigManager = new UserConfigManager();
 
@@ -169,20 +166,25 @@ namespace EOL.ViewModels
 
 				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				_settingsData.FilesList = new ObservableCollection<FilesData>()
+				if (_eolSettings.GeneralData == null)
 				{
-					new FilesData() { Description = "Reports Path" },
-					new FilesData() { Description = "Main Script Path" },
-					new FilesData() { Description = "Sub Script Path" },
-					new FilesData() { Description = "Monitor Script Path" },
-                    new FilesData() { Description = "Abort Script Path" },
-                    new FilesData() { Description = "First Flash File Path" },
-					new FilesData() { Description = "Second Flash File Path" },
-				};
-				
+					_eolSettings.GeneralData = new SettingsData()
+					{
+						FilesList = new ObservableCollection<FilesData>()
+						{
+							new FilesData() { Description = "Reports Path" },
+							new FilesData() { Description = "Main Script Path" },
+							new FilesData() { Description = "Sub Script Path" },
+							new FilesData() { Description = "Monitor Script Path" },
+							new FilesData() { Description = "Abort Script Path" },
+							new FilesData() { Description = "First Flash File Path" },
+							new FilesData() { Description = "Second Flash File Path" },
+						}
+					};
+				}
 
 				SettingsVM = new SettingsViewModel(
-					_settingsData, 
+					_eolSettings.GeneralData, 
 					_eolSettings.UserDefaultSettings, 
 					_userConfigManager,
 					_setupSelectionVM);
