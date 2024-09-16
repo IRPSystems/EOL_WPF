@@ -9,8 +9,6 @@ using DeviceHandler.Models.DeviceFullDataModels;
 using Entities.Enums;
 using EOL.Models;
 using EOL.Services;
-using FlashingToolLib.FlashingTools;
-using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -24,9 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Reflection.Metadata;
 using System.Windows;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
