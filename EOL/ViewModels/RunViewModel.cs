@@ -6,6 +6,7 @@ using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using DeviceHandler.Models;
 using DeviceHandler.Models.DeviceFullDataModels;
+using Entities.Enums;
 using EOL.Models;
 using EOL.Services;
 using Newtonsoft.Json;
@@ -77,6 +78,8 @@ namespace EOL.ViewModels
 		private TestResult _singleTestResult;
 
 		private CSVWriter _csvWritter;
+
+		private PrintFileHandler _printFileParser;
 
 		private OpenProjectForRunService _openProject;
 		private StopScriptStepService _stopScriptStep;
@@ -155,9 +158,13 @@ namespace EOL.ViewModels
 
 				_csvWritter = new CSVWriter();
 
+                _printFileParser = new PrintFileHandler();
+
                 RegisterEvents();
 
 				_settingsViewModel.LoadUserConfigToSettingsView();
+
+				LoadPrintFile();
 			}
 			catch (Exception ex)
 			{
@@ -165,13 +172,37 @@ namespace EOL.ViewModels
 			}
 		}
 
-		#endregion Constructor
+        private void LoadPrintFile()
+        {
+            //If user selected printer device, try loading & parse .prn file
+            foreach (var item in _devicesContainer.DevicesList)
+            {
+                if (item.DeviceType == DeviceTypesEnum.Printer_TSC)
+                {
+                    string printParserError;
+                    if (!_printFileParser.OpenPrintFile(out printParserError))
+                    {
+                        MessageBox.Show("Unable to open print file due to: " + printParserError + "\r\n" +
+                                        "If you wish to use the printer:\r\n" +
+                                        "Restart the app with a valid print file");
+                        LoggerService.Error(this, "Error loading print file");
+                    }
+                    else
+                    {
+                        LoggerService.Inforamtion(this, "Loaded & parsed print file successfully");
+                        break;
+                    }
+                }
+            }
+        }
 
-		#region Methods
+        #endregion Constructor
 
-		#region settingsViewModel events
+        #region Methods
 
-		private void RegisterEvents()
+        #region settingsViewModel events
+
+        private void RegisterEvents()
 		{
             _settingsViewModel.ReportsPathEventChanged += ReportsPathChangeEvent;
             _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
@@ -493,6 +524,7 @@ namespace EOL.ViewModels
 				if (scriptItem is ScriptStepEOLPrint print)
 				{
 					print.SerialNumber = _runData.SerialNumber;
+                    print.ParamData.DataContent = _printFileParser.BuildPrinterCmd(print);
 				}
 				else if (scriptItem is ScriptStepEOLFlash flash)
 				{
