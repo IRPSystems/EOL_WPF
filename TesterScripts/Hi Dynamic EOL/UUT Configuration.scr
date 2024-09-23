@@ -1,0 +1,85 @@
+{
+  "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
+  "Name": "UUT Configuration",
+  "ScriptItemsList": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+    "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": null,
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_mode",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Mode",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": null,
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_mode",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Mode",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": null,
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      }
+    ]
+  },
+  "IsPass": null
+}
