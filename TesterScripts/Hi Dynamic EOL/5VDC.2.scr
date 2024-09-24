@@ -295,6 +295,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_EolFlagPass_1",
                 "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
               }
             ]
           },
@@ -410,6 +415,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_EolFlagPass_1",
                   "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ExternalWDTReset",
+                  "Value": "18"
                 }
               ]
             },
@@ -763,6 +773,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_EolFlagPass_1",
                 "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
               }
             ]
           },
@@ -878,6 +893,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_EolFlagPass_1",
                   "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ExternalWDTReset",
+                  "Value": "18"
                 }
               ]
             },

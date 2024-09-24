@@ -480,7 +480,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 18",
-        "Interval": 0,
+        "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
