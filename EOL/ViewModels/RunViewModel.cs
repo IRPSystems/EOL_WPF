@@ -9,6 +9,8 @@ using DeviceHandler.Models.DeviceFullDataModels;
 using Entities.Enums;
 using EOL.Models;
 using EOL.Services;
+using FlashingToolLib.FlashingTools;
+using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -22,7 +24,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Reflection.Metadata;
 using System.Windows;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
@@ -75,9 +79,11 @@ namespace EOL.ViewModels
         private RunProjectsListService _runProjectsList;
 
 		//Create also a backup list of list TestResults
-		private TestResult _singleTestResult;
+		private RunResult _singleTestResult;
 
 		private CSVWriter _csvWritter;
+
+		private PDF_Creator _pdfCreator;
 
 		private PrintFileHandler _printFileParser;
 
@@ -154,9 +160,11 @@ namespace EOL.ViewModels
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
-				_singleTestResult = new TestResult();
+				_singleTestResult = new RunResult();
 
 				_csvWritter = new CSVWriter();
+
+				_pdfCreator = new PDF_Creator();
 
                 _printFileParser = new PrintFileHandler();
 
@@ -231,6 +239,7 @@ namespace EOL.ViewModels
 				return;
             }
             LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
+			//_runData.RunScript.ScriptName = Path.GetFileName(_userDefaultSettings.DefaultMainSeqConfigFile);
         }
 
         private void LoadSubScriptFromPath()
@@ -320,11 +329,16 @@ namespace EOL.ViewModels
 
 			_totalNumOfSteps = 0;
 			foreach (GeneratedProjectData project in _generatedProjectsList)
-			{
+			{ 
 				foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
+									
 					SetDataToScriptTool(scriptData.ScriptItemsList);
-				}
+                    foreach (GeneratedScriptData script in project.TestsList)
+                    {
+                        ClearEOLStepSummerys(script);
+                    }
+                }
 			}
 
 			ContinueVisibility = Visibility.Collapsed;
@@ -582,8 +596,7 @@ namespace EOL.ViewModels
 			else
 				RunState = RunStateEnum.Ended;
 
-
-			List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
+            List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 			foreach (GeneratedProjectData project in _generatedProjectsList)
 			{
 				foreach (GeneratedScriptData script in project.TestsList)
@@ -594,32 +607,38 @@ namespace EOL.ViewModels
 				}
 			}
 
-			_singleTestResult.SerialNumber = _runData.SerialNumber;
+            int passed;
+            int failed;
+            GetPassFailed(
+                eolStepSummerysList,
+                out passed,
+                out failed);
+
+            _runData.NumberOfTested = passed + failed;
+            _runData.NumberOfFailed = failed;
+            _runData.NumberOfPassed = passed;
+
+			if (failed > 0)
+			{
+				RunState = RunStateEnum.Failed;
+				_singleTestResult.TestStatus = "Failed";
+				_stepSetParameter.Value = 0;
+			}
+			else
+			{
+                _singleTestResult.TestStatus = "Passed";
+                _stepSetParameter.Value = 1;
+            }
+
+            _stepSetParameter.Execute();
+
+            _singleTestResult.SerialNumber = _runData.SerialNumber;
 			_singleTestResult.PartNumber = _runData.PartNumber;
 			_singleTestResult.OperatorName = _runData.OperatorName;
             _singleTestResult.Steps = eolStepSummerysList;
             _csvWritter.WriteTestResult(_singleTestResult);
 
-            int passed;
-			int failed;
-			GetPassFailed(
-				eolStepSummerysList,
-				out passed,
-				out failed);
-
-			_runData.NumberOfTested = passed + failed;
-			_runData.NumberOfFailed = failed;
-			_runData.NumberOfPassed = passed;
-
-			if (failed > 0)
-			{
-				RunState = RunStateEnum.Failed;
-				_stepSetParameter.Value = 0;
-			}
-			else
-				_stepSetParameter.Value = 1;
-
-			_stepSetParameter.Execute();
+			_pdfCreator.CreatePdf(_generatedProjectsList, _singleTestResult, _userDefaultSettings);
 		}
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -653,7 +672,23 @@ namespace EOL.ViewModels
 			}
 		}
 
-		private void GetPassFailed(
+        private void ClearEOLStepSummerys(
+			IScript script)
+        {
+            foreach (IScriptItem item in script.ScriptItemsList)
+            {
+				if (item is ScriptStepBase stepBase)
+					stepBase.EOLStepSummerysList.Clear();
+
+                if (item is ISubScript subScript)
+                {
+                    ClearEOLStepSummerys(
+                        subScript.Script);
+                }
+            }
+        }
+
+        private void GetPassFailed(
 			List<EOLStepSummeryData> eolStepSummerysList,
 			out int passed,
 			out int failed)
