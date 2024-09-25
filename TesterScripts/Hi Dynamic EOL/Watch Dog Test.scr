@@ -1,0 +1,472 @@
+{
+  "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
+  "Name": "Watch Dog Test",
+  "ScriptItemsList": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+    "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 1",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Runtime",
+          "Default": "0",
+          "Cmd": "runtime",
+          "Range": null,
+          "Format": null,
+          "Scale": 1000.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Runtime",
+          "Units": "Seconds",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "10",
+        "Tolerance": 1000.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Runtime (MCU)\" = 10 ±  1000 - ID:1ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Monitor",
+            "Description": "Runtime",
+            "Default": "0",
+            "Cmd": "runtime",
+            "Range": null,
+            "Format": null,
+            "Scale": 1000.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Runtime",
+            "Units": "Seconds",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Read Run Time",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesOff",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHVL",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHWL",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHWL",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHUL",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHUL",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHVL",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_0",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_1",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_0",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_1",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_0",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_WatchdogTest",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ResetWatchdogCounter",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_0",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_1",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_set",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Set",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesOff",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHVL",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHWL",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHWL",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHUL",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHUL",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHVL",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_0",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_1",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_0",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_1",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_0",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_WatchdogTest",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ResetWatchdogCounter",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_0",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_1",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ExternalWDTReset",
+                  "Value": "18"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_set",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Set",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 18,
+          "AteCommandDropDwonIndex": 17,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Disable WatchDog Trigger",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 3",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Wake Up Delay",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 4",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Runtime",
+          "Default": "0",
+          "Cmd": "runtime",
+          "Range": null,
+          "Format": null,
+          "Scale": 1000.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Runtime",
+          "Units": "Seconds",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "1.5",
+        "Tolerance": 1.5,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Runtime (MCU)\" = 1.5 ±  1.5 - ID:4ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Monitor",
+            "Description": "Runtime",
+            "Default": "0",
+            "Cmd": "runtime",
+            "Range": null,
+            "Format": null,
+            "Scale": 1000.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Runtime",
+            "Units": "Seconds",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Read Run Time",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      }
+    ]
+  },
+  "IsPass": null
+}

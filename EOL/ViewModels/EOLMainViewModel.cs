@@ -78,7 +78,7 @@ namespace EOL.ViewModels
 
 			_userConfigManager = new UserConfigManager();
 
-			_eolSettings = EOLSettings.LoadEvvaUserData("EOL");
+			_eolSettings = EOLSettings.LoadUDS_XML_EditorUserData("EOL");
 
 			_runData = new RunData();
 
@@ -118,7 +118,7 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
 		{
-			EOLSettings.SaveEvvaUserData("EOL", _eolSettings);
+			EOLSettings.SaveUDS_XML_EditorUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 		}
 
