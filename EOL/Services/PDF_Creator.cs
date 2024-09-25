@@ -334,7 +334,7 @@ namespace EOL.Services
             document.Add(PDF_Creator.CreateInfoLine("Time", DateTime.Now.ToString("HH:mm:ss")));
             document.Add(PDF_Creator.CreateInfoLine("Rack No.", "not working yet"));
             //document.Add(PDF_Creator.CreateInfoLine("Win App FW Ver", GeneralAppInfo.AppVersion));
-            document.Add(PDF_Creator.CreateInfoLine("JSON Script Ver", Path.GetFileNameWithoutExtension("not working yet")));
+            document.Add(PDF_Creator.CreateInfoLine("JSON Script Ver", Path.GetFileNameWithoutExtension(ScriptPath)));
             // Add empty space
             document.Add(new Paragraph(""));
 
