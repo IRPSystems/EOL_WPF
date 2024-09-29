@@ -10,6 +10,7 @@ namespace EOL.Models
 		public string SerialNumber { get; set; }
 		public string PartNumber { get; set; }
 		public string OperatorName { get; set; }
+		public int RackNum { get; set; }
 
 		public DateTime StartTime { get; set; }
 		public TimeSpan Duration { get; set; }

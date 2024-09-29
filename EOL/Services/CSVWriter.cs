@@ -22,10 +22,10 @@ namespace EOL.Services
             _headersWritten = false;
         }
 
-        public void WriteTestResult(TestResult testResult)
+        public void WriteTestResult(RunResult testResult)
         {
             // Use reflection to get properties
-            var properties = typeof(TestResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            var properties = typeof(RunResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                                                .Where(p => p.PropertyType == typeof(string))
                                                .ToList();
 
@@ -59,7 +59,7 @@ namespace EOL.Services
                 foreach (var header in _headers.Skip(standardHeaders.Count))
                 {
                     var step = testResult.Steps.FirstOrDefault(s => s.StepDescription == header);
-                    rowValues.Add(step?.Value ?? "");
+                    rowValues.Add(step?.TestValue.ToString() ?? "");
                 }
 
                 writer.WriteLine(string.Join(",", rowValues));
