@@ -63,7 +63,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Toggle HVIL 1 to ON",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1,
         "EOLReportsSelectionData": {
@@ -76,19 +76,19 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 3",
+        "Notification": "Release Both Switches",
+        "NotificationLevel": 2,
+        "UserTitle": "Release Both Switches",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Release Both Switches",
-        "NotificationLevel": 2,
-        "Notification": "Release Both Switches",
-        "IsPass": false,
-        "PassNextId": 4,
-        "FailNextId": 0,
-        "ID": 3
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -114,7 +114,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:3ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -167,9 +167,9 @@
         },
         "UserTitle": "Verify Switches State - #1 OFF #2 OFF",
         "IsPass": false,
-        "PassNextId": 6,
-        "FailNextId": 3,
-        "ID": 4,
+        "PassNextId": 4,
+        "FailNextId": 2,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -180,19 +180,19 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 6",
+        "Notification": "Press Both Switches",
+        "NotificationLevel": 2,
+        "UserTitle": "Press Both Switches",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Press Both Switches",
-        "NotificationLevel": 2,
-        "Notification": "Press Both Switches",
-        "IsPass": false,
-        "PassNextId": 7,
-        "FailNextId": 0,
-        "ID": 6
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -218,7 +218,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -271,9 +271,9 @@
         },
         "UserTitle": "Verify Switches State - #1 ON #2 ON",
         "IsPass": false,
-        "PassNextId": 8,
-        "FailNextId": 6,
-        "ID": 7,
+        "PassNextId": 6,
+        "FailNextId": 4,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -284,19 +284,19 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 8",
+        "Notification": "Press switch #1 release switch #2",
+        "NotificationLevel": 2,
+        "UserTitle": "Press #1 Release #2",
+        "IsPass": false,
+        "PassNextId": 7,
+        "FailNextId": 0,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Press #1 Release #2",
-        "NotificationLevel": 2,
-        "Notification": "Press switch #1 release switch #2",
-        "IsPass": false,
-        "PassNextId": 9,
-        "FailNextId": 0,
-        "ID": 8
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -322,7 +322,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:9ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -375,9 +375,9 @@
         },
         "UserTitle": "Verify Switches State - #1 ON #2 OFF",
         "IsPass": false,
-        "PassNextId": 10,
-        "FailNextId": 8,
-        "ID": 9,
+        "PassNextId": 8,
+        "FailNextId": 6,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -388,19 +388,19 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 10",
+        "Notification": "Press Both Switches",
+        "NotificationLevel": 2,
+        "UserTitle": "Press Both Switches",
+        "IsPass": false,
+        "PassNextId": 9,
+        "FailNextId": 0,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Press Both Switches",
-        "NotificationLevel": 2,
-        "Notification": "Press Both Switches",
-        "IsPass": false,
-        "PassNextId": 11,
-        "FailNextId": 0,
-        "ID": 10
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -426,7 +426,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:11ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:9ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -479,9 +479,9 @@
         },
         "UserTitle": "Verify Switches State - #1 ON #2 ON",
         "IsPass": false,
-        "PassNextId": 12,
-        "FailNextId": 10,
-        "ID": 11,
+        "PassNextId": 10,
+        "FailNextId": 8,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -492,19 +492,19 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 12",
+        "Notification": "Release switch #1 press switch #2",
+        "NotificationLevel": 2,
+        "UserTitle": "Release #1 Press #2",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Release #1 Press #2",
-        "NotificationLevel": 2,
-        "Notification": "Release switch #1 press switch #2",
-        "IsPass": false,
-        "PassNextId": 13,
-        "FailNextId": 0,
-        "ID": 12
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -530,7 +530,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -583,9 +583,9 @@
         },
         "UserTitle": "Verify Switches State - #1 OFF #2 ON",
         "IsPass": false,
-        "PassNextId": 14,
-        "FailNextId": 12,
-        "ID": 13,
+        "PassNextId": 12,
+        "FailNextId": 10,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -654,7 +654,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

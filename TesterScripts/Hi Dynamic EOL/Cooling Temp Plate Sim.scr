@@ -6,23 +6,173 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 3",
+        "Name": "Compare With Tolerance 16",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Cooling Plate Temperature",
-          "Default": "0",
-          "Cmd": "cooltmp",
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vbus",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Meas_5V",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vsw",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp1",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp2",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseU",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseV",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseW",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbA",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbB",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbI",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Bus_Current",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CoolingTemp",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp2",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SerialNumber",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GdGood",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentUmV",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentWmV",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BusCurrentMv",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn1",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn2",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn3",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn4",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SafeMeasure_IDAC1",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_WatchdogCounter",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_EolFlagPass",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_get",
           "Range": null,
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Cooling Plate Temp",
-          "Units": "°C",
+          "Name": "ATE Get",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -30,7 +180,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Cooling Plate Temp (MCU)\" = 120 ±  1 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  1 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -44,21 +194,171 @@
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Cooling Plate Temperature",
-            "Default": "0",
-            "Cmd": "cooltmp",
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vbus",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Meas_5V",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vsw",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp1",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp2",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseU",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseV",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseW",
+                  "Value": "7"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbA",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbB",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbI",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Bus_Current",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CoolingTemp",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp2",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SerialNumber",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_GdGood",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentUmV",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentWmV",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BusCurrentMv",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn1",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn2",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn3",
+                  "Value": "22"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn4",
+                  "Value": "23"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SafeMeasure_IDAC1",
+                  "Value": "24"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_WatchdogCounter",
+                  "Value": "25"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_EolFlagPass",
+                  "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_get",
             "Range": null,
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Cooling Plate Temp",
-            "Units": "°C",
+            "Name": "ATE Get",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -66,8 +366,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 12,
+          "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -83,7 +383,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Reading ",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -148,7 +448,7 @@
         "LoopsAmount": 107,
         "Interval": 200,
         "IntervalUnite": 1,
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Analog Increment to 80",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -165,7 +465,7 @@
         "Name": "Delay 10",
         "Interval": 2,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -181,21 +481,171 @@
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
         "Name": "Compare With Tolerance 4",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Cooling Plate Temperature",
-          "Default": "0",
-          "Cmd": "cooltmp",
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vbus",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Meas_5V",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vsw",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp1",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp2",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseU",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseV",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseW",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbA",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbB",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbI",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Bus_Current",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CoolingTemp",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp2",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SerialNumber",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GdGood",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentUmV",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentWmV",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BusCurrentMv",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn1",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn2",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn3",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn4",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SafeMeasure_IDAC1",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_WatchdogCounter",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_EolFlagPass",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_get",
           "Range": null,
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Cooling Plate Temp",
-          "Units": "°C",
+          "Name": "ATE Get",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -203,7 +653,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Cooling Plate Temp (MCU)\" = 80 ±  1 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 80 ±  1 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -217,21 +667,171 @@
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Cooling Plate Temperature",
-            "Default": "0",
-            "Cmd": "cooltmp",
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vbus",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Meas_5V",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vsw",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp1",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp2",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseU",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseV",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseW",
+                  "Value": "7"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbA",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbB",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbI",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Bus_Current",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CoolingTemp",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp2",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SerialNumber",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_GdGood",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentUmV",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentWmV",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BusCurrentMv",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn1",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn2",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn3",
+                  "Value": "22"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn4",
+                  "Value": "23"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SafeMeasure_IDAC1",
+                  "Value": "24"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_WatchdogCounter",
+                  "Value": "25"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_EolFlagPass",
+                  "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_get",
             "Range": null,
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Cooling Plate Temp",
-            "Units": "°C",
+            "Name": "ATE Get",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -239,8 +839,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 12,
+          "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -256,7 +856,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Reading ",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -321,7 +921,7 @@
         "LoopsAmount": 138,
         "Interval": 200,
         "IntervalUnite": 1,
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Analog Increment to 50",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -338,7 +938,7 @@
         "Name": "Delay 11",
         "Interval": 2,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -354,21 +954,171 @@
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
         "Name": "Compare With Tolerance 6",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Cooling Plate Temperature",
-          "Default": "0",
-          "Cmd": "cooltmp",
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vbus",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Meas_5V",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vsw",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp1",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp2",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseU",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseV",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseW",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbA",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbB",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbI",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Bus_Current",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CoolingTemp",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp2",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SerialNumber",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GdGood",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentUmV",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentWmV",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BusCurrentMv",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn1",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn2",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn3",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn4",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SafeMeasure_IDAC1",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_WatchdogCounter",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_EolFlagPass",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_get",
           "Range": null,
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Cooling Plate Temp",
-          "Units": "°C",
+          "Name": "ATE Get",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -376,7 +1126,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Cooling Plate Temp (MCU)\" = 50 ±  1 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 50 ±  1 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -390,21 +1140,171 @@
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Cooling Plate Temperature",
-            "Default": "0",
-            "Cmd": "cooltmp",
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vbus",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Meas_5V",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vsw",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp1",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp2",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseU",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseV",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseW",
+                  "Value": "7"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbA",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbB",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbI",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Bus_Current",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CoolingTemp",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp2",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SerialNumber",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_GdGood",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentUmV",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentWmV",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BusCurrentMv",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn1",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn2",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn3",
+                  "Value": "22"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn4",
+                  "Value": "23"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SafeMeasure_IDAC1",
+                  "Value": "24"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_WatchdogCounter",
+                  "Value": "25"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_EolFlagPass",
+                  "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_get",
             "Range": null,
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Cooling Plate Temp",
-            "Units": "°C",
+            "Name": "ATE Get",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -412,8 +1312,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 12,
+          "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -429,7 +1329,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Reading ",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -494,7 +1394,7 @@
         "LoopsAmount": 104,
         "Interval": 200,
         "IntervalUnite": 1,
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Analog Increment to 20",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -511,7 +1411,7 @@
         "Name": "Delay 12",
         "Interval": 2,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -527,21 +1427,171 @@
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
         "Name": "Compare With Tolerance 7",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Cooling Plate Temperature",
-          "Default": "0",
-          "Cmd": "cooltmp",
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vbus",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Meas_5V",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vsw",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp1",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp2",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseU",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseV",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseW",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbA",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbB",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbI",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Bus_Current",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CoolingTemp",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp2",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SerialNumber",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GdGood",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentUmV",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentWmV",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BusCurrentMv",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn1",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn2",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn3",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn4",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SafeMeasure_IDAC1",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_WatchdogCounter",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_EolFlagPass",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_get",
           "Range": null,
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Cooling Plate Temp",
-          "Units": "°C",
+          "Name": "ATE Get",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -549,7 +1599,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Cooling Plate Temp (MCU)\" = 20 ±  1 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 20 ±  1 - ID:10ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -563,21 +1613,171 @@
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Cooling Plate Temperature",
-            "Default": "0",
-            "Cmd": "cooltmp",
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vbus",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Meas_5V",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vsw",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp1",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp2",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseU",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseV",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseW",
+                  "Value": "7"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbA",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbB",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbI",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Bus_Current",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CoolingTemp",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp2",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SerialNumber",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_GdGood",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentUmV",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentWmV",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BusCurrentMv",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn1",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn2",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn3",
+                  "Value": "22"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn4",
+                  "Value": "23"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SafeMeasure_IDAC1",
+                  "Value": "24"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_WatchdogCounter",
+                  "Value": "25"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_EolFlagPass",
+                  "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_get",
             "Range": null,
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Cooling Plate Temp",
-            "Units": "°C",
+            "Name": "ATE Get",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -585,8 +1785,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 12,
+          "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -602,7 +1802,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Reading ",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -667,7 +1867,7 @@
         "LoopsAmount": 38,
         "Interval": 200,
         "IntervalUnite": 1,
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Analog Increment to 5",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -684,7 +1884,7 @@
         "Name": "Delay 13",
         "Interval": 2,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -700,21 +1900,171 @@
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
         "Name": "Compare With Tolerance 9",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Cooling Plate Temperature",
-          "Default": "0",
-          "Cmd": "cooltmp",
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vbus",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Meas_5V",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Vsw",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp1",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BoardTemp2",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseU",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseV",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_PhaseW",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbA",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbB",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_AqbI",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_Bus_Current",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CoolingTemp",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_MotorTemp2",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SerialNumber",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GdGood",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentUmV",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CurrentWmV",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_BusCurrentMv",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn1",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn2",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn3",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DigIn4",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_SafeMeasure_IDAC1",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_WatchdogCounter",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_EolFlagPass",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_get",
           "Range": null,
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Cooling Plate Temp",
-          "Units": "°C",
+          "Name": "ATE Get",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -722,7 +2072,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Cooling Plate Temp (MCU)\" = 5 ±  1 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 5 ±  1 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -736,21 +2086,171 @@
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Cooling Plate Temperature",
-            "Default": "0",
-            "Cmd": "cooltmp",
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vbus",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Meas_5V",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Vsw",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp1",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BoardTemp2",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseU",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseV",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_PhaseW",
+                  "Value": "7"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbA",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbB",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_AqbI",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_Bus_Current",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CoolingTemp",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_MotorTemp2",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SerialNumber",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_GdGood",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentUmV",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CurrentWmV",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_BusCurrentMv",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn1",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn2",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn3",
+                  "Value": "22"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DigIn4",
+                  "Value": "23"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_SafeMeasure_IDAC1",
+                  "Value": "24"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_WatchdogCounter",
+                  "Value": "25"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_EolFlagPass",
+                  "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_get",
             "Range": null,
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Cooling Plate Temp",
-            "Units": "°C",
+            "Name": "ATE Get",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -758,8 +2258,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 12,
+          "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -775,7 +2275,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Cooling Temp Plate Reading ",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

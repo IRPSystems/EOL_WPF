@@ -102,6 +102,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -222,6 +237,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -365,6 +395,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -485,6 +530,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -628,6 +688,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -748,6 +823,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -830,11 +920,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "0",
+        "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -888,7 +978,7 @@
         "UserTitle": "Read Dig Out 1 OFF",
         "IsPass": false,
         "PassNextId": 6,
-        "FailNextId": 0,
+        "FailNextId": 6,
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -917,11 +1007,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "0",
+        "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:6ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:6ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -975,7 +1065,7 @@
         "UserTitle": "Read DIG Out 2 OFF",
         "IsPass": false,
         "PassNextId": 7,
-        "FailNextId": 0,
+        "FailNextId": 7,
         "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -1004,11 +1094,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "0",
+        "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1169,6 +1259,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -1289,6 +1394,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -1432,6 +1552,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -1552,6 +1687,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -1695,6 +1845,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -1815,6 +1980,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -1897,11 +2077,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "1",
+        "CompareValue": "0",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:12ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:12ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1955,7 +2135,7 @@
         "UserTitle": "Read DIG Out 1 ON",
         "IsPass": false,
         "PassNextId": 13,
-        "FailNextId": 0,
+        "FailNextId": 13,
         "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -1984,11 +2164,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "1",
+        "CompareValue": "0",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2042,7 +2222,7 @@
         "UserTitle": "Read DIG Out 2 ON",
         "IsPass": false,
         "PassNextId": 14,
-        "FailNextId": 0,
+        "FailNextId": 14,
         "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -2071,11 +2251,11 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "1",
+        "CompareValue": "0",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

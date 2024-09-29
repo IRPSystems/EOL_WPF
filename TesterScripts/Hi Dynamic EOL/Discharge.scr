@@ -1,12 +1,12 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "Motor Temp 1 Sim",
+  "Name": "Discharge",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
+        "Name": "Compare With Tolerance 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -176,11 +176,11 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "5",
-        "Tolerance": 1.0,
+        "CompareValue": "0",
+        "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 5 ±  1 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -366,8 +366,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 13,
-          "AteCommandDropDwonIndex": 13,
+          "ATECommandID": 28,
+          "AteCommandDropDwonIndex": 28,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -383,7 +383,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Active Discharge FB (OFF)",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -396,46 +396,46 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 2",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
         "Parameter": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog output",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "SINK:CURRENT",
+          "Max": 300,
+          "ParamType": 2,
+          "ModbusAddress": 499,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
           "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Output",
-          "Units": null,
+          "Name": "(EL) Current Limit",
+          "Units": "A",
           "Value": null,
-          "DeviceType": 19,
+          "DeviceType": 3,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "Value": 2.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog output",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "SINK:CURRENT",
+            "Max": 300,
+            "ParamType": 2,
+            "ModbusAddress": 499,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
             "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Output",
-            "Units": null,
+            "Name": "(EL) Current Limit",
+            "Units": "A",
             "Value": null,
-            "DeviceType": 19,
+            "DeviceType": 3,
             "CommunicationTimeout": 0
           },
           "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 1,
+          "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
           "ATECommandID": 0,
@@ -443,12 +443,12 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.296,
-        "LoopsAmount": 69,
-        "Interval": 200,
-        "IntervalUnite": 1,
-        "UserTitle": "Motor Temp 1 Increment to 20",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Limit PS Current to 2A",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -461,11 +461,59 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 3",
-        "Interval": 2,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "SOUR:VOLTAGE",
+          "Max": 100,
+          "ParamType": 2,
+          "ModbusAddress": 500,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": null,
+          "Name": "Voltage Limit",
+          "Units": "V",
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 0
+        },
+        "Value": 300.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "SOUR:VOLTAGE",
+            "Max": 100,
+            "ParamType": 2,
+            "ModbusAddress": 500,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": null,
+            "Name": "Voltage Limit",
+            "Units": "V",
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set PS to 300V",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -478,385 +526,11 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 4",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "ATECommand": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vbus",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Meas_5V",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vsw",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp1",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp2",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseU",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseV",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseW",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbA",
-                "Value": "8"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbB",
-                "Value": "9"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbI",
-                "Value": "10"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Bus_Current",
-                "Value": "11"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CoolingTemp",
-                "Value": "12"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp1",
-                "Value": "13"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp2",
-                "Value": "14"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SerialNumber",
-                "Value": "15"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_GdGood",
-                "Value": "16"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentUmV",
-                "Value": "17"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentWmV",
-                "Value": "18"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BusCurrentMv",
-                "Value": "19"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn1",
-                "Value": "20"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn2",
-                "Value": "21"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn3",
-                "Value": "22"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn4",
-                "Value": "23"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SafeMeasure_IDAC1",
-                "Value": "24"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_WatchdogCounter",
-                "Value": "25"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_EolFlagPass",
-                "Value": "26"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_RunTime",
-                "Value": "27"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_ActiveDischargeFB",
-                "Value": "28"
-              }
-            ]
-          },
-          "Value": null,
-          "GroupName": null,
-          "Description": null,
-          "Default": null,
-          "Cmd": "ate_get",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": null,
-          "Name": "ATE Get",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": "20",
-        "Tolerance": 1.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 20 ±  1 - ID:4ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vbus",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Meas_5V",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vsw",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp1",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp2",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseU",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseV",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseW",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbA",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbB",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbI",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Bus_Current",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CoolingTemp",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp2",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SerialNumber",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_GdGood",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentUmV",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentWmV",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BusCurrentMv",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn1",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn2",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn3",
-                  "Value": "22"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn4",
-                  "Value": "23"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SafeMeasure_IDAC1",
-                  "Value": "24"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_WatchdogCounter",
-                  "Value": "25"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_EolFlagPass",
-                  "Value": "26"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_RunTime",
-                  "Value": "27"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_ActiveDischargeFB",
-                  "Value": "28"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_get",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Get",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
-          "AteCommandDropDwonIndex": 13,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 5",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -869,46 +543,57 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 5",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 4",
         "Parameter": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog output",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "MEAS:VOLT",
+          "Max": 0,
+          "ParamType": 1,
+          "ModbusAddress": 507,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
           "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Output",
-          "Units": null,
+          "Name": "Actual Voltage",
+          "Units": "V",
           "Value": null,
-          "DeviceType": 19,
+          "DeviceType": 3,
           "CommunicationTimeout": 0
         },
+        "CompareValue": "300",
+        "Tolerance": 1.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:5ToleranceTypeGroupName",
+        "IsValueTolerance": false,
+        "IsPercentageTolerance": true,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog output",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "MEAS:VOLT",
+            "Max": 0,
+            "ParamType": 1,
+            "ModbusAddress": 507,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
             "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Output",
-            "Units": null,
+            "Name": "Actual Voltage",
+            "Units": "V",
             "Value": null,
-            "DeviceType": 19,
+            "DeviceType": 3,
             "CommunicationTimeout": 0
           },
           "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 1,
+          "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
           "ATECommandID": 0,
@@ -916,12 +601,19 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.365,
-        "LoopsAmount": 125,
-        "Interval": 200,
-        "IntervalUnite": 1,
-        "UserTitle": "Motor Temp 1 Increment to 50",
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Verify PS 300V",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -934,11 +626,287 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 6",
-        "Interval": 2,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesOff",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHVL",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHWL",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHWL",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHUL",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHUL",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHVL",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_0",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_1",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_0",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_1",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_0",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_WatchdogTest",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ResetWatchdogCounter",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_0",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_1",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_set",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Set",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesOff",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHVL",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHWL",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHWL",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHUL",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHUL",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHVL",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_0",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_1",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_0",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_1",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_0",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_WatchdogTest",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ResetWatchdogCounter",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_0",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_1",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ExternalWDTReset",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_set",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Set",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 19,
+          "AteCommandDropDwonIndex": 18,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Active Discharge ON",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -951,8 +919,25 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 20",
+        "Interval": 400,
+        "IntervalUnite": 1,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 8,
+        "FailNextId": 0,
+        "ID": 7,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 7",
+        "Name": "Compare With Tolerance 14",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1122,11 +1107,11 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "50",
-        "Tolerance": 1.0,
+        "CompareValue": "1",
+        "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 50 ±  1 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1312,8 +1297,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 13,
-          "AteCommandDropDwonIndex": 13,
+          "ATECommandID": 28,
+          "AteCommandDropDwonIndex": 28,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -1329,72 +1314,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
-        "IsPass": false,
-        "PassNextId": 8,
-        "FailNextId": 0,
-        "ID": 7,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 8",
-        "Parameter": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog output",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
-          "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Output",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 19,
-          "CommunicationTimeout": 0
-        },
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog output",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Output",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 19,
-            "CommunicationTimeout": 0
-          },
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 1,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.49,
-        "LoopsAmount": 116,
-        "Interval": 200,
-        "IntervalUnite": 1,
-        "UserTitle": "Motor Temp 1 Increment to 80",
+        "UserTitle": "Read Active Discharge FB (ON)",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1408,8 +1328,8 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 10",
-        "Interval": 2,
+        "Name": "Delay 6",
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1424,8 +1344,8 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 11",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1434,148 +1354,108 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vbus",
+                "Name": "ATE_SET_PhasesOff",
                 "Value": "0"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Meas_5V",
+                "Name": "ATE_SET_PhasesUHVL",
                 "Value": "1"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vsw",
+                "Name": "ATE_SET_PhasesUHWL",
                 "Value": "2"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp1",
+                "Name": "ATE_SET_PhasesVHWL",
                 "Value": "3"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp2",
+                "Name": "ATE_SET_PhasesVHUL",
                 "Value": "4"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseU",
+                "Name": "ATE_SET_PhasesWHUL",
                 "Value": "5"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseV",
+                "Name": "ATE_SET_PhasesWHVL",
                 "Value": "6"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseW",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbA",
+                "Name": "ATE_SET_DigOut1_0",
                 "Value": "8"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbB",
+                "Name": "ATE_SET_DigOut1_1",
                 "Value": "9"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbI",
+                "Name": "ATE_SET_DigOut2_0",
                 "Value": "10"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Bus_Current",
+                "Name": "ATE_SET_DigOut2_1",
                 "Value": "11"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CoolingTemp",
+                "Name": "ATE_SET_DigOut3_0",
                 "Value": "12"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp1",
+                "Name": "ATE_SET_DigOut3_1",
                 "Value": "13"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp2",
+                "Name": "ATE_SET_WatchdogTest",
                 "Value": "14"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SerialNumber",
+                "Name": "ATE_SET_ResetWatchdogCounter",
                 "Value": "15"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_GdGood",
+                "Name": "ATE_SET_EolFlagPass_0",
                 "Value": "16"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentUmV",
+                "Name": "ATE_SET_EolFlagPass_1",
                 "Value": "17"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentWmV",
+                "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BusCurrentMv",
+                "Name": "ATE_SET_ActiveDischargeON",
                 "Value": "19"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn1",
+                "Name": "ATE_SET_ActiveDischargeOFF",
                 "Value": "20"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn2",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
                 "Value": "21"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn3",
-                "Value": "22"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn4",
-                "Value": "23"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SafeMeasure_IDAC1",
-                "Value": "24"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_WatchdogCounter",
-                "Value": "25"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_EolFlagPass",
-                "Value": "26"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_RunTime",
-                "Value": "27"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_ActiveDischargeFB",
-                "Value": "28"
               }
             ]
           },
@@ -1583,34 +1463,23 @@
           "GroupName": null,
           "Description": null,
           "Default": null,
-          "Cmd": "ate_get",
+          "Cmd": "ate_set",
           "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "ATE Get",
+          "Name": "ATE Set",
           "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "80",
-        "Tolerance": 1.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 80 ±  1 - ID:10ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
@@ -1620,148 +1489,108 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vbus",
+                  "Name": "ATE_SET_PhasesOff",
                   "Value": "0"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Meas_5V",
+                  "Name": "ATE_SET_PhasesUHVL",
                   "Value": "1"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vsw",
+                  "Name": "ATE_SET_PhasesUHWL",
                   "Value": "2"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp1",
+                  "Name": "ATE_SET_PhasesVHWL",
                   "Value": "3"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp2",
+                  "Name": "ATE_SET_PhasesVHUL",
                   "Value": "4"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseU",
+                  "Name": "ATE_SET_PhasesWHUL",
                   "Value": "5"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseV",
+                  "Name": "ATE_SET_PhasesWHVL",
                   "Value": "6"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseW",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbA",
+                  "Name": "ATE_SET_DigOut1_0",
                   "Value": "8"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbB",
+                  "Name": "ATE_SET_DigOut1_1",
                   "Value": "9"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbI",
+                  "Name": "ATE_SET_DigOut2_0",
                   "Value": "10"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Bus_Current",
+                  "Name": "ATE_SET_DigOut2_1",
                   "Value": "11"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CoolingTemp",
+                  "Name": "ATE_SET_DigOut3_0",
                   "Value": "12"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp1",
+                  "Name": "ATE_SET_DigOut3_1",
                   "Value": "13"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp2",
+                  "Name": "ATE_SET_WatchdogTest",
                   "Value": "14"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SerialNumber",
+                  "Name": "ATE_SET_ResetWatchdogCounter",
                   "Value": "15"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_GdGood",
+                  "Name": "ATE_SET_EolFlagPass_0",
                   "Value": "16"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentUmV",
+                  "Name": "ATE_SET_EolFlagPass_1",
                   "Value": "17"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentWmV",
+                  "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BusCurrentMv",
+                  "Name": "ATE_SET_ActiveDischargeON",
                   "Value": "19"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn1",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
                   "Value": "20"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn2",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
                   "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn3",
-                  "Value": "22"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn4",
-                  "Value": "23"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SafeMeasure_IDAC1",
-                  "Value": "24"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_WatchdogCounter",
-                  "Value": "25"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_EolFlagPass",
-                  "Value": "26"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_RunTime",
-                  "Value": "27"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_ActiveDischargeFB",
-                  "Value": "28"
                 }
               ]
             },
@@ -1769,14 +1598,14 @@
             "GroupName": null,
             "Description": null,
             "Default": null,
-            "Cmd": "ate_get",
+            "Cmd": "ate_set",
             "Range": null,
             "Format": null,
             "Scale": 1.0,
             "Note": null,
             "Save": true,
             "DropDown": null,
-            "Name": "ATE Get",
+            "Name": "ATE Set",
             "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
@@ -1785,24 +1614,17 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 13,
-          "AteCommandDropDwonIndex": 13,
+          "ATECommandID": 20,
+          "AteCommandDropDwonIndex": 19,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Active Discharge OFF",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1815,90 +1637,8 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 12",
-        "Parameter": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog output",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
-          "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Output",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 19,
-          "CommunicationTimeout": 0
-        },
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog output",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Output",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 19,
-            "CommunicationTimeout": 0
-          },
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 1,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.606,
-        "LoopsAmount": 139,
-        "Interval": 200,
-        "IntervalUnite": 1,
-        "UserTitle": "Motor Temp 1 Increment to 120",
-        "IsPass": false,
-        "PassNextId": 12,
-        "FailNextId": 0,
-        "ID": 11,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 13",
-        "Interval": 2,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
-        "PassNextId": 13,
-        "FailNextId": 0,
-        "ID": 12,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 13",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1907,148 +1647,108 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vbus",
+                "Name": "ATE_SET_PhasesOff",
                 "Value": "0"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Meas_5V",
+                "Name": "ATE_SET_PhasesUHVL",
                 "Value": "1"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vsw",
+                "Name": "ATE_SET_PhasesUHWL",
                 "Value": "2"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp1",
+                "Name": "ATE_SET_PhasesVHWL",
                 "Value": "3"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp2",
+                "Name": "ATE_SET_PhasesVHUL",
                 "Value": "4"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseU",
+                "Name": "ATE_SET_PhasesWHUL",
                 "Value": "5"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseV",
+                "Name": "ATE_SET_PhasesWHVL",
                 "Value": "6"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseW",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbA",
+                "Name": "ATE_SET_DigOut1_0",
                 "Value": "8"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbB",
+                "Name": "ATE_SET_DigOut1_1",
                 "Value": "9"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbI",
+                "Name": "ATE_SET_DigOut2_0",
                 "Value": "10"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Bus_Current",
+                "Name": "ATE_SET_DigOut2_1",
                 "Value": "11"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CoolingTemp",
+                "Name": "ATE_SET_DigOut3_0",
                 "Value": "12"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp1",
+                "Name": "ATE_SET_DigOut3_1",
                 "Value": "13"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp2",
+                "Name": "ATE_SET_WatchdogTest",
                 "Value": "14"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SerialNumber",
+                "Name": "ATE_SET_ResetWatchdogCounter",
                 "Value": "15"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_GdGood",
+                "Name": "ATE_SET_EolFlagPass_0",
                 "Value": "16"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentUmV",
+                "Name": "ATE_SET_EolFlagPass_1",
                 "Value": "17"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentWmV",
+                "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BusCurrentMv",
+                "Name": "ATE_SET_ActiveDischargeON",
                 "Value": "19"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn1",
+                "Name": "ATE_SET_ActiveDischargeOFF",
                 "Value": "20"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn2",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
                 "Value": "21"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn3",
-                "Value": "22"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn4",
-                "Value": "23"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SafeMeasure_IDAC1",
-                "Value": "24"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_WatchdogCounter",
-                "Value": "25"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_EolFlagPass",
-                "Value": "26"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_RunTime",
-                "Value": "27"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_ActiveDischargeFB",
-                "Value": "28"
               }
             ]
           },
@@ -2056,34 +1756,23 @@
           "GroupName": null,
           "Description": null,
           "Default": null,
-          "Cmd": "ate_get",
+          "Cmd": "ate_set",
           "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "ATE Get",
+          "Name": "ATE Set",
           "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "120",
-        "Tolerance": 1.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  1 - ID:13ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
@@ -2093,148 +1782,108 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vbus",
+                  "Name": "ATE_SET_PhasesOff",
                   "Value": "0"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Meas_5V",
+                  "Name": "ATE_SET_PhasesUHVL",
                   "Value": "1"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vsw",
+                  "Name": "ATE_SET_PhasesUHWL",
                   "Value": "2"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp1",
+                  "Name": "ATE_SET_PhasesVHWL",
                   "Value": "3"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp2",
+                  "Name": "ATE_SET_PhasesVHUL",
                   "Value": "4"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseU",
+                  "Name": "ATE_SET_PhasesWHUL",
                   "Value": "5"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseV",
+                  "Name": "ATE_SET_PhasesWHVL",
                   "Value": "6"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseW",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbA",
+                  "Name": "ATE_SET_DigOut1_0",
                   "Value": "8"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbB",
+                  "Name": "ATE_SET_DigOut1_1",
                   "Value": "9"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbI",
+                  "Name": "ATE_SET_DigOut2_0",
                   "Value": "10"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Bus_Current",
+                  "Name": "ATE_SET_DigOut2_1",
                   "Value": "11"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CoolingTemp",
+                  "Name": "ATE_SET_DigOut3_0",
                   "Value": "12"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp1",
+                  "Name": "ATE_SET_DigOut3_1",
                   "Value": "13"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp2",
+                  "Name": "ATE_SET_WatchdogTest",
                   "Value": "14"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SerialNumber",
+                  "Name": "ATE_SET_ResetWatchdogCounter",
                   "Value": "15"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_GdGood",
+                  "Name": "ATE_SET_EolFlagPass_0",
                   "Value": "16"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentUmV",
+                  "Name": "ATE_SET_EolFlagPass_1",
                   "Value": "17"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentWmV",
+                  "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BusCurrentMv",
+                  "Name": "ATE_SET_ActiveDischargeON",
                   "Value": "19"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn1",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
                   "Value": "20"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn2",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
                   "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn3",
-                  "Value": "22"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn4",
-                  "Value": "23"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SafeMeasure_IDAC1",
-                  "Value": "24"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_WatchdogCounter",
-                  "Value": "25"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_EolFlagPass",
-                  "Value": "26"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_RunTime",
-                  "Value": "27"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_ActiveDischargeFB",
-                  "Value": "28"
                 }
               ]
             },
@@ -2242,14 +1891,14 @@
             "GroupName": null,
             "Description": null,
             "Default": null,
-            "Cmd": "ate_get",
+            "Cmd": "ate_set",
             "Range": null,
             "Format": null,
             "Scale": 1.0,
             "Note": null,
             "Save": true,
             "DropDown": null,
-            "Name": "ATE Get",
+            "Name": "ATE Set",
             "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
@@ -2258,28 +1907,21 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 13,
-          "AteCommandDropDwonIndex": 13,
+          "ATECommandID": 21,
+          "AteCommandDropDwonIndex": 20,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Clear Active Discharge Fault",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

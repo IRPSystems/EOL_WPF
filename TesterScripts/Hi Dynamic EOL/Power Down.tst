@@ -1,13 +1,13 @@
 {
   "$type": "ScriptHandler.Models.TestData, ScriptHandler",
-  "Name": "Internal Measurements",
+  "Name": "Power Down",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 2",
-        "ParentScriptName": "Internal Measurements",
+        "Name": "Sub Script 1",
+        "ParentScriptName": "Power Down",
         "ContinueUntilType": 0,
         "Repeats": 1,
         "Timeout": 0,
@@ -15,10 +15,10 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "UUT Internal Temp",
+        "SelectedScriptName": "Shut Down",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 0,
         "FailNextId": 0,
         "ID": 1,
         "EOLReportsSelectionData": {

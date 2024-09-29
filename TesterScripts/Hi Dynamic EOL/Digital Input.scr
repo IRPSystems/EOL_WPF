@@ -440,6 +440,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -616,6 +626,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -811,6 +831,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -987,6 +1017,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -1182,6 +1222,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -1358,6 +1408,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -1553,6 +1613,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -1729,6 +1799,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -2217,6 +2297,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -2393,6 +2483,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -2588,6 +2688,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -2764,6 +2874,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -2959,6 +3079,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -3135,6 +3265,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -3330,6 +3470,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -3506,6 +3656,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },

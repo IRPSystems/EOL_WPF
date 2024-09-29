@@ -41,7 +41,16 @@
       "..\\5VDC.2.scr",
       "..\\UUT Internal Temp.test.scr",
       "..\\loop.tst",
-      "..\\llopp.scr"
+      "..\\llopp.scr",
+      "..\\Active Discharge.tst",
+      "..\\Discharge.scr",
+      "..\\Power Down.tst",
+      "..\\Shut Down.scr",
+      "..\\Current Calibration.tst",
+      "..\\Phase U.scr",
+      "..\\Phase V.scr",
+      "..\\BUS.scr",
+      "..\\Save New Gains.scr"
     ]
   },
   "RecordParametersFile": null,

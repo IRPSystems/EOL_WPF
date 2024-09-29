@@ -147,6 +147,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_EolFlagPass",
                 "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_RunTime",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ActiveDischargeFB",
+                "Value": "28"
               }
             ]
           },
@@ -166,13 +176,13 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": 0,
+        "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:1ToleranceTypeGroupName",
-        "IsValueTolerance": false,
-        "IsPercentageTolerance": true,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:1ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
         "AverageOfNRead_Param": 0,
         "IsUseParamFactor": false,
@@ -323,6 +333,16 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_EolFlagPass",
                   "Value": "26"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_RunTime",
+                  "Value": "27"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_ActiveDischargeFB",
+                  "Value": "28"
                 }
               ]
             },
@@ -346,8 +366,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 16,
+          "AteCommandDropDwonIndex": 16,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -363,7 +383,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Verify GD_VOLT PG is ON",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

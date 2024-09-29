@@ -6,7 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 4",
+        "Name": "Compare With Tolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "Io_port": 0,
@@ -93,7 +93,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 5",
+        "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "Io_port": 0,
@@ -166,7 +166,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Verify Zero Current - Phase W",
+        "UserTitle": "Verify Zero Current - Phase V",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -180,7 +180,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 6",
+        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "Io_port": 0,
@@ -253,9 +253,9 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Verify Zero Current - Phase BUS",
+        "UserTitle": "Verify Zero Current - BUS",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {

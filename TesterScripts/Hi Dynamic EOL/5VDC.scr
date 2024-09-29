@@ -115,7 +115,7 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Compare 5V MCU vs ATE",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -132,7 +132,7 @@
         "Name": "Delay 4",
         "Interval": 1,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -207,7 +207,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": null,
+        "UserTitle": "Enter ATE Mode",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -317,6 +317,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -336,7 +351,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 1,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -437,6 +452,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -460,8 +490,8 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
+          "ATECommandID": 1,
+          "AteCommandDropDwonIndex": 1,
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
@@ -470,7 +500,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": null,
+        "UserTitle": "Set Phases",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -483,90 +513,15 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 10",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "ATECommand": null,
-          "Value": null,
-          "GroupName": null,
-          "Description": null,
-          "Default": null,
-          "Cmd": "ate_done",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": null,
-          "Name": "ATE Done",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 0.0,
-        "ValueDropDwonIndex": -1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": null,
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_done",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Done",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": null,
-        "IsPass": false,
-        "PassNextId": 6,
-        "FailNextId": 0,
-        "ID": 5,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 8",
         "Interval": 1,
         "IntervalUnite": 2,
-        "UserTitle": null,
+        "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -616,7 +571,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"5V Supply (MCU)\" = \"Read Anolog input 0\" ±  1 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"5V Supply (MCU)\" = \"Read Anolog input 0\" ±  1 - ID:6ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -685,11 +640,11 @@
           "Zimmer_Channel": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": null,
+        "UserTitle": "Compare 5V MCU vs ATE",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -795,6 +750,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ExternalWDTReset",
                 "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
               }
             ]
           },
@@ -915,6 +885,21 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ExternalWDTReset",
                   "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
                 }
               ]
             },
@@ -948,9 +933,84 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": null,
+        "UserTitle": "Set Phases OFF",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 8,
+        "FailNextId": 0,
+        "ID": 7,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 9",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": null,
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_done",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Done",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": null,
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_done",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Done",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "ATE Done",
+        "IsPass": false,
+        "PassNextId": 0,
         "FailNextId": 0,
         "ID": 8,
         "EOLReportsSelectionData": {

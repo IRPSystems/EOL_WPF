@@ -1,9 +1,102 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "LV Power Up",
+  "Name": "Shut Down",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "OUTP",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 405,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Output On/Off",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 3000
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": 0,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "OUTP",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 405,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Output On/Off",
+            "Units": null,
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 3000
+          },
+          "NIThermistorDropDownIndex": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "IsThermistorUsed": false,
+          "ATECommandID": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Turn OFF PS",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 4",
@@ -62,7 +155,7 @@
           "DeviceType": 21,
           "CommunicationTimeout": 0
         },
-        "Value": 1.0,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -137,26 +230,9 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Enable 12V Supply Voltage (KL30)",
+        "UserTitle": "Turn OFF VSW",
         "IsPass": false,
-        "PassNextId": 2,
-        "FailNextId": 0,
-        "ID": 1,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 8",
-        "Interval": 5,
-        "IntervalUnite": 2,
-        "UserTitle": "Init Delay",
-        "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 0,
         "FailNextId": 0,
         "ID": 2,
         "EOLReportsSelectionData": {
