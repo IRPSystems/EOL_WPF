@@ -188,7 +188,16 @@ namespace EOL.Services
                         userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
                     }
 
-                }
+					if (config.DevicesList != null)
+					{
+						userDefaultSettings.MCU = config.DevicesList.MCU;
+						userDefaultSettings.ZimmerPowerMetter = config.DevicesList.ZimmerPowerMetter;
+						userDefaultSettings.NI = config.DevicesList.NI;
+						userDefaultSettings.Printer = config.DevicesList.Printer;
+						userDefaultSettings.NumatoGPIO = config.DevicesList.NumatoGPIO;
+					}
+
+				}
                 catch (Exception ex)
                 {
                     Console.WriteLine($"An error occurred while parsing the JSON file: {ex.Message}");
