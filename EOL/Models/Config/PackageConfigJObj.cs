@@ -28,6 +28,15 @@ using Newtonsoft.Json.Converters;
         public UdsSequence udsSequence { get; set; } = UdsSequence.generic;
     }
 
+    public class DevicesList
+    {
+        public bool MCU { get; set; }
+        public bool ZimmerPowerMetter { get; set; }
+        public bool NI { get; set; }
+	    public bool Printer { get; set; }
+	    public bool NumatoGPIO { get; set; }
+    }
+
     public class FlashPreferences
     {
         public bool PreRunFlash { get; set; } = true;
@@ -48,8 +57,9 @@ using Newtonsoft.Json.Converters;
         public Section SecondFlashFile { get; set; }
         public OtherPreferences OtherPreferences { get; set; }
         public FlashPreferences FlashPreferences { get; set; }
+        public DevicesList DevicesList { get; set; }
 
-        public Config()
+		public Config()
         {
             MainSeq = new Section();
             ProjectSeq = new Section();
@@ -58,7 +68,9 @@ using Newtonsoft.Json.Converters;
             SecondFlashFile = new Section();
             OtherPreferences = new OtherPreferences();
             FlashPreferences = new FlashPreferences();
-        }
+		    DevicesList = new DevicesList();
+
+		}
     }
 
 

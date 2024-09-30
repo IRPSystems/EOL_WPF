@@ -43,5 +43,13 @@ namespace EOL.Models
         public UInt32 SecondFileUdsTx { get; set; }
         public UdsSequence SecondFileUdsSequence { get; set; }
         public string AutoConfigPref { get; set; }
-    }
+
+
+
+		public bool MCU { get; set; }
+		public bool ZimmerPowerMetter { get; set; }
+		public bool NI { get; set; }
+		public bool Printer { get; set; }
+		public bool NumatoGPIO { get; set; }
+	}
 }
