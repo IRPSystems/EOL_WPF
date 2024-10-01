@@ -78,7 +78,7 @@ namespace EOL.ViewModels
 
 			_userConfigManager = new UserConfigManager();
 
-			_eolSettings = EOLSettings.LoadUDS_XML_EditorUserData("EOL");
+			_eolSettings = EOLSettings.LoadEOLUserData("EOL");
 
 			_runData = new RunData();
 
@@ -118,7 +118,7 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
 		{
-			EOLSettings.SaveUDS_XML_EditorUserData("EOL", _eolSettings);
+			EOLSettings.SaveEOLUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 		}
 
@@ -141,7 +141,8 @@ namespace EOL.ViewModels
 
 				_readDevicesFile = new ReadDevicesFileService();
 				_setupSelectionVM =
-					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, false);
+					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
+				InitSetupView();
 
 				if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
@@ -212,6 +213,48 @@ namespace EOL.ViewModels
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
+		}
+
+		private void InitSetupView()
+		{
+			InitSetupView_single(_setupSelectionVM.DevicesList);
+			InitSetupView_single(_setupSelectionVM.DevicesSourceList);
+		}
+
+		private void InitSetupView_single(ObservableCollection<DeviceData> devicesList)
+		{
+			List<DeviceData> devicesToRemoveList = new List<DeviceData>();
+			foreach (DeviceData device in devicesList)
+			{
+				if (device.DeviceType != DeviceTypesEnum.MCU &&
+					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
+					device.DeviceType != DeviceTypesEnum.ZimmerPowerMeter &&
+					device.DeviceType != DeviceTypesEnum.NI_6002 &&
+					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
+					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
+					device.DeviceType != DeviceTypesEnum.NumatoGPIO)
+				{
+					devicesToRemoveList.Add(device);
+				}
+
+				if (device.DeviceType == DeviceTypesEnum.MCU && _eolSettings.UserDefaultSettings.MCU == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.MCU_B2B && _eolSettings.UserDefaultSettings.MCU_B2B == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.ZimmerPowerMeter && _eolSettings.UserDefaultSettings.ZimmerPowerMeter == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NI_6002 && _eolSettings.UserDefaultSettings.NI_6002 == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NI_6002_2 && _eolSettings.UserDefaultSettings.NI_6002_2 == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.Printer_TSC && _eolSettings.UserDefaultSettings.Printer_TSC == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NumatoGPIO && _eolSettings.UserDefaultSettings.NumatoGPIO == false)
+					devicesToRemoveList.Add(device);
+			}
+
+			foreach(DeviceData device in devicesToRemoveList)
+				devicesList.Remove(device);
 		}
 
 		private void SettingsVM_SettingsWindowClosedEvent()

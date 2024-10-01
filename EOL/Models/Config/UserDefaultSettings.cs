@@ -47,9 +47,11 @@ namespace EOL.Models
 
 
 		public bool MCU { get; set; }
-		public bool ZimmerPowerMetter { get; set; }
-		public bool NI { get; set; }
-		public bool Printer { get; set; }
+		public bool MCU_B2B { get; set; }
+		public bool ZimmerPowerMeter { get; set; }
+		public bool NI_6002 { get; set; }
+		public bool NI_6002_2 { get; set; }
+		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
 	}
 }

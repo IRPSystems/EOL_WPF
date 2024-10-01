@@ -35,7 +35,7 @@ namespace EOL.Models
 			return eolSettings;
 		}
 
-		public static EOLSettings LoadUDS_XML_EditorUserData(string dirName)
+		public static EOLSettings LoadEOLUserData(string dirName)
 		{
 			EOLSettings eolSettings = null;
 
@@ -79,7 +79,7 @@ namespace EOL.Models
 
 
 
-		public static void SaveUDS_XML_EditorUserData(
+		public static void SaveEOLUserData(
 			string dirName,
 			EOLSettings eolSettings)
 		{

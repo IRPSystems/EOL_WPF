@@ -191,9 +191,11 @@ namespace EOL.Services
 					if (config.DevicesList != null)
 					{
 						userDefaultSettings.MCU = config.DevicesList.MCU;
-						userDefaultSettings.ZimmerPowerMetter = config.DevicesList.ZimmerPowerMetter;
-						userDefaultSettings.NI = config.DevicesList.NI;
-						userDefaultSettings.Printer = config.DevicesList.Printer;
+						userDefaultSettings.MCU_B2B = config.DevicesList.MCU_B2B;
+						userDefaultSettings.ZimmerPowerMeter = config.DevicesList.ZimmerPowerMeter;
+						userDefaultSettings.NI_6002 = config.DevicesList.NI_6002;
+						userDefaultSettings.NI_6002_2 = config.DevicesList.NI_6002_2;
+						userDefaultSettings.Printer_TSC = config.DevicesList.Printer_TSC;
 						userDefaultSettings.NumatoGPIO = config.DevicesList.NumatoGPIO;
 					}
 
