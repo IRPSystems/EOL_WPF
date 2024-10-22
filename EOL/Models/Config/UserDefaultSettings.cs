@@ -14,6 +14,7 @@ namespace EOL.Models
         public string DefaultMainSeqConfigFile { get; set; }
         public string DefaultSubScriptFile { get; set; }
         public string DefaultAbortScriptFile { get; set; }
+        public string DefaultSafetyScriptFile { get; set; }
         public string FirstFlashFilePath { get; set; }
         public string SecondFlashFilePath { get; set; }
         public string DefaultMonitorLogScript { get; set; }

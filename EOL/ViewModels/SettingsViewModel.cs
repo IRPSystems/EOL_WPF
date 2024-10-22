@@ -38,6 +38,7 @@ namespace EOL.ViewModels
         public event Action MainScriptEventChanged;
         public event Action MonitorScriptEventChanged;
         public event Action SubScriptEventChanged;
+        public event Action SafetyScriptEventChanged;
         public event Action AbortScriptEventChanged;
 		public event Action SettingsWindowClosedEvent;
 
@@ -101,6 +102,11 @@ namespace EOL.ViewModels
                 {
                     fileData.Path = _userDefaultSettings.DefaultSubScriptFile;
                     SubScriptEventChanged?.Invoke();
+                }
+                else if (fileData.Description == "Safety Officer Script Path")
+                {
+                    fileData.Path = _userDefaultSettings.DefaultSafetyScriptFile;
+                    SafetyScriptEventChanged?.Invoke();
                 }
                 else if (fileData.Description == "Abort Script Path")
                 {
@@ -185,6 +191,11 @@ namespace EOL.ViewModels
                 {
                     _userDefaultSettings.DefaultSubScriptFile = filesData.Path;
                     SubScriptEventChanged?.Invoke();
+                }
+                else if (filesData.Description == "Safety Officer Script Path")
+                {
+                    _userDefaultSettings.DefaultSafetyScriptFile = filesData.Path;
+                    SafetyScriptEventChanged?.Invoke();
                 }
                 else if (filesData.Description == "Abort Script Path")
                 {

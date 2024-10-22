@@ -177,7 +177,8 @@ namespace EOL.ViewModels
 							new FilesData() { Description = "Main Script Path" },
 							new FilesData() { Description = "Sub Script Path" },
 							new FilesData() { Description = "Monitor Script Path" },
-							new FilesData() { Description = "Abort Script Path" },
+                            new FilesData() { Description = "Safety Officer Script Path" },
+                            new FilesData() { Description = "Abort Script Path" },
 							new FilesData() { Description = "First Flash File Path" },
 							new FilesData() { Description = "Second Flash File Path" },
 						}
