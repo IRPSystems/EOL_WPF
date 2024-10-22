@@ -235,6 +235,7 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.NumatoGPIO)
 				{
 					devicesToRemoveList.Add(device);
+					continue;
 				}
 
 				if (device.DeviceType == DeviceTypesEnum.MCU && _eolSettings.UserDefaultSettings.MCU == false)
