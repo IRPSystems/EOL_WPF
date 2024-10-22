@@ -53,5 +53,17 @@ namespace EOL.Models
 		public bool NI_6002_2 { get; set; }
 		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
+
+		public UserDefaultSettings()
+		{
+			MCU = true;
+			MCU_B2B = true;
+			ZimmerPowerMeter = true;
+			NI_6002 = true;
+			NI_6002_2 = true;
+			Printer_TSC = true;
+			NumatoGPIO = true;
+
+		}
 	}
 }

@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
+using EOL.Models.Config;
 using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;

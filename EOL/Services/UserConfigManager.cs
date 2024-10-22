@@ -1,4 +1,5 @@
 ﻿using EOL.Models;
+using EOL.Models.Config;
 using EOL.ViewModels;
 using EOL.Views;
 using Newtonsoft.Json;
