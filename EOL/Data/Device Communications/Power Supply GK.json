@@ -1,0 +1,153 @@
+{
+  "$type": "DeviceCommunicators.Models.DeviceData, DeviceCommunicators",
+  "ParemetersList": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[DeviceCommunicators.Models.DeviceParameterData, DeviceCommunicators]], System.ObjectModel",
+    "$values": [
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Measured Voltage",
+        "Units": "V",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "ReadAddress": 8220,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Measured Current",
+        "Units": "A",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "ReadAddress": 8221,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Measured Power",
+        "Units": "kW",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "ReadAddress": 8221,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Voltage",
+        "Units": "V",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24581,
+        "WriteTriggerAddress": 24582,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "PS current limit",
+        "Units": "A",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24583,
+        "WriteTriggerAddress": 24584,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Source power",
+        "Units": "kW",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24587,
+        "WriteTriggerAddress": 24588,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "Set switch state",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24576,
+        "WriteTriggerAddress": 24577,
+        "Scale": 1,
+        "DropDown": {
+          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+          "$values": [
+            {
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "OFF",
+              "Value": "0"
+            },
+            {
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ON",
+              "Value": "1"
+            },
+            {
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "Standby",
+              "Value": "2"
+            }
+          ]
+        }
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "EL current limit",
+        "Units": "A",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24585,
+        "WriteTriggerAddress": 24586,
+        "Scale": 0.1
+      },
+      {
+        "$type": "DeviceCommunicators.PowerSupplayGK.PowerSupplayGK_ParamData, DeviceCommunicators",
+        "Name": "EL power limit",
+        "Units": "kW",
+        "Value": null,
+        "DeviceType": 13,
+        "IsExpanded": false,
+        "IsSelected": false,
+        "Visibility": 0,
+        "GetSetVisibility": 0,
+        "WriteAddress": 24589,
+        "WriteTriggerAddress": 24590,
+        "Scale": 0.1
+      }
+    ]
+  },
+  "Name": "GK Power",
+  "AcquisitionRate": 10,
+  "DeviceType": 13
+}
