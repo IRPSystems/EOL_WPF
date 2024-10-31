@@ -69,6 +69,9 @@ namespace EOL.ViewModels
 
 		private RunData _runData;
 
+		private CommunicationWindowView _communicationWindowView;
+		private SettingsView _settingsView;
+
 		#endregion Fields
 
 		#region Constructor
@@ -334,26 +337,42 @@ namespace EOL.ViewModels
 
 		private void InitCommunicationSettings()
 		{
-			CommunicationWindowView communicationWindowView = new CommunicationWindowView()
+			if (_communicationWindowView == null || _communicationWindowView.IsVisible == false)
 			{
-				DataContext = CommunicationSettings,
-				Owner = Application.Current.MainWindow
-			};
+				_communicationWindowView = new CommunicationWindowView()
+				{
+					DataContext = CommunicationSettings,
+					Owner = Application.Current.MainWindow
+				};
 
-			communicationWindowView.Show();
+				_communicationWindowView.Show();
+			}
+
+			_communicationWindowView.Topmost = true;
+			System.Threading.Thread.Sleep(100);
+			_communicationWindowView.Topmost = false;
+			_communicationWindowView.Focus();
 		}
 
 		private void Settings()
 		{
-			SettingsView settingsView = new SettingsView()
+			if (_settingsView == null || _settingsView.IsVisible == false)
 			{
-				DataContext = SettingsVM,
-				Owner = Application.Current.MainWindow
-			};
+				_settingsView = new SettingsView()
+				{
+					DataContext = SettingsVM,
+					Owner = Application.Current.MainWindow
+				};
 
-			_setupSelectionVM.ButtonsVisibility = Visibility.Collapsed;
+				_setupSelectionVM.ButtonsVisibility = Visibility.Collapsed;
 
-			settingsView.Show();
+				_settingsView.Show();
+			}
+
+			_settingsView.Topmost = true;
+			System.Threading.Thread.Sleep(100);
+			_settingsView.Topmost = false;
+			_settingsView.Focus();
 		}
 
 		private void ModesDropDownMenuItem(string mode)
