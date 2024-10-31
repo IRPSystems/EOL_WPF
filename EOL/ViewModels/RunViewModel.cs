@@ -27,6 +27,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection.Metadata;
 using System.Windows;
+using System.Windows.Media;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
@@ -211,13 +212,20 @@ namespace EOL.ViewModels
             }
         }
 
-        #endregion Constructor
+		#endregion Constructor
 
-        #region Methods
+		#region Methods
 
-        #region settingsViewModel events
+		public void ChangeDarkLight(bool isLightTheme)
+		{
+			ScriptDiagram.ChangeBackground(
+					System.Windows.Application.Current.MainWindow.FindResource(
+						"MahApps.Brushes.Control.Background") as SolidColorBrush);
+		}
 
-        private void RegisterEvents()
+		#region settingsViewModel events
+
+		private void RegisterEvents()
 		{
             _settingsViewModel.ReportsPathEventChanged += ReportsPathChangeEvent;
             _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;

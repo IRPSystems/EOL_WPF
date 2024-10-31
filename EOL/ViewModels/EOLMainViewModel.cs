@@ -136,7 +136,7 @@ namespace EOL.ViewModels
 				LoggerService.Inforamtion(this, "Starting Loaded of EOLMainViewModel");
 
 				
-				ChangeDarkLight();
+				
 
 
 				_readDevicesFile = new ReadDevicesFileService();
@@ -196,6 +196,8 @@ namespace EOL.ViewModels
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
 					_eolSettings.UserDefaultSettings, SettingsVM, _runData);
+
+				ChangeDarkLight();
 
 				try
 				{
@@ -327,6 +329,7 @@ namespace EOL.ViewModels
 		{
 			_eolSettings.IsLightTheme = !_eolSettings.IsLightTheme;
 			App.ChangeDarkLight(_eolSettings.IsLightTheme);
+			OperatorVM.ChangeDarkLight(_eolSettings.IsLightTheme);
 		}
 
 		private void InitCommunicationSettings()
