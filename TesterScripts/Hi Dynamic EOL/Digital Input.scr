@@ -47,13 +47,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -116,13 +117,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 1,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -185,13 +187,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 2,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -254,13 +257,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 4,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -450,6 +454,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -636,6 +645,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -655,25 +669,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 20,
-          "AteCommandDropDwonIndex": 20,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 21,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 21,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 1 OFF",
@@ -841,6 +857,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1027,6 +1048,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1046,25 +1072,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 21,
-          "AteCommandDropDwonIndex": 21,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 20,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 20,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 2 OFF",
@@ -1232,6 +1260,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1418,6 +1451,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1437,25 +1475,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 22,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 22,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 22,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 3 OFF",
@@ -1623,6 +1663,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1809,6 +1854,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1828,25 +1878,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 23,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 23,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 23,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 4 OFF",
@@ -1904,13 +1956,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -1973,13 +2026,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 1,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -2042,13 +2096,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 2,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -2111,13 +2166,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 4,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -2307,6 +2363,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -2493,6 +2554,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -2512,25 +2578,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 20,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 20,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 20,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 1 ON",
@@ -2698,6 +2766,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -2884,6 +2957,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -2903,25 +2981,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 21,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 21,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 21,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 2 ON",
@@ -3089,6 +3169,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -3275,6 +3360,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -3294,25 +3384,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 22,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 22,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 22,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 3 ON",
@@ -3480,6 +3572,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -3666,6 +3763,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -3685,25 +3787,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 23,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 23,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 23,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Read Dig In 4 ON",

@@ -24,7 +24,12 @@
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.001,
+        "SetFirstValue": 2.296,
+        "LoopsAmount": 100,
+        "Interval": 200,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -43,20 +48,16 @@
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
-          "Ni6002_IOPort": 1,
+          "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.296,
-        "LoopsAmount": 100,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": null,
         "IsPass": false,
         "PassNextId": 0,

@@ -7,13 +7,6 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
         "Name": "Save Parameter 1",
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Save Current Gain U",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -39,21 +32,21 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
+        "UserTitle": "Save Current Gain U",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
-        "Name": "Save Parameter 2",
+        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Save Current Gain V",
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -79,21 +72,21 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
+        "UserTitle": "Save Current Gain V",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
-        "Name": "Save Parameter 3",
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        },
-        "UserTitle": "Save Current Gain BUS",
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -119,10 +112,17 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
+        "UserTitle": "Save Current Gain BUS",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
       }
     ]
   },

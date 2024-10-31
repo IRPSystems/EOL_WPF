@@ -78,13 +78,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -106,13 +107,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": null,
@@ -176,13 +178,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": -1,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -315,6 +318,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ClearActiveDisTimoutFault",
                 "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUH",
+                "Value": "22"
               }
             ]
           },
@@ -450,6 +458,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ClearActiveDisTimoutFault",
                   "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUH",
+                  "Value": "22"
                 }
               ]
             },
@@ -469,13 +482,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -544,13 +558,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": -1,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -661,13 +676,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -689,13 +705,14 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": null,
@@ -823,6 +840,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_ClearActiveDisTimoutFault",
                 "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUH",
+                "Value": "22"
               }
             ]
           },
@@ -958,6 +980,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_SET_ClearActiveDisTimoutFault",
                   "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUH",
+                  "Value": "22"
                 }
               ]
             },
@@ -977,13 +1004,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,

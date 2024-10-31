@@ -157,6 +157,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -343,6 +348,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -362,25 +372,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 12,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 12,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Cooling Temp Plate Reading ",
@@ -415,7 +427,12 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.01,
+        "SetFirstValue": 0.7895,
+        "LoopsAmount": 107,
+        "Interval": 200,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -434,20 +451,16 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.01,
-        "SetFirstValue": 0.7895,
-        "LoopsAmount": 107,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Cooling Temp Plate Analog Increment to 80",
         "IsPass": false,
         "PassNextId": 3,
@@ -630,6 +643,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -816,6 +834,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -835,25 +858,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 12,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 12,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Cooling Temp Plate Reading ",
@@ -888,7 +913,12 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.01,
+        "SetFirstValue": 1.865,
+        "LoopsAmount": 138,
+        "Interval": 200,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -907,20 +937,16 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.01,
-        "SetFirstValue": 1.865,
-        "LoopsAmount": 138,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Cooling Temp Plate Analog Increment to 50",
         "IsPass": false,
         "PassNextId": 6,
@@ -1103,6 +1129,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1289,6 +1320,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1308,25 +1344,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 12,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 12,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Cooling Temp Plate Reading ",
@@ -1361,7 +1399,12 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.01,
+        "SetFirstValue": 3.249,
+        "LoopsAmount": 104,
+        "Interval": 200,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -1380,20 +1423,16 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.01,
-        "SetFirstValue": 3.249,
-        "LoopsAmount": 104,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Cooling Temp Plate Analog Increment to 20",
         "IsPass": false,
         "PassNextId": 9,
@@ -1576,6 +1615,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1762,6 +1806,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1781,25 +1830,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 12,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 12,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Cooling Temp Plate Reading ",
@@ -1834,7 +1885,12 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.01,
+        "SetFirstValue": 4.28,
+        "LoopsAmount": 38,
+        "Interval": 200,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -1853,20 +1909,16 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.01,
-        "SetFirstValue": 4.28,
-        "LoopsAmount": 38,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Cooling Temp Plate Analog Increment to 5",
         "IsPass": false,
         "PassNextId": 12,
@@ -2049,6 +2101,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -2235,6 +2292,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -2254,25 +2316,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 12,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 12,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 12,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Cooling Temp Plate Reading ",

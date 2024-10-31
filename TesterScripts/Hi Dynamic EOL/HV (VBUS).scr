@@ -43,13 +43,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -239,6 +240,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -439,6 +445,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -458,13 +469,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -484,13 +496,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage",
@@ -544,13 +557,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -740,6 +754,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -940,6 +959,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -959,13 +983,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -985,13 +1010,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage",
@@ -1045,13 +1071,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -1241,6 +1268,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1441,6 +1473,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1460,13 +1497,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -1486,13 +1524,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage",
@@ -1546,13 +1585,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -1742,6 +1782,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1942,6 +1987,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1961,13 +2011,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -1987,13 +2038,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage",
@@ -2026,7 +2078,7 @@
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
-        "Value": 400.0,
+        "Value": 350.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -2047,13 +2099,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
@@ -2243,6 +2296,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -2443,6 +2501,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -2462,13 +2525,14 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
@@ -2488,13 +2552,14 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage",

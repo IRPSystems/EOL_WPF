@@ -157,6 +157,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -343,6 +348,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -362,25 +372,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 13,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Motor Temp 1 Reading ",
@@ -415,7 +427,12 @@
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.001,
+        "SetFirstValue": 2.305,
+        "LoopsAmount": 69,
+        "Interval": 300,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -434,20 +451,16 @@
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.296,
-        "LoopsAmount": 69,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Motor Temp 1 Increment to 20",
         "IsPass": false,
         "PassNextId": 3,
@@ -463,8 +476,8 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 3",
-        "Interval": 2,
-        "IntervalUnite": 2,
+        "Interval": 3000,
+        "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 4,
@@ -630,6 +643,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -816,6 +834,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -835,25 +858,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 13,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Motor Temp 1 Reading ",
@@ -888,7 +913,12 @@
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.001,
+        "SetFirstValue": 2.374,
+        "LoopsAmount": 125,
+        "Interval": 300,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -907,20 +937,16 @@
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.365,
-        "LoopsAmount": 125,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Motor Temp 1 Increment to 50",
         "IsPass": false,
         "PassNextId": 6,
@@ -936,8 +962,8 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 6",
-        "Interval": 2,
-        "IntervalUnite": 2,
+        "Interval": 3000,
+        "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 7,
@@ -1103,6 +1129,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1289,6 +1320,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1308,25 +1344,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 13,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Motor Temp 1 Reading ",
@@ -1361,7 +1399,12 @@
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.001,
+        "SetFirstValue": 2.499,
+        "LoopsAmount": 116,
+        "Interval": 300,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -1380,20 +1423,16 @@
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.49,
-        "LoopsAmount": 116,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Motor Temp 1 Increment to 80",
         "IsPass": false,
         "PassNextId": 9,
@@ -1409,8 +1448,8 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 10",
-        "Interval": 2,
-        "IntervalUnite": 2,
+        "Interval": 3000,
+        "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 10,
@@ -1576,6 +1615,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -1762,6 +1806,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -1781,25 +1830,27 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 13,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Motor Temp 1 Reading ",
@@ -1834,7 +1885,12 @@
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
-        "Parameter_ExtraData": {
+        "IncrementValue": 0.001,
+        "SetFirstValue": 2.615,
+        "LoopsAmount": 139,
+        "Interval": 300,
+        "IntervalUnite": 1,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -1853,20 +1909,16 @@
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.606,
-        "LoopsAmount": 139,
-        "Interval": 200,
-        "IntervalUnite": 1,
         "UserTitle": "Motor Temp 1 Increment to 120",
         "IsPass": false,
         "PassNextId": 12,
@@ -1882,8 +1934,8 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 13",
-        "Interval": 2,
-        "IntervalUnite": 2,
+        "Interval": 3000,
+        "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
         "PassNextId": 13,
@@ -2049,6 +2101,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ActiveDischargeFB",
                 "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_DutyCycleMaxFlag",
+                "Value": "29"
               }
             ]
           },
@@ -2235,6 +2292,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_ActiveDischargeFB",
                   "Value": "28"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_DutyCycleMaxFlag",
+                  "Value": "29"
                 }
               ]
             },
@@ -2254,30 +2316,32 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 13,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 13,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NIThermistorDropDownIndex": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "IsThermistorUsed": false,
-          "ATECommandID": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Motor Temp 1 Reading ",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 13,
         "EOLReportsSelectionData": {

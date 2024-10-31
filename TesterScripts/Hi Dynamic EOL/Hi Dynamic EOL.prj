@@ -48,9 +48,14 @@
       "..\\Shut Down.scr",
       "..\\Current Calibration.tst",
       "..\\Phase U.scr",
-      "..\\Phase V.scr",
+      "..\\Phase W.scr",
       "..\\BUS.scr",
-      "..\\Save New Gains.scr"
+      "..\\Save New Gains.scr",
+      "..\\Position Sensor Test.tst",
+      "..\\Position Sensor.scr",
+      "..\\Speed Estimation.scr",
+      "..\\Customer FW Flash.tst",
+      "..\\Flash.scr"
     ]
   },
   "RecordParametersFile": null,
