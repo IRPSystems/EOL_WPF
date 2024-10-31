@@ -328,6 +328,9 @@ namespace EOL.ViewModels
 			Stop(stopeMode);
 
 			PostRunActions();
+
+			if(stopeMode == ScriptStopModeEnum.Aborted)
+				RunState = RunStateEnum.Aborted;
 		}
 
         private void PostRunActions()
