@@ -94,7 +94,8 @@ namespace EOL.ViewModels
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
-		private ObservableCollection<DeviceParameterData> _logParametersList;
+        private GeneratedScriptData _abortScript;
+        private ObservableCollection<DeviceParameterData> _logParametersList;
 		private string MainScriptReportSubFolder = "\\Main Script Reports";
         private string MonitorLogSubFolder = "\\Monitor Logs";
 
@@ -286,8 +287,7 @@ namespace EOL.ViewModels
             {
                 return;
             }
-            RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
-			LoadSingleScript(out _stoppedScript, _userDefaultSettings.DefaultAbortScriptFile);
+			LoadSingleScript(out _abortScript, _userDefaultSettings.DefaultAbortScriptFile);
         }
 
 		private void LoadSingleScript(out GeneratedScriptData script, string scripPath)
@@ -375,8 +375,9 @@ namespace EOL.ViewModels
 
 			_timerDuration.Start();
 			_startTime = DateTime.Now;
+			_runProjectsList.AbortScript = _abortScript;
 
-			_runProjectsList.StartAll(
+            _runProjectsList.StartAll(
 				_generatedProjectsList,
 				_userDefaultSettings.isRecordMonitor,
 				_stoppedScript, _SafetyScript);// _logParametersList); TODO:?
