@@ -55,6 +55,7 @@ namespace EOL.ViewModels
 
 		public Visibility ContinueVisibility { get; set; }
 
+		public string ErrorMessage { get; set; }
 
 		#endregion Properties
 
@@ -158,6 +159,7 @@ namespace EOL.ViewModels
 				_openProject = new OpenProjectForRunService();
 				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
+				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
 				_generatedProjectsList = null;
 
 				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
@@ -344,11 +346,14 @@ namespace EOL.ViewModels
 			{
 				return;
 			}
+
 			if(_generatedProjectsList == null || _generatedProjectsList.Count == 0)
 			{
 				LoggerService.Error(this, "There is not project defined for running", "Error");
 				return; 
 			}
+
+			ErrorMessage = null;
 
 			_totalNumOfSteps = 0;
 			foreach (GeneratedProjectData project in _generatedProjectsList)
@@ -413,13 +418,18 @@ namespace EOL.ViewModels
 			}
 			try
 			{
-				if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder))
+				string mainScriptSubFolder = 
+					Path.Combine(_userDefaultSettings.ReportsSavingPath, MainScriptReportSubFolder);
+				if (!Directory.Exists(mainScriptSubFolder))
 				{
-					Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder);
+					Directory.CreateDirectory(mainScriptSubFolder);
 				}
-                if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder))
+
+				string monitorSubFolder = 
+					Path.Combine(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+				if (!Directory.Exists(monitorSubFolder))
                 {
-                    Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+                    Directory.CreateDirectory(monitorSubFolder);
 					
                 }
 				if(IsFileInUse(_csvWritter._csvFilePath))
@@ -729,6 +739,11 @@ namespace EOL.ViewModels
 		}
 
 		#endregion Handle EOL Step Summery
+
+		private void RunProjectsList_ErrorMessageEvent(string errorMessage)
+		{
+			ErrorMessage = errorMessage;
+		}
 
 		#endregion Methods
 
