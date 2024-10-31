@@ -1,4 +1,5 @@
 ﻿using EOL.Models;
+using EOL.Models.Config;
 using EOL.ViewModels;
 using EOL.Views;
 using Newtonsoft.Json;
@@ -188,7 +189,18 @@ namespace EOL.Services
                         userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
                     }
 
-                }
+					if (config.DevicesList != null)
+					{
+						userDefaultSettings.MCU = config.DevicesList.MCU;
+						userDefaultSettings.MCU_B2B = config.DevicesList.MCU_B2B;
+						userDefaultSettings.ZimmerPowerMeter = config.DevicesList.ZimmerPowerMeter;
+						userDefaultSettings.NI_6002 = config.DevicesList.NI_6002;
+						userDefaultSettings.NI_6002_2 = config.DevicesList.NI_6002_2;
+						userDefaultSettings.Printer_TSC = config.DevicesList.Printer_TSC;
+						userDefaultSettings.NumatoGPIO = config.DevicesList.NumatoGPIO;
+					}
+
+				}
                 catch (Exception ex)
                 {
                     Console.WriteLine($"An error occurred while parsing the JSON file: {ex.Message}");

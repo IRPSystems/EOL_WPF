@@ -5,6 +5,9 @@ using FlashingToolLib.FlashingTools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+namespace EOL.Models.Config
+{
+
     public class Section
     {
         public string SubfolderName { get; set; } = "";
@@ -28,6 +31,29 @@ using Newtonsoft.Json.Converters;
         public UdsSequence udsSequence { get; set; } = UdsSequence.generic;
     }
 
+    public class DevicesList
+    {
+        public bool MCU { get; set; }
+        public bool MCU_B2B { get; set; }
+        public bool ZimmerPowerMeter { get; set; }
+        public bool NI_6002 { get; set; }
+        public bool NI_6002_2 { get; set; }
+        public bool Printer_TSC { get; set; }
+        public bool NumatoGPIO { get; set; }
+
+        public DevicesList()
+        {
+            MCU = true;
+			MCU_B2B = true;
+			ZimmerPowerMeter = true;
+			NI_6002 = true;
+			NI_6002_2 = true;
+			Printer_TSC = true;
+			NumatoGPIO = true;
+
+		}
+    }
+
     public class FlashPreferences
     {
         public bool PreRunFlash { get; set; } = true;
@@ -48,6 +74,7 @@ using Newtonsoft.Json.Converters;
         public Section SecondFlashFile { get; set; }
         public OtherPreferences OtherPreferences { get; set; }
         public FlashPreferences FlashPreferences { get; set; }
+        public DevicesList DevicesList { get; set; }
 
         public Config()
         {
@@ -58,6 +85,8 @@ using Newtonsoft.Json.Converters;
             SecondFlashFile = new Section();
             OtherPreferences = new OtherPreferences();
             FlashPreferences = new FlashPreferences();
+            DevicesList = new DevicesList();
+
         }
     }
 
@@ -95,3 +124,4 @@ using Newtonsoft.Json.Converters;
             Console.WriteLine($"JSON file generated at: {filePath}");
         }
     }
+}

@@ -10,3 +10,6 @@
 [submodule "ScriptsInfrastructure"]
 	path = ScriptsInfrastructure
 	url = https://github.com/IRPSystems/ScriptsInfrastructure.git
+[submodule "AllTestersDB"]
+	path = AllTestersDB
+	url = https://github.com/IRPSystems/AllTestersDB.git

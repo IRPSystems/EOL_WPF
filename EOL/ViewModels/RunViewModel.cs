@@ -8,6 +8,7 @@ using DeviceHandler.Models;
 using DeviceHandler.Models.DeviceFullDataModels;
 using Entities.Enums;
 using EOL.Models;
+using EOL.Models.Config;
 using EOL.Services;
 using FlashingToolLib.FlashingTools;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -26,6 +27,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Reflection.Metadata;
 using System.Windows;
+using System.Windows.Media;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
@@ -54,6 +56,7 @@ namespace EOL.ViewModels
 
 		public Visibility ContinueVisibility { get; set; }
 
+		public string ErrorMessage { get; set; }
 
 		#endregion Properties
 
@@ -87,11 +90,14 @@ namespace EOL.ViewModels
 
 		private PrintFileHandler _printFileParser;
 
+		private GeneratedScriptData _SafetyScript;
+
 		private OpenProjectForRunService _openProject;
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
-		private ObservableCollection<DeviceParameterData> _logParametersList;
+        private GeneratedScriptData _abortScript;
+        private ObservableCollection<DeviceParameterData> _logParametersList;
 		private string MainScriptReportSubFolder = "\\Main Script Reports";
         private string MonitorLogSubFolder = "\\Monitor Logs";
 
@@ -142,7 +148,7 @@ namespace EOL.ViewModels
 					Communicator = mcuDeviceFullData.DeviceCommunicator,
 				};
 
-				_stopScriptStep = new StopScriptStepService();
+                _stopScriptStep = new StopScriptStepService();
 				RunScript = new RunScriptService(_logParametersList, _devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
@@ -154,13 +160,14 @@ namespace EOL.ViewModels
 				_openProject = new OpenProjectForRunService();
 				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
+				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
 				_generatedProjectsList = null;
 
 				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
-				_singleTestResult = new RunResult();
+                _singleTestResult = new RunResult();
 
 				_csvWritter = new CSVWriter();
 
@@ -177,7 +184,8 @@ namespace EOL.ViewModels
 			catch (Exception ex)
 			{
 				LoggerService.Error(this, "C'tor failed", ex);
-			}
+                MessageBox.Show(ex.ToString());
+            }
 		}
 
         private void LoadPrintFile()
@@ -204,17 +212,25 @@ namespace EOL.ViewModels
             }
         }
 
-        #endregion Constructor
+		#endregion Constructor
 
-        #region Methods
+		#region Methods
 
-        #region settingsViewModel events
+		public void ChangeDarkLight(bool isLightTheme)
+		{
+			ScriptDiagram.ChangeBackground(
+					System.Windows.Application.Current.MainWindow.FindResource(
+						"MahApps.Brushes.Control.Background") as SolidColorBrush);
+		}
 
-        private void RegisterEvents()
+		#region settingsViewModel events
+
+		private void RegisterEvents()
 		{
             _settingsViewModel.ReportsPathEventChanged += ReportsPathChangeEvent;
             _settingsViewModel.MainScriptEventChanged += LoadMainScriptFromPath;
             _settingsViewModel.SubScriptEventChanged += LoadSubScriptFromPath;
+			_settingsViewModel.SafetyScriptEventChanged += LoadSafetyScriptFromPath;
             _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
         }
@@ -266,14 +282,31 @@ namespace EOL.ViewModels
 			RunScript.ParamRecording.RecordDirectory = _userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder;
         }
 
+        private void LoadSafetyScriptFromPath()
+        {
+            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultSafetyScriptFile))
+            {
+                return;
+            }
+            LoadSingleScript(out _SafetyScript, _userDefaultSettings.DefaultSafetyScriptFile);
+        }
+
         private void LoadAbortScriptFromPath()
         {
             if (String.IsNullOrEmpty(_userDefaultSettings.DefaultAbortScriptFile))
             {
                 return;
             }
-            RunScript.AbortScriptPath = _userDefaultSettings.DefaultAbortScriptFile;
-            _stoppedScript = _openProject.GetSingleScript(_userDefaultSettings.DefaultAbortScriptFile, _devicesContainer, null);
+			LoadSingleScript(out _abortScript, _userDefaultSettings.DefaultAbortScriptFile);
+        }
+
+		private void LoadSingleScript(out GeneratedScriptData script, string scripPath)
+		{
+            script = _openProject.GetSingleScript(scripPath, _devicesContainer, null);
+			if(script == null)
+			{
+				MessageBox.Show("Failded to load single script");
+			}
         }
 
         #endregion settingsViewModel events
@@ -295,6 +328,9 @@ namespace EOL.ViewModels
 			Stop(stopeMode);
 
 			PostRunActions();
+
+			if(stopeMode == ScriptStopModeEnum.Aborted)
+				RunState = RunStateEnum.Aborted;
 		}
 
         private void PostRunActions()
@@ -321,11 +357,14 @@ namespace EOL.ViewModels
 			{
 				return;
 			}
+
 			if(_generatedProjectsList == null || _generatedProjectsList.Count == 0)
 			{
 				LoggerService.Error(this, "There is not project defined for running", "Error");
 				return; 
 			}
+
+			ErrorMessage = null;
 
 			_totalNumOfSteps = 0;
 			foreach (GeneratedProjectData project in _generatedProjectsList)
@@ -352,11 +391,12 @@ namespace EOL.ViewModels
 
 			_timerDuration.Start();
 			_startTime = DateTime.Now;
+			_runProjectsList.AbortScript = _abortScript;
 
-			_runProjectsList.StartAll(
+            _runProjectsList.StartAll(
 				_generatedProjectsList,
 				_userDefaultSettings.isRecordMonitor,
-				_stoppedScript, null);// _logParametersList); TODO:?
+				_stoppedScript, _SafetyScript);// _logParametersList); TODO:?
 
 			RunPercentage = 0;
 			_stepsCounter = 1;
@@ -389,13 +429,18 @@ namespace EOL.ViewModels
 			}
 			try
 			{
-				if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder))
+				string mainScriptSubFolder = 
+					Path.Combine(_userDefaultSettings.ReportsSavingPath, MainScriptReportSubFolder);
+				if (!Directory.Exists(mainScriptSubFolder))
 				{
-					Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MainScriptReportSubFolder);
+					Directory.CreateDirectory(mainScriptSubFolder);
 				}
-                if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder))
+
+				string monitorSubFolder = 
+					Path.Combine(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+				if (!Directory.Exists(monitorSubFolder))
                 {
-                    Directory.CreateDirectory(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
+                    Directory.CreateDirectory(monitorSubFolder);
 					
                 }
 				if(IsFileInUse(_csvWritter._csvFilePath))
@@ -705,6 +750,11 @@ namespace EOL.ViewModels
 		}
 
 		#endregion Handle EOL Step Summery
+
+		private void RunProjectsList_ErrorMessageEvent(string errorMessage)
+		{
+			ErrorMessage = errorMessage;
+		}
 
 		#endregion Methods
 

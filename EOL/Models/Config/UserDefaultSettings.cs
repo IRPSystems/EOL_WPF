@@ -14,6 +14,7 @@ namespace EOL.Models
         public string DefaultMainSeqConfigFile { get; set; }
         public string DefaultSubScriptFile { get; set; }
         public string DefaultAbortScriptFile { get; set; }
+        public string DefaultSafetyScriptFile { get; set; }
         public string FirstFlashFilePath { get; set; }
         public string SecondFlashFilePath { get; set; }
         public string DefaultMonitorLogScript { get; set; }
@@ -43,5 +44,27 @@ namespace EOL.Models
         public UInt32 SecondFileUdsTx { get; set; }
         public UdsSequence SecondFileUdsSequence { get; set; }
         public string AutoConfigPref { get; set; }
-    }
+
+
+
+		public bool MCU { get; set; }
+		public bool MCU_B2B { get; set; }
+		public bool ZimmerPowerMeter { get; set; }
+		public bool NI_6002 { get; set; }
+		public bool NI_6002_2 { get; set; }
+		public bool Printer_TSC { get; set; }
+		public bool NumatoGPIO { get; set; }
+
+		public UserDefaultSettings()
+		{
+			MCU = true;
+			MCU_B2B = true;
+			ZimmerPowerMeter = true;
+			NI_6002 = true;
+			NI_6002_2 = true;
+			Printer_TSC = true;
+			NumatoGPIO = true;
+
+		}
+	}
 }

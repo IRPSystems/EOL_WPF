@@ -69,6 +69,9 @@ namespace EOL.ViewModels
 
 		private RunData _runData;
 
+		private CommunicationWindowView _communicationWindowView;
+		private SettingsView _settingsView;
+
 		#endregion Fields
 
 		#region Constructor
@@ -78,7 +81,7 @@ namespace EOL.ViewModels
 
 			_userConfigManager = new UserConfigManager();
 
-			_eolSettings = EOLSettings.LoadUDS_XML_EditorUserData("EOL");
+			_eolSettings = EOLSettings.LoadEOLUserData("EOL");
 
 			_runData = new RunData();
 
@@ -118,7 +121,7 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
 		{
-			EOLSettings.SaveUDS_XML_EditorUserData("EOL", _eolSettings);
+			EOLSettings.SaveEOLUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 		}
 
@@ -136,12 +139,13 @@ namespace EOL.ViewModels
 				LoggerService.Inforamtion(this, "Starting Loaded of EOLMainViewModel");
 
 				
-				ChangeDarkLight();
+				
 
 
 				_readDevicesFile = new ReadDevicesFileService();
 				_setupSelectionVM =
-					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile, false);
+					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
+				InitSetupView();
 
 				if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
@@ -176,7 +180,8 @@ namespace EOL.ViewModels
 							new FilesData() { Description = "Main Script Path" },
 							new FilesData() { Description = "Sub Script Path" },
 							new FilesData() { Description = "Monitor Script Path" },
-							new FilesData() { Description = "Abort Script Path" },
+                            new FilesData() { Description = "Safety Officer Script Path" },
+                            new FilesData() { Description = "Abort Script Path" },
 							new FilesData() { Description = "First Flash File Path" },
 							new FilesData() { Description = "Second Flash File Path" },
 						}
@@ -195,6 +200,8 @@ namespace EOL.ViewModels
 					_eolSettings.ScriptUserData,
 					_eolSettings.UserDefaultSettings, SettingsVM, _runData);
 
+				ChangeDarkLight();
+
 				try
 				{
 					foreach (DeviceFullData deviceFullData in DevicesContainter.DevicesFullDataList)
@@ -212,6 +219,49 @@ namespace EOL.ViewModels
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
+		}
+
+		private void InitSetupView()
+		{
+			InitSetupView_single(_setupSelectionVM.DevicesList);
+			InitSetupView_single(_setupSelectionVM.DevicesSourceList);
+		}
+
+		private void InitSetupView_single(ObservableCollection<DeviceData> devicesList)
+		{
+			List<DeviceData> devicesToRemoveList = new List<DeviceData>();
+			foreach (DeviceData device in devicesList)
+			{
+				if (device.DeviceType != DeviceTypesEnum.MCU &&
+					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
+					device.DeviceType != DeviceTypesEnum.ZimmerPowerMeter &&
+					device.DeviceType != DeviceTypesEnum.NI_6002 &&
+					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
+					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
+					device.DeviceType != DeviceTypesEnum.NumatoGPIO)
+				{
+					devicesToRemoveList.Add(device);
+					continue;
+				}
+
+				if (device.DeviceType == DeviceTypesEnum.MCU && _eolSettings.UserDefaultSettings.MCU == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.MCU_B2B && _eolSettings.UserDefaultSettings.MCU_B2B == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.ZimmerPowerMeter && _eolSettings.UserDefaultSettings.ZimmerPowerMeter == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NI_6002 && _eolSettings.UserDefaultSettings.NI_6002 == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NI_6002_2 && _eolSettings.UserDefaultSettings.NI_6002_2 == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.Printer_TSC && _eolSettings.UserDefaultSettings.Printer_TSC == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.NumatoGPIO && _eolSettings.UserDefaultSettings.NumatoGPIO == false)
+					devicesToRemoveList.Add(device);
+			}
+
+			foreach(DeviceData device in devicesToRemoveList)
+				devicesList.Remove(device);
 		}
 
 		private void SettingsVM_SettingsWindowClosedEvent()
@@ -282,30 +332,47 @@ namespace EOL.ViewModels
 		{
 			_eolSettings.IsLightTheme = !_eolSettings.IsLightTheme;
 			App.ChangeDarkLight(_eolSettings.IsLightTheme);
+			OperatorVM.ChangeDarkLight(_eolSettings.IsLightTheme);
 		}
 
 		private void InitCommunicationSettings()
 		{
-			CommunicationWindowView communicationWindowView = new CommunicationWindowView()
+			if (_communicationWindowView == null || _communicationWindowView.IsVisible == false)
 			{
-				DataContext = CommunicationSettings,
-				Owner = Application.Current.MainWindow
-			};
+				_communicationWindowView = new CommunicationWindowView()
+				{
+					DataContext = CommunicationSettings,
+					Owner = Application.Current.MainWindow
+				};
 
-			communicationWindowView.Show();
+				_communicationWindowView.Show();
+			}
+
+			_communicationWindowView.Topmost = true;
+			System.Threading.Thread.Sleep(100);
+			_communicationWindowView.Topmost = false;
+			_communicationWindowView.Focus();
 		}
 
 		private void Settings()
 		{
-			SettingsView settingsView = new SettingsView()
+			if (_settingsView == null || _settingsView.IsVisible == false)
 			{
-				DataContext = SettingsVM,
-				Owner = Application.Current.MainWindow
-			};
+				_settingsView = new SettingsView()
+				{
+					DataContext = SettingsVM,
+					Owner = Application.Current.MainWindow
+				};
 
-			_setupSelectionVM.ButtonsVisibility = Visibility.Collapsed;
+				_setupSelectionVM.ButtonsVisibility = Visibility.Collapsed;
 
-			settingsView.Show();
+				_settingsView.Show();
+			}
+
+			_settingsView.Topmost = true;
+			System.Threading.Thread.Sleep(100);
+			_settingsView.Topmost = false;
+			_settingsView.Focus();
 		}
 
 		private void ModesDropDownMenuItem(string mode)

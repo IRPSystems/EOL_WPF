@@ -38,19 +38,22 @@ namespace EOL.ViewModels
                 RunData,
 				userDefaultSettings, viewModel);
             RunData.RunScript = Run.RunScript;
-		}		
+		}
 
 		#endregion Constructor
 
 		#region Methods
 
-		
+		public void ChangeDarkLight(bool isLightTheme)
+		{
+			Run.ChangeDarkLight(isLightTheme);
+		}
 
 		#endregion Methods
 
 		#region Commands
 
-		
+
 
 		#endregion Commands
 	}
