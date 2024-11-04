@@ -25,10 +25,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Reflection.Metadata;
 using System.Windows;
 using System.Windows.Media;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
@@ -344,6 +342,12 @@ namespace EOL.ViewModels
 				ContinueVisibility = Visibility.Visible;
 			else
 				ContinueVisibility = Visibility.Collapsed;
+
+			if(_runProjectsList.RunScript.CurrentScript.CurrentScript == 
+				_runProjectsList.AbortScript)
+			{
+				return;
+			}
 
 			RunPercentage = (int)(((double)_stepsCounter / (double)_totalNumOfSteps) * 100);
 			_stepsCounter++;
