@@ -9,7 +9,7 @@
         "Name": "Compare With Tolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 2,
+          "Io_port": 1,
           "Status_paramter": "Rw",
           "command_to_device": "analog input current",
           "portLine": 0,
@@ -20,7 +20,7 @@
           "IsThermistorUsed": false,
           "Name": "Analog Input Current",
           "Units": null,
-          "Value": null,
+          "Value": 48.352185155401074,
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
@@ -43,7 +43,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 2,
+            "Io_port": 1,
             "Status_paramter": "Rw",
             "command_to_device": "analog input current",
             "portLine": 0,
@@ -54,7 +54,7 @@
             "IsThermistorUsed": false,
             "Name": "Analog Input Current",
             "Units": null,
-            "Value": null,
+            "Value": 48.352185155401074,
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
@@ -81,7 +81,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Verify Zero Current - Phase U",
+        "UserTitle": "Verify Zero Current - Phase W",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -98,7 +98,7 @@
         "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 2,
+          "Io_port": 1,
           "Status_paramter": "Rw",
           "command_to_device": "analog input current",
           "portLine": 0,
@@ -109,7 +109,7 @@
           "IsThermistorUsed": false,
           "Name": "Analog Input Current",
           "Units": null,
-          "Value": null,
+          "Value": 48.352185155401074,
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
@@ -132,7 +132,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 2,
+            "Io_port": 1,
             "Status_paramter": "Rw",
             "command_to_device": "analog input current",
             "portLine": 0,
@@ -143,7 +143,7 @@
             "IsThermistorUsed": false,
             "Name": "Analog Input Current",
             "Units": null,
-            "Value": null,
+            "Value": 48.352185155401074,
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },
@@ -170,7 +170,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Verify Zero Current - Phase V",
+        "UserTitle": "Verify Zero Current - Phase U",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -187,7 +187,7 @@
         "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 2,
+          "Io_port": 1,
           "Status_paramter": "Rw",
           "command_to_device": "analog input current",
           "portLine": 0,
@@ -198,7 +198,7 @@
           "IsThermistorUsed": false,
           "Name": "Analog Input Current",
           "Units": null,
-          "Value": null,
+          "Value": 48.352185155401074,
           "DeviceType": 19,
           "CommunicationTimeout": 0
         },
@@ -221,7 +221,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 2,
+            "Io_port": 1,
             "Status_paramter": "Rw",
             "command_to_device": "analog input current",
             "portLine": 0,
@@ -232,7 +232,7 @@
             "IsThermistorUsed": false,
             "Name": "Analog Input Current",
             "Units": null,
-            "Value": null,
+            "Value": 48.352185155401074,
             "DeviceType": 19,
             "CommunicationTimeout": 0
           },

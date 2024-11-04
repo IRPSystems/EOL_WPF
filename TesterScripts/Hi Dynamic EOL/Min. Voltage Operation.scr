@@ -1,421 +1,75 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "5VDC",
+  "Name": "Min. Voltage Operation",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 2",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 21",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "ATECommand": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "OUTP",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 405,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vbus",
+                "Name": "OFF",
                 "Value": "0"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Meas_5V",
+                "Name": "ON",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Vsw",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp1",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BoardTemp2",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseU",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseV",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_PhaseW",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbA",
-                "Value": "8"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbB",
-                "Value": "9"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_AqbI",
-                "Value": "10"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_Bus_Current",
-                "Value": "11"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CoolingTemp",
-                "Value": "12"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp1",
-                "Value": "13"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_MotorTemp2",
-                "Value": "14"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SerialNumber",
-                "Value": "15"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_GdGood",
-                "Value": "16"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentUmV",
-                "Value": "17"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_CurrentWmV",
-                "Value": "18"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_BusCurrentMv",
-                "Value": "19"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn1",
-                "Value": "20"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn2",
-                "Value": "21"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn3",
-                "Value": "22"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DigIn4",
-                "Value": "23"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_SafeMeasure_IDAC1",
-                "Value": "24"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_WatchdogCounter",
-                "Value": "25"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_EolFlagPass",
-                "Value": "26"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_RunTime",
-                "Value": "27"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_ActiveDischargeFB",
-                "Value": "28"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_GET_DutyCycleMaxFlag",
-                "Value": "29"
               }
             ]
           },
-          "Value": null,
-          "GroupName": null,
-          "Description": null,
-          "Default": null,
-          "Cmd": "ate_get",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": null,
-          "Name": "ATE Get",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog input",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
-          "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Input",
+          "Name": "Output On/Off",
           "Units": null,
           "Value": null,
-          "DeviceType": 9,
-          "CommunicationTimeout": 0
+          "DeviceType": 3,
+          "CommunicationTimeout": 3000
         },
-        "Tolerance": 1.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Analog Input (NI DUCK)\" ±  1 - ID:1ToleranceTypeGroupName",
-        "IsValueTolerance": false,
-        "IsPercentageTolerance": true,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": true,
-        "CompareValueFactor": 1000.0,
-        "Parameter_ExtraData": {
+        "Value": 1,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "OUTP",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 405,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vbus",
+                  "Name": "OFF",
                   "Value": "0"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Meas_5V",
+                  "Name": "ON",
                   "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vsw",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp1",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp2",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseU",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseV",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseW",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbA",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbB",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbI",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Bus_Current",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CoolingTemp",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp2",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SerialNumber",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_GdGood",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentUmV",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentWmV",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BusCurrentMv",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn1",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn2",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn3",
-                  "Value": "22"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn4",
-                  "Value": "23"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SafeMeasure_IDAC1",
-                  "Value": "24"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_WatchdogCounter",
-                  "Value": "25"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_EolFlagPass",
-                  "Value": "26"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_RunTime",
-                  "Value": "27"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_ActiveDischargeFB",
-                  "Value": "28"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DutyCycleMaxFlag",
-                  "Value": "29"
                 }
               ]
             },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_get",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Get",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 1,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 1,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input",
+            "Name": "Output On/Off",
             "Units": null,
             "Value": null,
-            "DeviceType": 9,
-            "CommunicationTimeout": 0
+            "DeviceType": 3,
+            "CommunicationTimeout": 3000
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -427,7 +81,12 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare 5V MCU vs ATE",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set PS to Remote Control",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -440,127 +99,8 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 4",
-        "Interval": 1,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
-        "PassNextId": 3,
-        "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 7",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Operation",
-          "Description": "Motor Control Source",
-          "Default": "VCU",
-          "Cmd": "mtrctrlsrc",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "VCU",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Manual",
-                "Value": "2"
-              }
-            ]
-          },
-          "Name": "Control Source",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 2,
-        "ValueDropDwonIndex": 1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor Control Source",
-            "Default": "VCU",
-            "Cmd": "mtrctrlsrc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "VCU",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Manual",
-                  "Value": "2"
-                }
-              ]
-            },
-            "Name": "Control Source",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Control Source",
-        "IsPass": false,
-        "PassNextId": 4,
-        "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
+        "Name": "Set Parameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -676,12 +216,12 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -689,6 +229,166 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set UUT Motor State to Neutral",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "SOUR:VOLTAGE",
+          "Max": 100,
+          "ParamType": 2,
+          "ModbusAddress": 500,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": null,
+          "Name": "Voltage Limit",
+          "Units": "V",
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 0
+        },
+        "Value": 300.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "SOUR:VOLTAGE",
+            "Max": 100,
+            "ParamType": 2,
+            "ModbusAddress": 500,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": null,
+            "Name": "Voltage Limit",
+            "Units": "V",
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set VBUS Voltage to 300V",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 24",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "OUTP",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 405,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Output On/Off",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 3000
+        },
+        "Value": 10.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "OUTP",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 405,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Output On/Off",
+            "Units": null,
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 3000
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set PS Current Limit to 10A",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -702,7 +402,203 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 5",
+        "Name": "Set Parameter 22",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "OUTP",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 405,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Output On/Off",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 3000
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "OUTP",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 405,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Output On/Off",
+            "Units": null,
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 3000
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Output to ON",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor Control Source",
+          "Default": "VCU",
+          "Cmd": "mtrctrlsrc",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "VCU",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Manual",
+                "Value": "2"
+              }
+            ]
+          },
+          "Name": "Control Source",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Motor Control Source",
+            "Default": "VCU",
+            "Cmd": "mtrctrlsrc",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "VCU",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Manual",
+                  "Value": "2"
+                }
+              ]
+            },
+            "Name": "Control Source",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set UUT Control Source to VCU",
+        "IsPass": false,
+        "PassNextId": 7,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -778,23 +674,23 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual FOC Control to ON",
+        "UserTitle": "Set UUT Manual FOC  to ON",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -880,12 +776,12 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -894,9 +790,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -906,7 +802,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 8",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -932,7 +828,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 0.0,
+        "Value": 66.6,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -966,122 +862,19 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual Angle Speed Value to 0",
-        "IsPass": false,
-        "PassNextId": 8,
-        "FailNextId": 0,
-        "ID": 7,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 10",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": 0.0,
-          "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
-          "Default": "0",
-          "Cmd": "midcmdman",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              -600.0,
-              600.0
-            ]
-          },
-          "Format": null,
-          "Scale": 10.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": null,
-          "Name": "Manual ID Command",
-          "Units": "A",
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 1.0,
-        "ValueDropDwonIndex": -1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": 0.0,
-            "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
-            "Default": "0",
-            "Cmd": "midcmdman",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -600.0,
-                600.0
-              ]
-            },
-            "Format": null,
-            "Scale": 10.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "Manual ID Command",
-            "Units": "A",
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT ID Command to 1",
-        "IsPass": false,
-        "PassNextId": 9,
-        "FailNextId": 0,
-        "ID": 8,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 11",
-        "Interval": 2,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
+        "UserTitle": "Set UUT to 1000RPM",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1094,133 +887,8 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 6",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Measured 5 Volts",
-          "Default": "0",
-          "Cmd": "meas5v",
-          "Range": null,
-          "Format": null,
-          "Scale": 1000.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": null,
-          "Name": "5V Supply",
-          "Units": "V",
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog input",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
-          "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Input",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 9,
-          "CommunicationTimeout": 0
-        },
-        "Tolerance": 10.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"5V Supply (MCU)\" = \"Analog Input (NI DUCK)\" ±  10 - ID:10ToleranceTypeGroupName",
-        "IsValueTolerance": false,
-        "IsPercentageTolerance": true,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 1000.0,
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Measured 5 Volts",
-            "Default": "0",
-            "Cmd": "meas5v",
-            "Range": null,
-            "Format": null,
-            "Scale": 1000.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "5V Supply",
-            "Units": "V",
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 1,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": -1,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Compare 5V MCU vs ATE",
-        "IsPass": false,
-        "PassNextId": 11,
-        "FailNextId": 0,
-        "ID": 10,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 12",
+        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1246,7 +914,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 0.0,
+        "Value": 70.7,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -1280,19 +948,59 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
         "ValueParameter": null,
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT ID Command to 0",
+        "UserTitle": "Set UUT Manual ID Command to 50A",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 10,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
+        "Name": "Converge 8",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Speed - RPM",
+          "Default": "0",
+          "Cmd": "mspdrpm",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Speed - RPM",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "ConvergeTimeUnite": 2,
+        "ConvergeTime": 5,
+        "TimeoutTimeUnite": 2,
+        "Timeout": 30,
+        "TargetValue": "1000",
+        "Tolerance": 30.0,
+        "UserTitle": "Converge Speed RPM",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -1305,96 +1013,115 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 13",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 10",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
-          "GroupName": "Operation",
-          "Description": "Manual FOC Control",
-          "Default": "OFF",
-          "Cmd": "mmanfoc",
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Bus Voltage (Post capacitors)",
+          "Default": "0",
+          "Cmd": "vbus",
           "Range": null,
           "Format": null,
-          "Scale": 1.0,
+          "Scale": 1000.0,
           "Note": null,
           "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Manual FOC Control",
-          "Units": null,
+          "DropDown": null,
+          "Name": "Vbus (Monitor)",
+          "Units": "V",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 0,
-        "ValueDropDwonIndex": 0,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
+        "CompareValue": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "MEAS:VOLT",
+          "Max": 0,
+          "ParamType": 1,
+          "ModbusAddress": 507,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": null,
+          "Name": "Actual Voltage",
+          "Units": "V",
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 0
+        },
+        "Tolerance": 2.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:12ToleranceTypeGroupName",
+        "IsValueTolerance": false,
+        "IsPercentageTolerance": true,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
-            "GroupName": "Operation",
-            "Description": "Manual FOC Control",
-            "Default": "OFF",
-            "Cmd": "mmanfoc",
+            "Value": "",
+            "GroupName": "Monitor",
+            "Description": "Bus Voltage (Post capacitors)",
+            "Default": "0",
+            "Cmd": "vbus",
             "Range": null,
             "Format": null,
-            "Scale": 1.0,
+            "Scale": 1000.0,
             "Note": null,
             "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual FOC Control",
-            "Units": null,
+            "DropDown": null,
+            "Name": "Vbus (Monitor)",
+            "Units": "V",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual FOC Control to OFF",
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "MEAS:VOLT",
+            "Max": 0,
+            "ParamType": 1,
+            "ModbusAddress": 507,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": null,
+            "Name": "Actual Voltage",
+            "Units": "V",
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 1,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 17.8,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1407,96 +1134,119 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 14",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
           "Value": "",
-          "GroupName": "Operation",
-          "Description": "Manual Electric Angle Speed Flag",
-          "Default": "OFF",
-          "Cmd": "flgmanang",
+          "GroupName": "Monitor",
+          "Description": "Bus Current",
+          "Default": "0",
+          "Cmd": "currbus",
           "Range": null,
           "Format": null,
-          "Scale": 1.0,
+          "Scale": 1000.0,
           "Note": null,
           "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Manual Angle Speed ",
-          "Units": null,
+          "DropDown": null,
+          "Name": "Bus Current (Monitor)",
+          "Units": "A",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 0,
-        "ValueDropDwonIndex": 0,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
+        "CompareValue": {
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "Io_port": 1,
+          "Status_paramter": "Rw",
+          "command_to_device": "analog input current",
+          "portLine": 0,
+          "shunt_resistor": 17.8,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Analog Input Current",
+          "Units": null,
+          "Value": 48.352185155401074,
+          "DeviceType": 19,
+          "CommunicationTimeout": 0
+        },
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  0 - ID:13ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
             "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Flag",
-            "Default": "OFF",
-            "Cmd": "flgmanang",
+            "GroupName": "Monitor",
+            "Description": "Bus Current",
+            "Default": "0",
+            "Cmd": "currbus",
             "Range": null,
             "Format": null,
-            "Scale": 1.0,
+            "Scale": 1000.0,
             "Note": null,
             "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual Angle Speed ",
-            "Units": null,
+            "DropDown": null,
+            "Name": "Bus Current (Monitor)",
+            "Units": "A",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual Angle Speed to ON",
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "Io_port": 1,
+            "Status_paramter": "Rw",
+            "command_to_device": "analog input current",
+            "portLine": 0,
+            "shunt_resistor": 17.8,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Analog Input Current",
+            "Units": null,
+            "Value": 48.352185155401074,
+            "DeviceType": 19,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 2,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 17.8,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Compare BUS Current (External Current Sensor vs UUT)",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1509,74 +1259,341 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 15",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 18",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "ATECommand": null,
-          "Value": null,
-          "GroupName": null,
-          "Description": null,
-          "Default": null,
-          "Cmd": "ate_mode",
+          "Value": 200.448,
+          "GroupName": "Monitor",
+          "Description": "Current Phase U RMS",
+          "Default": "0",
+          "Cmd": "currarms",
           "Range": null,
           "Format": null,
-          "Scale": 1.0,
+          "Scale": 1000.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
-          "Name": "ATE Mode",
-          "Units": null,
+          "Name": "Current U (Monitor)",
+          "Units": "A-RMS",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 0.0,
-        "ValueDropDwonIndex": -1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
+        "CompareValue": {
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "Io_port": 1,
+          "Status_paramter": "Rw",
+          "command_to_device": "analog input current",
+          "portLine": 0,
+          "shunt_resistor": 17.8,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Analog Input Current",
+          "Units": null,
+          "Value": 48.352185155401074,
+          "DeviceType": 19,
+          "CommunicationTimeout": 0
+        },
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  0 - ID:14ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "ATECommand": null,
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_mode",
+            "Value": 200.448,
+            "GroupName": "Monitor",
+            "Description": "Current Phase U RMS",
+            "Default": "0",
+            "Cmd": "currarms",
             "Range": null,
             "Format": null,
-            "Scale": 1.0,
+            "Scale": 1000.0,
             "Note": null,
-            "Save": true,
+            "Save": false,
             "DropDown": null,
-            "Name": "ATE Mode",
-            "Units": null,
+            "Name": "Current U (Monitor)",
+            "Units": "A-RMS",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
+          "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": -1
+          "NumatoGPIODropDwonIndex": 0
         },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Enter ATE Mode",
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "Io_port": 1,
+            "Status_paramter": "Rw",
+            "command_to_device": "analog input current",
+            "portLine": 0,
+            "shunt_resistor": 17.8,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Analog Input Current",
+            "Units": null,
+            "Value": 48.352185155401074,
+            "DeviceType": 19,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 1,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 17.8,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Compare Phase U Current (External Current Sensor vs UUT)",
+        "IsPass": false,
+        "PassNextId": 15,
+        "FailNextId": 0,
+        "ID": 14,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 19",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Current Phase W RMS",
+          "Default": "0",
+          "Cmd": "currcrms",
+          "Range": null,
+          "Format": null,
+          "Scale": 1000.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Current W (Monitor)",
+          "Units": "A-RMS",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": {
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "Io_port": 1,
+          "Status_paramter": "Rw",
+          "command_to_device": "analog input current",
+          "portLine": 0,
+          "shunt_resistor": 17.8,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Analog Input Current",
+          "Units": null,
+          "Value": 48.352185155401074,
+          "DeviceType": 19,
+          "CommunicationTimeout": 0
+        },
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  0 - ID:15ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Monitor",
+            "Description": "Current Phase W RMS",
+            "Default": "0",
+            "Cmd": "currcrms",
+            "Range": null,
+            "Format": null,
+            "Scale": 1000.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Current W (Monitor)",
+            "Units": "A-RMS",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "Io_port": 1,
+            "Status_paramter": "Rw",
+            "command_to_device": "analog input current",
+            "portLine": 0,
+            "shunt_resistor": 17.8,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Analog Input Current",
+            "Units": null,
+            "Value": 48.352185155401074,
+            "DeviceType": 19,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 17.8,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Compare Phase W Current (External Current Sensor vs UUT)",
+        "IsPass": false,
+        "PassNextId": 16,
+        "FailNextId": 0,
+        "ID": 15,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 20",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Speed - RPM",
+          "Default": "0",
+          "Cmd": "mspdrpm",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Speed - RPM",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "1000",
+        "Tolerance": 30.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 1000 ±  30 - ID:16ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Monitor",
+            "Description": "Speed - RPM",
+            "Default": "0",
+            "Cmd": "mspdrpm",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Speed - RPM",
+            "Units": "RPM",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Compare UUT Speed to 1000RPM",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

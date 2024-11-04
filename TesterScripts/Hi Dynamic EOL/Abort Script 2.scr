@@ -1,0 +1,264 @@
+{
+  "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
+  "Name": "Abort Script 2",
+  "ScriptItemsList": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+    "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "SOUR:VOLTAGE",
+          "Max": 100,
+          "ParamType": 2,
+          "ModbusAddress": 500,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": null,
+          "Name": "Voltage Limit",
+          "Units": "V",
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "SOUR:VOLTAGE",
+            "Max": 100,
+            "ParamType": 2,
+            "ModbusAddress": 500,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": null,
+            "Name": "Voltage Limit",
+            "Units": "V",
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": -1,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": -1
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set PS Output to OFF",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": 0.0,
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
+          "Default": "0",
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual ID Command",
+          "Units": "A",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": 0.0,
+            "GroupName": "Operation",
+            "Description": "Motor Manual ID Command",
+            "Default": "0",
+            "Cmd": "midcmdman",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -600.0,
+                600.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual ID Command",
+            "Units": "A",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Manual ID Command to 0",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "OFF",
+          "GroupName": "Operation",
+          "Description": "Manual FOC Control",
+          "Default": "OFF",
+          "Cmd": "mmanfoc",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Manual FOC Control",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": 0,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "OFF",
+            "GroupName": "Operation",
+            "Description": "Manual FOC Control",
+            "Default": "OFF",
+            "Cmd": "mmanfoc",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Manual FOC Control",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Manual FOC to OFF",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      }
+    ]
+  },
+  "IsPass": null
+}

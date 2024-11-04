@@ -55,7 +55,10 @@
       "..\\Position Sensor.scr",
       "..\\Speed Estimation.scr",
       "..\\Customer FW Flash.tst",
-      "..\\Flash.scr"
+      "..\\Flash.scr",
+      "..\\Abort Script 2.scr",
+      "..\\Operational Tests.tst",
+      "..\\Min. Voltage Operation.scr"
     ]
   },
   "RecordParametersFile": null,
