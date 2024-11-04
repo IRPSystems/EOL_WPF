@@ -1,0 +1,38 @@
+﻿<mah:MetroWindow x:Class="EOL.Views.AdminView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+                 xmlns:script_runner_views="clr-namespace:ScriptRunner.Views;assembly=ScriptRunner"
+                 xmlns:local="clr-namespace:EOL.Views"
+                 mc:Ignorable="d"
+                 Title="Admin" Height="450" Width="800">
+
+    <Window.Resources>
+
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <script_runner_views:RunExplorerView Grid.Column="0"
+                                             DataContext="{Binding RunExplorer}"/>
+
+        <script_runner_views:LoggerView Grid.Column="2" 
+                                        DataContext="{Binding MainScriptLogger}"/>
+
+        <ContentControl Grid.Column="4" 
+                        Content="{Binding ScriptDiagram}" 
+                        MinWidth="500"/>
+
+
+    </Grid>
+</mah:MetroWindow>

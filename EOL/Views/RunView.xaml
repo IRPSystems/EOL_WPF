@@ -98,6 +98,8 @@
                     <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="75" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="75" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
@@ -118,7 +120,12 @@
                         Command="{Binding ContinueCommand}" 
                         Visibility="{Binding ContinueVisibility}"/>
 
-                <Border Grid.Column="6" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
+                <Button Grid.Column="6" 
+                        Content="Admin" 
+                        Command="{Binding ShowAdminCommand}" 
+                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"/>
+
+                <Border Grid.Column="8" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
                     <Border.Resources>
                         <Style TargetType="Border">
                             <Style.Triggers>
@@ -185,16 +192,16 @@
                 </Grid.RowDefinitions>
 
                 <TextBox Grid.Row="0" 
-             Text="{Binding ErrorMessage}"
-             FontSize="30"
-             TextWrapping="Wrap"
-             VerticalAlignment="Center"
-             HorizontalAlignment="Center"
-             ScrollViewer.VerticalScrollBarVisibility="Auto"
-             Background="Transparent"
-             Foreground="White"
-             IsReadOnly="True"
-             BorderThickness="0"/>
+                         Text="{Binding ErrorMessage}"
+                         FontSize="30"
+                         TextWrapping="Wrap"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         Background="Transparent"
+                         Foreground="White"
+                         IsReadOnly="True"
+                         BorderThickness="0"/>
             </Grid>
 
             <DataGrid Grid.Row="10"
@@ -224,12 +231,7 @@
             </DataGrid>
 
         </Grid>
-
         
-        <ContentControl Grid.Column="2" 
-                        Content="{Binding ScriptDiagram}" 
-                        MinWidth="500"
-                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"/>
-
+        
     </Grid>
 </UserControl>
