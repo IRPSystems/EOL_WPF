@@ -10,6 +10,7 @@ using Entities.Enums;
 using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
+using EOL.Views;
 using FlashingToolLib.FlashingTools;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
@@ -101,6 +102,9 @@ namespace EOL.ViewModels
 
         private ScriptStepSetParameter _stepSetParameter;
 
+		private AdminView _adminView;
+		private AdminViewModel _adminVM;
+
 		#endregion Fields
 
 		#region Constructor
@@ -129,6 +133,7 @@ namespace EOL.ViewModels
 				RunCommand = new RelayCommand(Run);
 				AbortCommand = new RelayCommand(Abort);
 				ContinueCommand = new RelayCommand(Continue);
+				ShowAdminCommand = new RelayCommand(ShowAdmin);
 
 				RunPercentage = 0;
 				TerminalTextsList = new ObservableCollection<string>();
@@ -159,9 +164,13 @@ namespace EOL.ViewModels
 				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
 				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
-				_generatedProjectsList = null;
-
+				
 				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
+
+				_adminVM = new AdminViewModel(
+					ScriptDiagram,
+					RunScript.MainScriptLogger,
+					_generatedProjectsList);
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
@@ -178,6 +187,8 @@ namespace EOL.ViewModels
 				_settingsViewModel.LoadUserConfigToSettingsView();
 
 				LoadPrintFile();
+
+				
 			}
 			catch (Exception ex)
 			{
@@ -760,6 +771,20 @@ namespace EOL.ViewModels
 			ErrorMessage = errorMessage;
 		}
 
+		private void ShowAdmin()
+		{
+			if (_adminView == null || _adminView.IsVisible == false)
+			{
+				_adminView = new AdminView() { DataContext = _adminVM };
+				_adminView.Show();
+			}
+
+			_adminView.Topmost = true;
+			System.Threading.Thread.Sleep(100);
+			_adminView.Topmost = false;
+			_adminView.Focus();
+		}
+
 		#endregion Methods
 
 		#region Commands
@@ -767,6 +792,7 @@ namespace EOL.ViewModels
 		public RelayCommand RunCommand { get; private set; }
 		public RelayCommand AbortCommand { get; private set; }
 		public RelayCommand ContinueCommand { get; private set; }
+		public RelayCommand ShowAdminCommand { get; private set; }
 
 		#endregion Commands
 	}
