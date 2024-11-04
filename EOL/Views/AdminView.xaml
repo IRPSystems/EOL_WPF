@@ -23,16 +23,67 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <script_runner_views:RunExplorerView Grid.Column="0"
-                                             DataContext="{Binding RunExplorer}"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <script_runner_views:LoggerView Grid.Column="2" 
+            <Border Grid.Row="0" Background="{StaticResource MahApps.Brushes.Accent2}">
+                <TextBlock Text="Projects List" 
+                           FontSize="16"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            
+            <script_runner_views:RunExplorerView Grid.Row="2"
+                                                 DataContext="{Binding RunExplorer}"/>
+        </Grid>
+
+        <GridSplitter Grid.Column="1" Width="10" />
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="{StaticResource MahApps.Brushes.Accent2}">
+                <TextBlock Text="Script Log" 
+                   FontSize="16"
+                   Foreground="White"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            
+            <script_runner_views:LoggerView Grid.Row="2" 
                                         DataContext="{Binding MainScriptLogger}"/>
+        </Grid>
 
-        <ContentControl Grid.Column="4" 
-                        Content="{Binding ScriptDiagram}" 
-                        MinWidth="500"/>
+        <GridSplitter Grid.Column="3" Width="10" />
 
+        <Grid Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="{StaticResource MahApps.Brushes.Accent2}">
+                <TextBlock Text="Script Diagram" 
+                           FontSize="16"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            
+            <ContentControl Grid.Row="2" 
+                            Content="{Binding ScriptDiagram}" 
+                            MinWidth="500"/>
+        </Grid>
 
     </Grid>
 </mah:MetroWindow>
