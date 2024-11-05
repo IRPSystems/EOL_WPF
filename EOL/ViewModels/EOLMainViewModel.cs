@@ -72,6 +72,8 @@ namespace EOL.ViewModels
 		private CommunicationWindowView _communicationWindowView;
 		private SettingsView _settingsView;
 
+		private string AdminPassword = "2512";
+
 		#endregion Fields
 
 		#region Constructor
@@ -375,26 +377,39 @@ namespace EOL.ViewModels
 			_settingsView.Focus();
 		}
 
-		private void ModesDropDownMenuItem(string mode)
-		{
-			switch (mode)
-			{
-				case "Admin":
-					SelectedMode = "Admin";
-					OperatorVM.Run.IsAdminMode = true;
-					break;
-				case "Operator":
-					SelectedMode = "Operator";
-					OperatorVM.Run.IsAdminMode = false;
-					break;
-			}
-		}
+        private void ModesDropDownMenuItem(string mode)
+        {
+            switch (mode)
+            {
+                case "Admin":
+                    var passwordWindow = new PasswordWindow();
+                    if (passwordWindow.ShowDialog() == true)
+                    {
+                        // Check if the entered password is correct
+                        if (passwordWindow.Password == AdminPassword) // Replace with your actual password
+                        {
+                            SelectedMode = "Admin";
+                            OperatorVM.Run.IsAdminMode = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    break;
+                case "Operator":
+                    SelectedMode = "Operator";
+                    OperatorVM.Run.IsAdminMode = false;
+                    break;
+            }
+        }
 
-		#endregion Methods
 
-		#region Commands
+        #endregion Methods
 
-		public RelayCommand ChangeDarkLightCommand { get; private set; }
+        #region Commands
+
+        public RelayCommand ChangeDarkLightCommand { get; private set; }
 
 		public RelayCommand LoadedCommand { get; private set; }
 		public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
