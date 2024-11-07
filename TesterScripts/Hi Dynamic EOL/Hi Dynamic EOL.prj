@@ -58,7 +58,10 @@
       "..\\Flash.scr",
       "..\\Abort Script 2.scr",
       "..\\Operational Tests.tst",
-      "..\\Min. Voltage Operation.scr"
+      "..\\Min. Voltage Operation.scr",
+      "..\\Max. Voltage Operation.scr",
+      "..\\Config Manual FOC.scr",
+      "..\\Compare Manual Angle.scr"
     ]
   },
   "RecordParametersFile": null,

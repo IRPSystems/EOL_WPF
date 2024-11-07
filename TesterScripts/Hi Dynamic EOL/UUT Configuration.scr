@@ -81,167 +81,6 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 4",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "Neutral",
-          "GroupName": "Operation",
-          "Description": "Motor State",
-          "Default": "Neutral",
-          "Cmd": "mstate",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Neutral",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Run",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Lock",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Fault",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
-              }
-            ]
-          },
-          "Name": "Motor State (Operation)",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": 4,
-        "Tolerance": 0.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 4,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Motor State (Operation) (MCU)\" = 4 ±  0 - ID:2ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "Neutral",
-            "GroupName": "Operation",
-            "Description": "Motor State",
-            "Default": "Neutral",
-            "Cmd": "mstate",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Neutral",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Run",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Lock",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Fault",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Init",
-                  "Value": "6"
-                }
-              ]
-            },
-            "Name": "Motor State (Operation)",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Get Motor State (ATE)",
-        "IsPass": false,
-        "PassNextId": 3,
-        "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
         "Name": "Compare 6",
         "ValueLeft": {
@@ -305,6 +144,108 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State (ATE)",
         "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Active Damping",
+          "Description": "Active Damping Activation",
+          "Default": "OFF",
+          "Cmd": "mactdmpena",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Active Damping Activation",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Active Damping",
+            "Description": "Active Damping Activation",
+            "Default": "OFF",
+            "Cmd": "mactdmpena",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Active Damping Activation",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Active Damping to OFF",
+        "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
@@ -317,7 +258,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -389,113 +330,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Aqb AB Fault Threshold to 5000",
+        "UserTitle": "Set AB Fault Threshold to 5000",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 0,
         "FailNextId": 0,
         "ID": 4,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Active Damping",
-          "Description": "Active Damping Activation",
-          "Default": "OFF",
-          "Cmd": "mactdmpena",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Active Damping Activation",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 0,
-        "ValueDropDwonIndex": 0,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Active Damping",
-            "Description": "Active Damping Activation",
-            "Default": "OFF",
-            "Cmd": "mactdmpena",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Active Damping Activation",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Active Damping to OFF",
-        "IsPass": false,
-        "PassNextId": -1,
-        "FailNextId": 0,
-        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

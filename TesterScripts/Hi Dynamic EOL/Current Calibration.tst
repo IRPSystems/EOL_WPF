@@ -15,7 +15,7 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "Phase U",
+        "SelectedScriptName": "BUS",
         "UserTitle": null,
         "IsPass": false,
         "PassNextId": 2,

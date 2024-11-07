@@ -1,6 +1,6 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "Min. Voltage Operation",
+  "Name": "Max. Voltage Operation",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
@@ -352,7 +352,7 @@
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
-        "Value": 250.0,
+        "Value": 360.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -388,7 +388,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set VBUS Voltage to 250V",
+        "UserTitle": "Set VBUS Voltage to 360V",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
