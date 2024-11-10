@@ -3,7 +3,682 @@
   "Name": "Position Sensor",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
-    "$values": []
+    "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Motor",
+          "Description": "FOC ID Direction",
+          "Default": "Negative",
+          "Cmd": "mtrfociddir",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Positive",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Negative",
+                "Value": "-1"
+              }
+            ]
+          },
+          "Name": "Id Direction",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Motor",
+            "Description": "FOC ID Direction",
+            "Default": "Negative",
+            "Cmd": "mtrfociddir",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Positive",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Negative",
+                  "Value": "-1"
+                }
+              ]
+            },
+            "Name": "Id Direction",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set ID Direction To Positive",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": 0.0,
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
+          "Default": "0",
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual ID Command",
+          "Units": "A",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": 0.0,
+            "GroupName": "Operation",
+            "Description": "Motor Manual ID Command",
+            "Default": "0",
+            "Cmd": "midcmdman",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -600.0,
+                600.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual ID Command",
+            "Units": "A",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Manual Angle Value to 0",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": 0.0,
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
+          "Default": "0",
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual ID Command",
+          "Units": "A",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 50.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": 0.0,
+            "GroupName": "Operation",
+            "Description": "Motor Manual ID Command",
+            "Default": "0",
+            "Cmd": "midcmdman",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -600.0,
+                600.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual ID Command",
+            "Units": "A",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Id Command to 0",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSweep, ScriptHandler",
+        "Name": "Sweep 2",
+        "IsLoaded": true,
+        "SweepItemsList": {
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Models.SweepItemData, ScriptHandler]], System.ObjectModel",
+          "$values": [
+            {
+              "$type": "ScriptHandler.Models.SweepItemData, ScriptHandler",
+              "Parameter": {
+                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                "ValueChanged": null,
+                "Value": "",
+                "GroupName": "Operation",
+                "Description": "Manual Angle Value",
+                "Default": "0",
+                "Cmd": "focmanang",
+                "Range": {
+                  "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                  "$values": [
+                    0.0,
+                    360.0
+                  ]
+                },
+                "Format": null,
+                "Scale": 182.0,
+                "Note": null,
+                "Save": false,
+                "DropDown": null,
+                "Name": "Manual Angle Value",
+                "Units": "Deg",
+                "DeviceType": 1,
+                "CommunicationTimeout": 0
+              },
+              "StartValue": null,
+              "EndValue": null,
+              "StepValue": null,
+              "StepInterval": 2,
+              "StepIntervalTimeUnite": 2,
+              "SubScript": {
+                "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
+                "Name": "Compare Manual Angle",
+                "ScriptItemsList": {
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+                      "Name": "Delay 1",
+                      "Interval": 3,
+                      "IntervalUnite": 2,
+                      "UserTitle": "Delay",
+                      "IsPass": false,
+                      "PassNextId": 2,
+                      "FailNextId": 0,
+                      "ID": 1,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      }
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+                      "Name": "Compare With Tolerance 2",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Monitor",
+                        "Description": "Electric Angle",
+                        "Default": "0",
+                        "Cmd": "helecang",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 182.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": null,
+                        "Name": " FOC Electric Angle",
+                        "Units": "Deg",
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "CompareValue": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Monitor",
+                        "Description": "Electric Angle",
+                        "Default": "0",
+                        "Cmd": "focsensang",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 182.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": null,
+                        "Name": " Sensor Electric Angle",
+                        "Units": "Deg",
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Tolerance": 5.0,
+                      "Comparation": 0,
+                      "CompareValueDropDwonIndex": 0,
+                      "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  5 - ID:2ToleranceTypeGroupName",
+                      "IsValueTolerance": true,
+                      "IsPercentageTolerance": false,
+                      "IsUseParamAverage": false,
+                      "AverageOfNRead_Param": 0,
+                      "IsUseParamFactor": false,
+                      "ParamFactor": 0.0,
+                      "IsUseCompareValueAverage": false,
+                      "AverageOfNRead_CompareValue": 0,
+                      "IsUseCompareValueFactor": false,
+                      "CompareValueFactor": 0.0,
+                      "Parameter_ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": {
+                          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                          "ValueChanged": null,
+                          "Value": "",
+                          "GroupName": "Monitor",
+                          "Description": "Electric Angle",
+                          "Default": "0",
+                          "Cmd": "helecang",
+                          "Range": null,
+                          "Format": null,
+                          "Scale": 182.0,
+                          "Note": null,
+                          "Save": false,
+                          "DropDown": null,
+                          "Name": " FOC Electric Angle",
+                          "Units": "Deg",
+                          "DeviceType": 1,
+                          "CommunicationTimeout": 0
+                        },
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "CompareValue_ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": {
+                          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                          "ValueChanged": null,
+                          "Value": "",
+                          "GroupName": "Monitor",
+                          "Description": "Electric Angle",
+                          "Default": "0",
+                          "Cmd": "focsensang",
+                          "Range": null,
+                          "Format": null,
+                          "Scale": 182.0,
+                          "Note": null,
+                          "Save": false,
+                          "DropDown": null,
+                          "Name": " Sensor Electric Angle",
+                          "Units": "Deg",
+                          "DeviceType": 1,
+                          "CommunicationTimeout": 0
+                        },
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "UserTitle": "Compare FOC Angle to Sensor Angle",
+                      "IsPass": false,
+                      "PassNextId": 0,
+                      "FailNextId": 0,
+                      "ID": 2,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      }
+                    }
+                  ]
+                },
+                "IsPass": null
+              },
+              "SubScriptName": "Compare Manual Angle"
+            }
+          ]
+        },
+        "NumberOfDimensions": 1,
+        "UserTitle": "Sweep Manual Angles",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": 0.0,
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
+          "Default": "0",
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual ID Command",
+          "Units": "A",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": 0.0,
+            "GroupName": "Operation",
+            "Description": "Motor Manual ID Command",
+            "Default": "0",
+            "Cmd": "midcmdman",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -600.0,
+                600.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual ID Command",
+            "Units": "A",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Id Command to 0",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Motor",
+          "Description": "FOC ID Direction",
+          "Default": "Negative",
+          "Cmd": "mtrfociddir",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Positive",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Negative",
+                "Value": "-1"
+              }
+            ]
+          },
+          "Name": "Id Direction",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": -1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Motor",
+            "Description": "FOC ID Direction",
+            "Default": "Negative",
+            "Cmd": "mtrfociddir",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Positive",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Negative",
+                  "Value": "-1"
+                }
+              ]
+            },
+            "Name": "Id Direction",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set ID Direction to Negative",
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      }
+    ]
   },
   "IsPass": null
 }

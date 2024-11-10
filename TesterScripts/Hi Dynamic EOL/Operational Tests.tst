@@ -1,13 +1,13 @@
 {
   "$type": "ScriptHandler.Models.TestData, ScriptHandler",
-  "Name": "Internal Measurements",
+  "Name": "Operational Tests",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 4",
-        "ParentScriptName": "Internal Measurements",
+        "Name": "Sub Script 1",
+        "ParentScriptName": "Operational Tests",
         "ContinueUntilType": 0,
         "Repeats": 1,
         "Timeout": 0,
@@ -15,7 +15,7 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "5VDC",
+        "SelectedScriptName": "Min. Voltage Operation",
         "UserTitle": null,
         "IsPass": false,
         "PassNextId": 2,
@@ -29,9 +29,26 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 4",
+        "Interval": 5,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 7",
-        "ParentScriptName": "Internal Measurements",
+        "Name": "ScriptNodeSubScript 2",
+        "ParentScriptName": "Operational Tests",
         "ContinueUntilType": 0,
         "Repeats": 1,
         "Timeout": 0,
@@ -39,12 +56,12 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "UUT Internal Temp",
+        "SelectedScriptName": "Max. Voltage Operation",
         "UserTitle": null,
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
