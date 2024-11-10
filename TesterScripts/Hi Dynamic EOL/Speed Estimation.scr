@@ -182,7 +182,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -222,7 +222,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -251,7 +251,7 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": 509.16799403934,
+          "Value": null,
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
@@ -274,7 +274,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 500.0,
+            "Value": "",
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -315,7 +315,7 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": 509.16799403934,
+            "Value": null,
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
@@ -356,8 +356,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               -1000.0,
-              1000.0,
-              -1000.0,
               1000.0
             ]
           },
@@ -388,8 +386,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -1000.0,
-                1000.0,
                 -1000.0,
                 1000.0
               ]
@@ -437,7 +433,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -477,7 +473,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -506,14 +502,14 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": 509.16799403934,
+          "Value": null,
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
         "Tolerance": 30.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM\" = \"Digital Counter\" ±  30 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -529,7 +525,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 500.0,
+            "Value": "",
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -570,7 +566,7 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": 509.16799403934,
+            "Value": null,
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },

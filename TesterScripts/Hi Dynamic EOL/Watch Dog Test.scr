@@ -734,7 +734,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 5919.352,
+          "Value": 85.712,
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -770,7 +770,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 5919.352,
+            "Value": 85.712,
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",

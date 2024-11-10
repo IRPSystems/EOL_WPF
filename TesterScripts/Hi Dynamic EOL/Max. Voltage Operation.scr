@@ -1072,7 +1072,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1112,7 +1112,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 500.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1148,7 +1148,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 500.0,
+            "Value": "",
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
