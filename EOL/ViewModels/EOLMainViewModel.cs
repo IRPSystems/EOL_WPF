@@ -139,6 +139,7 @@ namespace EOL.ViewModels
 
 				_richTextBox = new RichTextBox();
 				_richTextBox.Background = Brushes.Black;
+				_richTextBox.TextChanged += _richTextBox_TextChanged;
 
 				LoggerService.Init("EOL.log", Serilog.Events.LogEventLevel.Information, _richTextBox);
 				LoggerService.Inforamtion(this, "-------------------------------------- EOL ---------------------");
@@ -230,6 +231,11 @@ namespace EOL.ViewModels
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
+		}
+
+		private void _richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			_richTextBox.ScrollToEnd();
 		}
 
 		private void InitSetupView()
