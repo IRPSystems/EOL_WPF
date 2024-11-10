@@ -158,7 +158,7 @@ namespace EOL.ViewModels
 				};
 
                 _stopScriptStep = new StopScriptStepService();
-				RunScript = new RunScriptService(_logParametersList, _devicesContainer, _stopScriptStep, null);
+				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
 				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
@@ -167,7 +167,7 @@ namespace EOL.ViewModels
 				ScriptDiagram = new ScriptDiagramViewModel();
 
 				_openProject = new OpenProjectForRunService();
-				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
+				_runProjectsList = new RunProjectsListService(RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
 				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
 				
@@ -388,8 +388,13 @@ namespace EOL.ViewModels
 			ErrorMessage = null;
 
 			_totalNumOfSteps = 0;
+			string path = _userDefaultSettings.ReportsSavingPath;
+			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
 			foreach (GeneratedProjectData project in _generatedProjectsList)
-			{ 
+			{
+
+				project.RecordingPath = path;
+
 				foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
 									
@@ -417,7 +422,9 @@ namespace EOL.ViewModels
             _runProjectsList.StartAll(
 				_generatedProjectsList,
 				_userDefaultSettings.isRecordMonitor,
-				_stoppedScript, _SafetyScript);// _logParametersList); TODO:?
+				_stoppedScript, 
+				_SafetyScript,
+				_logParametersList);
 
 			RunPercentage = 0;
 			_stepsCounter = 1;
