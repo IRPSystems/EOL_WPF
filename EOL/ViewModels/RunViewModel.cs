@@ -398,7 +398,7 @@ namespace EOL.ViewModels
 				foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
 									
-					SetDataToScriptTool(scriptData.ScriptItemsList);
+					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
                     foreach (GeneratedScriptData script in project.TestsList)
                     {
                         ClearEOLStepSummerys(script);
@@ -591,18 +591,23 @@ namespace EOL.ViewModels
 			_generatedProjectsList.Add(project);
 		}
 
-		private void SetDataToScriptTool(
+		private int SetDataToScriptTool(
 			ObservableCollection<IScriptItem> scriptItemsList)
 		{
-			foreach(IScriptItem scriptItem in scriptItemsList)
+			int totalNumOfSteps = 0;
+			foreach (IScriptItem scriptItem in scriptItemsList)
 			{
                 if (scriptItem is ISubScript subScript)
                 {
-					SetDataToScriptTool(subScript.Script.ScriptItemsList);
+					int repeats = (subScript as ScriptStepSubScript).Repeats;
+					int subScript_totalNumOfSteps = 
+						SetDataToScriptTool(subScript.Script.ScriptItemsList);
+					totalNumOfSteps += subScript_totalNumOfSteps * repeats;
+					totalNumOfSteps += repeats;
 					continue;
 				}
 
-				_totalNumOfSteps++;
+				totalNumOfSteps++;
 
 				if (scriptItem is ScriptStepEOLSendSN sn)
 				{
@@ -618,6 +623,8 @@ namespace EOL.ViewModels
 					SetFlashData(flash);
 				}
 			}
+
+			return totalNumOfSteps;
 		}
 
 		private void SetFlashData(ScriptStepEOLFlash flash)
