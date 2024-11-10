@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
 using ScriptHandler.Models;
+using System.Windows.Controls;
 
 namespace EOL.ViewModels
 {
@@ -30,13 +31,17 @@ namespace EOL.ViewModels
 			DevicesContainer devicesContainer,
 			ScriptUserData scriptUserData,
 			UserDefaultSettings userDefaultSettings,
-			SettingsViewModel viewModel, RunData runData)
+			SettingsViewModel viewModel, 
+			RunData runData,
+			RichTextBox richTextBox)
 		{
             RunData = runData;
             Run = new RunViewModel( 
 				devicesContainer,
                 RunData,
-				userDefaultSettings, viewModel);
+				userDefaultSettings, 
+				viewModel,
+				richTextBox);
             RunData.RunScript = Run.RunScript;
 		}
 

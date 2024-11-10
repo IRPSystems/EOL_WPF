@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace EOL.ViewModels
@@ -105,6 +106,8 @@ namespace EOL.ViewModels
 		private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
+		private RichTextBox _richTextBox;
+
 		#endregion Fields
 
 		#region Constructor
@@ -113,12 +116,15 @@ namespace EOL.ViewModels
 			DevicesContainer devicesContainer,
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
-			SettingsViewModel settingsViewModel)
+			SettingsViewModel settingsViewModel,
+			RichTextBox richTextBox)
 		{
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
 			_runData = runData;
             _userDefaultSettings = userDefaultSettings;
+			_richTextBox = richTextBox;
+
             try
             {
 				//PackageConfig
@@ -152,7 +158,7 @@ namespace EOL.ViewModels
 				};
 
                 _stopScriptStep = new StopScriptStepService();
-				RunScript = new RunScriptService(_logParametersList, _devicesContainer, _stopScriptStep, null);
+				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
 				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
@@ -161,7 +167,7 @@ namespace EOL.ViewModels
 				ScriptDiagram = new ScriptDiagramViewModel();
 
 				_openProject = new OpenProjectForRunService();
-				_runProjectsList = new RunProjectsListService(null, RunScript, _devicesContainer);
+				_runProjectsList = new RunProjectsListService(RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
 				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
 				
@@ -382,12 +388,17 @@ namespace EOL.ViewModels
 			ErrorMessage = null;
 
 			_totalNumOfSteps = 0;
+			string path = _userDefaultSettings.ReportsSavingPath;
+			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
 			foreach (GeneratedProjectData project in _generatedProjectsList)
-			{ 
+			{
+
+				project.RecordingPath = path;
+
 				foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
 									
-					SetDataToScriptTool(scriptData.ScriptItemsList);
+					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
                     foreach (GeneratedScriptData script in project.TestsList)
                     {
                         ClearEOLStepSummerys(script);
@@ -411,7 +422,9 @@ namespace EOL.ViewModels
             _runProjectsList.StartAll(
 				_generatedProjectsList,
 				_userDefaultSettings.isRecordMonitor,
-				_stoppedScript, _SafetyScript);// _logParametersList); TODO:?
+				_stoppedScript, 
+				_SafetyScript,
+				_logParametersList);
 
 			RunPercentage = 0;
 			_stepsCounter = 1;
@@ -578,18 +591,23 @@ namespace EOL.ViewModels
 			_generatedProjectsList.Add(project);
 		}
 
-		private void SetDataToScriptTool(
+		private int SetDataToScriptTool(
 			ObservableCollection<IScriptItem> scriptItemsList)
 		{
-			foreach(IScriptItem scriptItem in scriptItemsList)
+			int totalNumOfSteps = 0;
+			foreach (IScriptItem scriptItem in scriptItemsList)
 			{
                 if (scriptItem is ISubScript subScript)
                 {
-					SetDataToScriptTool(subScript.Script.ScriptItemsList);
+					int repeats = (subScript as ScriptStepSubScript).Repeats;
+					int subScript_totalNumOfSteps = 
+						SetDataToScriptTool(subScript.Script.ScriptItemsList);
+					totalNumOfSteps += subScript_totalNumOfSteps * repeats;
+					totalNumOfSteps += repeats;
 					continue;
 				}
 
-				_totalNumOfSteps++;
+				totalNumOfSteps++;
 
 				if (scriptItem is ScriptStepEOLSendSN sn)
 				{
@@ -605,6 +623,8 @@ namespace EOL.ViewModels
 					SetFlashData(flash);
 				}
 			}
+
+			return totalNumOfSteps;
 		}
 
 		private void SetFlashData(ScriptStepEOLFlash flash)
@@ -776,6 +796,10 @@ namespace EOL.ViewModels
 			if (_adminView == null || _adminView.IsVisible == false)
 			{
 				_adminView = new AdminView() { DataContext = _adminVM };
+
+				_adminView.grdLoggerService.Children.Add(_richTextBox);
+				Grid.SetRow(_richTextBox, 2);
+
 				_adminView.Show();
 			}
 

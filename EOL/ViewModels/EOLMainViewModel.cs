@@ -19,7 +19,8 @@ using System.Windows;
 using EOL.Views;
 using EOL.Services;
 using DeviceHandler.Views;
-using Syncfusion.DocIO.DLS;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace EOL.ViewModels
 {
@@ -71,6 +72,8 @@ namespace EOL.ViewModels
 
 		private CommunicationWindowView _communicationWindowView;
 		private SettingsView _settingsView;
+
+		private RichTextBox _richTextBox;
 
 		private string AdminPassword = "2512";
 
@@ -134,7 +137,11 @@ namespace EOL.ViewModels
 			try
 			{
 
-				LoggerService.Init("EOL.log", Serilog.Events.LogEventLevel.Information);
+				_richTextBox = new RichTextBox();
+				_richTextBox.Background = Brushes.Black;
+				_richTextBox.TextChanged += _richTextBox_TextChanged;
+
+				LoggerService.Init("EOL.log", Serilog.Events.LogEventLevel.Information, _richTextBox);
 				LoggerService.Inforamtion(this, "-------------------------------------- EOL ---------------------");
 
 
@@ -200,7 +207,10 @@ namespace EOL.ViewModels
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
-					_eolSettings.UserDefaultSettings, SettingsVM, _runData);
+					_eolSettings.UserDefaultSettings, 
+					SettingsVM, 
+					_runData,
+					_richTextBox);
 
 				ChangeDarkLight();
 
@@ -221,6 +231,11 @@ namespace EOL.ViewModels
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
+		}
+
+		private void _richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			_richTextBox.ScrollToEnd();
 		}
 
 		private void InitSetupView()
