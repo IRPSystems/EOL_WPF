@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace EOL.ViewModels
@@ -105,6 +106,8 @@ namespace EOL.ViewModels
 		private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
+		private RichTextBox _richTextBox;
+
 		#endregion Fields
 
 		#region Constructor
@@ -113,12 +116,15 @@ namespace EOL.ViewModels
 			DevicesContainer devicesContainer,
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
-			SettingsViewModel settingsViewModel)
+			SettingsViewModel settingsViewModel,
+			RichTextBox richTextBox)
 		{
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
 			_runData = runData;
             _userDefaultSettings = userDefaultSettings;
+			_richTextBox = richTextBox;
+
             try
             {
 				//PackageConfig
@@ -776,6 +782,10 @@ namespace EOL.ViewModels
 			if (_adminView == null || _adminView.IsVisible == false)
 			{
 				_adminView = new AdminView() { DataContext = _adminVM };
+
+				_adminView.grdLoggerService.Children.Add(_richTextBox);
+				Grid.SetRow(_richTextBox, 2);
+
 				_adminView.Show();
 			}
 
