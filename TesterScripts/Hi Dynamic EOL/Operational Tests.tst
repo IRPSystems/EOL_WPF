@@ -59,9 +59,50 @@
         "SelectedScriptName": "Max. Voltage Operation",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 4",
+        "Interval": 5,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 5",
+        "ParentScriptName": "Operational Tests",
+        "ContinueUntilType": 0,
+        "Repeats": 1,
+        "Timeout": 0,
+        "TimeoutUnite": 0,
+        "IsStopOnFail": true,
+        "IsStopOnPass": false,
+        "IsInfinity": false,
+        "SelectedScriptName": "Peak Operation",
+        "UserTitle": null,
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

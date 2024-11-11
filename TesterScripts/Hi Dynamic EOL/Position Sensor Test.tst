@@ -15,7 +15,7 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "Config Manual FOC",
+        "SelectedScriptName": "Speed Estimation",
         "UserTitle": "Configure FOC ",
         "IsPass": false,
         "PassNextId": 2,
