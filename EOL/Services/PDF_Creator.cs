@@ -23,53 +23,64 @@ using System.Reflection;
 using System.Resources;
 using System.Windows;
 using System.Reflection.Emit;
+using Services.Services;
 
 namespace EOL.Services
 {
     public class PDF_Creator
     {
+		#region Properties and Fields
 
-        public string testOverallStatus { get; set; }
+		public string TestOverallStatus { get; set; }
 
-        private string fileName = String.Empty;
+        private string _fileName = String.Empty;
 
-        private string subFolderName = "\\PDF Reports";
+        private string _subFolderName = "\\PDF Reports";
 
-        private int countDynTable;
+        private int _countDynTable;
 
-        private int countExecTable;
+        private int _countExecTable;
 
-        List<List<string>> executiveSumTable = new List<List<string>>();
+        List<List<string>> _executiveSumTable = new List<List<string>>();
 
-        List<List<string>> dynamicDataTable = new List<List<string>>();
+        List<List<string>> _dynamicDataTable = new List<List<string>>();
 
-        public void CreatePdf(ObservableCollection<GeneratedProjectData> _generatedProjectsList, RunResult runResult, UserDefaultSettings userDefaultSettings)
+		#endregion Properties and Fields
+
+		public void CreatePdf(
+            ObservableCollection<GeneratedProjectData> _generatedProjectsList, 
+            RunResult runResult, 
+            UserDefaultSettings userDefaultSettings)
         {
             // Sample data using List<List<string>> with headers included
-            countDynTable = 0;
-            countExecTable = 0;
+            _countDynTable = 0;
+            _countExecTable = 0;
 
-            executiveSumTable.Clear();
-            dynamicDataTable.Clear();
-            //testOverallStatus = testingData.OverallTestStatus.ToString();
+            _executiveSumTable.Clear();
+            _dynamicDataTable.Clear();
+			//testOverallStatus = testingData.OverallTestStatus.ToString();
 
-            //TODO
-            string function = "Temp";
-            fileName = function + "_PDF_Report - " + runResult.SerialNumber + ".pdf";
+			#region Get file path
+			//TODO
+			string function = "Temp";
+            _fileName = function + "_PDF_Report - " + runResult.SerialNumber + ".pdf";
 
-            string reportDir = userDefaultSettings.ReportsSavingPath + subFolderName;
+            string reportDir = userDefaultSettings.ReportsSavingPath + _subFolderName;
 
             if (!Directory.Exists(reportDir))
             {
                 Directory.CreateDirectory(reportDir);
             }
 
-            string fullSavingPath = System.IO.Path.Combine(reportDir, fileName);
+            string fullSavingPath = System.IO.Path.Combine(reportDir, _fileName);
 
-            executiveSumTable.Add(ExecSumHeaderToList());
+			#endregion Get file path
 
-            dynamicDataTable.Add(DynTabHeaderToList());
+            // Get headers of tables
+			_executiveSumTable.Add(ExecSumHeaderToList());
+            _dynamicDataTable.Add(DynTabHeaderToList());
 
+            // Add steps data to the tables
             foreach (GeneratedProjectData project in _generatedProjectsList)
             {
                 foreach (GeneratedScriptData script in project.TestsList)
@@ -106,7 +117,7 @@ namespace EOL.Services
                 document.Open();
 
                 // Create a new table with the number of rows and columns
-                PdfPTable dataTableB = new PdfPTable(executiveSumTable[0].Count);
+                PdfPTable dataTableB = new PdfPTable(_executiveSumTable[0].Count);
                 dataTableB.WidthPercentage = 100;
 
                 // Add information line - Exec Summary Table Name
@@ -114,7 +125,7 @@ namespace EOL.Services
                 execSumTableName.Font.Size = 18;
                 execSumTableName.Font.SetStyle(Font.BOLD);
 
-                foreach (List<string> row in executiveSumTable)
+                foreach (List<string> row in _executiveSumTable)
                 {
                     foreach (string cellValue in row)
                     {
@@ -129,10 +140,10 @@ namespace EOL.Services
                 dynamicTableName.Font.SetStyle(Font.BOLD);
 
                 // Create a new table with the number of rows and columns
-                PdfPTable dataTableC = new PdfPTable(dynamicDataTable[0].Count);
+                PdfPTable dataTableC = new PdfPTable(_dynamicDataTable[0].Count);
                 dataTableC.WidthPercentage = 100;
 
-                foreach (List<string> row in dynamicDataTable)
+                foreach (List<string> row in _dynamicDataTable)
                 {
                     foreach (string cellValue in row)
                     {
@@ -153,11 +164,11 @@ namespace EOL.Services
                 // Close the document
                 document.Close();
 
-                Console.WriteLine("PDF created successfully.");
+                LoggerService.Inforamtion(this, "PDF created successfully.");
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.StackTrace); // Print the stack trace to identify the cause of the exception
+                LoggerService.Error(this, "Failed to write to the PDF file", "Error", ex); 
             }
         }
 
@@ -168,19 +179,18 @@ namespace EOL.Services
                 if (scriptItem is ISubScript subScript)
                 {
                     //TODO, add sub script overall result
-                    //ExecSumResultsToList(scriptItem);
                     AddTables(subScript.Script.ScriptItemsList);
-                    //continue;
                 }
+
                 if (scriptItem is ScriptStepBase test)
                 {
                     if(test.EOLReportsSelectionData.IsSaveToPdfExecTable)
                     {
-                        executiveSumTable.Add(ExecSumResultsToList(test));
+                        _executiveSumTable.Add(ExecSumResultsToList(test));
                     }
                     if (test.EOLReportsSelectionData.IsSaveToPdfDynTable)
                     {
-                        dynamicDataTable.Add(DynTabResultsToList(test));
+                        _dynamicDataTable.Add(DynTabResultsToList(test));
                     }
                 }
             }
@@ -188,7 +198,7 @@ namespace EOL.Services
 
         public List<string> ExecSumResultsToList(ScriptStepBase test)
         {
-            countExecTable++;
+            _countExecTable++;
             // Declare the list before the foreach loop
             var resultList = new List<string>();
 
@@ -209,7 +219,7 @@ namespace EOL.Services
                 // Add elements to the list inside the loop
                 resultList.AddRange(new List<string>
                 {
-                    CheckValue(countExecTable.ToString()),
+                    CheckValue(_countExecTable.ToString()),
                     CheckValue(stepSummary.StepDescription),
                     CheckValue(measuredValue),
                     CheckValue(TestStatus)
@@ -222,7 +232,7 @@ namespace EOL.Services
 
         public List<string> DynTabResultsToList(ScriptStepBase test)
         {
-            countDynTable++;
+            _countDynTable++;
             var resultList = new List<string>();
 
             foreach (EOLStepSummeryData stepSummary in test.EOLStepSummerysList)
@@ -231,7 +241,7 @@ namespace EOL.Services
 
                 resultList.AddRange(new List<string>
                 {
-                    CheckValue(countDynTable),
+                    CheckValue(_countDynTable),
                     CheckValue(stepSummary.StepDescription),
                     CheckValue(stepSummary.TestValue),
                     CheckValue(stepSummary.ComparisonValue),
