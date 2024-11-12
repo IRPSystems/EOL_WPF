@@ -13,10 +13,10 @@
 AppVersion={#MyAppVersion}
 AppName=TrueDrive Manager
 WizardStyle=modern
-DefaultDirName=C:\EOL
+DefaultDirName={autopf}\EOL
 DefaultGroupName=EOL
 SourceDir=EOL\bin\x64\Release\net6.0-windows
-OutputDir=..\..\..\..\Output
+OutputDir=..\..\..\..\..\Output
 OutputBaseFilename=EOLSetup
 
 
