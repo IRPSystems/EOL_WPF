@@ -198,7 +198,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Neutral",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -249,7 +249,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 0,
-        "ValueDropDwonIndex": 0,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -257,7 +257,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Neutral",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -371,7 +371,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 2,
-        "ValueDropDwonIndex": 1,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -442,7 +442,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -473,7 +473,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 1,
-        "ValueDropDwonIndex": 1,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -481,7 +481,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -575,7 +575,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 1,
-        "ValueDropDwonIndex": 1,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {

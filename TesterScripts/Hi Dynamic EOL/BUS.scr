@@ -96,7 +96,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -127,7 +127,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -284,7 +284,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": null,
+          "Value": 1.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -305,7 +305,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": null,
+            "Value": 1.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1061,7 +1061,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1201,7 +1201,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1317,16 +1317,16 @@
           "Status_paramter": "Rw",
           "command_to_device": "analog input current",
           "portLine": 0,
-          "shunt_resistor": 17.96,
+          "shunt_resistor": 0.0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": null,
           "IsThermistorUsed": false,
           "Name": "Analog Input Current",
           "Units": null,
-          "Value": 181.54663518112656,
+          "Value": null,
           "DeviceType": 19,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 2000
         },
         "RefSensorNumOfReadings": 10,
         "RefSensorChannel": 0,
@@ -1373,16 +1373,16 @@
           "Status_paramter": "Rw",
           "command_to_device": "analog input current",
           "portLine": 0,
-          "shunt_resistor": 17.96,
+          "shunt_resistor": 0.0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": null,
           "IsThermistorUsed": false,
           "Name": "Analog Input Current",
           "Units": null,
-          "Value": 181.54663518112656,
+          "Value": null,
           "DeviceType": 19,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 2000
         },
         "Tolerance": 2.0,
         "Comparation": 0,
@@ -1437,16 +1437,16 @@
             "Status_paramter": "Rw",
             "command_to_device": "analog input current",
             "portLine": 0,
-            "shunt_resistor": 17.96,
+            "shunt_resistor": 0.0,
             "DropDown": null,
             "ThermistorType": 0,
             "ThermistorTypeList": null,
             "IsThermistorUsed": false,
             "Name": "Analog Input Current",
             "Units": null,
-            "Value": 181.54663518112656,
+            "Value": null,
             "DeviceType": 19,
-            "CommunicationTimeout": 0
+            "CommunicationTimeout": 2000
           },
           "Ni6002_IOPort": 2,
           "Ni6002_Line": 0,
@@ -1591,7 +1591,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1731,7 +1731,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,

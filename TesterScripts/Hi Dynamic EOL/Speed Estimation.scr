@@ -6,61 +6,41 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
+        "Name": "ScriptNodeSetParameter 10",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": 0.0,
-          "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
-          "Default": "0",
-          "Cmd": "midcmdman",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              -600.0,
-              600.0
-            ]
-          },
-          "Format": null,
-          "Scale": 10.0,
-          "Note": null,
-          "Save": false,
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "SOUR:CURRENT",
+          "Max": 300,
+          "ParamType": 2,
+          "ModbusAddress": 501,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
           "DropDown": null,
-          "Name": "Manual ID Command",
+          "Name": "(PS) Current Limit",
           "Units": "A",
-          "DeviceType": 1,
+          "Value": 1.0,
+          "DeviceType": 3,
           "CommunicationTimeout": 0
         },
-        "Value": 50.0,
+        "Value": 5.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": 0.0,
-            "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
-            "Default": "0",
-            "Cmd": "midcmdman",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -600.0,
-                600.0
-              ]
-            },
-            "Format": null,
-            "Scale": 10.0,
-            "Note": null,
-            "Save": false,
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "SOUR:CURRENT",
+            "Max": 300,
+            "ParamType": 2,
+            "ModbusAddress": 501,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
             "DropDown": null,
-            "Name": "Manual ID Command",
+            "Name": "(PS) Current Limit",
             "Units": "A",
-            "DeviceType": 1,
+            "Value": 1.0,
+            "DeviceType": 3,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
@@ -78,7 +58,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Manual ID Command 0 ",
+        "UserTitle": "Set PS Current Limit To 5A",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -92,33 +72,41 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 3",
+        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Manual Electric Angle Speed Value",
-          "Default": "0",
-          "Cmd": "manangspd",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              -1000.0,
-              1000.0
-            ]
-          },
+          "Description": "Motor Control Source",
+          "Default": "VCU",
+          "Cmd": "mtrctrlsrc",
+          "Range": null,
           "Format": null,
-          "Scale": 1000.0,
+          "Scale": 1.0,
           "Note": null,
           "Save": true,
-          "DropDown": null,
-          "Name": "Manual Angle Speed Value",
-          "Units": "Hz",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "VCU",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Manual",
+                "Value": "2"
+              }
+            ]
+          },
+          "Name": "Control Source",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 33.333,
+        "Value": 2,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -127,25 +115,33 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Value",
-            "Default": "0",
-            "Cmd": "manangspd",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -1000.0,
-                1000.0
-              ]
-            },
+            "Description": "Motor Control Source",
+            "Default": "VCU",
+            "Cmd": "mtrctrlsrc",
+            "Range": null,
             "Format": null,
-            "Scale": 1000.0,
+            "Scale": 1.0,
             "Note": null,
             "Save": true,
-            "DropDown": null,
-            "Name": "Manual Angle Speed Value",
-            "Units": "Hz",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "VCU",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Manual",
+                  "Value": "2"
+                }
+              ]
+            },
+            "Name": "Control Source",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -164,11 +160,947 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Manual Angle Speed Value (500)",
+        "UserTitle": "Set Control Source Manual",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
         "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Limiters",
+          "Description": "Max Bus Current Limit Activation",
+          "Default": "ON",
+          "Cmd": "mfplamxbc",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Max Bus Current Limit Activation",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Limiters",
+            "Description": "Max Bus Current Limit Activation",
+            "Default": "ON",
+            "Cmd": "mfplamxbc",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Max Bus Current Limit Activation",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Disable Max Bus Current Limit ",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 12",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Forward",
+          "Description": "Max Speed Limit Active Flag",
+          "Default": "OFF",
+          "Cmd": "mfpla0mxs",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Max Speed Limit Active (Forward)",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Forward",
+            "Description": "Max Speed Limit Active Flag",
+            "Default": "OFF",
+            "Cmd": "mfpla0mxs",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Max Speed Limit Active (Forward)",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Max Limit Speed ON",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 19",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor State",
+          "Default": "Neutral",
+          "Cmd": "mstate",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Neutral",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Run",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Lock",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fault",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
+              }
+            ]
+          },
+          "Name": "Motor State (Operation)",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Motor State",
+            "Default": "Neutral",
+            "Cmd": "mstate",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Neutral",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Run",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Lock",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Fault",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
+                }
+              ]
+            },
+            "Name": "Motor State (Operation)",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Motor State To Run",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 18",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Drive Direction",
+          "Default": "Neutral",
+          "Cmd": "mdrvdir",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Neutral",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Reverse",
+                "Value": "-1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Forward",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Drive Direction",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Drive Direction",
+            "Default": "Neutral",
+            "Cmd": "mdrvdir",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Neutral",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Reverse",
+                  "Value": "-1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Forward",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Drive Direction",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Drive Direction To FW",
+        "IsPass": false,
+        "PassNextId": 7,
+        "FailNextId": 0,
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 21",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual FOC Control",
+          "Default": "OFF",
+          "Cmd": "mmanfoc",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Manual FOC Control",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual FOC Control",
+            "Default": "OFF",
+            "Cmd": "mmanfoc",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Manual FOC Control",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Manual FOC Off",
+        "IsPass": false,
+        "PassNextId": 8,
+        "FailNextId": 0,
+        "ID": 7,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 20",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Electric Angle Speed Flag",
+          "Default": "OFF",
+          "Cmd": "flgmanang",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Manual Angle Speed ",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Electric Angle Speed Flag",
+            "Default": "OFF",
+            "Cmd": "flgmanang",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Manual Angle Speed ",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Manual Angle Speed Off",
+        "IsPass": false,
+        "PassNextId": 9,
+        "FailNextId": 0,
+        "ID": 8,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Forward",
+          "Description": "Max Speed Limit Value",
+          "Default": "0",
+          "Cmd": "mplrs0mxs",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              10000.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Max Speed Limit Value",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 500.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Forward",
+            "Description": "Max Speed Limit Value",
+            "Default": "0",
+            "Cmd": "mplrs0mxs",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                10000.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Max Speed Limit Value",
+            "Units": "RPM",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Max Limit Speed To 500",
+        "IsPass": false,
+        "PassNextId": 10,
+        "FailNextId": 0,
+        "ID": 9,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 22",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor Control Type",
+          "Default": "Power",
+          "Cmd": "mtrctrltype",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Torque",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Speed",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Control Type",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Motor Control Type",
+            "Default": "Power",
+            "Cmd": "mtrctrltype",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Torque",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Speed",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Control Type",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Control Type Torque",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 10,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 13",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Torque Set Point",
+          "Default": "0",
+          "Cmd": "mancurrsp",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -360.0,
+              360.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 2.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Torque Set Point",
+            "Default": "0",
+            "Cmd": "mancurrsp",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -360.0,
+                360.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Torque Command To 2",
+        "IsPass": false,
+        "PassNextId": 12,
+        "FailNextId": 0,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -206,9 +1138,9 @@
         "Tolerance": 30.0,
         "UserTitle": "Converge Speed RPM Value 500",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -222,7 +1154,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 2998.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -251,14 +1183,14 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": null,
+          "Value": 2993.4280783254403,
           "DeviceType": 9,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 30000
         },
         "Tolerance": 30.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -274,7 +1206,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 2998.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -315,9 +1247,9 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": null,
+            "Value": 2993.4280783254403,
             "DeviceType": 9,
-            "CommunicationTimeout": 0
+            "CommunicationTimeout": 30000
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -331,9 +1263,9 @@
         },
         "UserTitle": "Read Speed Sensor 500 RPM",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -343,33 +1275,33 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 7",
+        "Name": "ScriptNodeSetParameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Manual Electric Angle Speed Value",
+          "Description": "Manual Torque Set Point",
           "Default": "0",
-          "Cmd": "manangspd",
+          "Cmd": "mancurrsp",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -1000.0,
-              1000.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 1000.0,
+          "Scale": 10.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
-          "Name": "Manual Angle Speed Value",
-          "Units": "Hz",
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 86.666,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -378,25 +1310,25 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Value",
+            "Description": "Manual Torque Set Point",
             "Default": "0",
-            "Cmd": "manangspd",
+            "Cmd": "mancurrsp",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -1000.0,
-                1000.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 1000.0,
+            "Scale": 10.0,
             "Note": null,
-            "Save": true,
+            "Save": false,
             "DropDown": null,
-            "Name": "Manual Angle Speed Value",
-            "Units": "Hz",
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -415,11 +1347,200 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Manual Angle Speed Value (1300)",
+        "UserTitle": "Set Torque Command To 0",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 14,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 23",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 16,
+        "FailNextId": 0,
+        "ID": 15,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 14",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Forward",
+          "Description": "Max Speed Limit Value",
+          "Default": "0",
+          "Cmd": "mplrs0mxs",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              10000.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Max Speed Limit Value",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1300.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Forward",
+            "Description": "Max Speed Limit Value",
+            "Default": "0",
+            "Cmd": "mplrs0mxs",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                10000.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Max Speed Limit Value",
+            "Units": "RPM",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Max Limit Speed To 1300",
+        "IsPass": false,
+        "PassNextId": 17,
+        "FailNextId": 0,
+        "ID": 16,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 24",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Torque Set Point",
+          "Default": "0",
+          "Cmd": "mancurrsp",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -360.0,
+              360.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 2.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Torque Set Point",
+            "Default": "0",
+            "Cmd": "mancurrsp",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -360.0,
+                360.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Torque Command To 2",
+        "IsPass": false,
+        "PassNextId": 18,
+        "FailNextId": 0,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -454,12 +1575,12 @@
         "TimeoutTimeUnite": 2,
         "Timeout": 30,
         "TargetValue": "1300",
-        "Tolerance": 30.0,
+        "Tolerance": 50.0,
         "UserTitle": "Converge Speed RPM Value 1300",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -473,7 +1594,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 2998.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -502,14 +1623,14 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": null,
+          "Value": 2993.4280783254403,
           "DeviceType": 9,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 30000
         },
         "Tolerance": 30.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -525,7 +1646,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 2998.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -566,9 +1687,9 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": null,
+            "Value": 2993.4280783254403,
             "DeviceType": 9,
-            "CommunicationTimeout": 0
+            "CommunicationTimeout": 30000
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -582,9 +1703,449 @@
         },
         "UserTitle": "Read Speed Sensor 1300 RPM",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 20,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 19,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 25",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Torque Set Point",
+          "Default": "0",
+          "Cmd": "mancurrsp",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -360.0,
+              360.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Torque Set Point",
+            "Default": "0",
+            "Cmd": "mancurrsp",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -360.0,
+                360.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Torque Command To 0",
+        "IsPass": false,
+        "PassNextId": 21,
+        "FailNextId": 0,
+        "ID": 20,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 26",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 22,
+        "FailNextId": 0,
+        "ID": 21,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 15",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Forward",
+          "Description": "Max Speed Limit Value",
+          "Default": "0",
+          "Cmd": "mplrs0mxs",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              10000.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Max Speed Limit Value",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 3000.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Forward",
+            "Description": "Max Speed Limit Value",
+            "Default": "0",
+            "Cmd": "mplrs0mxs",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                10000.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Max Speed Limit Value",
+            "Units": "RPM",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Max Limit Speed To 3000",
+        "IsPass": false,
+        "PassNextId": 23,
+        "FailNextId": 0,
+        "ID": 22,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 27",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Torque Set Point",
+          "Default": "0",
+          "Cmd": "mancurrsp",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -360.0,
+              360.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 2.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Torque Set Point",
+            "Default": "0",
+            "Cmd": "mancurrsp",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -360.0,
+                360.0
+              ]
+            },
+            "Format": null,
+            "Scale": 10.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Torque Command To 2",
+        "IsPass": false,
+        "PassNextId": 24,
+        "FailNextId": 0,
+        "ID": 23,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
+        "Name": "ScriptNodeConverge 16",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Speed - RPM",
+          "Default": "0",
+          "Cmd": "mspdrpm",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Speed - RPM",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "ConvergeTimeUnite": 2,
+        "ConvergeTime": 5,
+        "TimeoutTimeUnite": 2,
+        "Timeout": 30,
+        "TargetValue": "3000",
+        "Tolerance": 30.0,
+        "UserTitle": "Converge Speed RPM Value 3000",
+        "IsPass": false,
+        "PassNextId": 25,
+        "FailNextId": 0,
+        "ID": 24,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 17",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": 2998.0,
+          "GroupName": "Monitor",
+          "Description": "Speed - RPM",
+          "Default": "0",
+          "Cmd": "mspdrpm",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "Speed - RPM",
+          "Units": "RPM",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": {
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "Io_port": 0,
+          "Status_paramter": "Rw",
+          "command_to_device": "digital counter",
+          "portLine": 0,
+          "shunt_resistor": 0.0,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Digital Counter",
+          "Units": null,
+          "Value": 2993.4280783254403,
+          "DeviceType": 9,
+          "CommunicationTimeout": 30000
+        },
+        "Tolerance": 30.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:25ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": 2998.0,
+            "GroupName": "Monitor",
+            "Description": "Speed - RPM",
+            "Default": "0",
+            "Cmd": "mspdrpm",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "Speed - RPM",
+            "Units": "RPM",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "Io_port": 0,
+            "Status_paramter": "Rw",
+            "command_to_device": "digital counter",
+            "portLine": 0,
+            "shunt_resistor": 0.0,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Digital Counter",
+            "Units": null,
+            "Value": 2993.4280783254403,
+            "DeviceType": 9,
+            "CommunicationTimeout": 30000
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "Read Speed Sensor 3000 RPM",
+        "IsPass": false,
+        "PassNextId": 26,
+        "FailNextId": 0,
+        "ID": 25,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -598,7 +2159,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -629,7 +2190,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -668,9 +2229,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual Angle Speed Value 0",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 27,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 26,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -684,16 +2245,16 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
+          "Description": "Manual Torque Set Point",
           "Default": "0",
-          "Cmd": "midcmdman",
+          "Cmd": "mancurrsp",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -600.0,
-              600.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
@@ -701,8 +2262,8 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual ID Command",
-          "Units": "A",
+          "Name": "Manual Torque Set Point",
+          "Units": "Nm",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -715,16 +2276,16 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
+            "Description": "Manual Torque Set Point",
             "Default": "0",
-            "Cmd": "midcmdman",
+            "Cmd": "mancurrsp",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -600.0,
-                600.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
@@ -732,8 +2293,8 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual ID Command",
-            "Units": "A",
+            "Name": "Manual Torque Set Point",
+            "Units": "Nm",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -752,11 +2313,153 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Manual ID Command 0",
+        "UserTitle": "Set Torque Command to 0Nm",
+        "IsPass": false,
+        "PassNextId": 29,
+        "FailNextId": 0,
+        "ID": 27,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 29",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor State",
+          "Default": "Neutral",
+          "Cmd": "mstate",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Neutral",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Run",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Lock",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fault",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
+              }
+            ]
+          },
+          "Name": "Motor State (Operation)",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Motor State",
+            "Default": "Neutral",
+            "Cmd": "mstate",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Neutral",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Run",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Lock",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Fault",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
+                }
+              ]
+            },
+            "Name": "Motor State (Operation)",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Motor State to NEUTRAL",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 29,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
