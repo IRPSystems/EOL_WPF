@@ -3,6 +3,7 @@ using EOL.Models.Config;
 using EOL.ViewModels;
 using EOL.Views;
 using Newtonsoft.Json;
+using Services.Services;
 using System;
 using System.Configuration;
 using System.IO;
@@ -299,40 +300,47 @@ namespace EOL.Services
 
         public void SaveConfig(UserDefaultSettings userDefaultSettings)
         {
-            ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
+            try
             {
-                ExeConfigFilename = ConfigFilePath
-            };
-
-            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
-
-            var appSettings = config.AppSettings.Settings;
-
-            foreach (PropertyInfo property in typeof(UserDefaultSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance))
-            {
-                string key = property.Name;
-                object value = property.GetValue(userDefaultSettings);
-                if (value != null)
+                ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
                 {
-                    string valueString = Convert.ToString(value);
-                    if (appSettings[key] != null)
+                    ExeConfigFilename = ConfigFilePath
+                };
+
+                Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+
+                var appSettings = config.AppSettings.Settings;
+
+                foreach (PropertyInfo property in typeof(UserDefaultSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance))
+                {
+                    string key = property.Name;
+                    object value = property.GetValue(userDefaultSettings);
+                    if (value != null)
                     {
-                        appSettings[key].Value = valueString;
-                    }
-                    else
-                    {
-                        appSettings.Add(key, valueString);
+                        string valueString = Convert.ToString(value);
+                        if (appSettings[key] != null)
+                        {
+                            appSettings[key].Value = valueString;
+                        }
+                        else
+                        {
+                            appSettings.Add(key, valueString);
+                        }
                     }
                 }
-            }
 
-            if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
+                if (!string.IsNullOrEmpty(userDefaultSettings.ReportsSavingPath))
+                {
+                    userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
+                }
+
+                config.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
+            }
+            catch(Exception ex) 
             {
-                userDefaultSettings.TechLogDirectory = userDefaultSettings.ReportsSavingPath + TechLogDirectory;
+                LoggerService.Error(this, "Filed to save the configuration", "Error", ex);
             }
-
-            config.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
         }
     }
 }
