@@ -14,11 +14,18 @@ namespace EOL.Services
 {
     public class UserConfigManager
     {
-        private readonly string ConfigFilePath = Path.Combine(Environment.CurrentDirectory, "user.config");
+        private readonly string ConfigFilePath;
         private readonly string TechLogDirectory = "\\Technician Logs";
         private string ErrorMsg = "Missing file in subfolders:\r\n";
 
-        public void ReadConfig(EOLSettings eolSettings)
+        public UserConfigManager()
+        {
+			string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            path = Path.Combine(path, "EOL");
+			ConfigFilePath = Path.Combine(path, "user.config");
+		}
+
+		public void ReadConfig(EOLSettings eolSettings)
         {
             if (File.Exists(ConfigFilePath))
             {
