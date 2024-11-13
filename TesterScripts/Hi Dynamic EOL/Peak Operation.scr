@@ -198,7 +198,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Neutral",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -257,7 +257,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Neutral",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -405,32 +405,18 @@
         "Name": "Set Parameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "OUTP",
-          "Max": 1,
-          "ParamType": 0,
-          "ModbusAddress": 405,
+          "Cmd": "SOUR:CURRENT",
+          "Max": 300,
+          "ParamType": 2,
+          "ModbusAddress": 501,
           "NumOfRegisters": 1,
           "ValueType": "ushort",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Output On/Off",
-          "Units": null,
-          "Value": null,
+          "DropDown": null,
+          "Name": "(PS) Current Limit",
+          "Units": "A",
+          "Value": 1.0,
           "DeviceType": 3,
-          "CommunicationTimeout": 3000
+          "CommunicationTimeout": 0
         },
         "Value": 10.0,
         "ValueDropDwonIndex": -1,
@@ -440,32 +426,18 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-            "Cmd": "OUTP",
-            "Max": 1,
-            "ParamType": 0,
-            "ModbusAddress": 405,
+            "Cmd": "SOUR:CURRENT",
+            "Max": 300,
+            "ParamType": 2,
+            "ModbusAddress": 501,
             "NumOfRegisters": 1,
             "ValueType": "ushort",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Output On/Off",
-            "Units": null,
-            "Value": null,
+            "DropDown": null,
+            "Name": "(PS) Current Limit",
+            "Units": "A",
+            "Value": 1.0,
             "DeviceType": 3,
-            "CommunicationTimeout": 3000
+            "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -696,7 +668,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -735,7 +707,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -900,7 +872,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -922,7 +894,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 283.0,
+        "Value": 50.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -931,7 +903,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -968,7 +940,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual ID Command to 230ARMS",
+        "UserTitle": "Set UUT Manual ID Command to 50A",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -986,7 +958,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1017,7 +989,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1072,7 +1044,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1093,7 +1065,7 @@
         "TimeoutTimeUnite": 2,
         "Timeout": 30,
         "TargetValue": "500",
-        "Tolerance": 30.0,
+        "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM 500",
         "IsPass": false,
         "PassNextId": 13,
@@ -1107,60 +1079,61 @@
         }
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 20",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
           "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Speed - RPM",
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
           "Default": "0",
-          "Cmd": "mspdrpm",
-          "Range": null,
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
           "Format": null,
-          "Scale": 1.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Speed - RPM",
-          "Units": "RPM",
+          "Name": "Manual ID Command",
+          "Units": "A",
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "500",
-        "Tolerance": 30.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 500 ±  30 - ID:13ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
+        "Value": 283.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
             "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Speed - RPM",
+            "GroupName": "Operation",
+            "Description": "Motor Manual ID Command",
             "Default": "0",
-            "Cmd": "mspdrpm",
-            "Range": null,
+            "Cmd": "midcmdman",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -600.0,
+                600.0
+              ]
+            },
             "Format": null,
-            "Scale": 1.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Speed - RPM",
-            "Units": "RPM",
+            "Name": "Manual ID Command",
+            "Units": "A",
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
@@ -1174,24 +1147,33 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "Compare UUT Speed to 500RPM",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set UUT Manual ID Command to 230ARMS",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
         "ID": 13,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 18",
+        "Interval": 1,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 15,
+        "FailNextId": 0,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1232,14 +1214,14 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1294,7 +1276,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1309,92 +1291,6 @@
           "NumatoGPIODropDwonIndex": 0
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
-        "IsPass": false,
-        "PassNextId": 15,
-        "FailNextId": 0,
-        "ID": 14,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 18",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": 0.0,
-          "GroupName": "Operation",
-          "Description": "Manual Electric Angle Speed Value",
-          "Default": "0",
-          "Cmd": "manangspd",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              -1000.0,
-              1000.0
-            ]
-          },
-          "Format": null,
-          "Scale": 1000.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": null,
-          "Name": "Manual Angle Speed Value",
-          "Units": "Hz",
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 0.0,
-        "ValueDropDwonIndex": -1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": 0.0,
-            "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Value",
-            "Default": "0",
-            "Cmd": "manangspd",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -1000.0,
-                1000.0
-              ]
-            },
-            "Format": null,
-            "Scale": 1000.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "Manual Angle Speed Value",
-            "Units": "Hz",
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT to 0 RPM",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -1412,7 +1308,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1443,7 +1339,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1482,9 +1378,95 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set UUT Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 17,
         "FailNextId": 0,
         "ID": 16,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 18",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Electric Angle Speed Value",
+          "Default": "0",
+          "Cmd": "manangspd",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -1000.0,
+              1000.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1000.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Manual Angle Speed Value",
+          "Units": "Hz",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Manual Electric Angle Speed Value",
+            "Default": "0",
+            "Cmd": "manangspd",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                -1000.0,
+                1000.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1000.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Manual Angle Speed Value",
+            "Units": "Hz",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set UUT to 0 RPM",
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

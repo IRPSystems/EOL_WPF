@@ -46,7 +46,7 @@
         "CompareValue": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 333.3021978021978,
           "GroupName": "Monitor",
           "Description": "Electric Angle",
           "Default": "0",
@@ -112,7 +112,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 333.3021978021978,
             "GroupName": "Monitor",
             "Description": "Electric Angle",
             "Default": "0",
