@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
 using ScriptHandler.Models;
+using Services.Services;
 using System.Windows.Controls;
 
 namespace EOL.ViewModels
@@ -33,7 +34,8 @@ namespace EOL.ViewModels
 			UserDefaultSettings userDefaultSettings,
 			SettingsViewModel viewModel, 
 			RunData runData,
-			RichTextBox richTextBox)
+			RichTextBox richTextBox,
+			LogLineListService logLineList)
 		{
             RunData = runData;
             Run = new RunViewModel( 
@@ -41,7 +43,7 @@ namespace EOL.ViewModels
                 RunData,
 				userDefaultSettings, 
 				viewModel,
-				richTextBox);
+				logLineList);
             RunData.RunScript = Run.RunScript;
 		}
 

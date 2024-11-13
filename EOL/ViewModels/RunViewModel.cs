@@ -106,8 +106,6 @@ namespace EOL.ViewModels
 		private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
-		private RichTextBox _richTextBox;
-
 		#endregion Fields
 
 		#region Constructor
@@ -117,13 +115,12 @@ namespace EOL.ViewModels
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
 			SettingsViewModel settingsViewModel,
-			RichTextBox richTextBox)
+			LogLineListService logLineList)
 		{
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
 			_runData = runData;
             _userDefaultSettings = userDefaultSettings;
-			_richTextBox = richTextBox;
 
             try
             {
@@ -158,7 +155,7 @@ namespace EOL.ViewModels
 				};
 
                 _stopScriptStep = new StopScriptStepService();
-				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null);
+				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null, logLineList);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
 				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
@@ -796,9 +793,6 @@ namespace EOL.ViewModels
 			if (_adminView == null || _adminView.IsVisible == false)
 			{
 				_adminView = new AdminView() { DataContext = _adminVM };
-
-				_adminView.grdLoggerService.Children.Add(_richTextBox);
-				Grid.SetRow(_richTextBox, 2);
 
 				_adminView.Show();
 			}

@@ -11,12 +11,12 @@ namespace EOL.ViewModels
 	public class AdminViewModel: ObservableObject
 	{
 		public ScriptDiagramViewModel ScriptDiagram { get; set; }
-		public TestStudioLoggerService MainScriptLogger { get; set; }
+		public ScriptLoggerService MainScriptLogger { get; set; }
 		public RunExplorerViewModel RunExplorer { get; set; }
 
 		public AdminViewModel(
 			ScriptDiagramViewModel scriptDiagram,
-			TestStudioLoggerService mainScriptLogger,
+			ScriptLoggerService mainScriptLogger,
 			ObservableCollection<GeneratedProjectData> generatedProjectsList) 
 		{
 			ScriptDiagram = scriptDiagram;

@@ -77,12 +77,15 @@ namespace EOL.ViewModels
 
 		private string AdminPassword = "2512";
 
+		private LogLineListService _logLineList;
+
 		#endregion Fields
 
 		#region Constructor
 
 		public EOLMainViewModel()
 		{
+			_logLineList = new LogLineListService();
 
 			_userConfigManager = new UserConfigManager();
 
@@ -210,7 +213,8 @@ namespace EOL.ViewModels
 					_eolSettings.UserDefaultSettings, 
 					SettingsVM, 
 					_runData,
-					_richTextBox);
+					_richTextBox,
+					_logLineList);
 
 				ChangeDarkLight();
 
@@ -330,7 +334,7 @@ namespace EOL.ViewModels
 			{
 				DeviceFullData deviceFullData = DeviceFullData.Factory(device);
 
-				deviceFullData.Init("EOL");
+				deviceFullData.Init("EOL", _logLineList);
 
 				DevicesContainter.DevicesFullDataList.Add(deviceFullData);
 				DevicesContainter.DevicesList.Add(device as DeviceData);

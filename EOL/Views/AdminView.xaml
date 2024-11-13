@@ -21,8 +21,6 @@
             <ColumnDefinition />
             <ColumnDefinition Width="10"/>
             <ColumnDefinition />
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
@@ -61,7 +59,7 @@
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
             
-            <script_runner_views:LoggerView Grid.Row="2" 
+            <script_runner_views:ScriptLoggerView Grid.Row="2" 
                                         DataContext="{Binding MainScriptLogger}"/>
         </Grid>
 
@@ -85,26 +83,6 @@
             <ContentControl Grid.Row="2" 
                             Content="{Binding ScriptDiagram}" 
                             MinWidth="500"/>
-        </Grid>
-
-        <GridSplitter Grid.Column="5" Width="10" />
-
-        <Grid Grid.Column="6" Name="grdLoggerService">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Border Grid.Row="0" Background="{StaticResource MahApps.Brushes.Accent2}">
-                <TextBlock Text="Logger Service" 
-                           FontSize="16"
-                           Foreground="White"
-                           FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Border>
-
-            <!--<RichTextBox Grid.Row="2" Name="richTextBox" />-->
         </Grid>
 
     </Grid>

@@ -24,6 +24,9 @@ namespace EOL.Services
 
         public void WriteTestResult(RunResult testResult)
         {
+            if (string.IsNullOrEmpty(_csvFilePath))
+                return;
+
             // Use reflection to get properties
             var properties = typeof(RunResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                                                .Where(p => p.PropertyType == typeof(string))
