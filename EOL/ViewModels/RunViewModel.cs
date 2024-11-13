@@ -142,17 +142,21 @@ namespace EOL.ViewModels
 				TerminalTextsList = new ObservableCollection<string>();
 				RunState = RunStateEnum.None;
 
-				DeviceFullData mcuDeviceFullData = _devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.MCU];
-				_stepSetParameter = new ScriptStepSetParameter()
+				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(Entities.Enums.DeviceTypesEnum.MCU))
 				{
-					Parameter = new MCU_ParamData()
+					DeviceFullData mcuDeviceFullData = 
+						_devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.MCU];
+					_stepSetParameter = new ScriptStepSetParameter()
 					{
-						Name = "Pass/Fail indication",
-						Cmd = "eolpassflag"
-					},
+						Parameter = new MCU_ParamData()
+						{
+							Name = "Pass/Fail indication",
+							Cmd = "eolpassflag"
+						},
 
-					Communicator = mcuDeviceFullData.DeviceCommunicator,
-				};
+						Communicator = mcuDeviceFullData.DeviceCommunicator,
+					};
+				}
 
                 _stopScriptStep = new StopScriptStepService();
 				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null, logLineList);
