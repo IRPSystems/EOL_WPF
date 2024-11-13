@@ -22,6 +22,7 @@ using DeviceHandler.Views;
 using System.Windows.Controls;
 using System.Windows.Media;
 using DeviceCommunicators.MCU;
+using DeviceCommunicators.PowerSupplayEA;
 
 namespace EOL.ViewModels
 {
@@ -390,6 +391,11 @@ namespace EOL.ViewModels
 				DeviceFullData deviceFullData = DeviceFullData.Factory(device);
 
 				deviceFullData.Init("EOL", _logLineList);
+
+				if(deviceFullData.Device.DeviceType == DeviceTypesEnum.PowerSupplyEA)
+				{
+					(deviceFullData.DeviceCommunicator as PowerSupplayEA_Communicator).SetIsUseRampForOnOff(false);
+				}
 
 				DevicesContainter.DevicesFullDataList.Add(deviceFullData);
 				DevicesContainter.DevicesList.Add(device as DeviceData);
