@@ -106,6 +106,9 @@ namespace EOL.ViewModels
 		private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
+		private GeneratedProjectData _projectMain;
+		private GeneratedProjectData _projectSub;
+
 		#endregion Fields
 
 		#region Constructor
@@ -266,29 +269,55 @@ namespace EOL.ViewModels
 
         private void LoadMainScriptFromPath()
         {
-			if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
-			{
+			if (string.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
 				return;
-            }
-            LoadProject(_userDefaultSettings.DefaultMainSeqConfigFile);
-			//_runData.RunScript.ScriptName = Path.GetFileName(_userDefaultSettings.DefaultMainSeqConfigFile);
-        }
+
+			_generatedProjectsList.Remove(_projectMain);
+
+			GeneratedProjectData project = _openProject.Open(
+				_userDefaultSettings.DefaultMainSeqConfigFile,
+				_devicesContainer,
+				_flashingHandler,
+				_stopScriptStep);
+			if (project == null ||
+				project.TestsList == null || project.TestsList.Count == 0)
+			{
+				LoggerService.Error(this, "Failed to open the Main script", "Error");
+				return;
+			}
+
+			_projectMain = project;
+			_generatedProjectsList.Add(project);
+		}
 
         private void LoadSubScriptFromPath()
         {
-            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultSubScriptFile))
-            {
+            if (string.IsNullOrEmpty(_userDefaultSettings.DefaultSubScriptFile))
                 return;
-            }
-            LoadProject(_userDefaultSettings.DefaultSubScriptFile);
-        }
+
+			_generatedProjectsList.Remove(_projectSub);
+
+			GeneratedProjectData project = _openProject.Open(
+				_userDefaultSettings.DefaultMainSeqConfigFile,
+				_devicesContainer,
+				_flashingHandler,
+				_stopScriptStep);
+			if (project == null ||
+				project.TestsList == null || project.TestsList.Count == 0)
+			{
+				LoggerService.Error(this, "Failed to open the Sub script", "Error");
+				return;
+			}
+
+			_projectSub = project;
+			_generatedProjectsList.Add(project);
+		}
 
         private void LoadMonitorFromPath()
 		{
-            if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMonitorLogScript))
-            {
+            if (string.IsNullOrEmpty(_userDefaultSettings.DefaultMonitorLogScript))
                 return;
-            }
+            
             string jsonString = System.IO.File.ReadAllText(_userDefaultSettings.DefaultMonitorLogScript);
 
             JsonSerializerSettings settings = new JsonSerializerSettings();
@@ -575,22 +604,23 @@ namespace EOL.ViewModels
 
         #region Load project
 
-        private void LoadProject(string scriptPath)
-		{
-			GeneratedProjectData project = _openProject.Open(
-				scriptPath,
-				_devicesContainer,
-                _flashingHandler,
-				_stopScriptStep);
-			if (project == null ||
-				project.TestsList == null || project.TestsList.Count == 0)
-			{
-				LoggerService.Error(this, "Failed to open the script", "Error");
-				return;
-			}
+  //      private void LoadProject(string scriptPath, out GeneratedProjectData project)
+		//{
 
-			_generatedProjectsList.Add(project);
-		}
+		//	GeneratedProjectData tempProject = _openProject.Open(
+		//		scriptPath,
+		//		_devicesContainer,
+  //              _flashingHandler,
+		//		_stopScriptStep);
+		//	if (project == null ||
+		//		project.TestsList == null || project.TestsList.Count == 0)
+		//	{
+		//		LoggerService.Error(this, "Failed to open the script", "Error");
+		//		return;
+		//	}
+
+		//	_generatedProjectsList.Add(project);
+		//}
 
 		private int SetDataToScriptTool(
 			ObservableCollection<IScriptItem> scriptItemsList)
