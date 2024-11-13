@@ -25,9 +25,11 @@ namespace EOL.Services
 			ConfigFilePath = Path.Combine(path, "user.config");
 		}
 
-		public void ReadConfig(EOLSettings eolSettings)
+		public bool? ReadConfig(EOLSettings eolSettings)
         {
-            if (File.Exists(ConfigFilePath))
+			bool? result = null;
+
+			if (File.Exists(ConfigFilePath))
             {
                 ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap
                 {
@@ -66,33 +68,39 @@ namespace EOL.Services
 
                 if (string.IsNullOrEmpty(eolSettings.UserDefaultSettings.AutoConfigPref))
                 {
-                    AutoConfigProcedure(eolSettings.UserDefaultSettings);
+                    result = AutoConfigProcedure(eolSettings.UserDefaultSettings);
                 }
             }
             else
             {
-                AutoConfigProcedure(eolSettings.UserDefaultSettings);
+                result = AutoConfigProcedure(eolSettings.UserDefaultSettings);
             }
+
+            return result;
         }
 
-        private void AutoConfigProcedure(UserDefaultSettings userDefaultSettings)
+        private bool? AutoConfigProcedure(UserDefaultSettings userDefaultSettings)
         {
-            RunAutoConfigUI(userDefaultSettings);
+			bool? result = RunAutoConfigUI(userDefaultSettings);
             if (!string.IsNullOrEmpty(userDefaultSettings.AutoConfigPref))
             {
                 TryAutoPackageConfig(userDefaultSettings);
             }
+
+            return result;
         }
 
-        private void RunAutoConfigUI(UserDefaultSettings userDefaultSettings)
+        private bool? RunAutoConfigUI(UserDefaultSettings userDefaultSettings)
         {
             ConfigPrefWinddowVIew configPrefWinddowVIew = new ConfigPrefWinddowVIew()
             {
                 DataContext = new ConfigPrefVIewModel(userDefaultSettings),
             };
 
-			configPrefWinddowVIew.ShowDialog();
+			bool? result = configPrefWinddowVIew.ShowDialog();
 			SaveConfig(userDefaultSettings);
+
+            return result;
 		}
 
         private void TryAutoPackageConfig(UserDefaultSettings userDefaultSettings)

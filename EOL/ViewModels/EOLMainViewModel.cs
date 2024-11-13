@@ -21,6 +21,7 @@ using EOL.Services;
 using DeviceHandler.Views;
 using System.Windows.Controls;
 using System.Windows.Media;
+using DeviceCommunicators.MCU;
 
 namespace EOL.ViewModels
 {
@@ -79,6 +80,8 @@ namespace EOL.ViewModels
 
 		private LogLineListService _logLineList;
 
+		private bool? _isConfigSelectedByUser;
+
 		#endregion Fields
 
 		#region Constructor
@@ -93,7 +96,7 @@ namespace EOL.ViewModels
 
 			_runData = new RunData();
 
-			_userConfigManager.ReadConfig(_eolSettings);
+			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
 			LoadConfigToUI();
 
@@ -159,8 +162,11 @@ namespace EOL.ViewModels
 					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
 				InitSetupView();
 
-				if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
-					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
+				MergeATEParamsToMCU();
+
+
+
+				if (_isConfigSelectedByUser == null)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);
@@ -171,6 +177,11 @@ namespace EOL.ViewModels
 						Application.Current.Shutdown();
 						return;
 					}
+				}
+				else if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
+				{
+
 				}
 
 				DevicesContainter = new DevicesContainer();
@@ -234,6 +245,33 @@ namespace EOL.ViewModels
 			catch (Exception ex)
 			{
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
+			}
+		}
+
+		private void MergeATEParamsToMCU()
+		{
+			// Read the ATE json
+			ObservableCollection<DeviceData> deviceList_ATE = new ObservableCollection<DeviceData>();
+			_readDevicesFile.ReadFromATEJson(@"Data\Device Communications\ATE.json", deviceList_ATE);
+			if (deviceList_ATE == null || deviceList_ATE.Count == 0)
+				return;
+
+			MCU_DeviceData ateDevice = deviceList_ATE[0] as MCU_DeviceData;
+			if (ateDevice == null)
+				return;
+
+			MCU_DeviceData mcuDevice =
+				_setupSelectionVM.DevicesSourceList_Full.ToList().Find((d) => d.DeviceType == DeviceTypesEnum.MCU) as MCU_DeviceData;
+			if (mcuDevice == null) 
+				return;
+
+			mcuDevice.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
+			
+			foreach (var param in ateDevice.MCU_FullList)
+			{
+				param.DeviceType = mcuDevice.DeviceType;
+				param.Device = mcuDevice;
+				mcuDevice.MCU_FullList.Add(param);
 			}
 		}
 
