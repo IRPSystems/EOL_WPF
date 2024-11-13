@@ -206,6 +206,7 @@ namespace EOL.Services
 						userDefaultSettings.NI_6002_2 = config.DevicesList.NI_6002_2;
 						userDefaultSettings.Printer_TSC = config.DevicesList.Printer_TSC;
 						userDefaultSettings.NumatoGPIO = config.DevicesList.NumatoGPIO;
+						userDefaultSettings.PowerSupplyEA = config.DevicesList.PowerSupplyEA;
 					}
 
 				}

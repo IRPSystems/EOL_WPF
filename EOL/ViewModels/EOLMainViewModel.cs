@@ -259,7 +259,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.NI_6002 &&
 					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
 					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
-					device.DeviceType != DeviceTypesEnum.NumatoGPIO)
+					device.DeviceType != DeviceTypesEnum.NumatoGPIO &&
+					device.DeviceType != DeviceTypesEnum.PowerSupplyEA)
 				{
 					devicesToRemoveList.Add(device);
 					continue;
@@ -278,6 +279,8 @@ namespace EOL.ViewModels
 				else if (device.DeviceType == DeviceTypesEnum.Printer_TSC && _eolSettings.UserDefaultSettings.Printer_TSC == false)
 					devicesToRemoveList.Add(device);
 				else if (device.DeviceType == DeviceTypesEnum.NumatoGPIO && _eolSettings.UserDefaultSettings.NumatoGPIO == false)
+					devicesToRemoveList.Add(device);
+				else if (device.DeviceType == DeviceTypesEnum.PowerSupplyEA && _eolSettings.UserDefaultSettings.PowerSupplyEA == false)
 					devicesToRemoveList.Add(device);
 			}
 

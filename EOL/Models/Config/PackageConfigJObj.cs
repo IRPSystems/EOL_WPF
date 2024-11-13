@@ -40,8 +40,9 @@ namespace EOL.Models.Config
         public bool NI_6002_2 { get; set; }
         public bool Printer_TSC { get; set; }
         public bool NumatoGPIO { get; set; }
+		public bool PowerSupplyEA { get; set; }
 
-        public DevicesList()
+		public DevicesList()
         {
             MCU = true;
 			MCU_B2B = true;
@@ -50,6 +51,7 @@ namespace EOL.Models.Config
 			NI_6002_2 = true;
 			Printer_TSC = true;
 			NumatoGPIO = true;
+			PowerSupplyEA = true;
 
 		}
     }

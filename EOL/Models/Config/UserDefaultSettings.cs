@@ -54,6 +54,7 @@ namespace EOL.Models
 		public bool NI_6002_2 { get; set; }
 		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
+		public bool PowerSupplyEA { get; set; }
 
 		public UserDefaultSettings()
 		{
