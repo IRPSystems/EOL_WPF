@@ -1,5 +1,6 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
+using Org.BouncyCastle.Ocsp;
 using ScriptHandler.Models;
 using ScriptHandler.ViewModels;
 using ScriptRunner.Services;
@@ -23,13 +24,12 @@ namespace EOL.ViewModels
 			MainScriptLogger = mainScriptLogger;
 
 			RunExplorer = new RunExplorerViewModel(generatedProjectsList);
-			//generatedProjectsList.CollectionChanged += GeneratedProjectsList_CollectionChanged;
-
+			RunExplorer.TestDoubleClickedEvent += RunExplorer_TestDoubleClickedEvent;
 		}
 
-		//private void GeneratedProjectsList_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-		//{
-		//	OnPropertyChanged(nameof(RunExplorer.ProjectsList));
-		//}
+		private void RunExplorer_TestDoubleClickedEvent(GeneratedTestData testData)
+		{
+			ScriptDiagram.DrawScript(testData);
+		}
 	}
 }
