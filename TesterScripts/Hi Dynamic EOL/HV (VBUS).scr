@@ -275,7 +275,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -492,7 +492,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -789,7 +789,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -1006,7 +1006,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1303,7 +1303,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -1520,7 +1520,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1817,7 +1817,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -2034,7 +2034,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -2331,7 +2331,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 360.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -2548,7 +2548,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 360.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },

@@ -366,7 +366,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Max Limit Speed ON",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4,
         "EOLReportsSelectionData": {
@@ -508,9 +508,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Motor State To Run",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -622,7 +622,7 @@
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1114,7 +1114,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1183,7 +1183,7 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": 2993.4280783254403,
+          "Value": 2984.001796568015,
           "DeviceType": 9,
           "CommunicationTimeout": 30000
         },
@@ -1247,7 +1247,7 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": 2993.4280783254403,
+            "Value": 2984.001796568015,
             "DeviceType": 9,
             "CommunicationTimeout": 30000
           },
@@ -1554,7 +1554,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1623,7 +1623,7 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": 2993.4280783254403,
+          "Value": 2984.001796568015,
           "DeviceType": 9,
           "CommunicationTimeout": 30000
         },
@@ -1687,7 +1687,7 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": 2993.4280783254403,
+            "Value": 2984.001796568015,
             "DeviceType": 9,
             "CommunicationTimeout": 30000
           },
@@ -1994,7 +1994,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -2063,7 +2063,7 @@
           "IsThermistorUsed": false,
           "Name": "Digital Counter",
           "Units": null,
-          "Value": 2993.4280783254403,
+          "Value": 2984.001796568015,
           "DeviceType": 9,
           "CommunicationTimeout": 30000
         },
@@ -2127,7 +2127,7 @@
             "IsThermistorUsed": false,
             "Name": "Digital Counter",
             "Units": null,
-            "Value": 2993.4280783254403,
+            "Value": 2984.001796568015,
             "DeviceType": 9,
             "CommunicationTimeout": 30000
           },
@@ -2315,7 +2315,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Torque Command to 0Nm",
         "IsPass": false,
-        "PassNextId": 29,
+        "PassNextId": 28,
         "FailNextId": 0,
         "ID": 27,
         "EOLReportsSelectionData": {
@@ -2459,7 +2459,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 29,
+        "ID": 28,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

@@ -61,10 +61,10 @@
       "..\\Min. Voltage Operation.scr",
       "..\\Max. Voltage Operation.scr",
       "..\\Config Manual FOC.scr",
+      "..\\Peak Operation.scr",
       "..\\Compare Manual Angle.scr",
       "..\\Pre Motor Run Config.tst",
-      "..\\Faults Disable.scr",
-      "..\\Peak Operation.scr"
+      "..\\Faults Disable.scr"
     ]
   },
   "RecordParametersFile": null,

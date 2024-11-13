@@ -86,7 +86,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "Neutral",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",

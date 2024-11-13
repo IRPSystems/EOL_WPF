@@ -18,7 +18,7 @@
         "SelectedScriptName": "Config Manual FOC",
         "UserTitle": "Configure FOC ",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1,
         "EOLReportsSelectionData": {
@@ -106,7 +106,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -128,7 +128,7 @@
         "SelectedScriptName": "Position Sensor",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -154,7 +154,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
