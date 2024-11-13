@@ -181,7 +181,19 @@ namespace EOL.ViewModels
 				else if (_eolSettings.DeviceSetupUserData.SetupDevicesList == null ||
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Count == 0)
 				{
+					_eolSettings.DeviceSetupUserData.SetupDevicesList = new ObservableCollection<DeviceTypesEnum>();
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_B2B);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.ZimmerPowerMeter);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002_2);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.Printer_TSC);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NumatoGPIO);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.PowerSupplyEA);
 
+					foreach(DeviceData device in _setupSelectionVM.DevicesSourceList)
+						_setupSelectionVM.DevicesList.Add(device);
+					
 				}
 
 				DevicesContainter = new DevicesContainer();
@@ -247,6 +259,8 @@ namespace EOL.ViewModels
 				LoggerService.Error(this, "Failed to init the main window", "Startup Error", ex);
 			}
 		}
+
+		
 
 		private void MergeATEParamsToMCU()
 		{

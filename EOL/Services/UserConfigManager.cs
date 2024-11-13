@@ -27,7 +27,7 @@ namespace EOL.Services
 
 		public bool? ReadConfig(EOLSettings eolSettings)
         {
-			bool? result = null;
+			bool? result = true;
 
 			if (File.Exists(ConfigFilePath))
             {
@@ -73,7 +73,7 @@ namespace EOL.Services
             }
             else
             {
-                result = AutoConfigProcedure(eolSettings.UserDefaultSettings);
+                AutoConfigProcedure(eolSettings.UserDefaultSettings);
             }
 
             return result;
