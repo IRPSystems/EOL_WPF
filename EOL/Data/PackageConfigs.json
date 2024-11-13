@@ -38,7 +38,8 @@
         "NI_6002": "True",
         "NI_6002_2": "True",
         "Printer_TSC": "True",
-        "NumatoGPIO": "True"
+        "NumatoGPIO": "True",
+        "PowerSupplayEA":  "True"
       }
     },
 
@@ -82,7 +83,8 @@
         "NI_6002": "True",
         "NI_6002_2": "True",
         "Printer_TSC": "False",
-        "NumatoGPIO": "True"
+        "NumatoGPIO": "True",
+        "PowerSupplayEA": "True"
       }
     },
     "Flasher": {
@@ -123,7 +125,8 @@
         "NI_6002": "True",
         "NI_6002_2": "True",
         "Printer_TSC": "True",
-        "NumatoGPIO": "True"
+        "NumatoGPIO": "True",
+        "PowerSupplayEA": "True"
       }
     }
   }
