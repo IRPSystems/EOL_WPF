@@ -24,7 +24,10 @@ namespace EOL.Views
         public PasswordWindow()
         {
             InitializeComponent();
-        }
+
+            PasswordBox.Focus();
+
+		}
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {

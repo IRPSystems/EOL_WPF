@@ -470,6 +470,9 @@ namespace EOL.ViewModels
                             MessageBox.Show("Incorrect password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                     }
+
+					OperatorVM.Run.ShowAdmin();
+
                     break;
                 case "Operator":
                     SelectedMode = "Operator";

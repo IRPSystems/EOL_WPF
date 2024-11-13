@@ -792,7 +792,7 @@ namespace EOL.ViewModels
 			ErrorMessage = errorMessage;
 		}
 
-		private void ShowAdmin()
+		public void ShowAdmin()
 		{
 			if (_adminView == null || _adminView.IsVisible == false)
 			{
