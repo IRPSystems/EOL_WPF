@@ -146,8 +146,6 @@
                            Text="The script is running, please wait..."
                            FontSize="60"
                        TextWrapping="Wrap"/>
-                <fa:ImageAwesome Grid.Row="2" Icon="Solid_Spinner" Spin="True" SpinDuration="4" Height="100" Width="100"
-                             PrimaryColor="{DynamicResource MahApps.Brushes.Gray1}"/>
             </Grid>
 
         </Grid>
@@ -157,7 +155,7 @@
     <DataTemplate x:Key="DelayTemplate">
 
 
-        <Grid Grid.Column="2" >
+        <Grid Grid.Column="2" VerticalAlignment="Top" Height="30">
             <ProgressBar Value="{Binding TimeoutPercentage}"
                          Minimum="0"
                          Maximum="100" />

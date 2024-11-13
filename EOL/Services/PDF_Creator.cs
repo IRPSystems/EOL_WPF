@@ -182,7 +182,8 @@ namespace EOL.Services
                     AddTables(subScript.Script.ScriptItemsList);
                 }
 
-                if (scriptItem is ScriptStepBase test)
+                if (scriptItem is ScriptStepBase test &&
+					test.EOLReportsSelectionData != null)
                 {
                     if(test.EOLReportsSelectionData.IsSaveToPdfExecTable)
                     {
