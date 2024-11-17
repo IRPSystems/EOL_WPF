@@ -723,6 +723,7 @@ namespace EOL.ViewModels
 					{
 						GetScriptEOLStepSummerys(
 							script,
+							script,
 							eolStepSummerysList);
 					}
 				}
@@ -784,17 +785,27 @@ namespace EOL.ViewModels
 
 		private void GetScriptEOLStepSummerys(
 			IScript script,
+			IScript test,
 			List<EOLStepSummeryData> eolStepSummerysList)
 		{
 			foreach(IScriptItem item in script.ScriptItemsList)
 			{
 				if (item is ScriptStepBase stepBase)
+				{
 					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
+
+					foreach(EOLStepSummeryData summery in stepBase.EOLStepSummerysList)
+					{
+						summery.SubScriptName = script.Name;
+						summery.TestName = test.Name;
+					}
+				}
 
 				if(item is ISubScript subScript)
 				{
 					GetScriptEOLStepSummerys(
 						subScript.Script,
+						test,
 						eolStepSummerysList);
 				}
 			}

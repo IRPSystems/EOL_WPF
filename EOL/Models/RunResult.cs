@@ -18,7 +18,7 @@ namespace EOL.Models
         public string StartTimeStamp { get; set; }
         public string EndTimeStamp { get; set; }
         public string PackageVersion { get; set; }
-        public string AppVerison { get; set; }
+        public string AppVersion { get; set; }
 
         public List<EOLStepSummeryData> Steps { get; set; }
 

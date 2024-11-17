@@ -69,13 +69,13 @@ namespace EOL.Services
                     rowValues.Add(property.GetValue(testResult)?.ToString() ?? "");
                 }
 
-                foreach (var header in _headers.Skip(standardHeaders.Count))
+                List<string> values = GetValues(testResult.Steps);
+                foreach(string value in values)
                 {
-                    var step = testResult.Steps.FirstOrDefault(s => s.ParentStepDescription == header);
-                    rowValues.Add(step?.TestValue.ToString() ?? "");
-                }
+					rowValues.Add(value);
+				}
 
-                writer.WriteLine(string.Join(",", rowValues));
+				writer.WriteLine(string.Join(",", rowValues));
             }
         }
 
@@ -88,12 +88,20 @@ namespace EOL.Services
                 if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
                     continue;
 
-                string description = string.Empty;
+                string testName = GetFixedString(step.TestName);
+				string subScriptName = GetFixedString(step.SubScriptName);
+				string parentStepDescription = GetFixedString(step.ParentStepDescription);
 
-                if (string.IsNullOrEmpty(step.ParentStepDescription) == false)
-                    description += $"{step.ParentStepDescription} -- ";
+				string description = $"{testName} -- ";
+                
+                if(subScriptName != testName)
+                    description += $"{subScriptName} -- ";
 
-                description += step.Description;
+
+				if (string.IsNullOrEmpty(parentStepDescription) == false)
+                    description += $"{parentStepDescription} -- ";
+
+                description += GetFixedString(step.Description);
 
                 headers.Add(description);
 
@@ -101,6 +109,44 @@ namespace EOL.Services
 
             return headers;
         }
+
+        private List<string> GetValues(List<EOLStepSummeryData> Steps)
+		{
+			List<string> values = new List<string>();
+
+			foreach (EOLStepSummeryData step in Steps)
+			{
+				if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+					continue;
+
+				if(step.TestValue != null)
+                {
+                    values.Add(step.TestValue.ToString());
+                    continue;
+                }
+
+                if(step.IsPass == false)
+                {
+					values.Add(step.ErrorDescription);
+					continue;
+				}
+
+				values.Add("PASS");
+			}
+
+			return values;
+		}
+
+        private string GetFixedString(string source)
+        {
+            string dest = source;
+
+			dest = dest.Replace(",", "-");
+			dest = dest.Replace("\r", "");
+			dest = dest.Replace("\n", " - ");
+
+			return dest;
+		}
 
 		#endregion Methods
 	}
