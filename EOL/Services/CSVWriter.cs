@@ -37,8 +37,10 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
 
-            // Use reflection to get properties
-            var properties = typeof(RunResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
+
+			// Use reflection to get properties
+			var properties = typeof(RunResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                                                .Where(p => p.PropertyType == typeof(string))
                                                .ToList();
 
@@ -145,6 +147,31 @@ namespace EOL.Services
 
             return description;
 		}
+
+        private string GetFailedStepDescription(ScriptStepBase failedStep)
+        {
+            string description = string.Empty;
+
+            if (failedStep.EOLStepSummerysList != null &&
+                 failedStep.EOLStepSummerysList.Count > 0)
+            {
+                EOLStepSummeryData eolStepSummeryData =
+                    failedStep.EOLStepSummerysList[0];
+
+				string testName = GetFixedString(eolStepSummeryData.TestName);
+				string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
+
+				description = $"{testName};\r\n";
+
+				if (subScriptName != testName)
+					description += $"{subScriptName};\r\n";
+			}
+
+            description += failedStep.ErrorMessage;
+
+
+			return $"\"{description}\"";
+        }
 
         private string GetFixedString(string source)
         {

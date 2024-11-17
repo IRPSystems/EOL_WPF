@@ -348,7 +348,8 @@ namespace EOL.ViewModels
             settings.Formatting = Formatting.Indented;
             settings.TypeNameHandling = TypeNameHandling.All;
             _logParametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
-			RunScript.ParamRecording.RecordDirectory = _userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder;
+			RunScript.ParamRecording.RecordDirectory = 
+				Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder);
         }
 
         private void LoadSafetyScriptFromPath()
