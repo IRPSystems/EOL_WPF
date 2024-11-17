@@ -6,7 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 3",
+        "Name": "Sub Script 4",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -42,33 +42,9 @@
         "SelectedScriptName": "Phase W",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": 3,
-        "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "ScriptNodeSubScript 3",
-        "ParentScriptName": "Current Calibration",
-        "ContinueUntilType": 0,
-        "Repeats": 1,
-        "Timeout": 0,
-        "TimeoutUnite": 0,
-        "IsStopOnFail": true,
-        "IsStopOnPass": false,
-        "IsInfinity": false,
-        "SelectedScriptName": "BUS",
-        "UserTitle": null,
-        "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

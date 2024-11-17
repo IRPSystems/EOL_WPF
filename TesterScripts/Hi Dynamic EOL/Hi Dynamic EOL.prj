@@ -64,7 +64,9 @@
       "..\\Peak Operation.scr",
       "..\\Compare Manual Angle.scr",
       "..\\Pre Motor Run Config.tst",
-      "..\\Faults Disable.scr"
+      "..\\Faults Disable.scr",
+      "..\\TestPsOnOff.tst",
+      "..\\PSTest.scr"
     ]
   },
   "RecordParametersFile": null,
