@@ -37,7 +37,8 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
 
-            testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
+            if(testResult.StopReason != "PASS")
+                testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
 
 			// Use reflection to get properties
 			var properties = typeof(RunResult).GetProperties(BindingFlags.Public | BindingFlags.Instance)
@@ -150,6 +151,9 @@ namespace EOL.Services
 
         private string GetFailedStepDescription(ScriptStepBase failedStep)
         {
+            if (failedStep == null)
+                return null;
+
             string description = string.Empty;
 
             if (failedStep.EOLStepSummerysList != null &&
