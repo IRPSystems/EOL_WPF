@@ -125,7 +125,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -265,7 +265,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -429,7 +429,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -569,7 +569,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -733,7 +733,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -873,7 +873,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1321,7 +1321,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1461,7 +1461,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1625,7 +1625,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1765,7 +1765,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1929,7 +1929,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2069,7 +2069,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,

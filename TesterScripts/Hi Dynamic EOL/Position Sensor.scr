@@ -221,7 +221,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 37.5,
-        "ValueDropDwonIndex": 0,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -284,7 +284,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -315,7 +315,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -937,7 +937,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -968,7 +968,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
