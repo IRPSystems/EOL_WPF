@@ -26,6 +26,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -82,7 +83,7 @@ namespace EOL.ViewModels
         private RunProjectsListService _runProjectsList;
 
 		//Create also a backup list of list TestResults
-		private RunResult _singleTestResult;
+		//private RunResult _singleTestResult;
 
 		private CSVWriter _csvWritter;
 
@@ -184,7 +185,7 @@ namespace EOL.ViewModels
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
-                _singleTestResult = new RunResult();
+                //_singleTestResult = new RunResult();
 
 				_csvWritter = new CSVWriter();
 
@@ -708,25 +709,34 @@ namespace EOL.ViewModels
 				_timerDuration.Stop();
 				_runData.EndTime = DateTime.Now;
 
+				RunResult singleTestResult = new RunResult();
+
 
 				IsRunButtonEnabled = true;
 
-			if (stopeMode == ScriptStopModeEnum.Aborted)
-				RunState = RunStateEnum.Aborted;
-			else
-				RunState = RunStateEnum.Passed;
+				if (stopeMode == ScriptStopModeEnum.Aborted)
+					RunState = RunStateEnum.Aborted;
+				else
+					RunState = RunStateEnum.Passed;
 
+				if (RunState == RunStateEnum.Passed)
+					singleTestResult.StopReason = "PASSED";
+
+				ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
 				{
 					foreach (GeneratedScriptData script in project.TestsList)
 					{
-						GetScriptEOLStepSummerys(
+						failedStep = GetScriptEOLStepSummerys(
 							script,
 							script,
 							eolStepSummerysList);
 					}
 				}
+
+				singleTestResult.FailedStep = failedStep;
+				singleTestResult.AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
 				int passed;
 				int failed;
@@ -742,27 +752,27 @@ namespace EOL.ViewModels
 				if (failed > 0)
 				{
 					RunState = RunStateEnum.Failed;
-					_singleTestResult.TestStatus = "Failed";
+					singleTestResult.TestStatus = "Failed";
 					_stepSetParameter.Value = 0;
 				}
 				else
 				{
-					_singleTestResult.TestStatus = "Passed";
+					singleTestResult.TestStatus = "Passed";
 					_stepSetParameter.Value = 1;
 				}
 
 				_stepSetParameter.Execute();
 
-				_singleTestResult.SerialNumber = _runData.SerialNumber;
-				_singleTestResult.PartNumber = _runData.PartNumber;
-				_singleTestResult.OperatorName = _runData.OperatorName;
-				_singleTestResult.Steps = eolStepSummerysList;
-				_singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
-				_singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
+				singleTestResult.SerialNumber = _runData.SerialNumber;
+				singleTestResult.PartNumber = _runData.PartNumber;
+				singleTestResult.OperatorName = _runData.OperatorName;
+				singleTestResult.Steps = eolStepSummerysList;
+				singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
+				singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
 
-				_csvWritter.WriteTestResult(_singleTestResult);
+				_csvWritter.WriteTestResult(singleTestResult);
 
-				_pdfCreator.CreatePdf(_generatedProjectsList, _singleTestResult, _userDefaultSettings);
+				_pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
 			}
 			catch (Exception ex)
 			{
@@ -783,12 +793,13 @@ namespace EOL.ViewModels
 
 		#region Handle EOL Step Summery
 
-		private void GetScriptEOLStepSummerys(
+		private ScriptStepBase GetScriptEOLStepSummerys(
 			IScript script,
 			IScript test,
 			List<EOLStepSummeryData> eolStepSummerysList)
 		{
-			foreach(IScriptItem item in script.ScriptItemsList)
+			ScriptStepBase failedStep = null;
+			foreach (IScriptItem item in script.ScriptItemsList)
 			{
 				if (item is ScriptStepBase stepBase)
 				{
@@ -799,16 +810,29 @@ namespace EOL.ViewModels
 						summery.SubScriptName = script.Name;
 						summery.TestName = test.Name;
 					}
+
+					if (!(item is ISubScript))
+					{
+						if(stepBase.IsPass == false)
+						{
+							failedStep = stepBase;
+						}
+					}
 				}
 
 				if(item is ISubScript subScript)
 				{
-					GetScriptEOLStepSummerys(
+					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
 						test,
 						eolStepSummerysList);
+
+					if (failedStepTemp != null)
+						failedStep = failedStepTemp;
 				}
 			}
+
+			return failedStep;
 		}
 
         private void ClearEOLStepSummerys(

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using CsvHelper;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace EOL.Services
 {
@@ -88,22 +89,10 @@ namespace EOL.Services
                 if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
                     continue;
 
-                string testName = GetFixedString(step.TestName);
-				string subScriptName = GetFixedString(step.SubScriptName);
-				string parentStepDescription = GetFixedString(step.ParentStepDescription);
 
-				string description = $"{testName} -- ";
-                
-                if(subScriptName != testName)
-                    description += $"{subScriptName} -- ";
+                string description = GetStepDescription(step);
 
-
-				if (string.IsNullOrEmpty(parentStepDescription) == false)
-                    description += $"{parentStepDescription} -- ";
-
-                description += GetFixedString(step.Description);
-
-                headers.Add(description);
+				headers.Add($"\"{description}\"");
 
             }
 
@@ -135,6 +124,26 @@ namespace EOL.Services
 			}
 
 			return values;
+		}
+
+        private string GetStepDescription(EOLStepSummeryData step)
+        {
+			string testName = GetFixedString(step.TestName);
+			string subScriptName = GetFixedString(step.SubScriptName);
+			string parentStepDescription = GetFixedString(step.ParentStepDescription);
+
+			string description = $"{testName};\r\n";
+
+			if (subScriptName != testName)
+				description += $"{subScriptName};\r\n";
+
+
+			if (string.IsNullOrEmpty(parentStepDescription) == false)
+				description += $"{parentStepDescription};\r\n";
+
+			description += GetFixedString(step.Description);
+
+            return description;
 		}
 
         private string GetFixedString(string source)

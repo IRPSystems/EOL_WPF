@@ -21,6 +21,7 @@ namespace EOL.Models
         public string AppVersion { get; set; }
 
         public List<EOLStepSummeryData> Steps { get; set; }
+        public ScriptStepBase FailedStep { get; set; }
 
         public RunResult()
         {
