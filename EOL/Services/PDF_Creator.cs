@@ -221,7 +221,7 @@ namespace EOL.Services
                 resultList.AddRange(new List<string>
                 {
                     CheckValue(_countExecTable.ToString()),
-                    CheckValue(stepSummary.StepDescription),
+                    CheckValue(stepSummary.ParentStepDescription),
                     CheckValue(measuredValue),
                     CheckValue(TestStatus)
                 });
@@ -243,7 +243,7 @@ namespace EOL.Services
                 resultList.AddRange(new List<string>
                 {
                     CheckValue(_countDynTable),
-                    CheckValue(stepSummary.StepDescription),
+                    CheckValue(stepSummary.ParentStepDescription),
                     CheckValue(stepSummary.TestValue),
                     CheckValue(stepSummary.ComparisonValue),
                     CheckValue(stepSummary.Units),
