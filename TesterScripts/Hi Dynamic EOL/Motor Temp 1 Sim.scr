@@ -430,7 +430,7 @@
         "IncrementValue": 0.001,
         "SetFirstValue": 2.296,
         "LoopsAmount": 69,
-        "Interval": 300,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -476,7 +476,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 3",
-        "Interval": 3000,
+        "Interval": 4000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -916,7 +916,7 @@
         "IncrementValue": 0.001,
         "SetFirstValue": 2.365,
         "LoopsAmount": 125,
-        "Interval": 300,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -962,7 +962,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 6",
-        "Interval": 3000,
+        "Interval": 4000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1402,7 +1402,7 @@
         "IncrementValue": 0.001,
         "SetFirstValue": 2.49,
         "LoopsAmount": 116,
-        "Interval": 300,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1448,7 +1448,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 10",
-        "Interval": 3000,
+        "Interval": 4000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1888,7 +1888,7 @@
         "IncrementValue": 0.001,
         "SetFirstValue": 2.606,
         "LoopsAmount": 139,
-        "Interval": 300,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1934,7 +1934,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 13",
-        "Interval": 3000,
+        "Interval": 4000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
         "IsPass": false,

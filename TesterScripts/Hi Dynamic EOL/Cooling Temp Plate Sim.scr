@@ -427,10 +427,10 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.01,
+        "IncrementValue": 0.02,
         "SetFirstValue": 0.7895,
-        "LoopsAmount": 107,
-        "Interval": 200,
+        "LoopsAmount": 53,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -476,7 +476,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 10",
-        "Interval": 2,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -913,10 +913,10 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.01,
+        "IncrementValue": 0.02,
         "SetFirstValue": 1.865,
-        "LoopsAmount": 138,
-        "Interval": 200,
+        "LoopsAmount": 69,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -962,7 +962,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 11",
-        "Interval": 2,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1399,10 +1399,10 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.01,
+        "IncrementValue": 0.02,
         "SetFirstValue": 3.249,
-        "LoopsAmount": 104,
-        "Interval": 200,
+        "LoopsAmount": 52,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1448,7 +1448,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 12",
-        "Interval": 2,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1885,10 +1885,10 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.01,
+        "IncrementValue": 0.02,
         "SetFirstValue": 4.28,
-        "LoopsAmount": 38,
-        "Interval": 200,
+        "LoopsAmount": 19,
+        "Interval": 50,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1934,7 +1934,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 13",
-        "Interval": 2,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
