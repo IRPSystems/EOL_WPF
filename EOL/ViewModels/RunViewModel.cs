@@ -711,6 +711,7 @@ namespace EOL.ViewModels
 		{
 			try
 			{
+
 				_timerDuration.Stop();
 				_runData.EndTime = DateTime.Now;
 
@@ -755,19 +756,22 @@ namespace EOL.ViewModels
 				_runData.NumberOfFailed = failed;
 				_runData.NumberOfPassed = passed;
 
-				if (failed > 0)
+				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU))
 				{
-					RunState = RunStateEnum.Failed;
-					singleTestResult.TestStatus = "Failed";
-					_stepSetParameter.Value = 0;
-				}
-				else
-				{
-					singleTestResult.TestStatus = "Passed";
-					_stepSetParameter.Value = 1;
-				}
+					if (failed > 0)
+					{
+						RunState = RunStateEnum.Failed;
+						singleTestResult.TestStatus = "Failed";
+						_stepSetParameter.Value = 0;
+					}
+					else
+					{
+						singleTestResult.TestStatus = "Passed";
+						_stepSetParameter.Value = 1;
+					}
 
-				_stepSetParameter.Execute();
+					_stepSetParameter.Execute();
+				}
 
 				singleTestResult.SerialNumber = _runData.SerialNumber;
 				singleTestResult.PartNumber = _runData.PartNumber;

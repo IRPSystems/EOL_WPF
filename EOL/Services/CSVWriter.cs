@@ -89,7 +89,7 @@ namespace EOL.Services
 
             foreach (EOLStepSummeryData step in Steps)
             {
-                if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                if (step.Step != null && step.Step.EOLReportsSelectionData.IsSaveToReport == false)
                     continue;
 
 
@@ -108,7 +108,7 @@ namespace EOL.Services
 
 			foreach (EOLStepSummeryData step in Steps)
 			{
-				if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+				if (step.Step != null && step.Step.EOLReportsSelectionData.IsSaveToReport == false)
 					continue;
 
 				if(step.TestValue != null)
