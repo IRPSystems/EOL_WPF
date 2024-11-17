@@ -98,8 +98,8 @@ namespace EOL.ViewModels
 		private GeneratedScriptData _stoppedScript; // TODO: initiate
         private GeneratedScriptData _abortScript;
         private ObservableCollection<DeviceParameterData> _logParametersList;
-		private string MainScriptReportSubFolder = "\\Main Script Reports";
-        private string MonitorLogSubFolder = "\\Monitor Logs";
+		private string MainScriptReportSubFolder = "Main Script Reports";
+        private string MonitorLogSubFolder = "Monitor Logs";
 
         private ScriptStepSetParameter _stepSetParameter;
 
@@ -260,12 +260,31 @@ namespace EOL.ViewModels
             {
                 return;
             }
-            _csvWritter._csvFilePath = _userDefaultSettings.ReportsSavingPath
-                + MainScriptReportSubFolder
-                + "\\Tester Report - PackageName - "
+
+			string mainScriptSubFolder =
+					Path.Combine(_userDefaultSettings.ReportsSavingPath, MainScriptReportSubFolder);
+			if (!Directory.Exists(mainScriptSubFolder))
+			{
+				Directory.CreateDirectory(mainScriptSubFolder);
+			}
+
+			string monitorSubFolder =
+				Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder);
+			if (!Directory.Exists(monitorSubFolder))
+			{
+				Directory.CreateDirectory(monitorSubFolder);
+
+			}
+
+
+			string fileName =
+				"Tester Report - PackageName - "
                 + DateTime.Now.ToString("yyyy-MM-dd")
                 + ".csv";
-        }
+
+			_csvWritter._csvFilePath = Path.Combine(mainScriptSubFolder, fileName);
+
+		}
 
         private void LoadMainScriptFromPath()
         {
@@ -487,20 +506,8 @@ namespace EOL.ViewModels
 			//}
 			try
 			{
-				string mainScriptSubFolder = 
-					Path.Combine(_userDefaultSettings.ReportsSavingPath, MainScriptReportSubFolder);
-				if (!Directory.Exists(mainScriptSubFolder))
-				{
-					Directory.CreateDirectory(mainScriptSubFolder);
-				}
+				
 
-				string monitorSubFolder = 
-					Path.Combine(_userDefaultSettings.ReportsSavingPath + MonitorLogSubFolder);
-				if (!Directory.Exists(monitorSubFolder))
-                {
-                    Directory.CreateDirectory(monitorSubFolder);
-					
-                }
 				if(IsFileInUse(_csvWritter._csvFilePath))
 				{
 					return false;
