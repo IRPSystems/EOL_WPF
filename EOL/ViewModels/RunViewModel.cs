@@ -110,6 +110,8 @@ namespace EOL.ViewModels
 		private GeneratedProjectData _projectMain;
 		private GeneratedProjectData _projectSub;
 
+		private SettingsData _settingsData;
+
 		#endregion Fields
 
 		#region Constructor
@@ -119,12 +121,14 @@ namespace EOL.ViewModels
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
 			SettingsViewModel settingsViewModel,
-			LogLineListService logLineList)
+			LogLineListService logLineList,
+			SettingsData settingsData)
 		{
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
 			_runData = runData;
             _userDefaultSettings = userDefaultSettings;
+			_settingsData = settingsData;
 
             try
             {
@@ -737,6 +741,7 @@ namespace EOL.ViewModels
 
 				singleTestResult.FailedStep = failedStep;
 				singleTestResult.AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+				singleTestResult.RackNumber = _settingsData.RackNumber;
 
 				int passed;
 				int failed;

@@ -43,7 +43,8 @@ namespace EOL.ViewModels
                 RunData,
 				userDefaultSettings, 
 				viewModel,
-				logLineList);
+				logLineList,
+				viewModel.SettingsData);
             RunData.RunScript = Run.RunScript;
 		}
 

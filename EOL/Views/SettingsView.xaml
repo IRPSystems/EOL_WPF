@@ -91,17 +91,29 @@
 
         </TabItem>
 
-        <TabItem Header="General" >
+        <TabItem Header="General" FontSize="15">
 
             <StackPanel Margin="10">
 
                 <CheckBox Content="Ignore fail" 
-                          IsChecked="{Binding IsIgnorFail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          IsChecked="{Binding SettingsData.IsIgnorFail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                           Margin="0,0,0,10"
                           FontSize="15"/>
                 <CheckBox Content="Print label" 
-                          IsChecked="{Binding IsPrintLabel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                          
+                          IsChecked="{Binding SettingsData.IsPrintLabel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
+                          Margin="0,0,0,20"                        
                           FontSize="15"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Rack number" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="2" Text="{Binding SettingsData.RackNumber}" />
+                </Grid>
 
             </StackPanel>
             

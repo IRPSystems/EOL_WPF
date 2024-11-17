@@ -10,5 +10,7 @@ namespace EOL.Models
 
 		public bool IsIgnorFail { get; set; }
 		public bool IsPrintLabel { get; set; }
+		public string RackNumber { get; set; }
+
 	}
 }
