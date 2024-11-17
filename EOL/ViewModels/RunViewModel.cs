@@ -36,7 +36,7 @@ namespace EOL.ViewModels
 	{
 		#region Properties
 
-		public enum RunStateEnum { None, Running, Ended, Aborted, Failed }
+		public enum RunStateEnum { None, Running, Passed, Aborted, Failed }
 
 		public int RunPercentage { get; set; }
 
@@ -480,11 +480,11 @@ namespace EOL.ViewModels
 
         private bool Directories()
         {
-            if(!Directory.Exists(_userDefaultSettings.ReportsSavingPath))
-			{
-				MessageBox.Show("Report path doesnt exist:" + _userDefaultSettings.ReportsSavingPath + "\r\n" + "Please choose a valid path");
-				return false;
-			}
+   //         if(!Directory.Exists(_csvWritter._csvFilePath))
+			//{
+			//	MessageBox.Show("Report path doesnt exist:" + _csvWritter._csvFilePath + "\r\n" + "Please choose a valid path");
+			//	return false;
+			//}
 			try
 			{
 				string mainScriptSubFolder = 
@@ -705,7 +705,7 @@ namespace EOL.ViewModels
 			if (stopeMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 			else
-				RunState = RunStateEnum.Ended;
+				RunState = RunStateEnum.Passed;
 
             List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 			foreach (GeneratedProjectData project in _generatedProjectsList)

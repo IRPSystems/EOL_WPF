@@ -125,8 +125,8 @@
                                 <Setter Property="Background" Value="Orange" />
                             </DataTrigger>
 
-                            <DataTrigger Binding="{Binding RunState}" Value="Ended">
-                                <Setter Property="Background" Value="MediumPurple" />
+                            <DataTrigger Binding="{Binding RunState}" Value="Passed">
+                                <Setter Property="Background" Value="ForestGreen" />
                             </DataTrigger>
 
                             <DataTrigger Binding="{Binding RunState}" Value="Aborted">
