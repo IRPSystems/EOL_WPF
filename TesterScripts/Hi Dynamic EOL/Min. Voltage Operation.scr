@@ -198,7 +198,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -257,7 +257,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "ATE",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -405,32 +405,18 @@
         "Name": "Set Parameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "OUTP",
-          "Max": 1,
-          "ParamType": 0,
-          "ModbusAddress": 405,
+          "Cmd": "SOUR:CURRENT",
+          "Max": 300,
+          "ParamType": 2,
+          "ModbusAddress": 501,
           "NumOfRegisters": 1,
           "ValueType": "ushort",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Output On/Off",
-          "Units": null,
+          "DropDown": null,
+          "Name": "(PS) Current Limit",
+          "Units": "A",
           "Value": null,
           "DeviceType": 3,
-          "CommunicationTimeout": 3000
+          "CommunicationTimeout": 0
         },
         "Value": 10.0,
         "ValueDropDwonIndex": -1,
@@ -440,32 +426,18 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-            "Cmd": "OUTP",
-            "Max": 1,
-            "ParamType": 0,
-            "ModbusAddress": 405,
+            "Cmd": "SOUR:CURRENT",
+            "Max": 300,
+            "ParamType": 2,
+            "ModbusAddress": 501,
             "NumOfRegisters": 1,
             "ValueType": "ushort",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Output On/Off",
-            "Units": null,
+            "DropDown": null,
+            "Name": "(PS) Current Limit",
+            "Units": "A",
             "Value": null,
             "DeviceType": 3,
-            "CommunicationTimeout": 3000
+            "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -678,7 +650,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Control Source to VCU",
+        "UserTitle": "Set UUT Control Source to Manual",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -696,7 +668,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -735,7 +707,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -900,7 +872,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -931,7 +903,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -986,7 +958,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1017,7 +989,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1326,7 +1298,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1357,7 +1329,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1412,7 +1384,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1443,7 +1415,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",

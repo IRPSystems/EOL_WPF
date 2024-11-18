@@ -162,6 +162,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -353,6 +358,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -528,7 +538,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -668,7 +678,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -734,7 +744,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 18.114,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -770,7 +780,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 18.114,
+            "Value": "",
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",
