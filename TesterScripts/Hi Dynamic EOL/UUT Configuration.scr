@@ -86,7 +86,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -191,7 +191,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 0,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {

@@ -360,7 +360,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -381,7 +381,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },

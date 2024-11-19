@@ -162,6 +162,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -388,6 +393,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -635,6 +645,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -861,6 +876,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },

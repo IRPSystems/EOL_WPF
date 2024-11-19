@@ -41,7 +41,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 1,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -284,7 +284,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -315,7 +315,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -937,7 +937,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -968,7 +968,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1054,7 +1054,7 @@
           "CommunicationTimeout": 0
         },
         "Value": -1,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -1156,7 +1156,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 0,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
