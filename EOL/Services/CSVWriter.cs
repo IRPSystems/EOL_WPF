@@ -89,9 +89,17 @@ namespace EOL.Services
 
             foreach (EOLStepSummeryData step in Steps)
             {
+<<<<<<< HEAD
                 if (step.Step != null && step.Step.EOLReportsSelectionData != null)
                    if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
                         continue;
+=======
+                if (step.Step != null && step.Step.EOLReportsSelectionData != null &&
+                    step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                {
+                    continue;
+                }
+>>>>>>> 4884206f27b0e398981b2431ef4c7bdaf0dd481c
 
 
                 string description = GetStepDescription(step);
