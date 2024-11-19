@@ -89,6 +89,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
