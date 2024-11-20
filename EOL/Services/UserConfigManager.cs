@@ -193,16 +193,12 @@ namespace EOL.Services
 
                     if (config.FlashPreferences.FirstFileArguments != null)
                     {
-                        userDefaultSettings.FirstFileUdsSequence = config.FlashPreferences.FirstFileArguments.udsSequence;
-                        userDefaultSettings.FirstFileUdsRx = config.FlashPreferences.FirstFileArguments.UdsRx;
-                        userDefaultSettings.FirstFileUdsTx = config.FlashPreferences.FirstFileArguments.UdsTx;
+                        userDefaultSettings.FirstFlashFileCustomerProp = config.FlashPreferences.FirstFileArguments.Customer;
                     }
 
                     if (config.FlashPreferences.SecondFileArguments != null)
                     {
-                        userDefaultSettings.SecondFileUdsSequence = config.FlashPreferences.SecondFileArguments.udsSequence;
-                        userDefaultSettings.SecondFileUdsRx = config.FlashPreferences.SecondFileArguments.UdsRx;
-                        userDefaultSettings.SecondFileUdsTx = config.FlashPreferences.SecondFileArguments.UdsTx;
+                        userDefaultSettings.SecondFlashFileCustomerProp = config.FlashPreferences.SecondFileArguments.Customer;
                     }
 
 					if (config.DevicesList != null)

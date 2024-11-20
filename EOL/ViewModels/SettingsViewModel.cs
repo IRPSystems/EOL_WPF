@@ -40,7 +40,9 @@ namespace EOL.ViewModels
         public event Action SubScriptEventChanged;
         public event Action SafetyScriptEventChanged;
         public event Action AbortScriptEventChanged;
-		public event Action SettingsWindowClosedEvent;
+        public event Action FirstFlashFileEventChanged;
+        public event Action SecondFlashFileEventChanged;
+        public event Action SettingsWindowClosedEvent;
 
 		#endregion Events
 
@@ -121,10 +123,12 @@ namespace EOL.ViewModels
                 else if (fileData.Description == "First Flash File Path")
                 {
                     fileData.Path = _userDefaultSettings.FirstFlashFilePath;
+                    FirstFlashFileEventChanged?.Invoke();
                 }
                 else
                 {
                     fileData.Path = _userDefaultSettings.SecondFlashFilePath;
+                    SecondFlashFileEventChanged?.Invoke();
                 }
             }
             SettingsData.IsIgnorFail = _userDefaultSettings.isSofIgnore;
@@ -161,16 +165,16 @@ namespace EOL.ViewModels
 		}
 
 
-		private void BrowseFilePath(FilesData filesData)
+		private void BrowseFilePath(FilesData fileData)
         {   
-            if (filesData.Description == "Reports Path")
+            if (fileData.Description == "Reports Path")
 			{
                 FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
                 DialogResult result = folderBrowserDialog.ShowDialog();
                 if (result != DialogResult.OK)
                     return;
-                filesData.Path = folderBrowserDialog.SelectedPath;
-                _userDefaultSettings.ReportsSavingPath = filesData.Path;
+                fileData.Path = folderBrowserDialog.SelectedPath;
+                _userDefaultSettings.ReportsSavingPath = fileData.Path;
                 ReportsPathEventChanged?.Invoke();
             }
 			else
@@ -180,40 +184,42 @@ namespace EOL.ViewModels
                 if (result != true)
                     return;
 
-                filesData.Path = openFileDialog.FileName;
+                fileData.Path = openFileDialog.FileName;
 
-                if (filesData.Description == "Main Script Path")
+                if (fileData.Description == "Main Script Path")
                 {
-                    _userDefaultSettings.DefaultMainSeqConfigFile = filesData.Path;
+                    _userDefaultSettings.DefaultMainSeqConfigFile = fileData.Path;
                     MainScriptEventChanged?.Invoke();
                 }
-                else if (filesData.Description == "Sub Script Path")
+                else if (fileData.Description == "Sub Script Path")
                 {
-                    _userDefaultSettings.DefaultSubScriptFile = filesData.Path;
+                    _userDefaultSettings.DefaultSubScriptFile = fileData.Path;
                     SubScriptEventChanged?.Invoke();
                 }
-                else if (filesData.Description == "Safety Officer Script Path")
+                else if (fileData.Description == "Safety Officer Script Path")
                 {
-                    _userDefaultSettings.DefaultSafetyScriptFile = filesData.Path;
+                    _userDefaultSettings.DefaultSafetyScriptFile = fileData.Path;
                     SafetyScriptEventChanged?.Invoke();
                 }
-                else if (filesData.Description == "Abort Script Path")
+                else if (fileData.Description == "Abort Script Path")
                 {
-                    _userDefaultSettings.DefaultAbortScriptFile = filesData.Path;
+                    _userDefaultSettings.DefaultAbortScriptFile = fileData.Path;
                     AbortScriptEventChanged?.Invoke();
                 }
-                else if (filesData.Description == "Monitor Script Path")
+                else if (fileData.Description == "Monitor Script Path")
                 {
-                    _userDefaultSettings.DefaultMonitorLogScript = filesData.Path;
+                    _userDefaultSettings.DefaultMonitorLogScript = fileData.Path;
                     MonitorScriptEventChanged?.Invoke();
                 }
-                else if (filesData.Description == "First Flash File Path")
-                {
-                    _userDefaultSettings.FirstFlashFilePath = filesData.Path;
+                else if (fileData.Description == "First Flash File Path")
+                { 
+                    _userDefaultSettings.FirstFlashFilePath = fileData.Path;
+                    FirstFlashFileEventChanged.Invoke();
                 }
                 else
                 {
-                    _userDefaultSettings.SecondFlashFilePath = filesData.Path;
+                    _userDefaultSettings.SecondFlashFilePath = fileData.Path;
+                    SecondFlashFileEventChanged.Invoke();
                 }
             }
         }

@@ -26,17 +26,30 @@
         "FileExtension": "",
         "IsUsed": false
       },
-      "OtherPreferences": {
-        "MonitorLog": true,
-        "PrintLabel": true,
-        "PreFlash": false
-      },
+       "OtherPreferences": {
+		"ProjectBaudRate": 500,
+		"MonitorLog": true,
+		"PrintLabel": true
+	  },
+	  "FlashPreferences": {
+		"PreRunFlash": true,
+		"IsTogglePower": false,
+		"AteBoxFlashPower": false,
+		"PsFlashPower": false,
+		"RelayFlashPower": false,
+		"FirstFileArguments": {
+		  "Customer": 3
+		},
+		"SecondFileArguments": {
+		  "Customer": 3
+		}
+	  },
       "DevicesList": {
         "MCU": "True",
         "MCU_B2B": "True",
         "ZimmerPowerMeter": "True",
-        "NI_6002": "True",
-        "NI_6002_2": "True",
+        "NI_6002": "False",
+        "NI_6002_2": "False",
         "Printer_TSC": "True",
         "NumatoGPIO": "True",
         "PowerSupplayEA":  "True"
@@ -69,13 +82,24 @@
         "FileExtension": "",
         "IsUsed": false
       },
-      "OtherPreferences": {
-        "MonitorLog": false,
-        "PrintLabel": false,
-        "PreFlash": true,
-        "IsTogglePower": true,
-        "AteBoxFlashPower": true
-      },
+       "OtherPreferences": {
+		"ProjectBaudRate": 500,
+		"MonitorLog": true,
+		"PrintLabel": true
+	  },
+	  "FlashPreferences": {
+		"PreRunFlash": true,
+		"IsTogglePower": false,
+		"AteBoxFlashPower": false,
+		"PsFlashPower": false,
+		"RelayFlashPower": false,
+		"FirstFileArguments": {
+		  "Customer": 3
+		},
+		"SecondFileArguments": {
+		  "Customer": 3
+		}
+	  },
       "DevicesList": {
         "MCU": "True",
         "MCU_B2B": "True",

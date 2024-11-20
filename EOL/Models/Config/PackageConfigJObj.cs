@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using FlashingToolLib.FlashingTools;
+using FlashingToolLib.FlashingTools.UDS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using static iso15765.CUdsClient;
 
 namespace EOL.Models.Config
 {
@@ -24,11 +26,7 @@ namespace EOL.Models.Config
 
     public class FlashArguments
     {
-        public UInt32 UdsRx { get; set; }
-        public UInt32 UdsTx { get; set; }
-
-        [JsonConverter(typeof(StringEnumConverter))]
-        public UdsSequence udsSequence { get; set; } = UdsSequence.generic;
+        public ECustomer Customer { get; set; }
     }
 
     public class DevicesList

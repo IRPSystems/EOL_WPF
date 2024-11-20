@@ -11,6 +11,7 @@ using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
 using EOL.Views;
+using FlashingToolLib;
 using FlashingToolLib.FlashingTools;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
@@ -30,6 +31,9 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
+using static FlashingToolLib.FlasherService;
+using Path = System.IO.Path;
 
 namespace EOL.ViewModels
 {
@@ -138,8 +142,7 @@ namespace EOL.ViewModels
 				_timerDuration.Elapsed += _timerDuration_Elapsed;
 
 				IsRunButtonEnabled = true;
-
-				ContinueVisibility = Visibility.Collapsed;
+                ContinueVisibility = Visibility.Collapsed;
 
 				RunCommand = new RelayCommand(Run);
 				AbortCommand = new RelayCommand(Abort);
@@ -257,6 +260,7 @@ namespace EOL.ViewModels
 			_settingsViewModel.SafetyScriptEventChanged += LoadSafetyScriptFromPath;
             _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
+			_settingsViewModel.FirstFlashFileEventChanged += FirstFlashFileChangedEvent;
         }
 
         private void ReportsPathChangeEvent()
@@ -379,6 +383,23 @@ namespace EOL.ViewModels
 			}
         }
 
+        private void FirstFlashFileChangedEvent()
+        {
+			if (!String.IsNullOrEmpty(_userDefaultSettings.FirstFlashFilePath))
+			{
+                eFlashingTool flashingTool = new eFlashingTool();
+
+                if (_flashingHandler.SelectFlashingTool(ref flashingTool , _userDefaultSettings.FirstFlashFilePath))
+				{
+					if(flashingTool == eFlashingTool.UDS)
+					{
+						
+						_flashingHandler.LoadUdsXML(_userDefaultSettings.FirstFlashFileCustomerProp);
+                    }
+                }
+            }
+        }
+
         #endregion settingsViewModel events
 
         #region Running script events
@@ -488,6 +509,10 @@ namespace EOL.ViewModels
         #region Pre Run Validations
         private bool PreRunValidations()
 		{ 
+			if (!CheckDeviceConnectivity())
+			{
+                return false;
+            }
             if (!ValidateRequiredOperatorInfo())
             {
                 return false;
@@ -501,6 +526,82 @@ namespace EOL.ViewModels
                 return false;
             }
             return true;
+        }
+
+        private bool CheckDeviceConnectivity()
+        {
+			string errorMsg = "Please connect this devices:\r\n";
+			bool isMissingConnection = false;
+            foreach(DeviceFullData device in _devicesContainer.DevicesFullDataList)
+			{
+				if(device.CommState != DeviceHandler.Enums.CommunicationStateEnum.Connected)
+				{
+					errorMsg += device.Device.Name + "\r\n";
+                    isMissingConnection = true;
+                }
+            }
+			if (isMissingConnection)
+			{
+				MessageBox.Show(errorMsg);
+				return false;
+			}
+			return true;
+        }
+
+		private List<DeviceTypesEnum> currentScriptDeviceList;
+
+		private bool CheckLoadedScriptUsedDeviceConnectivity()
+		{
+            foreach (GeneratedProjectData project in _generatedProjectsList)
+            {
+                foreach (GeneratedScriptData scriptData in project.TestsList)
+                {
+                    UpdatedCurrentUsedDeviceList(scriptData.ScriptItemsList);
+                    foreach (GeneratedScriptData script in project.TestsList)
+                    {
+
+                    }
+                }
+            }
+            return true;
+		}
+
+		private void UpdatedCurrentUsedDeviceList(
+            ObservableCollection<IScriptItem> scriptItemsList)
+        {
+            int totalNumOfSteps = 0;
+            foreach (IScriptItem scriptItem in scriptItemsList)
+            {
+                if (scriptItem is ISubScript subScript)
+                {
+                    int repeats = (subScript as ScriptStepSubScript).Repeats;
+                    int subScript_totalNumOfSteps =
+                        SetDataToScriptTool(subScript.Script.ScriptItemsList);
+                    continue;
+                }
+
+                if (scriptItem is ScriptStepEOLSendSN sn)
+                {
+
+                    sn.SerialNumber = _runData.SerialNumber;
+                }
+				if(scriptItem is ScriptStepCompare compare)
+				{
+					if(!currentScriptDeviceList.Contains(compare.Parameter.Device.DeviceType))
+					{
+                        currentScriptDeviceList.Add(compare.Parameter.Device.DeviceType);
+                    }
+                }
+                if (scriptItem is ScriptStepEOLPrint print)
+                {
+                    print.SerialNumber = _runData.SerialNumber;
+                    print.ParamData.DataContent = _printFileParser.BuildPrinterCmd(print);
+                }
+                else if (scriptItem is ScriptStepEOLFlash flash)
+                {
+                    SetFlashData(flash);
+                }
+            }
         }
 
         private bool Directories()
@@ -617,23 +718,6 @@ namespace EOL.ViewModels
 
         #region Load project
 
-  //      private void LoadProject(string scriptPath, out GeneratedProjectData project)
-		//{
-
-		//	GeneratedProjectData tempProject = _openProject.Open(
-		//		scriptPath,
-		//		_devicesContainer,
-  //              _flashingHandler,
-		//		_stopScriptStep);
-		//	if (project == null ||
-		//		project.TestsList == null || project.TestsList.Count == 0)
-		//	{
-		//		LoggerService.Error(this, "Failed to open the script", "Error");
-		//		return;
-		//	}
-
-		//	_generatedProjectsList.Add(project);
-		//}
 
 		private int SetDataToScriptTool(
 			ObservableCollection<IScriptItem> scriptItemsList)
@@ -652,9 +736,9 @@ namespace EOL.ViewModels
 				}
 
 				totalNumOfSteps++;
-
 				if (scriptItem is ScriptStepEOLSendSN sn)
 				{
+					
 					sn.SerialNumber = _runData.SerialNumber;
 				}
 				if (scriptItem is ScriptStepEOLPrint print)
@@ -671,7 +755,7 @@ namespace EOL.ViewModels
 			return totalNumOfSteps;
 		}
 
-		private void SetFlashData(ScriptStepEOLFlash flash)
+        private void SetFlashData(ScriptStepEOLFlash flash)
 		{
 			if (flash == null)
 				return;
@@ -681,9 +765,7 @@ namespace EOL.ViewModels
 				flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
 				if (flash.IsEolSource)
 				{
-					flash.UdsSequence = _userDefaultSettings.FirstFileUdsSequence;
-					flash.RXId = _userDefaultSettings.FirstFileUdsRx.ToString("X");
-					flash.TXId = _userDefaultSettings.FirstFileUdsTx.ToString("X");
+					flash.Customer = _userDefaultSettings.FirstFlashFileCustomerProp;
 				}
 			}
 			else if (flash.NumOfFlashFile == 1)
@@ -691,9 +773,7 @@ namespace EOL.ViewModels
 				flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
 				if (flash.IsEolSource)
 				{
-					flash.UdsSequence = _userDefaultSettings.SecondFileUdsSequence;
-					flash.RXId = _userDefaultSettings.SecondFileUdsRx.ToString("X");
-					flash.TXId = _userDefaultSettings.SecondFileUdsTx.ToString("X");
+					flash.Customer = _userDefaultSettings.SecondFlashFileCustomerProp;
 				}
 			}
 		}
@@ -904,6 +984,6 @@ namespace EOL.ViewModels
 		public RelayCommand ContinueCommand { get; private set; }
 		public RelayCommand ShowAdminCommand { get; private set; }
 
-		#endregion Commands
-	}
+        #endregion Commands
+    }
 }

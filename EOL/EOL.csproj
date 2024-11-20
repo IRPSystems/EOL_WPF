@@ -47,8 +47,14 @@
     <ProjectReference Include="..\ScriptsInfrastructure\ScriptRunner\ScriptRunner.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="iso15765">
+      <HintPath>..\FlashingToollib\FlashingToolLib\Resources\iso15765.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(OutDir)Data&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Data\Device Communications&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Resources&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Resources\*.*&quot; &quot;$(OutDir)Resources\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\Device Communications\*.*&quot; &quot;$(OutDir)Data\Device Communications\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\PackageConfigs.json&quot; &quot;$(OutDir)PackageConfigs.json&quot;" />
+    <Exec Command="mkdir &quot;$(OutDir)Data&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Data\Device Communications&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Resources&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Resources\*.*&quot; &quot;$(OutDir)Resources\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\Device Communications\*.*&quot; &quot;$(OutDir)Data\Device Communications\*.*&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\PackageConfigs.json&quot; &quot;$(OutDir)PackageConfigs.json&quot;&#xD;&#xA;copy &quot;$(SolutionDir)FlashingToollib\FlashingToolLib\Resources\UDS_Messages.xml&quot; &quot;$(OutDir)Data\*.*&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>
