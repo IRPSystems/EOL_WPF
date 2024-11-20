@@ -34,7 +34,6 @@
       "DevicesList": {
         "MCU": "True",
 		    "MCU_2": "True",
-        "MCU_B2B": "True",
         "NI_6002": "True",
         "NI_6002_2": "True",
         "Printer_TSC": "True",
@@ -78,7 +77,7 @@
       },
       "DevicesList": {
         "MCU": "True",
-        "MCU_B2B": "True",
+        "MCU_2": "True",
         "ZimmerPowerMeter": "True",
         "NI_6002": "True",
         "NI_6002_2": "True",
@@ -120,7 +119,7 @@
       },
       "DevicesList": {
         "MCU": "True",
-        "MCU_B2B": "True",
+        "MCU_2": "True",
         "ZimmerPowerMeter": "True",
         "NI_6002": "True",
         "NI_6002_2": "True",

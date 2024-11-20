@@ -186,7 +186,6 @@ namespace EOL.ViewModels
 					_eolSettings.DeviceSetupUserData.SetupDevicesList = new ObservableCollection<DeviceTypesEnum>();
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_2);
-					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_B2B);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.ZimmerPowerMeter);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002_2);
@@ -310,7 +309,6 @@ namespace EOL.ViewModels
 			{
 				if (device.DeviceType != DeviceTypesEnum.MCU &&
 					device.DeviceType != DeviceTypesEnum.MCU_2 &&
-					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
 					device.DeviceType != DeviceTypesEnum.ZimmerPowerMeter &&
 					device.DeviceType != DeviceTypesEnum.NI_6002 &&
 					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
@@ -324,7 +322,7 @@ namespace EOL.ViewModels
 
 				if (device.DeviceType == DeviceTypesEnum.MCU && _eolSettings.UserDefaultSettings.MCU == false)
 					devicesToRemoveList.Add(device);
-				else if (device.DeviceType == DeviceTypesEnum.MCU_B2B && _eolSettings.UserDefaultSettings.MCU_B2B == false)
+				if (device.DeviceType == DeviceTypesEnum.MCU_2 && _eolSettings.UserDefaultSettings.MCU_2 == false)
 					devicesToRemoveList.Add(device);
 				else if (device.DeviceType == DeviceTypesEnum.ZimmerPowerMeter && _eolSettings.UserDefaultSettings.ZimmerPowerMeter == false)
 					devicesToRemoveList.Add(device);
