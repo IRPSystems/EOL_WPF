@@ -454,12 +454,11 @@ namespace EOL.ViewModels
 				{
 									
 					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
-                    ClearEOLStepSummerys(scriptData);
-
-					scriptData.State = ScriptHandler.Enums.SciptStateEnum.None;
-					scriptData.IsPass = null;
-
-				}
+                    foreach (GeneratedScriptData script in project.TestsList)
+                    {
+                        ClearEOLStepSummerys(script);
+                    }
+                }
 			}
 
 			ContinueVisibility = Visibility.Collapsed;
@@ -852,9 +851,7 @@ namespace EOL.ViewModels
             foreach (IScriptItem item in script.ScriptItemsList)
             {
 				if (item is ScriptStepBase stepBase)
-				{
 					stepBase.EOLStepSummerysList.Clear();
-				}
 
                 if (item is ISubScript subScript)
                 {
