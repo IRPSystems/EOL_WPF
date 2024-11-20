@@ -6,6 +6,101 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 17",
+        "Parameter": {
+          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+          "Cmd": "OUTP",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 405,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Output On/Off",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 3,
+          "CommunicationTimeout": 3000
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+            "Cmd": "OUTP",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 405,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Output On/Off",
+            "Units": null,
+            "Value": null,
+            "DeviceType": 3,
+            "CommunicationTimeout": 3000
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": -1
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set PS Output to ON",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "ScriptNodeSetParameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
@@ -65,6 +160,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -80,9 +176,86 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Active Discharge Voltage Check Interval To 2000",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 16",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": null,
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_mode",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Mode",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": null,
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_mode",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Mode",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": -1,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": -1
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set UUT to ATE Mode",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -248,6 +421,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -271,7 +449,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -439,6 +617,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -460,6 +643,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 28,
           "NIThermistorIndex": 0,
@@ -473,6 +657,7 @@
           "Parameter": null,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -483,9 +668,9 @@
         },
         "UserTitle": "Read Active Discharge FB (OFF)",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -507,7 +692,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -528,12 +713,13 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -549,9 +735,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Limit PS Current to 2A",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -600,6 +786,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -615,9 +802,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set PS to 300V",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -632,9 +819,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -664,7 +851,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:6ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -694,6 +881,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -707,6 +895,7 @@
           "Parameter": null,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -717,9 +906,9 @@
         },
         "UserTitle": "Verify PS 300V",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -848,7 +1037,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -988,7 +1177,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1006,6 +1195,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 19,
           "NIThermistorIndex": 0,
@@ -1021,9 +1211,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Active Discharge ON",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1038,9 +1228,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1206,6 +1396,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -1229,7 +1424,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:9ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1397,6 +1592,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -1418,6 +1618,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 28,
           "NIThermistorIndex": 0,
@@ -1431,6 +1632,7 @@
           "Parameter": null,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -1441,9 +1643,9 @@
         },
         "UserTitle": "Read Active Discharge FB (ON)",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1458,9 +1660,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1589,7 +1791,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1729,7 +1931,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1747,6 +1949,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 20,
           "NIThermistorIndex": 0,
@@ -1761,515 +1964,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Active Discharge OFF",
-        "IsPass": false,
-        "PassNextId": 12,
-        "FailNextId": 0,
-        "ID": 11,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareBit, ScriptHandler",
-        "Name": "Compare Bit 16",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": 1572872.0,
-          "GroupName": "Monitor",
-          "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
-          "Default": "0",
-          "Cmd": "fltvw1",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "No Active Fault",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "5V Sensor",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN Timeout",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN No Comm",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Performance Derating Bus Voltage",
-                "Value": "8"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Performance Derating MCU Temperature",
-                "Value": "16"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Performance Derating Motor Temperature",
-                "Value": "32"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN Bus Off",
-                "Value": "64"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN Error Active",
-                "Value": "128"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN Error Passive",
-                "Value": "256"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "CAN Signal Invalid",
-                "Value": "512"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Cooling Plate Over Temp",
-                "Value": "1024"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Cooling Plate Temp Sensor",
-                "Value": "2048"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Resolver Calibration Required",
-                "Value": "4096"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Discharge Timeout",
-                "Value": "8192"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Discharge Feedback Active Pbit",
-                "Value": "16384"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Discharge Feedback Active Cbit",
-                "Value": "32768"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Discharge Feedback InActive Pbit",
-                "Value": "65536"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Discharge Feedback InActive Cbit",
-                "Value": "131072"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Bus Voltage Plausibility",
-                "Value": "262144"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Current Sensor Factory Gain",
-                "Value": "524288"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "MCU Temp Plausibility",
-                "Value": "1048576"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Active Short Circuit",
-                "Value": "2097152"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Gate Drivers Feedback Active Pbit",
-                "Value": "4194304"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Gate Drivers Feedback Active Cbit",
-                "Value": "8388608"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Gate Drivers Feedback InActive Pbit",
-                "Value": "16777216"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Gate Drivers Feedback InActive Cbit",
-                "Value": "33554432"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "HV PBIT",
-                "Value": "67108864"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "FOC Control",
-                "Value": "134217728"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Fusa Pbit",
-                "Value": "268435456"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Fusa Cbit",
-                "Value": "536870912"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "I2T",
-                "Value": "1073741824"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Phase U Safe Over Current",
-                "Value": "-2147483648"
-              }
-            ]
-          },
-          "Name": "Faults Vector 1",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "BitIndex": 14,
-        "BitSelectedIndex": 14,
-        "UserTitle": "Read Active Discharge Fault (ON)",
-        "IsPass": false,
-        "PassNextId": 13,
-        "FailNextId": 0,
-        "ID": 12,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 17",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "ATECommand": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesOff",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesUHVL",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesUHWL",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesVHWL",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesVHUL",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesWHUL",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesWHVL",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut1_0",
-                "Value": "8"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut1_1",
-                "Value": "9"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut2_0",
-                "Value": "10"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut2_1",
-                "Value": "11"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut3_0",
-                "Value": "12"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_DigOut3_1",
-                "Value": "13"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_WatchdogTest",
-                "Value": "14"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_ResetWatchdogCounter",
-                "Value": "15"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_EolFlagPass_0",
-                "Value": "16"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_EolFlagPass_1",
-                "Value": "17"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_ExternalWDTReset",
-                "Value": "18"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_ActiveDischargeON",
-                "Value": "19"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_ActiveDischargeOFF",
-                "Value": "20"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                "Value": "21"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE_SET_PhasesUH",
-                "Value": "22"
-              }
-            ]
-          },
-          "Value": -1.0,
-          "GroupName": null,
-          "Description": null,
-          "Default": null,
-          "Cmd": "ate_set",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": null,
-          "Name": "ATE Set",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "Value": 0.0,
-        "ValueDropDwonIndex": -1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": -1.0,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 21,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 20,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Clear Active Discharge Fault",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -2439,6 +2133,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -2630,6 +2329,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -2651,6 +2355,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 28,
           "NIThermistorIndex": 0,
@@ -2664,6 +2369,7 @@
           "Parameter": null,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -2674,9 +2380,726 @@
         },
         "UserTitle": "Verify Active Discharge FB OFF",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 15,
         "FailNextId": 0,
         "ID": 14,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareBit, ScriptHandler",
+        "Name": "Compare Bit 16",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+          "Default": "0",
+          "Cmd": "fltvw1",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "No Active Fault",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "5V Sensor",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Timeout",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN No Comm",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating Bus Voltage",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating MCU Temperature",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating Motor Temperature",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Bus Off",
+                "Value": "64"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Error Active",
+                "Value": "128"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Error Passive",
+                "Value": "256"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Signal Invalid",
+                "Value": "512"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Cooling Plate Over Temp",
+                "Value": "1024"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Cooling Plate Temp Sensor",
+                "Value": "2048"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Resolver Calibration Required",
+                "Value": "4096"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Timeout",
+                "Value": "8192"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback Active Pbit",
+                "Value": "16384"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback Active Cbit",
+                "Value": "32768"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback InActive Pbit",
+                "Value": "65536"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback InActive Cbit",
+                "Value": "131072"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Bus Voltage Plausibility",
+                "Value": "262144"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Current Sensor Factory Gain",
+                "Value": "524288"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "MCU Temp Plausibility",
+                "Value": "1048576"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Short Circuit",
+                "Value": "2097152"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback Active Pbit",
+                "Value": "4194304"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback Active Cbit",
+                "Value": "8388608"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback InActive Pbit",
+                "Value": "16777216"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback InActive Cbit",
+                "Value": "33554432"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "HV PBIT",
+                "Value": "67108864"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "FOC Control",
+                "Value": "134217728"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fusa Pbit",
+                "Value": "268435456"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fusa Cbit",
+                "Value": "536870912"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "I2T",
+                "Value": "1073741824"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Phase U Safe Over Current",
+                "Value": "-2147483648"
+              }
+            ]
+          },
+          "Name": "Faults Vector 1",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "BitIndex": 14,
+        "ComparedValue": 1,
+        "BitSelectedIndex": 14,
+        "UserTitle": "Read Active Discharge Fault (ON)",
+        "IsPass": false,
+        "PassNextId": 16,
+        "FailNextId": 0,
+        "ID": 15,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 17",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "ATECommand": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesOff",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHVL",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHWL",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHWL",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHUL",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHUL",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHVL",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_0",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_1",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_0",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_1",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_0",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_WatchdogTest",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ResetWatchdogCounter",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_0",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_1",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUH",
+                "Value": "22"
+              }
+            ]
+          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_set",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ATE Set",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "ATECommand": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesOff",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHVL",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUHWL",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHWL",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesVHUL",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHUL",
+                  "Value": "5"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesWHVL",
+                  "Value": "6"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_0",
+                  "Value": "8"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut1_1",
+                  "Value": "9"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_0",
+                  "Value": "10"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut2_1",
+                  "Value": "11"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_0",
+                  "Value": "12"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_DigOut3_1",
+                  "Value": "13"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_WatchdogTest",
+                  "Value": "14"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ResetWatchdogCounter",
+                  "Value": "15"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_0",
+                  "Value": "16"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_EolFlagPass_1",
+                  "Value": "17"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ExternalWDTReset",
+                  "Value": "18"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeON",
+                  "Value": "19"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ActiveDischargeOFF",
+                  "Value": "20"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                  "Value": "21"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_SET_PhasesUH",
+                  "Value": "22"
+                }
+              ]
+            },
+            "Value": null,
+            "GroupName": null,
+            "Description": null,
+            "Default": null,
+            "Cmd": "ate_set",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "ATE Set",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 21,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 20,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Clear Active Discharge Fault",
+        "IsPass": false,
+        "PassNextId": 17,
+        "FailNextId": 0,
+        "ID": 16,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareBit, ScriptHandler",
+        "Name": "Compare Bit 18",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+          "Default": "0",
+          "Cmd": "fltvw1",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "No Active Fault",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "5V Sensor",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Timeout",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN No Comm",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating Bus Voltage",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating MCU Temperature",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Performance Derating Motor Temperature",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Bus Off",
+                "Value": "64"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Error Active",
+                "Value": "128"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Error Passive",
+                "Value": "256"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "CAN Signal Invalid",
+                "Value": "512"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Cooling Plate Over Temp",
+                "Value": "1024"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Cooling Plate Temp Sensor",
+                "Value": "2048"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Resolver Calibration Required",
+                "Value": "4096"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Timeout",
+                "Value": "8192"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback Active Pbit",
+                "Value": "16384"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback Active Cbit",
+                "Value": "32768"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback InActive Pbit",
+                "Value": "65536"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Discharge Feedback InActive Cbit",
+                "Value": "131072"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Bus Voltage Plausibility",
+                "Value": "262144"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Current Sensor Factory Gain",
+                "Value": "524288"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "MCU Temp Plausibility",
+                "Value": "1048576"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Active Short Circuit",
+                "Value": "2097152"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback Active Pbit",
+                "Value": "4194304"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback Active Cbit",
+                "Value": "8388608"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback InActive Pbit",
+                "Value": "16777216"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Gate Drivers Feedback InActive Cbit",
+                "Value": "33554432"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "HV PBIT",
+                "Value": "67108864"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "FOC Control",
+                "Value": "134217728"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fusa Pbit",
+                "Value": "268435456"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fusa Cbit",
+                "Value": "536870912"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "I2T",
+                "Value": "1073741824"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Phase U Safe Over Current",
+                "Value": "-2147483648"
+              }
+            ]
+          },
+          "Name": "Faults Vector 1",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "BitIndex": 14,
+        "ComparedValue": 0,
+        "BitSelectedIndex": 14,
+        "UserTitle": "Read Active Discharge Fault (OFF)",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

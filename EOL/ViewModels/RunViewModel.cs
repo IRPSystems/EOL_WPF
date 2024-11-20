@@ -215,33 +215,33 @@ namespace EOL.ViewModels
             }
 		}
 
-        private void LoadPrintFile()
-        {
-            //If user selected printer device, try loading & parse .prn file
-            foreach (var item in _devicesContainer.DevicesList)
-            {
-                if (item.DeviceType == DeviceTypesEnum.Printer_TSC)
-                {
-                    string printParserError;
-                    if (!_printFileParser.OpenPrintFile(out printParserError))
-                    {
-                        MessageBox.Show("Unable to open print file due to: " + printParserError + "\r\n" +
-                                        "If you wish to use the printer:\r\n" +
-                                        "Restart the app with a valid print file");
-                        LoggerService.Error(this, "Error loading print file");
-                    }
-                    else
-                    {
-                        LoggerService.Inforamtion(this, "Loaded & parsed print file successfully");
-                        break;
-                    }
-                }
-            }
-        }
-
 		#endregion Constructor
 
 		#region Methods
+
+		private void LoadPrintFile()
+		{
+			//If user selected printer device, try loading & parse .prn file
+			foreach (var item in _devicesContainer.DevicesList)
+			{
+				if (item.DeviceType == DeviceTypesEnum.Printer_TSC)
+				{
+					string printParserError;
+					if (!_printFileParser.OpenPrintFile(out printParserError))
+					{
+						MessageBox.Show("Unable to open print file due to: " + printParserError + "\r\n" +
+										"If you wish to use the printer:\r\n" +
+										"Restart the app with a valid print file");
+						LoggerService.Error(this, "Error loading print file");
+					}
+					else
+					{
+						LoggerService.Inforamtion(this, "Loaded & parsed print file successfully");
+						break;
+					}
+				}
+			}
+		}
 
 		public void ChangeDarkLight(bool isLightTheme)
 		{
@@ -791,6 +791,7 @@ namespace EOL.ViewModels
 		{
 			try
 			{
+
 				_timerDuration.Stop();
 				_runData.EndTime = DateTime.Now;
 
@@ -835,19 +836,22 @@ namespace EOL.ViewModels
 				_runData.NumberOfFailed = failed;
 				_runData.NumberOfPassed = passed;
 
-				if (failed > 0)
+				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU))
 				{
-					RunState = RunStateEnum.Failed;
-					singleTestResult.TestStatus = "Failed";
-					_stepSetParameter.Value = 0;
-				}
-				else
-				{
-					singleTestResult.TestStatus = "Passed";
-					_stepSetParameter.Value = 1;
-				}
+					if (failed > 0)
+					{
+						RunState = RunStateEnum.Failed;
+						singleTestResult.TestStatus = "Failed";
+						_stepSetParameter.Value = 0;
+					}
+					else
+					{
+						singleTestResult.TestStatus = "Passed";
+						_stepSetParameter.Value = 1;
+					}
 
-				_stepSetParameter.Execute();
+					_stepSetParameter.Execute();
+				}
 
 				singleTestResult.SerialNumber = _runData.SerialNumber;
 				singleTestResult.PartNumber = _runData.PartNumber;
@@ -973,6 +977,14 @@ namespace EOL.ViewModels
 			System.Threading.Thread.Sleep(100);
 			_adminView.Topmost = false;
 			_adminView.Focus();
+		}
+
+		public void CloseAdmin()
+		{
+			if (_adminView == null || _adminView.IsVisible == false)
+				return;
+
+			_adminView.Close();
 		}
 
 		#endregion Methods

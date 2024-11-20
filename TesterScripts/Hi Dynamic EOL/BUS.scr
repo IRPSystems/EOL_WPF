@@ -65,6 +65,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -92,29 +93,235 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 22",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Faults Disable",
+          "Description": "Choose whether this fault is ignored or not",
+          "Default": "Enabled",
+          "Cmd": "fltbuvi",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Enabled",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Disabled",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Battery Under Voltage                   - 0x823C",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Faults Disable",
+            "Description": "Choose whether this fault is ignored or not",
+            "Default": "Enabled",
+            "Cmd": "fltbuvi",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Enabled",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Disabled",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Battery Under Voltage                   - 0x823C",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Disable Bus Under Voltage Fault",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 23",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Faults Disable",
+          "Description": "Choose whether this fault is ignored or not",
+          "Default": "Enabled",
+          "Cmd": "fltblvi",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Enabled",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Disabled",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Battery Low Voltage                      - 0x8133",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Faults Disable",
+            "Description": "Choose whether this fault is ignored or not",
+            "Default": "Enabled",
+            "Cmd": "fltblvi",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Enabled",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Disabled",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Battery Low Voltage                      - 0x8133",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Disable Bus Low Voltage Fault",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
-          "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
-          "Default": "0",
-          "Cmd": "midcmdman",
+          "Value": "",
+          "GroupName": "Advanced",
+          "Description": "ATE Duty Cycle Ramp",
+          "Default": "1",
+          "Cmd": "atepwmramp",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -600.0,
-              600.0
+              0.0,
+              10.0
             ]
           },
           "Format": null,
-          "Scale": 10.0,
+          "Scale": 1.0,
           "Note": null,
-          "Save": false,
+          "Save": true,
           "DropDown": null,
-          "Name": "Manual ID Command",
-          "Units": "A",
+          "Name": "ATE Duty Cycle Ramp",
+          "Units": null,
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
@@ -127,30 +334,31 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
-            "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
-            "Default": "0",
-            "Cmd": "midcmdman",
+            "Value": "",
+            "GroupName": "Advanced",
+            "Description": "ATE Duty Cycle Ramp",
+            "Default": "1",
+            "Cmd": "atepwmramp",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -600.0,
-                600.0
+                0.0,
+                10.0
               ]
             },
             "Format": null,
-            "Scale": 10.0,
+            "Scale": 1.0,
             "Note": null,
-            "Save": false,
+            "Save": true,
             "DropDown": null,
-            "Name": "Manual ID Command",
-            "Units": "A",
+            "Name": "ATE Duty Cycle Ramp",
+            "Units": null,
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -166,9 +374,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set ATE PWM Ramp to 2",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -245,6 +453,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -260,9 +469,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set PS to Remote Control",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -284,7 +493,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -305,12 +514,13 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -326,9 +536,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set PS to 30A",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -343,9 +553,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -394,6 +604,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -409,9 +620,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Output Voltage to 50V",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -488,6 +699,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -503,9 +715,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set PS Output ON",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -550,7 +762,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 1,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -590,6 +802,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -603,11 +816,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Control Source to Manual",
+        "UserTitle": "Set UUT Control Source to VCU",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -736,6 +949,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -751,9 +965,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Enable Load Contactor ",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -822,6 +1036,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -837,9 +1052,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set ATE Duty Cycle to 1000",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -854,9 +1069,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -915,6 +1130,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": -1,
           "NIThermistorIndex": 0,
@@ -930,9 +1146,83 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Enter ATE Mode",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 14,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 21",
+        "ValueLeft": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor State",
+          "Default": "Neutral",
+          "Cmd": "mstate",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Neutral",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Run",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Lock",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fault",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
+              }
+            ]
+          },
+          "Name": "Motor State (Operation)",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "ValueRight": 4.0,
+        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex_NumatoGPIOPort": 0,
+        "Comparation": 0,
+        "IsUseAverage": false,
+        "AverageOfNRead": 0,
+        "UserTitle": "Get Motor State ATE",
+        "IsPass": false,
+        "PassNextId": 16,
+        "FailNextId": 0,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1061,7 +1351,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1201,7 +1491,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1219,6 +1509,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 22,
           "NIThermistorIndex": 0,
@@ -1234,9 +1525,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Phase U High Side ON",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1251,9 +1542,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1318,6 +1609,7 @@
           "command_to_device": "analog input current",
           "portLine": 0,
           "shunt_resistor": 0.0,
+          "numofcounts": 0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": null,
@@ -1335,9 +1627,9 @@
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate BUS",
         "IsPass": false,
-        "PassNextId": 16,
-        "FailNextId": 17,
-        "ID": 15,
+        "PassNextId": 19,
+        "FailNextId": 20,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1374,6 +1666,7 @@
           "command_to_device": "analog input current",
           "portLine": 0,
           "shunt_resistor": 0.0,
+          "numofcounts": 0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": null,
@@ -1387,7 +1680,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:16ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1421,6 +1714,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -1438,6 +1732,7 @@
             "command_to_device": "analog input current",
             "portLine": 0,
             "shunt_resistor": 0.0,
+            "numofcounts": 0,
             "DropDown": null,
             "ThermistorType": 0,
             "ThermistorTypeList": null,
@@ -1450,6 +1745,7 @@
           },
           "Ni6002_IOPort": 2,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 17.8,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -1460,9 +1756,9 @@
         },
         "UserTitle": "Validate BUS Calibration",
         "IsPass": false,
-        "PassNextId": 17,
-        "FailNextId": 17,
-        "ID": 16,
+        "PassNextId": 20,
+        "FailNextId": 20,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1591,7 +1887,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1731,7 +2027,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1749,6 +2045,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -1764,9 +2061,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Phase U High Side OFF",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 21,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1895,6 +2192,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -1912,7 +2210,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 18,
+        "ID": 21,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

@@ -1374,7 +1374,7 @@
         "Cmd": "mdrtmpcpmxs",
         "Range": [
           20,
-          95
+          200
         ],
         "Units": "°C",
         "Scale": 100,
@@ -1390,7 +1390,7 @@
         "Cmd": "mdrtmpcpmxc",
         "Range": [
           20,
-          100
+          200
         ],
         "Units": "°C",
         "Scale": 100,
@@ -3167,6 +3167,21 @@
         "Range": [
           0,
           1000
+        ],
+        "Units": null,
+        "Note": null,
+        "Save": true,
+        "DropDown": null
+      },
+	  {
+        "Name": "ATE Duty Cycle Ramp",
+        "Value": "",
+        "Description": "ATE Duty Cycle Ramp",
+        "Default": "1",
+        "Cmd": "atepwmramp",
+        "Range": [
+          0,
+          10
         ],
         "Units": null,
         "Note": null,

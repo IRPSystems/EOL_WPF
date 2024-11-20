@@ -55,6 +55,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": -1,
           "NIThermistorIndex": 0,
@@ -86,7 +87,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -191,7 +192,7 @@
           "CommunicationTimeout": 0
         },
         "Value": 0,
-        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -231,6 +232,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -317,6 +319,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -332,9 +335,183 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set AB Fault Threshold to 5000",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Deratings",
+          "Description": "Cooling Plate Temperature - Max Start Derating",
+          "Default": "80",
+          "Cmd": "mdrtmpcpmxs",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              20.0,
+              200.0
+            ]
+          },
+          "Format": null,
+          "Scale": 100.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Cooling Plate Temp - Max Start",
+          "Units": "°C",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 150.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Deratings",
+            "Description": "Cooling Plate Temperature - Max Start Derating",
+            "Default": "80",
+            "Cmd": "mdrtmpcpmxs",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                20.0,
+                200.0
+              ]
+            },
+            "Format": null,
+            "Scale": 100.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Cooling Plate Temp - Max Start",
+            "Units": "°C",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Cooling Temp Plate Max Start to 150",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Deratings",
+          "Description": "Cooling Plate Temperature - Max Cut Derating",
+          "Default": "90",
+          "Cmd": "mdrtmpcpmxc",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              20.0,
+              200.0
+            ]
+          },
+          "Format": null,
+          "Scale": 100.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Cooling Plate Temp - Max Cut",
+          "Units": "°C",
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "Value": 150.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Deratings",
+            "Description": "Cooling Plate Temperature - Max Cut Derating",
+            "Default": "90",
+            "Cmd": "mdrtmpcpmxc",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                20.0,
+                200.0
+              ]
+            },
+            "Format": null,
+            "Scale": 100.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": null,
+            "Name": "Cooling Plate Temp - Max Cut",
+            "Units": "°C",
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Cooling Temp Plate Max Cut to 150",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

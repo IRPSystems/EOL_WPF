@@ -89,8 +89,11 @@ namespace EOL.Services
 
             foreach (EOLStepSummeryData step in Steps)
             {
-                if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                if (step.Step != null && step.Step.EOLReportsSelectionData != null &&
+                    step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                {
                     continue;
+                }
 
 
                 string description = GetStepDescription(step);
@@ -108,10 +111,11 @@ namespace EOL.Services
 
 			foreach (EOLStepSummeryData step in Steps)
 			{
-				if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
-					continue;
+                if (step.Step != null && step.Step.EOLReportsSelectionData != null)
+                    if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                        continue;
 
-				if(step.TestValue != null)
+                if (step.TestValue != null)
                 {
                     values.Add(step.TestValue.ToString());
                     continue;
@@ -179,7 +183,12 @@ namespace EOL.Services
 
         private string GetFixedString(string source)
         {
+            if (string.IsNullOrEmpty(source))
+                return string.Empty;
+
             string dest = source;
+            if (dest == null)
+                return null;
 
 			dest = dest.Replace(",", "-");
 			dest = dest.Replace("\r", "");

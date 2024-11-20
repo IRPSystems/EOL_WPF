@@ -204,7 +204,7 @@ namespace EOL.Services
 					if (config.DevicesList != null)
 					{
 						userDefaultSettings.MCU = config.DevicesList.MCU;
-						userDefaultSettings.MCU_B2B = config.DevicesList.MCU_B2B;
+						userDefaultSettings.MCU_2 = config.DevicesList.MCU_2;
 						userDefaultSettings.ZimmerPowerMeter = config.DevicesList.ZimmerPowerMeter;
 						userDefaultSettings.NI_6002 = config.DevicesList.NI_6002;
 						userDefaultSettings.NI_6002_2 = config.DevicesList.NI_6002_2;

@@ -162,6 +162,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -188,6 +193,7 @@
           "command_to_device": "analog input thermistor",
           "portLine": 0,
           "shunt_resistor": 0.0,
+          "numofcounts": 0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": {
@@ -388,6 +394,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -409,6 +420,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 3,
           "NIThermistorIndex": 0,
@@ -426,6 +438,7 @@
             "command_to_device": "analog input thermistor",
             "portLine": 0,
             "shunt_resistor": 0.0,
+            "numofcounts": 0,
             "DropDown": null,
             "ThermistorType": 0,
             "ThermistorTypeList": {
@@ -457,6 +470,7 @@
           },
           "Ni6002_IOPort": 5,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 1,
@@ -635,6 +649,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_DutyCycleMaxFlag",
                 "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_CanDev1Test",
+                "Value": "30"
               }
             ]
           },
@@ -661,6 +680,7 @@
           "command_to_device": "analog input thermistor",
           "portLine": 0,
           "shunt_resistor": 0.0,
+          "numofcounts": 0,
           "DropDown": null,
           "ThermistorType": 0,
           "ThermistorTypeList": {
@@ -861,6 +881,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE_GET_DutyCycleMaxFlag",
                   "Value": "29"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ATE_GET_CanDev1Test",
+                  "Value": "30"
                 }
               ]
             },
@@ -882,6 +907,7 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 4,
           "NIThermistorIndex": 0,
@@ -899,6 +925,7 @@
             "command_to_device": "analog input thermistor",
             "portLine": 0,
             "shunt_resistor": 0.0,
+            "numofcounts": 0,
             "DropDown": null,
             "ThermistorType": 0,
             "ThermistorTypeList": {
@@ -930,6 +957,7 @@
           },
           "Ni6002_IOPort": 5,
           "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 1,
