@@ -34,7 +34,8 @@ namespace EOL.Models.Config
     public class DevicesList
     {
         public bool MCU { get; set; }
-        public bool MCU_B2B { get; set; }
+		public bool MCU2 { get; set; }
+		public bool MCU_B2B { get; set; }
         public bool ZimmerPowerMeter { get; set; }
         public bool NI_6002 { get; set; }
         public bool NI_6002_2 { get; set; }
@@ -45,6 +46,7 @@ namespace EOL.Models.Config
 		public DevicesList()
         {
             MCU = true;
+			MCU2 = true;
 			MCU_B2B = true;
 			ZimmerPowerMeter = true;
 			NI_6002 = true;

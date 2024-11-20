@@ -33,7 +33,7 @@
       },
       "DevicesList": {
         "MCU": "True",
-		"MCU_2": "True",
+		    "MCU_2": "True",
         "MCU_B2B": "True",
         "NI_6002": "True",
         "NI_6002_2": "True",

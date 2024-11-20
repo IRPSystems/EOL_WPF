@@ -185,6 +185,7 @@ namespace EOL.ViewModels
 				{
 					_eolSettings.DeviceSetupUserData.SetupDevicesList = new ObservableCollection<DeviceTypesEnum>();
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU);
+					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_2);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_B2B);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.ZimmerPowerMeter);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002);
@@ -308,6 +309,7 @@ namespace EOL.ViewModels
 			foreach (DeviceData device in devicesList)
 			{
 				if (device.DeviceType != DeviceTypesEnum.MCU &&
+					device.DeviceType != DeviceTypesEnum.MCU_2 &&
 					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
 					device.DeviceType != DeviceTypesEnum.ZimmerPowerMeter &&
 					device.DeviceType != DeviceTypesEnum.NI_6002 &&
