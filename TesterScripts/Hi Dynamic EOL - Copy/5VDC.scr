@@ -401,9 +401,9 @@
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": 1,
+          "AteCommand": 3,
           "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 1,
+          "AteCommandDropDwonIndex": 3,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
