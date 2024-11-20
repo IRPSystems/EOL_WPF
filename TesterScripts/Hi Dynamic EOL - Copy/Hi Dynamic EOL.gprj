@@ -75,7 +75,7 @@
                         "DeviceType": 21,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 0.0,
+                      "Value": 1.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -113,7 +113,7 @@
                       },
                       "UserTitle": "Disable 12V Supply Voltage (KL30)",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:1",
+                      "Description": "Set  \"Set IO (Numato GPIO)\" = 1 - ID:1",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:2",
                       "FailNextDescription": null,
