@@ -2583,25 +2583,6 @@
         },
         "BitIndex": 14,
         "ComparedValue": 1,
-        "BooleanValues": {
-          "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib",
-          "$values": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1
-          ]
-        },
         "BitSelectedIndex": 14,
         "UserTitle": "Read Active Discharge Fault (ON)",
         "IsPass": false,
@@ -3113,25 +3094,6 @@
         },
         "BitIndex": 14,
         "ComparedValue": 0,
-        "BooleanValues": {
-          "$type": "System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]], System.Private.CoreLib",
-          "$values": [
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1
-          ]
-        },
         "BitSelectedIndex": 14,
         "UserTitle": "Read Active Discharge Fault (OFF)",
         "IsPass": false,
