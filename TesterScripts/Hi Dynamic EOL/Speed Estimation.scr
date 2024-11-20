@@ -18,7 +18,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": null,
+          "Value": 1.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -39,7 +39,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": null,
+            "Value": 1.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -386,7 +386,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Run",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -445,7 +445,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "Run",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -642,7 +642,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "OFF",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -681,7 +681,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "OFF",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -1228,7 +1228,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1249,7 +1249,7 @@
         "TimeoutTimeUnite": 2,
         "Timeout": 30,
         "TargetValue": "500",
-        "Tolerance": 30.0,
+        "Tolerance": 1000.0,
         "UserTitle": "Converge Speed RPM Value 500",
         "IsPass": false,
         "PassNextId": 14,
@@ -1268,7 +1268,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1321,7 +1321,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -1675,7 +1675,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1696,7 +1696,7 @@
         "TimeoutTimeUnite": 2,
         "Timeout": 30,
         "TargetValue": "1300",
-        "Tolerance": 50.0,
+        "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM Value 1300",
         "IsPass": false,
         "PassNextId": 20,
@@ -1715,7 +1715,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1768,7 +1768,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -2122,7 +2122,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -2143,7 +2143,7 @@
         "TimeoutTimeUnite": 2,
         "Timeout": 30,
         "TargetValue": "2000",
-        "Tolerance": 30.0,
+        "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM Value 2000",
         "IsPass": false,
         "PassNextId": 26,
@@ -2162,7 +2162,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -2215,7 +2215,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -2291,7 +2291,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 0.0,
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -2322,7 +2322,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 0.0,
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -2465,7 +2465,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Run",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -2524,7 +2524,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "Run",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",

@@ -692,7 +692,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": null,
+          "Value": 1.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -713,7 +713,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": null,
+            "Value": 1.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1037,7 +1037,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": -1.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1177,7 +1177,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": -1.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1791,7 +1791,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": -1.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1931,7 +1931,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": -1.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -2396,7 +2396,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 1573896.0,
           "GroupName": "Monitor",
           "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
           "Default": "0",
@@ -2717,7 +2717,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": -1.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2857,7 +2857,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": -1.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -2907,7 +2907,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 1573896.0,
           "GroupName": "Monitor",
           "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
           "Default": "0",

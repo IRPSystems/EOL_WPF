@@ -62,10 +62,10 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Tolerance": 5.0,
+        "Tolerance": 50.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  5 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

@@ -493,7 +493,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": null,
+          "Value": 1.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -514,7 +514,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": null,
+            "Value": 1.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1162,7 +1162,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Run",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -1351,7 +1351,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": -1.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1491,7 +1491,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": -1.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1887,7 +1887,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": -1.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2027,7 +2027,7 @@
                 }
               ]
             },
-            "Value": null,
+            "Value": -1.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
