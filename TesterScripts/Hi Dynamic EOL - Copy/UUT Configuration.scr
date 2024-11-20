@@ -55,7 +55,6 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": -1,
           "NIThermistorIndex": 0,
@@ -232,7 +231,6 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -319,7 +317,6 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -360,7 +357,7 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0
+              95.0
             ]
           },
           "Format": null,
@@ -391,7 +388,7 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 20.0,
-                200.0
+                95.0
               ]
             },
             "Format": null,
@@ -406,7 +403,6 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
@@ -447,7 +443,7 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0
+              100.0
             ]
           },
           "Format": null,
@@ -478,7 +474,7 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 20.0,
-                200.0
+                100.0
               ]
             },
             "Format": null,
@@ -493,7 +489,6 @@
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
