@@ -182,6 +182,9 @@ namespace EOL.Services
 
         private string GetFixedString(string source)
         {
+            if (string.IsNullOrEmpty(source))
+                return string.Empty;
+
             string dest = source;
 
 			dest = dest.Replace(",", "-");
