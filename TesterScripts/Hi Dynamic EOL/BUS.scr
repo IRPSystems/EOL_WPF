@@ -1162,7 +1162,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Run",
+          "Value": "ATE",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -1351,7 +1351,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1491,7 +1491,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1887,7 +1887,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2027,7 +2027,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,

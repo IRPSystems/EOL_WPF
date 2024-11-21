@@ -10,7 +10,7 @@
         "FlashFilePath": "C:\\dev\\Dynamic_Project\\Dynamic_Device\\HD_Gen2_Main_App.cydsn\\CortexM0\\ARM_GCC_541\\Release\\HD_Gen2_Main_App.brn.hex",
         "RXId": "1CFFF9FE",
         "TXId": "1CFFFEF9",
-        "UdsSequence": 1,
+        "Customer": 3,
         "NumOfFlashFile": 0,
         "SourceModeGroupName": "EOLSourceMode_Flash - HD_Gen2_Main_App.brn.hex - ID:1",
         "IsEolSource": false,

@@ -200,7 +200,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Run",
+          "Value": "ATE",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -259,7 +259,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Run",
+            "Value": "ATE",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -355,7 +355,7 @@
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
-        "Value": 360.0,
+        "Value": 350.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -392,7 +392,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set VBUS Voltage to 360V",
+        "UserTitle": "Set VBUS Voltage to 350V",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -1055,7 +1055,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": 2002.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1095,7 +1095,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": 2002.0,
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1131,7 +1131,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": 2002.0,
             "GroupName": "Monitor",
             "Description": "Speed - RPM",
             "Default": "0",
@@ -1217,7 +1217,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": null,
+          "Value": 350.0,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -1280,7 +1280,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": null,
+            "Value": 350.0,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },

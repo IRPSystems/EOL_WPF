@@ -635,7 +635,7 @@
               }
             ]
           },
-          "Value": -1.0,
+          "Value": 0.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -775,7 +775,7 @@
                 }
               ]
             },
-            "Value": -1.0,
+            "Value": 0.0,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -842,7 +842,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 26.846,
+          "Value": 30.662,
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -878,7 +878,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 26.846,
+            "Value": 30.662,
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",
@@ -932,6 +932,23 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 7",
+        "Interval": 5,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 7,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
         "Name": "Sub Script 6",
         "ParentScriptName": "Watch Dog Test",
@@ -947,7 +964,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
