@@ -352,8 +352,12 @@ namespace EOL.ViewModels
             settings.Formatting = Formatting.Indented;
             settings.TypeNameHandling = TypeNameHandling.All;
             _logParametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
-			RunScript.ParamRecording.RecordDirectory = 
-				Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder);
+
+			if (string.IsNullOrEmpty(_userDefaultSettings.ReportsSavingPath) == false)
+			{
+				RunScript.ParamRecording.RecordDirectory =
+					Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder);
+			}
         }
 
         private void LoadSafetyScriptFromPath()
@@ -508,11 +512,14 @@ namespace EOL.ViewModels
 
         #region Pre Run Validations
         private bool PreRunValidations()
-		{ 
+		{
+#if !DEBUG
 			if (!CheckDeviceConnectivity())
 			{
                 return false;
             }
+#endif
+
             if (!ValidateRequiredOperatorInfo())
             {
                 return false;
@@ -714,9 +721,9 @@ namespace EOL.ViewModels
             }
             return true;
         }
-        #endregion
+#endregion
 
-        #region Load project
+		#region Load project
 
 
 		private int SetDataToScriptTool(
@@ -987,7 +994,7 @@ namespace EOL.ViewModels
 			_adminView.Close();
 		}
 
-		#endregion Methods
+#endregion Methods
 
 		#region Commands
 
@@ -996,6 +1003,6 @@ namespace EOL.ViewModels
 		public RelayCommand ContinueCommand { get; private set; }
 		public RelayCommand ShowAdminCommand { get; private set; }
 
-        #endregion Commands
+		#endregion Commands
     }
 }

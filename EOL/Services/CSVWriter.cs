@@ -97,8 +97,8 @@ namespace EOL.Services
 
 
                 string description = GetStepDescription(step);
-
-				headers.Add($"\"{description}\"");
+                description = $"\"{description}\"";
+				headers.Add(description);
 
             }
 
@@ -123,7 +123,8 @@ namespace EOL.Services
 
                 if(step.IsPass == false)
                 {
-					values.Add(step.ErrorDescription);
+                    string errorDescription = GetFixedString(step.ErrorDescription);
+					values.Add($"\"{errorDescription}\"");
 					continue;
 				}
 
@@ -175,10 +176,10 @@ namespace EOL.Services
 					description += $"{subScriptName};\r\n";
 			}
 
-            description += failedStep.ErrorMessage;
+            description += GetFixedString(failedStep.ErrorMessage);
+            description = $"\"{description}\"";
 
-
-			return $"\"{description}\"";
+			return description;
         }
 
         private string GetFixedString(string source)
@@ -193,6 +194,7 @@ namespace EOL.Services
 			dest = dest.Replace(",", "-");
 			dest = dest.Replace("\r", "");
 			dest = dest.Replace("\n", " - ");
+			//dest = dest.Replace("\"", " ");
 
 			return dest;
 		}
