@@ -410,6 +410,9 @@ namespace EOL.ViewModels
 
         private void RunScript_ScriptStartedEvent()
 		{
+			if (RunScript.CurrentScript.CurrentScript == _abortScript)
+				return;
+
 			ScriptDiagram.DrawScript(RunScript.CurrentScript.CurrentScript);
 		}
 
