@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using CsvHelper;
 using Org.BouncyCastle.Bcpg.Sig;
+using Services.Services;
 
 namespace EOL.Services
 {
@@ -123,7 +124,8 @@ namespace EOL.Services
 
                 if(step.IsPass == false)
                 {
-                    string errorDescription = GetFixedString(step.ErrorDescription);
+                    string errorDescription = 
+                        FixStringService.GetFixedString(step.ErrorDescription);
 					values.Add($"\"{errorDescription}\"");
 					continue;
 				}
@@ -136,22 +138,23 @@ namespace EOL.Services
 
         private string GetStepDescription(EOLStepSummeryData step)
         {
-			string testName = GetFixedString(step.TestName);
-			string subScriptName = GetFixedString(step.SubScriptName);
-			string parentStepDescription = GetFixedString(step.ParentStepDescription);
+            //string testName = GetFixedString(step.TestName);
+            //string subScriptName = GetFixedString(step.SubScriptName);
+            //string parentStepDescription = GetFixedString(step.ParentStepDescription);
 
-			string description = $"{testName};\r\n";
+            //string description = $"{testName};\r\n";
 
-			if (subScriptName != testName)
-				description += $"{subScriptName};\r\n";
+            //if (subScriptName != testName)
+            //	description += $"{subScriptName};\r\n";
 
 
-			if (string.IsNullOrEmpty(parentStepDescription) == false)
-				description += $"{parentStepDescription};\r\n";
+            //if (string.IsNullOrEmpty(parentStepDescription) == false)
+            //	description += $"{parentStepDescription};\r\n";
 
-			description += GetFixedString(step.Description);
+            //description += GetFixedString(step.Description);
 
-            return description;
+            //         return description;
+            return null;
 		}
 
         private string GetFailedStepDescription(ScriptStepBase failedStep)
@@ -167,37 +170,22 @@ namespace EOL.Services
                 EOLStepSummeryData eolStepSummeryData =
                     failedStep.EOLStepSummerysList[0];
 
-				string testName = GetFixedString(eolStepSummeryData.TestName);
-				string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
+				//string testName = GetFixedString(eolStepSummeryData.TestName);
+				//string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
 
-				description = $"{testName};\r\n";
+				//description = $"{testName};\r\n";
 
-				if (subScriptName != testName)
-					description += $"{subScriptName};\r\n";
+				//if (subScriptName != testName)
+				//	description += $"{subScriptName};\r\n";
 			}
 
-            description += GetFixedString(failedStep.ErrorMessage);
+            description += FixStringService.GetFixedString(failedStep.ErrorMessage);
             description = $"\"{description}\"";
 
 			return description;
         }
 
-        private string GetFixedString(string source)
-        {
-            if (string.IsNullOrEmpty(source))
-                return string.Empty;
-
-            string dest = source;
-            if (dest == null)
-                return null;
-
-			dest = dest.Replace(",", "-");
-			dest = dest.Replace("\r", "");
-			dest = dest.Replace("\n", " - ");
-			//dest = dest.Replace("\"", " ");
-
-			return dest;
-		}
+        
 
 		#endregion Methods
 	}

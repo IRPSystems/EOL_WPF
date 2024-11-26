@@ -905,22 +905,20 @@ namespace EOL.ViewModels
 				{
 					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
 
-					foreach(EOLStepSummeryData summery in stepBase.EOLStepSummerysList)
-					{
-						summery.SubScriptName = script.Name;
-						summery.TestName = test.Name;
-					}
+					stepBase.SubScriptName = script.Name;
+					stepBase.TestName = test.Name;
+
 
 					if (!(item is ISubScript))
 					{
-						if(stepBase.IsPass == false)
+						if (stepBase.IsPass == false)
 						{
 							failedStep = stepBase;
 						}
 					}
 				}
 
-				if(item is ISubScript subScript)
+				if (item is ISubScript subScript)
 				{
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
