@@ -46,10 +46,10 @@
 	  },
       "DevicesList": {
         "MCU": "True",
-        "MCU_B2B": "True",
+        "MCU_2": "True",
         "ZimmerPowerMeter": "True",
-        "NI_6002": "False",
-        "NI_6002_2": "False",
+        "NI_6002": "True",
+        "NI_6002_2": "True",
         "Printer_TSC": "True",
         "NumatoGPIO": "True",
         "PowerSupplayEA":  "True"
