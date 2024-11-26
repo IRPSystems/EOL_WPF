@@ -136,6 +136,9 @@ namespace EOL.ViewModels
 			EOLSettings.SaveEOLUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 			OperatorVM.Run.CloseAdmin();
+
+			if(_logLineList != null)
+				_logLineList.Dispose();
 		}
 
 		#region Load
