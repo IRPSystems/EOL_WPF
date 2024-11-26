@@ -23,6 +23,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.PowerSupplayEA;
+using DeviceCommunicators.NI_6002;
 
 namespace EOL.ViewModels
 {
@@ -68,7 +69,9 @@ namespace EOL.ViewModels
 
 		private SetupSelectionViewModel _setupSelectionVM;
 
-		private UserConfigManager _userConfigManager;
+        private NI6002_Init _initNI;
+
+        private UserConfigManager _userConfigManager;
 
 		private RunData _runData;
 
@@ -158,11 +161,11 @@ namespace EOL.ViewModels
 
 				LoggerService.Inforamtion(this, "Starting Loaded of EOLMainViewModel");
 
-				
-				
+
+                _initNI = new NI6002_Init(_logLineList);
 
 
-				_readDevicesFile = new ReadDevicesFileService();
+                _readDevicesFile = new ReadDevicesFileService();
 				_setupSelectionVM =
 					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
 				InitSetupView();
@@ -389,14 +392,31 @@ namespace EOL.ViewModels
 			}
 
 
+            if (DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.NI_6002) ||
+                DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.NI_6002_2))
+            {
+                _initNI.BindDevices();
+            }
 
-			foreach (DeviceData device in newDevices)
+
+            foreach (DeviceData device in newDevices)
 			{
 				DeviceFullData deviceFullData = DeviceFullData.Factory(device);
 
 				deviceFullData.Init("EOL", _logLineList);
 
-				if(deviceFullData.Device.DeviceType == DeviceTypesEnum.PowerSupplyEA)
+                if (device.DeviceType == Entities.Enums.DeviceTypesEnum.NI_6002 &&
+					string.IsNullOrEmpty(_initNI.NI_a) == false)
+                {
+                    (deviceFullData.ConnectionViewModel as NI6002ConncetViewModel).DeviceName = _initNI.NI_a;
+                }
+                else if (device.DeviceType == Entities.Enums.DeviceTypesEnum.NI_6002_2 &&
+						 string.IsNullOrEmpty(_initNI.NI_b) == false)
+                {
+                    (deviceFullData.ConnectionViewModel as NI6002ConncetViewModel).DeviceName = _initNI.NI_b;
+                }
+
+                if (deviceFullData.Device.DeviceType == DeviceTypesEnum.PowerSupplyEA)
 				{
 					(deviceFullData.DeviceCommunicator as PowerSupplayEA_Communicator).SetIsUseRampForOnOff(false);
 				}
@@ -408,6 +428,8 @@ namespace EOL.ViewModels
 
 				deviceFullData.Connect();
 			}
+
+
 		}
 
 		#endregion Load
@@ -423,7 +445,29 @@ namespace EOL.ViewModels
 
 		private void InitCommunicationSettings()
 		{
-			if (_communicationWindowView == null || _communicationWindowView.IsVisible == false)
+            if (DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.NI_6002) ||
+                DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.NI_6002_2))
+            {
+
+                _initNI.BindDevices();
+
+
+                foreach (DeviceFullData device in DevicesContainter.DevicesFullDataList)
+                {
+                    if (device.Device.DeviceType == DeviceTypesEnum.NI_6002 &&
+                        string.IsNullOrEmpty(_initNI.NI_a) == false)
+                    {
+                        (device.ConnectionViewModel as NI6002ConncetViewModel).DeviceName = _initNI.NI_a;
+                    }
+                    else if (device.Device.DeviceType == DeviceTypesEnum.NI_6002_2 &&
+                        string.IsNullOrEmpty(_initNI.NI_a) == false)
+                    {
+                        (device.ConnectionViewModel as NI6002ConncetViewModel).DeviceName = _initNI.NI_b;
+                    }
+                }
+            }
+
+            if (_communicationWindowView == null || _communicationWindowView.IsVisible == false)
 			{
 				_communicationWindowView = new CommunicationWindowView()
 				{
