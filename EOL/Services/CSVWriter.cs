@@ -7,6 +7,8 @@ using System.Reflection;
 using CsvHelper;
 using Org.BouncyCastle.Bcpg.Sig;
 using Services.Services;
+using System.Collections.ObjectModel;
+using ScriptHandler.Interfaces;
 
 namespace EOL.Services
 {
@@ -33,7 +35,9 @@ namespace EOL.Services
 
 		#region Methods
 
-		public void WriteTestResult(RunResult testResult)
+		public void WriteTestResult(
+            RunResult testResult,
+            List<GeneratedProjectData> projectsList)
         {
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
@@ -52,7 +56,7 @@ namespace EOL.Services
             // Collect headers if not already done
             if (!_headersWritten)
             {
-                _headers = GetHeaders(testResult.Steps);
+                _headers = GetHeaders(projectsList);
 				_headers.InsertRange(0, standardHeaders);
 
 
@@ -84,27 +88,52 @@ namespace EOL.Services
             }
         }
 
-        private List<string> GetHeaders(List<EOLStepSummeryData> Steps)
+        private List<string> GetHeaders(
+			List<GeneratedProjectData> projectsList)
         {
             List<string> headers = new List<string>();
 
-            foreach (EOLStepSummeryData step in Steps)
+            foreach (GeneratedProjectData project in projectsList)
             {
-                if (step.Step != null && step.Step.EOLReportsSelectionData != null &&
-                    step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                foreach(GeneratedScriptData scriptData in project.TestsList)
                 {
+                    List<string> scriptHeaders = 
+                        GetScriptHeaders(scriptData.ScriptItemsList);
+                    headers.AddRange(scriptHeaders);
+				}
+            }
+
+    
+
+            return headers;
+        }
+
+        private List<string> GetScriptHeaders(ObservableCollection<IScriptItem> scriptItemsList)
+        {
+            List<string> headers = new List<string>();
+            foreach (IScriptItem item in scriptItemsList)
+            {
+                if(item is ISubScript subScript)
+                {
+					List<string> subScriptHeaders = 
+                        GetScriptHeaders(subScript.Script.ScriptItemsList);
+                    headers.AddRange(subScriptHeaders);
                     continue;
                 }
 
+                if(!(item is ScriptStepBase stepBase)) 
+                    continue;
 
-                string description = GetStepDescription(step);
-                description = $"\"{description}\"";
-				headers.Add(description);
+                if(stepBase.EOLReportsSelectionData.IsSaveToReport == false)
+                    continue;
+
+                List<string> itemHeaders = stepBase.GetReportHeaders();
+                headers.AddRange(itemHeaders);
 
             }
 
             return headers;
-        }
+		}
 
         private List<string> GetValues(List<EOLStepSummeryData> Steps)
 		{
