@@ -376,7 +376,7 @@
         "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 0,
+          "Io_port": 1,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
           "portLine": 0,
@@ -400,7 +400,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 0,
+            "Io_port": 1,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
             "portLine": 0,

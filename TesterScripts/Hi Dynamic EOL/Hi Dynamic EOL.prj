@@ -55,7 +55,8 @@
       "..\\Peak Operation.scr",
       "..\\Compare Manual Angle.scr",
       "..\\Power Down.tst",
-      "..\\Shut Down.scr"
+      "..\\Shut Down.scr",
+      "..\\Abort Script Nothing.scr"
     ]
   },
   "RecordParametersFile": null,

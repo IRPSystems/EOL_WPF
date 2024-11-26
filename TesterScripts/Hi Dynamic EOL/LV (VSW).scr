@@ -200,7 +200,7 @@
           "IsThermistorUsed": false,
           "Name": "Analog Input",
           "Units": null,
-          "Value": null,
+          "Value": 5.057896809768863,
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
@@ -426,7 +426,7 @@
             "IsThermistorUsed": false,
             "Name": "Analog Input",
             "Units": null,
-            "Value": null,
+            "Value": 5.057896809768863,
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },

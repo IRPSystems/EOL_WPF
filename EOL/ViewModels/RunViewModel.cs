@@ -537,21 +537,21 @@ namespace EOL.ViewModels
 
         private bool CheckDeviceConnectivity()
         {
-			string errorMsg = "Please connect this devices:\r\n";
-			bool isMissingConnection = false;
-            foreach(DeviceFullData device in _devicesContainer.DevicesFullDataList)
-			{
-				if(device.CommState != DeviceHandler.Enums.CommunicationStateEnum.Connected)
-				{
-					errorMsg += device.Device.Name + "\r\n";
-                    isMissingConnection = true;
-                }
-            }
-			if (isMissingConnection)
-			{
-				MessageBox.Show(errorMsg);
-				return false;
-			}
+			//string errorMsg = "Please connect this devices:\r\n";
+			//bool isMissingConnection = false;
+   //         foreach(DeviceFullData device in _devicesContainer.DevicesFullDataList)
+			//{
+			//	if(device.CommState != DeviceHandler.Enums.CommunicationStateEnum.Connected)
+			//	{
+			//		errorMsg += device.Device.Name + "\r\n";
+   //                 isMissingConnection = true;
+   //             }
+   //         }
+			//if (isMissingConnection)
+			//{
+			//	MessageBox.Show(errorMsg);
+			//	return false;
+			//}
 			return true;
         }
 

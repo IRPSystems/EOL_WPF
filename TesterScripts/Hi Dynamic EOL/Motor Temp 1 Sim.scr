@@ -443,7 +443,7 @@
         "IncrementValue": 0.001,
         "SetFirstValue": 2.296,
         "LoopsAmount": 69,
-        "Interval": 50,
+        "Interval": 80,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -943,8 +943,8 @@
         },
         "IncrementValue": 0.001,
         "SetFirstValue": 2.365,
-        "LoopsAmount": 125,
-        "Interval": 50,
+        "LoopsAmount": 128,
+        "Interval": 80,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1443,9 +1443,9 @@
           "CommunicationTimeout": 0
         },
         "IncrementValue": 0.001,
-        "SetFirstValue": 2.49,
+        "SetFirstValue": 2.493,
         "LoopsAmount": 116,
-        "Interval": 50,
+        "Interval": 80,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -1944,9 +1944,9 @@
           "CommunicationTimeout": 0
         },
         "IncrementValue": 0.001,
-        "SetFirstValue": 2.606,
-        "LoopsAmount": 139,
-        "Interval": 50,
+        "SetFirstValue": 2.609,
+        "LoopsAmount": 137,
+        "Interval": 80,
         "IntervalUnite": 1,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",

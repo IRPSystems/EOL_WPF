@@ -579,7 +579,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -2544,7 +2544,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -2904,7 +2904,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -3319,13 +3319,298 @@
                       "Name": "Set Parameter 6",
                       "Description": "Set  \"Cooling Plate Temp - Max Cut (MCU)\" = 150 - ID:6",
                       "IsPass": false,
-                      "PassNextDescription": null,
+                      "PassNextDescription": "Set  \"Battery Under Voltage                   - 0x823C (MCU)\" = 1 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 6,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "fltbuvi",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Battery Under Voltage                   - 0x823C",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable Bus Under Voltage Fault",
+                      "Name": "Set Parameter 7",
+                      "Description": "Set  \"Battery Under Voltage                   - 0x823C (MCU)\" = 1 - ID:7",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Battery Low Voltage                      - 0x8133 (MCU)\" = 1 - ID:8",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 7,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "fltblvi",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Battery Low Voltage                      - 0x8133",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable Bus Low Voltage Fault",
+                      "Name": "Set Parameter 8",
+                      "Description": "Set  \"Battery Low Voltage                      - 0x8133 (MCU)\" = 1 - ID:8",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:9",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 8,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "fltpoti",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Cooling Plate Over Temperature  - 0x8105",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable Cooling Plate Temp Fault",
+                      "Name": "Set Parameter 9",
+                      "Description": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:9",
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -6067,7 +6352,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -6182,7 +6467,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -6372,7 +6657,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -6459,7 +6744,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -6661,7 +6946,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -6748,7 +7033,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -10089,7 +10374,7 @@
                     },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepLoopIncrement, ScriptHandler",
-                      "Interval": 50,
+                      "Interval": 80,
                       "IntervalUnite": 1,
                       "IncrementValue": 0.001,
                       "SetFirstValue": 2.296,
@@ -10405,7 +10690,7 @@
                       "Name": "Compare With Tolerance 4",
                       "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 20 ±  1 - ID:4",
                       "IsPass": false,
-                      "PassNextDescription": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 125 Times - ID:5",
+                      "PassNextDescription": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 128 Times - ID:5",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -10426,11 +10711,11 @@
                     },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepLoopIncrement, ScriptHandler",
-                      "Interval": 50,
+                      "Interval": 80,
                       "IntervalUnite": 1,
                       "IncrementValue": 0.001,
                       "SetFirstValue": 2.365,
-                      "LoopsAmount": 125,
+                      "LoopsAmount": 128,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -10465,7 +10750,7 @@
                       },
                       "UserTitle": "Motor Temp 1 Increment to 50",
                       "Name": "Loop Increment 5",
-                      "Description": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 125 Times - ID:5",
+                      "Description": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 128 Times - ID:5",
                       "IsPass": false,
                       "PassNextDescription": "Delay 4000 ms - ID:6",
                       "FailNextDescription": null,
@@ -10763,10 +11048,10 @@
                     },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepLoopIncrement, ScriptHandler",
-                      "Interval": 50,
+                      "Interval": 80,
                       "IntervalUnite": 1,
                       "IncrementValue": 0.001,
-                      "SetFirstValue": 2.49,
+                      "SetFirstValue": 2.493,
                       "LoopsAmount": 116,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
@@ -11079,7 +11364,7 @@
                       "Name": "Compare With Tolerance 11",
                       "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 80 ±  1 - ID:10",
                       "IsPass": false,
-                      "PassNextDescription": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 139 Times - ID:11",
+                      "PassNextDescription": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 137 Times - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -11100,11 +11385,11 @@
                     },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepLoopIncrement, ScriptHandler",
-                      "Interval": 50,
+                      "Interval": 80,
                       "IntervalUnite": 1,
                       "IncrementValue": 0.001,
-                      "SetFirstValue": 2.606,
-                      "LoopsAmount": 139,
+                      "SetFirstValue": 2.609,
+                      "LoopsAmount": 137,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -11139,7 +11424,7 @@
                       },
                       "UserTitle": "Motor Temp 1 Increment to 120",
                       "Name": "Loop Increment 12",
-                      "Description": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 139 Times - ID:11",
+                      "Description": "Loop Increment  \"Analog Output (NI DUCK 2)\" By 0.001 For 137 Times - ID:11",
                       "IsPass": false,
                       "PassNextDescription": "Delay 4000 ms - ID:12",
                       "FailNextDescription": null,
@@ -14333,7 +14618,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -14529,7 +14814,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -14725,7 +15010,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -15203,7 +15488,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -15399,7 +15684,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -15595,7 +15880,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16476,7 +16761,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16587,7 +16872,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 26.846,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Runtime",
                         "Default": "0",
@@ -16648,13 +16933,43 @@
                       "Name": "Compare With Tolerance 4",
                       "Description": "Compare with tolerance:  \"Runtime (MCU)\" = 1.5 ±  1.5 - ID:5",
                       "IsPass": false,
-                      "PassNextDescription": "Sub Script = UUT Configuration - Repeats: 1 - ID:6",
+                      "PassNextDescription": "Delay 5 sec - ID:6",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 5,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 5,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Delay",
+                      "Name": "Delay 7",
+                      "Description": "Delay 5 sec - ID:6",
+                      "IsPass": false,
+                      "PassNextDescription": "Sub Script = UUT Configuration - Repeats: 1 - ID:7",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 6,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -16762,7 +17077,7 @@
                               "ValueLeft": {
                                 "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                                 "ValueChanged": null,
-                                "Value": "Run",
+                                "Value": "",
                                 "GroupName": "Operation",
                                 "Description": "Motor State",
                                 "Default": "Neutral",
@@ -17177,13 +17492,298 @@
                               "Name": "Set Parameter 6",
                               "Description": "Set  \"Cooling Plate Temp - Max Cut (MCU)\" = 150 - ID:6",
                               "IsPass": false,
-                              "PassNextDescription": null,
+                              "PassNextDescription": "Set  \"Battery Under Voltage                   - 0x823C (MCU)\" = 1 - ID:7",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
                               "BorderBrush": null,
                               "StepState": 0,
                               "ID": 6,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "fltbuvi",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "Battery Under Voltage                   - 0x823C",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable Bus Under Voltage Fault",
+                              "Name": "Set Parameter 7",
+                              "Description": "Set  \"Battery Under Voltage                   - 0x823C (MCU)\" = 1 - ID:7",
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"Battery Low Voltage                      - 0x8133 (MCU)\" = 1 - ID:8",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 7,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "fltblvi",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "Battery Low Voltage                      - 0x8133",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable Bus Low Voltage Fault",
+                              "Name": "Set Parameter 8",
+                              "Description": "Set  \"Battery Low Voltage                      - 0x8133 (MCU)\" = 1 - ID:8",
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:9",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 8,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "fltpoti",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "Cooling Plate Over Temperature  - 0x8105",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable Cooling Plate Temp Fault",
+                              "Name": "Set Parameter 9",
+                              "Description": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:9",
+                              "IsPass": false,
+                              "PassNextDescription": null,
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 9,
                               "EOLReportsSelectionData": {
                                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                                 "IsSaveToReport": false,
@@ -17216,17 +17816,17 @@
                       "IsStopOnFail": true,
                       "IsStopOnPass": false,
                       "IsInfinity": false,
-                      "ErrorMessage": "Failed to run the sub script \"Sub Script = UUT Configuration - Repeats: 1 - ID:6\"",
+                      "ErrorMessage": "Failed to run the sub script \"Sub Script = UUT Configuration - Repeats: 1 - ID:7\"",
                       "UserTitle": null,
                       "Name": "Sub Script 6",
-                      "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:6",
+                      "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:7",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 6,
+                      "ID": 7,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -17378,7 +17978,7 @@
                       "Name": "Set Parameter 17",
                       "Description": "Set  \"Output On/Off (EA Power)\" = 1 - ID:1",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Voltage Check Interval (MCU)\" = 2000 - ID:2",
+                      "PassNextDescription": "Delay 2 sec - ID:2",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -17398,72 +17998,15 @@
                       "ProgressPercentage": 0
                     },
                     {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Active Discharge",
-                        "Description": "Voltage Check Interval",
-                        "Default": "",
-                        "Cmd": "adcheckint",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            10000.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 1.0,
-                        "Note": null,
-                        "Save": true,
-                        "DropDown": null,
-                        "Name": "Voltage Check Interval",
-                        "Units": "mSec",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 2000.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Active Discharge Voltage Check Interval To 2000",
-                      "Name": "ScriptNodeSetParameter 13",
-                      "Description": "Set  \"Voltage Check Interval (MCU)\" = 2000 - ID:2",
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 2,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Delay",
+                      "Name": "Delay 20",
+                      "Description": "Delay 2 sec - ID:2",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:3",
                       "FailNextDescription": null,
@@ -17547,13 +18090,183 @@
                       "Name": "Set Parameter 16",
                       "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:3",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:4",
+                      "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 3,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                      "ValueLeft": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Operation",
+                        "Description": "Motor State",
+                        "Default": "Neutral",
+                        "Cmd": "mstate",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Neutral",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Run",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Lock",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Fault",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Init",
+                              "Value": "6"
+                            }
+                          ]
+                        },
+                        "Name": "Motor State (Operation)",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "ValueRight": 4.0,
+                      "Comparation": 0,
+                      "IsUseAverage": false,
+                      "AverageOfNRead": 0,
+                      "Parameter": null,
+                      "UserTitle": "Get Motor State (ATE)",
+                      "Name": "Compare 19",
+                      "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:4",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Voltage Check Interval (MCU)\" = 2000 - ID:5",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 4,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Active Discharge",
+                        "Description": "Voltage Check Interval",
+                        "Default": "",
+                        "Cmd": "adcheckint",
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            0.0,
+                            10000.0
+                          ]
+                        },
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": null,
+                        "Name": "Voltage Check Interval",
+                        "Units": "mSec",
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 2000.0,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set Active Discharge Voltage Check Interval To 2000",
+                      "Name": "ScriptNodeSetParameter 13",
+                      "Description": "Set  \"Voltage Check Interval (MCU)\" = 2000 - ID:5",
+                      "IsPass": false,
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:6",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 5,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -17790,15 +18503,15 @@
                       },
                       "UserTitle": "Read Active Discharge FB (OFF)",
                       "Name": "Compare With Tolerance 16",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:4",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:6",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"(PS) Current Limit (EA Power)\" = 2 - ID:5",
+                      "PassNextDescription": "Set  \"(PS) Current Limit (EA Power)\" = 2 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 4,
+                      "ID": 6,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -17824,7 +18537,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -17867,15 +18580,15 @@
                       },
                       "UserTitle": "Limit PS Current to 2A",
                       "Name": "Set Parameter 1",
-                      "Description": "Set  \"(PS) Current Limit (EA Power)\" = 2 - ID:5",
+                      "Description": "Set  \"(PS) Current Limit (EA Power)\" = 2 - ID:7",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:6",
+                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:8",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 5,
+                      "ID": 7,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -17944,15 +18657,15 @@
                       },
                       "UserTitle": "Set PS to 300V",
                       "Name": "Set Parameter 2",
-                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:6",
+                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:8",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 2 sec - ID:7",
+                      "PassNextDescription": "Delay 2 sec - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 6,
+                      "ID": 8,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -17974,15 +18687,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 5",
-                      "Description": "Delay 2 sec - ID:7",
+                      "Description": "Delay 2 sec - ID:9",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:8",
+                      "PassNextDescription": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 7,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18055,15 +18768,15 @@
                       },
                       "UserTitle": "Verify PS 300V",
                       "Name": "Compare With Tolerance 4",
-                      "Description": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:8",
+                      "Description": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:10",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:9",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 8,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18196,7 +18909,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18251,15 +18964,15 @@
                       },
                       "UserTitle": "Set Active Discharge ON",
                       "Name": "Set Parameter 3",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:9",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:10",
+                      "PassNextDescription": "Delay 1 sec - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 9,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18281,15 +18994,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 20",
-                      "Description": "Delay 1 sec - ID:10",
+                      "Description": "Delay 1 sec - ID:12",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:11",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 10,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18526,15 +19239,15 @@
                       },
                       "UserTitle": "Read Active Discharge FB (ON)",
                       "Name": "Compare With Tolerance 14",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:11",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:13",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 5 sec - ID:12",
+                      "PassNextDescription": "Delay 5 sec - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 11,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18556,15 +19269,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 15",
-                      "Description": "Delay 5 sec - ID:12",
+                      "Description": "Delay 5 sec - ID:14",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18697,7 +19410,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18752,15 +19465,15 @@
                       },
                       "UserTitle": "Set Active Discharge OFF",
                       "Name": "Set Parameter 8",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:15",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:14",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 13,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18997,15 +19710,15 @@
                       },
                       "UserTitle": "Verify Active Discharge FB OFF",
                       "Name": "Compare With Tolerance 12",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:14",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:16",
                       "IsPass": false,
-                      "PassNextDescription": "Compare BIT \"Faults Vector 1\" to Value - ID:15",
+                      "PassNextDescription": "Compare BIT \"Faults Vector 1\" to Value - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -19025,7 +19738,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 1573896.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
                         "Default": "0",
@@ -19212,15 +19925,15 @@
                       },
                       "UserTitle": "Read Active Discharge Fault (ON)",
                       "Name": "Compare Bit 16",
-                      "Description": "Compare BIT \"Faults Vector 1\" to Value - ID:15",
+                      "Description": "Compare BIT \"Faults Vector 1\" to Value - ID:17",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:16",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -19353,7 +20066,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -19408,15 +20121,15 @@
                       },
                       "UserTitle": "Clear Active Discharge Fault",
                       "Name": "Set Parameter 17",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:16",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
                       "IsPass": false,
-                      "PassNextDescription": "Compare BIT \"Faults Vector 1\" to Value - ID:17",
+                      "PassNextDescription": "Compare BIT \"Faults Vector 1\" to Value - ID:19",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -19436,7 +20149,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 1573896.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
                         "Default": "0",
@@ -19622,8 +20335,8 @@
                         "CommunicationTimeout": 0
                       },
                       "UserTitle": "Read Active Discharge Fault (OFF)",
-                      "Name": "Compare Bit 18",
-                      "Description": "Compare BIT \"Faults Vector 1\" to Value - ID:17",
+                      "Name": "Compare Bit 20",
+                      "Description": "Compare BIT \"Faults Vector 1\" to Value - ID:19",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -19631,7 +20344,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -20179,7 +20892,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -20857,7 +21570,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -21055,7 +21768,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21480,7 +22193,7 @@
                             }
                           ]
                         },
-                        "Value": -1.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21814,7 +22527,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -22146,7 +22859,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -22356,7 +23069,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -22451,7 +23164,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -22750,7 +23463,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -22867,7 +23580,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -23183,7 +23896,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -23402,7 +24115,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -23621,7 +24334,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -23840,7 +24553,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -24446,7 +25159,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -24563,7 +25276,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -24879,7 +25592,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -25098,7 +25811,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -25317,7 +26030,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -25536,7 +26249,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -25718,7 +26431,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -26024,7 +26737,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -26032,12 +26745,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain U",
                       "Name": "Save Parameter 1",
@@ -26102,7 +26815,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -26110,12 +26823,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain V",
                       "Name": "Save Parameter 2",
@@ -26180,7 +26893,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -26188,12 +26901,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "Name": "Save Parameter 3",
@@ -26549,7 +27262,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -26759,7 +27472,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -28993,7 +29706,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -29347,7 +30060,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -29562,7 +30275,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -30128,7 +30841,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -30172,7 +30885,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -30577,7 +31290,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -30597,7 +31310,7 @@
                       "Name": "ScriptNodeConverge 8",
                       "Description": "Converge  \"Speed - RPM (MCU)\" = 1300 - ID:19",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:20",
+                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  5 - ID:20",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -30621,7 +31334,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -30655,10 +31368,10 @@
                         "DeviceType": 9,
                         "CommunicationTimeout": 25000
                       },
-                      "Tolerance": 30.0,
+                      "Tolerance": 5.0,
                       "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
+                      "IsValueTolerance": false,
+                      "IsPercentageTolerance": true,
                       "IsUseParamAverage": false,
                       "AverageOfNRead_Param": 0,
                       "IsUseParamFactor": false,
@@ -30686,7 +31399,7 @@
                         "Parameter": null,
                         "Ni6002_IOPort": 0,
                         "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 400,
+                        "NI6002_NumofCounts": 200,
                         "NIDAQShuntResistor": 0.0,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
@@ -30697,7 +31410,7 @@
                       },
                       "UserTitle": "Read Speed Sensor 1300 RPM",
                       "Name": "ScriptNodeCompareWithTolerance 9",
-                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:20",
+                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  5 - ID:20",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Torque Set Point (MCU)\" = 0 - ID:21",
                       "FailNextDescription": null,
@@ -31026,7 +31739,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -31046,7 +31759,7 @@
                       "Name": "ScriptNodeConverge 16",
                       "Description": "Converge  \"Speed - RPM (MCU)\" = 2000 - ID:25",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:26",
+                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  5 - ID:26",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -31070,7 +31783,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -31104,10 +31817,10 @@
                         "DeviceType": 9,
                         "CommunicationTimeout": 25000
                       },
-                      "Tolerance": 30.0,
+                      "Tolerance": 5.0,
                       "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
+                      "IsValueTolerance": false,
+                      "IsPercentageTolerance": true,
                       "IsUseParamAverage": false,
                       "AverageOfNRead_Param": 0,
                       "IsUseParamFactor": false,
@@ -31135,7 +31848,7 @@
                         "Parameter": null,
                         "Ni6002_IOPort": 0,
                         "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 400,
+                        "NI6002_NumofCounts": 200,
                         "NIDAQShuntResistor": 0.0,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
@@ -31146,7 +31859,7 @@
                       },
                       "UserTitle": "Read Speed Sensor 2000 RPM",
                       "Name": "ScriptNodeCompareWithTolerance 17",
-                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  30 - ID:26",
+                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = \"Digital Counter (NI DUCK)\" ±  5 - ID:26",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:27",
                       "FailNextDescription": null,
@@ -31172,7 +31885,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -31346,7 +32059,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -31528,7 +32241,7 @@
                       "FilePath": "C:\\dev\\Dynamic_Project\\Dynamic_Device\\HD_Gen2_Main_App.cydsn\\CortexM0\\ARM_GCC_541\\Release\\HD_Gen2_Main_App.brn.hex",
                       "RXId": "1CFFF9FE",
                       "TXId": "1CFFFEF9",
-                      "UdsSequence": 1,
+                      "Customer": 3,
                       "NumOfFlashFile": 0,
                       "IsEolSource": false,
                       "IsToolSource": true,
@@ -32112,7 +32825,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -32312,7 +33025,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -32567,7 +33280,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -32757,7 +33470,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -32820,7 +33533,7 @@
                       "Name": "Set Parameter 6",
                       "Description": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 66.666 - ID:11",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -32844,7 +33557,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -32866,7 +33579,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 66.666,
+                      "Value": 20.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -32903,11 +33616,11 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT to 1000RPM",
+                      "UserTitle": "Set UUT to 300RPM",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 66.666 - ID:11",
+                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 1000 - ID:12",
+                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -32932,7 +33645,7 @@
                       "ConvergeTime": 5,
                       "TimeoutTimeUnite": 2,
                       "Timeout": 30,
-                      "TargetValue": "1000",
+                      "TargetValue": "300",
                       "Tolerance": 30.0,
                       "Diff_WaitToEnterValue": "00:00:00",
                       "TsTimeout": "00:00:00",
@@ -32943,7 +33656,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -32961,9 +33674,9 @@
                       },
                       "UserTitle": "Converge Speed RPM",
                       "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 1000 - ID:12",
+                      "Description": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 1000 ±  30 - ID:13",
+                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -32987,7 +33700,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -33003,7 +33716,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "CompareValue": "1000",
+                      "CompareValue": "300",
                       "Tolerance": 30.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
@@ -33044,9 +33757,9 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Compare UUT Speed to 1000RPM",
+                      "UserTitle": "Compare UUT Speed to 300RPM",
                       "Name": "Compare With Tolerance 20",
-                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 1000 ±  30 - ID:13",
+                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:14",
                       "FailNextDescription": null,
@@ -33171,7 +33884,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -33258,7 +33971,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -33608,7 +34321,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -33699,7 +34412,7 @@
                       "Name": "Set Parameter 23",
                       "Description": "Set  \"Motor State (Operation) (MCU)\" = 0 - ID:3",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 360 - ID:4",
+                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 350 - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -33735,7 +34448,7 @@
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 360.0,
+                      "Value": 350.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -33772,9 +34485,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set VBUS Voltage to 360V",
+                      "UserTitle": "Set VBUS Voltage to 350V",
                       "Name": "Set Parameter 1",
-                      "Description": "Set  \"Voltage Limit (EA Power)\" = 360 - ID:4",
+                      "Description": "Set  \"Voltage Limit (EA Power)\" = 350 - ID:4",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"(PS) Current Limit (EA Power)\" = 10 - ID:5",
                       "FailNextDescription": null,
@@ -33808,7 +34521,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -34063,7 +34776,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -34253,7 +34966,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -34316,7 +35029,7 @@
                       "Name": "Set Parameter 6",
                       "Description": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 66.666 - ID:11",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -34340,7 +35053,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -34362,7 +35075,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 66.666,
+                      "Value": 20.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -34399,11 +35112,11 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT to 1000RPM",
+                      "UserTitle": "Set UUT to 300RPM",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 66.666 - ID:11",
+                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 1000 - ID:12",
+                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -34428,7 +35141,7 @@
                       "ConvergeTime": 5,
                       "TimeoutTimeUnite": 2,
                       "Timeout": 30,
-                      "TargetValue": "1000",
+                      "TargetValue": "300",
                       "Tolerance": 30.0,
                       "Diff_WaitToEnterValue": "00:00:00",
                       "TsTimeout": "00:00:00",
@@ -34439,7 +35152,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -34457,9 +35170,9 @@
                       },
                       "UserTitle": "Converge Speed RPM",
                       "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 1000 - ID:12",
+                      "Description": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 1000 ±  30 - ID:13",
+                      "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -34483,7 +35196,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -34499,7 +35212,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "CompareValue": "1000",
+                      "CompareValue": "300",
                       "Tolerance": 30.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
@@ -34540,9 +35253,9 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Compare UUT Speed to 1000RPM",
+                      "UserTitle": "Compare UUT Speed to 3000RPM",
                       "Name": "Compare With Tolerance 20",
-                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 1000 ±  30 - ID:13",
+                      "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:14",
                       "FailNextDescription": null,
@@ -34667,7 +35380,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -34754,7 +35467,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -35104,7 +35817,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "Run",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -35304,7 +36017,7 @@
                         "DropDown": null,
                         "Name": "(PS) Current Limit",
                         "Units": "A",
-                        "Value": 1.0,
+                        "Value": null,
                         "DeviceType": 3,
                         "CommunicationTimeout": 0
                       },
@@ -35559,7 +36272,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "OFF",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual FOC Control",
                         "Default": "OFF",
@@ -35749,7 +36462,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -35836,7 +36549,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",
@@ -35935,7 +36648,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Speed - RPM",
                         "Default": "0",
@@ -35979,7 +36692,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -36195,7 +36908,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor Manual ID Command",
                         "Default": "0",
@@ -36282,7 +36995,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 0.0,
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Manual Electric Angle Speed Value",
                         "Default": "0",

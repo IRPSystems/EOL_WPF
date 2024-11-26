@@ -409,7 +409,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Run",
+          "Value": "ATE",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -468,7 +468,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Run",
+            "Value": "ATE",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
