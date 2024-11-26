@@ -6,6 +6,9 @@ using System.Linq;
 using System.Reflection;
 using CsvHelper;
 using Org.BouncyCastle.Bcpg.Sig;
+using Services.Services;
+using System.Collections.ObjectModel;
+using ScriptHandler.Interfaces;
 
 namespace EOL.Services
 {
@@ -32,7 +35,9 @@ namespace EOL.Services
 
 		#region Methods
 
-		public void WriteTestResult(RunResult testResult)
+		public void WriteTestResult(
+            RunResult testResult,
+            List<GeneratedProjectData> projectsList)
         {
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
@@ -51,7 +56,7 @@ namespace EOL.Services
             // Collect headers if not already done
             if (!_headersWritten)
             {
-                _headers = GetHeaders(testResult.Steps);
+                _headers = GetHeaders(projectsList);
 				_headers.InsertRange(0, standardHeaders);
 
 
@@ -83,27 +88,52 @@ namespace EOL.Services
             }
         }
 
-        private List<string> GetHeaders(List<EOLStepSummeryData> Steps)
+        private List<string> GetHeaders(
+			List<GeneratedProjectData> projectsList)
         {
             List<string> headers = new List<string>();
 
-            foreach (EOLStepSummeryData step in Steps)
+            foreach (GeneratedProjectData project in projectsList)
             {
-                if (step.Step != null && step.Step.EOLReportsSelectionData != null &&
-                    step.Step.EOLReportsSelectionData.IsSaveToReport == false)
+                foreach(GeneratedScriptData scriptData in project.TestsList)
                 {
+                    List<string> scriptHeaders = 
+                        GetScriptHeaders(scriptData.ScriptItemsList);
+                    headers.AddRange(scriptHeaders);
+				}
+            }
+
+    
+
+            return headers;
+        }
+
+        private List<string> GetScriptHeaders(ObservableCollection<IScriptItem> scriptItemsList)
+        {
+            List<string> headers = new List<string>();
+            foreach (IScriptItem item in scriptItemsList)
+            {
+                if(item is ISubScript subScript)
+                {
+					List<string> subScriptHeaders = 
+                        GetScriptHeaders(subScript.Script.ScriptItemsList);
+                    headers.AddRange(subScriptHeaders);
                     continue;
                 }
 
+                if(!(item is ScriptStepBase stepBase)) 
+                    continue;
 
-                string description = GetStepDescription(step);
-                description = $"\"{description}\"";
-				headers.Add(description);
+                if(stepBase.EOLReportsSelectionData.IsSaveToReport == false)
+                    continue;
+
+                List<string> itemHeaders = stepBase.GetReportHeaders();
+                headers.AddRange(itemHeaders);
 
             }
 
             return headers;
-        }
+		}
 
         private List<string> GetValues(List<EOLStepSummeryData> Steps)
 		{
@@ -123,7 +153,8 @@ namespace EOL.Services
 
                 if(step.IsPass == false)
                 {
-                    string errorDescription = GetFixedString(step.ErrorDescription);
+                    string errorDescription = 
+                        FixStringService.GetFixedString(step.ErrorDescription);
 					values.Add($"\"{errorDescription}\"");
 					continue;
 				}
@@ -136,22 +167,23 @@ namespace EOL.Services
 
         private string GetStepDescription(EOLStepSummeryData step)
         {
-			string testName = GetFixedString(step.TestName);
-			string subScriptName = GetFixedString(step.SubScriptName);
-			string parentStepDescription = GetFixedString(step.ParentStepDescription);
+            //string testName = GetFixedString(step.TestName);
+            //string subScriptName = GetFixedString(step.SubScriptName);
+            //string parentStepDescription = GetFixedString(step.ParentStepDescription);
 
-			string description = $"{testName};\r\n";
+            //string description = $"{testName};\r\n";
 
-			if (subScriptName != testName)
-				description += $"{subScriptName};\r\n";
+            //if (subScriptName != testName)
+            //	description += $"{subScriptName};\r\n";
 
 
-			if (string.IsNullOrEmpty(parentStepDescription) == false)
-				description += $"{parentStepDescription};\r\n";
+            //if (string.IsNullOrEmpty(parentStepDescription) == false)
+            //	description += $"{parentStepDescription};\r\n";
 
-			description += GetFixedString(step.Description);
+            //description += GetFixedString(step.Description);
 
-            return description;
+            //         return description;
+            return null;
 		}
 
         private string GetFailedStepDescription(ScriptStepBase failedStep)
@@ -167,37 +199,22 @@ namespace EOL.Services
                 EOLStepSummeryData eolStepSummeryData =
                     failedStep.EOLStepSummerysList[0];
 
-				string testName = GetFixedString(eolStepSummeryData.TestName);
-				string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
+				//string testName = GetFixedString(eolStepSummeryData.TestName);
+				//string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
 
-				description = $"{testName};\r\n";
+				//description = $"{testName};\r\n";
 
-				if (subScriptName != testName)
-					description += $"{subScriptName};\r\n";
+				//if (subScriptName != testName)
+				//	description += $"{subScriptName};\r\n";
 			}
 
-            description += GetFixedString(failedStep.ErrorMessage);
+            description += FixStringService.GetFixedString(failedStep.ErrorMessage);
             description = $"\"{description}\"";
 
 			return description;
         }
 
-        private string GetFixedString(string source)
-        {
-            if (string.IsNullOrEmpty(source))
-                return string.Empty;
-
-            string dest = source;
-            if (dest == null)
-                return null;
-
-			dest = dest.Replace(",", "-");
-			dest = dest.Replace("\r", "");
-			dest = dest.Replace("\n", " - ");
-			//dest = dest.Replace("\"", " ");
-
-			return dest;
-		}
+        
 
 		#endregion Methods
 	}

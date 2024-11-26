@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -870,7 +871,9 @@ namespace EOL.ViewModels
 				singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
 				singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
 
-				_csvWritter.WriteTestResult(singleTestResult);
+				_csvWritter.WriteTestResult(
+					singleTestResult, 
+					_generatedProjectsList.ToList());
 
 				_pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
 			}
@@ -905,22 +908,20 @@ namespace EOL.ViewModels
 				{
 					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
 
-					foreach(EOLStepSummeryData summery in stepBase.EOLStepSummerysList)
-					{
-						summery.SubScriptName = script.Name;
-						summery.TestName = test.Name;
-					}
+					stepBase.SubScriptName = script.Name;
+					stepBase.TestName = test.Name;
+
 
 					if (!(item is ISubScript))
 					{
-						if(stepBase.IsPass == false)
+						if (stepBase.IsPass == false)
 						{
 							failedStep = stepBase;
 						}
 					}
 				}
 
-				if(item is ISubScript subScript)
+				if (item is ISubScript subScript)
 				{
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
