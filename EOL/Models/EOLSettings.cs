@@ -18,6 +18,8 @@ namespace EOL.Models
 
 		public SettingsData GeneralData { get; set; }
 
+		public string MCUParametersJsonPath { get; set; }
+
 		public EOLSettings()
 		{
 			IsLightTheme = false;

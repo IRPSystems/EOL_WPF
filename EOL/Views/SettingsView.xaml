@@ -122,6 +122,14 @@
         <TabItem Header="Devices">
             <device_handler_views:SetupSelectionView DataContext="{Binding SetupSelectionVM}" />
         </TabItem>
+
+        <TabItem Header="Admin"
+                 FontSize="14"
+                 Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}">
+
+            <local:SettingsAdminView DataContext="{Binding SettingsAdminVM}"/>
+
+        </TabItem>
         
     </TabControl>
 </mah:MetroWindow>

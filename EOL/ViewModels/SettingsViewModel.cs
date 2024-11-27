@@ -23,6 +23,9 @@ namespace EOL.ViewModels
 		public double DescriptsionColumnWidth { get; set; }
 
 		public SetupSelectionViewModel SetupSelectionVM { get; set; }
+        public SettingsAdminViewModel SettingsAdminVM { get; set; }
+
+		public bool IsAdminMode { get; set; }
 
 		#endregion Properties
 
@@ -51,13 +54,12 @@ namespace EOL.ViewModels
 		#region Constructor
 
 		public SettingsViewModel(
-            SettingsData settingsData, 
-            UserDefaultSettings userDefaultSettings, 
+            EOLSettings eolSettings,
             UserConfigManager userConfigManager,
 			SetupSelectionViewModel setupSelectionVM)
         {
-			SettingsData = settingsData;
-            _userDefaultSettings = userDefaultSettings;
+			SettingsData = eolSettings.GeneralData;
+            _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
 
@@ -65,8 +67,8 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
 
-            //LoadUserConfigToSettingsView();
-        }
+            SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
+		}
 
         #endregion Constructor
 
@@ -231,8 +233,9 @@ namespace EOL.ViewModels
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
+		
 
-        #endregion Commands
+		#endregion Commands
 
-    }
+	}
 }

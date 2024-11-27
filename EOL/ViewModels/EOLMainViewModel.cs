@@ -24,6 +24,7 @@ using System.Windows.Media;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
+using Syncfusion.DocIO.DLS;
 
 namespace EOL.ViewModels
 {
@@ -232,11 +233,11 @@ namespace EOL.ViewModels
 				}
 
 				SettingsVM = new SettingsViewModel(
-					_eolSettings.GeneralData, 
-					_eolSettings.UserDefaultSettings, 
+					_eolSettings, 
 					_userConfigManager,
 					_setupSelectionVM);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
+				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
 				OperatorVM = new OperatorViewModel(
 					DevicesContainter, 
@@ -268,7 +269,32 @@ namespace EOL.ViewModels
 			}
 		}
 
-		
+		private void SettingsAdminVM_LoadDevicesContainer()
+		{
+			if (DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU) == false)
+				return;
+
+			ObservableCollection<DeviceData> devicesList = new ObservableCollection<DeviceData>();
+			_readDevicesFile.ReadFromMCUJson(
+				_eolSettings.DeviceSetupUserData.MCUJsonPath,
+				devicesList,
+				"MCU",
+				DeviceTypesEnum.MCU);
+
+			DeviceFullData deviceFullData = DevicesContainter.TypeToDevicesFullData[DeviceTypesEnum.MCU];
+			deviceFullData.Device = devicesList[0];
+
+			DeviceData mcuDevice = DevicesContainter.DevicesList.ToList().Find((d) => d.Name == "MCU");
+			if (mcuDevice == null)
+				return;
+
+			int index = DevicesContainter.DevicesList.IndexOf(mcuDevice);
+			if (index < 0)
+				return;
+
+			DevicesContainter.DevicesList[index] = devicesList[0];
+
+		}
 
 		private void MergeATEParamsToMCU()
 		{
@@ -519,6 +545,8 @@ namespace EOL.ViewModels
                             SelectedMode = "Admin";
                             OperatorVM.Run.IsAdminMode = true;
                             OperatorVM.Run.ShowAdmin();
+
+							SettingsVM.IsAdminMode = true;
                         }
                         else
                         {
@@ -530,7 +558,8 @@ namespace EOL.ViewModels
                 case "Operator":
                     SelectedMode = "Operator";
                     OperatorVM.Run.IsAdminMode = false;
-                    break;
+					SettingsVM.IsAdminMode = false;
+					break;
             }
         }
 
