@@ -30,9 +30,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Shapes;
 using static FlashingToolLib.FlasherService;
 using Path = System.IO.Path;
 
@@ -885,7 +883,9 @@ namespace EOL.ViewModels
 
 		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
 		{
-			_runData.Duration = DateTime.Now - _startTime;
+			TimeSpan ellapsedTime = DateTime.Now - _startTime;
+			_runData.Duration = ellapsedTime;
+			RunScript.RunTime.RunTime = ellapsedTime;
 		}
 
 		private void Continue()
