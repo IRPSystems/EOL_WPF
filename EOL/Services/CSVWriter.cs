@@ -78,7 +78,7 @@ namespace EOL.Services
                     rowValues.Add(property.GetValue(testResult)?.ToString() ?? "");
                 }
 
-                List<string> values = GetValues(testResult.Steps);
+                List<string> values = GetValues(projectsList);
                 foreach(string value in values)
                 {
 					rowValues.Add(value);
@@ -135,56 +135,52 @@ namespace EOL.Services
             return headers;
 		}
 
-        private List<string> GetValues(List<EOLStepSummeryData> Steps)
+        private List<string> GetValues(
+			List<GeneratedProjectData> projectsList)
 		{
 			List<string> values = new List<string>();
 
-			foreach (EOLStepSummeryData step in Steps)
+			foreach (GeneratedProjectData project in projectsList)
 			{
-                if (step.Step != null && step.Step.EOLReportsSelectionData != null)
-                    if (step.Step.EOLReportsSelectionData.IsSaveToReport == false)
-                        continue;
-
-                if (step.TestValue != null)
-                {
-                    values.Add(step.TestValue.ToString());
-                    continue;
-                }
-
-                if(step.IsPass == false)
-                {
-                    string errorDescription = 
-                        FixStringService.GetFixedString(step.ErrorDescription);
-					values.Add($"\"{errorDescription}\"");
-					continue;
+				foreach (GeneratedScriptData scriptData in project.TestsList)
+				{
+					List<string> scriptValues =
+						GetScriptValues(scriptData.ScriptItemsList);
+					values.AddRange(scriptValues);
 				}
-
-				values.Add("PASS");
 			}
 
 			return values;
 		}
 
-        private string GetStepDescription(EOLStepSummeryData step)
-        {
-            //string testName = GetFixedString(step.TestName);
-            //string subScriptName = GetFixedString(step.SubScriptName);
-            //string parentStepDescription = GetFixedString(step.ParentStepDescription);
+		private List<string> GetScriptValues(ObservableCollection<IScriptItem> scriptItemsList)
+		{
+			List<string> values = new List<string>();
+			foreach (IScriptItem item in scriptItemsList)
+			{
+				if (item is ISubScript subScript)
+				{
+					List<string> subScriptValues =
+						GetScriptValues(subScript.Script.ScriptItemsList);
+					values.AddRange(subScriptValues);
+					continue;
+				}
 
-            //string description = $"{testName};\r\n";
+				if (!(item is ScriptStepBase stepBase))
+					continue;
 
-            //if (subScriptName != testName)
-            //	description += $"{subScriptName};\r\n";
+				if (stepBase.EOLReportsSelectionData.IsSaveToReport == false)
+					continue;
 
+				List<string> itemValues = stepBase.GetReportValues();
+				values.AddRange(itemValues);
 
-            //if (string.IsNullOrEmpty(parentStepDescription) == false)
-            //	description += $"{parentStepDescription};\r\n";
+			}
 
-            //description += GetFixedString(step.Description);
-
-            //         return description;
-            return null;
+			return values;
 		}
+
+
 
         private string GetFailedStepDescription(ScriptStepBase failedStep)
         {
