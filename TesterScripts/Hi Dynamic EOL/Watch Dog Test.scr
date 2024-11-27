@@ -635,7 +635,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -775,7 +775,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -842,7 +842,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 30.662,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -878,7 +878,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 30.662,
+            "Value": "",
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",

@@ -376,7 +376,7 @@
         "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 1,
+          "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
           "portLine": 0,
@@ -400,7 +400,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 1,
+            "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
             "portLine": 0,
@@ -592,7 +592,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -613,7 +613,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },

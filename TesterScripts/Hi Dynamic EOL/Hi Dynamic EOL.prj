@@ -1,5 +1,6 @@
 {
   "$type": "ScriptHandler.Models.ProjectData, ScriptHandler",
+  "IsChanged": false,
   "Name": "Hi Dynamic EOL",
   "TestPathsList": null,
   "ScriptsPathsList": {
@@ -56,9 +57,9 @@
       "..\\Compare Manual Angle.scr",
       "..\\Power Down.tst",
       "..\\Shut Down.scr",
-      "..\\Abort Script Nothing.scr"
+      "..\\Abort Script Nothing.scr",
+      "..\\Config Position Sensor.scr"
     ]
   },
-  "RecordParametersFile": null,
-  "IsChanged": false
+  "RecordParametersFile": null
 }
