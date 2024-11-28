@@ -9,14 +9,14 @@
         "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "Io_port": 5,
+          "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog input thermistor",
           "portLine": 0,
           "shunt_resistor": 0.0,
           "numofcounts": 0,
           "DropDown": null,
-          "ThermistorType": 1,
+          "ThermistorType": 0,
           "ThermistorTypeList": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
@@ -40,7 +40,7 @@
           "IsThermistorUsed": true,
           "Name": "Analog Input Thermistor",
           "Units": null,
-          "Value": 27.610301109216444,
+          "Value": null,
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
@@ -63,14 +63,14 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "Io_port": 5,
+            "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog input thermistor",
             "portLine": 0,
             "shunt_resistor": 0.0,
             "numofcounts": 0,
             "DropDown": null,
-            "ThermistorType": 1,
+            "ThermistorType": 0,
             "ThermistorTypeList": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
@@ -94,7 +94,7 @@
             "IsThermistorUsed": true,
             "Name": "Analog Input Thermistor",
             "Units": null,
-            "Value": 27.610301109216444,
+            "Value": null,
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },

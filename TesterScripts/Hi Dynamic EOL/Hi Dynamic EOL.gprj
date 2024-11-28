@@ -3648,12 +3648,92 @@
               "Name": "Sub Script 1",
               "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:1",
               "IsPass": false,
-              "PassNextDescription": null,
+              "PassNextDescription": "Sub Script = Write SN - Repeats: 1 - ID:2",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
               "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": false,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
+              "Script": {
+                "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+                "Name": "Write SN",
+                "ScriptItemsList": {
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepEOLSendSN, ScriptHandler",
+                      "SN_Param": null,
+                      "Communicator": null,
+                      "SerialNumber": null,
+                      "UserSN": "E7P-22-00-00032",
+                      "UserTitle": "Set SN",
+                      "Name": "EOL Send SN 1",
+                      "Description": "Send SN - ID:1",
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 1,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    }
+                  ]
+                },
+                "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL\\UUT Config.tst",
+                "IsPass": null,
+                "ScriptSender": 0,
+                "TotalRunSteps": 0,
+                "PassRunSteps": 0,
+                "FailRunSteps": 0,
+                "ErrorsList": null
+              },
+              "ScriptPath": null,
+              "SelectedScriptName": null,
+              "ContinueUntilType": 0,
+              "Repeats": 1,
+              "Timeout": 0,
+              "TimeoutUnite": 0,
+              "TimeoutSpan": "00:00:00",
+              "IsStopOnFail": true,
+              "IsStopOnPass": false,
+              "IsInfinity": false,
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Write SN - Repeats: 1 - ID:2\"",
+              "UserTitle": null,
+              "Name": "ScriptNodeSubScript 2",
+              "Description": "Sub Script = Write SN - Repeats: 1 - ID:2",
+              "IsPass": false,
+              "PassNextDescription": null,
+              "FailNextDescription": null,
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": false,
@@ -3698,6 +3778,471 @@
                         "ATECommand": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_Vbus",
@@ -3914,7 +4459,7 @@
                       },
                       "UserTitle": "Test1",
                       "Name": "Compare With Tolerance 2",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:1",
+                      "Description": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:1",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -4060,7 +4605,7 @@
                       "Name": "Set Parameter 5",
                       "Description": "Set  \"Voltage Limit (EA Power)\" = 200 - ID:1",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:2",
+                      "PassNextDescription": "Delay 3 sec - ID:2",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -4082,13 +4627,13 @@
                     {
                       "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
                       "IntervalUnite": 2,
-                      "Interval": 1,
+                      "Interval": 3,
                       "Diff_Timeout": "00:00:00",
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 20",
-                      "Description": "Delay 1 sec - ID:2",
+                      "Description": "Delay 3 sec - ID:2",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:3",
                       "FailNextDescription": null,
@@ -11456,7 +12001,7 @@
                       "Name": "Delay 13",
                       "Description": "Delay 4000 ms - ID:12",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  1 - ID:13",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  3 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -11657,7 +12202,7 @@
                         "CommunicationTimeout": 0
                       },
                       "CompareValue": "120",
-                      "Tolerance": 1.0,
+                      "Tolerance": 3.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
                       "IsPercentageTolerance": false,
@@ -11699,7 +12244,7 @@
                       },
                       "UserTitle": "Motor Temp 1 Reading ",
                       "Name": "Compare With Tolerance 13",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  1 - ID:13",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  3 - ID:13",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -23575,7 +24120,7 @@
                       "RefSensorNumOfReadings": 20,
                       "RefSensorChannel": 0,
                       "RefSensorPorts": 1,
-                      "NIDAQShuntResistor": 17.79,
+                      "NIDAQShuntResistor": 17.784,
                       "DeviationLimit": 0.0,
                       "MCU_Communicator": null,
                       "RefSensorCommunicator": null,
@@ -23675,7 +24220,7 @@
                         "Ni6002_IOPort": 1,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.79,
+                        "NIDAQShuntResistor": 17.784,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -23804,7 +24349,7 @@
                       "Name": "Delay 16",
                       "Description": "Delay 4 sec - ID:20",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  5 - ID:21",
+                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  6 - ID:21",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -23862,7 +24407,7 @@
                         "DeviceType": 19,
                         "CommunicationTimeout": 4000
                       },
-                      "Tolerance": 5.0,
+                      "Tolerance": 6.0,
                       "Comparation": 0,
                       "IsValueTolerance": false,
                       "IsPercentageTolerance": true,
@@ -23904,9 +24449,9 @@
                       },
                       "UserTitle": "Validate Phase U Calibration (50A)",
                       "Name": "ScriptNodeCompareWithTolerance 14",
-                      "Description": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  5 - ID:21",
+                      "Description": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  6 - ID:21",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 180 - ID:22",
+                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 100 - ID:22",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -23952,7 +24497,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 180.0,
+                      "Value": 100.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -23989,9 +24534,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set Manual ID Command to 180A",
-                      "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 180 - ID:22",
+                      "UserTitle": "Set Manual ID Command to 100A",
+                      "Name": "ScriptNodeSetParameter 20",
+                      "Description": "Set  \"Manual ID Command (MCU)\" = 100 - ID:22",
                       "IsPass": false,
                       "PassNextDescription": "Delay 2 sec - ID:23",
                       "FailNextDescription": null,
@@ -24020,7 +24565,7 @@
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
-                      "Name": "ScriptNodeDelay 18",
+                      "Name": "ScriptNodeDelay 21",
                       "Description": "Delay 2 sec - ID:23",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:24",
@@ -24113,7 +24658,7 @@
                         "Ni6002_IOPort": 1,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.79,
+                        "NIDAQShuntResistor": 17.784,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -24121,8 +24666,8 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Validate Phase U Calibration (180A)",
-                      "Name": "ScriptNodeCompareWithTolerance 19",
+                      "UserTitle": "Validate Phase U Calibration (100A)",
+                      "Name": "ScriptNodeCompareWithTolerance 22",
                       "Description": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:24",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 200 - ID:25",
@@ -24209,7 +24754,7 @@
                         "ProgressPercentage": 0
                       },
                       "UserTitle": "Set Manual ID Command to 200A",
-                      "Name": "ScriptNodeSetParameter 20",
+                      "Name": "ScriptNodeSetParameter 29",
                       "Description": "Set  \"Manual ID Command (MCU)\" = 200 - ID:25",
                       "IsPass": false,
                       "PassNextDescription": "Delay 2 sec - ID:26",
@@ -24239,10 +24784,10 @@
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
-                      "Name": "ScriptNodeDelay 21",
+                      "Name": "ScriptNodeDelay 30",
                       "Description": "Delay 2 sec - ID:26",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:27",
+                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor)\" = \"Analog Input Current\" ±  2 - ID:27",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -24332,7 +24877,7 @@
                         "Ni6002_IOPort": 1,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.79,
+                        "NIDAQShuntResistor": 17.784,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -24341,8 +24886,8 @@
                         "NumatoGPIODropDwonIndex": 0
                       },
                       "UserTitle": "Validate Phase U Calibration (200A)",
-                      "Name": "ScriptNodeCompareWithTolerance 22",
-                      "Description": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:27",
+                      "Name": "ScriptNodeCompareWithTolerance 31",
+                      "Description": "Compare with tolerance:  \"Current U (Monitor)\" = \"Analog Input Current\" ±  2 - ID:27",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 0 - ID:28",
                       "FailNextDescription": null,
@@ -25271,7 +25816,7 @@
                       "RefSensorNumOfReadings": 20,
                       "RefSensorChannel": 0,
                       "RefSensorPorts": 0,
-                      "NIDAQShuntResistor": 17.784,
+                      "NIDAQShuntResistor": 17.8,
                       "DeviationLimit": 0.0,
                       "MCU_Communicator": null,
                       "RefSensorCommunicator": null,
@@ -25500,7 +26045,7 @@
                       "Name": "Delay 14",
                       "Description": "Delay 2 sec - ID:16",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  5 - ID:17",
+                      "PassNextDescription": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  6 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -25558,7 +26103,7 @@
                         "DeviceType": 19,
                         "CommunicationTimeout": 4000
                       },
-                      "Tolerance": 5.0,
+                      "Tolerance": 6.0,
                       "Comparation": 0,
                       "IsValueTolerance": false,
                       "IsPercentageTolerance": true,
@@ -25590,7 +26135,7 @@
                         "Ni6002_IOPort": 0,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.784,
+                        "NIDAQShuntResistor": 17.8,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -25600,9 +26145,9 @@
                       },
                       "UserTitle": "Validate Phase U Calibration (50A)",
                       "Name": "Compare With Tolerance 15",
-                      "Description": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  5 - ID:17",
+                      "Description": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  6 - ID:17",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 180 - ID:18",
+                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 100 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -25648,7 +26193,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 180.0,
+                      "Value": 100.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -25685,9 +26230,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set Manual ID Command to 180A",
+                      "UserTitle": "Set Manual ID Command to 100A",
                       "Name": "Set Parameter 19",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 180 - ID:18",
+                      "Description": "Set  \"Manual ID Command (MCU)\" = 100 - ID:18",
                       "IsPass": false,
                       "PassNextDescription": "Delay 2 sec - ID:19",
                       "FailNextDescription": null,
@@ -25809,7 +26354,7 @@
                         "Ni6002_IOPort": 0,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.784,
+                        "NIDAQShuntResistor": 17.8,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -25817,7 +26362,7 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Validate Phase U Calibration (180A)",
+                      "UserTitle": "Validate Phase U Calibration (100A)",
                       "Name": "Compare With Tolerance 21",
                       "Description": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:20",
                       "IsPass": false,
@@ -26028,7 +26573,7 @@
                         "Ni6002_IOPort": 0,
                         "Ni6002_Line": 0,
                         "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 17.784,
+                        "NIDAQShuntResistor": 17.8,
                         "AteCommand": 0,
                         "NIThermistorIndex": 0,
                         "AteCommandDropDwonIndex": 0,
@@ -27670,7 +28215,7 @@
               "Name": "Set Parameter 6",
               "Description": "Set  \"Aqb AB Fault Threshold (MCU)\" = 50000 - ID:2",
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Position Sensor - Repeats: 1 - ID:3",
+              "PassNextDescription": "Sub Script = Config Position Sensor - Repeats: 1 - ID:3",
               "FailNextDescription": null,
               "ErrorMessage": "",
               "StopScriptStep": null,
@@ -27693,192 +28238,10 @@
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "Script": {
                 "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
-                "Name": "Position Sensor",
+                "Name": "Config Position Sensor",
                 "ScriptItemsList": {
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
                   "$values": [
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Motor",
-                        "Description": "FOC ID Direction",
-                        "Default": "Negative",
-                        "Cmd": "mtrfociddir",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 1.0,
-                        "Note": null,
-                        "Save": true,
-                        "DropDown": {
-                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-                          "$values": [
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Positive",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Negative",
-                              "Value": "-1"
-                            }
-                          ]
-                        },
-                        "Name": "Id Direction",
-                        "Units": null,
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 1,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set ID Direction To Positive",
-                      "Name": "Set Parameter 1",
-                      "Description": "Set  \"Id Direction (MCU)\" = 1 - ID:1",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 0 - ID:2",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 1,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            360.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 0.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Value to 0",
-                      "Name": "Set Parameter 5",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 0 - ID:2",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Angle Offset (Encoder) (MCU)\" = 0 - ID:3",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 2,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
                       "Parameter": {
@@ -27906,7 +28269,7 @@
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 0.0,
+                      "Value": 273.0,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -27943,17 +28306,17 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set Motor Offset 0",
-                      "Name": "ScriptNodeSetParameter 23",
-                      "Description": "Set  \"Angle Offset (Encoder) (MCU)\" = 0 - ID:3",
+                      "UserTitle": "Set Offset Angle",
+                      "Name": "Set Parameter 1",
+                      "Description": "Set  \"Angle Offset (Encoder) (MCU)\" = 273 - ID:1",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 30 - ID:4",
+                      "PassNextDescription": "Set  \"Count Direction (MCU)\" = -1 - ID:2",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 3,
+                      "ID": 1,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -27972,347 +28335,36 @@
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
                         "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Motor Manual IQ Command",
-                        "Default": "0",
-                        "Cmd": "miqcmdman",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            -600.0,
-                            600.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 10.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual IQ Command",
-                        "Units": "A",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 30.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Iq Command to 30",
-                      "Name": "Set Parameter 4",
-                      "Description": "Set  \"Manual IQ Command (MCU)\" = 30 - ID:4",
-                      "IsPass": false,
-                      "PassNextDescription": "Delay 3 sec - ID:5",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 4,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 3,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 24",
-                      "Description": "Delay 3 sec - ID:5",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 60 - ID:6",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 5,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            360.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 60.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Value to 60",
-                      "Name": "ScriptNodeSetParameter 11",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 60 - ID:6",
-                      "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:7",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 6,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 1,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 20",
-                      "Description": "Delay 1 sec - ID:7",
-                      "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 60 ±  15 - ID:8",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 7,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Electric Angle",
-                        "Default": "0",
-                        "Cmd": "focsensang",
+                        "GroupName": "Encoder",
+                        "Description": "Count Direction",
+                        "Default": "",
+                        "Cmd": "aqbcntdir",
                         "Range": null,
                         "Format": null,
-                        "Scale": 182.0,
+                        "Scale": 1.0,
                         "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": " Sensor Electric Angle",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "CompareValue": "60",
-                      "Tolerance": 15.0,
-                      "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
-                      "IsUseParamAverage": false,
-                      "AverageOfNRead_Param": 0,
-                      "IsUseParamFactor": false,
-                      "ParamFactor": 0.0,
-                      "IsUseCompareValueAverage": false,
-                      "AverageOfNRead_CompareValue": 0,
-                      "IsUseCompareValueFactor": false,
-                      "CompareValueFactor": 0.0,
-                      "Parameter_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "CompareValue_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "UserTitle": "Compare Manual Angle 60",
-                      "Name": "Compare With Tolerance 19",
-                      "Description": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 60 ±  15 - ID:8",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 120 - ID:9",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 8,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            360.0
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Positive",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Negative",
+                              "Value": "-1"
+                            }
                           ]
                         },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
+                        "Name": "Count Direction",
+                        "Units": null,
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
                       },
-                      "Value": 120.0,
+                      "Value": -1,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -28349,825 +28401,17 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set Manual Angle Value to 120",
-                      "Name": "ScriptNodeSetParameter 9",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 120 - ID:9",
+                      "UserTitle": "Set Count Direction Negetive",
+                      "Name": "ScriptNodeSetParameter 2",
+                      "Description": "Set  \"Count Direction (MCU)\" = -1 - ID:2",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:10",
+                      "PassNextDescription": "Set  \"Id Direction (MCU)\" = -1 - ID:3",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 9,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 1,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 21",
-                      "Description": "Delay 1 sec - ID:10",
-                      "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 120 ±  15 - ID:11",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 10,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Electric Angle",
-                        "Default": "0",
-                        "Cmd": "focsensang",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": " Sensor Electric Angle",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "CompareValue": "120",
-                      "Tolerance": 15.0,
-                      "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
-                      "IsUseParamAverage": false,
-                      "AverageOfNRead_Param": 0,
-                      "IsUseParamFactor": false,
-                      "ParamFactor": 0.0,
-                      "IsUseCompareValueAverage": false,
-                      "AverageOfNRead_CompareValue": 0,
-                      "IsUseCompareValueFactor": false,
-                      "CompareValueFactor": 0.0,
-                      "Parameter_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "CompareValue_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "UserTitle": "Compare Manual Angle 120",
-                      "Name": "Compare With Tolerance 22",
-                      "Description": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 120 ±  15 - ID:11",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 180 - ID:12",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 11,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            360.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 180.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Value to 180",
-                      "Name": "ScriptNodeSetParameter 13",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 180 - ID:12",
-                      "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:13",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 12,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 1,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 23",
-                      "Description": "Delay 1 sec - ID:13",
-                      "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 180 ±  15 - ID:14",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 13,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Electric Angle",
-                        "Default": "0",
-                        "Cmd": "focsensang",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": " Sensor Electric Angle",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "CompareValue": "180",
-                      "Tolerance": 15.0,
-                      "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
-                      "IsUseParamAverage": false,
-                      "AverageOfNRead_Param": 0,
-                      "IsUseParamFactor": false,
-                      "ParamFactor": 0.0,
-                      "IsUseCompareValueAverage": false,
-                      "AverageOfNRead_CompareValue": 0,
-                      "IsUseCompareValueFactor": false,
-                      "CompareValueFactor": 0.0,
-                      "Parameter_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "CompareValue_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "UserTitle": "Compare Manual Angle 180",
-                      "Name": "Compare With Tolerance 24",
-                      "Description": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 180 ±  15 - ID:14",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 240 - ID:15",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 14,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            360.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 240.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Value to 240",
-                      "Name": "ScriptNodeSetParameter 15",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 240 - ID:15",
-                      "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:16",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 15,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 1,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 25",
-                      "Description": "Delay 1 sec - ID:16",
-                      "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 240 ±  15 - ID:17",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 16,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Electric Angle",
-                        "Default": "0",
-                        "Cmd": "focsensang",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": " Sensor Electric Angle",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "CompareValue": "240",
-                      "Tolerance": 15.0,
-                      "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
-                      "IsUseParamAverage": false,
-                      "AverageOfNRead_Param": 0,
-                      "IsUseParamFactor": false,
-                      "ParamFactor": 0.0,
-                      "IsUseCompareValueAverage": false,
-                      "AverageOfNRead_CompareValue": 0,
-                      "IsUseCompareValueFactor": false,
-                      "CompareValueFactor": 0.0,
-                      "Parameter_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "CompareValue_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "UserTitle": "Compare Manual Angle 240",
-                      "Name": "Compare With Tolerance 26",
-                      "Description": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 240 ±  15 - ID:17",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Value (MCU)\" = 300 - ID:18",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 17,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Angle Value",
-                        "Default": "0",
-                        "Cmd": "focmanang",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            360.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual Angle Value",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 300.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Value to 300",
-                      "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Manual Angle Value (MCU)\" = 300 - ID:18",
-                      "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:19",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 18,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 1,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 27",
-                      "Description": "Delay 1 sec - ID:19",
-                      "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 300 ±  15 - ID:20",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 19,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Electric Angle",
-                        "Default": "0",
-                        "Cmd": "focsensang",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": " Sensor Electric Angle",
-                        "Units": "Deg",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "CompareValue": "300",
-                      "Tolerance": 15.0,
-                      "Comparation": 0,
-                      "IsValueTolerance": true,
-                      "IsPercentageTolerance": false,
-                      "IsUseParamAverage": false,
-                      "AverageOfNRead_Param": 0,
-                      "IsUseParamFactor": false,
-                      "ParamFactor": 0.0,
-                      "IsUseCompareValueAverage": false,
-                      "AverageOfNRead_CompareValue": 0,
-                      "IsUseCompareValueFactor": false,
-                      "CompareValueFactor": 0.0,
-                      "Parameter_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "CompareValue_ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "UserTitle": "Compare Manual Angle 330",
-                      "Name": "Compare With Tolerance 28",
-                      "Description": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 300 ±  15 - ID:20",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:21",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 20,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Motor Manual IQ Command",
-                        "Default": "0",
-                        "Cmd": "miqcmdman",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            -600.0,
-                            600.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 10.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Manual IQ Command",
-                        "Units": "A",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 0.0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Id Command to 0",
-                      "Name": "Set Parameter 6",
-                      "Description": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:21",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Id Direction (MCU)\" = -1 - ID:22",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 21,
+                      "ID": 2,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29252,191 +28496,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set ID Direction to Negative",
-                      "Name": "Set Parameter 3",
-                      "Description": "Set  \"Id Direction (MCU)\" = -1 - ID:22",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:23",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 22,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Operation",
-                        "Description": "Manual Electric Angle Speed Flag",
-                        "Default": "OFF",
-                        "Cmd": "flgmanang",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 1.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": {
-                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-                          "$values": [
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "OFF",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ON",
-                              "Value": "1"
-                            }
-                          ]
-                        },
-                        "Name": "Manual Angle Speed ",
-                        "Units": null,
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 0,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Manual Angle Speed To Off",
-                      "Name": "ScriptNodeSetParameter 7",
-                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:23",
-                      "IsPass": false,
-                      "PassNextDescription": "Set  \"Angle Offset (Encoder) (MCU)\" = 37.5 - ID:24",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 23,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Encoder",
-                        "Description": "Angle Offset",
-                        "Default": "",
-                        "Cmd": "hangoff",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            359.0
-                          ]
-                        },
-                        "Format": null,
-                        "Scale": 182.0,
-                        "Note": null,
-                        "Save": true,
-                        "DropDown": null,
-                        "Name": "Angle Offset (Encoder)",
-                        "Units": "°",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "Value": 37.5,
-                      "ExtraData": {
-                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-                        "Parameter": null,
-                        "Ni6002_IOPort": 0,
-                        "Ni6002_Line": 0,
-                        "NI6002_NumofCounts": 0,
-                        "NIDAQShuntResistor": 0.0,
-                        "AteCommand": 0,
-                        "NIThermistorIndex": 0,
-                        "AteCommandDropDwonIndex": 0,
-                        "Zimmer_Channel": 0,
-                        "NumatoGPIOPort": 0,
-                        "NumatoGPIODropDwonIndex": 0
-                      },
-                      "ValueParameter": null,
-                      "GetParamValue": {
-                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
-                        "Parameter": null,
-                        "UserTitle": null,
-                        "Name": null,
-                        "Description": null,
-                        "IsPass": false,
-                        "PassNextDescription": null,
-                        "FailNextDescription": null,
-                        "ErrorMessage": "",
-                        "StopScriptStep": null,
-                        "BorderBrush": null,
-                        "StepState": 0,
-                        "ID": 0,
-                        "EOLReportsSelectionData": null,
-                        "EOLStepSummerysList": {
-                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                          "$values": []
-                        },
-                        "ProgressPercentage": 0
-                      },
-                      "UserTitle": "Set Motor Offset 37.5",
-                      "Name": "ScriptNodeSetParameter 29",
-                      "Description": "Set  \"Angle Offset (Encoder) (MCU)\" = 37.5 - ID:24",
+                      "UserTitle": "Set Id Direction Negetive",
+                      "Name": "ScriptNodeSetParameter 3",
+                      "Description": "Set  \"Id Direction (MCU)\" = -1 - ID:3",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -29444,7 +28506,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 24,
+                      "ID": 3,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29477,10 +28539,10 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Position Sensor - Repeats: 1 - ID:3\"",
-              "UserTitle": null,
-              "Name": "Sub Script 2",
-              "Description": "Sub Script = Position Sensor - Repeats: 1 - ID:3",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config Position Sensor - Repeats: 1 - ID:3\"",
+              "UserTitle": "Config Motor",
+              "Name": "ScriptNodeSubScript 5",
+              "Description": "Sub Script = Config Position Sensor - Repeats: 1 - ID:3",
               "IsPass": false,
               "PassNextDescription": "Sub Script = Speed Estimation - Repeats: 1 - ID:4",
               "FailNextDescription": null,
@@ -33261,7 +32323,7 @@
                       "Name": "Set Parameter 4",
                       "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:9",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 70.7 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -33287,9 +32349,9 @@
                         "ValueChanged": null,
                         "Value": "",
                         "GroupName": "Operation",
-                        "Description": "Motor Manual ID Command",
+                        "Description": "Motor Manual IQ Command",
                         "Default": "0",
-                        "Cmd": "midcmdman",
+                        "Cmd": "miqcmdman",
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
@@ -33302,7 +32364,7 @@
                         "Note": null,
                         "Save": false,
                         "DropDown": null,
-                        "Name": "Manual ID Command",
+                        "Name": "Manual IQ Command",
                         "Units": "A",
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
@@ -33344,9 +32406,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT Manual ID Command to 50ARMS",
+                      "UserTitle": "Set UUT Manual IQ Command to 50ARMS",
                       "Name": "Set Parameter 6",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 70.7 - ID:10",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "FailNextDescription": null,
@@ -33435,7 +32497,7 @@
                       "Name": "Set Parameter 5",
                       "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
+                      "PassNextDescription": "Delay 10 sec - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -33455,41 +32517,15 @@
                       "ProgressPercentage": 0
                     },
                     {
-                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepConverge, ScriptHandler",
-                      "ConvergeTimeUnite": 2,
-                      "ConvergeTime": 5,
-                      "TimeoutTimeUnite": 2,
-                      "Timeout": 30,
-                      "TargetValue": "300",
-                      "Tolerance": 30.0,
-                      "Diff_WaitToEnterValue": "00:00:00",
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 10,
+                      "Diff_Timeout": "00:00:00",
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
-                      "Diff_WaitForConvergeTime": "00:00:00",
-                      "TsConvergeTime": "00:00:00",
-                      "ConvergeTimePercentage": 0,
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Speed - RPM",
-                        "Default": "0",
-                        "Cmd": "mspdrpm",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 1.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Speed - RPM",
-                        "Units": "RPM",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "UserTitle": "Converge Speed RPM",
-                      "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
+                      "UserTitle": "Stablize Speed",
+                      "Name": "Delay 17",
+                      "Description": "Delay 10 sec - ID:12",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "FailNextDescription": null,
@@ -34757,7 +33793,7 @@
                       "Name": "Set Parameter 4",
                       "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:9",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 70.7 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -34783,9 +33819,9 @@
                         "ValueChanged": null,
                         "Value": "",
                         "GroupName": "Operation",
-                        "Description": "Motor Manual ID Command",
+                        "Description": "Motor Manual IQ Command",
                         "Default": "0",
-                        "Cmd": "midcmdman",
+                        "Cmd": "miqcmdman",
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
@@ -34798,7 +33834,7 @@
                         "Note": null,
                         "Save": false,
                         "DropDown": null,
-                        "Name": "Manual ID Command",
+                        "Name": "Manual IQ Command",
                         "Units": "A",
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
@@ -34840,9 +33876,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT Manual ID Command to 50ARMS",
+                      "UserTitle": "Set UUT Manual IQ Command to 50ARMS",
                       "Name": "Set Parameter 6",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 70.7 - ID:10",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 70.7 - ID:10",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "FailNextDescription": null,
@@ -34931,7 +33967,7 @@
                       "Name": "Set Parameter 5",
                       "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 20 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
+                      "PassNextDescription": "Delay 10 sec - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -34951,41 +33987,15 @@
                       "ProgressPercentage": 0
                     },
                     {
-                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepConverge, ScriptHandler",
-                      "ConvergeTimeUnite": 2,
-                      "ConvergeTime": 5,
-                      "TimeoutTimeUnite": 2,
-                      "Timeout": 30,
-                      "TargetValue": "300",
-                      "Tolerance": 30.0,
-                      "Diff_WaitToEnterValue": "00:00:00",
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 10,
+                      "Diff_Timeout": "00:00:00",
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
-                      "Diff_WaitForConvergeTime": "00:00:00",
-                      "TsConvergeTime": "00:00:00",
-                      "ConvergeTimePercentage": 0,
-                      "Parameter": {
-                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-                        "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Monitor",
-                        "Description": "Speed - RPM",
-                        "Default": "0",
-                        "Cmd": "mspdrpm",
-                        "Range": null,
-                        "Format": null,
-                        "Scale": 1.0,
-                        "Note": null,
-                        "Save": false,
-                        "DropDown": null,
-                        "Name": "Speed - RPM",
-                        "Units": "RPM",
-                        "DeviceType": 1,
-                        "CommunicationTimeout": 0
-                      },
-                      "UserTitle": "Converge Speed RPM",
-                      "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 300 - ID:12",
+                      "UserTitle": "Stablize Speed",
+                      "Name": "Delay 17",
+                      "Description": "Delay 10 sec - ID:12",
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "FailNextDescription": null,
@@ -35068,7 +34078,7 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Compare UUT Speed to 3000RPM",
+                      "UserTitle": "Compare UUT Speed to 300RPM",
                       "Name": "Compare With Tolerance 20",
                       "Description": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13",
                       "IsPass": false,
@@ -36253,7 +35263,7 @@
                       "Name": "Set Parameter 4",
                       "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:9",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 50 - ID:10",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -36279,9 +35289,9 @@
                         "ValueChanged": null,
                         "Value": "",
                         "GroupName": "Operation",
-                        "Description": "Motor Manual ID Command",
+                        "Description": "Motor Manual IQ Command",
                         "Default": "0",
-                        "Cmd": "midcmdman",
+                        "Cmd": "miqcmdman",
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
@@ -36294,7 +35304,7 @@
                         "Note": null,
                         "Save": false,
                         "DropDown": null,
-                        "Name": "Manual ID Command",
+                        "Name": "Manual IQ Command",
                         "Units": "A",
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
@@ -36336,9 +35346,9 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT Manual ID Command to 50A",
+                      "UserTitle": "Set UUT Manual IQ Command to 50A",
                       "Name": "Set Parameter 6",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 50 - ID:10",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:10",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:11",
                       "FailNextDescription": null,
@@ -36427,13 +35437,43 @@
                       "Name": "Set Parameter 5",
                       "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:11",
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:12",
+                      "PassNextDescription": "Delay 10 sec - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 11,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 10,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Stablize Speed",
+                      "Name": "Delay 18",
+                      "Description": "Delay 10 sec - ID:12",
+                      "IsPass": false,
+                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:13",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36481,15 +35521,15 @@
                       },
                       "UserTitle": "Converge Speed RPM 500",
                       "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:12",
+                      "Description": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:13",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 283 - ID:13",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36509,9 +35549,9 @@
                         "ValueChanged": null,
                         "Value": "",
                         "GroupName": "Operation",
-                        "Description": "Motor Manual ID Command",
+                        "Description": "Motor Manual IQ Command",
                         "Default": "0",
-                        "Cmd": "midcmdman",
+                        "Cmd": "miqcmdman",
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
@@ -36524,7 +35564,7 @@
                         "Note": null,
                         "Save": false,
                         "DropDown": null,
-                        "Name": "Manual ID Command",
+                        "Name": "Manual IQ Command",
                         "Units": "A",
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
@@ -36566,17 +35606,17 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT Manual ID Command to 230ARMS",
+                      "UserTitle": "Set UUT Manual IQ Command to 230ARMS",
                       "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 283 - ID:13",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:14",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:14",
+                      "PassNextDescription": "Delay 1 sec - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 13,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36598,15 +35638,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 18",
-                      "Description": "Delay 1 sec - ID:14",
+                      "Description": "Delay 1 sec - ID:15",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15",
+                      "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36697,15 +35737,15 @@
                       },
                       "UserTitle": "Compare BUS Voltage PS vs UUT",
                       "Name": "Compare With Tolerance 10",
-                      "Description": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15",
+                      "Description": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:16",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 0 - ID:16",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36725,9 +35765,9 @@
                         "ValueChanged": null,
                         "Value": "",
                         "GroupName": "Operation",
-                        "Description": "Motor Manual ID Command",
+                        "Description": "Motor Manual IQ Command",
                         "Default": "0",
-                        "Cmd": "midcmdman",
+                        "Cmd": "miqcmdman",
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
@@ -36740,7 +35780,7 @@
                         "Note": null,
                         "Save": false,
                         "DropDown": null,
-                        "Name": "Manual ID Command",
+                        "Name": "Manual IQ Command",
                         "Units": "A",
                         "DeviceType": 1,
                         "CommunicationTimeout": 0
@@ -36782,17 +35822,17 @@
                         },
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set UUT Manual ID Command to 0A",
+                      "UserTitle": "Set UUT Manual IQ Command to 0A",
                       "Name": "ScriptNodeSetParameter 19",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 0 - ID:16",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:17",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:17",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -36871,7 +35911,7 @@
                       },
                       "UserTitle": "Set UUT to 0 RPM",
                       "Name": "ScriptNodeSetParameter 18",
-                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:17",
+                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:18",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -36879,7 +35919,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
