@@ -1680,7 +1680,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Bus Current (Monitor) (MCU) = Analog Input Current (NI DUCK 2) ±  2 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,

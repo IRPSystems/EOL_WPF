@@ -1250,7 +1250,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:16ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Vbus (Monitor) (MCU) = Actual Voltage (EA Power) ±  2 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,

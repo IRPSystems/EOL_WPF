@@ -1,6 +1,5 @@
 {
   "$type": "ScriptHandler.Models.ProjectData, ScriptHandler",
-  "IsChanged": false,
   "Name": "Hi Dynamic EOL",
   "TestPathsList": null,
   "ScriptsPathsList": {
@@ -61,5 +60,6 @@
       "..\\Config Position Sensor.scr"
     ]
   },
-  "RecordParametersFile": null
+  "RecordParametersFile": null,
+  "IsChanged": false
 }

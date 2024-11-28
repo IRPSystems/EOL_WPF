@@ -48,7 +48,7 @@
         "Tolerance": 10.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Analog Input Thermistor (NI DUCK)\" = 25 ±  10 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Analog Input Thermistor (NI DUCK) = 25 ±  10 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

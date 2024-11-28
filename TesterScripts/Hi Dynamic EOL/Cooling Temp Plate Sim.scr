@@ -187,10 +187,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "120",
-        "Tolerance": 1.0,
+        "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 120 ±  1 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 120 ±  6 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -491,7 +491,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 10",
-        "Interval": 4,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -688,10 +688,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "80",
-        "Tolerance": 1.0,
+        "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 80 ±  1 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 80 ±  6 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -992,7 +992,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 11",
-        "Interval": 4,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1189,10 +1189,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "50",
-        "Tolerance": 1.0,
+        "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 50 ±  1 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 50 ±  6 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1493,7 +1493,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 12",
-        "Interval": 4,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1690,10 +1690,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "20",
-        "Tolerance": 1.0,
+        "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 20 ±  1 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 20 ±  6 - ID:10ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1994,7 +1994,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 13",
-        "Interval": 4,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -2191,10 +2191,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "5",
-        "Tolerance": 1.0,
+        "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 5 ±  1 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 5 ±  6 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2418,7 +2418,7 @@
         "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
