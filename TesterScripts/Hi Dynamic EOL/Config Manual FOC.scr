@@ -267,7 +267,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "NaN",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -326,7 +326,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "NaN",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",

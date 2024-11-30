@@ -23,8 +23,8 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       },
@@ -47,8 +47,8 @@
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       },
@@ -71,8 +71,8 @@
         "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       },
@@ -95,8 +95,8 @@
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       }

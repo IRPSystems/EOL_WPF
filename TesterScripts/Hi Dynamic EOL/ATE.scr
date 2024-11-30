@@ -319,7 +319,7 @@
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
-        "Value": 0.7895,
+        "Value": 0.915,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -359,7 +359,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Analog 0 (DAQ 1) to 0.7895V",
+        "UserTitle": "Set Analog 0 (DAQ 1) to 0915V",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
