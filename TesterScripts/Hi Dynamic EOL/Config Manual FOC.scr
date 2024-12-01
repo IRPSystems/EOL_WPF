@@ -267,7 +267,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "NaN",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -326,7 +326,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "ATE",
+            "Value": "NaN",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -513,7 +513,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -552,7 +552,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",

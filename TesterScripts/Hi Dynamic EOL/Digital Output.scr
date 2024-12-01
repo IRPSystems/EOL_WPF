@@ -125,7 +125,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -265,7 +265,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -430,7 +430,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -570,7 +570,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -735,7 +735,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -875,7 +875,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -961,7 +961,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 1 ±  0 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1024,7 +1024,7 @@
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1054,7 +1054,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:6ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 1 ±  0 - ID:6ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1147,7 +1147,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 1 ±  0 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1210,7 +1210,7 @@
         "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1336,7 +1336,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1476,7 +1476,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1641,7 +1641,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1781,7 +1781,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1946,7 +1946,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2086,7 +2086,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -2172,7 +2172,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:12ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 0 ±  0 - ID:12ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2235,7 +2235,7 @@
         "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -2265,7 +2265,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 0 ±  0 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2328,7 +2328,7 @@
         "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -2358,7 +2358,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Digital Input (NI DUCK) = 0 ±  0 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2421,7 +2421,7 @@
         "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }

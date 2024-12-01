@@ -285,7 +285,7 @@
         "Tolerance": 1000000.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 500000 ±  1000000 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 500000 ±  1000000 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -509,7 +509,7 @@
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -635,7 +635,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -775,7 +775,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -842,7 +842,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 30.662,
+          "Value": "NaN",
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -862,7 +862,7 @@
         "Tolerance": 1.5,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Runtime (MCU)\" = 1.5 ±  1.5 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Runtime (MCU) = 1.5 ±  1.5 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -878,7 +878,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 30.662,
+            "Value": "NaN",
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",
@@ -926,7 +926,7 @@
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }

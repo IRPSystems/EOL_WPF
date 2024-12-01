@@ -23,8 +23,8 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       },
@@ -46,6 +46,23 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 4",
+        "Interval": 5,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
         "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "Operational Tests",
@@ -59,30 +76,13 @@
         "SelectedScriptName": "Max. Voltage Operation",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": 4,
-        "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 4",
-        "Interval": 5,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       },
@@ -105,8 +105,8 @@
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       }

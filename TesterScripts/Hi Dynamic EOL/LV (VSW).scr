@@ -200,14 +200,14 @@
           "IsThermistorUsed": false,
           "Name": "Analog Input",
           "Units": null,
-          "Value": 5.057896809768863,
+          "Value": null,
           "DeviceType": 9,
           "CommunicationTimeout": 0
         },
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Analog Input (NI DUCK)\" ±  0 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = Analog Input (NI DUCK) ±  0 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -426,7 +426,7 @@
             "IsThermistorUsed": false,
             "Name": "Analog Input",
             "Units": null,
-            "Value": 5.057896809768863,
+            "Value": null,
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
@@ -448,7 +448,7 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }

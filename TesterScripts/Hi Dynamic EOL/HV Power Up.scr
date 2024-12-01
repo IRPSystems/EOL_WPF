@@ -278,7 +278,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": 350.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -286,7 +286,7 @@
         "Tolerance": 5.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  5 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Actual Voltage (EA Power) = 300 ±  5 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -310,7 +310,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": 350.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -346,9 +346,9 @@
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -365,7 +365,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -386,7 +386,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },

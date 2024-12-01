@@ -199,7 +199,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "NaN",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -540,7 +540,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:6ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 0 ±  0 - ID:6ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -764,7 +764,7 @@
         "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -783,7 +783,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -804,7 +804,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -934,7 +934,7 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": 350.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -942,7 +942,7 @@
         "Tolerance": 1.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  1 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Actual Voltage (EA Power) = 300 ±  1 - ID:10ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -966,7 +966,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": 350.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1002,7 +1002,7 @@
         "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1128,7 +1128,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1268,7 +1268,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -1515,7 +1515,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 1 ±  0 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1739,7 +1739,7 @@
         "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1882,7 +1882,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2022,7 +2022,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,
@@ -2252,7 +2252,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 0 ±  0 - ID:16ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  ATE Get (MCU) = 0 ±  0 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2476,7 +2476,7 @@
         "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -2487,7 +2487,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 1049604.0,
+          "Value": 1575948.0,
           "GroupName": "Monitor",
           "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
           "Default": "0",
@@ -2808,7 +2808,7 @@
               }
             ]
           },
-          "Value": 0.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2948,7 +2948,7 @@
                 }
               ]
             },
-            "Value": 0.0,
+            "Value": null,
             "GroupName": null,
             "Description": null,
             "Default": null,

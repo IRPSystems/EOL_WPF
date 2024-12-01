@@ -23,7 +23,7 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -117,7 +117,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 2",
+        "Name": "ScriptNodeSubScript 5",
         "ParentScriptName": "Position Sensor Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -126,15 +126,15 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "Position Sensor",
-        "UserTitle": null,
+        "SelectedScriptName": "Config Position Sensor",
+        "UserTitle": "Config Motor",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -158,8 +158,8 @@
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       }

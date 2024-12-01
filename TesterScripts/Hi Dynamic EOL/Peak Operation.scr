@@ -200,7 +200,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ATE",
+          "Value": "NaN",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -259,7 +259,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "ATE",
+            "Value": "NaN",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -418,7 +418,7 @@
           "DropDown": null,
           "Name": "(PS) Current Limit",
           "Units": "A",
-          "Value": 1.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
@@ -439,7 +439,7 @@
             "DropDown": null,
             "Name": "(PS) Current Limit",
             "Units": "A",
-            "Value": 1.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -675,7 +675,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -714,7 +714,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -881,11 +881,11 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
+          "Description": "Motor Manual IQ Command",
           "Default": "0",
-          "Cmd": "midcmdman",
+          "Cmd": "miqcmdman",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
@@ -898,7 +898,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual ID Command",
+          "Name": "Manual IQ Command",
           "Units": "A",
           "DeviceType": 1,
           "CommunicationTimeout": 0
@@ -912,11 +912,11 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
+            "Description": "Motor Manual IQ Command",
             "Default": "0",
-            "Cmd": "midcmdman",
+            "Cmd": "miqcmdman",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
@@ -929,7 +929,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual ID Command",
+            "Name": "Manual IQ Command",
             "Units": "A",
             "DeviceType": 1,
             "CommunicationTimeout": 0
@@ -950,7 +950,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual ID Command to 50A",
+        "UserTitle": "Set UUT Manual IQ Command to 50A",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -968,7 +968,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -999,7 +999,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1050,12 +1050,29 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 18",
+        "Interval": 10,
+        "IntervalUnite": 2,
+        "UserTitle": "Stablize Speed",
+        "IsPass": false,
+        "PassNextId": 13,
+        "FailNextId": 0,
+        "ID": 12,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
         "Name": "Converge 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 2002.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Speed - RPM",
           "Default": "0",
@@ -1079,9 +1096,9 @@
         "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM 500",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1095,11 +1112,11 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
+          "Description": "Motor Manual IQ Command",
           "Default": "0",
-          "Cmd": "midcmdman",
+          "Cmd": "miqcmdman",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
@@ -1112,7 +1129,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual ID Command",
+          "Name": "Manual IQ Command",
           "Units": "A",
           "DeviceType": 1,
           "CommunicationTimeout": 0
@@ -1126,11 +1143,11 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
+            "Description": "Motor Manual IQ Command",
             "Default": "0",
-            "Cmd": "midcmdman",
+            "Cmd": "miqcmdman",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
@@ -1143,7 +1160,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual ID Command",
+            "Name": "Manual IQ Command",
             "Units": "A",
             "DeviceType": 1,
             "CommunicationTimeout": 0
@@ -1164,11 +1181,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual ID Command to 230ARMS",
+        "UserTitle": "Set UUT Manual IQ Command to 230ARMS",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1183,9 +1200,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1226,14 +1243,14 @@
           "DropDown": null,
           "Name": "Actual Voltage",
           "Units": "V",
-          "Value": 350.0,
+          "Value": null,
           "DeviceType": 3,
           "CommunicationTimeout": 0
         },
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  Vbus (Monitor) (MCU) = Actual Voltage (EA Power) ±  2 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1289,7 +1306,7 @@
             "DropDown": null,
             "Name": "Actual Voltage",
             "Units": "V",
-            "Value": 350.0,
+            "Value": null,
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
@@ -1306,12 +1323,12 @@
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1322,11 +1339,11 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Motor Manual ID Command",
+          "Description": "Motor Manual IQ Command",
           "Default": "0",
-          "Cmd": "midcmdman",
+          "Cmd": "miqcmdman",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
@@ -1339,7 +1356,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual ID Command",
+          "Name": "Manual IQ Command",
           "Units": "A",
           "DeviceType": 1,
           "CommunicationTimeout": 0
@@ -1353,11 +1370,11 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
+            "Description": "Motor Manual IQ Command",
             "Default": "0",
-            "Cmd": "midcmdman",
+            "Cmd": "miqcmdman",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
@@ -1370,7 +1387,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual ID Command",
+            "Name": "Manual IQ Command",
             "Units": "A",
             "DeviceType": 1,
             "CommunicationTimeout": 0
@@ -1391,11 +1408,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set UUT Manual ID Command to 0A",
+        "UserTitle": "Set UUT Manual IQ Command to 0A",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1409,7 +1426,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1440,7 +1457,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1482,7 +1499,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
