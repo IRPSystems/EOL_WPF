@@ -99,7 +99,7 @@ namespace EOL.ViewModels
 		private OpenProjectForRunService _openProject;
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
-		private GeneratedScriptData _stoppedScript; // TODO: initiate
+		private GeneratedScriptData _stoppedScript; 
         private GeneratedScriptData _abortScript;
         private ObservableCollection<DeviceParameterData> _logParametersList;
 		private string MainScriptReportSubFolder = "Main Script Reports";
@@ -114,6 +114,8 @@ namespace EOL.ViewModels
 		private GeneratedProjectData _projectSub;
 
 		private SettingsData _settingsData;
+
+		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
 		#endregion Fields
 
@@ -139,6 +141,8 @@ namespace EOL.ViewModels
 				PackageJsonFileGenerator.GenerateJsonFile();
                 _timerDuration = new System.Timers.Timer(300);
 				_timerDuration.Elapsed += _timerDuration_Elapsed;
+
+				_currentScriptDeviceList = new List<DeviceTypesEnum>();
 
 				IsRunButtonEnabled = true;
                 ContinueVisibility = Visibility.Collapsed;
@@ -416,17 +420,20 @@ namespace EOL.ViewModels
 		}
 
 		private void _runProjectsList_ScriptEndedEvent(
-			ScriptStopModeEnum stopeMode,
+			ScriptStopModeEnum stopMode,
 			GeneratedScriptData endedScript)
 		{
-			if (stopeMode == ScriptStopModeEnum.Ended)
+			if (stopMode == ScriptStopModeEnum.Stopped)
+				_stoppedScript = endedScript;
+
+			if (stopMode == ScriptStopModeEnum.Ended)
 				RunPercentage = 100;
 
-			Stop(stopeMode);
+			Stop(stopMode);
 
 			PostRunActions();
 
-			if(stopeMode == ScriptStopModeEnum.Aborted)
+			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 		}
 
@@ -557,7 +564,7 @@ namespace EOL.ViewModels
 			return true;
         }
 
-		private List<DeviceTypesEnum> currentScriptDeviceList;
+		
 
 		private bool CheckLoadedScriptUsedDeviceConnectivity()
 		{
@@ -578,7 +585,6 @@ namespace EOL.ViewModels
 		private void UpdatedCurrentUsedDeviceList(
             ObservableCollection<IScriptItem> scriptItemsList)
         {
-            int totalNumOfSteps = 0;
             foreach (IScriptItem scriptItem in scriptItemsList)
             {
                 if (scriptItem is ISubScript subScript)
@@ -596,9 +602,9 @@ namespace EOL.ViewModels
                 }
 				if(scriptItem is ScriptStepCompare compare)
 				{
-					if(!currentScriptDeviceList.Contains(compare.Parameter.Device.DeviceType))
+					if(!_currentScriptDeviceList.Contains(compare.Parameter.Device.DeviceType))
 					{
-                        currentScriptDeviceList.Add(compare.Parameter.Device.DeviceType);
+                        _currentScriptDeviceList.Add(compare.Parameter.Device.DeviceType);
                     }
                 }
                 if (scriptItem is ScriptStepEOLPrint print)

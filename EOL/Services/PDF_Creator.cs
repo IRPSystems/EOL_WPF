@@ -313,7 +313,7 @@ namespace EOL.Services
 
     public class PageEventHandler : PdfPageEventHelper
     {
-        private string logoPath = "";
+        //private string logoPath = "";
         public RunResult runResult { get; set; }
         public string ScriptPath { get; set; }
         public string TesterConfig { get; set; }
