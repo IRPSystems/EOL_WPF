@@ -1,7 +1,6 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using CsvHelper;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using DeviceHandler.Models;
@@ -11,9 +10,6 @@ using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
 using EOL.Views;
-using FlashingToolLib;
-using FlashingToolLib.FlashingTools;
-using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -821,8 +817,12 @@ namespace EOL.ViewModels
 				else
 					RunState = RunStateEnum.Passed;
 
+				if(ErrorMessage != null)
+					RunState = RunStateEnum.Aborted;
+
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
+
 
 				ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
