@@ -759,6 +759,7 @@ namespace EOL.ViewModels
 				if (scriptItem is ScriptStepEOLPrint print)
 				{
 					print.SerialNumber = _runData.SerialNumber;
+					print.ParamData = new();
                     print.ParamData.DataContent = _printFileParser.BuildPrinterCmd(print);
 				}
 				else if (scriptItem is ScriptStepEOLFlash flash)
