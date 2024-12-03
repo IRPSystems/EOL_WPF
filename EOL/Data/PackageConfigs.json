@@ -38,10 +38,10 @@
 		"PsFlashPower": false,
 		"RelayFlashPower": false,
 		"FirstFileArguments": {
-		  "Customer": 3
+		  "Customer": 2
 		},
 		"SecondFileArguments": {
-		  "Customer": 3
+		  "Customer": 2
 		}
 	  },
       "DevicesList": {
@@ -52,104 +52,6 @@
         "Printer_TSC": "True",
         "NumatoGPIO": "True",
         "PowerSupplayEA":  "True"
-      }
-    },
-
-    "FT": {
-      "MainSeq": {
-        "SubfolderName": "FunctionalTester_Script",
-        "FileExtension": "*.json",
-        "IsUsed": true
-      },
-      "ProjectSeq": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-      "MonitorLog": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-      "FirstFlashFile": {
-        "SubfolderName": "Tester_UUT_FW",
-        "FileExtension": "*.irphex",
-        "IsUsed": true
-      },
-      "SecondFlashFile": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-       "OtherPreferences": {
-		"ProjectBaudRate": 500,
-		"MonitorLog": true,
-		"PrintLabel": true
-	  },
-	  "FlashPreferences": {
-		"PreRunFlash": true,
-		"IsTogglePower": false,
-		"AteBoxFlashPower": false,
-		"PsFlashPower": false,
-		"RelayFlashPower": false,
-		"FirstFileArguments": {
-		  "Customer": 3
-		},
-		"SecondFileArguments": {
-		  "Customer": 3
-		}
-	  },
-      "DevicesList": {
-        "MCU": "True",
-        "MCU_B2B": "True",
-        "ZimmerPowerMeter": "True",
-        "NI_6002": "True",
-        "NI_6002_2": "True",
-        "Printer_TSC": "False",
-        "NumatoGPIO": "True",
-        "PowerSupplayEA": "True"
-      }
-    },
-    "Flasher": {
-      "MainSeq": {
-        "SubfolderName": "TP_ProjectFiles",
-        "FileExtension": "*.json",
-        "IsUsed": true
-      },
-      "ProjectSeq": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-      "MonitorLog": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-      "FirstFlashFile": {
-        "SubfolderName": "TP_ProjectFiles\\App",
-        "FileExtension": "",
-        "IsUsed": true
-      },
-      "SecondFlashFile": {
-        "SubfolderName": "",
-        "FileExtension": "",
-        "IsUsed": false
-      },
-      "OtherPreferences": {
-        "MonitorLog": false,
-        "PrintLabel": true,
-        "PreFlash": false
-      },
-      "DevicesList": {
-        "MCU": "True",
-        "MCU_B2B": "True",
-        "ZimmerPowerMeter": "True",
-        "NI_6002": "True",
-        "NI_6002_2": "True",
-        "Printer_TSC": "True",
-        "NumatoGPIO": "True",
-        "PowerSupplayEA": "True"
       }
     }
   }
