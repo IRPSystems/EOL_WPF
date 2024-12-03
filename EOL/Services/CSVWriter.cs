@@ -19,7 +19,6 @@ namespace EOL.Services
 		public string _csvFilePath { get; set; }
 
         private List<string> _headers;
-        private bool _headersWritten;
 
 		#endregion Properties and Fields
 
@@ -28,7 +27,6 @@ namespace EOL.Services
 		public CSVWriter()
         {
             _headers = new List<string>();
-            _headersWritten = false;
         }
 
 		#endregion Constructor
@@ -54,7 +52,7 @@ namespace EOL.Services
             var standardHeaders = properties.Select(p => p.Name).ToList();
 
             // Collect headers if not already done
-            if (!_headersWritten)
+            if (File.Exists(_csvFilePath) == false)
             {
                 _headers = GetHeaders(projectsList);
 				_headers.InsertRange(0, standardHeaders);
@@ -64,7 +62,6 @@ namespace EOL.Services
                 {
                     // Write headers
                     writer.WriteLine(string.Join(",", _headers));
-                    _headersWritten = true;
                 }
             }
 
