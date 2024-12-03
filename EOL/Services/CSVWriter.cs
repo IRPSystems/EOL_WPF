@@ -9,6 +9,7 @@ using Org.BouncyCastle.Bcpg.Sig;
 using Services.Services;
 using System.Collections.ObjectModel;
 using ScriptHandler.Interfaces;
+using ScriptHandler.Models.ScriptSteps;
 
 namespace EOL.Services
 {
