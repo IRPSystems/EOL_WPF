@@ -41,7 +41,7 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
 
-            if(testResult.StopReason != "PASS")
+            if(testResult.StopReason != "PASSED")
                 testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
 
 			// Use reflection to get properties
@@ -187,22 +187,14 @@ namespace EOL.Services
 
             string description = string.Empty;
 
-            if (failedStep.EOLStepSummerysList != null &&
-                 failedStep.EOLStepSummerysList.Count > 0)
+            List<string> header = failedStep.GetReportHeaders();
+            if(header != null && header.Count > 0)
             {
-                EOLStepSummeryData eolStepSummeryData =
-                    failedStep.EOLStepSummerysList[0];
+                description = FixStringService.GetFixedString(header[0]);
+            }
 
-				//string testName = GetFixedString(eolStepSummeryData.TestName);
-				//string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
 
-				//description = $"{testName};\r\n";
-
-				//if (subScriptName != testName)
-				//	description += $"{subScriptName};\r\n";
-			}
-
-            description += FixStringService.GetFixedString(failedStep.ErrorMessage);
+			description += FixStringService.GetFixedString(failedStep.ErrorMessage);
             description = $"\"{description}\"";
 
 			return description;
