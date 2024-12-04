@@ -325,7 +325,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 10.0,
+        "Value": 5.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -372,7 +372,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set ATE PWM Ramp to 10",
+        "UserTitle": "Set ATE PWM Ramp to 5",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -1538,7 +1538,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 17",
-        "Interval": 15,
+        "Interval": 25,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,

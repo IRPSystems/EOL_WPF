@@ -504,7 +504,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Turn On VSW",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 7,
         "FailNextId": 0,
         "ID": 6,
         "EOLReportsSelectionData": {
@@ -523,7 +523,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
