@@ -1,12 +1,29 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "Establish Communication",
+  "Name": "Post Flash Validation",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 1",
+        "Interval": 20,
+        "IntervalUnite": 2,
+        "UserTitle": "Eeprom Process Delay",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
+        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -33,10 +50,10 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": "2",
-        "Tolerance": 0.0,
+        "Tolerance": 500.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  500 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -99,16 +116,16 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "First Comm Test",
+        "UserTitle": "Get MCU Version",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
+          "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true
+          "IsSaveToPdfDynTable": false
         }
       }
     ]

@@ -45,8 +45,6 @@
       "..\\Position Sensor Test.tst",
       "..\\Position Sensor.scr",
       "..\\Speed Estimation.scr",
-      "..\\Customer FW Flash.tst",
-      "..\\Flash.scr",
       "..\\Abort Script 2.scr",
       "..\\Operational Tests.tst",
       "..\\Min. Voltage Operation.scr",
@@ -54,10 +52,16 @@
       "..\\Config Manual FOC.scr",
       "..\\Peak Operation.scr",
       "..\\Compare Manual Angle.scr",
+      "..\\Flash Customer FW.tst",
       "..\\Power Down.tst",
       "..\\Shut Down.scr",
       "..\\Abort Script Nothing.scr",
-      "..\\Config Position Sensor.scr"
+      "..\\Config Position Sensor.scr",
+      "..\\Print Label New.scr",
+      "..\\Print Customer Label.tst",
+      "..\\Post Flash Validation.scr",
+      "..\\Pre Flash Operator Guide.scr",
+      "..\\Post Flash Operator Guide.scr"
     ]
   },
   "RecordParametersFile": null,
