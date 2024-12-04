@@ -3119,7 +3119,7 @@
                       "Name": "Set Parameter 1",
                       "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:3",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 3 sec - ID:4",
+                      "PassNextDescription": "Delay 1 sec - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -3143,13 +3143,13 @@
                     {
                       "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
                       "IntervalUnite": 2,
-                      "Interval": 3,
+                      "Interval": 1,
                       "Diff_Timeout": "00:00:00",
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 12",
-                      "Description": "Delay 3 sec - ID:4",
+                      "Description": "Delay 1 sec - ID:4",
                       "IsPass": false,
                       "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:5",
                       "FailNextDescription": null,
@@ -3236,45 +3236,13 @@
                       "Name": "Compare 6",
                       "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:5",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 3 sec - ID:6",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 5,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": false,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "SubScriptName": null,
-                      "TestName": null,
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IntervalUnite": 2,
-                      "Interval": 3,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": "Delay",
-                      "Name": "Delay 14",
-                      "Description": "Delay 3 sec - ID:6",
-                      "IsPass": false,
                       "PassNextDescription": "Set  \"Active Damping Activation (MCU)\" = 0 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 6,
+                      "ID": 5,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -3937,13 +3905,842 @@
                       "Name": "Set Parameter 9",
                       "Description": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:13",
                       "IsPass": false,
-                      "PassNextDescription": null,
+                      "PassNextDescription": "Set  \"Motor Temperature Sensor           - 0x8102 (MCU)\" = 1 - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 13,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "flttsi",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Motor Temperature Sensor           - 0x8102",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable Motor Temp Sensor Fault",
+                      "Name": "Set Parameter 14",
+                      "Description": "Set  \"Motor Temperature Sensor           - 0x8102 (MCU)\" = 1 - ID:14",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Current Sensor Factory Gain                              (MCU)\" = 1 - ID:15",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 14,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "fltcfi",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Current Sensor Factory Gain                             ",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable Current Sensor Factory Gain Fault",
+                      "Name": "Set Parameter 15",
+                      "Description": "Set  \"Current Sensor Factory Gain                              (MCU)\" = 1 - ID:15",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"CAN BUS No Communication       - 0x8180 (MCU)\" = 1 - ID:20",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 15,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Faults Disable",
+                        "Description": "Choose whether this fault is ignored or not",
+                        "Default": "Enabled",
+                        "Cmd": "fltcnci",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "CAN BUS No Communication       - 0x8180",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Disable CAN No Comm Fault",
+                      "Name": "Set Parameter 20",
+                      "Description": "Set  \"CAN BUS No Communication       - 0x8180 (MCU)\" = 1 - ID:20",
+                      "IsPass": false,
+                      "PassNextDescription": "Delay 1 sec - ID:21",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 20,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 1,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Delay",
+                      "Name": "Delay 21",
+                      "Description": "Delay 1 sec - ID:21",
+                      "IsPass": false,
+                      "PassNextDescription": "Compare  Faults Vector 0 (MCU) = 0 - ID:16",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 21,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                      "ValueLeft": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Monitor",
+                        "Description": "Faults Vector, 32 bits bitwise\r\nLower bits of the whole faults vector",
+                        "Default": "0",
+                        "Cmd": "fltvw0",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "No Active Fault",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Motor Over Temperature",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Motor Low Temperature",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Motor Temperature Sensor",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "MCU Over Temperature",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "MCU Low Temperature",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "MCU Temperature Sensor",
+                              "Value": "32"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CPU Over Temperature",
+                              "Value": "64"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase U Over Current Peak",
+                              "Value": "128"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase U Current Sensor",
+                              "Value": "256"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase V Over Current Peak",
+                              "Value": "512"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase W Over Current",
+                              "Value": "1024"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase W Current Sensor",
+                              "Value": "2048"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase U Disconnected",
+                              "Value": "4096"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase V Disconnected",
+                              "Value": "8192"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase W Disconnected",
+                              "Value": "16384"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Over Current",
+                              "Value": "32768"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Current Sensor",
+                              "Value": "65536"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Under Voltage",
+                              "Value": "131072"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Low Voltage",
+                              "Value": "262144"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus High Voltage",
+                              "Value": "524288"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Over Voltage",
+                              "Value": "1048576"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Driver Voltage",
+                              "Value": "2097152"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Driver Fault",
+                              "Value": "4194304"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "KL30 Under Voltage",
+                              "Value": "8388608"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "KL30 Over Voltage",
+                              "Value": "16777216"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "KL30 Los",
+                              "Value": "33554432"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Position Sensor",
+                              "Value": "67108864"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Motor Speed Fault",
+                              "Value": "134217728"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Motor Stall",
+                              "Value": "268435456"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "IO Expender Config",
+                              "Value": "536870912"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Tranceiver",
+                              "Value": "1073741824"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Memory Read",
+                              "Value": "-2147483648"
+                            }
+                          ]
+                        },
+                        "Name": "Faults Vector 0",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "ValueRight": 0.0,
+                      "Comparation": 0,
+                      "IsUseAverage": false,
+                      "AverageOfNRead": 0,
+                      "Parameter": null,
+                      "UserTitle": "Check Fault Vector 0",
+                      "Name": "Compare 16",
+                      "Description": "Compare  Faults Vector 0 (MCU) = 0 - ID:16",
+                      "IsPass": false,
+                      "PassNextDescription": "Compare  Faults Vector 1 (MCU) = 0 - ID:17",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 16,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                      "ValueLeft": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Monitor",
+                        "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+                        "Default": "0",
+                        "Cmd": "fltvw1",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "No Active Fault",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "5V Sensor",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Timeout",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN No Comm",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Performance Derating Bus Voltage",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Performance Derating MCU Temperature",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Performance Derating Motor Temperature",
+                              "Value": "32"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Bus Off",
+                              "Value": "64"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Error Active",
+                              "Value": "128"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Error Passive",
+                              "Value": "256"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "CAN Signal Invalid",
+                              "Value": "512"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Cooling Plate Over Temp",
+                              "Value": "1024"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Cooling Plate Temp Sensor",
+                              "Value": "2048"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Resolver Calibration Required",
+                              "Value": "4096"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Discharge Timeout",
+                              "Value": "8192"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Discharge Feedback Active Pbit",
+                              "Value": "16384"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Discharge Feedback Active Cbit",
+                              "Value": "32768"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Discharge Feedback InActive Pbit",
+                              "Value": "65536"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Discharge Feedback InActive Cbit",
+                              "Value": "131072"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Bus Voltage Plausibility",
+                              "Value": "262144"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Current Sensor Factory Gain",
+                              "Value": "524288"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "MCU Temp Plausibility",
+                              "Value": "1048576"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Active Short Circuit",
+                              "Value": "2097152"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Drivers Feedback Active Pbit",
+                              "Value": "4194304"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Drivers Feedback Active Cbit",
+                              "Value": "8388608"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Drivers Feedback InActive Pbit",
+                              "Value": "16777216"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Gate Drivers Feedback InActive Cbit",
+                              "Value": "33554432"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "HV PBIT",
+                              "Value": "67108864"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "FOC Control",
+                              "Value": "134217728"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Fusa Pbit",
+                              "Value": "268435456"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Fusa Cbit",
+                              "Value": "536870912"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "I2T",
+                              "Value": "1073741824"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Phase U Safe Over Current",
+                              "Value": "-2147483648"
+                            }
+                          ]
+                        },
+                        "Name": "Faults Vector 1",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "ValueRight": 0.0,
+                      "Comparation": 0,
+                      "IsUseAverage": false,
+                      "AverageOfNRead": 0,
+                      "Parameter": null,
+                      "UserTitle": "Check Fault Vector 1",
+                      "Name": "ScriptNodeCompare 17",
+                      "Description": "Compare  Faults Vector 1 (MCU) = 0 - ID:17",
+                      "IsPass": false,
+                      "PassNextDescription": "Compare  Faults Vector 3 (MCU) = 0 - ID:19",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 17,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                      "ValueLeft": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Monitor",
+                        "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+                        "Default": "0",
+                        "Cmd": "fltvw3",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "No Active Fault",
+                              "Value": "0"
+                            }
+                          ]
+                        },
+                        "Name": "Faults Vector 3",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "CommunicationTimeout": 0
+                      },
+                      "ValueRight": 0.0,
+                      "Comparation": 0,
+                      "IsUseAverage": false,
+                      "AverageOfNRead": 0,
+                      "Parameter": null,
+                      "UserTitle": "Check Fault Vector 3",
+                      "Name": "ScriptNodeCompare 19",
+                      "Description": "Compare  Faults Vector 3 (MCU) = 0 - ID:19",
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18755,13 +19552,108 @@
                       "Name": "Delay 7",
                       "Description": "Delay 5 sec - ID:6",
                       "IsPass": false,
-                      "PassNextDescription": "Sub Script = UUT Configuration - Repeats: 1 - ID:7",
+                      "PassNextDescription": "Set  \"Output On/Off (EA Power)\" = 1 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 6,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+                        "Cmd": "OUTP",
+                        "Max": 1,
+                        "ParamType": 0,
+                        "ModbusAddress": 405,
+                        "NumOfRegisters": 1,
+                        "ValueType": "ushort",
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "OFF",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ON",
+                              "Value": "1"
+                            }
+                          ]
+                        },
+                        "Name": "Output On/Off",
+                        "Units": null,
+                        "Value": null,
+                        "DeviceType": 3,
+                        "CommunicationTimeout": 3000
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set PS Output to ON",
+                      "Name": "ScriptNodeSetParameter 9",
+                      "Description": "Set  \"Output On/Off (EA Power)\" = 1 - ID:9",
+                      "IsPass": false,
+                      "PassNextDescription": "Sub Script = UUT Configuration - Repeats: 1 - ID:7",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -18980,7 +19872,7 @@
                               "Name": "Set Parameter 1",
                               "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:3",
                               "IsPass": false,
-                              "PassNextDescription": "Delay 3 sec - ID:4",
+                              "PassNextDescription": "Delay 1 sec - ID:4",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
@@ -19004,13 +19896,13 @@
                             {
                               "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
                               "IntervalUnite": 2,
-                              "Interval": 3,
+                              "Interval": 1,
                               "Diff_Timeout": "00:00:00",
                               "TsTimeout": "00:00:00",
                               "TimeoutPercentage": 0,
                               "UserTitle": "Delay",
                               "Name": "Delay 12",
-                              "Description": "Delay 3 sec - ID:4",
+                              "Description": "Delay 1 sec - ID:4",
                               "IsPass": false,
                               "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:5",
                               "FailNextDescription": null,
@@ -19097,45 +19989,13 @@
                               "Name": "Compare 6",
                               "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:5",
                               "IsPass": false,
-                              "PassNextDescription": "Delay 3 sec - ID:6",
-                              "FailNextDescription": null,
-                              "ErrorMessage": "",
-                              "StopScriptStep": null,
-                              "BorderBrush": null,
-                              "StepState": 0,
-                              "ID": 5,
-                              "EOLReportsSelectionData": {
-                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                                "IsSaveToReport": false,
-                                "IsSaveToPdfExecTable": false,
-                                "IsSaveToPdfDynTable": false
-                              },
-                              "EOLStepSummerysList": {
-                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                                "$values": []
-                              },
-                              "SubScriptName": null,
-                              "TestName": null,
-                              "ProgressPercentage": 0
-                            },
-                            {
-                              "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                              "IntervalUnite": 2,
-                              "Interval": 3,
-                              "Diff_Timeout": "00:00:00",
-                              "TsTimeout": "00:00:00",
-                              "TimeoutPercentage": 0,
-                              "UserTitle": "Delay",
-                              "Name": "Delay 14",
-                              "Description": "Delay 3 sec - ID:6",
-                              "IsPass": false,
                               "PassNextDescription": "Set  \"Active Damping Activation (MCU)\" = 0 - ID:7",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
                               "BorderBrush": null,
                               "StepState": 0,
-                              "ID": 6,
+                              "ID": 5,
                               "EOLReportsSelectionData": {
                                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                                 "IsSaveToReport": false,
@@ -19798,13 +20658,842 @@
                               "Name": "Set Parameter 9",
                               "Description": "Set  \"Cooling Plate Over Temperature  - 0x8105 (MCU)\" = 1 - ID:13",
                               "IsPass": false,
-                              "PassNextDescription": null,
+                              "PassNextDescription": "Set  \"Motor Temperature Sensor           - 0x8102 (MCU)\" = 1 - ID:14",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
                               "BorderBrush": null,
                               "StepState": 0,
                               "ID": 13,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "flttsi",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "Motor Temperature Sensor           - 0x8102",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "SubScriptName": null,
+                                "TestName": null,
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable Motor Temp Sensor Fault",
+                              "Name": "Set Parameter 14",
+                              "Description": "Set  \"Motor Temperature Sensor           - 0x8102 (MCU)\" = 1 - ID:14",
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"Current Sensor Factory Gain                              (MCU)\" = 1 - ID:15",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 14,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "fltcfi",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "Current Sensor Factory Gain                             ",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "SubScriptName": null,
+                                "TestName": null,
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable Current Sensor Factory Gain Fault",
+                              "Name": "Set Parameter 15",
+                              "Description": "Set  \"Current Sensor Factory Gain                              (MCU)\" = 1 - ID:15",
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"CAN BUS No Communication       - 0x8180 (MCU)\" = 1 - ID:20",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 15,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Faults Disable",
+                                "Description": "Choose whether this fault is ignored or not",
+                                "Default": "Enabled",
+                                "Cmd": "fltcnci",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    }
+                                  ]
+                                },
+                                "Name": "CAN BUS No Communication       - 0x8180",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "Value": 1,
+                              "ExtraData": {
+                                "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                                "Parameter": null,
+                                "Ni6002_IOPort": 0,
+                                "Ni6002_Line": 0,
+                                "NI6002_NumofCounts": 0,
+                                "NIDAQShuntResistor": 0.0,
+                                "AteCommand": 0,
+                                "NIThermistorIndex": 0,
+                                "AteCommandDropDwonIndex": 0,
+                                "Zimmer_Channel": 0,
+                                "NumatoGPIOPort": 0,
+                                "NumatoGPIODropDwonIndex": 0
+                              },
+                              "ValueParameter": null,
+                              "GetParamValue": {
+                                "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                                "Parameter": null,
+                                "UserTitle": null,
+                                "Name": null,
+                                "Description": null,
+                                "IsPass": false,
+                                "PassNextDescription": null,
+                                "FailNextDescription": null,
+                                "ErrorMessage": "",
+                                "StopScriptStep": null,
+                                "BorderBrush": null,
+                                "StepState": 0,
+                                "ID": 0,
+                                "EOLReportsSelectionData": null,
+                                "EOLStepSummerysList": {
+                                  "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                  "$values": []
+                                },
+                                "SubScriptName": null,
+                                "TestName": null,
+                                "ProgressPercentage": 0
+                              },
+                              "UserTitle": "Disable CAN No Comm Fault",
+                              "Name": "Set Parameter 20",
+                              "Description": "Set  \"CAN BUS No Communication       - 0x8180 (MCU)\" = 1 - ID:20",
+                              "IsPass": false,
+                              "PassNextDescription": "Delay 1 sec - ID:21",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 20,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                              "IntervalUnite": 2,
+                              "Interval": 1,
+                              "Diff_Timeout": "00:00:00",
+                              "TsTimeout": "00:00:00",
+                              "TimeoutPercentage": 0,
+                              "UserTitle": "Delay",
+                              "Name": "Delay 21",
+                              "Description": "Delay 1 sec - ID:21",
+                              "IsPass": false,
+                              "PassNextDescription": "Compare  Faults Vector 0 (MCU) = 0 - ID:16",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 21,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                              "ValueLeft": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Monitor",
+                                "Description": "Faults Vector, 32 bits bitwise\r\nLower bits of the whole faults vector",
+                                "Default": "0",
+                                "Cmd": "fltvw0",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": false,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "No Active Fault",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Motor Over Temperature",
+                                      "Value": "1"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Motor Low Temperature",
+                                      "Value": "2"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Motor Temperature Sensor",
+                                      "Value": "4"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "MCU Over Temperature",
+                                      "Value": "8"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "MCU Low Temperature",
+                                      "Value": "16"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "MCU Temperature Sensor",
+                                      "Value": "32"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CPU Over Temperature",
+                                      "Value": "64"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase U Over Current Peak",
+                                      "Value": "128"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase U Current Sensor",
+                                      "Value": "256"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase V Over Current Peak",
+                                      "Value": "512"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase W Over Current",
+                                      "Value": "1024"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase W Current Sensor",
+                                      "Value": "2048"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase U Disconnected",
+                                      "Value": "4096"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase V Disconnected",
+                                      "Value": "8192"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase W Disconnected",
+                                      "Value": "16384"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Over Current",
+                                      "Value": "32768"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Current Sensor",
+                                      "Value": "65536"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Under Voltage",
+                                      "Value": "131072"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Low Voltage",
+                                      "Value": "262144"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus High Voltage",
+                                      "Value": "524288"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Over Voltage",
+                                      "Value": "1048576"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Driver Voltage",
+                                      "Value": "2097152"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Driver Fault",
+                                      "Value": "4194304"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "KL30 Under Voltage",
+                                      "Value": "8388608"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "KL30 Over Voltage",
+                                      "Value": "16777216"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "KL30 Los",
+                                      "Value": "33554432"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Position Sensor",
+                                      "Value": "67108864"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Motor Speed Fault",
+                                      "Value": "134217728"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Motor Stall",
+                                      "Value": "268435456"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "IO Expender Config",
+                                      "Value": "536870912"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Tranceiver",
+                                      "Value": "1073741824"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Memory Read",
+                                      "Value": "-2147483648"
+                                    }
+                                  ]
+                                },
+                                "Name": "Faults Vector 0",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "ValueRight": 0.0,
+                              "Comparation": 0,
+                              "IsUseAverage": false,
+                              "AverageOfNRead": 0,
+                              "Parameter": null,
+                              "UserTitle": "Check Fault Vector 0",
+                              "Name": "Compare 16",
+                              "Description": "Compare  Faults Vector 0 (MCU) = 0 - ID:16",
+                              "IsPass": false,
+                              "PassNextDescription": "Compare  Faults Vector 1 (MCU) = 0 - ID:17",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 16,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                              "ValueLeft": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Monitor",
+                                "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+                                "Default": "0",
+                                "Cmd": "fltvw1",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": false,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "No Active Fault",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "5V Sensor",
+                                      "Value": "1"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Timeout",
+                                      "Value": "2"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN No Comm",
+                                      "Value": "4"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Performance Derating Bus Voltage",
+                                      "Value": "8"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Performance Derating MCU Temperature",
+                                      "Value": "16"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Performance Derating Motor Temperature",
+                                      "Value": "32"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Bus Off",
+                                      "Value": "64"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Error Active",
+                                      "Value": "128"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Error Passive",
+                                      "Value": "256"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "CAN Signal Invalid",
+                                      "Value": "512"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Cooling Plate Over Temp",
+                                      "Value": "1024"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Cooling Plate Temp Sensor",
+                                      "Value": "2048"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Resolver Calibration Required",
+                                      "Value": "4096"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Discharge Timeout",
+                                      "Value": "8192"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Discharge Feedback Active Pbit",
+                                      "Value": "16384"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Discharge Feedback Active Cbit",
+                                      "Value": "32768"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Discharge Feedback InActive Pbit",
+                                      "Value": "65536"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Discharge Feedback InActive Cbit",
+                                      "Value": "131072"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Bus Voltage Plausibility",
+                                      "Value": "262144"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Current Sensor Factory Gain",
+                                      "Value": "524288"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "MCU Temp Plausibility",
+                                      "Value": "1048576"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Active Short Circuit",
+                                      "Value": "2097152"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Drivers Feedback Active Pbit",
+                                      "Value": "4194304"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Drivers Feedback Active Cbit",
+                                      "Value": "8388608"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Drivers Feedback InActive Pbit",
+                                      "Value": "16777216"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Gate Drivers Feedback InActive Cbit",
+                                      "Value": "33554432"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "HV PBIT",
+                                      "Value": "67108864"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "FOC Control",
+                                      "Value": "134217728"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Fusa Pbit",
+                                      "Value": "268435456"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Fusa Cbit",
+                                      "Value": "536870912"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "I2T",
+                                      "Value": "1073741824"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Phase U Safe Over Current",
+                                      "Value": "-2147483648"
+                                    }
+                                  ]
+                                },
+                                "Name": "Faults Vector 1",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "ValueRight": 0.0,
+                              "Comparation": 0,
+                              "IsUseAverage": false,
+                              "AverageOfNRead": 0,
+                              "Parameter": null,
+                              "UserTitle": "Check Fault Vector 1",
+                              "Name": "ScriptNodeCompare 17",
+                              "Description": "Compare  Faults Vector 1 (MCU) = 0 - ID:17",
+                              "IsPass": false,
+                              "PassNextDescription": "Compare  Faults Vector 3 (MCU) = 0 - ID:19",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 17,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": false,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                              "ValueLeft": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Monitor",
+                                "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+                                "Default": "0",
+                                "Cmd": "fltvw3",
+                                "Range": null,
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": false,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "No Active Fault",
+                                      "Value": "0"
+                                    }
+                                  ]
+                                },
+                                "Name": "Faults Vector 3",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "CommunicationTimeout": 0
+                              },
+                              "ValueRight": 0.0,
+                              "Comparation": 0,
+                              "IsUseAverage": false,
+                              "AverageOfNRead": 0,
+                              "Parameter": null,
+                              "UserTitle": "Check Fault Vector 3",
+                              "Name": "ScriptNodeCompare 19",
+                              "Description": "Compare  Faults Vector 3 (MCU) = 0 - ID:19",
+                              "IsPass": false,
+                              "PassNextDescription": null,
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 19,
                               "EOLReportsSelectionData": {
                                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                                 "IsSaveToReport": false,
@@ -24409,6 +26098,67 @@
                 "ScriptItemsList": {
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
                   "$values": [
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+                      "IsStart": true,
+                      "SafetyOfficerErrorLevel": 0,
+                      "UserTitle": "Start Safety Officer ",
+                      "Name": "Set Parameter 31",
+                      "Description": "Start Safty Officer - ID:31",
+                      "IsPass": true,
+                      "PassNextDescription": "Delay 1 sec - ID:32",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 31,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IntervalUnite": 2,
+                      "Interval": 1,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Delay",
+                      "Name": "Delay 32",
+                      "Description": "Delay 1 sec - ID:32",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Remote state (EA Power)\" = 1 - ID:1",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 32,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
                     {
                       "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
                       "Parameter": {
@@ -39628,13 +41378,42 @@
                       "Name": "ScriptNodeSetParameter 18",
                       "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:17",
                       "IsPass": false,
-                      "PassNextDescription": null,
+                      "PassNextDescription": "Stop Safty Officer - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 17,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+                      "IsStart": false,
+                      "SafetyOfficerErrorLevel": 0,
+                      "UserTitle": "Stop Safety Officer",
+                      "Name": "Set Parameter 18",
+                      "Description": "Stop Safty Officer - ID:18",
+                      "IsPass": true,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,

@@ -426,7 +426,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -457,7 +457,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -530,7 +530,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -561,7 +561,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -848,7 +848,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -879,7 +879,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1081,7 +1081,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1112,7 +1112,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1314,7 +1314,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1345,7 +1345,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1547,7 +1547,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 0.0,
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1578,7 +1578,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": 0.0,
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1737,7 +1737,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -1776,7 +1776,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
