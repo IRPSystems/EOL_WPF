@@ -8,7 +8,7 @@
     "$values": [
       {
         "$type": "DeviceCommunicators.TSCPrinter.PrinterTSC_ParamData, DeviceCommunicators",
-        "Cmd": "<ESC>!?",
+        "DataContent": "<ESC>!?",
         "SerialNumber": null,
         "PartNumber": null,
         "CustomerPartNumber": null,
@@ -16,7 +16,7 @@
         "HW_Version": null,
         "MCU_Version": null,
         "Prn_Design": null,
-        "Name": "Comm Chcek",
+        "Name": "CommCheck",
         "Units": null,
         "Value": null,
         "DeviceType": 23
