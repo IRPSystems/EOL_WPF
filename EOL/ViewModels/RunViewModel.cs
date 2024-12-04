@@ -131,6 +131,10 @@ namespace EOL.ViewModels
             _userDefaultSettings = userDefaultSettings;
 			_settingsData = settingsData;
 
+			_runData.NumberOfTested = 0;
+			_runData.NumberOfFailed = 0;
+			_runData.NumberOfPassed = 0;
+
             try
             {
 				//PackageConfig
@@ -471,12 +475,12 @@ namespace EOL.ViewModels
 			}
 			ErrorMessage = null;
 
-			_runData.NumberOfTested = 0;
-			_runData.NumberOfFailed = 0;
-			_runData.NumberOfPassed = 0;
+			
 			_runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
+
+			_runData.NumberOfTested++;
 
 
 			_totalNumOfSteps = 0;
@@ -848,20 +852,24 @@ namespace EOL.ViewModels
 				singleTestResult.AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 				singleTestResult.RackNumber = _settingsData.RackNumber;
 
-				int passed;
-				int failed;
-				GetPassFailed(
-					eolStepSummerysList,
-					out passed,
-					out failed);
+				bool isPassed = true;
 
-				_runData.NumberOfTested = passed + failed;
-				_runData.NumberOfFailed = failed;
-				_runData.NumberOfPassed = passed;
+				foreach(GeneratedProjectData project in _generatedProjectsList)
+				{
+					foreach(GeneratedScriptData script in project.TestsList)
+					{
+						isPassed &= (script.IsPass == true);
+					}
+				}
+
+				if (isPassed)
+					_runData.NumberOfPassed++;
+				else
+					_runData.NumberOfFailed++;
 
 				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU))
 				{
-					if (failed > 0)
+					if (isPassed == false)
 					{
 						RunState = RunStateEnum.Failed;
 						singleTestResult.TestStatus = "Failed";
@@ -965,22 +973,6 @@ namespace EOL.ViewModels
                 }
             }
         }
-
-        private void GetPassFailed(
-			List<EOLStepSummeryData> eolStepSummerysList,
-			out int passed,
-			out int failed)
-		{
-			passed = 0;
-			failed = 0;
-			foreach (EOLStepSummeryData item in eolStepSummerysList)
-			{
-				if (item.IsPass)
-					passed++;
-				else
-					failed++;
-			}
-		}
 
 		#endregion Handle EOL Step Summery
 
