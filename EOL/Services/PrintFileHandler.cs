@@ -133,7 +133,7 @@ namespace EOL.Services
                 return null;
             }
 
-            WriteToTxt(printerDynamicCmd.ToString());
+            //WriteToTxt(printerDynamicCmd.ToString());
 
             return printerDynamicCmd;
         }
@@ -207,7 +207,7 @@ namespace EOL.Services
             }
 
             // Write the rearranged content to a text file
-            WriteToTxt(rearrangedContent.ToString());
+            //WriteToTxt(rearrangedContent.ToString());
 
             return rearrangedContent.ToString();
         }
