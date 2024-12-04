@@ -1,6 +1,7 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DBCFileParser.Services;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using DeviceHandler.Models;
@@ -28,7 +29,6 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using static FlashingToolLib.FlasherService;
-using Path = System.IO.Path;
 
 namespace EOL.ViewModels
 {
@@ -467,10 +467,17 @@ namespace EOL.ViewModels
 			if(_generatedProjectsList == null || _generatedProjectsList.Count == 0)
 			{
 				LoggerService.Error(this, "There is not project defined for running", "Error");
-				return; 
+				return;
 			}
-
 			ErrorMessage = null;
+
+			_runData.NumberOfTested = 0;
+			_runData.NumberOfFailed = 0;
+			_runData.NumberOfPassed = 0;
+			_runData.StartTime = new DateTime();
+			_runData.Duration = TimeSpan.Zero;
+			_runData.EndTime = new DateTime();
+
 
 			_totalNumOfSteps = 0;
 			string path = _userDefaultSettings.ReportsSavingPath;
