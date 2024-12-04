@@ -9,6 +9,7 @@ using Org.BouncyCastle.Bcpg.Sig;
 using Services.Services;
 using System.Collections.ObjectModel;
 using ScriptHandler.Interfaces;
+using ScriptHandler.Models.ScriptSteps;
 
 namespace EOL.Services
 {
@@ -19,7 +20,6 @@ namespace EOL.Services
 		public string _csvFilePath { get; set; }
 
         private List<string> _headers;
-        private bool _headersWritten;
 
 		#endregion Properties and Fields
 
@@ -28,7 +28,6 @@ namespace EOL.Services
 		public CSVWriter()
         {
             _headers = new List<string>();
-            _headersWritten = false;
         }
 
 		#endregion Constructor
@@ -42,7 +41,7 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
 
-            if(testResult.StopReason != "PASS")
+            if(testResult.StopReason != "PASSED")
                 testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
 
 			// Use reflection to get properties
@@ -54,7 +53,7 @@ namespace EOL.Services
             var standardHeaders = properties.Select(p => p.Name).ToList();
 
             // Collect headers if not already done
-            if (!_headersWritten)
+            if (File.Exists(_csvFilePath) == false)
             {
                 _headers = GetHeaders(projectsList);
 				_headers.InsertRange(0, standardHeaders);
@@ -64,7 +63,6 @@ namespace EOL.Services
                 {
                     // Write headers
                     writer.WriteLine(string.Join(",", _headers));
-                    _headersWritten = true;
                 }
             }
 
@@ -189,22 +187,14 @@ namespace EOL.Services
 
             string description = string.Empty;
 
-            if (failedStep.EOLStepSummerysList != null &&
-                 failedStep.EOLStepSummerysList.Count > 0)
+            List<string> header = failedStep.GetReportHeaders();
+            if(header != null && header.Count > 0)
             {
-                EOLStepSummeryData eolStepSummeryData =
-                    failedStep.EOLStepSummerysList[0];
+                description = FixStringService.GetFixedString(header[0]);
+            }
 
-				//string testName = GetFixedString(eolStepSummeryData.TestName);
-				//string subScriptName = GetFixedString(eolStepSummeryData.SubScriptName);
 
-				//description = $"{testName};\r\n";
-
-				//if (subScriptName != testName)
-				//	description += $"{subScriptName};\r\n";
-			}
-
-            description += FixStringService.GetFixedString(failedStep.ErrorMessage);
+			description += FixStringService.GetFixedString(failedStep.ErrorMessage);
             description = $"\"{description}\"";
 
 			return description;
