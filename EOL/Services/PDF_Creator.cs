@@ -182,16 +182,16 @@ namespace EOL.Services
                     AddTables(subScript.Script.ScriptItemsList);
                 }
 
-                if (scriptItem is ScriptStepBase test &&
-					test.EOLReportsSelectionData != null)
+                if (scriptItem is ScriptStepBase step &&
+					step.EOLReportsSelectionData != null)
                 {
-                    if(test.EOLReportsSelectionData.IsSaveToPdfExecTable)
+                    if(step.EOLReportsSelectionData.IsSaveToPdfExecTable)
                     {
-                        _executiveSumTable.Add(ExecSumResultsToList(test));
+                        _executiveSumTable.Add(ExecSumResultsToList(step));
                     }
-                    if (test.EOLReportsSelectionData.IsSaveToPdfDynTable)
+                    if (step.EOLReportsSelectionData.IsSaveToPdfDynTable)
                     {
-                        _dynamicDataTable.Add(DynTabResultsToList(test));
+                        _dynamicDataTable.Add(DynTabResultsToList(step));
                     }
                 }
             }
@@ -231,29 +231,37 @@ namespace EOL.Services
             return resultList;
         }
 
-        public List<string> DynTabResultsToList(ScriptStepBase test)
+        public List<string> DynTabResultsToList(ScriptStepBase step)
         {
             _countDynTable++;
             var resultList = new List<string>();
 
-            foreach (EOLStepSummeryData stepSummary in test.EOLStepSummerysList)
-            {
-                string TestStatus = stepSummary.IsPass ? "Passed" : "Failed";
+            
+            EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
+                (s) => string.IsNullOrEmpty(s.ParentStepDescription));
 
-                resultList.AddRange(new List<string>
-                {
-                    CheckValue(_countDynTable),
-                    CheckValue(stepSummary.ParentStepDescription),
-                    CheckValue(stepSummary.TestValue),
-                    CheckValue(stepSummary.ComparisonValue),
-                    CheckValue(stepSummary.Units),
-                    CheckValue(stepSummary.Method),
-                    CheckValue(stepSummary.MinVal),
-                    CheckValue(stepSummary.MaxVal),
-                    CheckValue(stepSummary.Tolerance),
-                    CheckValue(TestStatus)
-                });
-                    }
+			string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
+            //if (!step.IsExecuted)
+            //    testStatus = "Not Executed";
+
+            string description = stepSummary.Description;
+			if (string.IsNullOrEmpty(stepSummary.Description))
+				description = stepSummary.ParentStepDescription;
+
+			resultList.AddRange(new List<string>
+            {
+                CheckValue(_countDynTable),                    
+                CheckValue(description),
+                CheckValue(stepSummary.TestValue),
+                CheckValue(stepSummary.ComparisonValue),
+                CheckValue(stepSummary.Units),
+                CheckValue(stepSummary.Method),
+                CheckValue(stepSummary.MinVal),
+                CheckValue(stepSummary.MaxVal),
+               // CheckValue(stepSummary.Tolerance),
+                CheckValue(testStatus)
+            });
+                    
 
             return resultList;
         }
@@ -295,7 +303,7 @@ namespace EOL.Services
                 "Method",
                 "MinVal",
                 "MaxVal",
-                "Tolerance",
+               // "Tolerance",
                 "Result"
             };
             return colList;
