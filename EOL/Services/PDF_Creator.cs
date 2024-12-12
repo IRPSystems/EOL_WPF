@@ -1,14 +1,7 @@
 ﻿using EOL.Models;
-using NAudio.Wave;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Nodes;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using Font = iTextSharp.text.Font;
@@ -17,12 +10,6 @@ using Document = iTextSharp.text.Document;
 using ScriptHandler.Models;
 using ScriptHandler.Interfaces;
 using System.Collections.ObjectModel;
-using Syncfusion.DocIO.DLS;
-using LibUsbDotNet.Main;
-using System.Reflection;
-using System.Resources;
-using System.Windows;
-using System.Reflection.Emit;
 using Services.Services;
 
 namespace EOL.Services
