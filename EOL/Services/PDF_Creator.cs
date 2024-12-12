@@ -223,32 +223,38 @@ namespace EOL.Services
             _countDynTable++;
             var resultList = new List<string>();
 
-            
-            EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
-                (s) => string.IsNullOrEmpty(s.ParentStepDescription));
-
-			string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
-            //if (!step.IsExecuted)
-            //    testStatus = "Not Executed";
-
-            string description = stepSummary.Description;
-			if (string.IsNullOrEmpty(stepSummary.Description))
-				description = stepSummary.ParentStepDescription;
-
-			resultList.AddRange(new List<string>
+            try
             {
-                CheckValue(_countDynTable),                    
-                CheckValue(description),
-                CheckValue(stepSummary.TestValue),
-                CheckValue(stepSummary.ComparisonValue),
-                CheckValue(stepSummary.Units),
-                CheckValue(stepSummary.Method),
-                CheckValue(stepSummary.MinVal),
-                CheckValue(stepSummary.MaxVal),
-               // CheckValue(stepSummary.Tolerance),
-                CheckValue(testStatus)
-            });
-                    
+
+                EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
+                    (s) => string.IsNullOrEmpty(s.ParentStepDescription));
+
+                string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
+                //if (!step.IsExecuted)
+                //    testStatus = "Not Executed";
+
+                string description = stepSummary.Description;
+                if (string.IsNullOrEmpty(stepSummary.Description))
+                    description = stepSummary.ParentStepDescription;
+
+                resultList.AddRange(new List<string>
+                {
+                    CheckValue(_countDynTable),
+                    CheckValue(description),
+                    CheckValue(stepSummary.TestValue),
+                    CheckValue(stepSummary.ComparisonValue),
+                    CheckValue(stepSummary.Units),
+                    CheckValue(stepSummary.Method),
+                    CheckValue(stepSummary.MinVal),
+                    CheckValue(stepSummary.MaxVal),
+                   // CheckValue(stepSummary.Tolerance),
+                    CheckValue(testStatus)
+                });
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Error(this, "Failed to add summery", "Error", ex);
+            }
 
             return resultList;
         }
