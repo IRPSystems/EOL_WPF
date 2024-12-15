@@ -178,7 +178,9 @@ namespace EOL.Services
                     }
                     if (step.EOLReportsSelectionData.IsSaveToPdfDynTable)
                     {
-                        _dynamicDataTable.Add(DynTabResultsToList(step));
+                        List<string> list = DynTabResultsToList(step);
+                        if(list != null && list.Count > 0)
+                            _dynamicDataTable.Add(DynTabResultsToList(step));
                     }
                 }
             }
@@ -226,8 +228,15 @@ namespace EOL.Services
             try
             {
 
+                if (step.EOLStepSummerysList == null || step.EOLStepSummerysList.Count == 0)
+                    return null;
+
+
                 EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
                     (s) => string.IsNullOrEmpty(s.ParentStepDescription));
+
+                if(stepSummary == null)
+                    return null; 
 
                 string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
                 //if (!step.IsExecuted)
@@ -237,16 +246,32 @@ namespace EOL.Services
                 if (string.IsNullOrEmpty(stepSummary.Description))
                     description = stepSummary.ParentStepDescription;
 
+                string testValue = "";
+                if(stepSummary.TestValue != null)
+                    testValue = ((double)stepSummary.TestValue).ToString("f2");
+
+                string comparisonvalue = "";
+                if (stepSummary.ComparisonValue != null)
+                    comparisonvalue = ((double)stepSummary.ComparisonValue).ToString("f2");
+
+                string minval = "";
+                if (stepSummary.MinVal != null)
+                    minval = ((double)stepSummary.MinVal).ToString("f2");
+
+                string maxval = "";
+                if (stepSummary.MaxVal != null)
+                    maxval = ((double)stepSummary.MaxVal).ToString("f2");
+
                 resultList.AddRange(new List<string>
                 {
                     CheckValue(_countDynTable),
                     CheckValue(description),
-                    CheckValue(stepSummary.TestValue),
-                    CheckValue(stepSummary.ComparisonValue),
+                    CheckValue(testValue),
+                    CheckValue(comparisonvalue),
                     CheckValue(stepSummary.Units),
                     CheckValue(stepSummary.Method),
-                    CheckValue(stepSummary.MinVal),
-                    CheckValue(stepSummary.MaxVal),
+                    CheckValue(minval),
+                    CheckValue(maxval),
                    // CheckValue(stepSummary.Tolerance),
                     CheckValue(testStatus)
                 });
@@ -342,6 +367,7 @@ namespace EOL.Services
             document.Add(PDF_Creator.CreateInfoLine("Operator Name", runResult.OperatorName));
             document.Add(PDF_Creator.CreateInfoLine("SerialNumber", runResult.SerialNumber));
             document.Add(PDF_Creator.CreateInfoLine("PartNumber", runResult.PartNumber));
+            document.Add(PDF_Creator.CreateInfoLine("SW Ver", "v2.03.05"));
             document.Add(PDF_Creator.CreateInfoLine("Date", DateTime.Now.ToString("dd-MM-yyyy")));
             document.Add(PDF_Creator.CreateInfoLine("Time", DateTime.Now.ToString("HH:mm:ss")));
             document.Add(PDF_Creator.CreateInfoLine("Rack No.", "not working yet"));

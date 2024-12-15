@@ -695,9 +695,9 @@
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": 21,
+          "AteCommand": 20,
           "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 21,
+          "AteCommandDropDwonIndex": 20,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
@@ -1110,9 +1110,9 @@
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
-          "AteCommand": 20,
+          "AteCommand": 21,
           "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 20,
+          "AteCommandDropDwonIndex": 21,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
@@ -1140,7 +1140,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -1555,7 +1555,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -1970,7 +1970,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -2694,7 +2694,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -3109,7 +3109,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -3524,7 +3524,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -3939,7 +3939,7 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       }
     ]

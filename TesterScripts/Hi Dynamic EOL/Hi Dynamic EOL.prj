@@ -36,7 +36,6 @@
       "..\\Watch Dog Test.scr",
       "..\\Active Discharge.tst",
       "..\\Discharge.scr",
-      "..\\Set Daq Analog Outs 0V.tst",
       "..\\Current Calibration.tst",
       "..\\Phase U.scr",
       "..\\Phase W.scr",
@@ -52,17 +51,12 @@
       "..\\Config Manual FOC.scr",
       "..\\Peak Operation.scr",
       "..\\Compare Manual Angle.scr",
-      "..\\Flash Customer FW.tst",
-      "..\\External Watch Dog.tst",
       "..\\Power Down.tst",
       "..\\Shut Down.scr",
       "..\\Abort Script Nothing.scr",
       "..\\Config Position Sensor.scr",
-      "..\\Print Label New.scr",
-      "..\\Print Customer Label.tst",
       "..\\Post Flash Validation.scr",
-      "..\\Pre Flash Operator Guide.scr",
-      "..\\Post Flash Operator Guide.scr"
+      "..\\Pre Flash Operator Guide.scr"
     ]
   },
   "RecordParametersFile": null,
