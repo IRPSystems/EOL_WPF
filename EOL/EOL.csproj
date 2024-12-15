@@ -7,6 +7,10 @@
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Resources\EOL.ico</ApplicationIcon>
+
+	  <Version>1.0.0.2</Version>
+	  <AssemblyVersion>1.0.0.2</AssemblyVersion>
+	  <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

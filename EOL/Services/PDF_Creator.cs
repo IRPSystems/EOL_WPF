@@ -1,14 +1,7 @@
 ﻿using EOL.Models;
-using NAudio.Wave;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Nodes;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
 using Font = iTextSharp.text.Font;
@@ -17,12 +10,6 @@ using Document = iTextSharp.text.Document;
 using ScriptHandler.Models;
 using ScriptHandler.Interfaces;
 using System.Collections.ObjectModel;
-using Syncfusion.DocIO.DLS;
-using LibUsbDotNet.Main;
-using System.Reflection;
-using System.Resources;
-using System.Windows;
-using System.Reflection.Emit;
 using Services.Services;
 
 namespace EOL.Services
@@ -182,16 +169,18 @@ namespace EOL.Services
                     AddTables(subScript.Script.ScriptItemsList);
                 }
 
-                if (scriptItem is ScriptStepBase test &&
-					test.EOLReportsSelectionData != null)
+                if (scriptItem is ScriptStepBase step &&
+					step.EOLReportsSelectionData != null)
                 {
-                    if(test.EOLReportsSelectionData.IsSaveToPdfExecTable)
+                    if(step.EOLReportsSelectionData.IsSaveToPdfExecTable)
                     {
-                        _executiveSumTable.Add(ExecSumResultsToList(test));
+                        _executiveSumTable.Add(ExecSumResultsToList(step));
                     }
-                    if (test.EOLReportsSelectionData.IsSaveToPdfDynTable)
+                    if (step.EOLReportsSelectionData.IsSaveToPdfDynTable)
                     {
-                        _dynamicDataTable.Add(DynTabResultsToList(test));
+                        List<string> list = DynTabResultsToList(step);
+                        if(list != null && list.Count > 0)
+                            _dynamicDataTable.Add(DynTabResultsToList(step));
                     }
                 }
             }
@@ -231,29 +220,66 @@ namespace EOL.Services
             return resultList;
         }
 
-        public List<string> DynTabResultsToList(ScriptStepBase test)
+        public List<string> DynTabResultsToList(ScriptStepBase step)
         {
             _countDynTable++;
             var resultList = new List<string>();
 
-            foreach (EOLStepSummeryData stepSummary in test.EOLStepSummerysList)
+            try
             {
-                string TestStatus = stepSummary.IsPass ? "Passed" : "Failed";
+
+                if (step.EOLStepSummerysList == null || step.EOLStepSummerysList.Count == 0)
+                    return null;
+
+
+                EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
+                    (s) => string.IsNullOrEmpty(s.ParentStepDescription));
+
+                if(stepSummary == null)
+                    return null; 
+
+                string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
+                //if (!step.IsExecuted)
+                //    testStatus = "Not Executed";
+
+                string description = stepSummary.Description;
+                if (string.IsNullOrEmpty(stepSummary.Description))
+                    description = stepSummary.ParentStepDescription;
+
+                string testValue = "";
+                if(stepSummary.TestValue != null)
+                    testValue = ((double)stepSummary.TestValue).ToString("f2");
+
+                string comparisonvalue = "";
+                if (stepSummary.ComparisonValue != null)
+                    comparisonvalue = ((double)stepSummary.ComparisonValue).ToString("f2");
+
+                string minval = "";
+                if (stepSummary.MinVal != null)
+                    minval = ((double)stepSummary.MinVal).ToString("f2");
+
+                string maxval = "";
+                if (stepSummary.MaxVal != null)
+                    maxval = ((double)stepSummary.MaxVal).ToString("f2");
 
                 resultList.AddRange(new List<string>
                 {
                     CheckValue(_countDynTable),
-                    CheckValue(stepSummary.ParentStepDescription),
-                    CheckValue(stepSummary.TestValue),
-                    CheckValue(stepSummary.ComparisonValue),
+                    CheckValue(description),
+                    CheckValue(testValue),
+                    CheckValue(comparisonvalue),
                     CheckValue(stepSummary.Units),
                     CheckValue(stepSummary.Method),
-                    CheckValue(stepSummary.MinVal),
-                    CheckValue(stepSummary.MaxVal),
-                    CheckValue(stepSummary.Tolerance),
-                    CheckValue(TestStatus)
+                    CheckValue(minval),
+                    CheckValue(maxval),
+                   // CheckValue(stepSummary.Tolerance),
+                    CheckValue(testStatus)
                 });
-                    }
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Error(this, "Failed to add summery", "Error", ex);
+            }
 
             return resultList;
         }
@@ -295,7 +321,7 @@ namespace EOL.Services
                 "Method",
                 "MinVal",
                 "MaxVal",
-                "Tolerance",
+               // "Tolerance",
                 "Result"
             };
             return colList;
@@ -341,6 +367,7 @@ namespace EOL.Services
             document.Add(PDF_Creator.CreateInfoLine("Operator Name", runResult.OperatorName));
             document.Add(PDF_Creator.CreateInfoLine("SerialNumber", runResult.SerialNumber));
             document.Add(PDF_Creator.CreateInfoLine("PartNumber", runResult.PartNumber));
+            document.Add(PDF_Creator.CreateInfoLine("SW Ver", "v2.03.05"));
             document.Add(PDF_Creator.CreateInfoLine("Date", DateTime.Now.ToString("dd-MM-yyyy")));
             document.Add(PDF_Creator.CreateInfoLine("Time", DateTime.Now.ToString("HH:mm:ss")));
             document.Add(PDF_Creator.CreateInfoLine("Rack No.", "not working yet"));
