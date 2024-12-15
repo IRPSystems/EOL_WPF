@@ -2237,7 +2237,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -3865,7 +3865,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": false
                       },
                       "EOLStepSummerysList": {
@@ -6432,7 +6432,7 @@
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_CanDev1Test",
                               "Value": "30"
-                            },
+                            }
                           ]
                         },
                         "Value": null,
@@ -6492,7 +6492,7 @@
                         "NumatoGPIOPort": 0,
                         "NumatoGPIODropDwonIndex": 0
                       },
-                      "UserTitle": "Establish communication with CAN 1",
+                      "UserTitle": "Test1",
                       "Name": "Compare With Tolerance 2",
                       "Description": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:1",
                       "IsPass": false,
@@ -6505,9 +6505,9 @@
                       "ID": 1,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": true,
+                        "IsSaveToReport": false,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": true
+                        "IsSaveToPdfDynTable": false
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -11148,7 +11148,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -12836,7 +12836,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -14508,7 +14508,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -15147,7 +15147,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -17289,7 +17289,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -19122,7 +19122,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -21511,7 +21511,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -23614,7 +23614,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -25157,7 +25157,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -25507,7 +25507,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -25857,7 +25857,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -26165,7 +26165,7 @@
                       "Name": "Set Parameter 26",
                       "Description": "Set  \"Manual ID Command (MCU)\" = 0 - ID:33",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 10 sec - ID:35",
+                      "PassNextDescription": "Delay 10 sec - ID:34",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -26195,15 +26195,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "ScriptNodeDelay 35",
-                      "Description": "Delay 10 sec - ID:35",
+                      "Description": "Delay 10 sec - ID:34",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 200 - ID:37",
+                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 200 - ID:35",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 35,
+                      "ID": 34,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -26286,15 +26286,15 @@
                       },
                       "UserTitle": "Set Manual ID Command to 200A",
                       "Name": "ScriptNodeSetParameter 37",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 200 - ID:37",
+                      "Description": "Set  \"Manual ID Command (MCU)\" = 200 - ID:35",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 2 sec - ID:39",
+                      "PassNextDescription": "Delay 2 sec - ID:36",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 37,
+                      "ID": 35,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -26318,15 +26318,15 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "ScriptNodeDelay 39",
-                      "Description": "Delay 2 sec - ID:39",
+                      "Description": "Delay 2 sec - ID:36",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36",
+                      "PassNextDescription": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:37",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 39,
+                      "ID": 36,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -26422,7 +26422,7 @@
                       },
                       "UserTitle": "Validate Phase U Calibration (200A)",
                       "Name": "ScriptNodeCompareWithTolerance 36",
-                      "Description": "Compare with tolerance:  \"Current U (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36",
+                      "Description": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:37",
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 0 - ID:38",
                       "FailNextDescription": null,
@@ -26430,7 +26430,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 36,
+                      "ID": 37,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -26570,7 +26570,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -27538,7 +27538,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -27888,7 +27888,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -28238,7 +28238,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -28546,7 +28546,7 @@
                       "Name": "Set Parameter 9",
                       "Description": "Set  \"Manual ID Command (MCU)\" = 0 - ID:29",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 10 sec - ID:34",
+                      "PassNextDescription": "Delay 10 sec - ID:30",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -28576,19 +28576,19 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 34",
-                      "Description": "Delay 10 sec - ID:34",
+                      "Description": "Delay 10 sec - ID:30",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 200 - ID:35",
+                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 200 - ID:31",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 34,
+                      "ID": 30,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -28667,15 +28667,15 @@
                       },
                       "UserTitle": "Set Manual ID Command to 200A",
                       "Name": "Set Parameter 35",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 200 - ID:35",
+                      "Description": "Set  \"Manual ID Command (MCU)\" = 200 - ID:31",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 2 sec - ID:37",
+                      "PassNextDescription": "Delay 2 sec - ID:32",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 35,
+                      "ID": 31,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -28699,19 +28699,19 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "Delay 37",
-                      "Description": "Delay 2 sec - ID:37",
+                      "Description": "Delay 2 sec - ID:32",
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Current W (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36",
+                      "PassNextDescription": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:33",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 37,
+                      "ID": 32,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
@@ -28803,15 +28803,15 @@
                       },
                       "UserTitle": "Validate Phase W Calibration (200A)",
                       "Name": "ScriptNodeCompareWithTolerance 36",
-                      "Description": "Compare with tolerance:  \"Current W (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36",
+                      "Description": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:33",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 0 - ID:38",
+                      "PassNextDescription": "Set  \"Manual ID Command (MCU)\" = 0 - ID:34",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 36,
+                      "ID": 33,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -28894,15 +28894,15 @@
                       },
                       "UserTitle": "Set Manual ID Command to 0A",
                       "Name": "ScriptNodeSetParameter 38",
-                      "Description": "Set  \"Manual ID Command (MCU)\" = 0 - ID:38",
+                      "Description": "Set  \"Manual ID Command (MCU)\" = 0 - ID:34",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:30",
+                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:35",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 38,
+                      "ID": 34,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -28993,15 +28993,15 @@
                       },
                       "UserTitle": "Set Manual Angle Speed to OFF",
                       "Name": "Set Parameter 11",
-                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:30",
+                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:35",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 0 - ID:31",
+                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 0 - ID:36",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 30,
+                      "ID": 35,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29092,15 +29092,15 @@
                       },
                       "UserTitle": "Set Manual FOC Control to OFF",
                       "Name": "Set Parameter 10",
-                      "Description": "Set  \"Manual FOC Control (MCU)\" = 0 - ID:31",
+                      "Description": "Set  \"Manual FOC Control (MCU)\" = 0 - ID:36",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 1 - ID:32",
+                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 1 - ID:37",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 31,
+                      "ID": 36,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29191,15 +29191,15 @@
                       },
                       "UserTitle": "Set Control Source to VCU",
                       "Name": "Set Parameter 13",
-                      "Description": "Set  \"Control Source (MCU)\" = 1 - ID:32",
+                      "Description": "Set  \"Control Source (MCU)\" = 1 - ID:37",
                       "IsPass": false,
-                      "PassNextDescription": "Delay 2 sec - ID:33",
+                      "PassNextDescription": "Delay 2 sec - ID:38",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 32,
+                      "ID": 37,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29223,7 +29223,7 @@
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "Name": "ScriptNodeDelay 24",
-                      "Description": "Delay 2 sec - ID:33",
+                      "Description": "Delay 2 sec - ID:38",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -29231,7 +29231,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 33,
+                      "ID": 38,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -29280,7 +29280,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -29368,7 +29368,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": false
                       },
                       "EOLStepSummerysList": {
@@ -29448,7 +29448,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": false
                       },
                       "EOLStepSummerysList": {
@@ -29528,7 +29528,7 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfExecTable": true,
                         "IsSaveToPdfDynTable": false
                       },
                       "EOLStepSummerysList": {
@@ -29573,7 +29573,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -33482,7 +33482,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -33897,7 +33897,7 @@
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
+                        "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -34998,7 +34998,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -35461,7 +35461,7 @@
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
+                        "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -36562,7 +36562,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -36961,7 +36961,7 @@
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
+                        "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -37616,7 +37616,7 @@
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
+                        "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -37797,7 +37797,7 @@
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
                         "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false
+                        "IsSaveToPdfDynTable": true
                       },
                       "EOLStepSummerysList": {
                         "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
@@ -38156,7 +38156,7 @@
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfExecTable": true,
                 "IsSaveToPdfDynTable": false
               },
               "EOLStepSummerysList": {
@@ -38455,6 +38455,57 @@
           ]
         },
         "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL\\Power Down.tst",
+        "IsPass": null,
+        "ScriptSender": 0,
+        "TotalRunSteps": 0,
+        "PassRunSteps": 0,
+        "FailRunSteps": 0,
+        "ErrorsList": null
+      },
+      {
+        "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+        "Name": "Print Customer Label",
+        "ScriptItemsList": {
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+          "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepEOLPrint, ScriptHandler",
+              "PartNumber": "HD80-450A00-MH00",
+              "CustomerPartNumber": null,
+              "Spec": null,
+              "HW_Version": "00-G",
+              "MCU_Version": null,
+              "SerialNumber": null,
+              "ParamData": null,
+              "TscCommunicator": null,
+              "UserTitle": "Print Label",
+              "Name": "EOL Print 1",
+              "Description": "EOL Print - ID:1",
+              "IsPass": false,
+              "PassNextDescription": null,
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": false,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            }
+          ]
+        },
+        "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL\\Print Customer Label.tst",
         "IsPass": null,
         "ScriptSender": 0,
         "TotalRunSteps": 0,

@@ -56,7 +56,8 @@
       "..\\Abort Script Nothing.scr",
       "..\\Config Position Sensor.scr",
       "..\\Post Flash Validation.scr",
-      "..\\Pre Flash Operator Guide.scr"
+      "..\\Pre Flash Operator Guide.scr",
+      "..\\Print Customer Label.tst"
     ]
   },
   "RecordParametersFile": null,
