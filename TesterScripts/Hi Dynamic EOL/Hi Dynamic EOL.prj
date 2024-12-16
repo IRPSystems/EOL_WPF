@@ -15,6 +15,7 @@
       "..\\LV Power Up.scr",
       "..\\HV Power Up.scr",
       "..\\Establish Communication.scr",
+      "..\\External WatchDog.tst",
       "..\\UUT Config.tst",
       "..\\UUT Configuration.scr",
       "..\\Write SN.scr",
