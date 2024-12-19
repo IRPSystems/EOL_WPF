@@ -15,7 +15,7 @@
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": false
         }
       }

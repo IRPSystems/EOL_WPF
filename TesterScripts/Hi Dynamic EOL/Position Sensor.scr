@@ -579,9 +579,9 @@
         "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -778,9 +778,9 @@
         "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -977,9 +977,9 @@
         "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -1176,9 +1176,9 @@
         "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {
@@ -1375,9 +1375,9 @@
         "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": true
         }
       },
       {

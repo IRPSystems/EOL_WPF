@@ -7,22 +7,22 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLPrint, ScriptHandler",
         "Name": "EOL Print 1",
-        "PartNumber": "HD80-450A00-MH00",
-        "CustomerPartNumber": null,
-        "Spec": null,
-        "HW_Version": "00-G",
-        "MCU_Version": null,
-        "UserTitle": "Print Label",
-        "IsPass": false,
-        "PassNextId": 0,
-        "FailNextId": 0,
-        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
-        }
+        },
+        "UserTitle": "Print Label",
+        "PartNumber": "HD80-450A00-MH00",
+        "CustomerPartNumber": null,
+        "Spec": null,
+        "HW_Version": "00-G",
+        "MCU_Version": null,
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 1
       }
     ]
   },

@@ -442,12 +442,13 @@ namespace EOL.ViewModels
                     (deviceFullData.ConnectionViewModel as NI6002ConncetViewModel).DeviceName = _initNI.NI_b;
                 }
 
-                if (deviceFullData.Device.DeviceType == DeviceTypesEnum.PowerSupplyEA)
+                if (deviceFullData.Device.DeviceType == DeviceTypesEnum.PowerSupplyEA && deviceFullData.DeviceCommunicator is PowerSupplayEA_Communicator)
 				{
 					(deviceFullData.DeviceCommunicator as PowerSupplayEA_Communicator).SetIsUseRampForOnOff(false);
 				}
 
-				DevicesContainter.DevicesFullDataList.Add(deviceFullData);
+
+                DevicesContainter.DevicesFullDataList.Add(deviceFullData);
 				DevicesContainter.DevicesList.Add(device as DeviceData);
 				if (DevicesContainter.TypeToDevicesFullData.ContainsKey(device.DeviceType) == false)
 					DevicesContainter.TypeToDevicesFullData.Add(device.DeviceType, deviceFullData);

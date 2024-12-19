@@ -11,11 +11,11 @@
                                              
 [Setup]                       
 AppVersion={#MyAppVersion}
-AppName=TrueDrive Manager
+AppName=EOL
 WizardStyle=modern
 DefaultDirName={autopf}\EOL
 DefaultGroupName=EOL
-SourceDir=EOL\bin\x64\Release\net6.0-windows
+SourceDir=EOL\bin\Release\net6.0-windows
 OutputDir=..\..\..\..\..\Output
 OutputBaseFilename=EOLSetup
 
@@ -37,7 +37,7 @@ Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription:
 Name: "startmenu"; Description: "Add a shortcut to the start menu"; GroupDescription: "Additional icons:"; Flags: unchecked
 
 [Run]
-Filename: {app}\EOL.exe; Description: "Launch TrueDrive Manager"; Flags: postinstall skipifsilent hidewizard
+Filename: {app}\EOL.exe; Description: "Launch EOL App"; Flags: postinstall skipifsilent hidewizard
 
 [Code] 
  
