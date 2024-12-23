@@ -42,6 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AllTestersDB\TestersDB_Lib\TestersDB_Lib.csproj" />
     <ProjectReference Include="..\DevicesInfrastructures\DeviceCommunicators\DeviceCommunicators.csproj" />
     <ProjectReference Include="..\DevicesInfrastructures\DeviceHandler\DeviceHandler.csproj" />
     <ProjectReference Include="..\DevicesInfrastructures\DeviceSimulators\DeviceSimulators.csproj" />
