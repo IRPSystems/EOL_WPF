@@ -367,7 +367,6 @@ namespace EOL.Services
             document.Add(PDF_Creator.CreateInfoLine("Operator Name", runResult.OperatorName));
             document.Add(PDF_Creator.CreateInfoLine("SerialNumber", runResult.SerialNumber));
             document.Add(PDF_Creator.CreateInfoLine("PartNumber", runResult.PartNumber));
-            document.Add(PDF_Creator.CreateInfoLine("SW Ver", "v2.03.05"));
             document.Add(PDF_Creator.CreateInfoLine("Date", DateTime.Now.ToString("dd-MM-yyyy")));
             document.Add(PDF_Creator.CreateInfoLine("Time", DateTime.Now.ToString("HH:mm:ss")));
             document.Add(PDF_Creator.CreateInfoLine("Rack No.", "not working yet"));
