@@ -5,101 +5,18 @@
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "SW Version",
-          "Description": "Version Major.",
-          "Default": "0",
-          "Cmd": "vermajor",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              99.0
-            ]
-          },
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": null,
-          "Name": "SW Version - Major",
-          "Units": null,
-          "DeviceType": 1,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": "2",
-        "Tolerance": 0.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:1ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "SW Version",
-            "Description": "Version Major.",
-            "Default": "0",
-            "Cmd": "vermajor",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                0.0,
-                99.0
-              ]
-            },
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "SW Version - Major",
-            "Units": null,
-            "DeviceType": 1,
-            "CommunicationTimeout": 0
-          },
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "UserTitle": "First Comm Test",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 2",
+        "ParentScriptName": "Establish Communication",
+        "ContinueUntilType": 1,
+        "Repeats": 15,
+        "Timeout": 23,
+        "TimeoutUnite": 2,
+        "IsStopOnFail": false,
+        "IsStopOnPass": true,
+        "IsInfinity": false,
+        "SelectedScriptName": "Wake Up",
+        "UserTitle": null,
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
@@ -107,7 +24,7 @@
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true
         }
       }

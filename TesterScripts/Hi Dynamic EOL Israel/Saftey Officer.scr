@@ -452,7 +452,7 @@
         "AverageOfNRead": 0,
         "UserTitle": "Check Fault Vector 1",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -501,9 +501,9 @@
         "AverageOfNRead": 0,
         "UserTitle": "Check Fault Vector 3",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -520,7 +520,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

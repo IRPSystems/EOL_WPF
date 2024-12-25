@@ -1801,7 +1801,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 34,
+        "PassNextId": 30,
         "FailNextId": 0,
         "ID": 29,
         "EOLReportsSelectionData": {
@@ -1818,9 +1818,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 35,
+        "PassNextId": 31,
         "FailNextId": 0,
-        "ID": 34,
+        "ID": 30,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1905,9 +1905,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 200A",
         "IsPass": false,
-        "PassNextId": 37,
+        "PassNextId": 32,
         "FailNextId": 0,
-        "ID": 35,
+        "ID": 31,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1922,9 +1922,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 36,
+        "PassNextId": 33,
         "FailNextId": 0,
-        "ID": 37,
+        "ID": 32,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1975,7 +1975,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:33ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2051,9 +2051,9 @@
         },
         "UserTitle": "Validate Phase W Calibration (200A)",
         "IsPass": false,
-        "PassNextId": 38,
+        "PassNextId": 34,
         "FailNextId": 0,
-        "ID": 36,
+        "ID": 33,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2075,8 +2075,6 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -600.0,
-              600.0,
               -600.0,
               600.0
             ]
@@ -2109,8 +2107,6 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 -600.0,
-                600.0,
-                -600.0,
                 600.0
               ]
             },
@@ -2142,9 +2138,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 30,
+        "PassNextId": 35,
         "FailNextId": 0,
-        "ID": 38,
+        "ID": 34,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2245,9 +2241,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual Angle Speed to OFF",
         "IsPass": false,
-        "PassNextId": 31,
+        "PassNextId": 36,
         "FailNextId": 0,
-        "ID": 30,
+        "ID": 35,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2348,9 +2344,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual FOC Control to OFF",
         "IsPass": false,
-        "PassNextId": 32,
+        "PassNextId": 37,
         "FailNextId": 0,
-        "ID": 31,
+        "ID": 36,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2451,9 +2447,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Control Source to VCU",
         "IsPass": false,
-        "PassNextId": 33,
+        "PassNextId": 38,
         "FailNextId": 0,
-        "ID": 32,
+        "ID": 37,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2470,7 +2466,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 33,
+        "ID": 38,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

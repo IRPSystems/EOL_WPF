@@ -6,7 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 1",
+        "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -24,13 +24,13 @@
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 2",
+        "Name": "ScriptNodeSubScript 3",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -66,7 +66,7 @@
         "SelectedScriptName": "Establish Communication",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {

@@ -449,39 +449,67 @@
         "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "SYSTEM:LOCK:",
-          "Max": 0,
-          "ParamType": 1,
-          "ModbusAddress": 0,
-          "NumOfRegisters": 0,
-          "ValueType": null,
-          "DropDown": null,
-          "Name": "Remote state",
+          "Cmd": "SYST:LOCK",
+          "Max": 1,
+          "ParamType": 0,
+          "ModbusAddress": 402,
+          "NumOfRegisters": 1,
+          "ValueType": "ushort",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Remote On/Off",
           "Units": null,
           "Value": null,
           "DeviceType": 3,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 3000
         },
-        "Value": 1.0,
-        "ValueDropDwonIndex": -1,
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-            "Cmd": "SYSTEM:LOCK:",
-            "Max": 0,
-            "ParamType": 1,
-            "ModbusAddress": 0,
-            "NumOfRegisters": 0,
-            "ValueType": null,
-            "DropDown": null,
-            "Name": "Remote state",
+            "Cmd": "SYST:LOCK",
+            "Max": 1,
+            "ParamType": 0,
+            "ModbusAddress": 402,
+            "NumOfRegisters": 1,
+            "ValueType": "ushort",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Remote On/Off",
             "Units": null,
             "Value": null,
             "DeviceType": 3,
-            "CommunicationTimeout": 0
+            "CommunicationTimeout": 3000
           },
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,

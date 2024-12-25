@@ -1480,7 +1480,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set UUT to 0 RPM",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 19,
         "FailNextId": 0,
         "ID": 17,
         "EOLReportsSelectionData": {
@@ -1492,7 +1492,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 18",
+        "Name": "Set Parameter 19",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -1565,12 +1565,12 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 18,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true
         }
       }
     ]

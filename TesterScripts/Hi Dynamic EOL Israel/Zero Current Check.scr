@@ -33,7 +33,7 @@
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
+        "AverageOfNRead_Param": 20,
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": false,
@@ -92,7 +92,7 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -126,7 +126,7 @@
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
+        "AverageOfNRead_Param": 20,
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": false,
@@ -185,7 +185,7 @@
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -219,7 +219,7 @@
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
+        "AverageOfNRead_Param": 20,
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": false,
@@ -278,7 +278,7 @@
         "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }

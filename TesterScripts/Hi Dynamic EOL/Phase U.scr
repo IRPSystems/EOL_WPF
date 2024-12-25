@@ -1019,7 +1019,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Position Sensor Fault",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 40,
         "FailNextId": 0,
         "ID": 11,
         "EOLReportsSelectionData": {
@@ -1030,15 +1030,98 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 40",
+        "Parameter": {
+          "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              }
+            ]
+          },
+          "Name": "Safety officer on/off",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 11,
+          "CommunicationTimeout": 0
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                }
+              ]
+            },
+            "Name": "Safety officer on/off",
+            "Units": null,
+            "Value": null,
+            "DeviceType": 11,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 0,
+        "UserTitle": "Set Saftey Officer ON",
+        "IsPass": false,
+        "PassNextId": 13,
+        "FailNextId": 0,
+        "ID": 40,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 8",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1123,9 +1206,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 20A",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1140,9 +1223,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1227,9 +1310,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 200A",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1244,9 +1327,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1329,9 +1412,9 @@
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate Phase U",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1416,9 +1499,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 20,
         "FailNextId": 0,
-        "ID": 18,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1433,9 +1516,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 21,
         "FailNextId": 0,
-        "ID": 19,
+        "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1520,9 +1603,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 50A",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 22,
         "FailNextId": 0,
-        "ID": 20,
+        "ID": 21,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1537,9 +1620,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 22,
+        "PassNextId": 23,
         "FailNextId": 0,
-        "ID": 21,
+        "ID": 22,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1590,7 +1673,7 @@
         "Tolerance": 10.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  10 - ID:22ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  10 - ID:23ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1666,9 +1749,9 @@
         },
         "UserTitle": "Validate Phase U Calibration (50A)",
         "IsPass": false,
-        "PassNextId": 23,
+        "PassNextId": 24,
         "FailNextId": 0,
-        "ID": 22,
+        "ID": 23,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1753,9 +1836,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 24,
+        "PassNextId": 25,
         "FailNextId": 0,
-        "ID": 23,
+        "ID": 24,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1770,9 +1853,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 25,
+        "PassNextId": 26,
         "FailNextId": 0,
-        "ID": 24,
+        "ID": 25,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1857,9 +1940,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 100A",
         "IsPass": false,
-        "PassNextId": 26,
+        "PassNextId": 27,
         "FailNextId": 0,
-        "ID": 25,
+        "ID": 26,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1874,9 +1957,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 27,
+        "PassNextId": 28,
         "FailNextId": 0,
-        "ID": 26,
+        "ID": 27,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1927,7 +2010,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:27ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:28ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2003,9 +2086,9 @@
         },
         "UserTitle": "Validate Phase U Calibration (100A)",
         "IsPass": false,
-        "PassNextId": 28,
+        "PassNextId": 29,
         "FailNextId": 0,
-        "ID": 27,
+        "ID": 28,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2090,9 +2173,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 29,
+        "PassNextId": 30,
         "FailNextId": 0,
-        "ID": 28,
+        "ID": 29,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2107,9 +2190,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 30,
+        "PassNextId": 31,
         "FailNextId": 0,
-        "ID": 29,
+        "ID": 30,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2194,9 +2277,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 150A",
         "IsPass": false,
-        "PassNextId": 31,
+        "PassNextId": 32,
         "FailNextId": 0,
-        "ID": 30,
+        "ID": 31,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2211,9 +2294,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 32,
+        "PassNextId": 33,
         "FailNextId": 0,
-        "ID": 31,
+        "ID": 32,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2264,7 +2347,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:32ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:33ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2340,9 +2423,9 @@
         },
         "UserTitle": "Validate Phase U Calibration (150A)",
         "IsPass": false,
-        "PassNextId": 33,
+        "PassNextId": 34,
         "FailNextId": 0,
-        "ID": 32,
+        "ID": 33,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2429,7 +2512,7 @@
         "IsPass": false,
         "PassNextId": 35,
         "FailNextId": 0,
-        "ID": 33,
+        "ID": 34,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2444,7 +2527,7 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 37,
+        "PassNextId": 36,
         "FailNextId": 0,
         "ID": 35,
         "EOLReportsSelectionData": {
@@ -2468,8 +2551,6 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -600.0,
-              600.0,
               -600.0,
               600.0
             ]
@@ -2502,8 +2583,6 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 -600.0,
-                600.0,
-                -600.0,
                 600.0
               ]
             },
@@ -2535,9 +2614,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Manual ID Command to 200A",
         "IsPass": false,
-        "PassNextId": 39,
+        "PassNextId": 37,
         "FailNextId": 0,
-        "ID": 37,
+        "ID": 36,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2552,9 +2631,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 36,
+        "PassNextId": 38,
         "FailNextId": 0,
-        "ID": 39,
+        "ID": 37,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2605,7 +2684,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor)\" = \"Analog Input Current\" ±  2 - ID:36ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:38ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2681,9 +2760,9 @@
         },
         "UserTitle": "Validate Phase U Calibration (200A)",
         "IsPass": false,
-        "PassNextId": 38,
+        "PassNextId": 39,
         "FailNextId": 0,
-        "ID": 36,
+        "ID": 38,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2705,8 +2784,6 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -600.0,
-              600.0,
               -600.0,
               600.0
             ]
@@ -2738,8 +2815,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -600.0,
-                600.0,
                 -600.0,
                 600.0
               ]
@@ -2774,7 +2849,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 38,
+        "ID": 39,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
