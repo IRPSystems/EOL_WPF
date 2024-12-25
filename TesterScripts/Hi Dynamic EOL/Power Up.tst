@@ -6,7 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "ScriptNodeSubScript 2",
+        "Name": "Sub Script 3",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -30,7 +30,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "ScriptNodeSubScript 3",
+        "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -54,7 +54,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 3",
+        "Name": "ScriptNodeSubScript 3",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,

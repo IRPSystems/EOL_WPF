@@ -1019,7 +1019,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Position Sensor Fault",
         "IsPass": false,
-        "PassNextId": 40,
+        "PassNextId": 12,
         "FailNextId": 0,
         "ID": 11,
         "EOLReportsSelectionData": {
@@ -1037,6 +1037,636 @@
           "DropDown": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "OFF",
@@ -1075,6 +1705,636 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ON",
                   "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
                 }
               ]
             },
@@ -1104,7 +2364,7 @@
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 40,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

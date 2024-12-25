@@ -1,0 +1,373 @@
+{
+  "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
+  "Name": "Flash",
+  "ScriptItemsList": {
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+    "$values": [
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLFlash, ScriptHandler",
+        "Name": "EOL Flash 1",
+        "FlashFilePath": null,
+        "RXId": null,
+        "TXId": null,
+        "Customer": 3,
+        "NumOfFlashFile": 0,
+        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:1",
+        "IsEolSource": true,
+        "IsToolSource": false,
+        "MCU_Used": false,
+        "MCU2_Used": true,
+        "UserTitle": "Flash",
+        "IsPass": false,
+        "PassNextId": 2,
+        "FailNextId": 0,
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 2",
+        "Interval": 10,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "SW Version",
+          "Description": "Version Major.",
+          "Default": "0",
+          "Cmd": "vermajor",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              99.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "SW Version - Major",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "2",
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:3ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "SW Version",
+            "Description": "Version Major.",
+            "Default": "0",
+            "Cmd": "vermajor",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                99.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "SW Version - Major",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "SW Version - Major (MCU)",
+        "IsPass": false,
+        "PassNextId": 4,
+        "FailNextId": 0,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 4",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "SW Version",
+          "Description": "Version Middle.",
+          "Default": "0",
+          "Cmd": "vermiddle",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              99.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "SW Version - Middle",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "5",
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Middle (MCU)\" = 5 ±  0 - ID:4ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "SW Version",
+            "Description": "Version Middle.",
+            "Default": "0",
+            "Cmd": "vermiddle",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                99.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "SW Version - Middle",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "SW Version - Middle (MCU)",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 5",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "SW Version",
+          "Description": "Version Minor.",
+          "Default": "0",
+          "Cmd": "verminor",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              99.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "SW Version - Minor",
+          "Units": null,
+          "DeviceType": 1,
+          "CommunicationTimeout": 0
+        },
+        "CompareValue": "4",
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 4 ±  0 - ID:5ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "SW Version",
+            "Description": "Version Minor.",
+            "Default": "0",
+            "Cmd": "verminor",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                99.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "SW Version - Minor",
+            "Units": null,
+            "DeviceType": 1,
+            "CommunicationTimeout": 0
+          },
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "SW Version - Minor (MCU)",
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true
+        }
+      }
+    ]
+  },
+  "IsPass": null
+}
