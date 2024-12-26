@@ -193,7 +193,6 @@ namespace EOL.ViewModels
 					_eolSettings.DeviceSetupUserData.SetupDevicesList = new ObservableCollection<DeviceTypesEnum>();
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.MCU_2);
-					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.ZimmerPowerMeter);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.NI_6002_2);
 					_eolSettings.DeviceSetupUserData.SetupDevicesList.Add(DeviceTypesEnum.Printer_TSC);

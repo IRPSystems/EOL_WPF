@@ -107,7 +107,7 @@
         "Name": "Digital Counter",
         "Units": null,
         "Value": null,
-		"CommunicationTimeout": 25000,
+		"CommunicationTimeout": 30000,
         "DeviceType": 9
       }
     ]
