@@ -57,13 +57,14 @@ namespace EOL.ViewModels
 		public Visibility ContinueVisibility { get; set; }
 
 		public string ErrorMessage { get; set; }
+        public string OperatorErrorMessage { get; set; }
 
-		#endregion Properties
+        #endregion Properties
 
-		#region Fields
+        #region Fields
 
 
-		private DevicesContainer _devicesContainer;
+        private DevicesContainer _devicesContainer;
 
 		private int _totalNumOfSteps;
 		private int _stepsCounter;
@@ -185,8 +186,10 @@ namespace EOL.ViewModels
 				_runProjectsList = new RunProjectsListService(RunScript, _devicesContainer);
 				_runProjectsList.RunEndedEvent += _runProjectsList_ScriptEndedEvent;
 				_runProjectsList.ErrorMessageEvent += RunProjectsList_ErrorMessageEvent;
-				
-				_generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
+                _runProjectsList.OperatorErrorMessageEvent += RunProjectsList_OperatorErrorMessageEvent;
+
+
+                _generatedProjectsList = new ObservableCollection<GeneratedProjectData>();
 
 				_adminVM = new AdminViewModel(
 					ScriptDiagram,
@@ -482,7 +485,7 @@ namespace EOL.ViewModels
 
 			_runData.NumberOfTested++;
 
-
+			OperatorErrorMessage = "";
 			_totalNumOfSteps = 0;
 			string path = _userDefaultSettings.ReportsSavingPath;
 			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
@@ -807,8 +810,10 @@ namespace EOL.ViewModels
 
 		private void Abort()
 		{
-			RunScript.AbortScript("User Abort");
-		}
+            OperatorErrorMessage += "User Abort";
+            _runProjectsList.IsAbortClicked = true;
+            RunScript.AbortScript("User Abort");
+        }
 
 		private void Stop(ScriptStopModeEnum stopeMode)
 		{
@@ -819,7 +824,6 @@ namespace EOL.ViewModels
 				_runData.EndTime = DateTime.Now;
 
 				RunResult singleTestResult = new RunResult();
-
 
 				IsRunButtonEnabled = true;
 
@@ -841,6 +845,8 @@ namespace EOL.ViewModels
 				{
 					foreach (GeneratedScriptData script in project.TestsList)
 					{
+						if (!(bool)script.IsPass && !OperatorErrorMessage.Contains("Test"))
+							OperatorErrorMessage += "\r\nTest: " + script.Name;
 						failedStep = GetScriptEOLStepSummerys(
 							script,
 							script,
@@ -848,7 +854,8 @@ namespace EOL.ViewModels
 					}
 				}
 
-				singleTestResult.FailedStep = failedStep;
+
+                singleTestResult.FailedStep = failedStep;
 				singleTestResult.AppVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 				singleTestResult.RackNumber = _settingsData.RackNumber;
 
@@ -918,6 +925,7 @@ namespace EOL.ViewModels
 
 		#region Handle EOL Step Summery
 
+
 		private ScriptStepBase GetScriptEOLStepSummerys(
 			IScript script,
 			IScript test,
@@ -933,6 +941,8 @@ namespace EOL.ViewModels
 					stepBase.SubScriptName = script.Name;
 					stepBase.TestName = test.Name;
 
+					if (stepBase.OperatorErrorDescription != null && stepBase.OperatorErrorDescription != string.Empty )
+						OperatorErrorMessage += "\r\nStep: "+ stepBase.UserTitle + " - " + stepBase.OperatorErrorDescription;
 
 					if (!(item is ISubScript))
 					{
@@ -945,6 +955,9 @@ namespace EOL.ViewModels
 
 				if (item is ISubScript subScript)
 				{
+					if (!((bool)subScript.Script.IsPass) && !OperatorErrorMessage.Contains("Sub Script"))
+						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
+					
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
 						test,
@@ -981,7 +994,12 @@ namespace EOL.ViewModels
 			ErrorMessage = errorMessage;
 		}
 
-		public void ShowAdmin()
+        private void RunProjectsList_OperatorErrorMessageEvent(string errorMessage)
+        {
+            OperatorErrorMessage = errorMessage;
+        }
+
+        public void ShowAdmin()
 		{
 			if (_adminView == null || _adminView.IsVisible == false)
 			{

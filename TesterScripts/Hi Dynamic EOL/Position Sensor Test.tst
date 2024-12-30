@@ -87,6 +87,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -129,7 +130,7 @@
         "SelectedScriptName": "Config Position Sensor",
         "UserTitle": "Config Motor",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -155,7 +156,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

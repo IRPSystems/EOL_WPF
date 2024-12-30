@@ -382,6 +382,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -396,6 +397,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -424,6 +426,7 @@
         "Name": "Loop Increment 2",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
@@ -449,6 +452,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
@@ -465,6 +469,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -883,6 +888,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -897,6 +903,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -925,6 +932,7 @@
         "Name": "Loop Increment 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
@@ -950,6 +958,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
@@ -966,6 +975,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1384,6 +1394,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1398,6 +1409,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1426,6 +1438,7 @@
         "Name": "Loop Increment 7",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
@@ -1451,6 +1464,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
@@ -1467,6 +1481,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1885,6 +1900,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1899,6 +1915,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1927,6 +1944,7 @@
         "Name": "Loop Increment 8",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
@@ -1952,6 +1970,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
@@ -1968,6 +1987,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2386,6 +2406,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2400,6 +2421,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2428,6 +2450,7 @@
         "Name": "Set Parameter 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "analog output",
@@ -2452,6 +2475,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "analog output",
@@ -2468,6 +2492,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,

@@ -281,6 +281,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -586,6 +587,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -891,6 +893,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -941,6 +944,7 @@
         "Name": "Compare With Tolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -976,6 +980,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -992,6 +997,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 1,
           "NI6002_NumofCounts": 0,
@@ -1006,6 +1012,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1034,6 +1041,7 @@
         "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -1069,6 +1077,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -1085,6 +1094,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
           "NI6002_NumofCounts": 0,
@@ -1099,6 +1109,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1127,6 +1138,7 @@
         "Name": "Compare With Tolerance 12",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -1162,6 +1174,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -1178,6 +1191,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 3,
           "NI6002_NumofCounts": 0,
@@ -1192,6 +1206,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1492,6 +1507,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1797,6 +1813,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2102,6 +2119,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2152,6 +2170,7 @@
         "Name": "Compare With Tolerance 10",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -2187,6 +2206,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -2203,6 +2223,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 1,
           "NI6002_NumofCounts": 0,
@@ -2217,6 +2238,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2245,6 +2267,7 @@
         "Name": "Compare With Tolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -2280,6 +2303,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -2296,6 +2320,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
           "NI6002_NumofCounts": 0,
@@ -2310,6 +2335,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2338,6 +2364,7 @@
         "Name": "Compare With Tolerance 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital input",
@@ -2373,6 +2400,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital input",
@@ -2389,6 +2417,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 3,
           "NI6002_NumofCounts": 0,
@@ -2403,6 +2432,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,

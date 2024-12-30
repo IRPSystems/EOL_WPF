@@ -43,6 +43,7 @@
             "DeviceType": 3,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -146,6 +147,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -249,6 +251,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -352,6 +355,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -495,6 +499,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -608,6 +613,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -711,6 +717,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -814,6 +821,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -901,6 +909,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1004,6 +1013,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1107,6 +1117,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1194,6 +1205,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1286,6 +1298,7 @@
         },
         "CompareValue": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital counter",
@@ -1337,6 +1350,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1352,6 +1366,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital counter",
@@ -1368,6 +1383,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 25000
           },
+          "NI6002_ExpectedRPM": 500,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 200,
@@ -1450,6 +1466,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1554,6 +1571,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1641,6 +1659,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1733,6 +1752,7 @@
         },
         "CompareValue": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital counter",
@@ -1784,6 +1804,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -1799,6 +1820,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital counter",
@@ -1815,6 +1837,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 25000
           },
+          "NI6002_ExpectedRPM": 1300,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 200,
@@ -1897,6 +1920,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2001,6 +2025,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2088,6 +2113,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2180,6 +2206,7 @@
         },
         "CompareValue": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
           "Status_paramter": "Rw",
           "command_to_device": "digital counter",
@@ -2231,6 +2258,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2246,6 +2274,7 @@
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
             "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
             "Status_paramter": "Rw",
             "command_to_device": "digital counter",
@@ -2262,6 +2291,7 @@
             "DeviceType": 9,
             "CommunicationTimeout": 25000
           },
+          "NI6002_ExpectedRPM": 2000,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 200,
@@ -2344,6 +2374,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2431,6 +2462,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -2574,6 +2606,7 @@
             "DeviceType": 1,
             "CommunicationTimeout": 0
           },
+          "NI6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
