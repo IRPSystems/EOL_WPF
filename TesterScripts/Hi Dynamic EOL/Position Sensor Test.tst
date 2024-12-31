@@ -130,7 +130,7 @@
         "SelectedScriptName": "Config Position Sensor",
         "UserTitle": "Config Motor",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -156,7 +156,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
