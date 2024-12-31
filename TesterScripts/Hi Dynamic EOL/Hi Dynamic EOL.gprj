@@ -4855,7 +4855,7 @@
                         "DropDown": null,
                         "Name": "ATE Get",
                         "Units": null,
-                        "DeviceType": 1,
+                        "DeviceType": 20,
                         "CommunicationTimeout": 0
                       },
                       "CompareValue": "1",
@@ -4903,7 +4903,7 @@
                       },
                       "UserTitle": "Can 1 Communication test",
                       "Name": "Compare With Tolerance 2",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:2",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:1",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -4911,7 +4911,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 2,
+                      "ID": 1,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
