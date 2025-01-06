@@ -1,6 +1,7 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace EOL.Models
 {
@@ -10,7 +11,19 @@ namespace EOL.Models
 
 		public bool IsIgnorFail { get; set; }
 		public bool IsPrintLabel { get; set; }
-		public string RackNumber { get; set; }
+        private string _rackNumber;
+        public string RackNumber
+        {
+            get => _rackNumber;
+            set
+            {
+                if (_rackNumber != value)
+                {
+                    _rackNumber = value;
+                    OnPropertyChanged(nameof(RackNumber));
+                }
+            }
+        }
 
 	}
 }

@@ -466,7 +466,10 @@ namespace EOL.ViewModels
 
 		private void Run()
 		{
-			if(!PreRunValidations())
+			//if(_userDefaultSettings.EOLRackSN)
+			//	_runData.RackNum = Convert.ToInt32(_userDefaultSettings.EOLRackSN);
+
+            if (!PreRunValidations())
 			{
 				return;
 			}
@@ -482,7 +485,6 @@ namespace EOL.ViewModels
 			_runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
-
 			_runData.NumberOfTested++;
 
 			OperatorErrorMessage = "";
@@ -703,7 +705,12 @@ namespace EOL.ViewModels
                 ErrorMsg += "Part Number\r\n";
                 isValid = false;
             }
-            if (!isValid)
+			if(!IsAdminMode && String.IsNullOrEmpty(_userDefaultSettings.EOLRackSN))
+			{
+				ErrorMsg += "Rack Number\r\n";
+				isValid = false;
+			}
+			if (!isValid)
             {
                 MessageBox.Show(ErrorMsg);
                 return false;

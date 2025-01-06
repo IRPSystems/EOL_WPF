@@ -25,7 +25,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -42,7 +43,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -59,7 +61,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -83,7 +86,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -107,7 +111,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -124,7 +129,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
         }
       }
     ]

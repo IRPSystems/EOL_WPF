@@ -76,6 +76,7 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
         {
+            _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);
