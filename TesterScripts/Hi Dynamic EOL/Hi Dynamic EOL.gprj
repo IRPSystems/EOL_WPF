@@ -4914,7 +4914,7 @@
                         "DropDown": null,
                         "Name": "ATE Get",
                         "Units": null,
-                        "DeviceType": 1,
+                        "DeviceType": 20,
                         "CommunicationTimeout": 0
                       },
                       "CompareValue": "1",
@@ -4961,8 +4961,8 @@
                         "NumatoGPIODropDwonIndex": 0
                       },
                       "UserTitle": "Check Communication With CAN 1",
-                      "Name": "Compare With Tolerance 1",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:1",
+                      "Name": "Compare With Tolerance 3",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:3",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -4970,7 +4970,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 1,
+                      "ID": 3,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -31148,7 +31148,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -31156,12 +31156,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain U",
                       "Name": "Save Parameter 1",
@@ -31230,7 +31230,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -31238,12 +31238,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain V",
                       "Name": "Save Parameter 2",
@@ -31312,7 +31312,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -31320,12 +31320,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "Name": "Save Parameter 3",

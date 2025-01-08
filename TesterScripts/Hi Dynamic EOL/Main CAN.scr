@@ -6,7 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
+        "Name": "Compare With Tolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -183,14 +183,14 @@
           "DropDown": null,
           "Name": "ATE Get",
           "Units": null,
-          "DeviceType": 1,
+          "DeviceType": 20,
           "CommunicationTimeout": 0
         },
         "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 1 ±  0 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:3ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -379,7 +379,7 @@
             "DropDown": null,
             "Name": "ATE Get",
             "Units": null,
-            "DeviceType": 1,
+            "DeviceType": 20,
             "CommunicationTimeout": 0
           },
           "NI6002_ExpectedRPM": 0,
@@ -413,7 +413,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
