@@ -431,14 +431,26 @@ namespace EOL.ViewModels
 
 			if (stopMode == ScriptStopModeEnum.Ended)
 				RunPercentage = 100;
+            RunResult singleTestResult = new RunResult();
 
-			Stop(stopMode);
+            Stop(stopMode, ref singleTestResult);
+
+            HandleTestData(singleTestResult);
 
 			PostRunActions();
 
 			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 		}
+
+        private void HandleTestData(RunResult singleTestResult)
+        {
+            _csvWritter.WriteTestResult(
+                singleTestResult,
+                _generatedProjectsList.ToList());
+
+            _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
+        }
 
         private void PostRunActions()
         {
@@ -466,10 +478,7 @@ namespace EOL.ViewModels
 
 		private void Run()
 		{
-			//if(_userDefaultSettings.EOLRackSN)
-			//	_runData.RackNum = Convert.ToInt32(_userDefaultSettings.EOLRackSN);
-
-            if (!PreRunValidations())
+			if(!PreRunValidations())
 			{
 				return;
 			}
@@ -485,6 +494,7 @@ namespace EOL.ViewModels
 			_runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
+
 			_runData.NumberOfTested++;
 
 			OperatorErrorMessage = "";
@@ -705,12 +715,7 @@ namespace EOL.ViewModels
                 ErrorMsg += "Part Number\r\n";
                 isValid = false;
             }
-			if(!IsAdminMode && String.IsNullOrEmpty(_userDefaultSettings.EOLRackSN))
-			{
-				ErrorMsg += "Rack Number\r\n";
-				isValid = false;
-			}
-			if (!isValid)
+            if (!isValid)
             {
                 MessageBox.Show(ErrorMsg);
                 return false;
@@ -822,15 +827,13 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode)
+		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult)
 		{
 			try
 			{
 
 				_timerDuration.Stop();
 				_runData.EndTime = DateTime.Now;
-
-				RunResult singleTestResult = new RunResult();
 
 				IsRunButtonEnabled = true;
 
@@ -898,19 +901,13 @@ namespace EOL.ViewModels
 					_stepSetParameter.Execute();
 				}
 
-				singleTestResult.SerialNumber = _runData.SerialNumber;
-				singleTestResult.PartNumber = _runData.PartNumber;
-				singleTestResult.OperatorName = _runData.OperatorName;
-				singleTestResult.Steps = eolStepSummerysList;
-				singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
-				singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
-
-				_csvWritter.WriteTestResult(
-					singleTestResult, 
-					_generatedProjectsList.ToList());
-
-				_pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
-			}
+                singleTestResult.SerialNumber = _runData.SerialNumber;
+                singleTestResult.PartNumber = _runData.PartNumber;
+                singleTestResult.OperatorName = _runData.OperatorName;
+                singleTestResult.Steps = eolStepSummerysList;
+                singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
+                singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
+            }
 			catch (Exception ex)
 			{
 				LoggerService.Error(this, "Faild to handle stop tasks", ex);
