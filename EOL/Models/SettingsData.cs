@@ -12,6 +12,7 @@ namespace EOL.Models
 		public bool IsIgnorFail { get; set; }
 		public bool IsPrintLabel { get; set; }
         private string _rackNumber;
+        public string DataBaseConnection {  get; set; }
         public string RackNumber
         {
             get => _rackNumber;

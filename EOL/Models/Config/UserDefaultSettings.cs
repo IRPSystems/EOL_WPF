@@ -11,6 +11,7 @@ namespace EOL.Models
     {
         // Declare variables corresponding to the custom user.config settings
         public string ReportsSavingPath { get; set; }
+        public string DatabaseConnectionURL { get; set; }
         public string TechLogDirectory { get; set; }
         public string MonitorLogSavingPath { get; set; }
         public string DefaultMainSeqConfigFile { get; set; }

@@ -25,6 +25,7 @@ using DeviceCommunicators.MCU;
 using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
+using TestersDB_Lib;
 
 namespace EOL.ViewModels
 {
@@ -54,6 +55,7 @@ namespace EOL.ViewModels
 
 		public SettingsViewModel SettingsVM { get; set; }
 
+		public DatabaseHandler _databaseHandlerObj { get; private set; }
 		public List<ModeType> ModeTypeList { get; set; }
 
 		public string SelectedMode { get; set; }
@@ -100,6 +102,8 @@ namespace EOL.ViewModels
 			_eolSettings = EOLSettings.LoadEOLUserData("EOL");
 
 			_runData = new RunData();
+
+			_databaseHandlerObj = new DatabaseHandler();
 
 			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
@@ -234,8 +238,10 @@ namespace EOL.ViewModels
 				SettingsVM = new SettingsViewModel(
 					_eolSettings, 
 					_userConfigManager,
-					_setupSelectionVM);
-				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
+					_setupSelectionVM,
+					_databaseHandlerObj
+					);
+                SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
 				OperatorVM = new OperatorViewModel(
@@ -378,7 +384,7 @@ namespace EOL.ViewModels
 			UpdateSetup();
 		}
 
-		private void UpdateSetup()
+        private void UpdateSetup()
 		{
 
 			ObservableCollection<DeviceData> deviceList = _setupSelectionVM.DevicesList;

@@ -12,7 +12,8 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using FlowDirection = System.Windows.FlowDirection;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
-
+using TestersDB_Lib;
+using Microsoft.Data.SqlClient;
 namespace EOL.ViewModels
 {
     public class SettingsViewModel: ObservableObject
@@ -24,9 +25,27 @@ namespace EOL.ViewModels
 
 		public SetupSelectionViewModel SetupSelectionVM { get; set; }
         public SettingsAdminViewModel SettingsAdminVM { get; set; }
-
+        public DatabaseHandler DataBaseHandlerVM;
 		public bool IsAdminMode { get; set; }
 
+        public SqlConnectionStringBuilder builder { get; set; }
+
+        // Define connection variables
+        private string _server = "irp-systems-sqlserver.database.windows.net";
+        private string _database = "Testers_DB"; // Replace with your actual database name if different
+        private string _userId = "TestersDB_Manager";
+        private string _password = "DontPanic123"; // **Warning:** Avoid hardcoding passwords in production
+
+        private string _DBconnectionString;
+        public string DBconnectionString
+        {
+            get => _DBconnectionString;
+            set
+            {
+                _DBconnectionString = value;
+                OnPropertyChanged();
+            }
+        }
 		#endregion Properties
 
 		#region Fields
@@ -46,6 +65,7 @@ namespace EOL.ViewModels
         public event Action FirstFlashFileEventChanged;
         public event Action SecondFlashFileEventChanged;
         public event Action SettingsWindowClosedEvent;
+        public event Action DBconnectionEvent; 
 
 		#endregion Events
 
@@ -56,16 +76,23 @@ namespace EOL.ViewModels
 		public SettingsViewModel(
             EOLSettings eolSettings,
             UserConfigManager userConfigManager,
-			SetupSelectionViewModel setupSelectionVM)
+			SetupSelectionViewModel setupSelectionVM,
+            DatabaseHandler DBhandler)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
+            DataBaseHandlerVM = DBhandler;
+
+            DataBaseHandlerVM.DBConnectionLog += WritetoTerminal;
+            DataBaseHandlerVM.init();
+            SettingsData.DataBaseConnection = DataBaseHandlerVM._connectionString;
 
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
+            ConnectionCommand = new RelayCommand(DBConnect);
 
             SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
 		}
@@ -76,6 +103,7 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
         {
+            _userDefaultSettings.DatabaseConnectionURL = DataBaseHandlerVM._connectionString;
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
@@ -83,6 +111,16 @@ namespace EOL.ViewModels
 			SettingsWindowClosedEvent?.Invoke();
 
 		}
+
+        private void DBConnect()
+        {
+            DataBaseHandlerVM.Connect();
+        }
+
+        private void WritetoTerminal(string text)
+        {
+            DBconnectionString += text + "\n";
+        }
 
         private void Loaded()
 		{
@@ -233,6 +271,7 @@ namespace EOL.ViewModels
 
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
+        public RelayCommand ConnectionCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
 		
 
