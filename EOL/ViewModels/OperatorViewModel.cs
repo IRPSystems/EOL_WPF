@@ -6,6 +6,7 @@ using EOL.Models;
 using ScriptHandler.Models;
 using Services.Services;
 using System.Windows.Controls;
+using TestersDB_Lib;
 
 namespace EOL.ViewModels
 {
@@ -35,7 +36,8 @@ namespace EOL.ViewModels
 			SettingsViewModel viewModel, 
 			RunData runData,
 			RichTextBox richTextBox,
-			LogLineListService logLineList)
+			LogLineListService logLineList,
+			DatabaseHandler databaseHandlerObj)
 		{
             RunData = runData;
             Run = new RunViewModel( 
@@ -44,7 +46,8 @@ namespace EOL.ViewModels
 				userDefaultSettings, 
 				viewModel,
 				logLineList,
-				viewModel.SettingsData);
+				viewModel.SettingsData,
+                databaseHandlerObj);
             RunData.RunScript = Run.RunScript;
 		}
 

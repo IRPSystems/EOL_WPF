@@ -93,6 +93,7 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
             ConnectionCommand = new RelayCommand(DBConnect);
+            ClearTerminalCommand = new RelayCommand(ClearTerminal);
 
             SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
 		}
@@ -119,9 +120,12 @@ namespace EOL.ViewModels
 
         private void WritetoTerminal(string text)
         {
-            DBconnectionString += text + "\n";
+            DBconnectionString += text + "\r\n\r\n";
         }
-
+        private void ClearTerminal()
+        {
+            DBconnectionString = string.Empty;
+        }
         private void Loaded()
 		{
 			GetDescriptsionColumnWidth();
@@ -272,6 +276,8 @@ namespace EOL.ViewModels
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand ConnectionCommand { get; private set; }
+        public RelayCommand ClearTerminalCommand { get; private set; }
+
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
 		
 

@@ -251,7 +251,8 @@ namespace EOL.ViewModels
 					SettingsVM, 
 					_runData,
 					_richTextBox,
-					_logLineList);
+					_logLineList,
+                    _databaseHandlerObj);
 
 				ChangeDarkLight();
 

@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="iTextSharp-LGPL" Version="4.1.6" />
     <PackageReference Include="MahApps.Metro" Version="2.4.10" />

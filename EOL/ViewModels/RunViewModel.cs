@@ -29,6 +29,11 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using static FlashingToolLib.FlasherService;
+using AutoMapper;
+using TestersDB_Lib.Models;
+using TestResult = TestersDB_Lib.Models.TestResult;
+using TestersDB_Lib;
+using System.Threading.Tasks;
 
 namespace EOL.ViewModels
 {
@@ -93,7 +98,9 @@ namespace EOL.ViewModels
 
 		private GeneratedScriptData _SafetyScript;
 
-		private OpenProjectForRunService _openProject;
+
+
+        private OpenProjectForRunService _openProject;
 		private StopScriptStepService _stopScriptStep;
 		private ObservableCollection<GeneratedProjectData> _generatedProjectsList;
 		private GeneratedScriptData _stoppedScript; 
@@ -114,6 +121,9 @@ namespace EOL.ViewModels
 
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
+		private DataBaseCoordinator	_dataBaseCoordinator;
+
+		static IMapper _mapper;
 		#endregion Fields
 
 		#region Constructor
@@ -124,7 +134,8 @@ namespace EOL.ViewModels
 			UserDefaultSettings userDefaultSettings,
 			SettingsViewModel settingsViewModel,
 			LogLineListService logLineList,
-			SettingsData settingsData)
+			SettingsData settingsData,
+			DatabaseHandler databaseHandlerObj )
 		{
             _settingsViewModel = settingsViewModel;
             _devicesContainer = devicesContainer;
@@ -135,6 +146,7 @@ namespace EOL.ViewModels
 			_runData.NumberOfTested = 0;
 			_runData.NumberOfFailed = 0;
 			_runData.NumberOfPassed = 0;
+            // Initialize AutoMapper
 
             try
             {
@@ -153,7 +165,15 @@ namespace EOL.ViewModels
 				ContinueCommand = new RelayCommand(Continue);
 				ShowAdminCommand = new RelayCommand(ShowAdmin);
 
-				RunPercentage = 0;
+                var configuration = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<RunResultToDBMapping>(); // Your mapping profile
+                });
+
+                // Initialize the mapper with the configuration
+                _mapper = configuration.CreateMapper();
+
+                RunPercentage = 0;
 				TerminalTextsList = new ObservableCollection<string>();
 				RunState = RunStateEnum.None;
 
@@ -205,6 +225,8 @@ namespace EOL.ViewModels
 				_pdfCreator = new PDF_Creator();
 
                 _printFileParser = new PrintFileHandler();
+
+				_dataBaseCoordinator = new DataBaseCoordinator(databaseHandlerObj , _mapper);
 
                 RegisterEvents();
 
@@ -434,6 +456,11 @@ namespace EOL.ViewModels
             RunResult singleTestResult = new RunResult();
 
             Stop(stopMode, ref singleTestResult);
+
+            Task.Run(async () =>
+            {
+                await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
+            }).ConfigureAwait(false);
 
             HandleTestData(singleTestResult);
 
