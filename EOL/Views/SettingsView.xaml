@@ -112,7 +112,7 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Grid.Column="0" Text="Rack number" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="2" Text="{Binding SettingsData.RackNumber}" />
+                    <TextBox Grid.Column="2" Text="{Binding SettingsData.RackNumber, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" />
                 </Grid>
 
             </StackPanel>

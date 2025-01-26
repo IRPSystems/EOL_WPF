@@ -25,7 +25,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -42,7 +43,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -59,7 +61,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -83,7 +86,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       },
       {
@@ -100,14 +104,33 @@
         "SelectedScriptName": "Peak Operation",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 6,
         "FailNextId": 0,
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 6",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
         }
       }
     ]

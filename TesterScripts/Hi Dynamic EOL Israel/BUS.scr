@@ -1628,8 +1628,25 @@
         "UserTitle": "Calibrate BUS",
         "IsPass": false,
         "PassNextId": 19,
-        "FailNextId": 20,
+        "FailNextId": 21,
         "ID": 18,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 22",
+        "Interval": 1,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 20,
+        "FailNextId": 0,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1680,7 +1697,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1688,7 +1705,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 20,
+        "AverageOfNRead_CompareValue": 10,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -1756,9 +1773,9 @@
         },
         "UserTitle": "Validate BUS Calibration",
         "IsPass": false,
-        "PassNextId": 20,
-        "FailNextId": 20,
-        "ID": 19,
+        "PassNextId": 21,
+        "FailNextId": 21,
+        "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2061,9 +2078,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Phase U High Side OFF",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 22,
         "FailNextId": 0,
-        "ID": 20,
+        "ID": 21,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2210,7 +2227,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 21,
+        "ID": 22,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

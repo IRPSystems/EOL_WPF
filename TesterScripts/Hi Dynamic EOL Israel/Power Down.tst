@@ -18,9 +18,26 @@
         "SelectedScriptName": "Shut Down",
         "UserTitle": null,
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 2",
+        "Interval": 7,
+        "IntervalUnite": 3,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

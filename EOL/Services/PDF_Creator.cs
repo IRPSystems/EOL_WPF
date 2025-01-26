@@ -11,14 +11,17 @@ using ScriptHandler.Models;
 using ScriptHandler.Interfaces;
 using System.Collections.ObjectModel;
 using Services.Services;
+using TestersDB_Lib.Models;
+using System.Linq;
 
 namespace EOL.Services
 {
     public class PDF_Creator
     {
-		#region Properties and Fields
+        #region Properties and Fields
 
-		public string TestOverallStatus { get; set; }
+        public string TestOverallStatus { get; set; }
+        public string CustomerVer { get; set; }
 
         private string _fileName = String.Empty;
 
@@ -32,24 +35,25 @@ namespace EOL.Services
 
         List<List<string>> _dynamicDataTable = new List<List<string>>();
 
-		#endregion Properties and Fields
+        #endregion Properties and Fields
 
-		public void CreatePdf(
-            ObservableCollection<GeneratedProjectData> _generatedProjectsList, 
-            RunResult runResult, 
+        public void CreatePdf(
+            ObservableCollection<GeneratedProjectData> _generatedProjectsList,
+            RunResult runResult,
             UserDefaultSettings userDefaultSettings)
         {
             // Sample data using List<List<string>> with headers included
             _countDynTable = 0;
             _countExecTable = 0;
+            CustomerVer = String.Empty;
 
             _executiveSumTable.Clear();
             _dynamicDataTable.Clear();
-			//testOverallStatus = testingData.OverallTestStatus.ToString();
+            //testOverallStatus = testingData.OverallTestStatus.ToString();
 
-			#region Get file path
-			//TODO
-			string function = "Temp";
+            #region Get file path
+            //TODO
+            string function = "Temp";
             _fileName = function + "_PDF_Report - " + runResult.SerialNumber + ".pdf";
 
             string reportDir = userDefaultSettings.ReportsSavingPath + _subFolderName;
@@ -61,10 +65,10 @@ namespace EOL.Services
 
             string fullSavingPath = System.IO.Path.Combine(reportDir, _fileName);
 
-			#endregion Get file path
+            #endregion Get file path
 
             // Get headers of tables
-			_executiveSumTable.Add(ExecSumHeaderToList());
+            //_executiveSumTable.Add(ExecSumHeaderToList());
             _dynamicDataTable.Add(DynTabHeaderToList());
 
             // Add steps data to the tables
@@ -95,6 +99,7 @@ namespace EOL.Services
                 PageEventHandler eventHandler = new PageEventHandler();
 
                 eventHandler.runResult = runResult;
+                eventHandler.runResult.CustomerVer = CustomerVer;
                 eventHandler.TesterConfig = userDefaultSettings.AutoConfigPref;
                 eventHandler.ScriptPath = userDefaultSettings.DefaultMainSeqConfigFile;
                 // Assign the event handler to the writer
@@ -104,22 +109,22 @@ namespace EOL.Services
                 document.Open();
 
                 // Create a new table with the number of rows and columns
-                PdfPTable dataTableB = new PdfPTable(_executiveSumTable[0].Count);
-                dataTableB.WidthPercentage = 100;
+                //PdfPTable dataTableB = new PdfPTable(_executiveSumTable[0].Count);
+                //dataTableB.WidthPercentage = 100;
 
                 // Add information line - Exec Summary Table Name
-                Paragraph execSumTableName = new Paragraph("Executive Summary");
-                execSumTableName.Font.Size = 18;
-                execSumTableName.Font.SetStyle(Font.BOLD);
+                //Paragraph execSumTableName = new Paragraph("Executive Summary");
+                //execSumTableName.Font.Size = 18;
+                //execSumTableName.Font.SetStyle(Font.BOLD);
 
-                foreach (List<string> row in _executiveSumTable)
-                {
-                    foreach (string cellValue in row)
-                    {
-                        PdfPCell cell = new PdfPCell(new Phrase(cellValue));
-                        dataTableB.AddCell(cell);
-                    }
-                }
+                //foreach (List<string> row in _executiveSumTable)
+                //{
+                //    foreach (string cellValue in row)
+                //    {
+                //        PdfPCell cell = new PdfPCell(new Phrase(cellValue));
+                //        dataTableB.AddCell(cell);
+                //    }
+                //}
 
                 // Add information line - Dynamic Table Name
                 Paragraph dynamicTableName = new Paragraph("Dynamic Table");
@@ -140,9 +145,9 @@ namespace EOL.Services
                 }
 
                 // Add Contant
-                document.Add(execSumTableName);
+                // document.Add(execSumTableName);
                 document.Add(new Paragraph(""));
-                document.Add(dataTableB);
+                //document.Add(dataTableB);
                 document.Add(new Paragraph(""));
                 document.Add(dynamicTableName);
                 document.Add(new Paragraph(""));
@@ -155,7 +160,7 @@ namespace EOL.Services
             }
             catch (Exception ex)
             {
-                LoggerService.Error(this, "Failed to write to the PDF file", "Error", ex); 
+                LoggerService.Error(this, "Failed to write to the PDF file", "Error", ex);
             }
         }
 
@@ -166,25 +171,59 @@ namespace EOL.Services
                 if (scriptItem is ISubScript subScript)
                 {
                     //TODO, add sub script overall result
-                    AddTables(subScript.Script.ScriptItemsList);
+                    AddTables(subScript.Script.ScriptItemsList);                   
                 }
 
+
                 if (scriptItem is ScriptStepBase step &&
-					step.EOLReportsSelectionData != null)
+                    step.EOLReportsSelectionData != null)
                 {
-                    if(step.EOLReportsSelectionData.IsSaveToPdfExecTable)
-                    {
-                        _executiveSumTable.Add(ExecSumResultsToList(step));
-                    }
+                    if(step.EOLReportsSelectionData.IsSaveToCustomerVer)
+                        RetrieveCustomerVer(step);
+
                     if (step.EOLReportsSelectionData.IsSaveToPdfDynTable)
                     {
                         List<string> list = DynTabResultsToList(step);
-                        if(list != null && list.Count > 0)
+                        if (list != null && list.Count > 0)
                             _dynamicDataTable.Add(DynTabResultsToList(step));
                     }
                 }
+                    //if (step.EOLReportsSelectionData.IsSaveToPdfExecTable)
+                    //{
+                    //    _executiveSumTable.Add(ExecSumResultsToList(step));
+                    //}
+
+                }
+            }
+        
+
+    private void RetrieveCustomerVer(ScriptStepBase step)
+    {
+        if (step.UserTitle != null)
+        {
+            if (step is ScriptStepCompareWithTolerance steptolerance)
+            {
+                if (steptolerance.Parameter.Value != null && int.TryParse(steptolerance.Parameter.Value.ToString(), out int value))
+                {
+                    string formattedValue = value.ToString("D2"); // Format as two digits
+
+                    //Split existing CustomerVer and maintain the "xx.xx.xx" pattern
+                    var segments = CustomerVer.Split('.').ToList();
+                    segments.Add(formattedValue);
+
+                    // Ensure only the last three segments are kept
+                    if (segments.Count > 3)
+                    {
+                        segments = segments.Skip(segments.Count - 3).ToList();
+                    }
+
+                    // Reconstruct CustomerVer
+                    CustomerVer = string.Join('.', segments);
+                }
             }
         }
+    }
+
 
         public List<string> ExecSumResultsToList(ScriptStepBase test)
         {
@@ -235,8 +274,8 @@ namespace EOL.Services
                 EOLStepSummeryData stepSummary = step.EOLStepSummerysList.Find(
                     (s) => string.IsNullOrEmpty(s.ParentStepDescription));
 
-                if(stepSummary == null)
-                    return null; 
+                if (stepSummary == null)
+                    return null;
 
                 string testStatus = stepSummary.IsPass ? "Passed" : "Failed";
                 //if (!step.IsExecuted)
@@ -247,7 +286,7 @@ namespace EOL.Services
                     description = stepSummary.ParentStepDescription;
 
                 string testValue = "";
-                if(stepSummary.TestValue != null)
+                if (stepSummary.TestValue != null)
                     testValue = ((double)stepSummary.TestValue).ToString("f2");
 
                 string comparisonvalue = "";
@@ -337,6 +376,8 @@ namespace EOL.Services
     }
 
 
+
+
     public class PageEventHandler : PdfPageEventHelper
     {
         //private string logoPath = "";
@@ -367,12 +408,13 @@ namespace EOL.Services
             document.Add(PDF_Creator.CreateInfoLine("Operator Name", runResult.OperatorName));
             document.Add(PDF_Creator.CreateInfoLine("SerialNumber", runResult.SerialNumber));
             document.Add(PDF_Creator.CreateInfoLine("PartNumber", runResult.PartNumber));
-            document.Add(PDF_Creator.CreateInfoLine("SW Ver", "v2.03.05"));
             document.Add(PDF_Creator.CreateInfoLine("Date", DateTime.Now.ToString("dd-MM-yyyy")));
             document.Add(PDF_Creator.CreateInfoLine("Time", DateTime.Now.ToString("HH:mm:ss")));
-            document.Add(PDF_Creator.CreateInfoLine("Rack No.", "not working yet"));
+            document.Add(PDF_Creator.CreateInfoLine("Rack No.", runResult.RackNumber));
             //document.Add(PDF_Creator.CreateInfoLine("Win App FW Ver", GeneralAppInfo.AppVersion));
             document.Add(PDF_Creator.CreateInfoLine("JSON Script Ver", Path.GetFileNameWithoutExtension(ScriptPath)));
+            if (runResult.CustomerVer != string.Empty)
+                document.Add(PDF_Creator.CreateInfoLine("Customer SW Version", runResult.CustomerVer));
             // Add empty space
             document.Add(new Paragraph(""));
 
@@ -415,4 +457,6 @@ namespace EOL.Services
         }
     }
 }
+    
+
 

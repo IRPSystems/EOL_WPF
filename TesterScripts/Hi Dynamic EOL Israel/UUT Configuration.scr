@@ -102,7 +102,7 @@
         "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -119,7 +119,7 @@
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -196,7 +196,7 @@
         "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -213,7 +213,7 @@
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -282,12 +282,12 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State (ATE)",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 6,
         "FailNextId": 0,
         "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -385,12 +385,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Active Damping to OFF",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -472,12 +472,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set AB Fault Threshold to 5000",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -559,12 +559,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Cooling Temp Plate Max Start to 150",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -646,12 +646,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Cooling Temp Plate Max Cut to 150",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -749,12 +749,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Bus Under Voltage Fault",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -852,12 +852,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Bus Low Voltage Fault",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -955,12 +955,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Cooling Plate Temp Fault",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1058,12 +1058,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Motor Temp Sensor Fault",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1161,12 +1161,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable Current Sensor Factory Gain Fault",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1264,12 +1264,12 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Disable CAN No Comm Fault",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 20,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1281,9 +1281,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 21,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1490,12 +1490,12 @@
         "AverageOfNRead": 0,
         "UserTitle": "Check Fault Vector 0",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
@@ -1701,10 +1701,10 @@
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
+          "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false
         }
