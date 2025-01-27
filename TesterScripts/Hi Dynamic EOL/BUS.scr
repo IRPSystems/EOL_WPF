@@ -1246,7 +1246,7 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State ATE",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 25,
         "FailNextId": 0,
         "ID": 15,
         "EOLReportsSelectionData": {
@@ -1254,6 +1254,24 @@
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 25",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 16,
+        "FailNextId": 0,
+        "ID": 25,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false
         }
       },

@@ -4961,8 +4961,8 @@
                         "NumatoGPIODropDwonIndex": 0
                       },
                       "UserTitle": "Check Communication With CAN 1",
-                      "Name": "Compare With Tolerance 3",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:3",
+                      "Name": "Compare With Tolerance 4",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU_2)\" = 1 ±  0 - ID:4",
                       "IsPass": false,
                       "PassNextDescription": null,
                       "FailNextDescription": null,
@@ -4970,7 +4970,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 3,
+                      "ID": 4,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -30099,7 +30099,7 @@
                       "Name": "Compare 21",
                       "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:15",
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:16",
+                      "PassNextDescription": "Delay 2 sec - ID:25",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -30111,6 +30111,40 @@
                         "IsSaveToReport": false,
                         "IsSaveToPdfExecTable": false,
                         "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+                      "IsExecuted": false,
+                      "IntervalUnite": 2,
+                      "Interval": 2,
+                      "Diff_Timeout": "00:00:00",
+                      "TsTimeout": "00:00:00",
+                      "TimeoutPercentage": 0,
+                      "UserTitle": "Delay",
+                      "Name": "Delay 25",
+                      "Description": "Delay 2 sec - ID:25",
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:16",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 25,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
                         "IsSaveToCustomerVer": false
                       },
                       "EOLStepSummerysList": {
