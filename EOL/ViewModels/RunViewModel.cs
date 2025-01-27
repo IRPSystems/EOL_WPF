@@ -464,11 +464,11 @@ namespace EOL.ViewModels
 			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 
-            Task.Run(async () =>
-            {
-                await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
-            });
-        }
+			Task.Run(async () =>
+			{
+				await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
+			});
+		}
 
         private void HandleTestData(RunResult singleTestResult)
         {
@@ -882,7 +882,7 @@ namespace EOL.ViewModels
 				{
 					foreach (GeneratedScriptData script in project.TestsList)
 					{
-						if (!(bool)script.IsPass && !OperatorErrorMessage.Contains("Test"))
+						if (!(script.IsPass ?? false) && !OperatorErrorMessage.Contains("Test"))
 							OperatorErrorMessage += "\r\nTest: " + script.Name;
 						failedStep = GetScriptEOLStepSummerys(
 							script,
@@ -986,7 +986,7 @@ namespace EOL.ViewModels
 
 				if (item is ISubScript subScript)
 				{
-					if (!((bool)subScript.Script.IsPass) && !OperatorErrorMessage.Contains("Sub Script"))
+					if (!(subScript.Script.IsPass ?? false) && !OperatorErrorMessage.Contains("Sub Script"))
 						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
 					
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(

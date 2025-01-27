@@ -32,7 +32,7 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": 273.0,
+        "Value": 37.5,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -129,8 +129,8 @@
           "DeviceType": 1,
           "CommunicationTimeout": 0
         },
-        "Value": -1,
-        "ValueDropDwonIndex": 1,
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {

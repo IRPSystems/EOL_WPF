@@ -1258,6 +1258,24 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 25",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 17,
+        "FailNextId": 0,
+        "ID": 16,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 4",
         "Parameter": {
@@ -1553,9 +1571,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Phase U High Side ON",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1571,9 +1589,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1658,9 +1676,9 @@
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate BUS",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 20,
         "FailNextId": -1,
-        "ID": 18,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1713,7 +1731,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK 2)\" ±  2 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1792,9 +1810,9 @@
         },
         "UserTitle": "Validate BUS Calibration",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 21,
         "FailNextId": -1,
-        "ID": 19,
+        "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2099,9 +2117,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Phase U High Side OFF",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 22,
         "FailNextId": 0,
-        "ID": 20,
+        "ID": 21,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2248,9 +2266,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Enable Load Contactor ",
         "IsPass": false,
-        "PassNextId": 22,
+        "PassNextId": 23,
         "FailNextId": 0,
-        "ID": 21,
+        "ID": 22,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2266,9 +2284,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 23,
+        "PassNextId": 24,
         "FailNextId": 0,
-        "ID": 22,
+        "ID": 23,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2335,9 +2353,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set Output Voltage to 300V",
         "IsPass": false,
-        "PassNextId": 24,
+        "PassNextId": 25,
         "FailNextId": 0,
-        "ID": 23,
+        "ID": 24,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2355,7 +2373,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 24,
+        "ID": 25,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

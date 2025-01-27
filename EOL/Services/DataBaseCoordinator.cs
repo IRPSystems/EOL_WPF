@@ -63,7 +63,7 @@ namespace EOL.Services
             AddUnkownData();
 
             if (!ValidateData())
-            {
+            {               
                 DatabaseHandler.LogMessage("Failed to validate data");
                 return;
             }
@@ -176,25 +176,35 @@ namespace EOL.Services
             }
 
             // Validate TestDescriptions
+            var invalidTestDescriptions = new List<TestDescription>();
             foreach (var testDesc in testDescriptionList)
             {
-                if (testDesc == null || string.IsNullOrEmpty(testDesc.TestDescriptionID) || string.IsNullOrEmpty(testDesc.Test) 
+                if (testDesc == null || string.IsNullOrEmpty(testDesc.TestDescriptionID) || string.IsNullOrEmpty(testDesc.Test)
                     || string.IsNullOrEmpty(testDesc.SubScript) || string.IsNullOrEmpty(testDesc.StepName)
                     || string.IsNullOrEmpty(testDesc.ReferenceDevice) || string.IsNullOrEmpty(testDesc.Method))
                 {
                     DatabaseHandler.LogMessage($"Failed to validate data of: {testDesc}");
-                    testDescriptionList.Remove(testDesc);
+                    invalidTestDescriptions.Add(testDesc);
                 }
+            }
+            foreach (var invalidTestDesc in invalidTestDescriptions)
+            {
+                testDescriptionList.Remove(invalidTestDesc);
             }
 
             // Validate TestResults
+            var invalidTestResults = new List<TestersDB_Lib.Models.TestResult>();
             foreach (var testResult in testResultList)
             {
                 if (testResult == null || string.IsNullOrEmpty(testResult.TestDescriptionID) || string.IsNullOrEmpty(testResult.Result))
                 {
                     DatabaseHandler.LogMessage($"Failed to validate data of: {testResult}");
-                    testResultList.Remove(testResult);
+                    invalidTestResults.Add(testResult);
                 }
+            }
+            foreach (var invalidTestResult in invalidTestResults)
+            {
+                testResultList.Remove(invalidTestResult);
             }
 
             return true;
