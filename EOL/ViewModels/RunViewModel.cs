@@ -177,6 +177,7 @@ namespace EOL.ViewModels
 				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null, logLineList);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
+				RunScript.StepEndedEvent += RunScript_StepEndedEvent;
 				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
 
 
@@ -220,6 +221,8 @@ namespace EOL.ViewModels
                 MessageBox.Show(ex.ToString());
             }
 		}
+
+		
 
 		#endregion Constructor
 
@@ -472,6 +475,11 @@ namespace EOL.ViewModels
 
 			RunPercentage = (int)(((double)_stepsCounter / (double)_totalNumOfSteps) * 100);
 			_stepsCounter++;
+		}
+
+		private void RunScript_StepEndedEvent(ScriptStepBase obj)
+		{
+			
 		}
 
 		#endregion Running script events
