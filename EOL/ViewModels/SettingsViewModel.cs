@@ -14,6 +14,9 @@ using FlowDirection = System.Windows.FlowDirection;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using TestersDB_Lib;
 using Microsoft.Data.SqlClient;
+using System.Text;
+
+
 namespace EOL.ViewModels
 {
     public class SettingsViewModel: ObservableObject
@@ -46,11 +49,11 @@ namespace EOL.ViewModels
                 OnPropertyChanged();
             }
         }
-		#endregion Properties
+        #endregion Properties
 
-		#region Fields
-
-		UserDefaultSettings _userDefaultSettings;
+        #region Fields
+        private StringBuilder _terminalStringBuilder;
+        UserDefaultSettings _userDefaultSettings;
         UserConfigManager _userConfigManager;
 
         #endregion Fields
@@ -96,7 +99,9 @@ namespace EOL.ViewModels
             ClearTerminalCommand = new RelayCommand(ClearTerminal);
 
             SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
-		}
+            _terminalStringBuilder = new StringBuilder();
+
+        }
 
         #endregion Constructor
 
@@ -120,12 +125,18 @@ namespace EOL.ViewModels
 
         private void WritetoTerminal(string text)
         {
-            DBconnectionString += text + "\r\n\r\n";
+            _terminalStringBuilder.AppendLine(text);
+            _terminalStringBuilder.AppendLine();
+            DBconnectionString = _terminalStringBuilder.ToString();
+
         }
+
         private void ClearTerminal()
         {
+            _terminalStringBuilder.Clear();
             DBconnectionString = string.Empty;
         }
+
         private void Loaded()
 		{
 			GetDescriptsionColumnWidth();

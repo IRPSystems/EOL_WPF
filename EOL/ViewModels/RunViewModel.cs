@@ -457,18 +457,18 @@ namespace EOL.ViewModels
 
             Stop(stopMode, ref singleTestResult);
 
-            Task.Run(async () =>
-            {
-                await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
-            }).ConfigureAwait(false);
-
             HandleTestData(singleTestResult);
 
-			PostRunActions();
+            PostRunActions();
 
 			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
-		}
+
+            Task.Run(async () =>
+            {
+                await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
+            });
+        }
 
         private void HandleTestData(RunResult singleTestResult)
         {
@@ -968,7 +968,7 @@ namespace EOL.ViewModels
 				if (item is ScriptStepBase stepBase)
 				{
 					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
-
+					
 					stepBase.SubScriptName = script.Name;
 					stepBase.TestName = test.Name;
 

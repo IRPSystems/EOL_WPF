@@ -11,7 +11,7 @@ using TestersDB_Lib.Models;
 using TestResult = TestersDB_Lib.Models.TestResult;
 using ScriptHandler.Models;
 using System.Security.Cryptography;
-
+using System.IO.Hashing;
 
 namespace EOL.Services
 {
@@ -31,12 +31,12 @@ namespace EOL.Services
                 .ForMember(TestDescription => TestDescription.SubScript, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.Step.SubScriptName))
                 .ForMember(TestDescription => TestDescription.StepName, opt => opt.MapFrom(EOLStepSummeryData => string.IsNullOrEmpty(EOLStepSummeryData.Step.UserTitle) ? "None" : EOLStepSummeryData.Step.UserTitle))
                 .ForMember(TestDescription => TestDescription.Units, opt => opt.MapFrom(EOLStepSummeryData => string.IsNullOrEmpty(EOLStepSummeryData.Units) ? "None" : EOLStepSummeryData.Units))
-                .ForMember(TestDescription => TestDescription.Method, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.Method))
+                .ForMember(TestDescription => TestDescription.Method, opt => opt.MapFrom(EOLStepSummeryData => string.IsNullOrEmpty(EOLStepSummeryData.Method) ? "None" : EOLStepSummeryData.Method))
                 .ForMember(TestDescription => TestDescription.CompareFixedValue, opt => opt.MapFrom(EOLStepSummeryData => (EOLStepSummeryData.IsDynParam ?  null : EOLStepSummeryData.ComparisonValue)))
-                .ForMember(TestDescription => TestDescription.Min_Value, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.MinVal))
+                .ForMember(TestDescription => TestDescription.Min_Value,  opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.MinVal))
                 .ForMember(TestDescription => TestDescription.Max_Value, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.MaxVal))
                 .ForMember(TestDescription => TestDescription.Tolerance, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.MeasuredTolerance))
-                .ForMember(TestDescription => TestDescription.ReferenceDevice, opt => opt.MapFrom(EOLStepSummeryData => EOLStepSummeryData.Reference))
+                .ForMember(TestDescription => TestDescription.ReferenceDevice, opt => opt.MapFrom(EOLStepSummeryData => string.IsNullOrEmpty(EOLStepSummeryData.Reference) ?  "None" : EOLStepSummeryData.Reference))
                 .ForMember(TestDescription => TestDescription.TestDescriptionID, opt => opt.MapFrom(EOLStepSummeryData => new CustomValueResolver().Resolve(
                 (EOLStepSummeryData.Step.TestName ?? string.Empty) +
                 (EOLStepSummeryData.Step.SubScriptName ?? string.Empty) +
@@ -70,12 +70,13 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(source))
                 return null;
 
-            // Generate a hash from the input string
-            using (var md5 = MD5.Create())
-            {
-                byte[] hashBytes = md5.ComputeHash(Encoding.UTF8.GetBytes(source));
-                return Convert.ToBase64String(hashBytes); // Return hash as Base64 string
-            }
+            // Generate a hash from the input string using XXHash64
+            byte[] inputBytes = Encoding.UTF8.GetBytes(source);
+            XxHash64 xxHash64 = new XxHash64();
+            xxHash64.Append(inputBytes);
+            byte[] hashBytes = xxHash64.GetCurrentHash();
+
+            return Convert.ToBase64String(hashBytes); // Return hash as Base64 string
         }
     }
 }

@@ -39,6 +39,7 @@
     <PackageReference Include="Serilog" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.RichTextBox.Wpf" Version="1.1.0" />
+    <PackageReference Include="System.IO.Hashing" Version="9.0.1" />
     <PackageReference Include="System.Speech" Version="8.0.0" />
   </ItemGroup>
 

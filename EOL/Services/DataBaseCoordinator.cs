@@ -17,7 +17,6 @@ namespace EOL.Services
     public class DataBaseCoordinator
     {
         private readonly DatabaseHandler DatabaseHandler;
-        public RunResult runresult { get; set; }
 
         private List<TestersDB_Lib.Models.TestResult> testResultList = new List<TestersDB_Lib.Models.TestResult>();
         private List<TestDescription> testDescriptionList = new List<TestDescription>();
@@ -33,11 +32,11 @@ namespace EOL.Services
         {
             _mapper = mapper;
             DatabaseHandler = databaseHandler;
-            runresult = new RunResult();
         }
 
         public async Task SaveRunResultToDatabase(RunResult singleTestResult)
         {
+            RunResult runresult = new RunResult();
             ResetOrmVariables();
             runresult = singleTestResult;
             int index = 0;
@@ -127,6 +126,7 @@ namespace EOL.Services
                 await Task.Run(() => DatabaseHandler.AddOrGetEntity(testResult, existsPredicate,false));
             }
 
+            DatabaseHandler.LogMessage("Finished writing to DB ");
 
 
             //// Save TestRun
@@ -178,10 +178,12 @@ namespace EOL.Services
             // Validate TestDescriptions
             foreach (var testDesc in testDescriptionList)
             {
-                if (testDesc == null || string.IsNullOrEmpty(testDesc.TestDescriptionID) || string.IsNullOrEmpty(testDesc.Test) || string.IsNullOrEmpty(testDesc.SubScript) || string.IsNullOrEmpty(testDesc.StepName))
+                if (testDesc == null || string.IsNullOrEmpty(testDesc.TestDescriptionID) || string.IsNullOrEmpty(testDesc.Test) 
+                    || string.IsNullOrEmpty(testDesc.SubScript) || string.IsNullOrEmpty(testDesc.StepName)
+                    || string.IsNullOrEmpty(testDesc.ReferenceDevice) || string.IsNullOrEmpty(testDesc.Method))
                 {
                     DatabaseHandler.LogMessage($"Failed to validate data of: {testDesc}");
-                    return false;
+                    testDescriptionList.Remove(testDesc);
                 }
             }
 
@@ -191,7 +193,7 @@ namespace EOL.Services
                 if (testResult == null || string.IsNullOrEmpty(testResult.TestDescriptionID) || string.IsNullOrEmpty(testResult.Result))
                 {
                     DatabaseHandler.LogMessage($"Failed to validate data of: {testResult}");
-                    return false;
+                    testResultList.Remove(testResult);
                 }
             }
 
