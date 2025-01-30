@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DeviceCommunicators.Models;
 using EOL.Models;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using ScriptHandler.Models;
@@ -24,6 +25,8 @@ namespace EOL.Services
         private UUT uut = new UUT();
         private TesterConfig testerConfig = new TesterConfig();
         private BOM Bom = new BOM();
+        private List<CommLog> _sendResLogList = new();  
+        private bool isSaveCommLog = false;
 
         public IMapper _mapper { get; set; }
 
@@ -34,7 +37,7 @@ namespace EOL.Services
             DatabaseHandler = databaseHandler;
         }
 
-        public async Task SaveRunResultToDatabase(RunResult singleTestResult)
+        public async Task SaveRunResultToDatabase(RunResult singleTestResult, List<CommSendResLog> sendResLog)
         {
             RunResult runresult = new RunResult();
             ResetOrmVariables();
@@ -59,6 +62,17 @@ namespace EOL.Services
             testRun = _mapper.Map<TestRun>(runresult);
             uut = _mapper.Map<UUT>(runresult);
             testerConfig = _mapper.Map<TesterConfig>(runresult);
+
+            //AddSendRes //TODO: Need to add validation for CommLog in ValidateData()
+            if (sendResLog != null && sendResLog.Any())
+            {
+                _sendResLogList = _mapper.Map<List<CommLog>>(sendResLog);
+                isSaveCommLog = true;
+            }
+            else
+            {
+                isSaveCommLog = false;
+            }
 
             AddUnkownData();
 
@@ -124,6 +138,18 @@ namespace EOL.Services
                 // Check if the TestResult exists based on the TestDescriptionID (or other relevant fields)
                 Expression<Func<TestersDB_Lib.Models.TestResult, bool>> existsPredicate = td => td.TestDescriptionID.Trim().Equals(testResult.TestDescriptionID.Trim(), StringComparison.OrdinalIgnoreCase);
                 await Task.Run(() => DatabaseHandler.AddOrGetEntity(testResult, existsPredicate,false));
+            }
+
+            if(isSaveCommLog)
+            {
+                foreach (TestersDB_Lib.Models.CommLog commLog in _sendResLogList)
+                {
+
+                    commLog.RunID = testRun.ID;
+
+                    await Task.Run(() => DatabaseHandler.AddOrGetEntity(commLog, null, false)); // Assuming Serial_Number is unique for UUT
+
+                }
             }
 
             DatabaseHandler.LogMessage("Finished writing to DB ");

@@ -12,6 +12,7 @@ using TestResult = TestersDB_Lib.Models.TestResult;
 using ScriptHandler.Models;
 using System.Security.Cryptography;
 using System.IO.Hashing;
+using DeviceCommunicators.Models;
 
 namespace EOL.Services
 {
@@ -58,6 +59,17 @@ namespace EOL.Services
 
             CreateMap<RunResult, TesterConfig>()
                 .ForMember(TesterConfig => TesterConfig.Station, opt => opt.MapFrom(RunResult => RunResult.RackNumber));
+
+            CreateMap <CommSendResLog, CommLog>()
+                .ForMember(CommLog => CommLog.CommErrorMsg, opt => opt.MapFrom(CommSendResLog => CommSendResLog.CommErrorMsg))
+                .ForMember(CommLog => CommLog.StepName, opt => opt.MapFrom(CommSendResLog => CommSendResLog.StepName))
+                .ForMember(CommLog => CommLog.ParamName, opt => opt.MapFrom(CommSendResLog => CommSendResLog.ParamName))
+                .ForMember(CommLog => CommLog.Device, opt => opt.MapFrom(CommSendResLog => CommSendResLog.Device))
+                .ForMember(CommLog => CommLog.Tool, opt => opt.MapFrom(CommSendResLog => CommSendResLog.Tool))
+                .ForMember(CommLog => CommLog.SendCommand, opt => opt.MapFrom(CommSendResLog => CommSendResLog.SendCommand))
+                .ForMember(CommLog => CommLog.ReceivedValue, opt => opt.MapFrom(CommSendResLog => CommSendResLog.ReceivedValue))
+                .ForMember(CommLog => CommLog.LogTimeStamp, opt => opt.MapFrom(CommSendResLog => CommSendResLog.timeStamp))
+                .ForMember(CommLog => CommLog.NumberOfTries, opt => opt.MapFrom(CommSendResLog => CommSendResLog.NumberOfTries));
 
 
         }

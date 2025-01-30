@@ -15,6 +15,7 @@ using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using TestersDB_Lib;
 using Microsoft.Data.SqlClient;
 using System.Text;
+using System.IO;
 
 
 namespace EOL.ViewModels
@@ -154,6 +155,12 @@ namespace EOL.ViewModels
                 else if (fileData.Description == "Main Script Path")
                 {
                     fileData.Path = _userDefaultSettings.DefaultMainSeqConfigFile;
+                    //In case its loaded from default settings and file is not there any more
+                    if (!File.Exists(_userDefaultSettings.DefaultMainSeqConfigFile))
+                    {
+                        MessageBox.Show("Main Script Path is not found");
+                        return;
+                    }
                     MainScriptEventChanged?.Invoke();
                 }
                 else if (fileData.Description == "Sub Script Path")

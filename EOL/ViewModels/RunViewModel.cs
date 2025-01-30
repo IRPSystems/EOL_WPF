@@ -111,7 +111,9 @@ namespace EOL.ViewModels
 
         private ScriptStepSetParameter _stepSetParameter;
 
-		private AdminView _adminView;
+		private CommSendResLogCsvWriter _commSendResLogCsvWriter;
+
+        private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
 		private GeneratedProjectData _projectMain;
@@ -122,6 +124,7 @@ namespace EOL.ViewModels
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
 		private DataBaseCoordinator	_dataBaseCoordinator;
+		private List<CommSendResLog> _commSendResLog;
 
 		static IMapper _mapper;
 		#endregion Fields
@@ -157,10 +160,14 @@ namespace EOL.ViewModels
 
 				_currentScriptDeviceList = new List<DeviceTypesEnum>();
 
-				IsRunButtonEnabled = true;
+				_commSendResLogCsvWriter = new();
+
+                IsRunButtonEnabled = true;
                 ContinueVisibility = Visibility.Collapsed;
 
-				RunCommand = new RelayCommand(Run);
+				_commSendResLog = new();
+
+                RunCommand = new RelayCommand(Run);
 				AbortCommand = new RelayCommand(Abort);
 				ContinueCommand = new RelayCommand(Continue);
 				ShowAdminCommand = new RelayCommand(ShowAdmin);
@@ -197,6 +204,7 @@ namespace EOL.ViewModels
 				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null, logLineList);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
+				RunScript.StepEndedEvent += RunScript_StepEndedEvent;
 				//RunScript.AbortScriptPath = @"C:\Users\smadar\Documents\Scripts\Tests\Empty Script.scr";
 
 
@@ -242,6 +250,8 @@ namespace EOL.ViewModels
                 MessageBox.Show(ex.ToString());
             }
 		}
+
+		
 
 		#endregion Constructor
 
@@ -328,7 +338,7 @@ namespace EOL.ViewModels
 			if (string.IsNullOrEmpty(_userDefaultSettings.DefaultMainSeqConfigFile))
 				return;
 
-			_generatedProjectsList.Remove(_projectMain);
+            _generatedProjectsList.Remove(_projectMain);
 
 			GeneratedProjectData project = _openProject.Open(
 				_userDefaultSettings.DefaultMainSeqConfigFile,
@@ -464,9 +474,21 @@ namespace EOL.ViewModels
 			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 
-			Task.Run(async () =>
+            if (RunState != RunStateEnum.Passed)
+            {
+				if(_commSendResLog.Any())
+				{
+                    _commSendResLog = TrimCommLogs(_commSendResLog);
+                }
+            }
+            else
+            {
+                _commSendResLog.Clear();
+            }
+
+            Task.Run(async () =>
 			{
-				await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult);
+				await _dataBaseCoordinator.SaveRunResultToDatabase(singleTestResult, _commSendResLog);
 			});
 		}
 
@@ -501,6 +523,12 @@ namespace EOL.ViewModels
 			_stepsCounter++;
 		}
 
+		private void RunScript_StepEndedEvent(ScriptStepBase obj)
+		{
+            //_commSendResLogCsvWriter.WriteLog(obj.CommSendResLog, _runData.SerialNumber);
+            _commSendResLog.Add(obj.CommSendResLog);
+        }
+
 		#endregion Running script events
 
 		private void Run()
@@ -516,9 +544,10 @@ namespace EOL.ViewModels
 				return;
 			}
 			ErrorMessage = null;
+			_commSendResLog.Clear();
 
-			
-			_runData.StartTime = new DateTime();
+
+            _runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
 
@@ -875,8 +904,7 @@ namespace EOL.ViewModels
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
 
-
-				ScriptStepBase failedStep = null;
+                    ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
 				{
@@ -941,7 +969,31 @@ namespace EOL.ViewModels
 			}
 		}
 
-		private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        private List<CommSendResLog> TrimCommLogs(List<CommSendResLog> allLogs)
+        {
+            // 1) Identify the last 5 distinct step names by scanning from the end (newest).
+            var last5DistinctSteps = new HashSet<string>();
+            for (int i = allLogs.Count - 1; i >= 0; i--)
+            {
+                string stepName = allLogs[i].StepName;
+                if (!last5DistinctSteps.Contains(stepName))
+                {
+                    last5DistinctSteps.Add(stepName);
+                    if (last5DistinctSteps.Count == 5)
+                        break; // Found 5 step names, no need to continue.
+                }
+            }
+
+            // 2) Filter the entire list to keep logs whose StepName is in the last5DistinctSteps
+            var trimmed = allLogs
+                .Where(log => last5DistinctSteps.Contains(log.StepName))
+                .ToList();
+
+            // 3) Return the trimmed logs (still in chronological order).
+            return trimmed;
+        }
+
+        private void _timerDuration_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
 		{
 			TimeSpan ellapsedTime = DateTime.Now - _startTime;
 			_runData.Duration = ellapsedTime;
