@@ -112,6 +112,14 @@
 
                 </mah:DropDownButton>
 
+                <Button Width="100"
+                        Height="25"
+                    Margin="0,2,20,2"
+                    Content="DB Terminal" 
+                    Command="{Binding DBTerminalCommand}" 
+                    Visibility="{Binding SettingsVM.IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"/>
+                
+                
             </StackPanel>
 
             <device_handler_views:CommunicationIndeicatorView DataContext="{Binding DevicesContainter}"

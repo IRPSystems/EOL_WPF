@@ -89,7 +89,7 @@ namespace EOL.ViewModels
             SetupSelectionVM = setupSelectionVM;
             DataBaseHandlerVM = DBhandler;
 
-            DataBaseHandlerVM.DBConnectionLog += WritetoTerminal;
+
             DataBaseHandlerVM.init();
             SettingsData.DataBaseConnection = DataBaseHandlerVM._connectionString;
 
@@ -97,7 +97,7 @@ namespace EOL.ViewModels
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
             ConnectionCommand = new RelayCommand(DBConnect);
-            ClearTerminalCommand = new RelayCommand(ClearTerminal);
+
 
             SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
             _terminalStringBuilder = new StringBuilder();
@@ -124,19 +124,7 @@ namespace EOL.ViewModels
             DataBaseHandlerVM.Connect();
         }
 
-        private void WritetoTerminal(string text)
-        {
-            _terminalStringBuilder.AppendLine(text);
-            _terminalStringBuilder.AppendLine();
-            DBconnectionString = _terminalStringBuilder.ToString();
 
-        }
-
-        private void ClearTerminal()
-        {
-            _terminalStringBuilder.Clear();
-            DBconnectionString = string.Empty;
-        }
 
         private void Loaded()
 		{
@@ -294,7 +282,6 @@ namespace EOL.ViewModels
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand ConnectionCommand { get; private set; }
-        public RelayCommand ClearTerminalCommand { get; private set; }
 
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
 		

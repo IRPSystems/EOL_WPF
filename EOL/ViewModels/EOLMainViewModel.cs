@@ -26,6 +26,8 @@ using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
 using TestersDB_Lib;
+using Newtonsoft.Json.Bson;
+using System.Text;
 
 namespace EOL.ViewModels
 {
@@ -66,9 +68,11 @@ namespace EOL.ViewModels
 
 		private EOLSettings _eolSettings;
 
-		//private UserDefaultSettings _eolSettings.UserDefaultSettings;
+        private StringBuilder _terminalStringBuilder;
 
-		private ReadDevicesFileService _readDevicesFile;
+        //private UserDefaultSettings _eolSettings.UserDefaultSettings;
+
+        private ReadDevicesFileService _readDevicesFile;
 
 		private SetupSelectionViewModel _setupSelectionVM;
 
@@ -80,8 +84,9 @@ namespace EOL.ViewModels
 
 		private CommunicationWindowView _communicationWindowView;
 		private SettingsView _settingsView;
+		private DBTerminalView _dbTerminalView;
 
-		private RichTextBox _richTextBox;
+        private RichTextBox _richTextBox;
 
 		private string AdminPassword = "2512";
 
@@ -89,11 +94,22 @@ namespace EOL.ViewModels
 
 		private bool? _isConfigSelectedByUser;
 
-		#endregion Fields
+        private string _DBconnectionString;
+        public string DBconnectionString
+        {
+            get => _DBconnectionString;
+            set
+            {
+                _DBconnectionString = value;
+                OnPropertyChanged();
+            }
+        }
 
-		#region Constructor
+        #endregion Fields
 
-		public EOLMainViewModel()
+        #region Constructor
+
+        public EOLMainViewModel()
 		{
 			_logLineList = new LogLineListService();
 
@@ -105,7 +121,9 @@ namespace EOL.ViewModels
 
 			_databaseHandlerObj = new DatabaseHandler();
 
-			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+            _databaseHandlerObj.DBConnectionLog += WritetoTerminal;
+
+            _isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
 			LoadConfigToUI();
 
@@ -118,11 +136,15 @@ namespace EOL.ViewModels
 			ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
 			LoadedCommand = new RelayCommand(Loaded);
 			ModesDropDownMenuItemCommand = new RelayCommand<string>(ModesDropDownMenuItem);
+			DBTerminalCommand = new RelayCommand(DBTerminal);
+            ClearTerminalCommand = new RelayCommand(ClearTerminal);
 
-			CommunicationSettingsCommand = new RelayCommand(InitCommunicationSettings);
+            CommunicationSettingsCommand = new RelayCommand(InitCommunicationSettings);
 			SettingsCommand = new RelayCommand(Settings);
 
-			ModeTypeList = new List<ModeType>
+            _terminalStringBuilder = new StringBuilder();
+
+            ModeTypeList = new List<ModeType>
 				{
 					new ModeType() { Name = "Operator" },
 					new ModeType() { Name = "Admin" },
@@ -135,11 +157,24 @@ namespace EOL.ViewModels
 			_runData.PartNumber = _eolSettings.UserDefaultSettings.PartNumber;
         }
 
-        #endregion Constructor
+		#endregion Constructor
 
-        #region Methods
+		#region Methods
+		private void WritetoTerminal(string text)
+		{
+			_terminalStringBuilder.AppendLine(text);
+			_terminalStringBuilder.AppendLine();
+			DBconnectionString = _terminalStringBuilder.ToString();
 
-        private void Closing(CancelEventArgs e)
+		}
+
+		private void ClearTerminal()
+		{
+			_terminalStringBuilder.Clear();
+			DBconnectionString = string.Empty;
+		}
+
+		private void Closing(CancelEventArgs e)
 		{
 			EOLSettings.SaveEOLUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
@@ -517,7 +552,24 @@ namespace EOL.ViewModels
 			_communicationWindowView.Focus();
 		}
 
-		private void Settings()
+		private void DBTerminal()
+        {
+            if (_dbTerminalView == null || _dbTerminalView.IsVisible == false)
+            {
+                _dbTerminalView = new DBTerminalView()
+                {
+                    DataContext = this,
+                    Owner = Application.Current.MainWindow					
+                };
+                _dbTerminalView.Show();
+            }
+            _dbTerminalView.Topmost = true;
+            System.Threading.Thread.Sleep(100);
+            _dbTerminalView.Topmost = false;
+            _dbTerminalView.Focus();
+        }
+
+        private void Settings()
 		{
 			if (_settingsView == null || _settingsView.IsVisible == false)
 			{
@@ -582,8 +634,11 @@ namespace EOL.ViewModels
 
 		public RelayCommand CommunicationSettingsCommand { get; private set; }
 		public RelayCommand SettingsCommand { get; private set; }
+        public RelayCommand DBTerminalCommand { get; private set; }
+		public RelayCommand ClearTerminalCommand { get; private set; }
 
-		public RelayCommand<string> ModesDropDownMenuItemCommand { get; private set; }
+
+        public RelayCommand<string> ModesDropDownMenuItemCommand { get; private set; }
 
 		#endregion Commands
 	}
