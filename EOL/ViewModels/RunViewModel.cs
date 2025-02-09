@@ -478,6 +478,9 @@ namespace EOL.ViewModels
 			}
 
 			RunPercentage = (int)(((double)_stepsCounter / (double)_totalNumOfSteps) * 100);
+			if (RunPercentage > 100)
+				RunPercentage = 100;
+
 			_stepsCounter++;
 		}
 
