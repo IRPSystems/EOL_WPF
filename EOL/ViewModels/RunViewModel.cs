@@ -104,7 +104,9 @@ namespace EOL.ViewModels
 
         private ScriptStepSetParameter _stepSetParameter;
 
-		private AdminView _adminView;
+		private CommSendResLogCsvWriter _commSendResLogCsvWriter;
+
+        private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
 		private GeneratedProjectData _projectMain;
@@ -145,7 +147,9 @@ namespace EOL.ViewModels
 
 				_currentScriptDeviceList = new List<DeviceTypesEnum>();
 
-				IsRunButtonEnabled = true;
+				_commSendResLogCsvWriter = new();
+
+                IsRunButtonEnabled = true;
                 ContinueVisibility = Visibility.Collapsed;
 
 				RunCommand = new RelayCommand(Run);
@@ -474,13 +478,16 @@ namespace EOL.ViewModels
 			}
 
 			RunPercentage = (int)(((double)_stepsCounter / (double)_totalNumOfSteps) * 100);
+			if (RunPercentage > 100)
+				RunPercentage = 100;
+
 			_stepsCounter++;
 		}
 
 		private void RunScript_StepEndedEvent(ScriptStepBase obj)
 		{
-			
-		}
+            _commSendResLogCsvWriter.WriteLog(obj.CommSendResLog, _runData.SerialNumber);
+        }
 
 		#endregion Running script events
 
