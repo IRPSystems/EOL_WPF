@@ -41,7 +41,7 @@ namespace EOL.Services
             if (string.IsNullOrEmpty(_csvFilePath))
                 return;
 
-            if(testResult.StopReason != "PASSED")
+            if(testResult.StopReason != "PASSED" && testResult.StopReason != "Aborted")
                 testResult.StopReason = GetFailedStepDescription(testResult.FailedStep);
 
 			// Use reflection to get properties
