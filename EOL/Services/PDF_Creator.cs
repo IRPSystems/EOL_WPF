@@ -54,7 +54,7 @@ namespace EOL.Services
             #region Get file path
             //TODO
             string function = "EOL";
-            _fileName = function + "_PDF_Report - " + runResult.SerialNumber + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".pdf";
+            _fileName = function + "_PDF_Report - " + runResult.SerialNumber + " " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".pdf";
 
             string reportDir = userDefaultSettings.ReportsSavingPath + _subFolderName;
 
