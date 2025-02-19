@@ -853,12 +853,16 @@ namespace EOL.ViewModels
 				IsRunButtonEnabled = true;
 
 				if (stopeMode == ScriptStopModeEnum.Aborted)
-					RunState = RunStateEnum.Aborted;
-				else
+				{
+                    RunState = RunStateEnum.Aborted;
+                    singleTestResult.StopReason = "Aborted";
+                }
+                else
 					RunState = RunStateEnum.Passed;
 
 				if(ErrorMessage != null)
-					RunState = RunStateEnum.Aborted;
+                    RunState = RunStateEnum.Aborted;
+					
 
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
