@@ -87,7 +87,7 @@ namespace EOL.ViewModels
 
 		private CSVWriter _csvWritter;
 
-		private PDF_Creator _pdfCreator;
+		//private PDF_Creator _pdfCreator;
 
 		private PrintFileHandler _printFileParser;
 
@@ -207,7 +207,7 @@ namespace EOL.ViewModels
 
 				_csvWritter = new CSVWriter();
 
-				_pdfCreator = new PDF_Creator();
+				//_pdfCreator = new PDF_Creator();
 
                 _printFileParser = new PrintFileHandler();
 
@@ -456,6 +456,7 @@ namespace EOL.ViewModels
                 singleTestResult,
                 _generatedProjectsList.ToList());
 
+            PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
         }
 
@@ -874,7 +875,7 @@ namespace EOL.ViewModels
 				{
 					foreach (GeneratedScriptData script in project.TestsList)
 					{
-						if (!(bool)script.IsPass && !OperatorErrorMessage.Contains("Test"))
+						if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
 							OperatorErrorMessage += "\r\nTest: " + script.Name;
 						failedStep = GetScriptEOLStepSummerys(
 							script,
@@ -978,7 +979,7 @@ namespace EOL.ViewModels
 
 				if (item is ISubScript subScript)
 				{
-					if (!((bool)subScript.Script.IsPass) && !OperatorErrorMessage.Contains("Sub Script"))
+					if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
 						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
 					
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
