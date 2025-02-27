@@ -116,6 +116,8 @@ namespace EOL.ViewModels
 
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
+		private List<CommSendResLog> commSendResLogs = new();
+
 		#endregion Fields
 
 		#region Constructor
@@ -458,6 +460,8 @@ namespace EOL.ViewModels
 
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
+            _commSendResLogCsvWriter.WriteLog(commSendResLogs);
+
         }
 
         private void PostRunActions()
@@ -487,12 +491,13 @@ namespace EOL.ViewModels
 
 		private void RunScript_StepEndedEvent(ScriptStepBase obj)
 		{
-            _commSendResLogCsvWriter.WriteLog(obj.CommSendResLog, _runData.SerialNumber);
+			commSendResLogs.Add(obj.CommSendResLog);
         }
 
-		#endregion Running script events
+        #endregion Running script events
 
-		private void Run()
+
+        private void Run()
 		{
 			if(!PreRunValidations())
 			{
@@ -505,9 +510,12 @@ namespace EOL.ViewModels
 				return;
 			}
 			ErrorMessage = null;
+			commSendResLogs.Clear();
 
-			
-			_runData.StartTime = new DateTime();
+            _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
+
+
+            _runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
 
