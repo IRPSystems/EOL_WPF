@@ -17,6 +17,8 @@ namespace EOL.Models
         public string StopReason { get; set; }
         public string StartTimeStamp { get; set; }
         public string EndTimeStamp { get; set; }
+        public string StartTimeStamp8601 { get; set; }
+        public double ExecutionTime { get; set; }
         public string PackageVersion { get; set; }
         public string AppVersion { get; set; }
         public string CustomerVer   { get; set; }

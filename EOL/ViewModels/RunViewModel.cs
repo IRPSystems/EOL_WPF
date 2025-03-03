@@ -28,7 +28,10 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
+using TestersDB_Lib.Models;
+using WatsReportModels;
 using static FlashingToolLib.FlasherService;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
@@ -86,10 +89,11 @@ namespace EOL.ViewModels
 		//private RunResult _singleTestResult;
 
 		private CSVWriter _csvWritter;
+		private RunResultToWatsConverter _runResultToWatsConverter;
 
-		//private PDF_Creator _pdfCreator;
+        //private PDF_Creator _pdfCreator;
 
-		private PrintFileHandler _printFileParser;
+        private PrintFileHandler _printFileParser;
 
 		private GeneratedScriptData _SafetyScript;
 
@@ -203,9 +207,10 @@ namespace EOL.ViewModels
 
 				_flashingHandler = new FlashingHandler(devicesContainer);
 
-                //_singleTestResult = new RunResult();
+				//_singleTestResult = new RunResult();
+                _runResultToWatsConverter = new RunResultToWatsConverter();
 
-				_csvWritter = new CSVWriter();
+                _csvWritter = new CSVWriter();
 
 				//_pdfCreator = new PDF_Creator();
 
@@ -440,9 +445,11 @@ namespace EOL.ViewModels
 				RunPercentage = 100;
             RunResult singleTestResult = new RunResult();
 
-            Stop(stopMode, ref singleTestResult);
+			List<Step> watsSteps = new List<Step>();
 
-            HandleTestData(singleTestResult);
+            Stop(stopMode, ref singleTestResult,ref watsSteps);
+
+            HandleTestData(singleTestResult , watsSteps);
 
 			PostRunActions();
 
@@ -450,7 +457,7 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Aborted;
 		}
 
-        private void HandleTestData(RunResult singleTestResult)
+        private void HandleTestData(RunResult singleTestResult, List<Step> watsSteps)
         {
             _csvWritter.WriteTestResult(
                 singleTestResult,
@@ -458,6 +465,40 @@ namespace EOL.ViewModels
 
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
+
+			Reports reports = new Reports 
+			{
+				Report = new Report
+				{
+					Type = "UUT",
+					Start = singleTestResult.StartTimeStamp8601,
+					Result = singleTestResult.TestStatus,
+					SerialNumber = singleTestResult.SerialNumber,
+					PartNumber = singleTestResult.PartNumber,
+					MachineName = singleTestResult.RackNumber, // Set as needed
+					Location = "Israel",
+                    UUT = new WatsReportModels.UUT
+					{
+						UserLoginName = singleTestResult.OperatorName,
+						ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
+						ErrorMessage = singleTestResult.FailedStep.ErrorMessage, // Set as needed
+					},
+					Process = new Process
+					{
+						Code = "22",
+						Name = "Or - Testing"
+					},
+
+					Steps = watsSteps
+				}
+            };
+
+
+            _runResultToWatsConverter.SaveRunResultToXml(reports);
+
+            //var converter = new RunResultToWatsConverter();
+            //string token = "dGVzdDpNSGc1c3YwbTg1QkpqbTcqQmY4eUZJbHFLMjcxZ1E=";
+            //converter.PostRunResultToServerAsync(reports ,token);
         }
 
         private void PostRunActions()
@@ -524,7 +565,6 @@ namespace EOL.ViewModels
 
 				foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
-									
 					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
                     foreach (GeneratedScriptData script in project.TestsList)
                     {
@@ -843,7 +883,7 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult)
+		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,ref List<Step> watsSteps)
 		{
 			try
 			{
@@ -855,34 +895,64 @@ namespace EOL.ViewModels
 
 				if (stopeMode == ScriptStopModeEnum.Aborted)
 				{
-                    RunState = RunStateEnum.Aborted;
-                    singleTestResult.StopReason = "Aborted";
-                }
-                else
+					RunState = RunStateEnum.Aborted;
+					singleTestResult.StopReason = "Aborted";
+				}
+				else
 					RunState = RunStateEnum.Passed;
 
-				if(ErrorMessage != null)
-                    RunState = RunStateEnum.Aborted;
-					
+				if (ErrorMessage != null)
+					RunState = RunStateEnum.Aborted;
+
 
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
 
+				Step ProjectStep = new Step
+				{
+					Steps = new List<Step>(),
+                    StepType = "SequenceCall",
+					Group = "Main"
+                };
 
-				ScriptStepBase failedStep = null;
+                ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
 				{
-					foreach (GeneratedScriptData script in project.TestsList)
+                    ProjectStep.Name = project.Name;
+					ProjectStep.Sequencecall = new SequenceCall
+                    {
+                        Name = project.Name
+                    }; ;
+
+                    foreach (GeneratedScriptData script in project.TestsList)
 					{
-						if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
+
+                        Step teststep = new Step
+                        {
+                            Group = "Main",
+                            Name = script.Name,
+                            Status = (script.IsPass == true ? "Passed" : script.IsPass == false ? "Failed" : "Skipped"),
+                            Sequencecall = new SequenceCall
+                            {
+                                Name = script.Name
+                            },
+                            Steps = new List<Step>(),
+							StepType = "SequenceCall"
+                        };
+
+
+                        if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
 							OperatorErrorMessage += "\r\nTest: " + script.Name;
 						failedStep = GetScriptEOLStepSummerys(
 							script,
 							script,
-							eolStepSummerysList);
-					}
-				}
+							eolStepSummerysList,
+							ref teststep);
+
+                        ProjectStep.Steps.Add(teststep);
+                    }
+                }
 
 
                 singleTestResult.FailedStep = failedStep;
@@ -921,12 +991,17 @@ namespace EOL.ViewModels
 					_stepSetParameter.Execute();
 				}
 
+				ProjectStep.Status = singleTestResult.TestStatus;
+				watsSteps.Add(ProjectStep);
+
                 singleTestResult.SerialNumber = _runData.SerialNumber;
                 singleTestResult.PartNumber = _runData.PartNumber;
                 singleTestResult.OperatorName = _runData.OperatorName;
                 singleTestResult.Steps = eolStepSummerysList;
                 singleTestResult.StartTimeStamp = _runData.StartTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
                 singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
+				singleTestResult.StartTimeStamp8601 = _runData.StartTime.ToString("O");
+				singleTestResult.ExecutionTime = _runData.Duration.TotalSeconds;
             }
 			catch (Exception ex)
 			{
@@ -953,13 +1028,16 @@ namespace EOL.ViewModels
 		private ScriptStepBase GetScriptEOLStepSummerys(
 			IScript script,
 			IScript test,
-			List<EOLStepSummeryData> eolStepSummerysList)
+			List<EOLStepSummeryData> eolStepSummerysList,
+			ref Step watsStep)
 		{
 			ScriptStepBase failedStep = null;
 			foreach (IScriptItem item in script.ScriptItemsList)
 			{
 				if (item is ScriptStepBase stepBase)
 				{
+                    //_runResultToWatsConverter.StepList.Add(stepBase);
+
 					eolStepSummerysList.AddRange(stepBase.EOLStepSummerysList);
 
 					stepBase.SubScriptName = script.Name;
@@ -974,18 +1052,52 @@ namespace EOL.ViewModels
 						{
 							failedStep = stepBase;
 						}
-					}
-				}
+
+                        Step Step = new Step
+                        {
+                            Group = "Main",
+                            Name = stepBase.UserTitle,
+                            Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
+                            StepType = "Action"
+                        };
+                        watsStep.Steps.Add(Step);
+                    }
+
+                }
 
 				if (item is ISubScript subScript)
 				{
+					Step subsctiptstep = new Step();
+
+                    if (subScript is ScriptStepBase subscript)
+					{
+						subsctiptstep = new Step
+						{
+							Group = "Main",
+							Name = subscript.Name,
+							Status = (subscript.IsPass == true ? "Passed" : subscript.IsPass == false ? "Failed" : "Skipped"),
+							Sequencecall = new SequenceCall
+                            {
+                                Name = subscript.Name
+                            },
+                            Steps = new List<Step>(),
+                            StepType = "SequenceCall"
+                        };
+					}
+
+     //               if (item is ScriptStepBase subscriptstep)
+					//_runResultToWatsConverter.SubScriptList.Add(subscriptstep);
+
 					if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
 						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
 					
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
 						test,
-						eolStepSummerysList);
+						eolStepSummerysList,
+						ref subsctiptstep);
+
+					watsStep.Steps.Add(subsctiptstep);
 
 					if (failedStepTemp != null)
 						failedStep = failedStepTemp;
