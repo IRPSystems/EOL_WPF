@@ -2515,82 +2515,13 @@
                       "Description": "Notification - ID:1",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Start Safty Officer - ID:2",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 1,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": true,
-                        "IsSaveToPdfDynTable": true,
-                        "IsSaveToCustomerVer": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "CommSendResLog": null,
-                      "SubScriptName": null,
-                      "TestName": null,
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
-                      "IsStart": true,
-                      "IsExecuted": false,
-                      "SafetyOfficerErrorLevel": 0,
-                      "UserTitle": null,
-                      "Name": "Set Parameter 4",
-                      "Description": "Start Safty Officer - ID:2",
-                      "OperatorErrorDescription": null,
-                      "IsPass": true,
-                      "PassNextDescription": "Delay 5 sec - ID:3",
-                      "FailNextDescription": null,
-                      "ErrorMessage": "",
-                      "StopScriptStep": null,
-                      "BorderBrush": null,
-                      "StepState": 0,
-                      "ID": 2,
-                      "EOLReportsSelectionData": {
-                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                        "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": true,
-                        "IsSaveToPdfDynTable": true,
-                        "IsSaveToCustomerVer": false
-                      },
-                      "EOLStepSummerysList": {
-                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                        "$values": []
-                      },
-                      "CommSendResLog": null,
-                      "SubScriptName": null,
-                      "TestName": null,
-                      "ProgressPercentage": 0
-                    },
-                    {
-                      "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
-                      "IsExecuted": false,
-                      "IntervalUnite": 2,
-                      "Interval": 5,
-                      "Diff_Timeout": "00:00:00",
-                      "TsTimeout": "00:00:00",
-                      "TimeoutPercentage": 0,
-                      "UserTitle": null,
-                      "Name": "Delay 4",
-                      "Description": "Delay 5 sec - ID:3",
-                      "OperatorErrorDescription": null,
-                      "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 3,
+                      "ID": 1,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -4271,13 +4202,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -9935,13 +9866,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -16701,13 +16632,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -17292,13 +17223,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0xB4A6190000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.3859687Z"
+                          "timeStamp": "2025-03-06T15:28:02.2726942Z"
                         }
                       },
                       "CompareValue": "1.5",
@@ -17584,13 +17515,13 @@
                                   "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                                   "SendCommand": "0x63C5A70000000000",
                                   "ReceivedValue": null,
-                                  "CommErrorMsg": "No Error",
-                                  "NumberOfTries": 1,
+                                  "CommErrorMsg": "CommTimeOut",
+                                  "NumberOfTries": 6,
                                   "ParamName": null,
                                   "Device": null,
                                   "Tool": null,
                                   "StepName": null,
-                                  "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                                  "timeStamp": "2025-03-06T15:28:02.116859Z"
                                 }
                               },
                               "ValueRight": 4.0,
@@ -24484,13 +24415,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -27458,13 +27389,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -35303,13 +35234,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -37234,13 +37165,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -38886,13 +38817,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 1,
@@ -41459,13 +41390,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -41904,13 +41835,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -43808,13 +43739,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -45640,13 +45571,13 @@
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
                           "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": "No Error",
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:24:16.4019967Z"
+                          "timeStamp": "2025-03-06T15:28:02.116859Z"
                         }
                       },
                       "Value": 0,
@@ -48518,55 +48449,6 @@
           ]
         },
         "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\Print Customer Label.tst",
-        "IsPass": null,
-        "ScriptSender": 0,
-        "TotalRunSteps": 0,
-        "PassRunSteps": 0,
-        "FailRunSteps": 0,
-        "ErrorsList": null
-      },
-      {
-        "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
-        "Name": "StartSafetyOfficer",
-        "ScriptItemsList": {
-          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
-          "$values": [
-            {
-              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
-              "IsStart": true,
-              "IsExecuted": false,
-              "SafetyOfficerErrorLevel": 0,
-              "UserTitle": "Saf",
-              "Name": "Set Parameter 1",
-              "Description": "Start Safty Officer - ID:1",
-              "OperatorErrorDescription": null,
-              "IsPass": true,
-              "PassNextDescription": null,
-              "FailNextDescription": null,
-              "ErrorMessage": "",
-              "StopScriptStep": null,
-              "BorderBrush": null,
-              "StepState": 0,
-              "ID": 1,
-              "EOLReportsSelectionData": {
-                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
-                "IsSaveToPdfDynTable": false,
-                "IsSaveToCustomerVer": false
-              },
-              "EOLStepSummerysList": {
-                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                "$values": []
-              },
-              "CommSendResLog": null,
-              "SubScriptName": null,
-              "TestName": null,
-              "ProgressPercentage": 0
-            }
-          ]
-        },
-        "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\StartSafetyOfficer.tst",
         "IsPass": null,
         "ScriptSender": 0,
         "TotalRunSteps": 0,
