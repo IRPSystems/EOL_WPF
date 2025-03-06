@@ -40,6 +40,7 @@
       "..\\Current Calibration.tst",
       "..\\Phase U.scr",
       "..\\Phase W.scr",
+      "..\\Safety Officer.scr",
       "..\\Abort Script 3.scr",
       "..\\BUS.scr",
       "..\\Save New Gains.scr",
@@ -63,7 +64,8 @@
       "..\\Pre Flash Operator Guide.scr",
       "..\\Print Customer Label.tst",
       "..\\Wake Up.scr",
-      "..\\Safety Officer.scr"
+      "..\\Pre Run Instructions.tst",
+      "..\\InterLock Verification.scr"
     ]
   },
   "RecordParametersFile": null,
