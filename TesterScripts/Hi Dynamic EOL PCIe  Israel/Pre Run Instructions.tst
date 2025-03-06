@@ -11,7 +11,7 @@
         "NotificationLevel": 2,
         "UserTitle": "Power Cables User Instrution",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1,
         "EOLReportsSelectionData": {
@@ -29,9 +29,9 @@
         "NotificationLevel": 2,
         "UserTitle": "WatchDog User Instrution",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -47,9 +47,9 @@
         "NotificationLevel": 2,
         "UserTitle": "Ground Cable User Instrution",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -74,7 +74,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

@@ -11,6 +11,7 @@
       "..\\Zero Current Check.scr",
       "..\\HVIL Script.tst",
       "..\\HVIL Switches.scr",
+      "..\\Pre Run Instructions.tst",
       "..\\Power Up.tst",
       "..\\LV Power Up.scr",
       "..\\HV Power Up.scr",
@@ -64,7 +65,7 @@
       "..\\Pre Flash Operator Guide.scr",
       "..\\Print Customer Label.tst",
       "..\\Wake Up.scr",
-      "..\\Pre Run Instructions.tst",
+      "..\\StartSafetyOfficer.tst",
       "..\\InterLock Verification.scr"
     ]
   },

@@ -909,7 +909,7 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Toggle HVIL 1 to OFF",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 13,
         "FailNextId": 0,
         "ID": 12,
         "EOLReportsSelectionData": {
@@ -929,7 +929,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
