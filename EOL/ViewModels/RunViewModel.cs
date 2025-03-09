@@ -440,6 +440,7 @@ namespace EOL.ViewModels
 
 			if (stopMode == ScriptStopModeEnum.Ended)
 				RunPercentage = 100;
+
             RunResult singleTestResult = new RunResult();
 
             Stop(stopMode, ref singleTestResult);
@@ -891,6 +892,11 @@ namespace EOL.ViewModels
 							eolStepSummerysList);
 					}
 				}
+
+				if(_SafetyScript.IsPass == false)
+				{
+					OperatorErrorMessage = "Aborted due to SafetyOfficer failure";
+                }
 
 
                 singleTestResult.FailedStep = failedStep;
