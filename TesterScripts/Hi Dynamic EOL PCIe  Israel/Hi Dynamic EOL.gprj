@@ -2515,7 +2515,7 @@
                       "Description": "Notification - ID:1",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:4",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:2",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -2618,7 +2618,7 @@
                       },
                       "UserTitle": "Get Interlock State",
                       "Name": "Compare With Tolerance 1",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:4",
+                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:2",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -2627,7 +2627,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 4,
+                      "ID": 2,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -4027,6 +4027,39 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "Set Parameter 3",
+              "Description": "Start Safty Officer - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = UUT Configuration - Repeats: 1 - ID:2",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -4148,7 +4181,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -4200,15 +4233,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "ValueRight": 4.0,
@@ -5098,26 +5131,6 @@
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "Disabled",
                               "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Enabled",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Disabled",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Enabled",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Disabled",
-                              "Value": "1"
                             }
                           ]
                         },
@@ -5470,18 +5483,18 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = UUT Configuration - Repeats: 1 - ID:1\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = UUT Configuration - Repeats: 1 - ID:2\"",
               "UserTitle": null,
               "Name": "Sub Script 1",
-              "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:1",
+              "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:2",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Write SN - Repeats: 1 - ID:2",
+              "PassNextDescription": "Sub Script = Write SN - Repeats: 1 - ID:3",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 1,
+              "ID": 2,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -5562,10 +5575,10 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Write SN - Repeats: 1 - ID:2\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Write SN - Repeats: 1 - ID:3\"",
               "UserTitle": null,
               "Name": "ScriptNodeSubScript 2",
-              "Description": "Sub Script = Write SN - Repeats: 1 - ID:2",
+              "Description": "Sub Script = Write SN - Repeats: 1 - ID:3",
               "OperatorErrorDescription": null,
               "IsPass": false,
               "PassNextDescription": null,
@@ -5573,7 +5586,7 @@
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 2,
+              "ID": 3,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -5607,6 +5620,39 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 2",
+              "Description": "Start Safty Officer - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Main CAN - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -5624,626 +5670,6 @@
                         "ATECommand": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vbus",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Meas_5V",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vsw",
-                              "Value": "2"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp1",
-                              "Value": "3"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp2",
-                              "Value": "4"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseU",
-                              "Value": "5"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseV",
-                              "Value": "6"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseW",
-                              "Value": "7"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbA",
-                              "Value": "8"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbB",
-                              "Value": "9"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbI",
-                              "Value": "10"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Bus_Current",
-                              "Value": "11"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CoolingTemp",
-                              "Value": "12"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp1",
-                              "Value": "13"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp2",
-                              "Value": "14"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SerialNumber",
-                              "Value": "15"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_GdGood",
-                              "Value": "16"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentUmV",
-                              "Value": "17"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentWmV",
-                              "Value": "18"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BusCurrentMv",
-                              "Value": "19"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn1",
-                              "Value": "20"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn2",
-                              "Value": "21"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn3",
-                              "Value": "22"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn4",
-                              "Value": "23"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SafeMeasure_IDAC1",
-                              "Value": "24"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_WatchdogCounter",
-                              "Value": "25"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_EolFlagPass",
-                              "Value": "26"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_RunTime",
-                              "Value": "27"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_ActiveDischargeFB",
-                              "Value": "28"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DutyCycleMaxFlag",
-                              "Value": "29"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CanDev1Test",
-                              "Value": "30"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vbus",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Meas_5V",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vsw",
-                              "Value": "2"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp1",
-                              "Value": "3"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp2",
-                              "Value": "4"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseU",
-                              "Value": "5"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseV",
-                              "Value": "6"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseW",
-                              "Value": "7"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbA",
-                              "Value": "8"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbB",
-                              "Value": "9"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbI",
-                              "Value": "10"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Bus_Current",
-                              "Value": "11"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CoolingTemp",
-                              "Value": "12"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp1",
-                              "Value": "13"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp2",
-                              "Value": "14"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SerialNumber",
-                              "Value": "15"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_GdGood",
-                              "Value": "16"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentUmV",
-                              "Value": "17"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentWmV",
-                              "Value": "18"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BusCurrentMv",
-                              "Value": "19"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn1",
-                              "Value": "20"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn2",
-                              "Value": "21"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn3",
-                              "Value": "22"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn4",
-                              "Value": "23"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SafeMeasure_IDAC1",
-                              "Value": "24"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_WatchdogCounter",
-                              "Value": "25"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_EolFlagPass",
-                              "Value": "26"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_RunTime",
-                              "Value": "27"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_ActiveDischargeFB",
-                              "Value": "28"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DutyCycleMaxFlag",
-                              "Value": "29"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CanDev1Test",
-                              "Value": "30"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vbus",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Meas_5V",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vsw",
-                              "Value": "2"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp1",
-                              "Value": "3"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp2",
-                              "Value": "4"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseU",
-                              "Value": "5"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseV",
-                              "Value": "6"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseW",
-                              "Value": "7"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbA",
-                              "Value": "8"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbB",
-                              "Value": "9"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbI",
-                              "Value": "10"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Bus_Current",
-                              "Value": "11"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CoolingTemp",
-                              "Value": "12"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp1",
-                              "Value": "13"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp2",
-                              "Value": "14"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SerialNumber",
-                              "Value": "15"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_GdGood",
-                              "Value": "16"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentUmV",
-                              "Value": "17"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentWmV",
-                              "Value": "18"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BusCurrentMv",
-                              "Value": "19"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn1",
-                              "Value": "20"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn2",
-                              "Value": "21"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn3",
-                              "Value": "22"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn4",
-                              "Value": "23"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SafeMeasure_IDAC1",
-                              "Value": "24"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_WatchdogCounter",
-                              "Value": "25"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_EolFlagPass",
-                              "Value": "26"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_RunTime",
-                              "Value": "27"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_ActiveDischargeFB",
-                              "Value": "28"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DutyCycleMaxFlag",
-                              "Value": "29"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CanDev1Test",
-                              "Value": "30"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vbus",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Meas_5V",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vsw",
-                              "Value": "2"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp1",
-                              "Value": "3"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp2",
-                              "Value": "4"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseU",
-                              "Value": "5"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseV",
-                              "Value": "6"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseW",
-                              "Value": "7"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbA",
-                              "Value": "8"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbB",
-                              "Value": "9"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbI",
-                              "Value": "10"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Bus_Current",
-                              "Value": "11"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CoolingTemp",
-                              "Value": "12"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp1",
-                              "Value": "13"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp2",
-                              "Value": "14"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SerialNumber",
-                              "Value": "15"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_GdGood",
-                              "Value": "16"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentUmV",
-                              "Value": "17"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentWmV",
-                              "Value": "18"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BusCurrentMv",
-                              "Value": "19"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn1",
-                              "Value": "20"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn2",
-                              "Value": "21"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn3",
-                              "Value": "22"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn4",
-                              "Value": "23"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SafeMeasure_IDAC1",
-                              "Value": "24"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_WatchdogCounter",
-                              "Value": "25"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_EolFlagPass",
-                              "Value": "26"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_RunTime",
-                              "Value": "27"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_ActiveDischargeFB",
-                              "Value": "28"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DutyCycleMaxFlag",
-                              "Value": "29"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CanDev1Test",
-                              "Value": "30"
-                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_Vbus",
@@ -7030,6 +6456,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 5",
+              "Description": "Start Safty Officer - ID:5",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = HV (VBUS) - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 5,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -9812,7 +9271,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -9864,15 +9323,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -12350,6 +11809,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 3",
+              "Description": "Start Safty Officer - ID:3",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Cooling Temp Plate Sim - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 3,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -16578,7 +16070,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -16630,15 +16122,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "ValueRight": 4.0,
@@ -17203,7 +16695,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Monitor",
                         "Description": "Runtime",
                         "Default": "0",
@@ -17221,15 +16713,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0xB4A6190000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.2726942Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "CompareValue": "1.5",
@@ -17461,7 +16953,7 @@
                               "ValueLeft": {
                                 "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                                 "ValueChanged": null,
-                                "Value": "NaN",
+                                "Value": "",
                                 "GroupName": "Operation",
                                 "Description": "Motor State",
                                 "Default": "Neutral",
@@ -17513,15 +17005,15 @@
                                 "CommunicationTimeout": 0,
                                 "CommSendResLog": {
                                   "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                                  "SendCommand": "0x63C5A70000000000",
+                                  "SendCommand": null,
                                   "ReceivedValue": null,
-                                  "CommErrorMsg": "CommTimeOut",
-                                  "NumberOfTries": 6,
+                                  "CommErrorMsg": null,
+                                  "NumberOfTries": 1,
                                   "ParamName": null,
                                   "Device": null,
                                   "Tool": null,
                                   "StepName": null,
-                                  "timeStamp": "2025-03-06T15:28:02.116859Z"
+                                  "timeStamp": "0001-01-01T00:00:00"
                                 }
                               },
                               "ValueRight": 4.0,
@@ -18411,26 +17903,6 @@
                                       "$type": "Entities.Models.DropDownParamData, Entities",
                                       "Name": "Disabled",
                                       "Value": "1"
-                                    },
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Enabled",
-                                      "Value": "0"
-                                    },
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Disabled",
-                                      "Value": "1"
-                                    },
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Enabled",
-                                      "Value": "0"
-                                    },
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Disabled",
-                                      "Value": "1"
                                     }
                                   ]
                                 },
@@ -18875,6 +18347,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 3",
+              "Description": "Start Safty Officer - ID:3",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Digital Input - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 3,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -24088,6 +23593,39 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 2",
+              "Description": "Start Safty Officer - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Discharge - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -24361,7 +23899,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -24413,15 +23951,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "ValueRight": 4.0,
@@ -26418,15 +25956,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x2AF49B0000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T13:53:50.7148545Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "UserTitle": "Read Active Discharge Fault (ON)",
@@ -26778,6 +26316,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 5",
+              "Description": "Start Safty Officer - ID:5",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Phase U - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 5,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -27335,7 +26906,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -27387,15 +26958,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -28391,7 +27962,7 @@
                       "GainParam": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 405.0,
+                        "Value": "",
                         "GroupName": "Advanced",
                         "Description": "ADC Count to mA Phase U Current Sensor Factor",
                         "Default": "406",
@@ -28415,15 +27986,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x4EDE570000000000",
-                          "ReceivedValue": "0x4EDE570400000195",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
                           "CommErrorMsg": null,
                           "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T13:51:42.8653225Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "McuParam": {
@@ -35180,7 +34751,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -35232,15 +34803,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "ValueRight": 4.0,
@@ -36413,7 +35984,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": 405.0,
+                        "Value": "",
                         "GroupName": "Advanced",
                         "Description": "ADC Count to mA Phase U Current Sensor Factor",
                         "Default": "406",
@@ -36437,15 +36008,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x4EDE570000000000",
-                          "ReceivedValue": "0x4EDE570400000195",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
                           "CommErrorMsg": null,
                           "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T13:51:42.8653225Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Communicator": {
@@ -36762,6 +36333,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 5",
+              "Description": "Start Safty Officer - ID:5",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Config Manual FOC - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 5,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -37111,7 +36715,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -37163,15 +36767,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -38763,7 +38367,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -38815,15 +38419,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 1,
@@ -41336,7 +40940,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -41388,15 +40992,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -41534,6 +41138,39 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 0,
+              "UserTitle": "Start Safety Officer",
+              "Name": "ScriptNodeSetParameter 7",
+              "Description": "Start Safty Officer - ID:7",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Min. Voltage Operation - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 7,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -41781,7 +41418,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -41833,15 +41470,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -43685,7 +43322,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -43737,15 +43374,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,
@@ -45517,7 +45154,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "NaN",
+                        "Value": "",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -45569,15 +45206,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": "0x63C5A70000000000",
+                          "SendCommand": null,
                           "ReceivedValue": null,
-                          "CommErrorMsg": "CommTimeOut",
-                          "NumberOfTries": 6,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "2025-03-06T15:28:02.116859Z"
+                          "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
                       "Value": 0,

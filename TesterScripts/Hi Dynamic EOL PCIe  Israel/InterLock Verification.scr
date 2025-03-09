@@ -11,7 +11,7 @@
         "NotificationLevel": 2,
         "UserTitle": "InterLock Verification User Note",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1,
         "EOLReportsSelectionData": {
@@ -61,7 +61,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -137,7 +137,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

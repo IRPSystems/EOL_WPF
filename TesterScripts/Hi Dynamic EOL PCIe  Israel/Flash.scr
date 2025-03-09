@@ -60,7 +60,20 @@
           "Units": null,
           "Value": null,
           "DeviceType": 21,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "Value": 1.0,
         "ValueDropDwonIndex": -1,
@@ -121,9 +134,22 @@
             "Units": null,
             "Value": null,
             "DeviceType": 21,
-            "CommunicationTimeout": 0
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
           },
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -241,7 +267,20 @@
           "Name": "SW Version - Major",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "CompareValue": "2",
         "Tolerance": 0.0,
@@ -283,9 +322,22 @@
             "Name": "SW Version - Major",
             "Units": null,
             "DeviceType": 1,
-            "CommunicationTimeout": 0
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
           },
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -300,7 +352,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -351,7 +403,20 @@
           "Name": "SW Version - Middle",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "CompareValue": "5",
         "Tolerance": 0.0,
@@ -393,9 +458,22 @@
             "Name": "SW Version - Middle",
             "Units": null,
             "DeviceType": 1,
-            "CommunicationTimeout": 0
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
           },
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -410,7 +488,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -461,7 +539,20 @@
           "Name": "SW Version - Minor",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "CompareValue": "4",
         "Tolerance": 0.0,
@@ -503,9 +594,22 @@
             "Name": "SW Version - Minor",
             "Units": null,
             "DeviceType": 1,
-            "CommunicationTimeout": 0
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
           },
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -520,7 +624,7 @@
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": null,
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
@@ -601,7 +705,20 @@
           "Units": null,
           "Value": null,
           "DeviceType": 21,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -662,9 +779,22 @@
             "Units": null,
             "Value": null,
             "DeviceType": 21,
-            "CommunicationTimeout": 0
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
           },
-          "NI6002_ExpectedRPM": 0,
+          "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
