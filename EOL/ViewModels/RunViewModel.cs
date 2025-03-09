@@ -895,7 +895,18 @@ namespace EOL.ViewModels
 
 				if(_SafetyScript.IsPass == false)
 				{
-					OperatorErrorMessage = "Aborted due to SafetyOfficer failure";
+					OperatorErrorMessage = "Aborted due to SafetyOfficer failure: ";
+					foreach (IScriptItem step in _SafetyScript.ScriptItemsList)
+					{
+                        if(step is ScriptStepBase baseStep)
+						{
+
+                            if (baseStep.IsPass == false)
+                            {
+                                OperatorErrorMessage += baseStep.ErrorMessage;
+                            }
+                        }
+					}
                 }
 
 
