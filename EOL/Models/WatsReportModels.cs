@@ -151,6 +151,9 @@ namespace WatsReportModels
         [XmlElement("ReportText")]
         public string ReportText { get; set; }
 
+        [XmlElement("StepErrorMessage")]
+        public string StepErrorMessage { get; set; }
+
         [XmlElement("SequenceCall")]
         public SequenceCall Sequencecall { get; set; }
 

@@ -481,7 +481,7 @@ namespace EOL.ViewModels
 					{
 						UserLoginName = singleTestResult.OperatorName,
 						ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
-						ErrorMessage = singleTestResult.FailedStep.ErrorMessage, // Set as needed
+						ErrorMessage = singleTestResult.FailedStep?.ErrorMessage, // Set as needed
 					},
 					Process = new Process
 					{
@@ -911,8 +911,8 @@ namespace EOL.ViewModels
 				Step ProjectStep = new Step
 				{
 					Steps = new List<Step>(),
-                    StepType = "SequenceCall",
-					Group = "Main"
+                    StepType = RunResultToWatsConverter.StepTypes.SequenceCall,
+                    Group = "Main"
                 };
 
                 ScriptStepBase failedStep = null;
@@ -932,13 +932,13 @@ namespace EOL.ViewModels
                         {
                             Group = "Main",
                             Name = script.Name,
-                            Status = (script.IsPass == true ? "Passed" : script.IsPass == false ? "Failed" : "Skipped"),
+                            Status = ((script.IsPass == true && script.IsSelected) ? "Passed" : script.IsSelected == true ? "Failed" : "Skipped"),
                             Sequencecall = new SequenceCall
                             {
                                 Name = script.Name
                             },
                             Steps = new List<Step>(),
-							StepType = "SequenceCall"
+                            StepType = RunResultToWatsConverter.StepTypes.SequenceCall
                         };
 
 
@@ -1053,13 +1053,14 @@ namespace EOL.ViewModels
 							failedStep = stepBase;
 						}
 
-                        Step Step = new Step
-                        {
-                            Group = "Main",
-                            Name = stepBase.UserTitle,
-                            Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
-                            StepType = "Action"
-                        };
+                        //Step Step = new Step
+                        //{
+                        //    Group = "Main",
+                        //    Name = stepBase.UserTitle,
+                        //    Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
+                        //    StepType = "Action"
+                        //};
+                        Step Step = _runResultToWatsConverter.HandleStep(stepBase);
                         watsStep.Steps.Add(Step);
                     }
 
@@ -1077,12 +1078,12 @@ namespace EOL.ViewModels
 							Name = subscript.Name,
 							Status = (subscript.IsPass == true ? "Passed" : subscript.IsPass == false ? "Failed" : "Skipped"),
 							Sequencecall = new SequenceCall
-                            {
-                                Name = subscript.Name
-                            },
-                            Steps = new List<Step>(),
-                            StepType = "SequenceCall"
-                        };
+							{
+								Name = subscript.Name
+							},
+							Steps = new List<Step>(),
+							StepType = RunResultToWatsConverter.StepTypes.SequenceCall
+						};
 					}
 
      //               if (item is ScriptStepBase subscriptstep)
@@ -1106,6 +1107,7 @@ namespace EOL.ViewModels
 
 			return failedStep;
 		}
+
 
         private void ClearEOLStepSummerys(
 			IScript script)
