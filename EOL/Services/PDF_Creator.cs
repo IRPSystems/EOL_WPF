@@ -389,7 +389,7 @@ namespace EOL.Services
         {
 
             // Add the header to each page
-            Paragraph header = new Paragraph(TesterConfig + " Test Report " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            Paragraph header = new Paragraph(TesterConfig + " Test Report");
             header.Alignment = Element.ALIGN_CENTER;
             header.Font.Size = 18;
             document.Add(header);
