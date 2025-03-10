@@ -904,6 +904,7 @@ namespace EOL.ViewModels
                             if (baseStep.IsPass == false)
                             {
                                 OperatorErrorMessage += baseStep.ErrorMessage;
+								break;
                             }
                         }
 					}
