@@ -57,7 +57,13 @@ namespace EOL.ViewModels
 
 		public bool IsAdminMode { get; set; }
 
-		public Visibility ContinueVisibility { get; set; }
+        private bool _writetoWatsEnabled;
+        public bool WritetoWatsEnabled
+        {
+            get => _writetoWatsEnabled;
+            set => SetProperty(ref _writetoWatsEnabled, value);
+        }
+        public Visibility ContinueVisibility { get; set; }
 
 		public string ErrorMessage { get; set; }
         public string OperatorErrorMessage { get; set; }
@@ -493,8 +499,8 @@ namespace EOL.ViewModels
 				}
             };
 
-
-            _runResultToWatsConverter.SaveRunResultToXml(reports);
+			if(WritetoWatsEnabled)
+                _runResultToWatsConverter.SaveRunResultToXml(reports);
 
             //var converter = new RunResultToWatsConverter();
             //string token = "dGVzdDpNSGc1c3YwbTg1QkpqbTcqQmY4eUZJbHFLMjcxZ1E=";

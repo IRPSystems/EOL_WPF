@@ -91,6 +91,8 @@
                 <ColumnDefinition Width="75" />
                 <ColumnDefinition Width="5" />
                 <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="105" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="100" />
             </Grid.ColumnDefinitions>
@@ -114,9 +116,16 @@
             <Button Grid.Column="6" 
                         Content="Admin" 
                         Command="{Binding ShowAdminCommand}" 
-                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}"/>
-
-            <Border Grid.Column="8" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
+                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" Click="Button_Click"/>
+            
+            <CheckBox Grid.Column="8" 
+                Content="Write To Wats" 
+                IsChecked="{Binding WritetoWatsEnabled}" 
+                Margin="0,0,5,0"
+                Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" Click="Button_Click"/>
+            
+            
+            <Border Grid.Column="10" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
                 <Border.Resources>
                     <Style TargetType="Border">
                         <Style.Triggers>
