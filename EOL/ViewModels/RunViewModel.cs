@@ -938,7 +938,7 @@ namespace EOL.ViewModels
                         {
                             Group = "Main",
                             Name = script.Name,
-                            Status = ((script.IsPass == true && script.IsSelected) ? "Passed" : script.IsSelected == true ? "Failed" : "Skipped"),
+                            Status = ((script.IsPass == true && script.isExecuted) ? "Passed" : (script.isExecuted == true) ? "Failed" : "Skipped"),
                             Sequencecall = new SequenceCall
                             {
                                 Name = script.Name
@@ -1082,7 +1082,7 @@ namespace EOL.ViewModels
 						{
 							Group = "Main",
 							Name = subscript.Name,
-							Status = (subscript.IsPass == true ? "Passed" : subscript.IsPass == false ? "Failed" : "Skipped"),
+							Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? "Passed" : (subscript.IsExecuted == true) ? "Failed" : "Skipped"),
 							Sequencecall = new SequenceCall
 							{
 								Name = subscript.Name

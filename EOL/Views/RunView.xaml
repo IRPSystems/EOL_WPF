@@ -116,13 +116,13 @@
             <Button Grid.Column="6" 
                         Content="Admin" 
                         Command="{Binding ShowAdminCommand}" 
-                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" Click="Button_Click"/>
+                        Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" />
             
             <CheckBox Grid.Column="8" 
                 Content="Write To Wats" 
                 IsChecked="{Binding WritetoWatsEnabled}" 
                 Margin="0,0,5,0"
-                Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" Click="Button_Click"/>
+                Visibility="{Binding IsAdminMode, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Collapse}" />
             
             
             <Border Grid.Column="10" BorderBrush="{DynamicResource MahApps.Brushes.Gray1}" BorderThickness="1">
