@@ -920,7 +920,7 @@ namespace EOL.ViewModels
                     StepType = RunResultToWatsConverter.StepTypes.SequenceCall,
                     Group = "Main"
                 };
-
+				
                 ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
@@ -931,32 +931,45 @@ namespace EOL.ViewModels
                         Name = project.Name
                     }; ;
 
-                    foreach (GeneratedScriptData script in project.TestsList)
+					bool isWritingtoWatsReport = true;
+
+					foreach (GeneratedScriptData script in project.TestsList)
 					{
-
-                        Step teststep = new Step
-                        {
-                            Group = "Main",
-                            Name = script.Name,
-                            Status = ((script.IsPass == true && script.isExecuted) ? "Passed" : (script.isExecuted == true) ? "Failed" : "Skipped"),
-                            Sequencecall = new SequenceCall
-                            {
-                                Name = script.Name
-                            },
-                            Steps = new List<Step>(),
-                            StepType = RunResultToWatsConverter.StepTypes.SequenceCall
-                        };
-
+						Step teststep = new Step
+						{
+							Group = "Main",
+							Name = script.Name,
+							Status = ((script.IsPass == true && script.isExecuted) ? "Passed" : (script.isExecuted == true) ? "Failed" : "Skipped"),
+							Sequencecall = new SequenceCall
+							{
+								Name = script.Name
+							},
+							Steps = new List<Step>(),
+							StepType = RunResultToWatsConverter.StepTypes.SequenceCall
+						};
+										
+						double totalExecutionTime;
 
                         if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
 							OperatorErrorMessage += "\r\nTest: " + script.Name;
+
 						failedStep = GetScriptEOLStepSummerys(
 							script,
 							script,
 							eolStepSummerysList,
-							ref teststep);
+                            out totalExecutionTime,
+                            ref teststep
+							);
 
-                        ProjectStep.Steps.Add(teststep);
+						teststep.TotalTime = totalExecutionTime;
+
+                        if (script.IsPass == false )
+                            isWritingtoWatsReport = false;
+
+                        if (isWritingtoWatsReport || (script.isExecuted && !isWritingtoWatsReport))
+							ProjectStep.Steps.Add(teststep);
+
+
                     }
                 }
 
@@ -1035,9 +1048,12 @@ namespace EOL.ViewModels
 			IScript script,
 			IScript test,
 			List<EOLStepSummeryData> eolStepSummerysList,
-			ref Step watsStep)
+            out double totalExecutionTime,
+            ref Step watsStep
+			)
 		{
-			ScriptStepBase failedStep = null;
+            totalExecutionTime = 0;
+            ScriptStepBase failedStep = null;
 			foreach (IScriptItem item in script.ScriptItemsList)
 			{
 				if (item is ScriptStepBase stepBase)
@@ -1058,16 +1074,17 @@ namespace EOL.ViewModels
 						{
 							failedStep = stepBase;
 						}
-
-                        //Step Step = new Step
-                        //{
-                        //    Group = "Main",
-                        //    Name = stepBase.UserTitle,
-                        //    Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
-                        //    StepType = "Action"
-                        //};
+						//Step Step = new Step
+						//{
+						//    Group = "Main",
+						//    Name = stepBase.UserTitle,
+						//    Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
+						//    StepType = "Action"
+						//};
                         Step Step = _runResultToWatsConverter.HandleStep(stepBase);
-                        watsStep.Steps.Add(Step);
+						totalExecutionTime += Step.TotalTime;
+						watsStep.Steps.Add(Step);
+						
                     }
 
                 }
@@ -1077,34 +1094,40 @@ namespace EOL.ViewModels
 					Step subsctiptstep = new Step();
 
                     if (subScript is ScriptStepBase subscript)
-					{
-						subsctiptstep = new Step
-						{
-							Group = "Main",
-							Name = subscript.Name,
-							Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? "Passed" : (subscript.IsExecuted == true) ? "Failed" : "Skipped"),
-							Sequencecall = new SequenceCall
-							{
-								Name = subscript.Name
-							},
-							Steps = new List<Step>(),
-							StepType = RunResultToWatsConverter.StepTypes.SequenceCall
-						};
-					}
+                    {
+                        subsctiptstep = new Step
+                        {
+                            Group = "Main",
+                            Name = subscript.Name,
+                            Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? "Passed" : (subscript.IsExecuted == true) ? "Failed" : "Skipped"),
+                            Sequencecall = new SequenceCall
+                            {
+                                Name = subscript.Name
+                            },
+                            Steps = new List<Step>(),
+                            StepType = RunResultToWatsConverter.StepTypes.SequenceCall
+                        };
+                    }
 
-     //               if (item is ScriptStepBase subscriptstep)
-					//_runResultToWatsConverter.SubScriptList.Add(subscriptstep);
+					double cumulatedExecutionTime;
+                    //               if (item is ScriptStepBase subscriptstep)
+                    //_runResultToWatsConverter.SubScriptList.Add(subscriptstep);
 
-					if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
+                    if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
 						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
 					
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
 						test,
 						eolStepSummerysList,
+						out cumulatedExecutionTime,
 						ref subsctiptstep);
 
-					watsStep.Steps.Add(subsctiptstep);
+					subsctiptstep.TotalTime = cumulatedExecutionTime;
+
+					totalExecutionTime += subsctiptstep.TotalTime;
+
+                    watsStep.Steps.Add(subsctiptstep);
 
 					if (failedStepTemp != null)
 						failedStep = failedStepTemp;
