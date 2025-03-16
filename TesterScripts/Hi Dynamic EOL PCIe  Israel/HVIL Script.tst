@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "HVIL Switches",
-        "UserTitle": null,
+        "UserTitle": "HVIL Switches",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
@@ -25,7 +25,8 @@
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
         }
       }
     ]

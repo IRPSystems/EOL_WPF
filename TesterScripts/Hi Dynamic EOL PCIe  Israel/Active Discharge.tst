@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "Discharge",
-        "UserTitle": null,
+        "UserTitle": "Discharge",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

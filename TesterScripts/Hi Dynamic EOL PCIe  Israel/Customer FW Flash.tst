@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "Flash",
-        "UserTitle": null,
+        "UserTitle": "Flash",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

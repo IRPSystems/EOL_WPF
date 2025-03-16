@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "Watch Dog Test",
-        "UserTitle": null,
+        "UserTitle": "Watch Dog Test",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "Shut Down",
-        "UserTitle": null,
+        "UserTitle": "Shut Down",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

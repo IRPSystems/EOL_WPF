@@ -24,7 +24,20 @@
           "Name": "MCU Temperature",
           "Units": "°C",
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "ValueRight": 75.0,
         "ValueDropDwonIndex": -1,
@@ -252,7 +265,20 @@
           "Name": "Faults Vector 0",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "ValueRight": 0.0,
         "ValueDropDwonIndex": -1,
@@ -480,7 +506,20 @@
           "Name": "Faults Vector 1",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "ValueRight": 0.0,
         "ValueDropDwonIndex": -1,
@@ -548,7 +587,20 @@
           "Name": "Faults Vector 3",
           "Units": null,
           "DeviceType": 1,
-          "CommunicationTimeout": 0
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
         },
         "ValueRight": 0.0,
         "ValueDropDwonIndex": -1,

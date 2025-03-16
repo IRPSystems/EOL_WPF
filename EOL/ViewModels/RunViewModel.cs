@@ -1098,11 +1098,11 @@ namespace EOL.ViewModels
                         subsctiptstep = new Step
                         {
                             Group = "Main",
-                            Name = subscript.Name,
+                            Name = subscript.UserTitle,
                             Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? "Passed" : (subscript.IsExecuted == true) ? "Failed" : "Skipped"),
                             Sequencecall = new SequenceCall
                             {
-                                Name = subscript.Name
+                                Name = subscript.UserTitle
                             },
                             Steps = new List<Step>(),
                             StepType = RunResultToWatsConverter.StepTypes.SequenceCall

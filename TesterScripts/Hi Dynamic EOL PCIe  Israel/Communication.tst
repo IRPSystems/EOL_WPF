@@ -16,7 +16,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "Main CAN",
-        "UserTitle": null,
+        "UserTitle": "Main Can",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
