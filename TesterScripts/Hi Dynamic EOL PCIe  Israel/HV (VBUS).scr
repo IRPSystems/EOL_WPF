@@ -602,7 +602,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare UUT Vbus to PS Voltage",
+        "UserTitle": "Compare UUT Vbus to PS Voltage (200V)",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -1213,7 +1213,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare UUT Vbus to PS Voltage",
+        "UserTitle": "Compare UUT Vbus to PS Voltage (250V)",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -1824,7 +1824,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare UUT Vbus to PS Voltage",
+        "UserTitle": "Compare UUT Vbus to PS Voltage (300V)",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -2435,7 +2435,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare UUT Vbus to PS Voltage",
+        "UserTitle": "Compare UUT Vbus to PS Voltage (350V)",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -2479,7 +2479,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 350.0,
+        "Value": 400.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -3046,7 +3046,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare UUT Vbus to PS Voltage",
+        "UserTitle": "Compare UUT Vbus to PS Voltage (400V)",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,

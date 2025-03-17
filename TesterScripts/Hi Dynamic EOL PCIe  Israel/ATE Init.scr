@@ -1,6 +1,6 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "ATE",
+  "Name": "ATE Init",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
@@ -300,7 +300,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Analog 0 (DAQ 1) to 0915V",
+        "UserTitle": "Set Analog 0 (DAQ 1) to 0915V (Init Cooling Plate Temp)",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -403,7 +403,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set Analog 1 (DAQ 1) to 2.296V ",
+        "UserTitle": "Set Analog 1 (DAQ 1) to 2.296V (Init Motor Temp)",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,

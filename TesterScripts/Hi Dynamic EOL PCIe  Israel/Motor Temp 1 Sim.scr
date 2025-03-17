@@ -435,7 +435,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Motor Temp 1 - 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -996,7 +996,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Motor Temp 1 - 20",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -1557,7 +1557,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Motor Temp 1 - 50",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -2118,7 +2118,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Motor Temp 1 - 80",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -2679,7 +2679,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Reading ",
+        "UserTitle": "Read Motor Temp 1 - 120",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,

@@ -497,7 +497,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": -1
         },
-        "UserTitle": "Compare 5V MCU vs ATE",
+        "UserTitle": "Compare 5V MCU vs ATE (No Load)",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -1486,7 +1486,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Compare 5V MCU vs ATE",
+        "UserTitle": "Compare 5V MCU vs ATE (Load)",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,

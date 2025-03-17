@@ -1039,7 +1039,7 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              50000.0
+              5000.0
             ]
           },
           "Format": null,
@@ -1083,7 +1083,7 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 0.0,
-                50000.0
+                5000.0
               ]
             },
             "Format": null,
