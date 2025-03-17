@@ -28,7 +28,11 @@ namespace EOL.Services
         public GeneratedProjectData ProjectData;
 
         private string Location = String.Empty;
-        
+
+        private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
+        private const string errorLogPath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
+        private const string ReportName = "ReportWats.xml";
+
         public RunResultToWatsConverter()
         {
             //Location = GetLocalIPAddress();
@@ -37,23 +41,17 @@ namespace EOL.Services
 
         private void LogException(Exception ex, string methodName)
         {
-            string logFilePath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
             string logMessage = $"{DateTime.Now}: Exception in {methodName} - {ex.Message}\n";
 
-            Directory.CreateDirectory(Path.GetDirectoryName(logFilePath));
-            File.AppendAllText(logFilePath, logMessage);
+            Directory.CreateDirectory(Path.GetDirectoryName(errorLogPath));
+            File.AppendAllText(errorLogPath, logMessage);
         }
 
         public void SaveRunResultToXml(Reports reports)
         {
-          //string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-          string filePath = Path.Combine("C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat", "ReportWats.xml");
-          //string filePath = Path.Combine("C:\\ProgramData\\Virinco\\WATS", "ReportWats.xml");
-
-            //string filePath = Path.Combine(desktopPath, "ReportWats.xml");
+            string filePath = Path.Combine(WatsReportPath, ReportName);
 
             XmlSerializer serializer = new XmlSerializer(typeof(Reports));
-            //namespaces.Add(string.Empty, "http://wats.virinco.com/schemas/WATS/Report/wsxf");
 
             using (StreamWriter writer = new StreamWriter(filePath))
             {
@@ -73,8 +71,8 @@ namespace EOL.Services
                 //    return HandleScriptStepEOLFlash(flash);
                 //case ScriptStepEOLPrint print:
                 //    return HandleScriptStepEOLPrint(print);
-                //case ScriptStepEOLSendSN sendSN:
-                //    return HandleScriptStepEOLSendSN(sendSN);
+                case ScriptStepEOLSendSN sendSN:
+                    return HandleScriptStepEOLSendSN(sendSN);
                 //case ScriptStepSetParameter setParameter:
                 //    return HandleScriptStepSetParameter(setParameter);
                 case ScriptStepCompareBit comparebit:
@@ -310,32 +308,45 @@ namespace EOL.Services
         //    }
         //}
 
-        //private Step HandleScriptStepEOLSendSN(ScriptStepEOLSendSN sendSN)
-        //{
-        //    try
-        //    {
-        //        string ispassstring = ReturnStatus(sendSN.IsPass, sendSN.IsExecuted);
+        private Step HandleScriptStepEOLSendSN(ScriptStepEOLSendSN sendSN)
+        {
+            try
+            {
+                string ispassstring = ReturnStatus(sendSN.IsPass, sendSN.IsExecuted);
 
-        //        Step step = new Step
-        //        {
-        //            Group = "Main",
-        //            Name = sendSN.UserTitle ?? string.Empty,
-        //            Status = ispassstring,
-        //            TotalTime = sendSN.ExecutionTime.TotalSeconds,
-        //            StepType = StepTypes.Action,
-        //        };
+                Step step = new Step
+                {
+                    Group = "Main",
+                    Name = sendSN.UserTitle ?? string.Empty,
+                    Status = ispassstring,
+                    TotalTime = sendSN.ExecutionTime.TotalSeconds,
+                    StepType = StepTypes.Action,
+                    PassFails = new List<PassFail>()
+                };
 
-        //        if (!sendSN.IsPass && sendSN.IsExecuted)
-        //            step.StepErrorMessage = sendSN.ErrorMessage;
+                if (sendSN.IsExecuted)
+                {
+                    step.StepType = StepTypes.ET_PFT;
+                    PassFail passFail = new PassFail
+                    {
+                        Name = sendSN.SerialNumber,
+                        Status = ispassstring
+                    };
+                    step.PassFails.Add(passFail);
+                }
 
-        //        return step;
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        LogException(ex, nameof(HandleScriptStepEOLSendSN));
-        //        throw;
-        //    }
-        //}
+                if (!sendSN.IsPass && sendSN.IsExecuted)
+                    step.StepErrorMessage = sendSN.ErrorMessage;
+
+                return step;
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, nameof(HandleScriptStepEOLSendSN));
+                throw;
+            }
+           
+        }
 
         private Step HandleScriptStepEOLPrint(ScriptStepEOLPrint print)
         {
@@ -374,6 +385,7 @@ namespace EOL.Services
                     ComparationTypesEnum.Tolerance => CompOperator.GELE,
                     _ => throw new ArgumentOutOfRangeException()
                 };
+
                 if (compare.IsExecuted)
                 {
                     if (compare.ValueRight is string fixedvalue)
@@ -432,6 +444,7 @@ namespace EOL.Services
 
         private Step HandleScriptStepCompareWithTolerance(ScriptStepCompareWithTolerance compareWithTolerance)
         {
+
             try
             {
                 string ispassstring = ReturnStatus(compareWithTolerance.IsPass, compareWithTolerance.IsExecuted);
@@ -448,13 +461,17 @@ namespace EOL.Services
 
                 if (compareWithTolerance.IsExecuted)
                 {
+
                     if (compareWithTolerance.CompareValue is string fixedvalue)
                     {
+                        double lowerToleranceValue = CalculateToleranceValue(Convert.ToDouble(fixedvalue), compareWithTolerance);
+                        double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(fixedvalue), compareWithTolerance);
+
                         step.StepType = StepTypes.ET_NLT;
                         NumericLimit numericlimit = CreateNumericLimit(
                             compareWithTolerance.Parameter.Name,
-                            Convert.ToDouble(fixedvalue) - compareWithTolerance.Tolerance,
-                            Convert.ToDouble(fixedvalue) + compareWithTolerance.Tolerance,
+                            lowerToleranceValue,
+                            upperToleranceValue,
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
@@ -464,11 +481,15 @@ namespace EOL.Services
                     }
                     else if (compareWithTolerance.CompareValue is DeviceParameterData param)
                     {
+
+                        double lowerToleranceValue = CalculateToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
+                        double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
+
                         step.StepType = StepTypes.ET_MNLT;
                         NumericLimit numericlimitparam = CreateNumericLimit(
                             compareWithTolerance.Parameter.Name,
-                            Convert.ToDouble(param.Value) - compareWithTolerance.Tolerance,
-                            Convert.ToDouble(param.Value) + compareWithTolerance.Tolerance,
+                            lowerToleranceValue,
+                            upperToleranceValue,
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
@@ -520,7 +541,31 @@ namespace EOL.Services
             return ((ispass == true && isexecuted == true) ? "Passed" : (isexecuted == true) ? "Failed" : "Skipped");
         }
 
+        private double CalculateToleranceValue(double fixedValue, ScriptStepCompareWithTolerance compareWithTolerance)
+        {
+            double value = Convert.ToDouble(fixedValue);
+            if (compareWithTolerance.IsUseParamFactor)
+            {
+                value *= compareWithTolerance.ParamFactor;
+            }
 
+            return compareWithTolerance.IsPercentageTolerance
+                ? value - (compareWithTolerance.Tolerance * value)
+                : value - compareWithTolerance.Tolerance;
+        }
+
+        private double CalculateUpperToleranceValue(double fixedValue, ScriptStepCompareWithTolerance compareWithTolerance)
+        {
+            double value = Convert.ToDouble(fixedValue);
+            if (compareWithTolerance.IsUseParamFactor)
+            {
+                value *= compareWithTolerance.ParamFactor;
+            }
+
+            return compareWithTolerance.IsPercentageTolerance
+                ? value + (compareWithTolerance.Tolerance * value)
+                : value + compareWithTolerance.Tolerance;
+        }
         public static class StepTypes
         {
             public const string SequenceCall = "SequenceCall";
