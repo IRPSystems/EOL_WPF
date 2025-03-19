@@ -388,15 +388,29 @@ namespace EOL.Services
 
                 if (compare.IsExecuted)
                 {
-                    if (compare.ValueRight is string fixedvalue)
+                    if (compare.ValueRight is string stringValue)
                     {
 
                         step.StepType = StepTypes.ET_NLT;
                         NumericLimit numericlimit = CreateNumericLimit(
                             compare.Parameter.Name,
-                            Convert.ToDouble(fixedvalue),
-                            Convert.ToDouble(fixedvalue),
-                            Convert.ToDouble(compare.Parameter.Value),
+                            Convert.ToDouble(stringValue),
+                            Convert.ToDouble(stringValue),
+                            Convert.ToDouble(compare.ValueLeft),
+                            compare.Parameter.Units,
+                            compOperator,
+                            ispassstring
+                        );
+                        step.NumericLimits.Add(numericlimit);
+                    }
+                    else if (compare.ValueRight is double Value)
+                    {
+                        step.StepType = StepTypes.ET_NLT;
+                        NumericLimit numericlimit = CreateNumericLimit(
+                            compare.Parameter.Name,
+                            Convert.ToDouble(Value),
+                            Convert.ToDouble(Value),
+                            Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
                             ispassstring
@@ -410,7 +424,7 @@ namespace EOL.Services
                             compare.Parameter.Name,
                             Convert.ToDouble(param.Value),
                             Convert.ToDouble(param.Value),
-                            Convert.ToDouble(compare.Parameter.Value),
+                            Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
                             ispassstring
@@ -426,8 +440,8 @@ namespace EOL.Services
                             ispassstring
                         );
                         step.NumericLimits.Add(numericlimitcompared);
-
                     }
+
                 }
 
                 if (!compare.IsPass && compare.IsExecuted)
@@ -527,13 +541,14 @@ namespace EOL.Services
             return new NumericLimit
             {
                 Name = name,
-                LowLimit = lowLimit,
-                HighLimit = highLimit,
-                NumericValue = numericValue,
+                LowLimit = Math.Round(lowLimit, 3),
+                HighLimit = Math.Round(highLimit, 3),
+                NumericValue = Math.Round(numericValue, 3),
                 Units = units,
                 CompOperator = compOperator,
                 Status = status
             };
+
         }
 
         private string ReturnStatus(bool ispass , bool isexecuted)
