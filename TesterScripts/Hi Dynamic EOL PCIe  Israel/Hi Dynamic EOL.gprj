@@ -2303,10 +2303,10 @@
                     {
                       "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
                       "IsExecuted": false,
-                      "Notification": "Connect the cables, tight them up!\r\nToggle the WatchDog switches on!\r\n\r\nDont press continue before you close the lid!!! <3",
+                      "Notification": "Connect phase's & power cables\r\n",
                       "NotificationLevel": 2,
-                      "UserTitle": "Close The Cover",
-                      "Name": "ScriptNodeNotification 13",
+                      "UserTitle": "Cables",
+                      "Name": "ScriptNodeNotification 17",
                       "Description": "Notification - ID:13",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
@@ -2354,7 +2354,7 @@
               "IsStopOnPass": false,
               "IsInfinity": false,
               "ErrorMessage": "Failed to run the sub script \"Sub Script = HVIL Switches - Repeats: 1 - ID:1\"",
-              "UserTitle": "HVIL Switches",
+              "UserTitle": null,
               "Name": "Sub Script 1",
               "Description": "Sub Script = HVIL Switches - Repeats: 1 - ID:1",
               "OperatorErrorDescription": null,
@@ -2384,6 +2384,317 @@
           ]
         },
         "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\HVIL Script.tst",
+        "IsPass": null,
+        "ScriptSender": 0,
+        "TotalRunSteps": 0,
+        "PassRunSteps": 0,
+        "FailRunSteps": 0,
+        "ErrorsList": null
+      },
+      {
+        "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+        "Name": "Pre Run Instructions",
+        "ScriptItemsList": {
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+          "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
+              "IsExecuted": false,
+              "Notification": "Connect phase's & power cables\r\n",
+              "NotificationLevel": 2,
+              "UserTitle": "Power Cables User Instrution",
+              "Name": "ScriptNodeNotification 4",
+              "Description": "Notification - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": "Notification - ID:2",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": false,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
+              "IsExecuted": false,
+              "Notification": "Toggle the WatchDog switches on!",
+              "NotificationLevel": 2,
+              "UserTitle": "WatchDog User Instrution",
+              "Name": "ScriptNodeNotification 5",
+              "Description": "Notification - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": "Notification - ID:3",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": false,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
+              "IsExecuted": false,
+              "Notification": "Connect Ground Cable",
+              "NotificationLevel": 2,
+              "UserTitle": "Ground Cable User Instrution",
+              "Name": "ScriptNodeNotification 3",
+              "Description": "Notification - ID:3",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": "Sub Script = InterLock Verification - Repeats: 3 - ID:4",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 3,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": false,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
+              "IsExecuted": false,
+              "Script": {
+                "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+                "Name": "InterLock Verification",
+                "ScriptItemsList": {
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
+                      "IsExecuted": false,
+                      "Notification": "Close The Cover!",
+                      "NotificationLevel": 2,
+                      "UserTitle": "InterLock Verification User Note",
+                      "Name": "Notification 2",
+                      "Description": "Notification - ID:1",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:2",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 1,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompareWithTolerance, ScriptHandler",
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+                        "ExpectedRPM": 0,
+                        "Io_port": 0,
+                        "Status_paramter": "Rw",
+                        "command_to_device": "digital input",
+                        "portLine": 0,
+                        "shunt_resistor": 0.0,
+                        "numofcounts": 0,
+                        "DropDown": null,
+                        "ThermistorType": 0,
+                        "ThermistorTypeList": null,
+                        "IsThermistorUsed": false,
+                        "Name": "Digital Input",
+                        "Units": null,
+                        "Value": null,
+                        "DeviceType": 9,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "CompareValue": "0",
+                      "Tolerance": 0.0,
+                      "Comparation": 0,
+                      "IsValueTolerance": true,
+                      "IsPercentageTolerance": false,
+                      "IsUseParamAverage": false,
+                      "AverageOfNRead_Param": 0,
+                      "IsUseParamFactor": false,
+                      "ParamFactor": 0.0,
+                      "IsUseCompareValueAverage": false,
+                      "AverageOfNRead_CompareValue": 0,
+                      "IsUseCompareValueFactor": false,
+                      "CompareValueFactor": 0.0,
+                      "Parameter_ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 31,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "CompareValue_ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "UserTitle": "Get Interlock State",
+                      "Name": "Compare With Tolerance 1",
+                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:2",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 2,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    }
+                  ]
+                },
+                "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\Pre Run Instructions.tst",
+                "IsPass": null,
+                "ScriptSender": 0,
+                "TotalRunSteps": 0,
+                "PassRunSteps": 0,
+                "FailRunSteps": 0,
+                "ErrorsList": null
+              },
+              "ScriptPath": null,
+              "SelectedScriptName": null,
+              "ContinueUntilType": 0,
+              "Repeats": 3,
+              "Timeout": 0,
+              "TimeoutUnite": 0,
+              "TimeoutSpan": "00:00:00",
+              "IsStopOnFail": false,
+              "IsStopOnPass": true,
+              "IsInfinity": false,
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = InterLock Verification - Repeats: 3 - ID:4\"",
+              "UserTitle": "InterLock Verification",
+              "Name": "Sub Script 2",
+              "Description": "Sub Script = InterLock Verification - Repeats: 3 - ID:4",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": null,
+              "FailNextDescription": null,
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 4,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            }
+          ]
+        },
+        "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\Pre Run Instructions.tst",
         "IsPass": null,
         "ScriptSender": 0,
         "TotalRunSteps": 0,
@@ -4768,6 +5079,26 @@
                         "DropDown": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "Enabled",
@@ -15492,7 +15823,7 @@
                       "Description": "Delay 2 sec - ID:6",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get\" = 1.5 ±  1.5 - ID:7",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = 1.5 ±  1.5 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -15524,161 +15855,6 @@
                         "ATECommand": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vbus",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Meas_5V",
-                              "Value": "1"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Vsw",
-                              "Value": "2"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp1",
-                              "Value": "3"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BoardTemp2",
-                              "Value": "4"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseU",
-                              "Value": "5"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseV",
-                              "Value": "6"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_PhaseW",
-                              "Value": "7"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbA",
-                              "Value": "8"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbB",
-                              "Value": "9"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_AqbI",
-                              "Value": "10"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_Bus_Current",
-                              "Value": "11"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CoolingTemp",
-                              "Value": "12"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp1",
-                              "Value": "13"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_MotorTemp2",
-                              "Value": "14"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SerialNumber",
-                              "Value": "15"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_GdGood",
-                              "Value": "16"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentUmV",
-                              "Value": "17"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CurrentWmV",
-                              "Value": "18"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_BusCurrentMv",
-                              "Value": "19"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn1",
-                              "Value": "20"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn2",
-                              "Value": "21"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn3",
-                              "Value": "22"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DigIn4",
-                              "Value": "23"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_SafeMeasure_IDAC1",
-                              "Value": "24"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_WatchdogCounter",
-                              "Value": "25"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_EolFlagPass",
-                              "Value": "26"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_RunTime",
-                              "Value": "27"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_ActiveDischargeFB",
-                              "Value": "28"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_DutyCycleMaxFlag",
-                              "Value": "29"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "ATE_GET_CanDev1Test",
-                              "Value": "30"
-                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_Vbus",
@@ -15910,7 +16086,7 @@
                       },
                       "UserTitle": "Read Run Time",
                       "Name": "ScriptNodeCompareWithTolerance 11",
-                      "Description": "Compare with tolerance:  \"ATE Get\" = 1.5 ±  1.5 - ID:7",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU)\" = 1.5 ±  1.5 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Delay 5 sec - ID:8",
@@ -17025,6 +17201,26 @@
                                 "DropDown": {
                                   "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                                   "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
+                                    },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
                                       "Name": "Enabled",
@@ -35074,7 +35270,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -35082,12 +35278,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain U",
                       "Name": "Save Parameter 1",
@@ -35171,7 +35367,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -35179,12 +35375,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain V",
                       "Name": "Save Parameter 2",
@@ -35268,7 +35464,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -35276,12 +35472,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "Name": "Save Parameter 3",

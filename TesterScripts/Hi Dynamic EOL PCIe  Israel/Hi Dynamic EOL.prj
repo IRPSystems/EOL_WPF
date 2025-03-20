@@ -11,6 +11,8 @@
       "..\\Zero Current Check.scr",
       "..\\HVIL Script.tst",
       "..\\HVIL Switches.scr",
+      "..\\Pre Run Instructions.tst",
+      "..\\InterLock Verification.scr",
       "..\\Power Up.tst",
       "..\\LV Power Up.scr",
       "..\\HV Power Up.scr",
@@ -63,7 +65,8 @@
       "..\\Print Customer Label.tst",
       "..\\Safety Officer.scr",
       "..\\Abort Script 2.scr",
-      "..\\Abort Script 3.scr"
+      "..\\Abort Script 3.scr",
+      "..\\SafetyOfficerInterlock.scr"
     ]
   },
   "RecordParametersFile": null,
