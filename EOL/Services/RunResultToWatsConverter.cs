@@ -19,6 +19,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using WatsReportModels;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.AxHost;
 
 namespace EOL.Services
 {
@@ -61,48 +62,39 @@ namespace EOL.Services
 
         public Step HandleStep(ScriptStepBase stepbase)
         {
+            string Status = ReturnStatus(stepbase.IsPass, stepbase.IsExecuted);
+
+            Step step = new Step
+            {
+                Group = "Main",
+                Name = stepbase.UserTitle ?? string.Empty ,
+                Status = Status,
+                TotalTime = stepbase.ExecutionTime.TotalSeconds,
+                StepType = StepTypes.Action,
+            };
+
             switch (stepbase)
             {
                 case ScriptStepCompareWithTolerance compareWithTolerance:
-                    return HandleScriptStepCompareWithTolerance(compareWithTolerance);
+                    return HandleScriptStepCompareWithTolerance(compareWithTolerance , step);
                 case ScriptStepCompare compare:
-                    return HandleScriptStepCompare(compare);
+                    return HandleScriptStepCompare(compare, step);
+                case ScriptStepEOLSendSN sendSN:
+                    return HandleScriptStepEOLSendSN(sendSN , step);
+                case ScriptStepCompareBit comparebit:
+                    return HandleScriptStepCompareBit(comparebit, step);
+                case ScriptStepEOLCalibrate calibrate:
+                    return HandleScriptStepEOLCalibrate(calibrate, step);
                 //case ScriptStepEOLFlash flash:
                 //    return HandleScriptStepEOLFlash(flash);
                 //case ScriptStepEOLPrint print:
                 //    return HandleScriptStepEOLPrint(print);
-                case ScriptStepEOLSendSN sendSN:
-                    return HandleScriptStepEOLSendSN(sendSN);
-                //case ScriptStepSetParameter setParameter:
-                //    return HandleScriptStepSetParameter(setParameter);
-                case ScriptStepCompareBit comparebit:
-                    return HandleScriptStepCompareBit(comparebit);
-                //case ScriptStepConverge converge:
-                //    return HandleScriptStepConverge(converge);
-                case ScriptStepEOLCalibrate calibrate:
-                    return HandleScriptStepEOLCalibrate(calibrate);
-                //case ScriptStepLoopIncrement loopIncrement:
-                //    return HandleScriptStepLoopIncrement(loopIncrement);
-                //case ScriptStepDelay stepDelay:
-                //    return HandleScriptStepDelay(stepDelay);
 
                 // Add cases for other step types
                 default:
                     {
                         try
                         {
-                            string ispassstring = ReturnStatus(stepbase.IsPass, stepbase.IsExecuted);
-
-                            Step step = new Step
-                            {
-                                Group = "Main",
-                                Name = stepbase.UserTitle ?? string.Empty ,
-                                TotalTime = stepbase.ExecutionTime.TotalSeconds,
-                                Status = ispassstring,
-                                StepType = StepTypes.Action,
-                                //StepErrorMessage = (step.IsExecuted && !step.IsPass) ? step.ErrorMessage : string.Empty,
-                            };
-
                             if (!stepbase.IsPass && stepbase.IsExecuted)
                                 step.StepErrorMessage = stepbase.ErrorMessage;
 
@@ -118,109 +110,48 @@ namespace EOL.Services
             }
         }
 
-        //private Step HandleScriptStepDelay(ScriptStepDelay stepDelay)
-        //{
-        //    try
-        //    {
-        //        string ispassstring = ReturnStatus(stepDelay.IsPass, stepDelay.IsExecuted);
 
-        //        Step step = new Step
-        //        {
-        //            Group = "Main",
-        //            Name = stepDelay.UserTitle ?? string.Empty,
-        //            Status = ispassstring,
-        //            TotalTime = stepDelay.ExecutionTime.TotalSeconds,
-        //            StepType = StepTypes.Action,
-        //        };
 
-        //        if (!stepDelay.IsPass && stepDelay.IsExecuted)
-        //            step.StepErrorMessage = stepDelay.ErrorMessage;
-
-        //        return step;
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        LogException(ex, nameof(HandleScriptStepDelay));
-        //        throw;
-        //    }
-        //}
-
-        //private Step HandleScriptStepLoopIncrement(ScriptStepLoopIncrement loopIncrement)
-        //{
-        //    try 
-        //    {
-        //        string ispassstring = ReturnStatus(loopIncrement.IsPass, loopIncrement.IsExecuted);
-
-        //        Step step = new Step
-        //        {
-        //            Group = "Main",
-        //            Name = loopIncrement.UserTitle ?? string.Empty,
-        //            Status = ispassstring,
-        //            TotalTime = loopIncrement.ExecutionTime.TotalSeconds,
-        //            StepType = StepTypes.Action,
-        //        };
-
-        //        if (!loopIncrement.IsPass && loopIncrement.IsExecuted)
-        //            step.StepErrorMessage = loopIncrement.ErrorMessage;
-
-        //        return step;
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        LogException(ex, nameof(HandleScriptStepLoopIncrement));
-        //        throw;
-        //    }
-        //}
-
-        private Step HandleScriptStepEOLCalibrate(ScriptStepEOLCalibrate calibrate)
+        private Step HandleScriptStepEOLCalibrate(ScriptStepEOLCalibrate calibrate,Step step)
         {
             try
             {
-                string ispassstring = ReturnStatus(calibrate.IsPass, calibrate.IsExecuted);
+                step.NumericLimits = new List<NumericLimit>();
 
-                Step step = new Step
-                {
-                    Group = "Main",
-                    Name = calibrate.UserTitle ?? string.Empty,
-                    Status = ispassstring,
-                    TotalTime = calibrate.ExecutionTime.TotalSeconds,
-                    StepType = StepTypes.Action,
-                    NumericLimits = new List<NumericLimit>()
-                };
 
                 if (calibrate.IsExecuted)
                 {
                     step.StepType = StepTypes.ET_MNLT;
                     NumericLimit numericLimitmcu = CreateNumericLimit(
-                        calibrate.McuParam.Name,
+                        calibrate.McuParam.Name + " (" + calibrate.McuParam.DeviceType.ToString() + ")",
                         0,
                         0,
                         calibrate.AvgMcuRead,
                         calibrate.McuParam.Units,
                         CompOperator.LOG,
-                        ispassstring
+                        step.Status
                         );
                     step.NumericLimits.Add(numericLimitmcu);
 
                     NumericLimit numericLimitref = CreateNumericLimit(
-                        calibrate.RefSensorParam.Name,
+                        calibrate.RefSensorParam.Name + " (" + calibrate.RefSensorParam.DeviceType.ToString() + ")",
                         0,
                         0,
                         calibrate.AvgRefSensorRead,
                         calibrate.McuParam.Units,
                         CompOperator.LOG,
-                        ispassstring
+                        step.Status
                         );
                     step.NumericLimits.Add(numericLimitref);
 
                     NumericLimit numericlimitGain = CreateNumericLimit(
-                        calibrate.GainParam.Name,
+                        calibrate.GainParam.Name + " (" + calibrate.GainParam.DeviceType.ToString() + ")",
                         calibrate.GainMinLimit,
                         calibrate.GainMaxLimit,
                         calibrate.NewGain,
                         calibrate.GainParam.Units,
                         CompOperator.GELE,
-                        ispassstring
+                        step.Status
                         );
                     step.NumericLimits.Add(numericlimitGain);
 
@@ -238,25 +169,14 @@ namespace EOL.Services
             }
         }
 
-        private Step HandleScriptStepConverge(ScriptStepConverge converge)
-        {
-            throw new NotImplementedException();
-        }
 
-        private Step HandleScriptStepCompareBit(ScriptStepCompareBit comparebit)
+        private Step HandleScriptStepCompareBit(ScriptStepCompareBit comparebit,Step step)
         {
-            try {
-                string ispassstring = ReturnStatus(comparebit.IsPass, comparebit.IsExecuted);
+            try 
+            {
 
-                Step step = new Step
-                {
-                    Group = "Main",
-                    Name = comparebit.UserTitle ?? string.Empty,
-                    Status = ispassstring,
-                    TotalTime = comparebit.ExecutionTime.TotalSeconds,
-                    StepType = StepTypes.Action,
-                    PassFails = new List<PassFail>()
-                };
+
+                step.PassFails = new List<PassFail>();
 
                 if (comparebit.IsExecuted)
                 {
@@ -264,7 +184,7 @@ namespace EOL.Services
                     PassFail passFail = new PassFail
                     {
                         Name = comparebit.FaultName,
-                        Status = ispassstring
+                        Status = step.Status
                     };
                     step.PassFails.Add(passFail);
                 }
@@ -281,56 +201,20 @@ namespace EOL.Services
             }
           }
 
-        //private Step HandleScriptStepSetParameter(ScriptStepSetParameter setParameter)
-        //{
-        //    try
-        //    {
-        //        string ispassstring = ReturnStatus(setParameter.IsPass, setParameter.IsExecuted);
 
-        //        Step step = new Step
-        //        {
-        //            Group = "Main",
-        //            Name = setParameter.UserTitle ?? string.Empty,
-        //            Status = ispassstring,
-        //            TotalTime = setParameter.ExecutionTime.TotalSeconds,
-        //            StepType = StepTypes.Action,
-        //        };
-
-        //        if (!setParameter.IsPass && setParameter.IsExecuted)
-        //            step.StepErrorMessage = setParameter.ErrorMessage;
-
-        //        return step;
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        LogException(ex, nameof(HandleScriptStepSetParameter));
-        //        throw;
-        //    }
-        //}
-
-        private Step HandleScriptStepEOLSendSN(ScriptStepEOLSendSN sendSN)
+        private Step HandleScriptStepEOLSendSN(ScriptStepEOLSendSN sendSN, Step step)
         {
             try
             {
-                string ispassstring = ReturnStatus(sendSN.IsPass, sendSN.IsExecuted);
-
-                Step step = new Step
-                {
-                    Group = "Main",
-                    Name = sendSN.UserTitle ?? string.Empty,
-                    Status = ispassstring,
-                    TotalTime = sendSN.ExecutionTime.TotalSeconds,
-                    StepType = StepTypes.Action,
-                    PassFails = new List<PassFail>()
-                };
+                step.PassFails = new List<PassFail>();
 
                 if (sendSN.IsExecuted)
                 {
                     step.StepType = StepTypes.ET_PFT;
                     PassFail passFail = new PassFail
                     {
-                        Name = sendSN.SerialNumber,
-                        Status = ispassstring
+                        Name = sendSN.SerialNumber ,
+                        Status = step.Status
                     };
                     step.PassFails.Add(passFail);
                 }
@@ -358,20 +242,12 @@ namespace EOL.Services
             throw new NotImplementedException();
         }
 
-        private Step HandleScriptStepCompare(ScriptStepCompare compare)
+        private Step HandleScriptStepCompare(ScriptStepCompare compare , Step step)
         {
             try
             {
-                string ispassstring = ReturnStatus(compare.IsPass, compare.IsExecuted);
-                Step step = new Step
-                {
-                    Group = "Main",
-                    Name = compare.UserTitle ?? string.Empty,
-                    Status = ispassstring,
-                    TotalTime = compare.ExecutionTime.TotalSeconds,
-                    NumericLimits = new List<NumericLimit>(),
-                    StepType = StepTypes.Action
-                };
+                step.NumericLimits = new List<NumericLimit>();
+
 
                 string compOperator = compare.Comparation switch
                 {
@@ -393,13 +269,13 @@ namespace EOL.Services
 
                         step.StepType = StepTypes.ET_NLT;
                         NumericLimit numericlimit = CreateNumericLimit(
-                            compare.Parameter.Name,
+                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
                             Convert.ToDouble(stringValue),
                             Convert.ToDouble(stringValue),
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
@@ -407,13 +283,13 @@ namespace EOL.Services
                     {
                         step.StepType = StepTypes.ET_NLT;
                         NumericLimit numericlimit = CreateNumericLimit(
-                            compare.Parameter.Name,
+                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
                             Convert.ToDouble(Value),
                             Convert.ToDouble(Value),
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
@@ -421,23 +297,23 @@ namespace EOL.Services
                     {
                         step.StepType = StepTypes.ET_MNLT;
                         NumericLimit numericlimitparam = CreateNumericLimit(
-                            compare.Parameter.Name,
+                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
                             Convert.ToDouble(param.Value),
                             Convert.ToDouble(param.Value),
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimitparam);
                         NumericLimit numericlimitcompared = CreateNumericLimit(
-                            param.Name,
+                            param.Name + " (" + param.DeviceType.ToString() + ")",
                             0,
                             0,
                             Convert.ToDouble(param.Value),
                             compare.Parameter.Units,
                             CompOperator.LOG,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimitcompared);
                     }
@@ -456,22 +332,13 @@ namespace EOL.Services
             }
         }
 
-        private Step HandleScriptStepCompareWithTolerance(ScriptStepCompareWithTolerance compareWithTolerance)
+        private Step HandleScriptStepCompareWithTolerance(ScriptStepCompareWithTolerance compareWithTolerance,Step step)
         {
 
             try
             {
-                string ispassstring = ReturnStatus(compareWithTolerance.IsPass, compareWithTolerance.IsExecuted);
 
-                Step step = new Step
-                {
-                    Group = "Main",
-                    Name = compareWithTolerance.UserTitle ?? string.Empty,
-                    Status = ispassstring,
-                    TotalTime = compareWithTolerance.ExecutionTime.TotalSeconds,
-                    NumericLimits = new List<NumericLimit>(),
-                    StepType = StepTypes.Action
-                };
+                step.NumericLimits = new List<NumericLimit>();
 
                 if (compareWithTolerance.IsExecuted)
                 {
@@ -483,13 +350,13 @@ namespace EOL.Services
 
                         step.StepType = StepTypes.ET_NLT;
                         NumericLimit numericlimit = CreateNumericLimit(
-                            compareWithTolerance.Parameter.Name,
+                            compareWithTolerance.Parameter.Name + " (" +compareWithTolerance.Parameter.DeviceType.ToString() + ")",
                             lowerToleranceValue,
                             upperToleranceValue,
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
@@ -501,23 +368,23 @@ namespace EOL.Services
 
                         step.StepType = StepTypes.ET_MNLT;
                         NumericLimit numericlimitparam = CreateNumericLimit(
-                            compareWithTolerance.Parameter.Name,
+                            compareWithTolerance.Parameter.Name + " (" + compareWithTolerance.Parameter.DeviceType.ToString() + ")",
                             lowerToleranceValue,
                             upperToleranceValue,
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
-                            ispassstring
+                            step.Status                           
                         );
                         step.NumericLimits.Add(numericlimitparam);
                         NumericLimit numericlimitcompared = CreateNumericLimit(
-                            param.Name,
+                            param.Name + " (" + param.DeviceType.ToString() + ")",
                             0,
                             0,
                             Convert.ToDouble(param.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.LOG,
-                            ispassstring
+                            step.Status
                         );
                         step.NumericLimits.Add(numericlimitcompared);
                     }
