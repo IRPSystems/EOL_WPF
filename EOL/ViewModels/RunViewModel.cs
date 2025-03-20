@@ -77,7 +77,7 @@ namespace EOL.ViewModels
 
 		private int _totalNumOfSteps;
 		private int _stepsCounter;
-
+		private bool isTestTerminated = false;
 		private RunData _runData;
 
 		private System.Timers.Timer _timerDuration;
@@ -472,17 +472,17 @@ namespace EOL.ViewModels
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
 
-			Reports reports = new Reports 
+            Reports reports = new Reports 
 			{
 				Report = new Report
 				{
 					Type = "UUT",
 					Start = singleTestResult.StartTimeStamp8601,
-					Result = singleTestResult.TestStatus,
+					Result = isTestTerminated ? "Terminated" : singleTestResult.TestStatus,
 					SerialNumber = singleTestResult.SerialNumber,
 					PartNumber = singleTestResult.PartNumber,
 					MachineName = singleTestResult.RackNumber, // Set as needed
-					Location = "Israel",
+	//				Location = "Israel",
                     UUT = new WatsReportModels.UUT
 					{
 						UserLoginName = singleTestResult.OperatorName,
@@ -553,13 +553,12 @@ namespace EOL.ViewModels
 			}
 			ErrorMessage = null;
 
-			
-			_runData.StartTime = new DateTime();
+            isTestTerminated = false;
+            _runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
 			_runData.EndTime = new DateTime();
 
 			_runData.NumberOfTested++;
-
 			OperatorErrorMessage = "";
 			_totalNumOfSteps = 0;
 			string path = _userDefaultSettings.ReportsSavingPath;
@@ -886,6 +885,7 @@ namespace EOL.ViewModels
 		{
             OperatorErrorMessage += "User Abort";
             _runProjectsList.IsAbortClicked = true;
+            isTestTerminated = true;
             RunScript.AbortScript("User Abort");
         }
 
@@ -1163,6 +1163,8 @@ namespace EOL.ViewModels
 
         private void RunProjectsList_OperatorErrorMessageEvent(string errorMessage)
         {
+			if (errorMessage.Contains("Saftey Officer"))
+				isTestTerminated = true;
             OperatorErrorMessage = errorMessage;
         }
 
