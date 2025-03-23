@@ -4148,7 +4148,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -4200,15 +4200,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -9343,7 +9343,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -9395,15 +9395,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -16109,7 +16109,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -16161,15 +16161,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -16886,7 +16886,7 @@
                               "ValueLeft": {
                                 "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                                 "ValueChanged": null,
-                                "Value": "",
+                                "Value": "NaN",
                                 "GroupName": "Operation",
                                 "Description": "Motor State",
                                 "Default": "Neutral",
@@ -16938,15 +16938,15 @@
                                 "CommunicationTimeout": 0,
                                 "CommSendResLog": {
                                   "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                                  "SendCommand": null,
+                                  "SendCommand": "0x63C5A70000000000",
                                   "ReceivedValue": null,
-                                  "CommErrorMsg": null,
-                                  "NumberOfTries": 1,
+                                  "CommErrorMsg": "CommTimeOut",
+                                  "NumberOfTries": 6,
                                   "ParamName": null,
                                   "Device": null,
                                   "Tool": null,
                                   "StepName": null,
-                                  "timeStamp": "0001-01-01T00:00:00"
+                                  "timeStamp": "2025-03-23T12:01:35.7502543Z"
                                 }
                               },
                               "ValueRight": 4.0,
@@ -23786,7 +23786,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -23838,15 +23838,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -26208,6 +26208,267 @@
               "IsExecuted": false,
               "Script": {
                 "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+                "Name": "PS Config Pre Motor Run",
+                "ScriptItemsList": {
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+                        "Cmd": "SOUR:POW",
+                        "Max": 300,
+                        "ParamType": 2,
+                        "ModbusAddress": 502,
+                        "NumOfRegisters": 1,
+                        "ValueType": "ushort",
+                        "DropDown": null,
+                        "Name": "(PS) Power Limit",
+                        "Units": "W",
+                        "Value": null,
+                        "DeviceType": 3,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "Value": 10000.0,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "IsExecuted": false,
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "OperatorErrorDescription": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "CommSendResLog": null,
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set PS Power Limit 10kW",
+                      "Name": "Set Parameter 1",
+                      "Description": "Set  \"(PS) Power Limit (EA Power)\" = 10000 - ID:1",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"(PS) Power Protection (EA Power)\" = 10000 - ID:2",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 1,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+                        "Cmd": "SOUR:POW:PROT",
+                        "Max": 300,
+                        "ParamType": 2,
+                        "ModbusAddress": 556,
+                        "NumOfRegisters": 1,
+                        "ValueType": "ushort",
+                        "DropDown": null,
+                        "Name": "(PS) Power Protection",
+                        "Units": "W",
+                        "Value": null,
+                        "DeviceType": 3,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "Value": 10000.0,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "IsExecuted": false,
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "Name": null,
+                        "Description": null,
+                        "OperatorErrorDescription": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "CommSendResLog": null,
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set PS Power Protection 10kW",
+                      "Name": "ScriptNodeSetParameter 2",
+                      "Description": "Set  \"(PS) Power Protection (EA Power)\" = 10000 - ID:2",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 2,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    }
+                  ]
+                },
+                "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\Current Calibration.tst",
+                "IsPass": null,
+                "ScriptSender": 0,
+                "TotalRunSteps": 0,
+                "PassRunSteps": 0,
+                "FailRunSteps": 0,
+                "ErrorsList": null
+              },
+              "ScriptPath": null,
+              "SelectedScriptName": null,
+              "ContinueUntilType": 0,
+              "Repeats": 1,
+              "Timeout": 0,
+              "TimeoutUnite": 0,
+              "TimeoutSpan": "00:00:00",
+              "IsStopOnFail": true,
+              "IsStopOnPass": false,
+              "IsInfinity": false,
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = PS Config Pre Motor Run - Repeats: 1 - ID:1\"",
+              "UserTitle": "PS Config Pre Motor Run",
+              "Name": "ScriptNodeSubScript 5",
+              "Description": "Sub Script = PS Config Pre Motor Run - Repeats: 1 - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": "Sub Script = Phase U - Repeats: 1 - ID:2",
+              "FailNextDescription": null,
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": false,
+                "IsSaveToPdfDynTable": false,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
+              "IsExecuted": false,
+              "Script": {
+                "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
                 "Name": "Phase U",
                 "ScriptItemsList": {
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
@@ -26760,7 +27021,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -26812,15 +27073,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -29817,18 +30078,18 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase U - Repeats: 1 - ID:1\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase U - Repeats: 1 - ID:2\"",
               "UserTitle": "Phase U",
               "Name": "Sub Script 4",
-              "Description": "Sub Script = Phase U - Repeats: 1 - ID:1",
+              "Description": "Sub Script = Phase U - Repeats: 1 - ID:2",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Phase W - Repeats: 1 - ID:2",
+              "PassNextDescription": "Sub Script = Phase W - Repeats: 1 - ID:3",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 1,
+              "ID": 2,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -33145,18 +33406,18 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase W - Repeats: 1 - ID:2\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase W - Repeats: 1 - ID:3\"",
               "UserTitle": "Phase W",
               "Name": "Sub Script 2",
-              "Description": "Sub Script = Phase W - Repeats: 1 - ID:2",
+              "Description": "Sub Script = Phase W - Repeats: 1 - ID:3",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = BUS - Repeats: 1 - ID:3",
+              "PassNextDescription": "Sub Script = BUS - Repeats: 1 - ID:4",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 2,
+              "ID": 3,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -34605,7 +34866,7 @@
                       "ValueLeft": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -34657,15 +34918,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "ValueRight": 4.0,
@@ -35795,18 +36056,18 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = BUS - Repeats: 1 - ID:3\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = BUS - Repeats: 1 - ID:4\"",
               "UserTitle": "BUS",
               "Name": "Sub Script 3",
-              "Description": "Sub Script = BUS - Repeats: 1 - ID:3",
+              "Description": "Sub Script = BUS - Repeats: 1 - ID:4",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Save New Gains - Repeats: 1 - ID:4",
+              "PassNextDescription": "Sub Script = Save New Gains - Repeats: 1 - ID:5",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 3,
+              "ID": 4,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -36143,10 +36404,10 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Save New Gains - Repeats: 1 - ID:4\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Save New Gains - Repeats: 1 - ID:5\"",
               "UserTitle": "Save New Gains",
               "Name": "Sub Script 4",
-              "Description": "Sub Script = Save New Gains - Repeats: 1 - ID:4",
+              "Description": "Sub Script = Save New Gains - Repeats: 1 - ID:5",
               "OperatorErrorDescription": null,
               "IsPass": false,
               "PassNextDescription": null,
@@ -36154,7 +36415,7 @@
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 4,
+              "ID": 5,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -36536,7 +36797,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -36588,15 +36849,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -38188,7 +38449,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -38240,15 +38501,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 1,
@@ -40761,7 +41022,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -40813,15 +41074,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -41206,7 +41467,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -41258,15 +41519,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -43212,7 +43473,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -43264,15 +43525,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
@@ -45146,7 +45407,7 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
+                        "Value": "NaN",
                         "GroupName": "Operation",
                         "Description": "Motor State",
                         "Default": "Neutral",
@@ -45198,15 +45459,15 @@
                         "CommunicationTimeout": 0,
                         "CommSendResLog": {
                           "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-                          "SendCommand": null,
+                          "SendCommand": "0x63C5A70000000000",
                           "ReceivedValue": null,
-                          "CommErrorMsg": null,
-                          "NumberOfTries": 1,
+                          "CommErrorMsg": "CommTimeOut",
+                          "NumberOfTries": 6,
                           "ParamName": null,
                           "Device": null,
                           "Tool": null,
                           "StepName": null,
-                          "timeStamp": "0001-01-01T00:00:00"
+                          "timeStamp": "2025-03-23T12:01:35.7502543Z"
                         }
                       },
                       "Value": 0,
