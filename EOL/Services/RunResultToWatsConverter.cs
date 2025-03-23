@@ -31,6 +31,8 @@ namespace EOL.Services
         private string Location = String.Empty;
 
         private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
+        //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
+
         private const string errorLogPath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
         private const string ReportName = "ReportWats.xml";
 
@@ -96,7 +98,10 @@ namespace EOL.Services
                         try
                         {
                             if (!stepbase.IsPass && stepbase.IsExecuted)
+                            {
+                                step.StepCausedUUTFailure = 1;
                                 step.StepErrorMessage = stepbase.ErrorMessage;
+                            }
 
                             return step;
                         }
@@ -158,8 +163,10 @@ namespace EOL.Services
                 }
 
                 if (!calibrate.IsPass && calibrate.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
                     step.StepErrorMessage = calibrate.ErrorMessage;
-
+                }
                 return step;
             }
             catch(Exception ex)
@@ -190,8 +197,10 @@ namespace EOL.Services
                 }
 
                 if (!comparebit.IsPass && comparebit.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
                     step.StepErrorMessage = comparebit.ErrorMessage;
-
+                }
                 return step;
             }
             catch(Exception ex)
@@ -220,8 +229,10 @@ namespace EOL.Services
                 }
 
                 if (!sendSN.IsPass && sendSN.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
                     step.StepErrorMessage = sendSN.ErrorMessage;
-
+                }
                 return step;
             }
             catch (Exception ex)
@@ -321,8 +332,10 @@ namespace EOL.Services
                 }
 
                 if (!compare.IsPass && compare.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
                     step.StepErrorMessage = compare.ErrorMessage;
-
+                }
                 return step;
             }
             catch(Exception ex)
@@ -391,8 +404,10 @@ namespace EOL.Services
                 }
 
                 if (!compareWithTolerance.IsPass && compareWithTolerance.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
                     step.StepErrorMessage = compareWithTolerance.ErrorMessage;
-
+                }
                 return step;
             }
             catch(Exception ex)

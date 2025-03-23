@@ -35,8 +35,8 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace EOL.ViewModels
 {
-	public class RunViewModel:ObservableObject
-	{
+	public class RunViewModel:ObservableObject 
+    {
 		#region Properties
 
 		public enum RunStateEnum { None, Running, Passed, Aborted, Failed }
@@ -61,7 +61,12 @@ namespace EOL.ViewModels
         public bool WritetoWatsEnabled
         {
             get => _writetoWatsEnabled;
-            set => SetProperty(ref _writetoWatsEnabled, value);
+			set 
+			{
+                SetProperty(ref _writetoWatsEnabled, value);
+                UpdateWritingToWatsSetting();
+            }
+
         }
         public Visibility ContinueVisibility { get; set; }
 
@@ -225,6 +230,7 @@ namespace EOL.ViewModels
                 RegisterEvents();
 
 				_settingsViewModel.LoadUserConfigToSettingsView();
+				WritetoWatsEnabled = _userDefaultSettings.isWritingtoWatsEnabled;
 
 				LoadPrintFile();
 
@@ -452,10 +458,11 @@ namespace EOL.ViewModels
             RunResult singleTestResult = new RunResult();
 
 			List<Step> watsSteps = new List<Step>();
+			string watsErrorMessage;
 
-            Stop(stopMode, ref singleTestResult,ref watsSteps);
+            Stop(stopMode, ref singleTestResult,ref watsSteps , out watsErrorMessage);
 
-            HandleTestData(singleTestResult , watsSteps);
+            HandleTestData(singleTestResult , watsSteps , watsErrorMessage);
 
 			PostRunActions();
 
@@ -463,7 +470,7 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Aborted;
 		}
 
-        private void HandleTestData(RunResult singleTestResult, List<Step> watsSteps)
+        private void HandleTestData(RunResult singleTestResult, List<Step> watsSteps , string watsErrorMessage)
         {
             _csvWritter.WriteTestResult(
                 singleTestResult,
@@ -472,18 +479,20 @@ namespace EOL.ViewModels
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
 
-            Reports reports = new Reports 
+			//build wats reports object
+			Reports reports = new Reports
 			{
 				Report = new Report
 				{
 					Type = "UUT",
 					Start = singleTestResult.StartTimeStamp8601,
-					Result = isTestTerminated ? "Terminated" : singleTestResult.TestStatus,
+					Result = (isTestTerminated || _SafetyScript.IsPass == false) ? "Terminated" : singleTestResult.TestStatus,
 					SerialNumber = singleTestResult.SerialNumber,
 					PartNumber = singleTestResult.PartNumber,
 					MachineName = singleTestResult.RackNumber, // Set as needed
-	//				Location = "Israel",
-                    UUT = new WatsReportModels.UUT
+					MiscInfo = new List<WatsReportModels.MiscInfo>(),
+
+					UUT = new WatsReportModels.UUT
 					{
 						UserLoginName = singleTestResult.OperatorName,
 						ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
@@ -497,7 +506,16 @@ namespace EOL.ViewModels
 
 					Steps = watsSteps
 				}
+			};
+
+            MiscInfo miscInfo = new MiscInfo
+            {
+                Typedef = string.Empty,
+                Description = "Error Message",
+				Text = watsErrorMessage
             };
+
+            reports.Report.MiscInfo.Add(miscInfo);
 
 			if(WritetoWatsEnabled)
                 _runResultToWatsConverter.SaveRunResultToXml(reports);
@@ -590,6 +608,7 @@ namespace EOL.ViewModels
 			_timerDuration.Start();
 			_startTime = DateTime.Now;
 			_runProjectsList.AbortScript = _abortScript;
+
 
             _runProjectsList.StartAll(
 				_generatedProjectsList,
@@ -889,12 +908,13 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,ref List<Step> watsSteps)
+		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,ref List<Step> watsSteps , out string watsErrorMessage)
 		{
-			try
-			{
+            watsErrorMessage = string.Empty;
 
-				_timerDuration.Stop();
+            try
+            {
+                _timerDuration.Stop();
 				_runData.EndTime = DateTime.Now;
 
 				IsRunButtonEnabled = true;
@@ -920,7 +940,7 @@ namespace EOL.ViewModels
                     StepType = RunResultToWatsConverter.StepTypes.SequenceCall,
                     Group = "Main"
                 };
-				
+
                 ScriptStepBase failedStep = null;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
@@ -931,10 +951,14 @@ namespace EOL.ViewModels
                         Name = project.Name
                     }; ;
 
+					//bool to determine wheter to write the test into report
 					bool isWritingtoWatsReport = true;
+					//wats error message
+					string errorMessage; 
 
 					foreach (GeneratedScriptData script in project.TestsList)
 					{
+						//building test object for wats
 						Step teststep = new Step
 						{
 							Group = "Main",
@@ -947,7 +971,7 @@ namespace EOL.ViewModels
 							Steps = new List<Step>(),
 							StepType = RunResultToWatsConverter.StepTypes.SequenceCall
 						};
-										
+						//Cumulative execution time for tests				
 						double totalExecutionTime;
 
                         if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
@@ -957,9 +981,13 @@ namespace EOL.ViewModels
 							script,
 							script,
 							eolStepSummerysList,
-                            out totalExecutionTime,
-                            ref teststep
+							out totalExecutionTime,
+							out errorMessage,
+							ref teststep
 							);
+
+						if (script.IsPass == false)
+							watsErrorMessage = errorMessage;
 
 						teststep.TotalTime = totalExecutionTime;
 
@@ -1049,9 +1077,11 @@ namespace EOL.ViewModels
 			IScript test,
 			List<EOLStepSummeryData> eolStepSummerysList,
             out double totalExecutionTime,
+			out string watsErrorMessage,
             ref Step watsStep
 			)
 		{
+			watsErrorMessage = string.Empty; 
             totalExecutionTime = 0;
             ScriptStepBase failedStep = null;
 			foreach (IScriptItem item in script.ScriptItemsList)
@@ -1082,6 +1112,8 @@ namespace EOL.ViewModels
 						//    StepType = "Action"
 						//};
                         Step Step = _runResultToWatsConverter.HandleStep(stepBase);
+						if (!string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
+							watsErrorMessage = Step.StepErrorMessage;
 						totalExecutionTime += Step.TotalTime;
 						watsStep.Steps.Add(Step);
 						
@@ -1121,7 +1153,8 @@ namespace EOL.ViewModels
 						test,
 						eolStepSummerysList,
 						out cumulatedExecutionTime,
-						ref subsctiptstep);
+						out watsErrorMessage,
+                        ref subsctiptstep);
 
 					subsctiptstep.TotalTime = cumulatedExecutionTime;
 
@@ -1163,8 +1196,6 @@ namespace EOL.ViewModels
 
         private void RunProjectsList_OperatorErrorMessageEvent(string errorMessage)
         {
-			if (errorMessage.Contains("Saftey Officer"))
-				isTestTerminated = true;
             OperatorErrorMessage = errorMessage;
         }
 
@@ -1191,11 +1222,18 @@ namespace EOL.ViewModels
 			_adminView.Close();
 		}
 
-#endregion Methods
+        public void UpdateWritingToWatsSetting()
+        {
+            _userDefaultSettings.isWritingtoWatsEnabled = WritetoWatsEnabled;
+            // Save the updated settings if necessary
+            // _userConfigManager.SaveConfig(_userDefaultSettings);
+        }
 
-		#region Commands
+        #endregion Methods
 
-		public RelayCommand RunCommand { get; private set; }
+        #region Commands
+
+        public RelayCommand RunCommand { get; private set; }
 		public RelayCommand AbortCommand { get; private set; }
 		public RelayCommand ContinueCommand { get; private set; }
 		public RelayCommand ShowAdminCommand { get; private set; }

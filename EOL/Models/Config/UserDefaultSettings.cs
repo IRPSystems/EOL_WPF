@@ -37,6 +37,7 @@ namespace EOL.Models
         public bool preTestFlash { get; set; }
         public bool isPrintLabel { get; set; }
         public bool isSofIgnore { get; set; }
+        public bool isWritingtoWatsEnabled { get; set; }
         public bool isTogglePower {  get; set; }
         public int ProjectBaudRate { get; set; } = 500;
         public UInt32 FirstFileUdsRx { get; set; }

@@ -52,8 +52,8 @@ namespace WatsReportModels
         [XmlElement("Process")]
         public Process Process { get; set; }
 
-        //[XmlElement("MiscInfo")]
-        //public List<MiscInfo> MiscInfo { get; set; }
+        [XmlElement("MiscInfo")]
+        public List<MiscInfo> MiscInfo { get; set; }
 
         //[XmlElement("ReportUnitHierarchy")]
         //public List<ReportUnitHierarchy> ReportUnitHierarchy { get; set; }
@@ -98,20 +98,20 @@ namespace WatsReportModels
         public string Name { get; set; }
     }
 
-    //public class MiscInfo
-    //{
-    //    [XmlAttribute("Typedef")]
-    //    public string Typedef { get; set; }
+    public class MiscInfo
+    {
+        [XmlAttribute("Typedef")]
+        public string Typedef { get; set; }
 
-    //    [XmlAttribute("Description")]
-    //    public string Description { get; set; }
+        [XmlAttribute("Description")]
+        public string Description { get; set; }
 
-    //    [XmlAttribute("Numeric")]
-    //    public double Numeric { get; set; }
+        [XmlAttribute("Numeric")]
+        public double Numeric { get; set; }
 
-    //    [XmlText]
-    //    public string Text { get; set; }
-    //}
+        [XmlText]
+        public string Text { get; set; }
+    }
 
     //public class ReportUnitHierarchy
     //{
