@@ -85,6 +85,8 @@ namespace EOL.Services
                     return HandleScriptStepEOLSendSN(sendSN , step);
                 case ScriptStepCompareBit comparebit:
                     return HandleScriptStepCompareBit(comparebit, step);
+                case ScriptStepGetRegisterValues getregistervalues:
+                    return HandleScriptStepGetRegisterValues(getregistervalues, step);
                 case ScriptStepEOLCalibrate calibrate:
                     return HandleScriptStepEOLCalibrate(calibrate, step);
                 //case ScriptStepEOLFlash flash:
@@ -177,7 +179,7 @@ namespace EOL.Services
         }
 
 
-        private Step HandleScriptStepCompareBit(ScriptStepCompareBit comparebit,Step step)
+        private Step HandleScriptStepCompareBit(ScriptStepCompareBit comparebit, Step step)
         {
             try 
             {
@@ -208,7 +210,40 @@ namespace EOL.Services
                 LogException(ex, nameof(HandleScriptStepCompareBit));
                 throw;
             }
-          }
+        }
+
+        private Step HandleScriptStepGetRegisterValues(ScriptStepGetRegisterValues getregistervalues, Step step)
+        {
+            try
+            {
+
+
+                step.PassFails = new List<PassFail>();
+
+                if (getregistervalues.IsExecuted)
+                {
+                    step.StepType = StepTypes.ET_PFT;
+                    PassFail passFail = new PassFail
+                    {
+                        Name = getregistervalues.FaultList,
+                        Status = step.Status
+                    };
+                    step.PassFails.Add(passFail);
+                }
+
+                if (!getregistervalues.IsPass && getregistervalues.IsExecuted)
+                {
+                    step.StepCausedUUTFailure = 1;
+                    step.StepErrorMessage = getregistervalues.ErrorMessage;
+                }
+                return step;
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, nameof(HandleScriptStepCompareBit));
+                throw;
+            }
+        }
 
 
         private Step HandleScriptStepEOLSendSN(ScriptStepEOLSendSN sendSN, Step step)

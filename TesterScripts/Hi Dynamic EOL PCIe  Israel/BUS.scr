@@ -485,132 +485,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set ATE PWM Ramp to 5",
         "IsPass": false,
-        "PassNextId": 5,
-        "FailNextId": 0,
-        "ID": 4,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 11",
-        "Parameter": {
-          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "SYST:LOCK",
-          "Max": 1,
-          "ParamType": 0,
-          "ModbusAddress": 402,
-          "NumOfRegisters": 1,
-          "ValueType": "ushort",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Remote On/Off",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 3,
-          "ToolTip": null,
-          "CommunicationTimeout": 3000,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
-        },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-            "Cmd": "SYST:LOCK",
-            "Max": 1,
-            "ParamType": 0,
-            "ModbusAddress": 402,
-            "NumOfRegisters": 1,
-            "ValueType": "ushort",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Remote On/Off",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 3,
-            "ToolTip": null,
-            "CommunicationTimeout": 3000,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
-        "UserTitle": "Set PS to Remote Control",
-        "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -703,27 +580,9 @@
         "SafetyOfficerErrorLevel": 0,
         "UserTitle": "Set PS to 30A",
         "IsPass": false,
-        "PassNextId": 7,
-        "FailNextId": 0,
-        "ID": 6,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 18",
-        "Interval": 4,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
