@@ -93,7 +93,7 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enable 12V Supply Voltage (KL30)",
         "IsPass": false,
         "PassNextId": 2,

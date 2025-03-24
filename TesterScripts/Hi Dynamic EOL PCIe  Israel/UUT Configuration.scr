@@ -7,14 +7,6 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
         "Name": "Get Register Values 13",
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        },
-        "UserTitle": "Get Fault Reg Vector 0",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -217,22 +209,22 @@
           }
         },
         "ComparedValue": 0,
+        "UserTitle": "Get Fault Reg Vector 0",
         "IsPass": false,
-        "PassNextId": 1,
+        "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 16
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
-        "Name": "ScriptNodeGetRegisterValues 14",
+        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
-        },
-        "UserTitle": "Get Fault Reg Vector 1",
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 14",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -435,22 +427,22 @@
           }
         },
         "ComparedValue": 0,
+        "UserTitle": "Get Fault Reg Vector 1",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 1
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
-        "Name": "ScriptNodeGetRegisterValues 15",
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
-        },
-        "UserTitle": "Get Fusa P-BIT Fault Vector",
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -543,22 +535,22 @@
           }
         },
         "ComparedValue": 0,
+        "UserTitle": "Get Fusa P-BIT Fault Vector",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 2
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
-        "Name": "ScriptNodeGetRegisterValues 16",
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
-        },
-        "UserTitle": "Get Fusa C-BIT Fault Vector",
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -646,10 +638,149 @@
           }
         },
         "ComparedValue": 0,
+        "UserTitle": "Get Fusa C-BIT Fault Vector",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor Control Source",
+          "Default": "VCU",
+          "Cmd": "mtrctrlsrc",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "VCU",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Manual",
+                "Value": "2"
+              }
+            ]
+          },
+          "Name": "Control Source",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
+        },
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "Operation",
+            "Description": "Motor Control Source",
+            "Default": "VCU",
+            "Cmd": "mtrctrlsrc",
+            "Range": null,
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": true,
+            "DropDown": {
+              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+              "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "VCU",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Manual",
+                  "Value": "2"
+                }
+              ]
+            },
+            "Name": "Control Source",
+            "Units": null,
+            "DeviceType": 1,
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
+          },
+          "Ni6002_ExpectedRPM": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": -1,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Control Source VCU",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 0,
+        "ID": 17,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -742,12 +873,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -833,9 +964,9 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State (ATE)",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -961,12 +1092,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Active Damping to OFF",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1076,12 +1207,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set AB Fault Threshold to 5000",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1191,12 +1322,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Start to 150",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1306,12 +1437,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Cut to 150",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1437,12 +1568,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Low Voltage Fault",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1568,12 +1699,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Over Temp Fault",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1699,12 +1830,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Temp Sensor Fault",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1732,36 +1863,6 @@
           "DropDown": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
-              },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Enabled",
@@ -1823,36 +1924,6 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Disabled",
                   "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
                 }
               ]
             },
@@ -1890,12 +1961,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Current Sensor Factory Gain Fault",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2021,12 +2092,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Under Voltage Fault",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2152,12 +2223,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Can Bus No Communication Fault",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
