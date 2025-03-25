@@ -39396,7 +39396,7 @@
                           "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
-                      "Value": 37.5,
+                      "Value": 212.5,
                       "ExtraData": {
                         "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
                         "Parameter": null,
@@ -39443,7 +39443,7 @@
                       "UserTitle": "Set Offset Angle",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 1",
-                      "Description": "Set  \"Angle Offset (Encoder) (MCU)\" = 37.5 - ID:1",
+                      "Description": "Set  \"Angle Offset (Encoder) (MCU)\" = 212.5 - ID:1",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Count Direction (MCU)\" = 1 - ID:2",
