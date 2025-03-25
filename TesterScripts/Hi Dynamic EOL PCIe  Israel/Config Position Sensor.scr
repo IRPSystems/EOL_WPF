@@ -45,7 +45,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 212.5,
+        "Value": 70.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -168,8 +168,8 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 1,
-        "ValueDropDwonIndex": 0,
+        "Value": -1,
+        "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
