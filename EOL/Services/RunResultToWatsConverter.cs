@@ -1,4 +1,6 @@
-﻿using DeviceCommunicators.Models;
+﻿using DeviceCommunicators.MCU;
+using DeviceCommunicators.Models;
+using Entities.Models;
 using EOL.Models;
 using Microsoft.Xaml.Behaviors.Media;
 using Newtonsoft.Json.Linq;
@@ -293,7 +295,7 @@ namespace EOL.Services
             try
             {
                 step.NumericLimits = new List<NumericLimit>();
-
+                step.StringValues = new List<StringValue>();
 
                 string compOperator = compare.Comparation switch
                 {
@@ -310,7 +312,37 @@ namespace EOL.Services
 
                 if (compare.IsExecuted)
                 {
-                    if (compare.ValueRight is string stringValue)
+                    if (compare.ValueLeft is DeviceParameterData paramleft)
+                    { 
+                       // Use reflection to check if the class has a DropdownParameter property
+                       var dropdownProperty = paramleft.GetType().GetProperty("DropDown");
+                        if (dropdownProperty != null)
+                        {
+                            var dropdownValue = dropdownProperty.GetValue(paramleft);
+                            if (dropdownValue != null && paramleft.Value is string strvalue)
+                            {
+                                foreach (var item in (List<DropDownParamData>)dropdownValue)
+                                {
+                                    if (item.Value == compare.ValueRight.ToString())
+                                    {
+                                        step.StepType = StepTypes.ET_SVT;
+                                        StringValue stringvalue = new StringValue
+                                        {
+                                            Name = paramleft.Name + " (" + paramleft.DeviceType.ToString() + ")",
+                                            Value = strvalue,
+                                            CompOperator = compOperator,
+                                            Status = step.Status,
+                                            StringLimit = item.Name
+                                        };
+                                        step.StringValues.Add(stringvalue);
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                    else if (compare.ValueRight is string stringValue)
                     {
 
                         step.StepType = StepTypes.ET_NLT;
@@ -339,13 +371,13 @@ namespace EOL.Services
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
-                    else if (compare.ValueRight is DeviceParameterData param)
+                    else if (compare.ValueRight is DeviceParameterData paramright)
                     {
                         step.StepType = StepTypes.ET_MNLT;
                         NumericLimit numericlimitparam = CreateNumericLimit(
                             compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
-                            Convert.ToDouble(param.Value),
-                            Convert.ToDouble(param.Value),
+                            Convert.ToDouble(paramright.Value),
+                            Convert.ToDouble(paramright.Value),
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
@@ -353,10 +385,10 @@ namespace EOL.Services
                         );
                         step.NumericLimits.Add(numericlimitparam);
                         NumericLimit numericlimitcompared = CreateNumericLimit(
-                            param.Name + " (" + param.DeviceType.ToString() + ")",
+                            paramright.Name + " (" + paramright.DeviceType.ToString() + ")",
                             0,
                             0,
-                            Convert.ToDouble(param.Value),
+                            Convert.ToDouble(paramright.Value),
                             compare.Parameter.Units,
                             CompOperator.LOG,
                             step.Status
@@ -508,6 +540,7 @@ namespace EOL.Services
             public const string ET_MSVT = "ET_MSVT";
             public const string ET_PFT = "ET_PFT";
             public const string ET_MPFT = "ET_MPFT";
+            public const string ET_SVT = "ET_SVT";
         }
         public static class CompOperator
         {
