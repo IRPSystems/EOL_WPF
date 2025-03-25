@@ -95,7 +95,7 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
         "IsPass": false,
         "PassNextId": 2,

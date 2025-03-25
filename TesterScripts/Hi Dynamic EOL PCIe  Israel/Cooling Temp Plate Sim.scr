@@ -2781,7 +2781,7 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Temperature to 36 ",
         "IsPass": false,
         "PassNextId": 0,

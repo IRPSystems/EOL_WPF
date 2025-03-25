@@ -1025,7 +1025,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "ValueRight": 40.0,
+        "ValueRight": 400000.0,
         "ValueDropDwonIndex": -1,
         "ValueDropDwonIndex_NumatoGPIOPort": 0,
         "Comparation": 4,

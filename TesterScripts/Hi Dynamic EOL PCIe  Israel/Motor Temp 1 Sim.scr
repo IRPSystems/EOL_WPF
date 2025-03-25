@@ -2781,7 +2781,7 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 Temperature to 7",
         "IsPass": false,
         "PassNextId": 0,
