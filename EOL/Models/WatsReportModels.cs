@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 
 
-namespace WatsReportModels
+namespace EOL.Models
 {
 
     [XmlRoot("Reports", Namespace = "http://wats.virinco.com/schemas/WATS/Report/wsxf")]
@@ -151,8 +151,14 @@ namespace WatsReportModels
         [XmlElement("ReportText")]
         public string ReportText { get; set; }
 
-        [XmlElement("StepErrorMessage")]
+        [XmlAttribute("StepErrorMessage")]
         public string StepErrorMessage { get; set; }
+
+        [XmlAttribute("StepErrorCode")]
+        public int StepErrorCode { get; set; }
+
+        [XmlAttribute("StepErrorCodeFormat")]
+        public string StepErrorCodeFormat { get; set; }
 
         [XmlElement("SequenceCall")]
         public SequenceCall Sequencecall { get; set; }

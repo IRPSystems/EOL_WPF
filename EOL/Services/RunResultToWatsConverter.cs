@@ -19,7 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using WatsReportModels;
+using WatsConstants;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.AxHost;
 
@@ -32,8 +32,8 @@ namespace EOL.Services
 
         private string Location = String.Empty;
 
-        private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
-        //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
+        //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
+        private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
 
         private const string errorLogPath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
         private const string ReportName = "ReportWats.xml";
@@ -66,7 +66,7 @@ namespace EOL.Services
 
         public Step HandleStep(ScriptStepBase stepbase)
         {
-            string Status = ReturnStatus(stepbase.IsPass, stepbase.IsExecuted);
+            string Status = ReturnStatus(stepbase.IsPass, stepbase.IsExecuted , stepbase.IsError);
 
             Step step = new Step
             {
@@ -76,6 +76,17 @@ namespace EOL.Services
                 TotalTime = stepbase.ExecutionTime.TotalSeconds,
                 StepType = StepTypes.Action,
             };
+
+            if (!stepbase.IsPass && stepbase.IsExecuted)
+            {
+                step.StepCausedUUTFailure = 1;
+                if (stepbase.IsError == true)
+                {
+                    step.StepErrorMessage = stepbase.ErrorMessage;
+                    step.StepErrorCode = 1;
+                    step.StepErrorCodeFormat = "Error";
+                }
+            }
 
             switch (stepbase)
             {
@@ -101,12 +112,6 @@ namespace EOL.Services
                     {
                         try
                         {
-                            if (!stepbase.IsPass && stepbase.IsExecuted)
-                            {
-                                step.StepCausedUUTFailure = 1;
-                                step.StepErrorMessage = stepbase.ErrorMessage;
-                            }
-
                             return step;
                         }
                         catch(Exception ex)
@@ -422,10 +427,13 @@ namespace EOL.Services
 
                 if (compareWithTolerance.IsExecuted)
                 {
+                    string numericStatus = step.Status;
+                    if (step.Status == StatusCodes.Error)
+                        numericStatus = StatusCodes.Failed;
 
                     if (compareWithTolerance.CompareValue is string fixedvalue)
                     {
-                        double lowerToleranceValue = CalculateToleranceValue(Convert.ToDouble(fixedvalue), compareWithTolerance);
+                        double lowerToleranceValue = CalculateLowerToleranceValue(Convert.ToDouble(fixedvalue), compareWithTolerance);
                         double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(fixedvalue), compareWithTolerance);
 
                         step.StepType = StepTypes.ET_NLT;
@@ -436,14 +444,14 @@ namespace EOL.Services
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
-                            step.Status
+                            numericStatus
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
                     else if (compareWithTolerance.CompareValue is DeviceParameterData param)
                     {
 
-                        double lowerToleranceValue = CalculateToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
+                        double lowerToleranceValue = CalculateLowerToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
                         double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
 
                         step.StepType = StepTypes.ET_MNLT;
@@ -454,7 +462,7 @@ namespace EOL.Services
                             Convert.ToDouble(compareWithTolerance.Parameter.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
-                            step.Status                           
+                            numericStatus
                         );
                         step.NumericLimits.Add(numericlimitparam);
                         NumericLimit numericlimitcompared = CreateNumericLimit(
@@ -464,17 +472,22 @@ namespace EOL.Services
                             Convert.ToDouble(param.Value),
                             compareWithTolerance.Parameter.Units,
                             CompOperator.LOG,
-                            step.Status
+                            numericStatus
                         );
                         step.NumericLimits.Add(numericlimitcompared);
                     }
                 }
 
-                if (!compareWithTolerance.IsPass && compareWithTolerance.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = compareWithTolerance.ErrorMessage;
-                }
+                //if (!compareWithTolerance.IsPass && compareWithTolerance.IsExecuted )
+                //{
+                //    step.StepCausedUUTFailure = 1;
+                //    if (compareWithTolerance.IsError)
+                //    {
+                //        step.StepErrorMessage = compareWithTolerance.ErrorMessage;
+                //        step.StepErrorCode = 1;
+                //        step.StepErrorCodeFormat = "Error";
+                //    }
+                //}
                 return step;
             }
             catch(Exception ex)
@@ -500,68 +513,37 @@ namespace EOL.Services
 
         }
 
-        private string ReturnStatus(bool ispass , bool isexecuted)
-        {
-            return ((ispass == true && isexecuted == true) ? "Passed" : (isexecuted == true) ? "Failed" : "Skipped");
+        private string ReturnStatus(bool ispass , bool isexecuted , bool? iserror)
+        {           
+            return ((ispass == true && isexecuted == true) ? StatusCodes.Passed : (isexecuted == true) ? ((iserror == true) ? StatusCodes.Error : StatusCodes.Failed ): StatusCodes.Skipped);
         }
 
-        private double CalculateToleranceValue(double fixedValue, ScriptStepCompareWithTolerance compareWithTolerance)
+        private double CalculateLowerToleranceValue(double fixedValue, ScriptStepCompareWithTolerance compareWithTolerance)
         {
             double value = Convert.ToDouble(fixedValue);
-            if (compareWithTolerance.IsUseParamFactor)
+            if (compareWithTolerance.IsUseCompareValueFactor)
             {
-                value *= compareWithTolerance.ParamFactor;
+                value *= compareWithTolerance.CompareValueFactor;
             }
 
             return compareWithTolerance.IsPercentageTolerance
-                ? value - (compareWithTolerance.Tolerance * value)
+                ? value - (compareWithTolerance.Tolerance/100 * value)
                 : value - compareWithTolerance.Tolerance;
         }
 
         private double CalculateUpperToleranceValue(double fixedValue, ScriptStepCompareWithTolerance compareWithTolerance)
         {
             double value = Convert.ToDouble(fixedValue);
-            if (compareWithTolerance.IsUseParamFactor)
+            if (compareWithTolerance.IsUseCompareValueFactor)
             {
-                value *= compareWithTolerance.ParamFactor;
+                value *= compareWithTolerance.CompareValueFactor;
             }
 
             return compareWithTolerance.IsPercentageTolerance
-                ? value + (compareWithTolerance.Tolerance * value)
+                ? value + (compareWithTolerance.Tolerance/100 * value)
                 : value + compareWithTolerance.Tolerance;
         }
-        public static class StepTypes
-        {
-            public const string SequenceCall = "SequenceCall";
-            public const string Action = "Action";
-            public const string ET_NLT = "ET_NLT";
-            public const string ET_MNLT = "ET_MNLT";
-            public const string ET_A = "ET_A";
-            public const string ET_MSVT = "ET_MSVT";
-            public const string ET_PFT = "ET_PFT";
-            public const string ET_MPFT = "ET_MPFT";
-            public const string ET_SVT = "ET_SVT";
-        }
-        public static class CompOperator
-        {
-            public const string Equal = "EQ"; // Equal
-            public const string NotEqual = "NE"; // Not Equal
-            public const string Larger = "GT"; // Greater than
-            public const string Smaller = "LT"; // Less than
-            public const string LargerEqual = "GE"; // Greater or equal
-            public const string SmallerEqual = "LE"; // Less or equal
-            public const string GTLT = "GTLT"; // Greater than low limit, less than high limit
-            public const string GELE = "GELE"; // Greater or equal than low limit, less or equal than high limit
-            public const string GELT = "GELT"; // Greater or equal than low limit, less than high limit
-            public const string GTLE = "GTLE"; // Greater than low limit, less or equal than high limit
-            public const string LTGT = "LTGT"; // Less than low limit, greater than high limit
-            public const string LEGE = "LEGE"; // Less or equal than low limit, greater or equal than high limit
-            public const string LEGT = "LEGT"; // Less or equal than low limit, greater than high limit
-            public const string LTGE = "LTGE"; // Less than low limit, greater or equal than high limit
-            public const string LOG = "LOG"; // Logging values (no comparison)
-            public const string CASESENSIT = "CASESENSIT"; // Case sensitive
-            public const string IGNORECASE = "IGNORECASE"; // Ignore case / not CASESENSIT
-        }
+
 
     }
 

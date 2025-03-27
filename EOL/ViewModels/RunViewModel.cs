@@ -29,7 +29,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using TestersDB_Lib.Models;
-using WatsReportModels;
+using WatsConstants;
 using static FlashingToolLib.FlasherService;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -457,12 +457,11 @@ namespace EOL.ViewModels
 				RunPercentage = 100;
             RunResult singleTestResult = new RunResult();
 
-			List<Step> watsSteps = new List<Step>();
-			string watsErrorMessage;
+			Reports watsReports;
 
-            Stop(stopMode, ref singleTestResult,ref watsSteps , out watsErrorMessage);
+            Stop(stopMode, ref singleTestResult,out watsReports);
 
-            HandleTestData(singleTestResult , watsSteps , watsErrorMessage);
+            HandleTestData(singleTestResult , watsReports );
 
 			PostRunActions();
 
@@ -470,7 +469,7 @@ namespace EOL.ViewModels
 				RunState = RunStateEnum.Aborted;
 		}
 
-        private void HandleTestData(RunResult singleTestResult, List<Step> watsSteps , string watsErrorMessage)
+        private void HandleTestData(RunResult singleTestResult,Reports watsreports)
         {
             _csvWritter.WriteTestResult(
                 singleTestResult,
@@ -479,46 +478,46 @@ namespace EOL.ViewModels
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
 
-			//build wats reports object
-			Reports reports = new Reports
-			{
-				Report = new Report
-				{
-					Type = "UUT",
-					Start = singleTestResult.StartTimeStamp8601,
-					Result = (isTestTerminated || _SafetyScript.IsPass == false) ? "Terminated" : singleTestResult.TestStatus,
-					SerialNumber = singleTestResult.SerialNumber,
-					PartNumber = singleTestResult.PartNumber,
-					MachineName = singleTestResult.RackNumber, // Set as needed
-					MiscInfo = new List<WatsReportModels.MiscInfo>(),
+			////build wats reports object
+			//Reports reports = new Reports
+			//{
+			//	Report = new Report
+			//	{
+			//		Type = "UUT",
+			//		Start = singleTestResult.StartTimeStamp8601,
+			//		Result = (isTestTerminated || _SafetyScript.IsPass == false) ? "Terminated" : singleTestResult.TestStatus,
+			//		SerialNumber = singleTestResult.SerialNumber,
+			//		PartNumber = singleTestResult.PartNumber,
+			//		MachineName = singleTestResult.RackNumber, // Set as needed
+			//		MiscInfo = new List<WatsReportModels.MiscInfo>(),
 
-					UUT = new WatsReportModels.UUT
-					{
-						UserLoginName = singleTestResult.OperatorName,
-						ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
-						ErrorMessage = singleTestResult.FailedStep?.ErrorMessage, // Set as needed
-					},
-					Process = new Process
-					{
-						Code = "22",
-						Name = "Or - Testing"
-					},
+			//		UUT = new WatsReportModels.UUT
+			//		{
+			//			UserLoginName = singleTestResult.OperatorName,
+			//			ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
+			//			ErrorMessage = singleTestResult.FailedStep?.ErrorMessage, // Set as needed
+			//		},
+			//		Process = new Process
+			//		{
+			//			Code = "22",
+			//			Name = "Or - Testing"
+			//		},
 
-					Steps = watsSteps
-				}
-			};
+			//		Steps = watsSteps
+			//	}
+			//};
 
-            MiscInfo miscInfo = new MiscInfo
-            {
-                Typedef = string.Empty,
-                Description = "Error Message",
-				Text = watsErrorMessage
-            };
+   //         MiscInfo miscInfo = new MiscInfo
+   //         {
+   //             Typedef = string.Empty,
+   //             Description = "Error Message",
+			//	Text = watsErrorMessage
+   //         };
 
-            reports.Report.MiscInfo.Add(miscInfo);
+            //reports.Report.MiscInfo.Add(miscInfo);
 
 			if(WritetoWatsEnabled)
-                _runResultToWatsConverter.SaveRunResultToXml(reports);
+                _runResultToWatsConverter.SaveRunResultToXml(watsreports);
 
             //var converter = new RunResultToWatsConverter();
             //string token = "dGVzdDpNSGc1c3YwbTg1QkpqbTcqQmY4eUZJbHFLMjcxZ1E=";
@@ -908,9 +907,9 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,ref List<Step> watsSteps , out string watsErrorMessage)
+		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,out Reports watsreports)
 		{
-            watsErrorMessage = string.Empty;
+			watsreports = new Reports();
 
             try
             {
@@ -934,14 +933,19 @@ namespace EOL.ViewModels
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
 
-				Step ProjectStep = new Step
+				List<Step> watsSteps = new List<Step>();
+
+                string watsErrorMessage = string.Empty;
+
+                Step ProjectStep = new Step
 				{
 					Steps = new List<Step>(),
-                    StepType = RunResultToWatsConverter.StepTypes.SequenceCall,
+                    StepType = StepTypes.SequenceCall,
                     Group = "Main"
                 };
 
                 ScriptStepBase failedStep = null;
+				bool iserror = false;
 				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
 				foreach (GeneratedProjectData project in _generatedProjectsList)
 				{
@@ -963,17 +967,16 @@ namespace EOL.ViewModels
 						{
 							Group = "Main",
 							Name = script.Name,
-							Status = ((script.IsPass == true && script.isExecuted) ? "Passed" : (script.isExecuted == true) ? "Failed" : "Skipped"),
+							Status = ((script.IsPass == true && script.isExecuted) ? StatusCodes.Passed : (script.isExecuted == true) ? StatusCodes.Failed : StatusCodes.Skipped),
 							Sequencecall = new SequenceCall
 							{
 								Name = script.Name
 							},
 							Steps = new List<Step>(),
-							StepType = RunResultToWatsConverter.StepTypes.SequenceCall
+							StepType = StepTypes.SequenceCall
 						};
 						//Cumulative execution time for tests				
 						double totalExecutionTime;
-
                         if ((script?.IsPass == false) && !OperatorErrorMessage.Contains("Test"))
 							OperatorErrorMessage += "\r\nTest: " + script.Name;
 
@@ -983,6 +986,7 @@ namespace EOL.ViewModels
 							eolStepSummerysList,
 							out totalExecutionTime,
 							out errorMessage,
+							ref iserror,
 							ref teststep
 							);
 
@@ -1038,8 +1042,7 @@ namespace EOL.ViewModels
 					_stepSetParameter.Execute();
 				}
 
-				ProjectStep.Status = singleTestResult.TestStatus;
-				watsSteps.Add(ProjectStep);
+
 
                 singleTestResult.SerialNumber = _runData.SerialNumber;
                 singleTestResult.PartNumber = _runData.PartNumber;
@@ -1049,6 +1052,45 @@ namespace EOL.ViewModels
                 singleTestResult.EndTimeStamp = _runData.EndTime.ToString("dd-MMM-yyyy hh:mm:ss.fff");
 				singleTestResult.StartTimeStamp8601 = _runData.StartTime.ToString("O");
 				singleTestResult.ExecutionTime = _runData.Duration.TotalSeconds;
+
+                ProjectStep.Status = singleTestResult.TestStatus;
+                watsSteps.Add(ProjectStep);
+
+                watsreports = new Reports
+                {
+                    Report = new Report
+                    {
+                        Type = "UUT",
+                        Start = singleTestResult.StartTimeStamp8601,
+                        Result = (isTestTerminated || _SafetyScript.IsPass == false) ? StatusCodes.Terminated : (iserror == true) ? StatusCodes.Error: singleTestResult.TestStatus,
+                        SerialNumber = singleTestResult.SerialNumber,
+                        PartNumber = singleTestResult.PartNumber,
+                        MachineName = singleTestResult.RackNumber, // Set as needed
+                        MiscInfo = new List<MiscInfo>(),
+
+                        UUT = new Models.UUT
+                        {
+                            UserLoginName = singleTestResult.OperatorName,
+                            ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
+                            ErrorMessage = singleTestResult.FailedStep?.ErrorMessage, // Set as needed
+                        },
+                        Process = new Process
+                        {
+                            Code = "22",
+                            Name = "Or - Testing"
+                        },
+
+                        Steps = watsSteps
+                    }
+                };
+
+                MiscInfo miscInfo = new MiscInfo
+                {
+                    Typedef = string.Empty,
+                    Description = "Error Message",
+                    Text = watsErrorMessage
+                };
+                watsreports.Report.MiscInfo.Add(miscInfo);
             }
 			catch (Exception ex)
 			{
@@ -1078,10 +1120,11 @@ namespace EOL.ViewModels
 			List<EOLStepSummeryData> eolStepSummerysList,
             out double totalExecutionTime,
 			out string watsErrorMessage,
+			ref bool iserror,
             ref Step watsStep
 			)
 		{
-			watsErrorMessage = string.Empty; 
+            watsErrorMessage = string.Empty; 
             totalExecutionTime = 0;
             ScriptStepBase failedStep = null;
 			foreach (IScriptItem item in script.ScriptItemsList)
@@ -1115,6 +1158,8 @@ namespace EOL.ViewModels
 						if (!string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
 							watsErrorMessage = Step.StepErrorMessage;
 						totalExecutionTime += Step.TotalTime;
+						if (stepBase.IsError == true)
+							iserror = true;
 						watsStep.Steps.Add(Step);
 						
                     }
@@ -1131,13 +1176,13 @@ namespace EOL.ViewModels
                         {
                             Group = "Main",
                             Name = subscript.UserTitle ?? subscript.Name,
-                            Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? "Passed" : (subscript.IsExecuted == true) ? "Failed" : "Skipped"),
+                            Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? StatusCodes.Passed : (subscript.IsExecuted == true) ? StatusCodes.Failed : StatusCodes.Skipped),
                             Sequencecall = new SequenceCall
                             {
                                 Name = subscript.UserTitle ?? subscript.Name
                             },
                             Steps = new List<Step>(),
-                            StepType = RunResultToWatsConverter.StepTypes.SequenceCall
+                            StepType = StepTypes.SequenceCall
                         };
                     }
 
@@ -1154,6 +1199,7 @@ namespace EOL.ViewModels
 						eolStepSummerysList,
 						out cumulatedExecutionTime,
 						out watsErrorMessage,
+						ref iserror,
                         ref subsctiptstep);
 
 					subsctiptstep.TotalTime = cumulatedExecutionTime;
