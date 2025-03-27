@@ -102,8 +102,8 @@ namespace EOL.Services
                     return HandleScriptStepGetRegisterValues(getregistervalues, step);
                 case ScriptStepEOLCalibrate calibrate:
                     return HandleScriptStepEOLCalibrate(calibrate, step);
-                //case ScriptStepEOLFlash flash:
-                //    return HandleScriptStepEOLFlash(flash);
+                case ScriptStepEOLFlash flash:
+                    return HandleScriptStepEOLFlash(flash, step);
                 //case ScriptStepEOLPrint print:
                 //    return HandleScriptStepEOLPrint(print);
 
@@ -171,11 +171,6 @@ namespace EOL.Services
 
                 }
 
-                if (!calibrate.IsPass && calibrate.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = calibrate.ErrorMessage;
-                }
                 return step;
             }
             catch(Exception ex)
@@ -205,11 +200,7 @@ namespace EOL.Services
                     step.PassFails.Add(passFail);
                 }
 
-                if (!comparebit.IsPass && comparebit.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = comparebit.ErrorMessage;
-                }
+
                 return step;
             }
             catch(Exception ex)
@@ -238,11 +229,7 @@ namespace EOL.Services
                     step.PassFails.Add(passFail);
                 }
 
-                if (!getregistervalues.IsPass && getregistervalues.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = getregistervalues.ErrorMessage;
-                }
+
                 return step;
             }
             catch (Exception ex)
@@ -270,11 +257,7 @@ namespace EOL.Services
                     step.PassFails.Add(passFail);
                 }
 
-                if (!sendSN.IsPass && sendSN.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = sendSN.ErrorMessage;
-                }
+
                 return step;
             }
             catch (Exception ex)
@@ -290,9 +273,31 @@ namespace EOL.Services
             throw new NotImplementedException();
         }
 
-        private Step HandleScriptStepEOLFlash(ScriptStepEOLFlash flash)
+        private Step HandleScriptStepEOLFlash(ScriptStepEOLFlash flash, Step step)
         {
-            throw new NotImplementedException();
+            try
+            {
+                step.PassFails = new List<PassFail>();
+                string fileName = Path.GetFileName(flash.FilePath);
+
+                if (flash.IsExecuted)
+                {
+                    step.StepType = StepTypes.ET_PFT;
+                    PassFail passFail = new PassFail
+                    {
+                        Name = fileName,
+                        Status = step.Status
+                    };
+                    step.PassFails.Add(passFail);
+                }
+
+                return step;
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, nameof(HandleScriptStepCompareBit));
+                throw;
+            }
         }
 
         private Step HandleScriptStepCompare(ScriptStepCompare compare , Step step)
@@ -403,11 +408,6 @@ namespace EOL.Services
 
                 }
 
-                if (!compare.IsPass && compare.IsExecuted)
-                {
-                    step.StepCausedUUTFailure = 1;
-                    step.StepErrorMessage = compare.ErrorMessage;
-                }
                 return step;
             }
             catch(Exception ex)
@@ -427,6 +427,7 @@ namespace EOL.Services
 
                 if (compareWithTolerance.IsExecuted)
                 {
+                    double parametervalue = (compareWithTolerance.IsUseParamFactor == true) ? Convert.ToDouble(compareWithTolerance.Parameter.Value) * compareWithTolerance.ParamFactor : Convert.ToDouble(compareWithTolerance.Parameter.Value);
                     string numericStatus = step.Status;
                     if (step.Status == StatusCodes.Error)
                         numericStatus = StatusCodes.Failed;
@@ -441,7 +442,7 @@ namespace EOL.Services
                             compareWithTolerance.Parameter.Name + " (" +compareWithTolerance.Parameter.DeviceType.ToString() + ")",
                             lowerToleranceValue,
                             upperToleranceValue,
-                            Convert.ToDouble(compareWithTolerance.Parameter.Value),
+                            parametervalue,
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
                             numericStatus
@@ -459,7 +460,7 @@ namespace EOL.Services
                             compareWithTolerance.Parameter.Name + " (" + compareWithTolerance.Parameter.DeviceType.ToString() + ")",
                             lowerToleranceValue,
                             upperToleranceValue,
-                            Convert.ToDouble(compareWithTolerance.Parameter.Value),
+                            parametervalue,
                             compareWithTolerance.Parameter.Units,
                             CompOperator.GELE,
                             numericStatus
