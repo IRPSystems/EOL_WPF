@@ -7,6 +7,7 @@ using EOL.Services;
 using System;
 using System.ComponentModel;
 using System.Globalization;
+using System.IO;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -91,51 +92,147 @@ namespace EOL.ViewModels
 
         public void LoadUserConfigToSettingsView()
         {
-            foreach(FilesData fileData in SettingsData.FilesList)
+            string fileNotFoundPrefixMsg = "File not found, please select a valid path:";
+            string completeErrMsg = fileNotFoundPrefixMsg;
+            foreach (FilesData fileData in SettingsData.FilesList)
             {
                 if (fileData.Description == "Reports Path")
                 {
-                    fileData.Path = _userDefaultSettings.ReportsSavingPath;
-                    ReportsPathEventChanged?.Invoke();
+                    if (_userDefaultSettings.ReportsSavingPath == null)
+                    {
+                        continue;
+                    }
+                    if (!Directory.Exists(_userDefaultSettings.ReportsSavingPath)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.ReportsSavingPath;
+                        ReportsPathEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "Main Script Path")
                 {
-                    fileData.Path = _userDefaultSettings.DefaultMainSeqConfigFile;
-                    MainScriptEventChanged?.Invoke();
+                    if (_userDefaultSettings.DefaultMainSeqConfigFile == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.DefaultMainSeqConfigFile)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.DefaultMainSeqConfigFile;
+                        MainScriptEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "Sub Script Path")
                 {
-                    fileData.Path = _userDefaultSettings.DefaultSubScriptFile;
-                    SubScriptEventChanged?.Invoke();
+                    if (_userDefaultSettings.DefaultSubScriptFile == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.DefaultSubScriptFile)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.DefaultSubScriptFile;
+                        SubScriptEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "Safety Officer Script Path")
                 {
-                    fileData.Path = _userDefaultSettings.DefaultSafetyScriptFile;
-                    SafetyScriptEventChanged?.Invoke();
+                    if (_userDefaultSettings.DefaultSafetyScriptFile == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.DefaultSafetyScriptFile)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.DefaultSafetyScriptFile;
+                        SafetyScriptEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "Abort Script Path")
                 {
-                    fileData.Path = _userDefaultSettings.DefaultAbortScriptFile;
-                    AbortScriptEventChanged?.Invoke();
+                    if (_userDefaultSettings.DefaultAbortScriptFile == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.DefaultAbortScriptFile)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.DefaultAbortScriptFile;
+                        AbortScriptEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "Monitor Script Path")
                 {
-                    fileData.Path = _userDefaultSettings.DefaultMonitorLogScript;
-                    MonitorScriptEventChanged?.Invoke();
+                    if (_userDefaultSettings.DefaultMonitorLogScript == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.DefaultMonitorLogScript)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.DefaultMonitorLogScript;
+                        MonitorScriptEventChanged?.Invoke();
+                    }
                 }
                 else if (fileData.Description == "First Flash File Path")
                 {
-                    fileData.Path = _userDefaultSettings.FirstFlashFilePath;
-                    FirstFlashFileEventChanged?.Invoke();
+                    if (_userDefaultSettings.FirstFlashFilePath == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.FirstFlashFilePath)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.FirstFlashFilePath;
+                        FirstFlashFileEventChanged?.Invoke();
+                    }
                 }
                 else
                 {
-                    fileData.Path = _userDefaultSettings.SecondFlashFilePath;
-                    SecondFlashFileEventChanged?.Invoke();
+                    if (_userDefaultSettings.SecondFlashFilePath == null)
+                    {
+                        continue;
+                    }
+                    if (!File.Exists(_userDefaultSettings.SecondFlashFilePath)) // check if the path is valid
+                    {
+                        completeErrMsg += "\r\n" + fileData.Description;
+                    }
+                    else
+                    {
+                        fileData.Path = _userDefaultSettings.SecondFlashFilePath;
+                        SecondFlashFileEventChanged?.Invoke();
+                    }
                 }
             }
+
             SettingsData.IsIgnorFail = _userDefaultSettings.isSofIgnore;
             SettingsData.IsPrintLabel = _userDefaultSettings.isPrintLabel;
+
+            if (completeErrMsg != fileNotFoundPrefixMsg)
+            {
+                MessageBox.Show(completeErrMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
