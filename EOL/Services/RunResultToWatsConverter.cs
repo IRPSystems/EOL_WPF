@@ -477,6 +477,23 @@ namespace EOL.Services
                         );
                         step.NumericLimits.Add(numericlimitcompared);
                     }
+                    else
+                    {
+                        double lowerToleranceValue = CalculateLowerToleranceValue(Convert.ToDouble(compareWithTolerance.CompareValue), compareWithTolerance);
+                        double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(compareWithTolerance.CompareValue), compareWithTolerance);
+
+                        step.StepType = StepTypes.ET_NLT;
+                        NumericLimit numericlimit = CreateNumericLimit(
+                            compareWithTolerance.Parameter.Name + " (" + compareWithTolerance.Parameter.DeviceType.ToString() + ")",
+                            lowerToleranceValue,
+                            upperToleranceValue,
+                            parametervalue,
+                            compareWithTolerance.Parameter.Units,
+                            CompOperator.GELE,
+                            numericStatus
+                        );
+                        step.NumericLimits.Add(numericlimit);
+                    }
                 }
 
                 //if (!compareWithTolerance.IsPass && compareWithTolerance.IsExecuted )
