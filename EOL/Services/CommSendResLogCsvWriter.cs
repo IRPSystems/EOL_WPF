@@ -36,31 +36,31 @@ namespace EOL.Services
             csvLine.Clear();
         }
 
-        public void WriteLog(List<CommSendResLog> logs)
+        public void WriteLog(CommSendResLog log, string sn)
         {
-            logs = TrimSendResLogs(logs);
-            csvLine.Clear();
-            foreach (var log in logs)
-            {
-                var logValues = new string[]
-                {
-                    "'" + log.timeStamp.ToString("yyyy-MM-dd HH:mm:ss.fff"),
-                    log.StepName,
-                    log.Tool,
-                    log.ParamName,
-                    log.Device,
-                    log.SendCommand,
-                    log.ReceivedValue,
-                    log.CommErrorMsg,
-                    log.NumberOfTries.ToString()
-                };
 
-                for (int i = 0; i < logValues.Length; i++)
-                {
-                    logValues[i] = CsvHelperTool.RemoveCsvSpecialCharacters(logValues[i]);
-                }
-                csvLine.AppendLine(string.Join(",", logValues));
+            fullPath = Path.Combine(destinationFolder, fileNamePrefix + " - " + sn + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")) + ".csv");
+            var csvLine = new StringBuilder();
+
+            csvLine.AppendLine("StepName,Tool,Parameter,Device,SendCommand,ReceivedValue,CommErrorMsg,NumberOfTries");
+
+            var logValues = new string[]
+            {
+                log.StepName,
+                log.Tool,
+                log.ParamName,
+                log.Device,
+                log.SendCommand,
+                log.ReceivedValue,
+                log.CommErrorMsg,
+                log.NumberOfTries.ToString()
+            };
+
+            for (int i = 0; i < logValues.Length; i++)
+            {
+                logValues[i] = CsvHelperTool.RemoveCsvSpecialCharacters(logValues[i]);
             }
+            csvLine.AppendLine(string.Join(",", logValues));
 
             File.AppendAllText(fullPath, csvLine.ToString());
         }
