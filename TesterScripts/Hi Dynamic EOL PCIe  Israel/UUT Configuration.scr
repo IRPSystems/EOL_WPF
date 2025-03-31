@@ -771,7 +771,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source VCU",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 7,
         "FailNextId": 0,
         "ID": 5,
         "EOLReportsSelectionData": {
@@ -779,120 +779,6 @@
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "ScriptNodeCompare 18",
-        "ValueLeft": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": " ",
-          "GroupName": "Monitor",
-          "Description": "Operational state",
-          "Default": "0",
-          "Cmd": "opstate",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              16.0
-            ]
-          },
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "off",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "bootloader",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "init",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "prechargewait",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "idle",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "driving",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "fault",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "sleepprepare",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "deepsleep",
-                "Value": "8"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "shutdown",
-                "Value": "9"
-              }
-            ]
-          },
-          "Name": "Operational state",
-          "Units": null,
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
-        },
-        "ValueRight": 4.0,
-        "ValueDropDwonIndex": -1,
-        "ValueDropDwonIndex_NumatoGPIOPort": 0,
-        "Comparation": 0,
-        "IsUseAverage": false,
-        "AverageOfNRead": 0,
-        "UserTitle": "Get Operational State (IDLE)",
-        "IsPass": false,
-        "PassNextId": 6,
-        "FailNextId": 0,
-        "ID": 18,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false
         }
       },
@@ -990,9 +876,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1078,9 +964,9 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State (ATE)",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1209,9 +1095,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Active Damping to OFF",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1324,9 +1210,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set AB Fault Threshold to 5000",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1439,9 +1325,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Start to 150",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1554,9 +1440,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Cut to 150",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1685,9 +1571,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Low Voltage Fault",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1816,9 +1702,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Over Temp Fault",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1947,9 +1833,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Temp Sensor Fault",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2078,9 +1964,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Current Sensor Factory Gain Fault",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2209,9 +2095,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Under Voltage Fault",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -2342,7 +2228,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
