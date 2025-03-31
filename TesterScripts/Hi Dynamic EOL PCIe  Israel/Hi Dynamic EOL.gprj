@@ -2760,6 +2760,40 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 1,
+              "UserTitle": "Start Safety Officer",
+              "ExecutionTime": "00:00:00",
+              "Name": "Set Parameter 4",
+              "Description": "Start Safty Officer - ID:4",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = LV Power Up - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 4,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -4960,7 +4994,7 @@
                       "Description": "Set  \"Control Source (MCU)\" = 1 - ID:5",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:6",
+                      "PassNextDescription": "Compare  Operational state (MCU) = 4 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -4972,6 +5006,135 @@
                         "IsSaveToReport": false,
                         "IsSaveToPdfExecTable": false,
                         "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                      "IsExecuted": false,
+                      "ValueLeft": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": " ",
+                        "GroupName": "Monitor",
+                        "Description": "Operational state",
+                        "Default": "0",
+                        "Cmd": "opstate",
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            0.0,
+                            16.0
+                          ]
+                        },
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": false,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "off",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "bootloader",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "init",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "prechargewait",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "idle",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "driving",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "fault",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "sleepprepare",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "deepsleep",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "shutdown",
+                              "Value": "9"
+                            }
+                          ]
+                        },
+                        "Name": "Operational state",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "ValueRight": 4.0,
+                      "Comparation": 0,
+                      "IsUseAverage": false,
+                      "AverageOfNRead": 0,
+                      "Parameter": null,
+                      "UserTitle": "Get Operational State (IDLE)",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "ScriptNodeCompare 18",
+                      "Description": "Compare  Operational state (MCU) = 4 - ID:18",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:6",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 18,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": true,
                         "IsSaveToCustomerVer": false
                       },
                       "EOLStepSummerysList": {
@@ -17009,6 +17172,40 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 1,
+              "UserTitle": "Start Safety Officer",
+              "ExecutionTime": "00:00:00",
+              "Name": "ScriptNodeSetParameter 2",
+              "Description": "Start Safty Officer - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Watch Dog Test - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -18574,7 +18771,7 @@
                               "Description": "Set  \"Control Source (MCU)\" = 1 - ID:5",
                               "OperatorErrorDescription": null,
                               "IsPass": false,
-                              "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:6",
+                              "PassNextDescription": "Compare  Operational state (MCU) = 4 - ID:18",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
@@ -18586,6 +18783,135 @@
                                 "IsSaveToReport": false,
                                 "IsSaveToPdfExecTable": false,
                                 "IsSaveToPdfDynTable": false,
+                                "IsSaveToCustomerVer": false
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "CommSendResLog": null,
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptStepCompare, ScriptHandler",
+                              "IsExecuted": false,
+                              "ValueLeft": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": " ",
+                                "GroupName": "Monitor",
+                                "Description": "Operational state",
+                                "Default": "0",
+                                "Cmd": "opstate",
+                                "Range": {
+                                  "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                                  "$values": [
+                                    0.0,
+                                    16.0
+                                  ]
+                                },
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": false,
+                                "DropDown": {
+                                  "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                                  "$values": [
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "off",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "bootloader",
+                                      "Value": "1"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "init",
+                                      "Value": "2"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "prechargewait",
+                                      "Value": "3"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "idle",
+                                      "Value": "4"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "driving",
+                                      "Value": "5"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "fault",
+                                      "Value": "6"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "sleepprepare",
+                                      "Value": "7"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "deepsleep",
+                                      "Value": "8"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "shutdown",
+                                      "Value": "9"
+                                    }
+                                  ]
+                                },
+                                "Name": "Operational state",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "ToolTip": null,
+                                "CommunicationTimeout": 0,
+                                "CommSendResLog": {
+                                  "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                                  "SendCommand": null,
+                                  "ReceivedValue": null,
+                                  "CommErrorMsg": null,
+                                  "NumberOfTries": 1,
+                                  "ParamName": null,
+                                  "Device": null,
+                                  "Tool": null,
+                                  "StepName": null,
+                                  "timeStamp": "0001-01-01T00:00:00"
+                                }
+                              },
+                              "ValueRight": 4.0,
+                              "Comparation": 0,
+                              "IsUseAverage": false,
+                              "AverageOfNRead": 0,
+                              "Parameter": null,
+                              "UserTitle": "Get Operational State (IDLE)",
+                              "ExecutionTime": "00:00:00",
+                              "Name": "ScriptNodeCompare 18",
+                              "Description": "Compare  Operational state (MCU) = 4 - ID:18",
+                              "OperatorErrorDescription": null,
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:6",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 18,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": true,
+                                "IsSaveToPdfExecTable": false,
+                                "IsSaveToPdfDynTable": true,
                                 "IsSaveToCustomerVer": false
                               },
                               "EOLStepSummerysList": {
@@ -38142,7 +38468,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -38150,12 +38476,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -38240,7 +38566,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -38248,12 +38574,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -38338,7 +38664,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -38346,12 +38672,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
@@ -38449,6 +38775,40 @@
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 1,
+              "UserTitle": "Start Safety Officer",
+              "ExecutionTime": "00:00:00",
+              "Name": "ScriptNodeSetParameter 4",
+              "Description": "Start Safty Officer - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Config Manual FOC - Repeats: 1 - ID:2",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
@@ -39555,19 +39915,19 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config Manual FOC - Repeats: 1 - ID:1\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config Manual FOC - Repeats: 1 - ID:2\"",
               "UserTitle": "Configure FOC ",
               "ExecutionTime": "00:00:00",
               "Name": "ScriptNodeSubScript 3",
-              "Description": "Sub Script = Config Manual FOC - Repeats: 1 - ID:1",
+              "Description": "Sub Script = Config Manual FOC - Repeats: 1 - ID:2",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Config Position Sensor - Repeats: 1 - ID:2",
+              "PassNextDescription": "Sub Script = Config Position Sensor - Repeats: 1 - ID:3",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 1,
+              "ID": 2,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -39972,19 +40332,19 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config Position Sensor - Repeats: 1 - ID:2\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config Position Sensor - Repeats: 1 - ID:3\"",
               "UserTitle": "Config Motor",
               "ExecutionTime": "00:00:00",
               "Name": "ScriptNodeSubScript 5",
-              "Description": "Sub Script = Config Position Sensor - Repeats: 1 - ID:2",
+              "Description": "Sub Script = Config Position Sensor - Repeats: 1 - ID:3",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Speed Estimation - Repeats: 1 - ID:3",
+              "PassNextDescription": "Sub Script = Speed Estimation - Repeats: 1 - ID:4",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 2,
+              "ID": 3,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -43256,11 +43616,11 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Speed Estimation - Repeats: 1 - ID:3\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Speed Estimation - Repeats: 1 - ID:4\"",
               "UserTitle": "Speed Estimation",
               "ExecutionTime": "00:00:00",
               "Name": "Sub Script 1",
-              "Description": "Sub Script = Speed Estimation - Repeats: 1 - ID:3",
+              "Description": "Sub Script = Speed Estimation - Repeats: 1 - ID:4",
               "OperatorErrorDescription": null,
               "IsPass": false,
               "PassNextDescription": null,
@@ -43268,7 +43628,7 @@
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 3,
+              "ID": 4,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -49822,6 +50182,40 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 1,
+              "UserTitle": "Start Safety Officer",
+              "ExecutionTime": "00:00:00",
+              "Name": "ScriptNodeSetParameter 2",
+              "Description": "Start Safty Officer - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Shut Down - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsExecuted": false,
               "Script": {
@@ -50744,7 +51138,7 @@
                       "Description": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 4 ±  0 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Flash -  - ID:9",
+                      "PassNextDescription": "Flash -  - ID:8",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -50782,16 +51176,16 @@
                       "UserTitle": "Flash",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeEOLFlash 9",
-                      "Description": "Flash -  - ID:9",
+                      "Description": "Flash -  - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 5 sec - ID:12",
+                      "PassNextDescription": "Delay 5 sec - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 9,
+                      "ID": 8,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -50819,16 +51213,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeDelay 12",
-                      "Description": "Delay 5 sec - ID:12",
+                      "Description": "Delay 5 sec - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"SW Version - Major\" = 2 ±  0 - ID:11",
+                      "PassNextDescription": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -50859,8 +51253,6 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            99.0,
                             0.0,
                             99.0
                           ]
@@ -50934,16 +51326,16 @@
                       "UserTitle": "SW Version - Major (MCU)",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 11",
-                      "Description": "Compare with tolerance:  \"SW Version - Major\" = 2 ±  0 - ID:11",
+                      "Description": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:8",
+                      "PassNextDescription": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 11,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -51078,7 +51470,7 @@
                       "UserTitle": "Turn OFF VSW",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 8",
-                      "Description": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:8",
+                      "Description": "Set  \"Set IO (Numato GPIO)\" = 0 - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -51087,7 +51479,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 8,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,

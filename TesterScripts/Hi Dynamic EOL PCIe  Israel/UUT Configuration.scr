@@ -771,7 +771,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source VCU",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 18,
         "FailNextId": 0,
         "ID": 5,
         "EOLReportsSelectionData": {
@@ -779,6 +779,120 @@
           "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "ScriptNodeCompare 18",
+        "ValueLeft": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": " ",
+          "GroupName": "Monitor",
+          "Description": "Operational state",
+          "Default": "0",
+          "Cmd": "opstate",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              16.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "off",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "bootloader",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "init",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "prechargewait",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "idle",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "driving",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "fault",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "sleepprepare",
+                "Value": "7"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "deepsleep",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "shutdown",
+                "Value": "9"
+              }
+            ]
+          },
+          "Name": "Operational state",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
+        },
+        "ValueRight": 4.0,
+        "ValueDropDwonIndex": -1,
+        "ValueDropDwonIndex_NumatoGPIOPort": 0,
+        "Comparation": 0,
+        "IsUseAverage": false,
+        "AverageOfNRead": 0,
+        "UserTitle": "Get Operational State (IDLE)",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 18,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false
         }
       },
@@ -1872,16 +1986,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
               }
             ]
           },
@@ -1925,16 +2029,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
