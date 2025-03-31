@@ -291,6 +291,7 @@ namespace EOL.ViewModels
             _settingsViewModel.AbortScriptEventChanged += LoadAbortScriptFromPath;
             _settingsViewModel.MonitorScriptEventChanged += LoadMonitorFromPath;
 			_settingsViewModel.FirstFlashFileEventChanged += FirstFlashFileChangedEvent;
+			_settingsViewModel.SecondFlashFileEventChanged += SecondFlashFileChangedEvent;
         }
 
         private void ReportsPathChangeEvent()
@@ -429,6 +430,23 @@ namespace EOL.ViewModels
 					{
 						
 						_flashingHandler.LoadUdsXML(_userDefaultSettings.FirstFlashFileCustomerProp);
+                    }
+                }
+            }
+        }
+
+        private void SecondFlashFileChangedEvent()
+        {
+            if (!String.IsNullOrEmpty(_userDefaultSettings.SecondFlashFilePath))
+            {
+                eFlashingTool flashingTool = new eFlashingTool();
+
+                if (_flashingHandler.SelectFlashingTool(ref flashingTool, _userDefaultSettings.SecondFlashFilePath))
+                {
+                    if (flashingTool == eFlashingTool.UDS)
+                    {
+
+                        _flashingHandler.LoadUdsXML(_userDefaultSettings.SecondFlashFileCustomerProp);
                     }
                 }
             }

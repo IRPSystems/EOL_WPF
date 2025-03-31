@@ -53,126 +53,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "IO7",
                 "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
               }
             ]
           },
@@ -208,126 +88,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "IO0",
@@ -449,7 +209,7 @@
         "IsEolSource": true,
         "IsToolSource": false,
         "MCU_Used": false,
-        "MCU2_Used": false,
+        "MCU2_Used": true,
         "UserTitle": "Flash",
         "IsPass": false,
         "PassNextId": 4,
@@ -466,7 +226,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 2",
-        "Interval": 25,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -878,7 +638,7 @@
         },
         "UserTitle": "SW Version - Minor (MCU)",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 9,
         "FailNextId": 0,
         "ID": 7,
         "EOLReportsSelectionData": {
@@ -886,6 +646,190 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLFlash, ScriptHandler",
+        "Name": "ScriptNodeEOLFlash 9",
+        "FlashFilePath": null,
+        "RXId": null,
+        "TXId": null,
+        "Customer": 3,
+        "NumOfFlashFile": 1,
+        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:9",
+        "IsEolSource": true,
+        "IsToolSource": false,
+        "MCU_Used": false,
+        "MCU2_Used": true,
+        "UserTitle": "Flash",
+        "IsPass": false,
+        "PassNextId": 12,
+        "FailNextId": 0,
+        "ID": 9,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 12",
+        "Interval": 5,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 12,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 11",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "SW Version",
+          "Description": "Version Major.",
+          "Default": "0",
+          "Cmd": "vermajor",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              0.0,
+              99.0,
+              0.0,
+              99.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": null,
+          "Name": "SW Version - Major",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
+        },
+        "CompareValue": "2",
+        "Tolerance": 0.0,
+        "Comparation": 0,
+        "CompareValueDropDwonIndex": 0,
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major\" = 2 ±  0 - ID:11ToleranceTypeGroupName",
+        "IsValueTolerance": true,
+        "IsPercentageTolerance": false,
+        "IsUseParamAverage": false,
+        "AverageOfNRead_Param": 0,
+        "IsUseParamFactor": false,
+        "ParamFactor": 0.0,
+        "IsUseCompareValueAverage": false,
+        "AverageOfNRead_CompareValue": 0,
+        "IsUseCompareValueFactor": false,
+        "CompareValueFactor": 0.0,
+        "Parameter_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": {
+            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+            "ValueChanged": null,
+            "Value": "",
+            "GroupName": "SW Version",
+            "Description": "Version Major.",
+            "Default": "0",
+            "Cmd": "vermajor",
+            "Range": {
+              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+              "$values": [
+                0.0,
+                99.0,
+                0.0,
+                99.0
+              ]
+            },
+            "Format": null,
+            "Scale": 1.0,
+            "Note": null,
+            "Save": false,
+            "DropDown": null,
+            "Name": "SW Version - Major",
+            "Units": null,
+            "DeviceType": 1,
+            "ToolTip": null,
+            "CommunicationTimeout": 0,
+            "CommSendResLog": {
+              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+              "SendCommand": null,
+              "ReceivedValue": null,
+              "CommErrorMsg": null,
+              "NumberOfTries": 1,
+              "ParamName": null,
+              "Device": null,
+              "Tool": null,
+              "StepName": null,
+              "timeStamp": "0001-01-01T00:00:00"
+            }
+          },
+          "Ni6002_ExpectedRPM": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "CompareValue_ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Parameter": null,
+          "Ni6002_ExpectedRPM": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0
+        },
+        "UserTitle": "SW Version - Major (MCU)",
+        "IsPass": false,
+        "PassNextId": 8,
+        "FailNextId": 0,
+        "ID": 11,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": false,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
         }
       },
@@ -899,126 +843,6 @@
           "DropDown": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "IO0",
@@ -1093,126 +917,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "IO0",

@@ -314,12 +314,12 @@ namespace EOL.ViewModels
                 else if (fileData.Description == "First Flash File Path")
                 { 
                     _userDefaultSettings.FirstFlashFilePath = fileData.Path;
-                    FirstFlashFileEventChanged.Invoke();
+                    FirstFlashFileEventChanged?.Invoke();
                 }
                 else
                 {
                     _userDefaultSettings.SecondFlashFilePath = fileData.Path;
-                    SecondFlashFileEventChanged.Invoke();
+                    SecondFlashFileEventChanged?.Invoke();
                 }
             }
         }
