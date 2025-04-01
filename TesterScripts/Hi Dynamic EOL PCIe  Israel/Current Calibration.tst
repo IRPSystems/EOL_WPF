@@ -31,6 +31,66 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ON",
                 "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "OFF",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ON",
+                "Value": "1"
               }
             ]
           },
@@ -64,6 +124,66 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "OFF",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "ON",
+                  "Value": "1"
+                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "OFF",
@@ -121,12 +241,12 @@
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 0,
+        "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
         "IsPass": false,
-        "PassNextId": 1,
+        "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -149,9 +269,9 @@
         "SelectedScriptName": "PS Config Pre Motor Run",
         "UserTitle": "PS Config Pre Motor Run",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -174,9 +294,9 @@
         "SelectedScriptName": "Phase U",
         "UserTitle": "Phase U",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -199,9 +319,9 @@
         "SelectedScriptName": "Phase W",
         "UserTitle": "Phase W",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -224,9 +344,9 @@
         "SelectedScriptName": "BUS",
         "UserTitle": "BUS",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 1,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -251,7 +371,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

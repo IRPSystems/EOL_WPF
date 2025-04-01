@@ -10,7 +10,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "550",
           "GroupName": "Advanced",
           "Description": "ADC Count to mA Bus Current Sensor Factor",
           "Default": "406",
@@ -54,7 +54,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "550",
             "GroupName": "Advanced",
             "Description": "ADC Count to mA Bus Current Sensor Factor",
             "Default": "406",
@@ -147,6 +147,36 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Enabled",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Disabled",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Enabled",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Disabled",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Enabled",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Disabled",
+                "Value": "1"
               }
             ]
           },
@@ -190,6 +220,36 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Enabled",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Disabled",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Enabled",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Disabled",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Enabled",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Disabled",
+                  "Value": "1"
+                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
@@ -256,7 +316,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Enabled",
           "GroupName": "Faults Disable",
           "Description": "Choose whether this fault is ignored or not",
           "Default": "Enabled",
@@ -281,7 +341,7 @@
               }
             ]
           },
-          "Name": "Battery Low Voltage                      - 0x8133",
+          "Name": "Battery Low Voltage                      - 0x8233",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -308,7 +368,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "Enabled",
             "GroupName": "Faults Disable",
             "Description": "Choose whether this fault is ignored or not",
             "Default": "Enabled",
@@ -333,7 +393,7 @@
                 }
               ]
             },
-            "Name": "Battery Low Voltage                      - 0x8133",
+            "Name": "Battery Low Voltage                      - 0x8233",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -396,6 +456,12 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
+              10.0,
+              0.0,
+              10.0,
+              0.0,
+              10.0,
+              0.0,
               10.0
             ]
           },
@@ -439,6 +505,12 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
+                0.0,
+                10.0,
+                0.0,
+                10.0,
+                0.0,
+                10.0,
                 0.0,
                 10.0
               ]
@@ -815,7 +887,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "VCU",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -830,6 +902,11 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "External Devices",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -840,7 +917,7 @@
               }
             ]
           },
-          "Name": "Control Source",
+          "Name": "Motor Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -858,7 +935,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 1,
+        "Value": 0,
         "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -867,7 +944,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "VCU",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -882,6 +959,11 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "External Devices",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -892,7 +974,7 @@
                 }
               ]
             },
-            "Name": "Control Source",
+            "Name": "Motor Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -1058,6 +1140,12 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
+              1000.0,
+              0.0,
+              1000.0,
+              0.0,
+              1000.0,
+              0.0,
               1000.0
             ]
           },
@@ -1101,6 +1189,12 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
+                0.0,
+                1000.0,
+                0.0,
+                1000.0,
+                0.0,
+                1000.0,
                 0.0,
                 1000.0
               ]
@@ -1287,7 +1381,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Fault",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -1324,11 +1418,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
               }
             ]
           },
@@ -1726,7 +1815,7 @@
         "GainParam": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "550",
           "GroupName": "Advanced",
           "Description": "ADC Count to mA Bus Current Sensor Factor",
           "Default": "406",
@@ -1777,8 +1866,8 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Bus Current (Monitor)",
-          "Units": "A",
+          "Name": "Bus Current",
+          "Units": "A-Peak",
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0,
@@ -1863,8 +1952,8 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Bus Current (Monitor)",
-          "Units": "A",
+          "Name": "Bus Current",
+          "Units": "A-Peak",
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0,
@@ -1916,7 +2005,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1943,8 +2032,8 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Bus Current (Monitor)",
-            "Units": "A",
+            "Name": "Bus Current",
+            "Units": "A-Peak",
             "DeviceType": 1,
             "ToolTip": null,
             "CommunicationTimeout": 0,

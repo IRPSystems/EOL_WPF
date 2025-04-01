@@ -19,6 +19,12 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
+              4.0,
+              0.0,
+              4.0,
+              0.0,
+              4.0,
+              0.0,
               4.0
             ]
           },
@@ -29,6 +35,81 @@
           "DropDown": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15Inactive",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15ChangedInactive",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequest",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15Inactive",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15ChangedInactive",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15Inactive",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15ChangedInactive",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequest",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15Inactive",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15ChangedInactive",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15Inactive",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "KL15ChangedInactive",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequest",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15Inactive",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "SleepRequestAndKL15ChangedInactive",
+                "Value": "4"
+              },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "KL15Inactive",
@@ -92,6 +173,12 @@
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
                 0.0,
+                4.0,
+                0.0,
+                4.0,
+                0.0,
+                4.0,
+                0.0,
                 4.0
               ]
             },
@@ -102,6 +189,81 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15Inactive",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15ChangedInactive",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequest",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15Inactive",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15ChangedInactive",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15Inactive",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15ChangedInactive",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequest",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15Inactive",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15ChangedInactive",
+                  "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15Inactive",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "KL15ChangedInactive",
+                  "Value": "1"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequest",
+                  "Value": "2"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15Inactive",
+                  "Value": "3"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "SleepRequestAndKL15ChangedInactive",
+                  "Value": "4"
+                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "KL15Inactive",

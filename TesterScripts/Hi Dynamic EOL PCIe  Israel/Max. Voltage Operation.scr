@@ -256,16 +256,16 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "60",
           "GroupName": "Deratings",
           "Description": "Bus Voltage - Max Start Derating",
-          "Default": "365",
+          "Default": "70",
           "Cmd": "mdrbvmxs",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              150.0,
-              450.0
+              40.0,
+              90.0
             ]
           },
           "Format": null,
@@ -300,16 +300,16 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "60",
             "GroupName": "Deratings",
             "Description": "Bus Voltage - Max Start Derating",
-            "Default": "365",
+            "Default": "70",
             "Cmd": "mdrbvmxs",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                150.0,
-                450.0
+                40.0,
+                90.0
               ]
             },
             "Format": null,
@@ -371,16 +371,16 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "61.5",
           "GroupName": "Deratings",
           "Description": "Bus Voltage - Max Cut Derating",
-          "Default": "370",
+          "Default": "72",
           "Cmd": "mdrbvmxc",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              150.0,
-              450.0
+              40.0,
+              90.0
             ]
           },
           "Format": null,
@@ -415,16 +415,16 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "61.5",
             "GroupName": "Deratings",
             "Description": "Bus Voltage - Max Cut Derating",
-            "Default": "370",
+            "Default": "72",
             "Cmd": "mdrbvmxc",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                150.0,
-                450.0
+                40.0,
+                90.0
               ]
             },
             "Format": null,
@@ -486,7 +486,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Fault",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -523,11 +523,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
               }
             ]
           },
@@ -558,7 +553,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "Fault",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -595,11 +590,6 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE",
                   "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Init",
-                  "Value": "6"
                 }
               ]
             },
@@ -988,7 +978,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "VCU",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -1003,6 +993,11 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "External Devices",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -1013,7 +1008,7 @@
               }
             ]
           },
-          "Name": "Control Source",
+          "Name": "Motor Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -1031,7 +1026,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 2,
+        "Value": 1,
         "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -1040,7 +1035,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "VCU",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -1055,6 +1050,11 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "External Devices",
+                  "Value": "0"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -1065,7 +1065,7 @@
                 }
               ]
             },
-            "Name": "Control Source",
+            "Name": "Motor Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -1119,7 +1119,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "OFF",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -1171,7 +1171,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "OFF",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -1250,7 +1250,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "OFF",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -1302,7 +1302,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "OFF",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -1381,7 +1381,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "0",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -1425,7 +1425,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "0",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",
@@ -1496,7 +1496,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "0",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1540,7 +1540,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "0",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1907,7 +1907,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Vbus (Monitor)",
+          "Name": "Vbus",
           "Units": "V",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1956,7 +1956,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1983,7 +1983,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Vbus (Monitor)",
+            "Name": "Vbus",
             "Units": "V",
             "DeviceType": 1,
             "ToolTip": null,
@@ -2074,7 +2074,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "0",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -2118,7 +2118,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "0",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -2189,7 +2189,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "0",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -2233,7 +2233,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": "0",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",

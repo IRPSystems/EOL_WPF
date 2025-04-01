@@ -256,7 +256,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Fault",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -293,11 +293,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
               }
             ]
           },
@@ -695,7 +690,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 66.495,
           "GroupName": "Monitor",
           "Description": "Runtime",
           "Default": "0",
@@ -744,7 +739,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "",
+            "Value": 66.495,
             "GroupName": "Monitor",
             "Description": "Runtime",
             "Default": "0",
@@ -815,6 +810,74 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 9",
+        "ParentScriptName": "Watch Dog Test",
+        "ContinueUntilType": 0,
+        "Repeats": 1,
+        "Timeout": 0,
+        "TimeoutUnite": 0,
+        "IsStopOnFail": true,
+        "IsStopOnPass": false,
+        "IsInfinity": false,
+        "SelectedScriptName": "LV Power Up",
+        "UserTitle": null,
+        "IsPass": false,
+        "PassNextId": 9,
+        "FailNextId": 0,
+        "ID": 8,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 10",
+        "ParentScriptName": "Watch Dog Test",
+        "ContinueUntilType": 0,
+        "Repeats": 1,
+        "Timeout": 0,
+        "TimeoutUnite": 0,
+        "IsStopOnFail": true,
+        "IsStopOnPass": false,
+        "IsInfinity": false,
+        "SelectedScriptName": "HV Power Up",
+        "UserTitle": null,
+        "IsPass": false,
+        "PassNextId": 10,
+        "FailNextId": 0,
+        "ID": 9,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 11",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 10,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
         "Name": "Sub Script 10",
         "ParentScriptName": "Watch Dog Test",
         "ContinueUntilType": 0,
@@ -829,7 +892,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

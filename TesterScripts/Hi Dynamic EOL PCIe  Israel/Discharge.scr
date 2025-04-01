@@ -256,7 +256,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": "Fault",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -293,11 +293,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
               }
             ]
           },
@@ -353,6 +348,12 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
+              10000.0,
+              0.0,
+              10000.0,
+              0.0,
+              10000.0,
+              0.0,
               10000.0
             ]
           },
@@ -396,6 +397,12 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
+                0.0,
+                10000.0,
+                0.0,
+                10000.0,
+                0.0,
+                10000.0,
                 0.0,
                 10000.0
               ]

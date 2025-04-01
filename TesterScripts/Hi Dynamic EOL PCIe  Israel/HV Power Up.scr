@@ -35,7 +35,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 200.0,
+        "Value": 300.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -86,7 +86,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set Voltage Limit to 200V",
+        "UserTitle": "Set Voltage Limit to 300V",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -366,11 +366,11 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "CompareValue": "200",
+        "CompareValue": "300",
         "Tolerance": 5.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 200 ±  5 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  5 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -438,7 +438,7 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Verify PS Voltage 200V",
+        "UserTitle": "Verify PS Voltage 300V",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
