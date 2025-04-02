@@ -6,60 +6,24 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
+        "Name": "ScriptNodeSetParameter 13",
         "Parameter": {
-          "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
-          "Cmd": "gpio set",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              }
-            ]
-          },
-          "Name": "Set IO",
+          "Status_paramter": "Rw",
+          "command_to_device": "digital output",
+          "portLine": 0,
+          "shunt_resistor": 0.0,
+          "numofcounts": 0,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Digital Output",
           "Units": null,
           "Value": null,
-          "DeviceType": 21,
+          "DeviceType": 9,
           "ToolTip": null,
           "CommunicationTimeout": 0,
           "CommSendResLog": {
@@ -82,58 +46,22 @@
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
-            "Cmd": "gpio set",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                }
-              ]
-            },
-            "Name": "Set IO",
+            "Status_paramter": "Rw",
+            "command_to_device": "digital output",
+            "portLine": 0,
+            "shunt_resistor": 0.0,
+            "numofcounts": 0,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Digital Output",
             "Units": null,
             "Value": null,
-            "DeviceType": 21,
+            "DeviceType": 9,
             "ToolTip": null,
             "CommunicationTimeout": 0,
             "CommSendResLog": {
@@ -151,7 +79,7 @@
           },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
+          "Ni6002_Line": 3,
           "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
@@ -159,41 +87,23 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 3,
-          "NumatoGPIODropDwonIndex": 3
+          "NumatoGPIODropDwonIndex": -1
         },
         "ValueParameter": null,
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Turn ON VSW",
+        "UserTitle": "Enable 12V Supply Voltage (KL30)",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 1,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 7",
-        "Interval": 5,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
-        "PassNextId": 3,
-        "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
         }
       },
@@ -205,16 +115,16 @@
         "TXId": null,
         "Customer": 3,
         "NumOfFlashFile": 0,
-        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:3",
+        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:1",
         "IsEolSource": true,
         "IsToolSource": false,
         "MCU_Used": false,
         "MCU2_Used": true,
         "UserTitle": "Flash",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 3,
+        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -230,9 +140,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 4,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -247,8 +157,8 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
-          "GroupName": "FW Version",
+          "Value": "",
+          "GroupName": "SW Version",
           "Description": "Version Major.",
           "Default": "0",
           "Cmd": "vermajor",
@@ -264,7 +174,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Version Major (FW Version)",
+          "Name": "SW Version - Major",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -286,7 +196,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Version Major (FW Version) (MCU)\" = 2 ±  0 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:3ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -302,8 +212,8 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
-            "GroupName": "FW Version",
+            "Value": "",
+            "GroupName": "SW Version",
             "Description": "Version Major.",
             "Default": "0",
             "Cmd": "vermajor",
@@ -319,7 +229,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Version Major (FW Version)",
+            "Name": "SW Version - Major",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -366,9 +276,9 @@
         },
         "UserTitle": "SW Version - Major (MCU)",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -383,8 +293,8 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "3",
-          "GroupName": "FW Version",
+          "Value": "",
+          "GroupName": "SW Version",
           "Description": "Version Middle.",
           "Default": "0",
           "Cmd": "vermiddle",
@@ -400,7 +310,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Version Middle (FW Version)",
+          "Name": "SW Version - Middle",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -422,7 +332,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Version Middle (FW Version) (MCU)\" = 5 ±  0 - ID:6ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Middle (MCU)\" = 5 ±  0 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -438,8 +348,8 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "3",
-            "GroupName": "FW Version",
+            "Value": "",
+            "GroupName": "SW Version",
             "Description": "Version Middle.",
             "Default": "0",
             "Cmd": "vermiddle",
@@ -455,7 +365,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Version Middle (FW Version)",
+            "Name": "SW Version - Middle",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -502,9 +412,9 @@
         },
         "UserTitle": "SW Version - Middle (MCU)",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -519,8 +429,8 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "28",
-          "GroupName": "FW Version",
+          "Value": "",
+          "GroupName": "SW Version",
           "Description": "Version Minor.",
           "Default": "0",
           "Cmd": "verminor",
@@ -536,7 +446,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Version Minor (FW Version)",
+          "Name": "SW Version - Minor",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -554,11 +464,11 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "CompareValue": "4",
+        "CompareValue": "19",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Version Minor (FW Version) (MCU)\" = 4 ±  0 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 19 ±  0 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -574,8 +484,8 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "28",
-            "GroupName": "FW Version",
+            "Value": "",
+            "GroupName": "SW Version",
             "Description": "Version Minor.",
             "Default": "0",
             "Cmd": "verminor",
@@ -591,7 +501,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Version Minor (FW Version)",
+            "Name": "SW Version - Minor",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -638,9 +548,9 @@
         },
         "UserTitle": "SW Version - Minor (MCU)",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -657,16 +567,16 @@
         "TXId": null,
         "Customer": 3,
         "NumOfFlashFile": 1,
-        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:8",
+        "SourceModeGroupName": "EOLSourceMode_Flash -  - ID:6",
         "IsEolSource": true,
         "IsToolSource": false,
         "MCU_Used": false,
         "MCU2_Used": true,
         "UserTitle": "Flash",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -682,9 +592,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -699,8 +609,8 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
-          "GroupName": "FW Version",
+          "Value": "",
+          "GroupName": "SW Version",
           "Description": "Version Major.",
           "Default": "0",
           "Cmd": "vermajor",
@@ -716,7 +626,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Version Major (FW Version)",
+          "Name": "SW Version - Major",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -738,7 +648,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Version Major (FW Version) (MCU)\" = 2 ±  0 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -754,8 +664,8 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
-            "GroupName": "FW Version",
+            "Value": "",
+            "GroupName": "SW Version",
             "Description": "Version Major.",
             "Default": "0",
             "Cmd": "vermajor",
@@ -771,7 +681,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Version Major (FW Version)",
+            "Name": "SW Version - Major",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -818,9 +728,9 @@
         },
         "UserTitle": "SW Version - Major (MCU)",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -831,60 +741,24 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 8",
+        "Name": "ScriptNodeSetParameter 14",
         "Parameter": {
-          "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
           "Io_port": 0,
-          "Cmd": "gpio set",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO0",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO1",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO2",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO3",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO4",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO5",
-                "Value": "5"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO6",
-                "Value": "6"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "IO7",
-                "Value": "7"
-              }
-            ]
-          },
-          "Name": "Set IO",
+          "Status_paramter": "Rw",
+          "command_to_device": "digital output",
+          "portLine": 0,
+          "shunt_resistor": 0.0,
+          "numofcounts": 0,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Digital Output",
           "Units": null,
           "Value": null,
-          "DeviceType": 21,
+          "DeviceType": 9,
           "ToolTip": null,
           "CommunicationTimeout": 0,
           "CommSendResLog": {
@@ -907,58 +781,22 @@
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Parameter": {
-            "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
+            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+            "ExpectedRPM": 0,
             "Io_port": 0,
-            "Cmd": "gpio set",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO0",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO1",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO2",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO3",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO4",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO5",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO6",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "IO7",
-                  "Value": "7"
-                }
-              ]
-            },
-            "Name": "Set IO",
+            "Status_paramter": "Rw",
+            "command_to_device": "digital output",
+            "portLine": 0,
+            "shunt_resistor": 0.0,
+            "numofcounts": 0,
+            "DropDown": null,
+            "ThermistorType": 0,
+            "ThermistorTypeList": null,
+            "IsThermistorUsed": false,
+            "Name": "Digital Output",
             "Units": null,
             "Value": null,
-            "DeviceType": 21,
+            "DeviceType": 9,
             "ToolTip": null,
             "CommunicationTimeout": 0,
             "CommSendResLog": {
@@ -976,7 +814,7 @@
           },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
+          "Ni6002_Line": 3,
           "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
@@ -984,23 +822,23 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 3,
-          "NumatoGPIODropDwonIndex": 3
+          "NumatoGPIODropDwonIndex": -1
         },
         "ValueParameter": null,
         "IsWarning": true,
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Turn OFF VSW",
+        "UserTitle": "Disable 12V Supply Voltage (KL30)",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
+          "IsSaveToPdfExecTable": false,
+          "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
         }
       }
