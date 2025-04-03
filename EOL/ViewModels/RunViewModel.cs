@@ -516,10 +516,13 @@ namespace EOL.ViewModels
             savingDataWindow.SetProgress(50);
             savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
 
-            // Write log CSV.
-            _commSendResLogCsvWriter.WriteLog(commSendResLogs);
-            savingDataWindow.SetProgress(75);
-            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
+			if(RunState != RunStateEnum.Passed)
+			{
+                // Write log CSV.
+                _commSendResLogCsvWriter.WriteLog(commSendResLogs);
+                savingDataWindow.SetProgress(75);
+                savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
+            }
 
             // Optionally write XML if enabled.
             if (WritetoWatsEnabled)
