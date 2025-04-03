@@ -26,8 +26,10 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Threading;
 using TestersDB_Lib.Models;
 using WatsConstants;
 using static FlashingToolLib.FlasherService;
@@ -131,11 +133,13 @@ namespace EOL.ViewModels
 
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
-		#endregion Fields
+        private List<CommSendResLog> commSendResLogs = new();
 
-		#region Constructor
+        #endregion Fields
 
-		public RunViewModel(
+        #region Constructor
+
+        public RunViewModel(
 			DevicesContainer devicesContainer,
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
@@ -479,67 +483,53 @@ namespace EOL.ViewModels
 
             Stop(stopMode, ref singleTestResult,out watsReports);
 
-            HandleTestData(singleTestResult , watsReports );
+            var staThread = new Thread(() =>
+            {
+                HandleTestData(singleTestResult, watsReports);
+            });
+            staThread.SetApartmentState(ApartmentState.STA);
+            staThread.Start();
 
-			PostRunActions();
+            PostRunActions();
 
 			if(stopMode == ScriptStopModeEnum.Aborted)
 				RunState = RunStateEnum.Aborted;
 		}
 
-        private void HandleTestData(RunResult singleTestResult,Reports watsreports)
+        private void HandleTestData(RunResult singleTestResult, Reports watsReports)
         {
-            _csvWritter.WriteTestResult(
-                singleTestResult,
-                _generatedProjectsList.ToList());
+            // Instantiate and show the SavingDataWindow
+            var savingDataWindow = new SavingDataWindow();
+            savingDataWindow.Show();
 
+            // Allow the UI to update.
+            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
+
+            // Write CSV data.
+            _csvWritter.WriteTestResult(singleTestResult, _generatedProjectsList.ToList());
+            savingDataWindow.SetProgress(25);
+            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
+
+            // Create PDF.
             PDF_Creator _pdfCreator = new PDF_Creator();
             _pdfCreator.CreatePdf(_generatedProjectsList, singleTestResult, _userDefaultSettings);
+            savingDataWindow.SetProgress(50);
+            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
 
-			////build wats reports object
-			//Reports reports = new Reports
-			//{
-			//	Report = new Report
-			//	{
-			//		Type = "UUT",
-			//		Start = singleTestResult.StartTimeStamp8601,
-			//		Result = (isTestTerminated || _SafetyScript.IsPass == false) ? "Terminated" : singleTestResult.TestStatus,
-			//		SerialNumber = singleTestResult.SerialNumber,
-			//		PartNumber = singleTestResult.PartNumber,
-			//		MachineName = singleTestResult.RackNumber, // Set as needed
-			//		MiscInfo = new List<WatsReportModels.MiscInfo>(),
+            // Write log CSV.
+            _commSendResLogCsvWriter.WriteLog(commSendResLogs);
+            savingDataWindow.SetProgress(75);
+            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
 
-			//		UUT = new WatsReportModels.UUT
-			//		{
-			//			UserLoginName = singleTestResult.OperatorName,
-			//			ExecutionTime = singleTestResult.ExecutionTime, // Set as needed
-			//			ErrorMessage = singleTestResult.FailedStep?.ErrorMessage, // Set as needed
-			//		},
-			//		Process = new Process
-			//		{
-			//			Code = "22",
-			//			Name = "Or - Testing"
-			//		},
+            // Optionally write XML if enabled.
+            if (WritetoWatsEnabled)
+                _runResultToWatsConverter.SaveRunResultToXml(watsReports);
 
-			//		Steps = watsSteps
-			//	}
-			//};
+            savingDataWindow.SetProgress(100);
+            savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
 
-   //         MiscInfo miscInfo = new MiscInfo
-   //         {
-   //             Typedef = string.Empty,
-   //             Description = "Error Message",
-			//	Text = watsErrorMessage
-   //         };
-
-            //reports.Report.MiscInfo.Add(miscInfo);
-
-			if(WritetoWatsEnabled)
-                _runResultToWatsConverter.SaveRunResultToXml(watsreports);
-
-            //var converter = new RunResultToWatsConverter();
-            //string token = "dGVzdDpNSGc1c3YwbTg1QkpqbTcqQmY4eUZJbHFLMjcxZ1E=";
-            //converter.PostRunResultToServerAsync(reports ,token);
+            // Close the progress window.
+            savingDataWindow.Close();
         }
 
         private void PostRunActions()
@@ -569,7 +559,7 @@ namespace EOL.ViewModels
 
 		private void RunScript_StepEndedEvent(ScriptStepBase obj)
 		{
-            _commSendResLogCsvWriter.WriteLog(obj.CommSendResLog, _runData.SerialNumber);
+            commSendResLogs.Add(obj.CommSendResLog);
         }
 
 		#endregion Running script events
@@ -587,6 +577,9 @@ namespace EOL.ViewModels
 				return;
 			}
 			ErrorMessage = null;
+            commSendResLogs.Clear();
+
+            _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
 
             isTestTerminated = false;
             _runData.StartTime = new DateTime();
