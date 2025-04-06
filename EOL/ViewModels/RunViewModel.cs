@@ -123,6 +123,8 @@ namespace EOL.ViewModels
 
 		private CommSendResLogCsvWriter _commSendResLogCsvWriter;
 
+		private byte[] WatsBLOB;
+
         private AdminView _adminView;
 		private AdminViewModel _adminVM;
 
@@ -947,7 +949,13 @@ namespace EOL.ViewModels
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
 
-				List<Step> watsSteps = new List<Step>();
+                string text = _commSendResLogCsvWriter.csvLine.ToString();
+
+                Encoding encoding = Encoding.UTF8;
+
+                WatsBLOB = encoding.GetBytes(text);
+
+                List<Step> watsSteps = new List<Step>();
 
                 string watsErrorMessage = string.Empty;
 
@@ -1105,6 +1113,19 @@ namespace EOL.ViewModels
                     Text = watsErrorMessage
                 };
                 watsreports.Report.MiscInfo.Add(miscInfo);
+
+                //if (WatsBLOB != null)
+                //{
+                //    string base64string = Convert.ToBase64String(WatsBLOB);
+                //    Step step = new Step()
+                //    {
+                //        Name = "WATS BLOB",
+                //        StepType = "Attachment",
+                //        Attachments = new List<Attachment>()
+                //    };
+                //    step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
+                //    watsreports.Report.Steps.Add(step);
+                //}
             }
 			catch (Exception ex)
 			{
