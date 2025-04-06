@@ -32,8 +32,8 @@ namespace EOL.Services
 
         private string Location = String.Empty;
 
-        //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
-        private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
+        private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS\\WatsStandardXmlFormat";
+        //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
 
         private const string errorLogPath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
         private const string ReportName = "ReportWats.xml";

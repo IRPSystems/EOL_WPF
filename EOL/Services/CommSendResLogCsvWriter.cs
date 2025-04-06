@@ -17,7 +17,7 @@ namespace EOL.Services
         string fileNamePrefix = "CommSendResponseLog";
         string destinationFolder;
         string fullPath;
-        StringBuilder csvLine = new();
+        public StringBuilder csvLine = new();
 
         public CommSendResLogCsvWriter()
         {

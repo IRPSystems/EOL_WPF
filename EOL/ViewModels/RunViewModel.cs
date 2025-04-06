@@ -26,6 +26,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading;
 using System.Windows;
 using System.Windows.Media;
@@ -1114,19 +1115,19 @@ namespace EOL.ViewModels
                 };
                 watsreports.Report.MiscInfo.Add(miscInfo);
 
-                //if (WatsBLOB != null)
-                //{
-                //    string base64string = Convert.ToBase64String(WatsBLOB);
-                //    Step step = new Step()
-                //    {
-                //        Name = "WATS BLOB",
-                //        StepType = "Attachment",
-                //        Attachments = new List<Attachment>()
-                //    };
-                //    step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
-                //    watsreports.Report.Steps.Add(step);
-                //}
-            }
+				if (WatsBLOB != null)
+				{
+					string base64string = Convert.ToBase64String(WatsBLOB);
+					Step step = new Step()
+					{
+						Name = "WATS BLOB",
+						StepType = "Attachment",
+						Attachments = new List<Attachment>()
+					};
+					step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
+					watsreports.Report.Steps.Add(step);
+				}
+			}
 			catch (Exception ex)
 			{
 				LoggerService.Error(this, "Faild to handle stop tasks", ex);
