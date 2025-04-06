@@ -335,11 +335,11 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "CompareValue": "2",
+        "CompareValue": "3",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 2 ±  0 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 3 ±  0 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
