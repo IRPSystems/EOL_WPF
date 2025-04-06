@@ -65,35 +65,6 @@ namespace EOL.Services
             File.AppendAllText(fullPath, csvLine.ToString());
         }
 
-        public void WriteLog2(List<CommSendResLog> logs)
-        {
-            logs = TrimSendResLogs(logs);
-            csvLine.Clear();
-            foreach (var log in logs)
-            {
-                var logValues = new string[]
-                {
-                    "'" + log.timeStamp.ToString("yyyy-MM-dd HH:mm:ss.fff"),
-                    log.StepName,
-                    log.Tool,
-                    log.ParamName,
-                    log.Device,
-                    log.SendCommand,
-                    log.ReceivedValue,
-                    log.CommErrorMsg,
-                    log.NumberOfTries.ToString()
-                };
-
-                for (int i = 0; i < logValues.Length; i++)
-                {
-                    logValues[i] = CsvHelperTool.RemoveCsvSpecialCharacters(logValues[i]);
-                }
-                csvLine.AppendLine(string.Join(",", logValues));
-            }
-
-            File.AppendAllText(fullPath, csvLine.ToString());
-        }
-
         private List<CommSendResLog> TrimSendResLogs(List<CommSendResLog> allLogs)
         {
             // 1) Identify the last 5 distinct step names by scanning from the end (newest).
