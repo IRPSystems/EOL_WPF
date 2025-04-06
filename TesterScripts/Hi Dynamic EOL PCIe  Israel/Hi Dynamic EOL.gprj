@@ -6865,6 +6865,316 @@
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_CanDev1Test",
                               "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
                             }
                           ]
                         },
@@ -36458,7 +36768,7 @@
                       "Description": "Set  \"Manual FOC Control (MCU)\" = 0 - ID:36",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 2 sec - ID:38",
+                      "PassNextDescription": "Delay 2 sec - ID:37",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -36493,7 +36803,7 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeDelay 24",
-                      "Description": "Delay 2 sec - ID:38",
+                      "Description": "Delay 2 sec - ID:37",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -36502,7 +36812,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 38,
+                      "ID": 37,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -37368,7 +37678,7 @@
                       "Description": "Set  \"Output On/Off (EA Power)\" = 1 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:9",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:8",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -37475,16 +37785,16 @@
                       "UserTitle": "Enable Load Contactor ",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 6",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:9",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Duty Cycle (MCU)\" = 1000 - ID:10",
+                      "PassNextDescription": "Set  \"ATE Duty Cycle (MCU)\" = 1000 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 9,
+                      "ID": 8,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -37591,16 +37901,140 @@
                       "UserTitle": "Set ATE Duty Cycle to 1000",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 16",
-                      "Description": "Set  \"ATE Duty Cycle (MCU)\" = 1000 - ID:10",
+                      "Description": "Set  \"ATE Duty Cycle (MCU)\" = 1000 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:11",
+                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 1 - ID:23",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 10,
+                      "ID": 9,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Operation",
+                        "Description": "Motor Control Source",
+                        "Default": "VCU",
+                        "Cmd": "mtrctrlsrc",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "VCU",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Manual",
+                              "Value": "2"
+                            }
+                          ]
+                        },
+                        "Name": "Control Source",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "Value": 1,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "IsError": null,
+                        "IsExecuted": false,
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "ExecutionTime": "00:00:00",
+                        "Name": null,
+                        "Description": null,
+                        "OperatorErrorDescription": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "CommSendResLog": null,
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set Control Source VCU",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "ScriptNodeSetParameter 23",
+                      "Description": "Set  \"Control Source (MCU)\" = 1 - ID:23",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Delay 1 sec - ID:10",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 23,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -37629,16 +38063,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 7",
-                      "Description": "Delay 1 sec - ID:11",
+                      "Description": "Delay 1 sec - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:12",
+                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 11,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -37740,16 +38174,16 @@
                       "UserTitle": "Enter ATE Mode",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 3",
-                      "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:12",
+                      "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:13",
+                      "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -37844,16 +38278,16 @@
                       "UserTitle": "Get Motor State ATE",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare 21",
-                      "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:13",
+                      "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:12",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:14",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 13,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38069,16 +38503,16 @@
                       "UserTitle": "Set Phase U High Side ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 4",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:14",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 25 sec - ID:15",
+                      "PassNextDescription": "Delay 25 sec - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38107,16 +38541,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 17",
-                      "Description": "Delay 25 sec - ID:15",
+                      "Description": "Delay 25 sec - ID:14",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Calibrate - Bus Current (Monitor) (MCU) - ID:16",
+                      "PassNextDescription": "Calibrate - Bus Current (Monitor) (MCU) - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38256,16 +38690,16 @@
                       "UserTitle": "Calibrate BUS",
                       "ExecutionTime": "00:00:00",
                       "Name": "EOL Clibrate 1",
-                      "Description": "Calibrate - Bus Current (Monitor) (MCU) - ID:16",
+                      "Description": "Calibrate - Bus Current (Monitor) (MCU) - ID:15",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17",
+                      "PassNextDescription": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -38395,16 +38829,16 @@
                       "UserTitle": "Validate BUS Calibration",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 2",
-                      "Description": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17",
+                      "Description": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -38620,16 +39054,16 @@
                       "UserTitle": "Set Phase U High Side OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:19",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 18,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38730,16 +39164,16 @@
                       "UserTitle": "Disable Load Contactor ",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:19",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:18",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:20",
+                      "PassNextDescription": "Delay 1 sec - ID:19",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 19,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38768,16 +39202,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 23",
-                      "Description": "Delay 1 sec - ID:20",
+                      "Description": "Delay 1 sec - ID:19",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:21",
+                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:20",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 20,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -38874,16 +39308,16 @@
                       "UserTitle": "Set Output Voltage to 300V",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 22",
-                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:21",
+                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:20",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:22",
+                      "PassNextDescription": "Delay 1 sec - ID:21",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 21,
+                      "ID": 20,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38912,7 +39346,131 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeDelay 25",
-                      "Description": "Delay 1 sec - ID:22",
+                      "Description": "Delay 1 sec - ID:21",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 2 - ID:25",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 21,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Operation",
+                        "Description": "Motor Control Source",
+                        "Default": "VCU",
+                        "Cmd": "mtrctrlsrc",
+                        "Range": null,
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": {
+                          "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+                          "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "VCU",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Manual",
+                              "Value": "2"
+                            }
+                          ]
+                        },
+                        "Name": "Control Source",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "Value": 2,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "IsError": null,
+                        "IsExecuted": false,
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "ExecutionTime": "00:00:00",
+                        "Name": null,
+                        "Description": null,
+                        "OperatorErrorDescription": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "CommSendResLog": null,
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set Control Source Manual",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "Set Parameter 25",
+                      "Description": "Set  \"Control Source (MCU)\" = 2 - ID:25",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -38921,7 +39479,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 22,
+                      "ID": 25,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -39874,7 +40432,7 @@
                       "Description": "Set  \"Motor State (Operation) (MCU)\" = 0 - ID:4",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:6",
+                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:5",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -39995,16 +40553,16 @@
                       "UserTitle": "Set UUT Manual FOC  to ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 3",
-                      "Description": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:6",
+                      "Description": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:5",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:7",
+                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:6",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 6,
+                      "ID": 5,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -40119,16 +40677,16 @@
                       "UserTitle": "Set UUT Manual Angle Speed to ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 4",
-                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:7",
+                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:6",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Ramp (MCU)\" = 3 - ID:8",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Ramp (MCU)\" = 3 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 7,
+                      "ID": 6,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -40235,16 +40793,16 @@
                       "UserTitle": "Set Manual Angle Speed Ramp",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 7",
-                      "Description": "Set  \"Manual Angle Speed Ramp (MCU)\" = 3 - ID:8",
+                      "Description": "Set  \"Manual Angle Speed Ramp (MCU)\" = 3 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Aqb AB Fault Threshold (MCU)\" = 50000 - ID:9",
+                      "PassNextDescription": "Set  \"Aqb AB Fault Threshold (MCU)\" = 50000 - ID:8",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 8,
+                      "ID": 7,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -40351,7 +40909,7 @@
                       "UserTitle": "Set AB Fault Count Threshold to 50000",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 9",
-                      "Description": "Set  \"Aqb AB Fault Threshold (MCU)\" = 50000 - ID:9",
+                      "Description": "Set  \"Aqb AB Fault Threshold (MCU)\" = 50000 - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -40360,7 +40918,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 9,
+                      "ID": 8,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -49109,7 +49667,7 @@
                       "Description": "Set  \"Output On/Off (EA Power)\" = 1 - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:10",
+                      "PassNextDescription": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -49230,16 +49788,16 @@
                       "UserTitle": "Set UUT Manual FOC  to ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 3",
-                      "Description": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:10",
+                      "Description": "Set  \"Manual FOC Control (MCU)\" = 1 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:11",
+                      "PassNextDescription": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 10,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49354,16 +49912,16 @@
                       "UserTitle": "Set UUT Manual Angle Speed to ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 4",
-                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:11",
+                      "Description": "Set  \"Manual Angle Speed  (MCU)\" = 1 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:12",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 11,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49470,16 +50028,16 @@
                       "UserTitle": "Set UUT Manual IQ Command to 50A",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 6",
-                      "Description": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:12",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 50 - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:13",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49586,16 +50144,16 @@
                       "UserTitle": "Set UUT to 500RPM",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:13",
+                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 33.333 - ID:12",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 10 sec - ID:14",
+                      "PassNextDescription": "Delay 10 sec - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 13,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -49624,16 +50182,16 @@
                       "UserTitle": "Stablize Speed",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 18",
-                      "Description": "Delay 10 sec - ID:14",
+                      "Description": "Delay 10 sec - ID:13",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:15",
+                      "PassNextDescription": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49701,16 +50259,16 @@
                       "UserTitle": "Converge Speed RPM 500",
                       "ExecutionTime": "00:00:00",
                       "Name": "Converge 8",
-                      "Description": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:15",
+                      "Description": "Converge  \"Speed - RPM (MCU)\" = 500 - ID:14",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:16",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49817,16 +50375,16 @@
                       "UserTitle": "Set UUT Manual IQ Command to 230ARMS",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:16",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 283 - ID:15",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:17",
+                      "PassNextDescription": "Delay 1 sec - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -49855,16 +50413,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 18",
-                      "Description": "Delay 1 sec - ID:17",
+                      "Description": "Delay 1 sec - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:18",
+                      "PassNextDescription": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -49959,16 +50517,16 @@
                       "UserTitle": "Get PS Voltage 350",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 19",
-                      "Description": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:18",
+                      "Description": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:19",
+                      "PassNextDescription": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 18,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -50094,16 +50652,16 @@
                       "UserTitle": "Compare BUS Voltage PS vs UUT",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 10",
-                      "Description": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:19",
+                      "Description": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:20",
+                      "PassNextDescription": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:19",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 19,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -50210,16 +50768,16 @@
                       "UserTitle": "Set UUT Manual IQ Command to 0A",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 19",
-                      "Description": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:20",
+                      "Description": "Set  \"Manual IQ Command (MCU)\" = 0 - ID:19",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:21",
+                      "PassNextDescription": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:20",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 20,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -50326,7 +50884,7 @@
                       "UserTitle": "Set UUT to 0 RPM",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 18",
-                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:21",
+                      "Description": "Set  \"Manual Angle Speed Value (MCU)\" = 0 - ID:20",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -50335,7 +50893,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 21,
+                      "ID": 20,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
