@@ -640,7 +640,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "VCU",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -655,11 +655,6 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -670,7 +665,7 @@
               }
             ]
           },
-          "Name": "Motor Control Source",
+          "Name": "Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -688,7 +683,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 1,
+        "Value": 2,
         "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -697,7 +692,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "VCU",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -712,11 +707,6 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -727,7 +717,7 @@
                 }
               ]
             },
-            "Name": "Motor Control Source",
+            "Name": "Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -781,7 +771,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -818,6 +808,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
               }
             ]
           },
@@ -848,7 +843,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Fault",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -885,6 +880,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE",
                   "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
                 }
               ]
             },
@@ -942,7 +942,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -994,7 +994,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -1073,7 +1073,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -1125,7 +1125,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -1204,7 +1204,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1248,7 +1248,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1319,7 +1319,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1363,7 +1363,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1485,7 +1485,7 @@
         "Tolerance": 5.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"5V Supply\" = 5 ±  5 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"5V Supply (MCU)\" = 5 ±  5 - ID:10ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1611,7 +1611,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1655,7 +1655,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1726,7 +1726,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -1778,7 +1778,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -1857,7 +1857,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "VCU",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -1872,11 +1872,6 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -1887,7 +1882,7 @@
               }
             ]
           },
-          "Name": "Motor Control Source",
+          "Name": "Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -1905,7 +1900,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 0,
+        "Value": 1,
         "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -1914,7 +1909,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "VCU",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -1929,11 +1924,6 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -1944,7 +1934,7 @@
                 }
               ]
             },
-            "Name": "Motor Control Source",
+            "Name": "Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -1998,7 +1988,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -2050,7 +2040,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",

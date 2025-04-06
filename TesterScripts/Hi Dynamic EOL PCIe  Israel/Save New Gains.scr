@@ -10,7 +10,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "550",
+          "Value": "",
           "GroupName": "Advanced",
           "Description": "ADC Count to mA Phase U Current Sensor Factor",
           "Default": "406",
@@ -118,7 +118,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "550",
+          "Value": "",
           "GroupName": "Advanced",
           "Description": "ADC Count to mA Bus Current Sensor Factor",
           "Default": "406",

@@ -105,7 +105,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "VCU",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -120,11 +120,6 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -135,7 +130,7 @@
               }
             ]
           },
-          "Name": "Motor Control Source",
+          "Name": "Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -153,7 +148,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 1,
+        "Value": 2,
         "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -162,7 +157,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "VCU",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -177,11 +172,6 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -192,7 +182,7 @@
                 }
               ]
             },
-            "Name": "Motor Control Source",
+            "Name": "Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -246,7 +236,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ON",
+          "Value": "",
           "GroupName": "Limiters",
           "Description": "Max Bus Current Limit Activation",
           "Default": "ON",
@@ -271,7 +261,7 @@
               }
             ]
           },
-          "Name": "Max Bus Drive Current Limit Activation",
+          "Name": "Max Bus Current Limit Activation",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -298,7 +288,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "ON",
+            "Value": "",
             "GroupName": "Limiters",
             "Description": "Max Bus Current Limit Activation",
             "Default": "ON",
@@ -323,7 +313,7 @@
                 }
               ]
             },
-            "Name": "Max Bus Drive Current Limit Activation",
+            "Name": "Max Bus Current Limit Activation",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -377,7 +367,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "ON",
+          "Value": "",
           "GroupName": "Forward",
           "Description": "Max Speed Limit Active Flag",
           "Default": "OFF",
@@ -429,7 +419,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "ON",
+            "Value": "",
             "GroupName": "Forward",
             "Description": "Max Speed Limit Active Flag",
             "Default": "OFF",
@@ -508,7 +498,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -545,6 +535,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
               }
             ]
           },
@@ -575,7 +570,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Fault",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -612,6 +607,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE",
                   "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
                 }
               ]
             },
@@ -669,9 +669,9 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Forward",
+          "Value": "",
           "GroupName": "Operation",
-          "Description": "Motor Drive Direction",
+          "Description": "Drive Direction",
           "Default": "Neutral",
           "Cmd": "mdrvdir",
           "Range": null,
@@ -689,17 +689,17 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Forward",
-                "Value": "1"
+                "Name": "Reverse",
+                "Value": "-1"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Reverse",
-                "Value": "-1"
+                "Name": "Forward",
+                "Value": "1"
               }
             ]
           },
-          "Name": "Motor Drive Direction (Operation)",
+          "Name": "Drive Direction",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -717,7 +717,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": -1,
+        "Value": 1,
         "ValueDropDwonIndex": 2,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -726,9 +726,9 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Forward",
+            "Value": "",
             "GroupName": "Operation",
-            "Description": "Motor Drive Direction",
+            "Description": "Drive Direction",
             "Default": "Neutral",
             "Cmd": "mdrvdir",
             "Range": null,
@@ -746,17 +746,17 @@
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Forward",
-                  "Value": "1"
+                  "Name": "Reverse",
+                  "Value": "-1"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Reverse",
-                  "Value": "-1"
+                  "Name": "Forward",
+                  "Value": "1"
                 }
               ]
             },
-            "Name": "Motor Drive Direction (Operation)",
+            "Name": "Drive Direction",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -810,7 +810,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -862,7 +862,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -941,7 +941,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -993,7 +993,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -1072,7 +1072,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "7000",
+          "Value": "",
           "GroupName": "Forward",
           "Description": "Max Speed Limit Value",
           "Default": "0",
@@ -1116,7 +1116,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "7000",
+            "Value": "",
             "GroupName": "Forward",
             "Description": "Max Speed Limit Value",
             "Default": "0",
@@ -1209,36 +1209,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ON",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
               }
             ]
           },
@@ -1282,36 +1252,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "OFF",
@@ -1378,7 +1318,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Torque",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Control Type",
           "Default": "Power",
@@ -1403,7 +1343,7 @@
               }
             ]
           },
-          "Name": "Motor Control Type",
+          "Name": "Control Type",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -1430,7 +1370,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Torque",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Control Type",
             "Default": "Power",
@@ -1455,7 +1395,7 @@
                 }
               ]
             },
-            "Name": "Motor Control Type",
+            "Name": "Control Type",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -1509,7 +1449,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -1517,16 +1457,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1553,7 +1493,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -1561,16 +1501,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -1864,7 +1804,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -1872,16 +1812,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1908,7 +1848,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -1916,16 +1856,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -1997,7 +1937,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "7000",
+          "Value": "",
           "GroupName": "Forward",
           "Description": "Max Speed Limit Value",
           "Default": "0",
@@ -2041,7 +1981,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "7000",
+            "Value": "",
             "GroupName": "Forward",
             "Description": "Max Speed Limit Value",
             "Default": "0",
@@ -2112,7 +2052,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -2120,16 +2060,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -2156,7 +2096,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -2164,16 +2104,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -2467,7 +2407,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -2475,16 +2415,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -2511,7 +2451,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -2519,16 +2459,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -2600,7 +2540,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "7000",
+          "Value": "",
           "GroupName": "Forward",
           "Description": "Max Speed Limit Value",
           "Default": "0",
@@ -2644,7 +2584,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "7000",
+            "Value": "",
             "GroupName": "Forward",
             "Description": "Max Speed Limit Value",
             "Default": "0",
@@ -2715,7 +2655,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -2723,16 +2663,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -2759,7 +2699,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -2767,16 +2707,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -3070,7 +3010,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -3114,7 +3054,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -3185,7 +3125,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Torque Set Point",
           "Default": "0",
@@ -3193,16 +3133,16 @@
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
-              -32768.0,
-              32767.0
+              -360.0,
+              360.0
             ]
           },
           "Format": null,
-          "Scale": 100.0,
+          "Scale": 10.0,
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Manual Torque Set Point (Operation)",
+          "Name": "Manual Torque Set Point",
           "Units": "Nm",
           "DeviceType": 1,
           "ToolTip": null,
@@ -3229,7 +3169,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Torque Set Point",
             "Default": "0",
@@ -3237,16 +3177,16 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                -32768.0,
-                32767.0
+                -360.0,
+                360.0
               ]
             },
             "Format": null,
-            "Scale": 100.0,
+            "Scale": 10.0,
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Manual Torque Set Point (Operation)",
+            "Name": "Manual Torque Set Point",
             "Units": "Nm",
             "DeviceType": 1,
             "ToolTip": null,
@@ -3300,7 +3240,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -3337,6 +3277,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
               }
             ]
           },
@@ -3367,7 +3312,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Fault",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -3404,6 +3349,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE",
                   "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
                 }
               ]
             },

@@ -10,10 +10,10 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "270.0659340659341",
-          "GroupName": "AqB",
+          "Value": "",
+          "GroupName": "Encoder",
           "Description": "Angle Offset",
-          "Default": "180",
+          "Default": "",
           "Cmd": "hangoff",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -27,8 +27,8 @@
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "Angle Offset (AqB)",
-          "Units": "deg",
+          "Name": "Angle Offset (Encoder)",
+          "Units": "°",
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0,
@@ -54,10 +54,10 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "270.0659340659341",
-            "GroupName": "AqB",
+            "Value": "",
+            "GroupName": "Encoder",
             "Description": "Angle Offset",
-            "Default": "180",
+            "Default": "",
             "Cmd": "hangoff",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -71,8 +71,8 @@
             "Note": null,
             "Save": true,
             "DropDown": null,
-            "Name": "Angle Offset (AqB)",
-            "Units": "deg",
+            "Name": "Angle Offset (Encoder)",
+            "Units": "°",
             "DeviceType": 1,
             "ToolTip": null,
             "CommunicationTimeout": 0,
@@ -125,18 +125,12 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Negative",
-          "GroupName": "AqB",
-          "Description": "AqB Direction",
-          "Default": "1",
+          "Value": "",
+          "GroupName": "Encoder",
+          "Description": "Count Direction",
+          "Default": "",
           "Cmd": "aqbcntdir",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              -1.0,
-              1.0
-            ]
-          },
+          "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
@@ -146,17 +140,17 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Negative",
-                "Value": "-1"
+                "Name": "Positive",
+                "Value": "1"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Positive",
-                "Value": "1"
+                "Name": "Negative",
+                "Value": "-1"
               }
             ]
           },
-          "Name": "AqB Direction",
+          "Name": "Count Direction",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -174,7 +168,7 @@
             "timeStamp": "0001-01-01T00:00:00"
           }
         },
-        "Value": 1,
+        "Value": -1,
         "ValueDropDwonIndex": 1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -183,18 +177,12 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Negative",
-            "GroupName": "AqB",
-            "Description": "AqB Direction",
-            "Default": "1",
+            "Value": "",
+            "GroupName": "Encoder",
+            "Description": "Count Direction",
+            "Default": "",
             "Cmd": "aqbcntdir",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -1.0,
-                1.0
-              ]
-            },
+            "Range": null,
             "Format": null,
             "Scale": 1.0,
             "Note": null,
@@ -204,17 +192,17 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Negative",
-                  "Value": "-1"
+                  "Name": "Positive",
+                  "Value": "1"
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Positive",
-                  "Value": "1"
+                  "Name": "Negative",
+                  "Value": "-1"
                 }
               ]
             },
-            "Name": "AqB Direction",
+            "Name": "Count Direction",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -268,9 +256,9 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Negative",
-          "GroupName": "Vehicle",
-          "Description": "Id Direction",
+          "Value": "",
+          "GroupName": "Motor",
+          "Description": "FOC ID Direction",
           "Default": "Negative",
           "Cmd": "mtrfociddir",
           "Range": null,
@@ -320,9 +308,9 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Negative",
-            "GroupName": "Vehicle",
-            "Description": "Id Direction",
+            "Value": "",
+            "GroupName": "Motor",
+            "Description": "FOC ID Direction",
             "Default": "Negative",
             "Cmd": "mtrfociddir",
             "Range": null,

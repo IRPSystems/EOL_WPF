@@ -256,7 +256,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -293,6 +293,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
               }
             ]
           },
@@ -323,7 +328,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Fault",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor State",
             "Default": "Neutral",
@@ -360,6 +365,11 @@
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "ATE",
                   "Value": "4"
+                },
+                {
+                  "$type": "Entities.Models.DropDownParamData, Entities",
+                  "Name": "Init",
+                  "Value": "6"
                 }
               ]
             },
@@ -726,152 +736,11 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "VCU",
-          "GroupName": "Operation",
-          "Description": "Motor Control Source",
-          "Default": "VCU",
-          "Cmd": "mtrctrlsrc",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "VCU",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Manual",
-                "Value": "2"
-              }
-            ]
-          },
-          "Name": "Motor Control Source",
-          "Units": null,
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
-        },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "VCU",
-            "GroupName": "Operation",
-            "Description": "Motor Control Source",
-            "Default": "VCU",
-            "Cmd": "mtrctrlsrc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "VCU",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Manual",
-                  "Value": "2"
-                }
-              ]
-            },
-            "Name": "Motor Control Source",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set UUT Control Source to Manual",
-        "IsPass": false,
-        "PassNextId": 8,
-        "FailNextId": 0,
-        "ID": 7,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -923,7 +792,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -985,9 +854,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual FOC  to ON",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1002,7 +871,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -1054,7 +923,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -1116,9 +985,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1133,7 +1002,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -1177,7 +1046,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",
@@ -1231,9 +1100,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual IQ Command to 50ARMS",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1248,7 +1117,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1292,7 +1161,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1346,9 +1215,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 300RPM",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1364,9 +1233,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Stablize Speed",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1414,7 +1283,7 @@
         "Tolerance": 30.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:12ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1488,9 +1357,9 @@
         },
         "UserTitle": "Compare UUT Speed to 300RPM",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 13,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1534,7 +1403,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 250 ±  2 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 250 ±  2 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1631,9 +1500,9 @@
         },
         "UserTitle": "Get PS Voltage 250",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1659,7 +1528,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Vbus",
+          "Name": "Vbus (Monitor)",
           "Units": "V",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1708,7 +1577,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1735,7 +1604,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Vbus",
+            "Name": "Vbus (Monitor)",
             "Units": "V",
             "DeviceType": 1,
             "ToolTip": null,
@@ -1809,9 +1678,9 @@
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1826,7 +1695,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Value",
           "Default": "0",
@@ -1870,7 +1739,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Value",
             "Default": "0",
@@ -1924,9 +1793,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 0 RPM",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -1941,7 +1810,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -1985,7 +1854,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",
@@ -2041,7 +1910,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

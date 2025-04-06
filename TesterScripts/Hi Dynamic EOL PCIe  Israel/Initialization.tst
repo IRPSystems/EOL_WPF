@@ -7,7 +7,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
         "Name": "Sub Script 10",
-        "ParentScriptName": "Internal voltages",
+        "ParentScriptName": "Initialization",
         "ContinueUntilType": 0,
         "Repeats": 1,
         "Timeout": 0,

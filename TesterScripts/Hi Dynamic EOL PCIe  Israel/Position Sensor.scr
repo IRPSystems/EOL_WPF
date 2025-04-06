@@ -10,9 +10,9 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Negative",
-          "GroupName": "Vehicle",
-          "Description": "Id Direction",
+          "Value": "",
+          "GroupName": "Motor",
+          "Description": "FOC ID Direction",
           "Default": "Negative",
           "Cmd": "mtrfociddir",
           "Range": null,
@@ -62,9 +62,9 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Negative",
-            "GroupName": "Vehicle",
-            "Description": "Id Direction",
+            "Value": "",
+            "GroupName": "Motor",
+            "Description": "FOC ID Direction",
             "Default": "Negative",
             "Cmd": "mtrfociddir",
             "Range": null,
@@ -150,12 +150,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -199,12 +193,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -268,10 +256,10 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "270.0659340659341",
-          "GroupName": "AqB",
+          "Value": "",
+          "GroupName": "Encoder",
           "Description": "Angle Offset",
-          "Default": "180",
+          "Default": "",
           "Cmd": "hangoff",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -285,8 +273,8 @@
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "Angle Offset (AqB)",
-          "Units": "deg",
+          "Name": "Angle Offset (Encoder)",
+          "Units": "°",
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0,
@@ -312,10 +300,10 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "270.0659340659341",
-            "GroupName": "AqB",
+            "Value": "",
+            "GroupName": "Encoder",
             "Description": "Angle Offset",
-            "Default": "180",
+            "Default": "",
             "Cmd": "hangoff",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -329,8 +317,8 @@
             "Note": null,
             "Save": true,
             "DropDown": null,
-            "Name": "Angle Offset (AqB)",
-            "Units": "deg",
+            "Name": "Angle Offset (Encoder)",
+            "Units": "°",
             "DeviceType": 1,
             "ToolTip": null,
             "CommunicationTimeout": 0,
@@ -383,7 +371,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -427,7 +415,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",
@@ -525,12 +513,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -574,12 +556,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -694,7 +670,7 @@
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 60 ±  15 - ID:8ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 60 ±  15 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -794,12 +770,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -843,12 +813,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -963,7 +927,7 @@
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 120 ±  15 - ID:11ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 120 ±  15 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1063,12 +1027,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -1112,12 +1070,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -1232,7 +1184,7 @@
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 180 ±  15 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 180 ±  15 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1332,12 +1284,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -1381,12 +1327,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -1501,7 +1441,7 @@
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 240 ±  15 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 240 ±  15 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1601,12 +1541,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -1650,12 +1584,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -1770,7 +1698,7 @@
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 300 ±  15 - ID:20ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 300 ±  15 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1861,7 +1789,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual IQ Command",
           "Default": "0",
@@ -1905,7 +1833,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual IQ Command",
             "Default": "0",
@@ -1976,9 +1904,9 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Negative",
-          "GroupName": "Vehicle",
-          "Description": "Id Direction",
+          "Value": "",
+          "GroupName": "Motor",
+          "Description": "FOC ID Direction",
           "Default": "Negative",
           "Cmd": "mtrfociddir",
           "Range": null,
@@ -2028,9 +1956,9 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Negative",
-            "GroupName": "Vehicle",
-            "Description": "Id Direction",
+            "Value": "",
+            "GroupName": "Motor",
+            "Description": "FOC ID Direction",
             "Default": "Negative",
             "Cmd": "mtrfociddir",
             "Range": null,
@@ -2107,7 +2035,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -2159,7 +2087,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -2238,10 +2166,10 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "270.0659340659341",
-          "GroupName": "AqB",
+          "Value": "",
+          "GroupName": "Encoder",
           "Description": "Angle Offset",
-          "Default": "180",
+          "Default": "",
           "Cmd": "hangoff",
           "Range": {
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -2255,8 +2183,8 @@
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "Angle Offset (AqB)",
-          "Units": "deg",
+          "Name": "Angle Offset (Encoder)",
+          "Units": "°",
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0,
@@ -2282,10 +2210,10 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "270.0659340659341",
-            "GroupName": "AqB",
+            "Value": "",
+            "GroupName": "Encoder",
             "Description": "Angle Offset",
-            "Default": "180",
+            "Default": "",
             "Cmd": "hangoff",
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
@@ -2299,8 +2227,8 @@
             "Note": null,
             "Save": true,
             "DropDown": null,
-            "Name": "Angle Offset (AqB)",
-            "Units": "deg",
+            "Name": "Angle Offset (Encoder)",
+            "Units": "°",
             "DeviceType": 1,
             "ToolTip": null,
             "CommunicationTimeout": 0,
