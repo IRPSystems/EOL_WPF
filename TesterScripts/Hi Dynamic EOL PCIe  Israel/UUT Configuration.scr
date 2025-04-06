@@ -640,153 +640,12 @@
         "ComparedValue": 0,
         "UserTitle": "Get Fusa C-BIT Fault Vector",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 6,
         "FailNextId": 0,
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "VCU",
-          "GroupName": "Operation",
-          "Description": "Motor Control Source",
-          "Default": "VCU",
-          "Cmd": "mtrctrlsrc",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "VCU",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Manual",
-                "Value": "2"
-              }
-            ]
-          },
-          "Name": "Motor Control Source",
-          "Units": null,
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
-        },
-        "Value": 1,
-        "ValueDropDwonIndex": 0,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "VCU",
-            "GroupName": "Operation",
-            "Description": "Motor Control Source",
-            "Default": "VCU",
-            "Cmd": "mtrctrlsrc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "VCU",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Manual",
-                  "Value": "2"
-                }
-              ]
-            },
-            "Name": "Motor Control Source",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": -1,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set Control Source VCU",
-        "IsPass": false,
-        "PassNextId": 6,
-        "FailNextId": 0,
-        "ID": 5,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
           "IsSaveToCustomerVer": false
@@ -903,7 +762,7 @@
         "ValueLeft": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Fault",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor State",
           "Default": "Neutral",
@@ -940,6 +799,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE",
                 "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Init",
+                "Value": "6"
               }
             ]
           },
@@ -1008,16 +872,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ON",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
               }
             ]
           },
@@ -1061,16 +915,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "OFF",
@@ -1146,8 +990,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              5000.0,
-              0.0,
               5000.0
             ]
           },
@@ -1191,8 +1033,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                5000.0,
                 0.0,
                 5000.0
               ]
@@ -1265,8 +1105,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0,
-              20.0,
               200.0
             ]
           },
@@ -1310,8 +1148,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                20.0,
-                200.0,
                 20.0,
                 200.0
               ]
@@ -1384,8 +1220,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0,
-              20.0,
               200.0
             ]
           },
@@ -1429,8 +1263,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                20.0,
-                200.0,
                 20.0,
                 200.0
               ]
@@ -1494,7 +1326,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Enabled",
+          "Value": "",
           "GroupName": "Faults Disable",
           "Description": "Choose whether this fault is ignored or not",
           "Default": "Enabled",
@@ -1519,7 +1351,7 @@
               }
             ]
           },
-          "Name": "Battery Low Voltage                      - 0x8233",
+          "Name": "Battery Low Voltage                      - 0x8133",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -1546,7 +1378,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Enabled",
+            "Value": "",
             "GroupName": "Faults Disable",
             "Description": "Choose whether this fault is ignored or not",
             "Default": "Enabled",
@@ -1571,7 +1403,7 @@
                 }
               ]
             },
-            "Name": "Battery Low Voltage                      - 0x8233",
+            "Name": "Battery Low Voltage                      - 0x8133",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
@@ -1647,16 +1479,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
               }
             ]
           },
@@ -1700,16 +1522,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
@@ -1798,16 +1610,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
               }
             ]
           },
@@ -1851,16 +1653,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
@@ -1949,16 +1741,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
               }
             ]
           },
@@ -2002,16 +1784,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
@@ -2100,16 +1872,6 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "Disabled",
                 "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Enabled",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Disabled",
-                "Value": "1"
               }
             ]
           },
@@ -2153,16 +1915,6 @@
             "DropDown": {
               "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
               "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Enabled",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Disabled",
-                  "Value": "1"
-                },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "Enabled",
@@ -2229,7 +1981,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "Enabled",
+          "Value": "",
           "GroupName": "Faults Disable",
           "Description": "Choose whether this fault is ignored or not",
           "Default": "Enabled",
@@ -2281,7 +2033,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "Enabled",
+            "Value": "",
             "GroupName": "Faults Disable",
             "Description": "Choose whether this fault is ignored or not",
             "Default": "Enabled",

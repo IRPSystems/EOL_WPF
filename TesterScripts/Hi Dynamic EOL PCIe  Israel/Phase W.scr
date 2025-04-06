@@ -19,12 +19,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -68,12 +62,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -164,12 +152,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -213,12 +195,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -309,12 +285,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -358,12 +328,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -454,12 +418,6 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
-              360.0,
-              0.0,
               360.0
             ]
           },
@@ -503,12 +461,6 @@
             "Range": {
               "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
               "$values": [
-                0.0,
-                360.0,
-                0.0,
-                360.0,
-                0.0,
-                360.0,
                 0.0,
                 360.0
               ]
@@ -590,7 +542,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -634,7 +586,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -723,7 +675,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -767,7 +719,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -853,7 +805,44 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLCalibrate, ScriptHandler",
         "Name": "EOL Clibrate 1",
-        "GainParam": null,
+        "GainParam": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Advanced",
+          "Description": "ADC Count to mA Phase W Current Sensor Factor",
+          "Default": "406",
+          "Cmd": "adccurfacw",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              300.0,
+              550.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ADC Current Factor, Phase W (Advanced)",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "CommSendResLog": {
+            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+            "SendCommand": null,
+            "ReceivedValue": null,
+            "CommErrorMsg": null,
+            "NumberOfTries": 1,
+            "ParamName": null,
+            "Device": null,
+            "Tool": null,
+            "StepName": null,
+            "timeStamp": "0001-01-01T00:00:00"
+          }
+        },
         "GainMin": 300.0,
         "GainMax": 550.0,
         "McuParam": {
@@ -870,7 +859,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Current W RMS",
+          "Name": "Current W (Monitor)",
           "Units": "A-RMS",
           "DeviceType": 1,
           "ToolTip": null,
@@ -945,7 +934,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -989,7 +978,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1078,7 +1067,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1122,7 +1111,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1222,7 +1211,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Current W RMS",
+          "Name": "Current W (Monitor)",
           "Units": "A-RMS",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1275,7 +1264,7 @@
         "Tolerance": 10.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W RMS (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  10 - ID:18ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  10 - ID:18ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1302,7 +1291,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Current W RMS",
+            "Name": "Current W (Monitor)",
             "Units": "A-RMS",
             "DeviceType": 1,
             "ToolTip": null,
@@ -1397,7 +1386,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1441,7 +1430,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1530,7 +1519,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1574,7 +1563,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1674,7 +1663,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Current W RMS",
+          "Name": "Current W (Monitor)",
           "Units": "A-RMS",
           "DeviceType": 1,
           "ToolTip": null,
@@ -1727,7 +1716,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W RMS (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:23ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:23ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1754,7 +1743,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Current W RMS",
+            "Name": "Current W (Monitor)",
             "Units": "A-RMS",
             "DeviceType": 1,
             "ToolTip": null,
@@ -1849,7 +1838,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -1893,7 +1882,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -1982,7 +1971,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -2026,7 +2015,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -2126,7 +2115,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Current W RMS",
+          "Name": "Current W (Monitor)",
           "Units": "A-RMS",
           "DeviceType": 1,
           "ToolTip": null,
@@ -2179,7 +2168,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W RMS (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:28ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:28ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2206,7 +2195,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Current W RMS",
+            "Name": "Current W (Monitor)",
             "Units": "A-RMS",
             "DeviceType": 1,
             "ToolTip": null,
@@ -2301,7 +2290,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -2345,7 +2334,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -2434,7 +2423,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -2478,7 +2467,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -2578,7 +2567,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Current W RMS",
+          "Name": "Current W (Monitor)",
           "Units": "A-RMS",
           "DeviceType": 1,
           "ToolTip": null,
@@ -2631,7 +2620,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W RMS (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:33ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current W (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:33ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2658,7 +2647,7 @@
             "Note": null,
             "Save": false,
             "DropDown": null,
-            "Name": "Current W RMS",
+            "Name": "Current W (Monitor)",
             "Units": "A-RMS",
             "DeviceType": 1,
             "ToolTip": null,
@@ -2753,7 +2742,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "0",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Manual ID Command",
           "Default": "0",
@@ -2797,7 +2786,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "0",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Manual ID Command",
             "Default": "0",
@@ -2868,7 +2857,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual Electric Angle Speed Flag",
           "Default": "OFF",
@@ -2920,7 +2909,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual Electric Angle Speed Flag",
             "Default": "OFF",
@@ -2999,7 +2988,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "OFF",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Manual FOC Control",
           "Default": "OFF",
@@ -3051,7 +3040,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "OFF",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Manual FOC Control",
             "Default": "OFF",
@@ -3130,7 +3119,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "VCU",
+          "Value": "",
           "GroupName": "Operation",
           "Description": "Motor Control Source",
           "Default": "VCU",
@@ -3145,11 +3134,6 @@
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "External Devices",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "VCU",
                 "Value": "1"
               },
@@ -3160,7 +3144,7 @@
               }
             ]
           },
-          "Name": "Motor Control Source",
+          "Name": "Control Source",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -3187,7 +3171,7 @@
           "Parameter": {
             "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
             "ValueChanged": null,
-            "Value": "VCU",
+            "Value": "",
             "GroupName": "Operation",
             "Description": "Motor Control Source",
             "Default": "VCU",
@@ -3202,11 +3186,6 @@
               "$values": [
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "External Devices",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
                   "Name": "VCU",
                   "Value": "1"
                 },
@@ -3217,7 +3196,7 @@
                 }
               ]
             },
-            "Name": "Motor Control Source",
+            "Name": "Control Source",
             "Units": null,
             "DeviceType": 1,
             "ToolTip": null,
