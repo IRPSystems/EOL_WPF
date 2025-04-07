@@ -1524,7 +1524,7 @@
                       "UserTitle": "Toggle HVIL 1 to ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 1",
-                      "Description": "Set  \"Digital Output (NI DUCK 2)\" - ID:1",
+                      "Description": "Set  \"Digital Output\" - ID:1",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:2",
@@ -1562,7 +1562,7 @@
                       "Description": "Notification - ID:2",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:3",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:3",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -1667,7 +1667,7 @@
                       "UserTitle": "Verify Switches State - #1 OFF #2 OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 4",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:3",
+                      "Description": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:3",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:4",
@@ -1705,7 +1705,7 @@
                       "Description": "Notification - ID:4",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:5",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input\" = 1 ±  0 - ID:5",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -1810,7 +1810,7 @@
                       "UserTitle": "Verify Switches State - #1 ON #2 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 7",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:5",
+                      "Description": "Compare with tolerance:  \"Digital Input\" = 1 ±  0 - ID:5",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:6",
@@ -1848,7 +1848,7 @@
                       "Description": "Notification - ID:6",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:7",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:7",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -1953,7 +1953,7 @@
                       "UserTitle": "Verify Switches State - #1 ON #2 OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 9",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:7",
+                      "Description": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:8",
@@ -1991,7 +1991,7 @@
                       "Description": "Notification - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:9",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input\" = 1 ±  0 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -2096,7 +2096,7 @@
                       "UserTitle": "Verify Switches State - #1 ON #2 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 11",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 1 ±  0 - ID:9",
+                      "Description": "Compare with tolerance:  \"Digital Input\" = 1 ±  0 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:10",
@@ -2134,7 +2134,7 @@
                       "Description": "Notification - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:11",
+                      "PassNextDescription": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -2239,10 +2239,10 @@
                       "UserTitle": "Verify Switches State - #1 OFF #2 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 13",
-                      "Description": "Compare with tolerance:  \"Digital Input (NI DUCK 2)\" = 0 ±  0 - ID:11",
+                      "Description": "Compare with tolerance:  \"Digital Input\" = 0 ±  0 - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK 2)\" - ID:12",
+                      "PassNextDescription": "Set  \"Digital Output\" - ID:12",
                       "FailNextDescription": "Notification - ID:10",
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -2349,7 +2349,7 @@
                       "UserTitle": "Toggle HVIL 1 to OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 14",
-                      "Description": "Set  \"Digital Output (NI DUCK 2)\" - ID:12",
+                      "Description": "Set  \"Digital Output\" - ID:12",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Notification - ID:13",
@@ -4267,7 +4267,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Phase W Over Current",
+                              "Name": "Phase W Over Current Peak",
                               "Value": "1024"
                             },
                             {
@@ -5064,7 +5064,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -5261,6 +5261,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            5000.0,
+                            0.0,
                             5000.0
                           ]
                         },
@@ -5377,7 +5379,7 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             20.0,
-                            200.0
+                            95.0
                           ]
                         },
                         "Format": null,
@@ -5493,7 +5495,7 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             20.0,
-                            200.0
+                            100.0
                           ]
                         },
                         "Format": null,
@@ -5985,6 +5987,16 @@
                         "DropDown": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Enabled",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "Disabled",
+                              "Value": "1"
+                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "Enabled",
@@ -10309,7 +10321,7 @@
                         }
                       },
                       "CompareValue": "5000",
-                      "Tolerance": 100.0,
+                      "Tolerance": 300.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
                       "IsPercentageTolerance": false,
@@ -10354,7 +10366,7 @@
                       "UserTitle": "Get 5V ATE Read (DAQ)",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 17",
-                      "Description": "Compare with tolerance:  \"Analog Input (NI DUCK)\" = 5000 ±  100 - ID:1",
+                      "Description": "Compare with tolerance:  \"Analog Input (NI DUCK)\" = 5000 ±  300 - ID:1",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Analog Input (NI DUCK)\" ±  10 - ID:2",
@@ -10850,7 +10862,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -17882,7 +17894,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -18490,7 +18502,7 @@
                       "IsStopOnPass": false,
                       "IsInfinity": false,
                       "ErrorMessage": "Failed to run the sub script \"Sub Script = LV Power Up - Repeats: 1 - ID:8\"",
-                      "UserTitle": null,
+                      "UserTitle": "LV Power UP",
                       "ExecutionTime": "00:00:00",
                       "Name": "Sub Script 9",
                       "Description": "Sub Script = LV Power Up - Repeats: 1 - ID:8",
@@ -19130,7 +19142,7 @@
                       "IsStopOnPass": false,
                       "IsInfinity": false,
                       "ErrorMessage": "Failed to run the sub script \"Sub Script = HV Power Up - Repeats: 1 - ID:9\"",
-                      "UserTitle": null,
+                      "UserTitle": "HV Power Up",
                       "ExecutionTime": "00:00:00",
                       "Name": "Sub Script 10",
                       "Description": "Sub Script = HV Power Up - Repeats: 1 - ID:9",
@@ -19286,7 +19298,7 @@
                                     },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Phase W Over Current",
+                                      "Name": "Phase W Over Current Peak",
                                       "Value": "1024"
                                     },
                                     {
@@ -20083,7 +20095,7 @@
                                     },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Init",
+                                      "Name": "Off",
                                       "Value": "6"
                                     }
                                   ]
@@ -20280,6 +20292,8 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     0.0,
+                                    5000.0,
+                                    0.0,
                                     5000.0
                                   ]
                                 },
@@ -20396,7 +20410,7 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     20.0,
-                                    200.0
+                                    95.0
                                   ]
                                 },
                                 "Format": null,
@@ -20512,7 +20526,7 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     20.0,
-                                    200.0
+                                    100.0
                                   ]
                                 },
                                 "Format": null,
@@ -21013,6 +21027,16 @@
                                       "$type": "Entities.Models.DropDownParamData, Entities",
                                       "Name": "Disabled",
                                       "Value": "1"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Enabled",
+                                      "Value": "0"
+                                    },
+                                    {
+                                      "$type": "Entities.Models.DropDownParamData, Entities",
+                                      "Name": "Disabled",
+                                      "Value": "1"
                                     }
                                   ]
                                 },
@@ -21378,7 +21402,7 @@
                       "IsStopOnPass": false,
                       "IsInfinity": false,
                       "ErrorMessage": "Failed to run the sub script \"Sub Script = UUT Configuration - Repeats: 1 - ID:11\"",
-                      "UserTitle": null,
+                      "UserTitle": "UUT Configuration",
                       "ExecutionTime": "00:00:00",
                       "Name": "Sub Script 10",
                       "Description": "Sub Script = UUT Configuration - Repeats: 1 - ID:11",
@@ -27180,7 +27204,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -30406,7 +30430,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -30883,6 +30907,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            360.0,
+                            0.0,
                             360.0
                           ]
                         },
@@ -30960,7 +30986,7 @@
                       "Description": "Set  \"Manual Angle Value (MCU)\" = 240 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Hall Sensor Fault                           - 0x8250 (MCU)\" = 1 - ID:10",
+                      "PassNextDescription": "Set  \"Position Sensor (MCU)\" = 1 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -31015,7 +31041,7 @@
                             }
                           ]
                         },
-                        "Name": "Hall Sensor Fault                           - 0x8250",
+                        "Name": "Position Sensor",
                         "Units": null,
                         "DeviceType": 1,
                         "ToolTip": null,
@@ -31081,7 +31107,7 @@
                       "UserTitle": "Disable Position Sensor Fault",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 32",
-                      "Description": "Set  \"Hall Sensor Fault                           - 0x8250 (MCU)\" = 1 - ID:10",
+                      "Description": "Set  \"Position Sensor (MCU)\" = 1 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Delay 1 sec - ID:11",
@@ -33582,6 +33608,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            360.0,
+                            0.0,
                             360.0
                           ]
                         },
@@ -33735,6 +33763,8 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
+                            0.0,
+                            360.0,
                             0.0,
                             360.0
                           ]
@@ -33890,6 +33920,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            360.0,
+                            0.0,
                             360.0
                           ]
                         },
@@ -34043,6 +34075,8 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
+                            0.0,
+                            360.0,
                             0.0,
                             360.0
                           ]
@@ -37269,6 +37303,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            10.0,
+                            0.0,
                             10.0
                           ]
                         },
@@ -37827,6 +37863,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            1000.0,
+                            0.0,
                             1000.0
                           ]
                         },
@@ -37904,7 +37942,7 @@
                       "Description": "Set  \"ATE Duty Cycle (MCU)\" = 1000 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 1 - ID:23",
+                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 1 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -38025,16 +38063,16 @@
                       "UserTitle": "Set Control Source VCU",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 23",
-                      "Description": "Set  \"Control Source (MCU)\" = 1 - ID:23",
+                      "Description": "Set  \"Control Source (MCU)\" = 1 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:10",
+                      "PassNextDescription": "Delay 1 sec - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 23,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38063,16 +38101,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 7",
-                      "Description": "Delay 1 sec - ID:10",
+                      "Description": "Delay 1 sec - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:11",
+                      "PassNextDescription": "Set  \"ATE Mode (MCU)\" = 0 - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 10,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38174,16 +38212,16 @@
                       "UserTitle": "Enter ATE Mode",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 3",
-                      "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:11",
+                      "Description": "Set  \"ATE Mode (MCU)\" = 0 - ID:12",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:12",
+                      "PassNextDescription": "Compare  Motor State (Operation) (MCU) = 4 - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 11,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38247,7 +38285,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -38278,16 +38316,16 @@
                       "UserTitle": "Get Motor State ATE",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare 21",
-                      "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:12",
+                      "Description": "Compare  Motor State (Operation) (MCU) = 4 - ID:13",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38503,16 +38541,16 @@
                       "UserTitle": "Set Phase U High Side ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 4",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:13",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:14",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 25 sec - ID:14",
+                      "PassNextDescription": "Delay 25 sec - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 13,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38541,16 +38579,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 17",
-                      "Description": "Delay 25 sec - ID:14",
+                      "Description": "Delay 25 sec - ID:15",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Calibrate - Bus Current (Monitor) (MCU) - ID:15",
+                      "PassNextDescription": "Calibrate - Bus Current (Monitor) (MCU) - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -38690,16 +38728,16 @@
                       "UserTitle": "Calibrate BUS",
                       "ExecutionTime": "00:00:00",
                       "Name": "EOL Clibrate 1",
-                      "Description": "Calibrate - Bus Current (Monitor) (MCU) - ID:15",
+                      "Description": "Calibrate - Bus Current (Monitor) (MCU) - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:16",
+                      "PassNextDescription": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -38829,16 +38867,16 @@
                       "UserTitle": "Validate BUS Calibration",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 2",
-                      "Description": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:16",
+                      "Description": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:17",
+                      "PassNextDescription": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -39054,16 +39092,16 @@
                       "UserTitle": "Set Phase U High Side OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 5",
-                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:17",
+                      "Description": "Set  \"ATE Set (MCU)\" = 0 - ID:18",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:18",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:19",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -39164,16 +39202,16 @@
                       "UserTitle": "Disable Load Contactor ",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 17",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:18",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:19",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:19",
+                      "PassNextDescription": "Delay 1 sec - ID:20",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 18,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -39202,16 +39240,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 23",
-                      "Description": "Delay 1 sec - ID:19",
+                      "Description": "Delay 1 sec - ID:20",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:20",
+                      "PassNextDescription": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:21",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 19,
+                      "ID": 20,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -39308,16 +39346,16 @@
                       "UserTitle": "Set Output Voltage to 300V",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 22",
-                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:20",
+                      "Description": "Set  \"Voltage Limit (EA Power)\" = 300 - ID:21",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 1 sec - ID:21",
+                      "PassNextDescription": "Delay 1 sec - ID:22",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 20,
+                      "ID": 21,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -39346,16 +39384,16 @@
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeDelay 25",
-                      "Description": "Delay 1 sec - ID:21",
+                      "Description": "Delay 1 sec - ID:22",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 2 - ID:25",
+                      "PassNextDescription": "Set  \"Control Source (MCU)\" = 2 - ID:23",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 21,
+                      "ID": 22,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -39470,7 +39508,7 @@
                       "UserTitle": "Set Control Source Manual",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 25",
-                      "Description": "Set  \"Control Source (MCU)\" = 2 - ID:25",
+                      "Description": "Set  \"Control Source (MCU)\" = 2 - ID:23",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -39479,7 +39517,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 25,
+                      "ID": 23,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -39611,7 +39649,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39619,12 +39657,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -39710,7 +39748,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39718,12 +39756,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -39809,7 +39847,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39817,12 +39855,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
@@ -40358,7 +40396,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -40719,6 +40757,8 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
+                            20.0,
+                            0.0,
                             20.0
                           ]
                         },
@@ -40834,6 +40874,8 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
+                            0.0,
+                            5000.0,
                             0.0,
                             5000.0
                           ]
@@ -41944,7 +41986,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -42395,7 +42437,7 @@
                       "Description": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 500 - ID:9",
+                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 500 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -42425,25 +42467,19 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Forward",
-                        "Description": "Max Speed Limit Value",
+                        "Value": " ",
+                        "GroupName": "Monitor",
+                        "Description": "Forward Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            10000.0
-                          ]
-                        },
+                        "Range": null,
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": true,
+                        "Save": false,
                         "DropDown": null,
-                        "Name": "Max Speed Limit Value",
-                        "Units": "RPM",
+                        "Name": "Forward Speed Limit",
+                        "Units": null,
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -42508,7 +42544,7 @@
                       "UserTitle": "Set Max Limit Speed To 500",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 3",
-                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 500 - ID:9",
+                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 500 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Active Damping Activation (MCU)\" = 0 - ID:10",
@@ -43245,7 +43281,7 @@
                       "Description": "Delay 2 sec - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 1300 - ID:17",
+                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 1300 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -43275,25 +43311,19 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Forward",
-                        "Description": "Max Speed Limit Value",
+                        "Value": " ",
+                        "GroupName": "Monitor",
+                        "Description": "Forward Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            10000.0
-                          ]
-                        },
+                        "Range": null,
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": true,
+                        "Save": false,
                         "DropDown": null,
-                        "Name": "Max Speed Limit Value",
-                        "Units": "RPM",
+                        "Name": "Forward Speed Limit",
+                        "Units": null,
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -43358,7 +43388,7 @@
                       "UserTitle": "Set Max Limit Speed To 1300",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 14",
-                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 1300 - ID:17",
+                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 1300 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Torque Set Point (MCU)\" = 2 - ID:18",
@@ -43847,7 +43877,7 @@
                       "Description": "Delay 2 sec - ID:22",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 2000 - ID:23",
+                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 2000 - ID:23",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -43877,25 +43907,19 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": "",
-                        "GroupName": "Forward",
-                        "Description": "Max Speed Limit Value",
+                        "Value": " ",
+                        "GroupName": "Monitor",
+                        "Description": "Forward Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": {
-                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-                          "$values": [
-                            0.0,
-                            10000.0
-                          ]
-                        },
+                        "Range": null,
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": true,
+                        "Save": false,
                         "DropDown": null,
-                        "Name": "Max Speed Limit Value",
-                        "Units": "RPM",
+                        "Name": "Forward Speed Limit",
+                        "Units": null,
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -43960,7 +43984,7 @@
                       "UserTitle": "Set Max Limit Speed To 2000",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 15",
-                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 2000 - ID:23",
+                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 2000 - ID:23",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Torque Set Point (MCU)\" = 2 - ID:24",
@@ -44597,7 +44621,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -45093,7 +45117,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -47274,7 +47298,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]
@@ -49223,7 +49247,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Init",
+                              "Name": "Off",
                               "Value": "6"
                             }
                           ]

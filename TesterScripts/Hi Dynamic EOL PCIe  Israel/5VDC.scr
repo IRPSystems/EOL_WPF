@@ -40,10 +40,10 @@
           }
         },
         "CompareValue": "5000",
-        "Tolerance": 100.0,
+        "Tolerance": 300.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Analog Input (NI DUCK)\" = 5000 ±  100 - ID:1ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Analog Input (NI DUCK)\" = 5000 ±  300 - ID:1ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -811,7 +811,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -883,7 +883,7 @@
                 },
                 {
                   "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Init",
+                  "Name": "Off",
                   "Value": "6"
                 }
               ]

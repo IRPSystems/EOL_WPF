@@ -296,7 +296,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -825,7 +825,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "LV Power Up",
-        "UserTitle": null,
+        "UserTitle": "LV Power UP",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -850,7 +850,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "HV Power Up",
-        "UserTitle": null,
+        "UserTitle": "HV Power Up",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -893,7 +893,7 @@
         "IsStopOnPass": false,
         "IsInfinity": false,
         "SelectedScriptName": "UUT Configuration",
-        "UserTitle": null,
+        "UserTitle": "UUT Configuration",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
