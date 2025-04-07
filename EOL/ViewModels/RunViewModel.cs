@@ -529,7 +529,7 @@ namespace EOL.ViewModels
 
             // Optionally write XML if enabled.
             if (WritetoWatsEnabled)
-                _runResultToWatsConverter.SaveRunResultToXml(watsReports);
+                _runResultToWatsConverter.SaveRunResultToXml(watsReports, _userDefaultSettings.ReportsSavingPath, _runData.SerialNumber);
 
             savingDataWindow.SetProgress(100);
             savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
@@ -1115,18 +1115,18 @@ namespace EOL.ViewModels
                 };
                 watsreports.Report.MiscInfo.Add(miscInfo);
 
-				if (WatsBLOB != null)
-				{
-					string base64string = Convert.ToBase64String(WatsBLOB);
-					Step step = new Step()
-					{
-						Name = "WATS BLOB",
-						StepType = "Attachment",
-						Attachments = new List<Attachment>()
-					};
-					step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
-					watsreports.Report.Steps.Add(step);
-				}
+				//if (WatsBLOB != null)
+				//{
+				//	string base64string = Convert.ToBase64String(WatsBLOB);
+				//	Step step = new Step()
+				//	{
+				//		Name = "WATS BLOB",
+				//		StepType = "Attachment",
+				//		Attachments = new List<Attachment>()
+				//	};
+				//	step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
+				//	watsreports.Report.Steps.Add(step);
+				//}
 			}
 			catch (Exception ex)
 			{

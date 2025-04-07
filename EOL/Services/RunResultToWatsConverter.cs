@@ -36,7 +36,8 @@ namespace EOL.Services
         //private const string WatsReportPath = "C:\\ProgramData\\Virinco\\WATS";
 
         private const string errorLogPath = "C:\\ProgramData\\Virinco\\WATS\\ErrorLog.txt";
-        private const string ReportName = "ReportWats.xml";
+        private const string ReportName = "ReportWats";
+        private const string fileType = ".xml";
 
         public RunResultToWatsConverter()
         {
@@ -52,9 +53,9 @@ namespace EOL.Services
             File.AppendAllText(errorLogPath, logMessage);
         }
 
-        public void SaveRunResultToXml(Reports reports)
+        public void SaveRunResultToXml(Reports reports, string backUpPath, string sn)
         {
-            string filePath = Path.Combine(WatsReportPath, ReportName);
+            string filePath = Path.Combine(WatsReportPath, ReportName + fileType);
 
             XmlSerializer serializer = new XmlSerializer(typeof(Reports));
 
@@ -62,6 +63,15 @@ namespace EOL.Services
             {
                 serializer.Serialize(writer, reports );
             }
+            string backupFilePath = Path.Combine(backUpPath, ReportName + " - " + sn + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")) + fileType);
+
+            using (StreamWriter writer = new StreamWriter(backupFilePath))
+            {
+                serializer.Serialize(writer, reports);
+            }
+
+            // Create a backup of the file 
+
         }
 
         public Step HandleStep(ScriptStepBase stepbase)
