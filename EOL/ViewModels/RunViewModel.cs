@@ -978,8 +978,21 @@ namespace EOL.ViewModels
                         Name = project.Name
                     }; ;
 
-					//bool to determine wheter to write the test into report
-					bool isWritingtoWatsReport = true;
+                    if (WatsBLOB != null)
+                    {
+                        string base64string = Convert.ToBase64String(WatsBLOB);
+                        Step step = new Step()
+                        {
+                            Name = "WATS BLOB",
+                            StepType = "Attachment",
+                            Attachments = new List<Attachment>()
+                        };
+                        step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
+                        ProjectStep.Steps.Add(step);
+                    }
+
+                    //bool to determine wheter to write the test into report
+                    bool isWritingtoWatsReport = true;
 					//wats error message
 					string errorMessage; 
 
@@ -1115,18 +1128,7 @@ namespace EOL.ViewModels
                 };
                 watsreports.Report.MiscInfo.Add(miscInfo);
 
-				//if (WatsBLOB != null)
-				//{
-				//	string base64string = Convert.ToBase64String(WatsBLOB);
-				//	Step step = new Step()
-				//	{
-				//		Name = "WATS BLOB",
-				//		StepType = "Attachment",
-				//		Attachments = new List<Attachment>()
-				//	};
-				//	step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
-				//	watsreports.Report.Steps.Add(step);
-				//}
+
 			}
 			catch (Exception ex)
 			{
@@ -1191,13 +1193,17 @@ namespace EOL.ViewModels
 						//    StepType = "Action"
 						//};
                         Step Step = _runResultToWatsConverter.HandleStep(stepBase);
-						if (!string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
+						if (Step != null && !string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
 							watsErrorMessage = Step.StepErrorMessage;
-						totalExecutionTime += Step.TotalTime;
-						if (stepBase.IsError == true)
-							iserror = true;
-						watsStep.Steps.Add(Step);
-						
+						if (Step != null)
+						{
+							totalExecutionTime += Step.TotalTime;
+							watsStep.Steps.Add(Step);
+						}
+
+                        if (stepBase.IsError == true)
+                            iserror = true;
+
                     }
 
                 }
