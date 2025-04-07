@@ -18,6 +18,7 @@ namespace EOL.Services
         string destinationFolder;
         string fullPath;
         public StringBuilder csvLine = new();
+        public StringBuilder csvLineWats = new();
 
         public CommSendResLogCsvWriter()
         {
@@ -33,10 +34,11 @@ namespace EOL.Services
             csvLine.Clear();
             fullPath = Path.Combine(destinationFolder, fileNamePrefix + " - " + sn + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")) + ".csv");
             csvLine.AppendLine("TimeStamp,StepName,Tool,Parameter,Device,SendCommand,ReceivedValue,ErrorMsg,NumberOfTries");
+            csvLineWats.AppendLine("TimeStamp,StepName,Tool,Parameter,Device,SendCommand,ReceivedValue,ErrorMsg,NumberOfTries");
             File.AppendAllText(fullPath, csvLine.ToString());
         }
 
-        public void WriteLog(List<CommSendResLog> logs)
+        public void AddLogData(List<CommSendResLog> logs)
         {
             logs = TrimSendResLogs(logs);
             csvLine.Clear();
@@ -59,9 +61,13 @@ namespace EOL.Services
                     logValues[i] = CsvHelperTool.RemoveCsvSpecialCharacters(logValues[i]);
                 }
                 csvLine.AppendLine(string.Join(",", logValues));
+                csvLineWats.AppendLine(string.Join(",", logValues));
             }
+        }
 
 
+        public void SaveLog(List<CommSendResLog> logs)
+        {
             File.AppendAllText(fullPath, csvLine.ToString());
         }
 

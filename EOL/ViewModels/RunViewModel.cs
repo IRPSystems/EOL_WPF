@@ -136,7 +136,7 @@ namespace EOL.ViewModels
 
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
-        private List<CommSendResLog> commSendResLogs = new();
+        private List<CommSendResLog> _commSendResLogs = new();
 
         #endregion Fields
 
@@ -522,7 +522,7 @@ namespace EOL.ViewModels
 			if(RunState != RunStateEnum.Passed)
 			{
                 // Write log CSV.
-                _commSendResLogCsvWriter.WriteLog(commSendResLogs);
+                _commSendResLogCsvWriter.SaveLog(_commSendResLogs);
                 savingDataWindow.SetProgress(75);
                 savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
             }
@@ -565,7 +565,7 @@ namespace EOL.ViewModels
 
 		private void RunScript_StepEndedEvent(ScriptStepBase obj)
 		{
-            commSendResLogs.Add(obj.CommSendResLog);
+            _commSendResLogs.Add(obj.CommSendResLog);
         }
 
 		#endregion Running script events
@@ -583,7 +583,7 @@ namespace EOL.ViewModels
 				return;
 			}
 			ErrorMessage = null;
-            commSendResLogs.Clear();
+            _commSendResLogs.Clear();
 
             _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
 
@@ -934,8 +934,8 @@ namespace EOL.ViewModels
 				_runData.EndTime = DateTime.Now;
 
 				IsRunButtonEnabled = true;
-
-				if (stopeMode == ScriptStopModeEnum.Aborted)
+                _commSendResLogCsvWriter.AddLogData(_commSendResLogs);
+                if (stopeMode == ScriptStopModeEnum.Aborted)
 				{
 					RunState = RunStateEnum.Aborted;
 					singleTestResult.StopReason = "Aborted";
@@ -950,7 +950,7 @@ namespace EOL.ViewModels
 				if (RunState == RunStateEnum.Passed)
 					singleTestResult.StopReason = "PASSED";
 
-                string text = _commSendResLogCsvWriter.csvLine.ToString();
+                string text = _commSendResLogCsvWriter.csvLineWats.ToString();
 
                 Encoding encoding = Encoding.UTF8;
 
@@ -989,6 +989,7 @@ namespace EOL.ViewModels
                         };
                         step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
                         ProjectStep.Steps.Add(step);
+                        _commSendResLogCsvWriter.csvLineWats.Clear();
                     }
 
                     //bool to determine wheter to write the test into report
