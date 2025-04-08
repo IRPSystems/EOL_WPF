@@ -122,7 +122,12 @@ namespace EOL.Services
                     {
                         try
                         {
-                            return step;
+                            if(Status == StatusCodes.Failed || Status == StatusCodes.Error)
+                            {
+                                return step;
+                            }
+
+                            return null;
                         }
                         catch(Exception ex)
                         {
