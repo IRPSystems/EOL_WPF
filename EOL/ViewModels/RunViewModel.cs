@@ -987,7 +987,7 @@ namespace EOL.ViewModels
                             StepType = "Attachment",
                             Attachments = new List<Attachment>()
                         };
-                        step.Attachments.Add(new Attachment() { Name = "Test", Base64Data = base64string, ContentType = "text/csv" });
+                        step.Attachments.Add(new Attachment() { Name = "CommSendResponseLog.csv", Base64Data = base64string, ContentType = "text/csv" });
                         ProjectStep.Steps.Add(step);
                         _commSendResLogCsvWriter.csvLineWats.Clear();
                     }
