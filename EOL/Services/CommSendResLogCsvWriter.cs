@@ -46,6 +46,7 @@ namespace EOL.Services
             {
                 var logValues = new string[]
                 {
+                "'" + log.timeStamp.ToString("yyyy-MM-dd HH:mm:ss.fff"),
                 log.StepName,
                 log.Tool,
                 log.ParamName,

@@ -978,7 +978,7 @@ namespace EOL.ViewModels
                         Name = project.Name
                     }; ;
 
-                    if (WatsBLOB != null)
+                    if (WatsBLOB != null && RunState != RunStateEnum.Passed)
                     {
                         string base64string = Convert.ToBase64String(WatsBLOB);
                         Step step = new Step()
