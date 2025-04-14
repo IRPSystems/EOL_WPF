@@ -204,7 +204,7 @@
         "UserTitle": "Set Manual ID Command to 0",
         "IsPass": false,
         "PassNextId": 3,
-        "FailNextId": 0,
+        "FailNextId": 3,
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -335,7 +335,7 @@
         "UserTitle": "Set Manual FOC to OFF",
         "IsPass": false,
         "PassNextId": 4,
-        "FailNextId": 0,
+        "FailNextId": 4,
         "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -450,7 +450,7 @@
         "UserTitle": "Set Manual Angle Speed Value",
         "IsPass": false,
         "PassNextId": 5,
-        "FailNextId": 0,
+        "FailNextId": 5,
         "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
