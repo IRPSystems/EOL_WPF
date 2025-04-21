@@ -39,6 +39,7 @@
       "..\\Digital Output.scr",
       "..\\Active Discharge.tst",
       "..\\Discharge.scr",
+      "..\\PreMotorRunConfig.tst",
       "..\\Current Calibration.tst",
       "..\\PS Config Pre Motor Run.scr",
       "..\\Phase U.scr",
@@ -65,7 +66,8 @@
       "..\\Abort Script 2.scr",
       "..\\Abort Script 3.scr",
       "..\\SafetyOfficerInterlock.scr",
-      "..\\Abort Script Nothing.scr"
+      "..\\Abort Script Nothing.scr",
+      "..\\Config PS Pre Motor Run.scr"
     ]
   },
   "RecordParametersFile": null,

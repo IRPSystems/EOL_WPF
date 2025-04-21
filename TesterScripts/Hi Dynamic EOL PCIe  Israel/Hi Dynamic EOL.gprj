@@ -769,13 +769,119 @@
                       "Description": "Set  \"(PS) Current Limit (EA Power)\" = 1 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": null,
+                      "PassNextDescription": "Set  \"(PS) Power Limit (EA Power)\" = 10000 - ID:8",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 7,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": false,
+                        "IsSaveToPdfExecTable": false,
+                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToCustomerVer": false
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptStepSetParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
+                        "Cmd": "SOUR:POW",
+                        "Max": 300,
+                        "ParamType": 2,
+                        "ModbusAddress": 502,
+                        "NumOfRegisters": 1,
+                        "ValueType": "ushort",
+                        "DropDown": null,
+                        "Name": "(PS) Power Limit",
+                        "Units": "W",
+                        "Value": null,
+                        "DeviceType": 3,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "CommSendResLog": {
+                          "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
+                          "SendCommand": null,
+                          "ReceivedValue": null,
+                          "CommErrorMsg": null,
+                          "NumberOfTries": 1,
+                          "ParamName": null,
+                          "Device": null,
+                          "Tool": null,
+                          "StepName": null,
+                          "timeStamp": "0001-01-01T00:00:00"
+                        }
+                      },
+                      "Value": 10000.0,
+                      "ExtraData": {
+                        "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+                        "Parameter": null,
+                        "Ni6002_ExpectedRPM": 0,
+                        "Ni6002_IOPort": 0,
+                        "Ni6002_Line": 0,
+                        "NI6002_NumofCounts": 0,
+                        "NIDAQShuntResistor": 0.0,
+                        "AteCommand": 0,
+                        "NIThermistorIndex": 0,
+                        "AteCommandDropDwonIndex": 0,
+                        "Zimmer_Channel": 0,
+                        "NumatoGPIOPort": 0,
+                        "NumatoGPIODropDwonIndex": 0
+                      },
+                      "ValueParameter": null,
+                      "GetParamValue": {
+                        "$type": "ScriptHandler.Models.ScriptStepGetParamValue, ScriptHandler",
+                        "IsError": null,
+                        "IsExecuted": false,
+                        "Parameter": null,
+                        "UserTitle": null,
+                        "ExecutionTime": "00:00:00",
+                        "Name": null,
+                        "Description": null,
+                        "OperatorErrorDescription": null,
+                        "IsPass": false,
+                        "PassNextDescription": null,
+                        "FailNextDescription": null,
+                        "ErrorMessage": "",
+                        "StopScriptStep": null,
+                        "BorderBrush": null,
+                        "StepState": 0,
+                        "ID": 0,
+                        "EOLReportsSelectionData": null,
+                        "EOLStepSummerysList": {
+                          "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                          "$values": []
+                        },
+                        "CommSendResLog": null,
+                        "SubScriptName": null,
+                        "TestName": null,
+                        "ProgressPercentage": 0
+                      },
+                      "UserTitle": "Set PS Power Limit to 1A",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "ScriptNodeSetParameter 8",
+                      "Description": "Set  \"(PS) Power Limit (EA Power)\" = 10000 - ID:8",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": null,
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 8,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": false,
@@ -4267,7 +4373,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Phase W Over Current Peak",
+                              "Name": "Phase W Over Current",
                               "Value": "1024"
                             },
                             {
@@ -5064,7 +5170,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -5261,8 +5367,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            5000.0,
-                            0.0,
                             5000.0
                           ]
                         },
@@ -5379,7 +5483,7 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             20.0,
-                            95.0
+                            200.0
                           ]
                         },
                         "Format": null,
@@ -5495,7 +5599,7 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             20.0,
-                            100.0
+                            200.0
                           ]
                         },
                         "Format": null,
@@ -5987,16 +6091,6 @@
                         "DropDown": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Enabled",
-                              "Value": "0"
-                            },
-                            {
-                              "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Disabled",
-                              "Value": "1"
-                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "Enabled",
@@ -6568,6 +6662,1866 @@
                         "ATECommand": {
                           "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                           "$values": [
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vbus",
+                              "Value": "0"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Meas_5V",
+                              "Value": "1"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Vsw",
+                              "Value": "2"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp1",
+                              "Value": "3"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BoardTemp2",
+                              "Value": "4"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseU",
+                              "Value": "5"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseV",
+                              "Value": "6"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_PhaseW",
+                              "Value": "7"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbA",
+                              "Value": "8"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbB",
+                              "Value": "9"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_AqbI",
+                              "Value": "10"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_Bus_Current",
+                              "Value": "11"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CoolingTemp",
+                              "Value": "12"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp1",
+                              "Value": "13"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_MotorTemp2",
+                              "Value": "14"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SerialNumber",
+                              "Value": "15"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_GdGood",
+                              "Value": "16"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentUmV",
+                              "Value": "17"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CurrentWmV",
+                              "Value": "18"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_BusCurrentMv",
+                              "Value": "19"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn1",
+                              "Value": "20"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn2",
+                              "Value": "21"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn3",
+                              "Value": "22"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DigIn4",
+                              "Value": "23"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_SafeMeasure_IDAC1",
+                              "Value": "24"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_WatchdogCounter",
+                              "Value": "25"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_EolFlagPass",
+                              "Value": "26"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_RunTime",
+                              "Value": "27"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_ActiveDischargeFB",
+                              "Value": "28"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_DutyCycleMaxFlag",
+                              "Value": "29"
+                            },
+                            {
+                              "$type": "Entities.Models.DropDownParamData, Entities",
+                              "Name": "ATE_GET_CanDev1Test",
+                              "Value": "30"
+                            },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
                               "Name": "ATE_GET_Vbus",
@@ -10862,7 +12816,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -17894,7 +19848,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -19298,7 +21252,7 @@
                                     },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Phase W Over Current Peak",
+                                      "Name": "Phase W Over Current",
                                       "Value": "1024"
                                     },
                                     {
@@ -20095,7 +22049,7 @@
                                     },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Off",
+                                      "Name": "Init",
                                       "Value": "6"
                                     }
                                   ]
@@ -20292,8 +22246,6 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     0.0,
-                                    5000.0,
-                                    0.0,
                                     5000.0
                                   ]
                                 },
@@ -20410,7 +22362,7 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     20.0,
-                                    95.0
+                                    200.0
                                   ]
                                 },
                                 "Format": null,
@@ -20526,7 +22478,7 @@
                                   "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                                   "$values": [
                                     20.0,
-                                    100.0
+                                    200.0
                                   ]
                                 },
                                 "Format": null,
@@ -21018,16 +22970,6 @@
                                 "DropDown": {
                                   "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
                                   "$values": [
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Enabled",
-                                      "Value": "0"
-                                    },
-                                    {
-                                      "$type": "Entities.Models.DropDownParamData, Entities",
-                                      "Name": "Disabled",
-                                      "Value": "1"
-                                    },
                                     {
                                       "$type": "Entities.Models.DropDownParamData, Entities",
                                       "Name": "Enabled",
@@ -27204,7 +29146,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -29624,52 +31566,17 @@
       },
       {
         "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
-        "Name": "Current Calibration",
+        "Name": "PreMotorRunConfig",
         "ScriptItemsList": {
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
-            {
-              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
-              "IsStart": true,
-              "IsError": null,
-              "IsExecuted": false,
-              "SafetyOfficerErrorLevel": 1,
-              "UserTitle": "Start Safety Officer",
-              "ExecutionTime": "00:00:00",
-              "Name": "ScriptNodeSetParameter 5",
-              "Description": "Start Safty Officer - ID:1",
-              "OperatorErrorDescription": null,
-              "IsPass": true,
-              "PassNextDescription": "Sub Script = PS Config Pre Motor Run - Repeats: 1 - ID:2",
-              "FailNextDescription": null,
-              "ErrorMessage": "",
-              "StopScriptStep": null,
-              "BorderBrush": null,
-              "StepState": 0,
-              "ID": 1,
-              "EOLReportsSelectionData": {
-                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-                "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": true,
-                "IsSaveToPdfDynTable": true,
-                "IsSaveToCustomerVer": false
-              },
-              "EOLStepSummerysList": {
-                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
-                "$values": []
-              },
-              "CommSendResLog": null,
-              "SubScriptName": null,
-              "TestName": null,
-              "ProgressPercentage": 0
-            },
             {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsError": null,
               "IsExecuted": false,
               "Script": {
                 "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
-                "Name": "PS Config Pre Motor Run",
+                "Name": "Config PS Pre Motor Run",
                 "ScriptItemsList": {
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
                   "$values": [
@@ -29750,7 +31657,7 @@
                         "TestName": null,
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set PS Power Limit 10kW",
+                      "UserTitle": "Set Power Limit 10000W",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 1",
                       "Description": "Set  \"(PS) Power Limit (EA Power)\" = 10000 - ID:1",
@@ -29766,8 +31673,8 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
                         "IsSaveToCustomerVer": false
                       },
                       "EOLStepSummerysList": {
@@ -29856,7 +31763,7 @@
                         "TestName": null,
                         "ProgressPercentage": 0
                       },
-                      "UserTitle": "Set PS Power Protection 10kW",
+                      "UserTitle": "Set Power Protection 10000W",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 2",
                       "Description": "Set  \"(PS) Power Protection (EA Power)\" = 10000 - ID:2",
@@ -29872,8 +31779,8 @@
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
-                        "IsSaveToPdfExecTable": false,
-                        "IsSaveToPdfDynTable": false,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
                         "IsSaveToCustomerVer": false
                       },
                       "EOLStepSummerysList": {
@@ -29887,7 +31794,7 @@
                     }
                   ]
                 },
-                "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\Current Calibration.tst",
+                "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\PreMotorRunConfig.tst",
                 "IsPass": null,
                 "ScriptSender": 0,
                 "isExecuted": false,
@@ -29906,24 +31813,76 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = PS Config Pre Motor Run - Repeats: 1 - ID:2\"",
-              "UserTitle": "PS Config Pre Motor Run",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Config PS Pre Motor Run - Repeats: 1 - ID:1\"",
+              "UserTitle": "Config ps pre motor run",
               "ExecutionTime": "00:00:00",
-              "Name": "ScriptNodeSubScript 5",
-              "Description": "Sub Script = PS Config Pre Motor Run - Repeats: 1 - ID:2",
+              "Name": "Sub Script 1",
+              "Description": "Sub Script = Config PS Pre Motor Run - Repeats: 1 - ID:1",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Phase U - Repeats: 1 - ID:3",
+              "PassNextDescription": null,
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 2,
+              "ID": 1,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
-                "IsSaveToPdfExecTable": false,
-                "IsSaveToPdfDynTable": false,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            }
+          ]
+        },
+        "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  Israel\\PreMotorRunConfig.tst",
+        "IsPass": null,
+        "ScriptSender": 0,
+        "isExecuted": false,
+        "TotalRunSteps": 0,
+        "PassRunSteps": 0,
+        "FailRunSteps": 0,
+        "ErrorsList": null
+      },
+      {
+        "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+        "Name": "Current Calibration",
+        "ScriptItemsList": {
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+          "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopSaftyOfficer, ScriptHandler",
+              "IsStart": true,
+              "IsError": null,
+              "IsExecuted": false,
+              "SafetyOfficerErrorLevel": 1,
+              "UserTitle": "Start Safety Officer",
+              "ExecutionTime": "00:00:00",
+              "Name": "ScriptNodeSetParameter 5",
+              "Description": "Start Safty Officer - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Phase U - Repeats: 1 - ID:2",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
                 "IsSaveToCustomerVer": false
               },
               "EOLStepSummerysList": {
@@ -30430,7 +32389,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -30907,8 +32866,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            360.0,
-                            0.0,
                             360.0
                           ]
                         },
@@ -30986,7 +32943,7 @@
                       "Description": "Set  \"Manual Angle Value (MCU)\" = 240 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Position Sensor (MCU)\" = 1 - ID:10",
+                      "PassNextDescription": "Set  \"Hall Sensor Fault                           - 0x8250 (MCU)\" = 1 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -31041,7 +32998,7 @@
                             }
                           ]
                         },
-                        "Name": "Position Sensor",
+                        "Name": "Hall Sensor Fault                           - 0x8250",
                         "Units": null,
                         "DeviceType": 1,
                         "ToolTip": null,
@@ -31107,7 +33064,7 @@
                       "UserTitle": "Disable Position Sensor Fault",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 32",
-                      "Description": "Set  \"Position Sensor (MCU)\" = 1 - ID:10",
+                      "Description": "Set  \"Hall Sensor Fault                           - 0x8250 (MCU)\" = 1 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Delay 1 sec - ID:11",
@@ -33553,19 +35510,19 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase U - Repeats: 1 - ID:3\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase U - Repeats: 1 - ID:2\"",
               "UserTitle": "Phase U",
               "ExecutionTime": "00:00:00",
               "Name": "Sub Script 4",
-              "Description": "Sub Script = Phase U - Repeats: 1 - ID:3",
+              "Description": "Sub Script = Phase U - Repeats: 1 - ID:2",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Phase W - Repeats: 1 - ID:4",
+              "PassNextDescription": "Sub Script = Phase W - Repeats: 1 - ID:3",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 3,
+              "ID": 2,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -33607,8 +35564,6 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            360.0,
                             0.0,
                             360.0
                           ]
@@ -33764,8 +35719,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            360.0,
-                            0.0,
                             360.0
                           ]
                         },
@@ -33920,8 +35873,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            360.0,
-                            0.0,
                             360.0
                           ]
                         },
@@ -34075,8 +36026,6 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            360.0,
                             0.0,
                             360.0
                           ]
@@ -36884,19 +38833,19 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase W - Repeats: 1 - ID:4\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Phase W - Repeats: 1 - ID:3\"",
               "UserTitle": "Phase W",
               "ExecutionTime": "00:00:00",
               "Name": "Sub Script 2",
-              "Description": "Sub Script = Phase W - Repeats: 1 - ID:4",
+              "Description": "Sub Script = Phase W - Repeats: 1 - ID:3",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = BUS - Repeats: 1 - ID:5",
+              "PassNextDescription": "Sub Script = BUS - Repeats: 1 - ID:4",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 4,
+              "ID": 3,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -37302,8 +39251,6 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            10.0,
                             0.0,
                             10.0
                           ]
@@ -37863,8 +39810,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            1000.0,
-                            0.0,
                             1000.0
                           ]
                         },
@@ -38285,7 +40230,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -39555,19 +41500,19 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = BUS - Repeats: 1 - ID:5\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = BUS - Repeats: 1 - ID:4\"",
               "UserTitle": "BUS",
               "ExecutionTime": "00:00:00",
               "Name": "Sub Script 3",
-              "Description": "Sub Script = BUS - Repeats: 1 - ID:5",
+              "Description": "Sub Script = BUS - Repeats: 1 - ID:4",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = Save New Gains - Repeats: 1 - ID:6",
+              "PassNextDescription": "Sub Script = Save New Gains - Repeats: 1 - ID:5",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 5,
+              "ID": 4,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -39649,7 +41594,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39657,12 +41602,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -39748,7 +41693,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39756,12 +41701,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -39847,7 +41792,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39855,12 +41800,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
@@ -39912,11 +41857,11 @@
               "IsStopOnFail": true,
               "IsStopOnPass": false,
               "IsInfinity": false,
-              "ErrorMessage": "Failed to run the sub script \"Sub Script = Save New Gains - Repeats: 1 - ID:6\"",
+              "ErrorMessage": "Failed to run the sub script \"Sub Script = Save New Gains - Repeats: 1 - ID:5\"",
               "UserTitle": "Save New Gains",
               "ExecutionTime": "00:00:00",
               "Name": "Sub Script 4",
-              "Description": "Sub Script = Save New Gains - Repeats: 1 - ID:6",
+              "Description": "Sub Script = Save New Gains - Repeats: 1 - ID:5",
               "OperatorErrorDescription": null,
               "IsPass": false,
               "PassNextDescription": null,
@@ -39924,7 +41869,7 @@
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
-              "ID": 6,
+              "ID": 5,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -40396,7 +42341,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -40757,8 +42702,6 @@
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
                             0.0,
-                            20.0,
-                            0.0,
                             20.0
                           ]
                         },
@@ -40874,8 +42817,6 @@
                         "Range": {
                           "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
                           "$values": [
-                            0.0,
-                            5000.0,
                             0.0,
                             5000.0
                           ]
@@ -41986,7 +43927,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -42437,7 +44378,7 @@
                       "Description": "Set  \"Manual Angle Speed  (MCU)\" = 0 - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 500 - ID:9",
+                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 500 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -42467,19 +44408,25 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": " ",
-                        "GroupName": "Monitor",
-                        "Description": "Forward Speed Limit Value",
+                        "Value": "",
+                        "GroupName": "Forward",
+                        "Description": "Max Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": null,
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            0.0,
+                            10000.0
+                          ]
+                        },
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": false,
+                        "Save": true,
                         "DropDown": null,
-                        "Name": "Forward Speed Limit",
-                        "Units": null,
+                        "Name": "Max Speed Limit Value",
+                        "Units": "RPM",
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -42544,7 +44491,7 @@
                       "UserTitle": "Set Max Limit Speed To 500",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 3",
-                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 500 - ID:9",
+                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 500 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Active Damping Activation (MCU)\" = 0 - ID:10",
@@ -43281,7 +45228,7 @@
                       "Description": "Delay 2 sec - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 1300 - ID:17",
+                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 1300 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -43311,19 +45258,25 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": " ",
-                        "GroupName": "Monitor",
-                        "Description": "Forward Speed Limit Value",
+                        "Value": "",
+                        "GroupName": "Forward",
+                        "Description": "Max Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": null,
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            0.0,
+                            10000.0
+                          ]
+                        },
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": false,
+                        "Save": true,
                         "DropDown": null,
-                        "Name": "Forward Speed Limit",
-                        "Units": null,
+                        "Name": "Max Speed Limit Value",
+                        "Units": "RPM",
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -43388,7 +45341,7 @@
                       "UserTitle": "Set Max Limit Speed To 1300",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 14",
-                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 1300 - ID:17",
+                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 1300 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Torque Set Point (MCU)\" = 2 - ID:18",
@@ -43877,7 +45830,7 @@
                       "Description": "Delay 2 sec - ID:22",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Forward Speed Limit (MCU)\" = 2000 - ID:23",
+                      "PassNextDescription": "Set  \"Max Speed Limit Value (MCU)\" = 2000 - ID:23",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -43907,19 +45860,25 @@
                       "Parameter": {
                         "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
                         "ValueChanged": null,
-                        "Value": " ",
-                        "GroupName": "Monitor",
-                        "Description": "Forward Speed Limit Value",
+                        "Value": "",
+                        "GroupName": "Forward",
+                        "Description": "Max Speed Limit Value",
                         "Default": "0",
                         "Cmd": "mplrs0mxs",
-                        "Range": null,
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            0.0,
+                            10000.0
+                          ]
+                        },
                         "Format": null,
                         "Scale": 1.0,
                         "Note": null,
-                        "Save": false,
+                        "Save": true,
                         "DropDown": null,
-                        "Name": "Forward Speed Limit",
-                        "Units": null,
+                        "Name": "Max Speed Limit Value",
+                        "Units": "RPM",
                         "DeviceType": 1,
                         "ToolTip": null,
                         "CommunicationTimeout": 0,
@@ -43984,7 +45943,7 @@
                       "UserTitle": "Set Max Limit Speed To 2000",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeSetParameter 15",
-                      "Description": "Set  \"Forward Speed Limit (MCU)\" = 2000 - ID:23",
+                      "Description": "Set  \"Max Speed Limit Value (MCU)\" = 2000 - ID:23",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Manual Torque Set Point (MCU)\" = 2 - ID:24",
@@ -44621,7 +46580,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -45117,7 +47076,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -47298,7 +49257,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]
@@ -49247,7 +51206,7 @@
                             },
                             {
                               "$type": "Entities.Models.DropDownParamData, Entities",
-                              "Name": "Off",
+                              "Name": "Init",
                               "Value": "6"
                             }
                           ]

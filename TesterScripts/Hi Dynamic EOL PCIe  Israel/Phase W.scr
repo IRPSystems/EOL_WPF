@@ -3102,7 +3102,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual FOC Control to OFF",
         "IsPass": false,
-        "PassNextId": 38,
+        "PassNextId": 37,
         "FailNextId": 0,
         "ID": 36,
         "EOLReportsSelectionData": {
@@ -3122,7 +3122,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 38,
+        "ID": 37,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,

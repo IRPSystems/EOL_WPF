@@ -505,7 +505,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Motor State to Neutral",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4,
         "EOLReportsSelectionData": {
@@ -636,9 +636,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual FOC  to ON",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -767,9 +767,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -882,9 +882,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed Ramp",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 7,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": false,
@@ -999,7 +999,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
