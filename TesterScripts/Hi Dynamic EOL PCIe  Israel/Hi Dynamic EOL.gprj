@@ -4044,7 +4044,7 @@
                       "Description": "Compare with tolerance:  \"SW Version - Middle (MCU)\" = 1 ±  0 - ID:3",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 3 ±  0 - ID:4",
+                      "PassNextDescription": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 4 ±  0 - ID:4",
                       "FailNextDescription": "Delay 1 sec - ID:1",
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -4109,7 +4109,7 @@
                           "timeStamp": "0001-01-01T00:00:00"
                         }
                       },
-                      "CompareValue": "3",
+                      "CompareValue": "4",
                       "Tolerance": 0.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
@@ -4155,7 +4155,7 @@
                       "UserTitle": "Get SW Version - Minor",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 4",
-                      "Description": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 3 ±  0 - ID:4",
+                      "Description": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 4 ±  0 - ID:4",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
