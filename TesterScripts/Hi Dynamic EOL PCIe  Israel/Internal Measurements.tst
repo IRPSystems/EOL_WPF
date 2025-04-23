@@ -10363,8 +10363,8 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 6",
-        "Interval": 2,
-        "IntervalUnite": 2,
+        "Interval": 4,
+        "IntervalUnite": 4,
         "UserTitle": "Delay (voltage stablize between toggle)",
         "IsPass": false,
         "PassNextId": 3,
