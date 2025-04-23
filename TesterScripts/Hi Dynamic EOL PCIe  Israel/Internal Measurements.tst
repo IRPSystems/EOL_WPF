@@ -10349,7 +10349,7 @@
         "SelectedScriptName": "HV (VBUS)",
         "UserTitle": "HV(VBUS)",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 6,
         "FailNextId": 0,
         "ID": 2,
         "EOLReportsSelectionData": {
@@ -10357,6 +10357,24 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": false,
           "IsSaveToPdfDynTable": false,
+          "IsSaveToCustomerVer": false
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 6",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay (voltage stablize between toggle)",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false
         }
       },

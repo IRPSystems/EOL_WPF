@@ -12206,7 +12206,7 @@
               "Description": "Sub Script = HV (VBUS) - Repeats: 1 - ID:2",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": "Sub Script = 5VDC - Repeats: 1 - ID:3",
+              "PassNextDescription": "Delay 2 sec - ID:6",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
@@ -12217,6 +12217,44 @@
                 "IsSaveToReport": true,
                 "IsSaveToPdfExecTable": false,
                 "IsSaveToPdfDynTable": false,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptStepDelay, ScriptHandler",
+              "IsError": null,
+              "IsExecuted": false,
+              "IntervalUnite": 2,
+              "Interval": 2,
+              "Diff_Timeout": "00:00:00",
+              "TsTimeout": "00:00:00",
+              "TimeoutPercentage": 0,
+              "UserTitle": "Delay (voltage stablize between toggle)",
+              "ExecutionTime": "00:00:00",
+              "Name": "Delay 6",
+              "Description": "Delay 2 sec - ID:6",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": "Sub Script = 5VDC - Repeats: 1 - ID:3",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 6,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
                 "IsSaveToCustomerVer": false
               },
               "EOLStepSummerysList": {
@@ -41594,7 +41632,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -41602,12 +41640,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -41693,7 +41731,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -41701,12 +41739,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -41792,7 +41830,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -41800,12 +41838,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
