@@ -25,19 +25,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "5000",
         "Tolerance": 300.0,
@@ -56,38 +44,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 17,
           "Ni6002_Line": 0,
@@ -102,7 +58,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -119,14 +74,7 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 1
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -309,19 +257,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
@@ -341,19 +277,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Tolerance": 10.0,
         "Comparation": 0,
@@ -371,198 +295,6 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vbus",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Meas_5V",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Vsw",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp1",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BoardTemp2",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseU",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseV",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_PhaseW",
-                  "Value": "7"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbA",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbB",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_AqbI",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_Bus_Current",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CoolingTemp",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_MotorTemp2",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SerialNumber",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_GdGood",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentUmV",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CurrentWmV",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_BusCurrentMv",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn1",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn2",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn3",
-                  "Value": "22"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DigIn4",
-                  "Value": "23"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_SafeMeasure_IDAC1",
-                  "Value": "24"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_WatchdogCounter",
-                  "Value": "25"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_EolFlagPass",
-                  "Value": "26"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_RunTime",
-                  "Value": "27"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_ActiveDischargeFB",
-                  "Value": "28"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_DutyCycleMaxFlag",
-                  "Value": "29"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_GET_CanDev1Test",
-                  "Value": "30"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_get",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Get",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -577,38 +309,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 17,
           "Ni6002_Line": 0,
@@ -625,14 +325,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -669,19 +362,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 2,
         "ValueDropDwonIndex": 1,
@@ -689,52 +370,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor Control Source",
-            "Default": "VCU",
-            "Cmd": "mtrctrlsrc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "VCU",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Manual",
-                  "Value": "2"
-                }
-              ]
-            },
-            "Name": "Control Source",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -756,14 +391,7 @@
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 3
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -820,19 +448,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0,
         "ValueDropDwonIndex": 0,
@@ -840,72 +456,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor State",
-            "Default": "Neutral",
-            "Cmd": "mstate",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Neutral",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Run",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Lock",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Fault",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Init",
-                  "Value": "6"
-                }
-              ]
-            },
-            "Name": "Motor State (Operation)",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -927,14 +477,7 @@
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 4,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 4
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -971,19 +514,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -991,52 +522,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual FOC Control",
-            "Default": "OFF",
-            "Cmd": "mmanfoc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual FOC Control",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1058,14 +543,7 @@
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 5,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 5
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1102,19 +580,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -1122,52 +588,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Flag",
-            "Default": "OFF",
-            "Cmd": "flgmanang",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual Angle Speed ",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1189,14 +609,7 @@
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 6,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 6
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1225,19 +638,7 @@
           "Units": "Hz",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -1245,44 +646,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Value",
-            "Default": "0",
-            "Cmd": "manangspd",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -1000.0,
-                1000.0
-              ]
-            },
-            "Format": null,
-            "Scale": 1000.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "Manual Angle Speed Value",
-            "Units": "Hz",
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1304,14 +667,7 @@
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 7,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 7
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1340,19 +696,7 @@
           "Units": "A",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 1.0,
         "ValueDropDwonIndex": -1,
@@ -1360,44 +704,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
-            "Default": "0",
-            "Cmd": "midcmdman",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -600.0,
-                600.0
-              ]
-            },
-            "Format": null,
-            "Scale": 10.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "Manual ID Command",
-            "Units": "A",
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1419,14 +725,7 @@
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 8,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1437,14 +736,7 @@
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 9,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 9
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1467,19 +759,7 @@
           "Units": "V",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "5",
         "Tolerance": 5.0,
@@ -1498,38 +778,6 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Monitor",
-            "Description": "Measured 5 Volts",
-            "Default": "0",
-            "Cmd": "meas5v",
-            "Range": null,
-            "Format": null,
-            "Scale": 1000.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "5V Supply",
-            "Units": "V",
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1544,42 +792,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Safety officer on/off",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 11,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1596,14 +808,7 @@
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 10,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 10
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1632,19 +837,7 @@
           "Units": "A",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -1652,44 +845,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor Manual ID Command",
-            "Default": "0",
-            "Cmd": "midcmdman",
-            "Range": {
-              "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-              "$values": [
-                -600.0,
-                600.0
-              ]
-            },
-            "Format": null,
-            "Scale": 10.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": null,
-            "Name": "Manual ID Command",
-            "Units": "A",
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1711,14 +866,7 @@
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 11,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1755,19 +903,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0,
         "ValueDropDwonIndex": 0,
@@ -1775,52 +911,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual FOC Control",
-            "Default": "OFF",
-            "Cmd": "mmanfoc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual FOC Control",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1842,14 +932,7 @@
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 12,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 12
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1886,19 +969,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 1,
         "ValueDropDwonIndex": 0,
@@ -1906,52 +977,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Motor Control Source",
-            "Default": "VCU",
-            "Cmd": "mtrctrlsrc",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "VCU",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "Manual",
-                  "Value": "2"
-                }
-              ]
-            },
-            "Name": "Control Source",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1973,14 +998,7 @@
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 13,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 13
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -2017,19 +1035,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0,
         "ValueDropDwonIndex": 0,
@@ -2037,52 +1043,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "Value": "",
-            "GroupName": "Operation",
-            "Description": "Manual Electric Angle Speed Flag",
-            "Default": "OFF",
-            "Cmd": "flgmanang",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": false,
-            "DropDown": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "OFF",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ON",
-                  "Value": "1"
-                }
-              ]
-            },
-            "Name": "Manual Angle Speed ",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2104,14 +1064,7 @@
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 14,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 14
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -2135,19 +1088,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -2155,39 +1096,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": null,
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_mode",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Mode",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2209,14 +1117,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 15,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 15
       }
     ]
   },

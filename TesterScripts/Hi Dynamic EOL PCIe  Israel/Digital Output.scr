@@ -140,19 +140,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -160,153 +148,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -328,14 +169,7 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 1
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -473,19 +307,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -493,153 +315,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -661,14 +336,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -806,19 +474,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -826,153 +482,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -994,14 +503,7 @@
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 3
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1012,14 +514,7 @@
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 4,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 4
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1042,19 +537,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "1",
         "Tolerance": 0.0,
@@ -1073,38 +556,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 12,
@@ -1119,7 +570,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1136,14 +586,7 @@
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 6,
-        "ID": 5,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 5
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1166,19 +609,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "1",
         "Tolerance": 0.0,
@@ -1197,38 +628,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 24,
@@ -1243,7 +642,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1260,14 +658,7 @@
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 7,
-        "ID": 6,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 6
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1290,19 +681,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "1",
         "Tolerance": 0.0,
@@ -1321,38 +700,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 23,
@@ -1367,7 +714,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1384,14 +730,7 @@
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 7,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 7
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1529,19 +868,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -1549,153 +876,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1717,14 +897,7 @@
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 8,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1862,19 +1035,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -1882,153 +1043,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2050,14 +1064,7 @@
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 9,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 9
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -2195,19 +1202,7 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -2215,153 +1210,6 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
-            "ValueChanged": null,
-            "ATECommand": {
-              "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-              "$values": [
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesOff",
-                  "Value": "0"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHVL",
-                  "Value": "1"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUHWL",
-                  "Value": "2"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHWL",
-                  "Value": "3"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesVHUL",
-                  "Value": "4"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHUL",
-                  "Value": "5"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesWHVL",
-                  "Value": "6"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_0",
-                  "Value": "8"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut1_1",
-                  "Value": "9"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_0",
-                  "Value": "10"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut2_1",
-                  "Value": "11"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_0",
-                  "Value": "12"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_DigOut3_1",
-                  "Value": "13"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_WatchdogTest",
-                  "Value": "14"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ResetWatchdogCounter",
-                  "Value": "15"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_0",
-                  "Value": "16"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_EolFlagPass_1",
-                  "Value": "17"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ExternalWDTReset",
-                  "Value": "18"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeON",
-                  "Value": "19"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ActiveDischargeOFF",
-                  "Value": "20"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_ClearActiveDisTimoutFault",
-                  "Value": "21"
-                },
-                {
-                  "$type": "Entities.Models.DropDownParamData, Entities",
-                  "Name": "ATE_SET_PhasesUH",
-                  "Value": "22"
-                }
-              ]
-            },
-            "Value": null,
-            "GroupName": null,
-            "Description": null,
-            "Default": null,
-            "Cmd": "ate_set",
-            "Range": null,
-            "Format": null,
-            "Scale": 1.0,
-            "Note": null,
-            "Save": true,
-            "DropDown": null,
-            "Name": "ATE Set",
-            "Units": null,
-            "DeviceType": 1,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2383,14 +1231,7 @@
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 10,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 10
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -2401,14 +1242,7 @@
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 11,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -2431,19 +1265,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "0",
         "Tolerance": 0.0,
@@ -2462,38 +1284,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 12,
@@ -2508,7 +1298,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2525,14 +1314,7 @@
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 13,
-        "ID": 12,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 12
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -2555,19 +1337,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "0",
         "Tolerance": 0.0,
@@ -2586,38 +1356,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 24,
@@ -2632,7 +1370,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2649,14 +1386,7 @@
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 14,
-        "ID": 13,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 13
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -2679,19 +1409,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 0
         },
         "CompareValue": "0",
         "Tolerance": 0.0,
@@ -2710,38 +1428,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "digital input",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Digital Input",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 0,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 23,
@@ -2756,7 +1442,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -2773,14 +1458,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 14,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 14
       }
     ]
   },

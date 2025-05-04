@@ -25,19 +25,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 4000,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 4000
         },
         "CompareValue": "0",
         "Tolerance": 1.0,
@@ -56,38 +44,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input current",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input Current",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 4000,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 18,
           "Ni6002_Line": 0,
@@ -102,7 +58,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -119,14 +74,7 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 1
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -149,19 +97,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 4000,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 4000
         },
         "CompareValue": "0",
         "Tolerance": 1.0,
@@ -180,38 +116,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input current",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input Current",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 4000,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 16,
           "Ni6002_Line": 0,
@@ -226,7 +130,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -243,14 +146,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -273,19 +169,7 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 4000,
-          "CommSendResLog": {
-            "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-            "SendCommand": null,
-            "ReceivedValue": null,
-            "CommErrorMsg": null,
-            "NumberOfTries": 1,
-            "ParamName": null,
-            "Device": null,
-            "Tool": null,
-            "StepName": null,
-            "timeStamp": "0001-01-01T00:00:00"
-          }
+          "CommunicationTimeout": 4000
         },
         "CompareValue": "0",
         "Tolerance": 1.0,
@@ -304,38 +188,6 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": {
-            "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-            "ExpectedRPM": 0,
-            "Io_port": 0,
-            "Status_paramter": "Rw",
-            "command_to_device": "analog input current",
-            "portLine": 0,
-            "shunt_resistor": 0.0,
-            "numofcounts": 0,
-            "DropDown": null,
-            "ThermistorType": 0,
-            "ThermistorTypeList": null,
-            "IsThermistorUsed": false,
-            "Name": "Analog Input Current",
-            "Units": null,
-            "Value": null,
-            "DeviceType": 9,
-            "ToolTip": null,
-            "CommunicationTimeout": 4000,
-            "CommSendResLog": {
-              "$type": "DeviceCommunicators.Models.CommSendResLog, DeviceCommunicators",
-              "SendCommand": null,
-              "ReceivedValue": null,
-              "CommErrorMsg": null,
-              "NumberOfTries": 1,
-              "ParamName": null,
-              "Device": null,
-              "Tool": null,
-              "StepName": null,
-              "timeStamp": "0001-01-01T00:00:00"
-            }
-          },
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 21,
           "Ni6002_Line": 0,
@@ -350,7 +202,6 @@
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Parameter": null,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -367,14 +218,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false
-        }
+        "ID": 3
       }
     ]
   },

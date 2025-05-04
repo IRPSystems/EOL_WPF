@@ -17,6 +17,7 @@ namespace WatsConstants
         public const string ET_PFT = "ET_PFT";
         public const string ET_MPFT = "ET_MPFT";
         public const string ET_SVT = "ET_SVT";
+        public const string Attachment = "Attachment";
     }
     public static class CompOperator
     {

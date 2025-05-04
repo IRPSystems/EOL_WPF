@@ -984,7 +984,7 @@ namespace EOL.ViewModels
                         Step step = new Step()
                         {
                             Name = "WATS BLOB",
-                            StepType = "Attachment",
+                            StepType = StepTypes.Attachment,
                             Attachments = new List<Attachment>()
                         };
                         step.Attachments.Add(new Attachment() { Name = "CommSendResponseLog.csv", Base64Data = base64string, ContentType = "text/csv" });
