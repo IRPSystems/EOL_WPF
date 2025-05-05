@@ -232,13 +232,13 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 115",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 16,
         "FailNextId": 0,
         "ID": 1
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 2",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -259,11 +259,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.0179,
-        "SetFirstValue": 0.915,
-        "LoopsAmount": 53,
-        "Interval": 50,
-        "IntervalUnite": 1,
+        "Value": 1.896,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -278,16 +277,21 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Cooling Temp Plate Analog Increment to 80",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Cooling Plate Temp To 80 Degrees",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 16
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 10",
-        "Interval": 5,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1448,7 +1452,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Temperature to 36 ",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 14
       }
