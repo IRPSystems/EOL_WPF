@@ -146,7 +146,9 @@ namespace EOL.Services
             try
             {
                 step.NumericLimits = new List<NumericLimit>();
-
+                string numericStatus = step.Status;
+                if (step.Status == StatusCodes.Error)
+                    numericStatus = StatusCodes.Failed;
 
                 if (calibrate.IsExecuted)
                 {
@@ -158,7 +160,7 @@ namespace EOL.Services
                         calibrate.AvgMcuRead,
                         calibrate.McuParam.Units,
                         CompOperator.LOG,
-                        step.Status
+                        numericStatus
                         );
                     step.NumericLimits.Add(numericLimitmcu);
 
@@ -169,7 +171,7 @@ namespace EOL.Services
                         calibrate.AvgRefSensorRead,
                         calibrate.McuParam.Units,
                         CompOperator.LOG,
-                        step.Status
+                        numericStatus
                         );
                     step.NumericLimits.Add(numericLimitref);
 
@@ -180,7 +182,7 @@ namespace EOL.Services
                         calibrate.NewGain,
                         calibrate.GainParam.Units,
                         CompOperator.GELE,
-                        step.Status
+                        numericStatus
                         );
                     step.NumericLimits.Add(numericlimitGain);
 
@@ -200,7 +202,9 @@ namespace EOL.Services
         {
             try 
             {
-
+                string passfailstatus = step.Status;
+                if (step.Status == StatusCodes.Error)
+                    passfailstatus = StatusCodes.Failed;
 
                 step.PassFails = new List<PassFail>();
 
@@ -210,7 +214,7 @@ namespace EOL.Services
                     PassFail passFail = new PassFail
                     {
                         Name = comparebit.FaultName,
-                        Status = step.Status
+                        Status = passfailstatus
                     };
                     step.PassFails.Add(passFail);
                 }
@@ -229,7 +233,9 @@ namespace EOL.Services
         {
             try
             {
-
+                string passfailstatus = step.Status;
+                if (step.Status == StatusCodes.Error)
+                    passfailstatus = StatusCodes.Failed;
 
                 step.PassFails = new List<PassFail>();
 
@@ -239,7 +245,7 @@ namespace EOL.Services
                     PassFail passFail = new PassFail
                     {
                         Name = getregistervalues.FaultList,
-                        Status = step.Status
+                        Status = passfailstatus
                     };
                     step.PassFails.Add(passFail);
                 }
@@ -319,6 +325,11 @@ namespace EOL.Services
         {
             try
             {
+
+                string numericstatus = step.Status;
+                if (step.Status == StatusCodes.Error)
+                    numericstatus = StatusCodes.Failed;
+
                 step.NumericLimits = new List<NumericLimit>();
                 step.StringValues = new List<StringValue>();
 
@@ -356,7 +367,7 @@ namespace EOL.Services
                                             Name = paramleft.Name + " (" + paramleft.DeviceType.ToString() + ")",
                                             Value = strvalue,
                                             CompOperator = compOperator,
-                                            Status = step.Status,
+                                            Status = numericstatus,
                                             StringLimit = item.Name
                                         };
                                         step.StringValues.Add(stringvalue);
@@ -378,7 +389,7 @@ namespace EOL.Services
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            step.Status
+                            numericstatus
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
@@ -392,7 +403,7 @@ namespace EOL.Services
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            step.Status
+                            numericstatus
                         );
                         step.NumericLimits.Add(numericlimit);
                     }
@@ -406,7 +417,7 @@ namespace EOL.Services
                             Convert.ToDouble(compare.ValueLeft),
                             compare.Parameter.Units,
                             compOperator,
-                            step.Status
+                            numericstatus
                         );
                         step.NumericLimits.Add(numericlimitparam);
                         NumericLimit numericlimitcompared = CreateNumericLimit(
@@ -416,7 +427,7 @@ namespace EOL.Services
                             Convert.ToDouble(paramright.Value),
                             compare.Parameter.Units,
                             CompOperator.LOG,
-                            step.Status
+                            numericstatus
                         );
                         step.NumericLimits.Add(numericlimitcompared);
                     }

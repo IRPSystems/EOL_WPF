@@ -91,7 +91,8 @@
                         VerticalAlignment="Center">
                     <iconPacks:PackIconOcticons Kind="Gear" />
                 </Button>
-
+                
+                
                 <mah:DropDownButton Content="{Binding SelectedMode}"
                                     DisplayMemberPath="Name"
                                     ItemsSource="{Binding ModeTypeList}"
@@ -111,6 +112,29 @@
                     </mah:DropDownButton.Icon>
 
                 </mah:DropDownButton>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,20,0">
+                    <Ellipse Width="15" Height="15" Margin="0,0,5,0">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="LightGray" />
+                                <!-- Default color -->
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsWatsConnected}" Value="True">
+                                        <Setter Property="Fill" Value="Green" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsWatsConnected}" Value="False">
+                                        <Setter Property="Fill" Value="Red" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                    <TextBlock Text="Wats Server Status" 
+                               VerticalAlignment="Center" 
+                               FontWeight="Regular" 
+                               Foreground="Black"/>
+                </StackPanel>
 
             </StackPanel>
 

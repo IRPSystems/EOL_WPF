@@ -57,12 +57,17 @@ namespace EOL.ViewModels
 		public List<ModeType> ModeTypeList { get; set; }
 
 		public string SelectedMode { get; set; }
+        public bool IsWatsConnected
+        {
+            get => _isWatsConnected;
+            set => SetProperty(ref _isWatsConnected, value);
+        }
 
-		#endregion Properties
+        #endregion Properties
 
-		#region Fields
+        #region Fields
 
-		private EOLSettings _eolSettings;
+        private EOLSettings _eolSettings;
 
 		//private UserDefaultSettings _eolSettings.UserDefaultSettings;
 
@@ -76,7 +81,9 @@ namespace EOL.ViewModels
 
 		private RunData _runData;
 
-		private CommunicationWindowView _communicationWindowView;
+        private string baseUrl = "https://irpsystems.wats.com/";  // ← Adjust to your actual WATS API URL
+
+        private CommunicationWindowView _communicationWindowView;
 		private SettingsView _settingsView;
 
 		private RichTextBox _richTextBox;
@@ -87,11 +94,16 @@ namespace EOL.ViewModels
 
 		private bool? _isConfigSelectedByUser;
 
-		#endregion Fields
+		private WatsConnectionMonitor _watsConnectionMonitor;
 
-		#region Constructor
+        private bool _isWatsConnected;
 
-		public EOLMainViewModel()
+
+        #endregion Fields
+
+        #region Constructor
+
+        public EOLMainViewModel()
 		{
 			_logLineList = new LogLineListService();
 
@@ -103,7 +115,8 @@ namespace EOL.ViewModels
 
 			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
-			LoadConfigToUI();
+
+            LoadConfigToUI();
 
 			SelectedMode = "Operator";
 
@@ -173,9 +186,11 @@ namespace EOL.ViewModels
 
 				MergeATEParamsToMCU();
 
+                _watsConnectionMonitor = new WatsConnectionMonitor(baseUrl);
+                _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
 
-				if (_isConfigSelectedByUser == null)
+                if (_isConfigSelectedByUser == null)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);
@@ -530,6 +545,11 @@ namespace EOL.ViewModels
 			_settingsView.Topmost = false;
 			_settingsView.Focus();
 		}
+
+        private void OnWatsConnectionStatusChanged(bool isConnected)
+        {
+            IsWatsConnected = isConnected;
+        }
 
         private void ModesDropDownMenuItem(string mode)
         {

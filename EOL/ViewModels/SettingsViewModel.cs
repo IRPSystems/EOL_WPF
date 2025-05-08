@@ -130,7 +130,7 @@ namespace EOL.ViewModels
                 }
                 else if (fileData.Description == "Sub Script Path")
                 {
-                    if (_userDefaultSettings.DefaultSubScriptFile == null)
+                    if (String.IsNullOrEmpty(_userDefaultSettings.DefaultSubScriptFile))
                     {
                         continue;
                     }
@@ -146,7 +146,7 @@ namespace EOL.ViewModels
                 }
                 else if (fileData.Description == "Safety Officer Script Path")
                 {
-                    if (_userDefaultSettings.DefaultSafetyScriptFile == null)
+                    if (String.IsNullOrEmpty( _userDefaultSettings.DefaultSafetyScriptFile))
                     {
                         continue;
                     }

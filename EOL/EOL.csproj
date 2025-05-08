@@ -56,6 +56,15 @@
     <Reference Include="iso15765">
       <HintPath>..\FlashingToollib\FlashingToolLib\Resources\iso15765.dll</HintPath>
     </Reference>
+    <Reference Include="Virinco.Newtonsoft.Json">
+      <HintPath>Resources\Virinco.Newtonsoft.JSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Interface.TDM">
+      <HintPath>Resources\Virinco.WATS.Interface.TDM.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.WATS-Core">
+      <HintPath>Resources\Virinco.WATS.WATS-Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
