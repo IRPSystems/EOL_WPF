@@ -232,13 +232,13 @@
         },
         "UserTitle": "Read Motor Temp 1 - 5",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 15,
         "FailNextId": 0,
         "ID": 1
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 2",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -259,11 +259,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.296,
-        "LoopsAmount": 69,
-        "Interval": 80,
-        "IntervalUnite": 1,
+        "Value": 2.365,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -278,11 +277,16 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Increment to 20",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Motor Temp 1 to 20",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 15
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -523,13 +527,13 @@
         },
         "UserTitle": "Read Motor Temp 1 - 20",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 16,
         "FailNextId": 0,
         "ID": 4
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 5",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -550,11 +554,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.365,
-        "LoopsAmount": 128,
-        "Interval": 80,
-        "IntervalUnite": 1,
+        "Value": 2.493,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -569,11 +572,16 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Increment to 50",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Motor Temp 1 to 50",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 5
+        "ID": 16
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -814,13 +822,13 @@
         },
         "UserTitle": "Read Motor Temp 1 - 50",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 17,
         "FailNextId": 0,
         "ID": 7
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 8",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -841,11 +849,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.493,
-        "LoopsAmount": 116,
-        "Interval": 80,
-        "IntervalUnite": 1,
+        "Value": 2.609,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -860,11 +867,16 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Increment to 80",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Motor Temp 1 to 80",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 17
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1105,13 +1117,13 @@
         },
         "UserTitle": "Read Motor Temp 1 - 80",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 18,
         "FailNextId": 0,
         "ID": 10
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 12",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 18",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1132,11 +1144,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.001,
-        "SetFirstValue": 2.609,
-        "LoopsAmount": 137,
-        "Interval": 80,
-        "IntervalUnite": 1,
+        "Value": 2.746,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -1151,11 +1162,16 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Motor Temp 1 Increment to 120",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Motor Temp 1 to 120",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 11
+        "ID": 18
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1448,7 +1464,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 Temperature to 7",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 14
       }

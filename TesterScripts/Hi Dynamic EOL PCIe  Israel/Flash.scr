@@ -282,11 +282,11 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "19",
+        "CompareValue": "23",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 19 ±  0 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 23 ±  0 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

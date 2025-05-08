@@ -66,9 +66,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source VCU",
         "IsPass": false,
-        "PassNextId": 1,
+        "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 14
+        "ID": 1
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -124,9 +124,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set BUS Gain to 406",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 1
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -190,9 +190,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Under Voltage Fault",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 3
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -256,9 +256,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Low Voltage Fault",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 4
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -314,9 +314,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set ATE PWM Ramp to 5",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 5
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -372,9 +372,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set ATE Duty Cycle to 1000",
         "IsPass": false,
-        "PassNextId": 4,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 12
+        "ID": 6
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -425,9 +425,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 4
+        "ID": 7
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -436,9 +436,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 5
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
@@ -505,9 +505,9 @@
         "AverageOfNRead": 0,
         "UserTitle": "Get Motor State ATE",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 6
+        "ID": 9
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -672,9 +672,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PWM ATE Command OFF",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 7
+        "ID": 10
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -720,9 +720,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to 30A",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 9
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -768,9 +768,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Output Voltage to 50V",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 10
+        "ID": 12
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -830,9 +830,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Output ON",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 11
+        "ID": 13
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -884,7 +884,7 @@
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13
+        "ID": 14
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",

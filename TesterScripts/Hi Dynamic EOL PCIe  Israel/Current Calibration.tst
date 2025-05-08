@@ -2606,7 +2606,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1
       },
@@ -2624,9 +2624,9 @@
         "SelectedScriptName": "Phase U",
         "UserTitle": "Phase U",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
@@ -2642,9 +2642,9 @@
         "SelectedScriptName": "Phase W",
         "UserTitle": "Phase W",
         "IsPass": false,
-        "PassNextId": 2,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 9
+        "ID": 3
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
@@ -2660,9 +2660,9 @@
         "SelectedScriptName": "BUS",
         "UserTitle": "BUS",
         "IsPass": false,
-        "PassNextId": 3,
+        "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 4
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
@@ -2680,7 +2680,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 5
       }
     ]
   },

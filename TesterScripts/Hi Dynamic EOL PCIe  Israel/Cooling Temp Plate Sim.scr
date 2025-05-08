@@ -232,7 +232,7 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 115",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1
       },
@@ -286,7 +286,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -527,13 +527,13 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 80",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 17,
         "FailNextId": 0,
         "ID": 4
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 5",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -554,11 +554,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.02,
-        "SetFirstValue": 1.865,
-        "LoopsAmount": 69,
-        "Interval": 50,
-        "IntervalUnite": 1,
+        "Value": 3.245,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -573,26 +572,31 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Cooling Temp Plate Analog Increment to 50",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Cooling Plate Temp To 50 Degrees",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 5
+        "ID": 17
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 11",
-        "Interval": 5,
+        "Name": "ScriptNodeDelay 18",
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 6
+        "ID": 18
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 6",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -777,7 +781,7 @@
         "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 50 ±  6 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get\" = 50 ±  6 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -818,13 +822,13 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 50",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 20,
         "FailNextId": 0,
-        "ID": 7
+        "ID": 19
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 7",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 20",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -845,11 +849,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.02,
-        "SetFirstValue": 3.249,
-        "LoopsAmount": 52,
-        "Interval": 50,
-        "IntervalUnite": 1,
+        "Value": 4.28,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -864,16 +867,21 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Cooling Temp Plate Analog Increment to 20",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Cooling Plate Temp To 20 Degrees",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 20
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 12",
-        "Interval": 5,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
@@ -1109,13 +1117,13 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 20",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 21,
         "FailNextId": 0,
         "ID": 10
       },
       {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeLoopIncrement, ScriptHandler",
-        "Name": "Loop Increment 8",
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1136,11 +1144,10 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "IncrementValue": 0.02,
-        "SetFirstValue": 4.28,
-        "LoopsAmount": 19,
-        "Interval": 50,
-        "IntervalUnite": 1,
+        "Value": 4.66,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
           "Ni6002_ExpectedRPM": 0,
@@ -1155,16 +1162,21 @@
           "NumatoGPIOPort": 0,
           "NumatoGPIODropDwonIndex": 0
         },
-        "UserTitle": "Cooling Temp Plate Analog Increment to 5",
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Cooling Plate Temp To 5 Degrees",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 11
+        "ID": 21
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 13",
-        "Interval": 5,
+        "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,

@@ -200,11 +200,11 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "CompareValue": "4",
+        "CompareValue": "5",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 4 ±  0 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"SW Version - Minor (MCU)\" = 5 ±  0 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
