@@ -162,7 +162,7 @@ namespace EOL.ViewModels
                 }
                 else if (fileData.Description == "Abort Script Path")
                 {
-                    if (_userDefaultSettings.DefaultAbortScriptFile == null)
+                    if (String.IsNullOrEmpty(_userDefaultSettings.DefaultAbortScriptFile))
                     {
                         continue;
                     }
@@ -178,7 +178,7 @@ namespace EOL.ViewModels
                 }
                 else if (fileData.Description == "Monitor Script Path")
                 {
-                    if (_userDefaultSettings.DefaultMonitorLogScript == null)
+                    if (String.IsNullOrEmpty(_userDefaultSettings.DefaultMonitorLogScript))
                     {
                         continue;
                     }
@@ -194,7 +194,7 @@ namespace EOL.ViewModels
                 }
                 else if (fileData.Description == "First Flash File Path")
                 {
-                    if (_userDefaultSettings.FirstFlashFilePath == null)
+                    if (String.IsNullOrEmpty(_userDefaultSettings.FirstFlashFilePath) )
                     {
                         continue;
                     }
@@ -210,7 +210,7 @@ namespace EOL.ViewModels
                 }
                 else
                 {
-                    if (_userDefaultSettings.SecondFlashFilePath == null)
+                    if (String.IsNullOrEmpty(_userDefaultSettings.SecondFlashFilePath))
                     {
                         continue;
                     }
