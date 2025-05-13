@@ -87,14 +87,14 @@ Begin
     //AppsToInstall[1][7] := 'C:\Program Files (x86)\HMS\Ixxat IxAdmin';  // Path to check if the item is already installed
 
     SetArrayLength(AppsToInstall[1], 8);
-    AppsToInstall[2][0] := '{app}\psocprogrammer_3.29.1_Windows_x86-x64.exe';  // Installation
-    AppsToInstall[2][1] := '/quiet /norestart'; // Parameters       
-    AppsToInstall[2][2] := 'PSoC Programmer'; // Description    
-    AppsToInstall[2][3] := ''; // Directory to search to know if already installed
-    AppsToInstall[2][4] := ''; // Download URL
-    AppsToInstall[2][5] := '';  // Download file
-    AppsToInstall[2][6] := '';  // Download zip file full path      
-    AppsToInstall[2][7] := 'C:\Program Files (x86)\Cypress';  // Path to check if the item is already installed 
+    AppsToInstall[1][0] := '{app}\psocprogrammer_3.29.1_Windows_x86-x64.exe';  // Installation
+    AppsToInstall[1][1] := '/quiet /norestart'; // Parameters       
+    AppsToInstall[1][2] := 'PSoC Programmer'; // Description    
+    AppsToInstall[1][3] := ''; // Directory to search to know if already installed
+    AppsToInstall[1][4] := ''; // Download URL
+    AppsToInstall[1][5] := '';  // Download file
+    AppsToInstall[1][6] := '';  // Download zip file full path      
+    AppsToInstall[1][7] := 'C:\Program Files (x86)\Cypress';  // Path to check if the item is already installed 
 
     
     //////////////////////////////////////////////////
