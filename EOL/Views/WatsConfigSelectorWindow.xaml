@@ -1,0 +1,46 @@
+﻿<mah:MetroWindow x:Class="EOL.Views.WatsConfigSelectorWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+                 xmlns:local="clr-namespace:EOL.Views"
+                 mc:Ignorable="d"
+                 Title="Select WATS Configuration" 
+                 Height="300" Width="400"
+                 MinHeight="100"
+                 ShowCloseButton="True"
+                 ShowMinButton="False"
+                 ShowMaxRestoreButton="False"
+                 WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Select Station Type:" />
+        <ComboBox ItemsSource="{Binding StationTypes}"
+              SelectedItem="{Binding SelectedStationType}"
+              Height="30" />
+
+        <TextBlock Text="Select Project:" Margin="10,10,0,5"/>
+        <ComboBox ItemsSource="{Binding AvailableProjects}"
+              SelectedItem="{Binding SelectedProject}"
+              Height="30"
+              IsEnabled="{Binding IsProjectEnabled}" />
+
+        <TextBlock Text="Select Release Tag:" Margin="10,10,0,5"/>
+        <ComboBox ItemsSource="{Binding AvailableVersions}"
+              SelectedItem="{Binding SelectedSwVersion}"
+              Height="30"
+              IsEnabled="{Binding IsSwVersionEnabled}" />
+
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+            <Button Content="OK" Height="30" Width="100"
+                Command="{Binding ConfirmCommand}"
+                IsEnabled="{Binding IsReadyToConfirm}"
+                Margin="0,0,50,0"/>
+            <Button Content="Continue" Height="30" Width="100"
+                Command="{Binding ContinueCommand}" />
+        </StackPanel>
+    </StackPanel>
+
+</mah:MetroWindow>

@@ -26,15 +26,15 @@ public class WatsConnectionMonitor
         }
     }
 
-    public WatsConnectionMonitor(string url)
+    public WatsConnectionMonitor(TDM tdm)
     {
 
-        _tdm = new TDM();
+        _tdm = tdm;
 
         try
         {
             // Initialize the API with Default mode and allow metadata download
-            _tdm.InitializeAPI(TDM.InitializationMode.Syncronous, true);
+            //_tdm.InitializeAPI(TDM.InitializationMode.Syncronous, true);
 
             // Optional but recommended: Register the client
             //_tdm.RegisterClient(url);

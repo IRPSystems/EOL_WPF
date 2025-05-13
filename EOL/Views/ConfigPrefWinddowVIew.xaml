@@ -6,7 +6,7 @@
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
-                 Title="Cofig" Height="{Binding WindowHeight, Mode=TwoWay}" Width="200"
+                 Title="Cofig" Height="65" Width="218"
                  DataContextChanged="UserControl_DataContextChanged" 
                  ShowCloseButton="True"
                  ShowMinButton="False"
@@ -14,10 +14,10 @@
                  WindowStartupLocation="CenterScreen"
                  MinHeight="50">
 
-    
+
 
     <ListView x:Name="lv" ItemsSource="{Binding ButtonsList}" >
-        
+
         <ListView.ItemTemplate>
             <DataTemplate>
                 <Button Content="{Binding}" 
@@ -29,7 +29,7 @@
                         FontSize="16"/>
             </DataTemplate>
         </ListView.ItemTemplate>
-        
+
     </ListView>
-    
+
 </mah:MetroWindow>

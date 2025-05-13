@@ -25,6 +25,7 @@ using DeviceCommunicators.MCU;
 using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
+using Virinco.WATS.Interface;
 
 namespace EOL.ViewModels
 {
@@ -98,6 +99,8 @@ namespace EOL.ViewModels
 
         private bool _isWatsConnected;
 
+        private readonly TDM _tdm;
+
 
         #endregion Fields
 
@@ -113,7 +116,23 @@ namespace EOL.ViewModels
 
 			_runData = new RunData();
 
-			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+            _tdm = new TDM();
+            _tdm.InitializeAPI(TDM.InitializationMode.Syncronous, true);
+
+            _watsConnectionMonitor = new WatsConnectionMonitor(_tdm);
+            _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
+
+            _isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+
+            var watsConfigVM = new WatsConfigSelectorViewModel(_tdm,_eolSettings.UserDefaultSettings);
+			var watsConfigWindow = new WatsConfigSelectorWindow(watsConfigVM);
+			var result = watsConfigWindow.ShowDialog();
+			if ((result != true || watsConfigVM.SelectedPackage == null) && !watsConfigVM.isContinue)
+			{
+				Application.Current.Shutdown();
+				return;
+			}
+
 
 
             LoadConfigToUI();
@@ -186,8 +205,6 @@ namespace EOL.ViewModels
 
 				MergeATEParamsToMCU();
 
-                _watsConnectionMonitor = new WatsConnectionMonitor(baseUrl);
-                _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
 
                 if (_isConfigSelectedByUser == null)

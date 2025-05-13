@@ -59,8 +59,14 @@
     <Reference Include="Virinco.Newtonsoft.Json">
       <HintPath>Resources\Virinco.Newtonsoft.JSON.dll</HintPath>
     </Reference>
+    <Reference Include="Virinco.WATS.Interface.MES">
+      <HintPath>Resources\Virinco.WATS.Interface.MES.dll</HintPath>
+    </Reference>
     <Reference Include="Virinco.WATS.Interface.TDM">
       <HintPath>Resources\Virinco.WATS.Interface.TDM.dll</HintPath>
+    </Reference>
+    <Reference Include="Virinco.WATS.Service.MES.Contract">
+      <HintPath>Resources\Virinco.WATS.Service.MES.Contract.dll</HintPath>
     </Reference>
     <Reference Include="Virinco.WATS.WATS-Core">
       <HintPath>Resources\Virinco.WATS.WATS-Core.dll</HintPath>
