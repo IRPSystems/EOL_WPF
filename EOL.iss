@@ -15,7 +15,7 @@ AppName=EOL
 WizardStyle=modern
 DefaultDirName={autopf}\EOL
 DefaultGroupName=EOL
-SourceDir=EOL\bin\Release\net6.0-windows
+SourceDir=EOL\bin\x64\Release\net6.0-windows
 OutputDir=..\..\..\..\..\Output
 OutputBaseFilename=EOLSetup
 
@@ -63,7 +63,7 @@ Begin
   begin
     //////////////////////////////////////////////////
     // Initiate the list of installating to do
-    SetArrayLength(AppsToInstall,3);
+    SetArrayLength(AppsToInstall,2);
    
     
     SetArrayLength(AppsToInstall[0], 8);
@@ -76,17 +76,17 @@ Begin
     AppsToInstall[0][6] := '{app}\PEAK-System_Driver-Setup.zip';  // Download zip file full path         
     AppsToInstall[0][7] := 'C:\Program Files\PEAK-System';  // Path to check if the item is already installed
     
-    SetArrayLength(AppsToInstall[1], 8);
-    AppsToInstall[1][0] := '{app}\VCI V4.0.1240 - Windows 11, 10\Ixxat VCI Setup 4.0.1240.0.exe';  // Installation
-    AppsToInstall[1][1] := '/COMPONENTS="drv/VCI4109,drv/VCI4114,core,sdk/vci3net" /SP- /VERYSILENT /NORESTART /NOCANCEL'; // Parameters       
-    AppsToInstall[1][2] := 'Ixxat'; // Description    
-    AppsToInstall[1][3] := ''; // Directory to search to know if already installed  
-    AppsToInstall[1][4] := 'https://hmsnetworks.blob.core.windows.net/nlw/docs/default-source/products/ixxat/monitored/pc-interface-cards/vci-v4-0-1240-windows-11-10.zip?sfvrsn=2d1dfdd7_69'; // Download URL
-    AppsToInstall[1][5] := 'vci-v4-0-1240-windows-11-10.zip';  // Download file    
-    AppsToInstall[1][6] := '{app}\vci-v4-0-1240-windows-11-10.zip';  // Download zip file full path     
-    AppsToInstall[1][7] := 'C:\Program Files (x86)\HMS\Ixxat IxAdmin';  // Path to check if the item is already installed
+    //SetArrayLength(AppsToInstall[1], 8);
+    //AppsToInstall[1][0] := '{app}\VCI V4.0.1240 - Windows 11, 10\Ixxat VCI Setup 4.0.1240.0.exe';  // Installation
+    //AppsToInstall[1][1] := '/COMPONENTS="drv/VCI4109,drv/VCI4114,core,sdk/vci3net" /SP- /VERYSILENT /NORESTART /NOCANCEL'; // Parameters       
+    //AppsToInstall[1][2] := 'Ixxat'; // Description    
+    //AppsToInstall[1][3] := ''; // Directory to search to know if already installed  
+    //AppsToInstall[1][4] := 'https://hmsnetworks.blob.core.windows.net/nlw/docs/default-source/products/ixxat/monitored/pc-interface-cards/vci-v4-0-1240-windows-11-10.zip?sfvrsn=2d1dfdd7_69'; // Download URL
+    //AppsToInstall[1][5] := 'vci-v4-0-1240-windows-11-10.zip';  // Download file    
+    //AppsToInstall[1][6] := '{app}\vci-v4-0-1240-windows-11-10.zip';  // Download zip file full path     
+    //AppsToInstall[1][7] := 'C:\Program Files (x86)\HMS\Ixxat IxAdmin';  // Path to check if the item is already installed
 
-    SetArrayLength(AppsToInstall[2], 8);
+    SetArrayLength(AppsToInstall[1], 8);
     AppsToInstall[2][0] := '{app}\psocprogrammer_3.29.1_Windows_x86-x64.exe';  // Installation
     AppsToInstall[2][1] := '/quiet /norestart'; // Parameters       
     AppsToInstall[2][2] := 'PSoC Programmer'; // Description    
