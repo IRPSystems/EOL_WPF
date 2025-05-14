@@ -56,6 +56,12 @@ namespace EOL
 		{
 			LoggerService.Error(this, "Un-handled exception caught", "Error", e.Exception);
 			e.Handled = true;
+
+			if (MainWindow.DataContext == null)
+			{
+				LoggerService.Error(this, "The main view model was not initiated");
+				Shutdown();
+			}
 		}
 	}
 
