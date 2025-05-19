@@ -66,8 +66,7 @@
       "..\\Abort Script 2.scr",
       "..\\Abort Script 3.scr",
       "..\\SafetyOfficerInterlock.scr",
-      "..\\Abort Script Nothing.scr",
-      "..\\Config PS Pre Motor Run.scr"
+      "..\\Abort Script Nothing.scr"
     ]
   },
   "RecordParametersFile": null,

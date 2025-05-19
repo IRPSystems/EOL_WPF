@@ -33,7 +33,7 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "Value": 70.0,
+        "Value": 273.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -99,8 +99,8 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "Value": -1,
-        "ValueDropDwonIndex": 1,
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -122,7 +122,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set Count Direction Negetive",
+        "UserTitle": "Set Count Direction Positive",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -165,8 +165,8 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "Value": -1,
-        "ValueDropDwonIndex": 1,
+        "Value": 1,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -188,7 +188,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set Id Direction Negetive",
+        "UserTitle": "Set Id Direction Positive",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
