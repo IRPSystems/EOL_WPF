@@ -25,5 +25,9 @@ namespace EOL.Models
             }
         }
 
+        public bool IsPSoCPreferences { get; set; }
+        public string PSoCPort1 { get; set; }
+		public string PSoCPort2 { get; set; }
+
 	}
 }

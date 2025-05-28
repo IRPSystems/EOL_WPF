@@ -58,6 +58,8 @@
 
         </Style>
 
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
     </Window.Resources>
 
     <i:Interaction.Triggers>
@@ -104,7 +106,7 @@
                           Margin="0,0,0,20"                        
                           FontSize="15"/>
 
-                <Grid>
+                <Grid Margin="0,0,0,20"  >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="5" />
@@ -113,6 +115,37 @@
 
                     <TextBlock Grid.Column="0" Text="Rack number" VerticalAlignment="Center"/>
                     <TextBox Grid.Column="2" Text="{Binding SettingsData.RackNumber, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+                <CheckBox Content="PSoC preferences" 
+                          IsChecked="{Binding SettingsData.IsPSoCPreferences, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
+                          Margin="0,0,0,20"                        
+                          FontSize="15"/>
+
+                <Grid Visibility="{Binding SettingsData.IsPSoCPreferences, Converter={StaticResource BooleanToVisibilityConverter}}"
+                      Margin="10,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Port 1" />
+                    <ComboBox Grid.Row="0" Grid.Column="2" 
+                              ItemsSource="{Binding PSoCPortsList}"
+                              SelectedItem="{Binding PSoCPort1}"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Port 2" />
+                    <ComboBox Grid.Row="2" Grid.Column="2" 
+                              ItemsSource="{Binding PSoCPortsList}"
+                              SelectedItem="{Binding PSoCPort2}"/>
+
                 </Grid>
 
             </StackPanel>

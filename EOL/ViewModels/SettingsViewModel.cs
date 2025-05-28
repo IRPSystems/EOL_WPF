@@ -5,6 +5,7 @@ using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
@@ -27,6 +28,8 @@ namespace EOL.ViewModels
         public SettingsAdminViewModel SettingsAdminVM { get; set; }
 
 		public bool IsAdminMode { get; set; }
+
+        public List<string> PSoCPortsList { get; set; }
 
 		#endregion Properties
 
