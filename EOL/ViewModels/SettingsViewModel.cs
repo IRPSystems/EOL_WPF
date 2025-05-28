@@ -72,6 +72,8 @@ namespace EOL.ViewModels
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
             PSoCPort1_SelectionChangedCommand = new RelayCommand(PSoCPort1_SelectionChanged);
 			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
+            PSoCPort1_DropDownOpenedCommand = new RelayCommand(PSoCPort1_DropDownOpened);
+			PSoCPort2_DropDownOpenedCommand = new RelayCommand(PSoCPort2_DropDownOpened);
 
 			SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
 		}
@@ -339,6 +341,16 @@ namespace EOL.ViewModels
 
 		}
 
+        private void PSoCPort1_DropDownOpened()
+        {
+
+		}
+
+		private void PSoCPort2_DropDownOpened()
+		{
+
+		}
+
 		#endregion Methods
 
 		#region Commands
@@ -346,8 +358,12 @@ namespace EOL.ViewModels
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
+
 		public RelayCommand PSoCPort1_SelectionChangedCommand { get; private set; }
 		public RelayCommand PSoCPort2_SelectionChangedCommand { get; private set; }
+
+		public RelayCommand PSoCPort1_DropDownOpenedCommand { get; private set; }
+		public RelayCommand PSoCPort2_DropDownOpenedCommand { get; private set; }
 
 
 		#endregion Commands

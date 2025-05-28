@@ -149,6 +149,14 @@
                                                                          RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
                                                            PassEventArgsToCommand="False"/>
                             </i:EventTrigger>
+
+                            <i:EventTrigger EventName="DropDownOpened">
+                                <i:InvokeCommandAction Command="{Binding Path=DataContext.PSoCPort1_DropDownOpenedCommand, 
+                                             Mode=OneWay, 
+                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
+                               PassEventArgsToCommand="False"/>
+                            </i:EventTrigger>
+                            
                         </i:Interaction.Triggers>
 
                     </ComboBox>
@@ -166,6 +174,14 @@
                                              RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
                                PassEventArgsToCommand="False"/>
                             </i:EventTrigger>
+
+                            <i:EventTrigger EventName="DropDownOpened">
+                                <i:InvokeCommandAction Command="{Binding Path=DataContext.PSoCPort2_DropDownOpenedCommand, 
+                                             Mode=OneWay, 
+                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
+                               PassEventArgsToCommand="False"/>
+                            </i:EventTrigger>
+
                         </i:Interaction.Triggers>
 
                     </ComboBox>
