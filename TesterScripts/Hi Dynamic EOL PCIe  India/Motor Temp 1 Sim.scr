@@ -232,7 +232,7 @@
         },
         "UserTitle": "Read Motor Temp 1 - 5",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 2,
         "FailNextId": 0,
         "ID": 1
       },
@@ -286,7 +286,7 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 15
+        "ID": 2
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -527,7 +527,7 @@
         },
         "UserTitle": "Read Motor Temp 1 - 20",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4
       },
@@ -581,7 +581,7 @@
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 5
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -822,7 +822,7 @@
         },
         "UserTitle": "Read Motor Temp 1 - 50",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 8,
         "FailNextId": 0,
         "ID": 7
       },
@@ -876,7 +876,7 @@
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 17
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1117,7 +1117,7 @@
         },
         "UserTitle": "Read Motor Temp 1 - 80",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 11,
         "FailNextId": 0,
         "ID": 10
       },
@@ -1171,7 +1171,7 @@
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 18
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",

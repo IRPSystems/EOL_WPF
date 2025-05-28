@@ -527,7 +527,7 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 80",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4
       },
@@ -579,9 +579,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Plate Temp To 50 Degrees",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 17
+        "ID": 5
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -590,9 +590,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 18
+        "ID": 6
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -781,7 +781,7 @@
         "Tolerance": 6.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get\" = 50 ±  6 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = 50 ±  6 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -822,9 +822,9 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 50",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 19
+        "ID": 7
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -876,7 +876,7 @@
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 20
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -1117,7 +1117,7 @@
         },
         "UserTitle": "Read Cooling Plate Temp - 20",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 11,
         "FailNextId": 0,
         "ID": 10
       },
@@ -1171,7 +1171,7 @@
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 21
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",

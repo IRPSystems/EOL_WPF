@@ -15,7 +15,7 @@
         "IsStopOnFail": true,
         "IsStopOnPass": false,
         "IsInfinity": false,
-        "SelectedScriptName": "Config PS Pre Motor Run",
+        "SelectedScriptName": "PS Config Pre Motor Run",
         "UserTitle": "Config ps pre motor run",
         "IsPass": false,
         "PassNextId": 0,
