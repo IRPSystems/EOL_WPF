@@ -139,12 +139,36 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" Text="Port 1" />
                     <ComboBox Grid.Row="0" Grid.Column="2" 
                               ItemsSource="{Binding PSoCPortsList}"
-                              SelectedItem="{Binding PSoCPort1}"/>
+                              SelectedItem="{Binding SettingsData.PSoCPort1}" >
+
+                        <i:Interaction.Triggers>
+
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding Path=DataContext.PSoCPort1_SelectionChangedCommand, 
+                                                                         Mode=OneWay, 
+                                                                         RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
+                                                           PassEventArgsToCommand="False"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                    </ComboBox>
 
                     <TextBlock Grid.Row="2" Grid.Column="0" Text="Port 2" />
                     <ComboBox Grid.Row="2" Grid.Column="2" 
                               ItemsSource="{Binding PSoCPortsList}"
-                              SelectedItem="{Binding PSoCPort2}"/>
+                              SelectedItem="{Binding SettingsData.PSoCPort2}">
+
+                        <i:Interaction.Triggers>
+
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding Path=DataContext.PSoCPort2_SelectionChangedCommand, 
+                                             Mode=OneWay, 
+                                             RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" 
+                               PassEventArgsToCommand="False"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                    </ComboBox>
 
                 </Grid>
 

@@ -70,8 +70,10 @@ namespace EOL.ViewModels
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
+            PSoCPort1_SelectionChangedCommand = new RelayCommand(PSoCPort1_SelectionChanged);
+			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
 
-            SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
+			SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
 		}
 
         #endregion Constructor
@@ -327,6 +329,16 @@ namespace EOL.ViewModels
             }
         }
 
+        private void PSoCPort1_SelectionChanged()
+        {
+
+		}
+
+		private void PSoCPort2_SelectionChanged()
+		{
+
+		}
+
 		#endregion Methods
 
 		#region Commands
@@ -334,7 +346,9 @@ namespace EOL.ViewModels
 		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
-		
+		public RelayCommand PSoCPort1_SelectionChangedCommand { get; private set; }
+		public RelayCommand PSoCPort2_SelectionChangedCommand { get; private set; }
+
 
 		#endregion Commands
 
