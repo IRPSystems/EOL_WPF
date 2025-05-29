@@ -185,7 +185,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -780,7 +780,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 350 ±  2 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -867,7 +867,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage\" ±  2 - ID:18ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,

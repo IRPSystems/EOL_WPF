@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
+using ScriptHandler.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,8 @@ namespace EOL.ViewModels
 		UserDefaultSettings _userDefaultSettings;
         UserConfigManager _userConfigManager;
 
+        private FlashingHandler _flashingHandler;
+
         #endregion Fields
 
         #region Events
@@ -60,13 +63,14 @@ namespace EOL.ViewModels
 		public SettingsViewModel(
             EOLSettings eolSettings,
             UserConfigManager userConfigManager,
+            FlashingHandler flashingHandler,
 			SetupSelectionViewModel setupSelectionVM)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
-
+            _flashingHandler = flashingHandler;
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
@@ -95,7 +99,9 @@ namespace EOL.ViewModels
         private void Loaded()
 		{
 			GetDescriptsionColumnWidth();
-		}
+            //string errorMsg = string.Empty;
+            //PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
 
         public void LoadUserConfigToSettingsView()
         {
@@ -333,29 +339,32 @@ namespace EOL.ViewModels
 
         private void PSoCPort1_SelectionChanged()
         {
+            _userDefaultSettings.PSoC_Port1 = SettingsData.PSoCPort1;
+        }
 
-		}
-
-		private void PSoCPort2_SelectionChanged()
+        private void PSoCPort2_SelectionChanged()
 		{
+            _userDefaultSettings.PSoC_Port2 = SettingsData.PSoCPort2;
 
-		}
+        }
 
         private void PSoCPort1_DropDownOpened()
         {
+            string errorMsg = string.Empty;
+            PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
 
-		}
-
-		private void PSoCPort2_DropDownOpened()
+        private void PSoCPort2_DropDownOpened()
 		{
+            string errorMsg = string.Empty;
+            PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
 
-		}
+        #endregion Methods
 
-		#endregion Methods
+        #region Commands
 
-		#region Commands
-
-		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
+        public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
 

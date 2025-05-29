@@ -439,7 +439,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]

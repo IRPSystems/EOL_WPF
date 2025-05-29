@@ -80,7 +80,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Phase W Over Current",
+                "Name": "Phase W Over Current Peak",
                 "Value": "1024"
               },
               {
@@ -674,7 +674,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -836,7 +836,7 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0
+              95.0
             ]
           },
           "Format": null,
@@ -894,7 +894,7 @@
             "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
             "$values": [
               20.0,
-              200.0
+              100.0
             ]
           },
           "Format": null,

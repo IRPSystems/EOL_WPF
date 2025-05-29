@@ -126,7 +126,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Phase W Over Current",
+                "Name": "Phase W Over Current Peak",
                 "Value": "1024"
               },
               {
@@ -503,6 +503,96 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "No Active Fault",
                 "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom MCU Version Mismatch",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom MCU Param Mismatch",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Sampling Signal",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom UC State Mismatch",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Gate Driver EN Mismatch",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Crash Status Mismatch",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Active Discharge CMD Mismatch",
+                "Value": "64"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Bus Inactive",
+                "Value": "128"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "BMS5_10 Timeout",
+                "Value": "256"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Torque Cmd Difference",
+                "Value": "512"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Sample Signal Inactive",
+                "Value": "1024"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Bus Current Limit Over Current",
+                "Value": "2048"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Scheduler Halt",
+                "Value": "4096"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fatal Error",
+                "Value": "8192"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": " ",
+                "Value": "16384"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": " ",
+                "Value": "32768"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": " ",
+                "Value": "65536"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": " ",
+                "Value": "131072"
               }
             ]
           },

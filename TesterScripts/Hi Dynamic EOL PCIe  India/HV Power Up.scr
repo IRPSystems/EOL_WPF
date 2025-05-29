@@ -196,7 +196,7 @@
         "Tolerance": 5.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  5 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 300 ±  5 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

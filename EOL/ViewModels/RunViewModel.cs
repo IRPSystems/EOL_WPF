@@ -147,7 +147,8 @@ namespace EOL.ViewModels
 			RunData runData,
 			UserDefaultSettings userDefaultSettings,
 			SettingsViewModel settingsViewModel,
-			LogLineListService logLineList,
+            FlashingHandler flashingHandler,
+            LogLineListService logLineList,
 			SettingsData settingsData)
 		{
             _settingsViewModel = settingsViewModel;
@@ -223,8 +224,8 @@ namespace EOL.ViewModels
 					RunScript.MainScriptLogger,
 					_generatedProjectsList);
 
-				_flashingHandler = new FlashingHandler(devicesContainer);
-
+				//_flashingHandler = new FlashingHandler(devicesContainer);
+				_flashingHandler = flashingHandler;
 				//_singleTestResult = new RunResult();
                 _runResultToWatsConverter = new RunResultToWatsConverter();
 
@@ -896,7 +897,8 @@ namespace EOL.ViewModels
 
 			if (flash.NumOfFlashFile == 0)
 			{
-				flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
+				flash.PsocPortName = _userDefaultSettings.PSoC_Port1;
+                flash.FilePath = _userDefaultSettings.FirstFlashFilePath;
 				if (flash.IsEolSource)
 				{
 					flash.Customer = _userDefaultSettings.FirstFlashFileCustomerProp;
@@ -904,7 +906,8 @@ namespace EOL.ViewModels
 			}
 			else if (flash.NumOfFlashFile == 1)
 			{
-				flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
+                flash.PsocPortName = _userDefaultSettings.PSoC_Port2;
+                flash.FilePath = _userDefaultSettings.SecondFlashFilePath;
 				if (flash.IsEolSource)
 				{
 					flash.Customer = _userDefaultSettings.SecondFlashFileCustomerProp;

@@ -25,6 +25,7 @@ using DeviceCommunicators.MCU;
 using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
+using ScriptHandler.Services;
 
 namespace EOL.ViewModels
 {
@@ -97,6 +98,8 @@ namespace EOL.ViewModels
 		private WatsConnectionMonitor _watsConnectionMonitor;
 
         private bool _isWatsConnected;
+
+        private FlashingHandler _flashingHandler;
 
 
         #endregion Fields
@@ -246,9 +249,12 @@ namespace EOL.ViewModels
 					};
 				}
 
+				_flashingHandler = new FlashingHandler(DevicesContainter);
+
 				SettingsVM = new SettingsViewModel(
 					_eolSettings, 
 					_userConfigManager,
+					_flashingHandler,
 					_setupSelectionVM);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
@@ -257,8 +263,9 @@ namespace EOL.ViewModels
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
 					_eolSettings.UserDefaultSettings, 
-					SettingsVM, 
-					_runData,
+					SettingsVM,
+                    _flashingHandler,
+                    _runData,
 					_richTextBox,
 					_logLineList);
 

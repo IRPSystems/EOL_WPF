@@ -43,10 +43,7 @@ namespace EOL.Models
         public ECustomer FirstFlashFileCustomerProp { get; set; }
         public ECustomer SecondFlashFileCustomerProp { get; set; }
         public string AutoConfigPref { get; set; }
-
-
-
-		public bool MCU { get; set; }
+        public bool MCU { get; set; }
 		public bool MCU_2 { get; set; }
 		public bool ZimmerPowerMeter { get; set; }
 		public bool NI_6002 { get; set; }
@@ -54,8 +51,11 @@ namespace EOL.Models
 		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
 		public bool PowerSupplyEA { get; set; }
+        public string PSoC_Port1 { get; set; }
+        public string PSoC_Port2 { get; set; }
 
-		public UserDefaultSettings()
+
+        public UserDefaultSettings()
 		{
 			MCU = true;
 			MCU_2 = true;
