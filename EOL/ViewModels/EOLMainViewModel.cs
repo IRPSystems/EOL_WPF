@@ -367,7 +367,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
 					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
 					device.DeviceType != DeviceTypesEnum.NumatoGPIO &&
-					device.DeviceType != DeviceTypesEnum.PowerSupplyEA)
+					device.DeviceType != DeviceTypesEnum.PowerSupplyEA &&
+					device.DeviceType != DeviceTypesEnum.RigolM300)
 				{
 					devicesToRemoveList.Add(device);
 					continue;
@@ -446,7 +447,7 @@ namespace EOL.ViewModels
             }
 
 
-            foreach (DeviceData device in newDevices)
+           foreach (DeviceData device in newDevices)
 			{
 				DeviceFullData deviceFullData = DeviceFullData.Factory(device);
 
