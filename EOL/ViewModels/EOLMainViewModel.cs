@@ -368,7 +368,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
 					device.DeviceType != DeviceTypesEnum.NumatoGPIO &&
 					device.DeviceType != DeviceTypesEnum.PowerSupplyEA &&
-					device.DeviceType != DeviceTypesEnum.RigolM300)
+					device.DeviceType != DeviceTypesEnum.RigolM300 &&
+					device.DeviceType != DeviceTypesEnum.MX180TP)
 				{
 					devicesToRemoveList.Add(device);
 					continue;
