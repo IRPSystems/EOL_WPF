@@ -96,7 +96,7 @@
         "Channel": null,
         "Slot": null
       },
-	  {
+      {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
         "Name": "Measure DC Voltage",
         "Cmd": "MEAS:VOLT:DC",
@@ -104,7 +104,9 @@
         "Units": "V",
         "Value": null,
         "Channel": null,
-        "Slot": null
+        "Slot": null,
+        "CommunicationTimeout": 2000
+
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -124,7 +126,8 @@
         "Units": "A",
         "Value": null,
         "Channel": null,
-        "Slot": null
+        "Slot": null,
+        "CommunicationTimeout": 2000
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",

@@ -1102,7 +1102,7 @@ namespace EOL.ViewModels
                     {
                         Type = "UUT",
                         Start = singleTestResult.StartTimeStamp8601,
-                        Result = (isTestTerminated || _SafetyScript.IsPass == false) ? StatusCodes.Terminated : (iserror == true) ? StatusCodes.Error: singleTestResult.TestStatus,
+                        Result = (isTestTerminated || _SafetyScript?.IsPass == false) ? StatusCodes.Terminated : (iserror == true) ? StatusCodes.Error: singleTestResult.TestStatus,
                         SerialNumber = singleTestResult.SerialNumber,
                         PartNumber = singleTestResult.PartNumber,
                         MachineName = singleTestResult.RackNumber, // Set as needed
