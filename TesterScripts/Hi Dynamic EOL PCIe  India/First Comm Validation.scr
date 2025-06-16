@@ -90,7 +90,7 @@
         "UserTitle": "Get SW Version - Major",
         "IsPass": false,
         "PassNextId": 3,
-        "FailNextId": 1,
+        "FailNextId": -1,
         "ID": 2
       },
       {
@@ -168,7 +168,7 @@
         "UserTitle": "Get SW Version - Middle",
         "IsPass": false,
         "PassNextId": 4,
-        "FailNextId": 1,
+        "FailNextId": -1,
         "ID": 3
       },
       {
@@ -246,7 +246,7 @@
         "UserTitle": "Get SW Version - Minor",
         "IsPass": false,
         "PassNextId": -1,
-        "FailNextId": 1,
+        "FailNextId": -1,
         "ID": 4
       }
     ]
