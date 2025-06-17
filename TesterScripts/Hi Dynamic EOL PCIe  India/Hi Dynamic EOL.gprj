@@ -48187,6 +48187,58 @@
         "PassRunSteps": 0,
         "FailRunSteps": 0,
         "ErrorsList": null
+      },
+      {
+        "$type": "ScriptHandler.Models.GeneratedTestData, ScriptHandler",
+        "Name": "PostTestUserInstructions",
+        "ScriptItemsList": {
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
+          "$values": [
+            {
+              "$type": "ScriptHandler.Models.ScriptStepNotification, ScriptHandler",
+              "IsError": null,
+              "IsExecuted": false,
+              "Notification": "Check Power Supply Output Is OFF!",
+              "NotificationLevel": 1,
+              "UserTitle": "PS Off Verification",
+              "ExecutionTime": "00:00:00",
+              "Name": "Notification 1",
+              "Description": "Notification - ID:1",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": null,
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 1,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            }
+          ]
+        },
+        "ScriptPath": "C:\\dev\\EOL_WPF\\TesterScripts\\Hi Dynamic EOL PCIe  India\\PostTestUserInstructions.tst",
+        "IsPass": null,
+        "ScriptSender": 0,
+        "isExecuted": false,
+        "TotalRunSteps": 0,
+        "PassRunSteps": 0,
+        "FailRunSteps": 0,
+        "ErrorsList": null
       }
     ]
   },
