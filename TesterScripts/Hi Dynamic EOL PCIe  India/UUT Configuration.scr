@@ -1362,7 +1362,7 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "Value": 420.0,
+        "Value": 440.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -1420,7 +1420,7 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "Value": 430.0,
+        "Value": 450.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
