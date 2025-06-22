@@ -594,7 +594,7 @@ namespace EOL.ViewModels
 			_runData.EndTime = new DateTime();
 
 			_runData.NumberOfTested++;
-			OperatorErrorMessage = "";
+			OperatorErrorMessage = string.Empty;
 			_totalNumOfSteps = 0;
 			string path = _userDefaultSettings.ReportsSavingPath;
 			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
@@ -1180,9 +1180,11 @@ namespace EOL.ViewModels
 					stepBase.SubScriptName = script.Name;
 					stepBase.TestName = test.Name;
 
-					if (stepBase.OperatorErrorDescription != null && stepBase.OperatorErrorDescription != string.Empty )
-						OperatorErrorMessage += "\r\nStep: "+ stepBase.UserTitle + " - " + stepBase.OperatorErrorDescription;
-
+					if (stepBase.OperatorErrorDescription != null && stepBase.OperatorErrorDescription != string.Empty)
+					{
+						OperatorErrorMessage += "\r\nStep: " + stepBase.UserTitle + " - " + stepBase.OperatorErrorDescription;
+						stepBase.OperatorErrorDescription = string.Empty;
+                    }
 					if (!(item is ISubScript))
 					{
 						if (stepBase.IsPass == false)
