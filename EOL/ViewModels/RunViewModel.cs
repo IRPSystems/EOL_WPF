@@ -1116,8 +1116,8 @@ namespace EOL.ViewModels
                         },
                         Process = new Process
                         {
-                            Code = "22",
-                            Name = "Or - Testing"
+                            Code = "100",
+                            Name = "End of line test"
                         },
 
                         Steps = watsSteps
