@@ -1207,9 +1207,11 @@ namespace EOL.ViewModels
 							watsStep.Steps.Add(Step);
 						}
 
-                        if (stepBase.IsError == true)
-                            iserror = true;
-
+						if (stepBase.IsError == true)
+						{
+							iserror = true;
+							stepBase.IsError = false;
+						}
                     }
 
                 }
