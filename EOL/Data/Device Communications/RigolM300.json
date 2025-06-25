@@ -126,6 +126,7 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
+        "CommunicationTimeout": 3000,
         "Range": null
       },
       {
@@ -137,7 +138,7 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
-        "CommunicationTimeout": 2000,
+        "CommunicationTimeout": 3000,
         "Range": null
       },
       {
@@ -149,6 +150,7 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
+        "CommunicationTimeout": 3000,
         "Range": null
       },
       {
@@ -160,6 +162,7 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
+        "CommunicationTimeout": 3000,
         "Range": null
       },
       {
@@ -171,6 +174,7 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
+        "CommunicationTimeout": 10000,
         "Range": null
       },
       {
@@ -182,8 +186,21 @@
         "Value": null,
         "Channel": null,
         "Slot": null,
+        "CommunicationTimeout": 3000,
         "Range": null
-      }
+      },
+      {
+        "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
+        "Name": "Actuator Open/Close",
+        "Cmd": "ROUT:",
+        "DeviceType": 24,
+        "Channel": null,
+        "Slot": null,
+        "Range": null,
+        "CommunicationTimeout": 1500,
+        "Value": null
+      },
+
     ]
   },
   "Name": "Rigol M300",
