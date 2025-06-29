@@ -11,6 +11,7 @@
         "Units": "V",
         "Value": null,
         "DeviceType": 24,
+		 "CommunicationTimeout": 3000,
         "Channel": null,
         "Slot": null,
         "Range": null
@@ -25,7 +26,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+		"CommunicationTimeout": 3000,
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -37,7 +39,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+        "CommunicationTimeout": 3000,		
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -49,7 +52,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+        "CommunicationTimeout": 3000,
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -61,7 +65,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+        "CommunicationTimeout": 3000,
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -73,7 +78,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+        "CommunicationTimeout": 3000,
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -85,7 +91,8 @@
         "DeviceType": 24,
         "Channel": null,
         "Slot": null,
-        "Range": null
+        "Range": null,
+        "CommunicationTimeout": 3000,
       },
       {
         "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
@@ -198,6 +205,28 @@
         "Slot": null,
         "Range": null,
         "CommunicationTimeout": 1500,
+        "Value": null
+      },
+	  {
+        "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
+        "Name": "Read",
+        "Cmd": "READ?",
+        "DeviceType": 24,
+        "Channel": null,
+        "Slot": null,
+        "Range": null,
+        "CommunicationTimeout": 3000,
+        "Value": null
+      },
+	        {
+        "$type": "DeviceCommunicators.RigolM300.RigolM300_ParamData, DeviceCommunicators",
+        "Name": "Scan",
+        "Cmd": "ROUT:SCAN",
+        "DeviceType": 24,
+        "Channel": null,
+        "Slot": null,
+        "Range": null,
+        "CommunicationTimeout": 3000,
         "Value": null
       },
 
