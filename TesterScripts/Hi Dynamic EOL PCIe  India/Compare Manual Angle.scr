@@ -32,7 +32,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": "Electric Angle",
+          "Name": " FOC Electric Angle",
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
@@ -61,7 +61,7 @@
         "Tolerance": 50.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Electric Angle (MCU)\" = \" Sensor Electric Angle\" ±  50 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -74,6 +74,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -84,10 +88,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -98,7 +108,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare FOC Angle to Sensor Angle",
         "IsPass": false,

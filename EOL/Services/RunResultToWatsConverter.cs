@@ -359,7 +359,7 @@ namespace EOL.Services
                             {
                                 foreach (var item in (List<DropDownParamData>)dropdownValue)
                                 {
-                                    if (item.Value == compare.ValueRight.ToString())
+                                    if (item.Name == strvalue)
                                     {
                                         step.StepType = StepTypes.ET_SVT;
                                         StringValue stringvalue = new StringValue

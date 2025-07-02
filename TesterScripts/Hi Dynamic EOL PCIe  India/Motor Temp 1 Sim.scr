@@ -204,6 +204,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -214,10 +218,16 @@
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -228,7 +238,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 5",
         "IsPass": false,
@@ -265,6 +277,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
@@ -275,7 +291,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -499,6 +517,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -509,10 +531,16 @@
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -523,7 +551,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 20",
         "IsPass": false,
@@ -560,6 +590,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
@@ -570,7 +604,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -794,6 +830,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -804,10 +844,16 @@
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -818,7 +864,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 50",
         "IsPass": false,
@@ -855,6 +903,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
@@ -865,7 +917,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -1089,6 +1143,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1099,10 +1157,16 @@
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1113,7 +1177,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 80",
         "IsPass": false,
@@ -1150,6 +1216,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
@@ -1160,7 +1230,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -1384,6 +1456,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1394,10 +1470,16 @@
           "AteCommandDropDwonIndex": 13,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1408,7 +1490,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 120",
         "IsPass": false,
@@ -1445,6 +1529,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 0,
@@ -1455,7 +1543,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,

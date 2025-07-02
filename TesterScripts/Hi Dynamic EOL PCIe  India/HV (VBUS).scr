@@ -29,6 +29,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -39,7 +43,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -86,7 +92,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 200 ±  2 - ID:3ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 200 ±  2 - ID:3ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -99,6 +105,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -109,10 +119,16 @@
           "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -123,7 +139,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (200V)",
         "IsPass": false,
@@ -333,7 +351,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage\" ±  2 - ID:4ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:4ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -346,6 +364,10 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -356,10 +378,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -370,7 +398,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (200V)",
         "IsPass": false,
@@ -403,6 +433,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -413,7 +447,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -460,7 +496,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 250 ±  2 - ID:7ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 250 ±  2 - ID:7ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -473,6 +509,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -483,10 +523,16 @@
           "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -497,7 +543,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (250V)",
         "IsPass": false,
@@ -707,7 +755,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage\" ±  2 - ID:8ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -720,6 +768,10 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -730,10 +782,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -744,7 +802,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (250V)",
         "IsPass": false,
@@ -777,6 +837,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -787,7 +851,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -834,7 +900,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 300 ±  2 - ID:11ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 300 ±  2 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -847,6 +913,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -857,10 +927,16 @@
           "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -871,7 +947,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (300V)",
         "IsPass": false,
@@ -1081,7 +1159,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage\" ±  2 - ID:12ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:12ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1094,6 +1172,10 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1104,10 +1186,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1118,7 +1206,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (300V)",
         "IsPass": false,
@@ -1151,6 +1241,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1161,7 +1255,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -1208,7 +1304,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 350 ±  2 - ID:15ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:15ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1221,6 +1317,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1231,10 +1331,16 @@
           "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1245,7 +1351,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (350V)",
         "IsPass": false,
@@ -1455,7 +1563,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage\" ±  2 - ID:16ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1468,6 +1576,10 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1478,10 +1590,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1492,7 +1610,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (350V)",
         "IsPass": false,
@@ -1525,6 +1645,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1535,7 +1659,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -1582,7 +1708,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 400 ±  2 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 400 ±  2 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1595,6 +1721,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1605,10 +1735,16 @@
           "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1619,7 +1755,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (400V)",
         "IsPass": false,
@@ -1829,7 +1967,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage\" ±  2 - ID:20ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1842,6 +1980,10 @@
         "CompareValueFactor": 1000.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1852,10 +1994,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1866,7 +2014,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (400V)",
         "IsPass": false,
@@ -1899,6 +2049,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -1909,7 +2063,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,

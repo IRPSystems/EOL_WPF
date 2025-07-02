@@ -33,6 +33,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 1,
@@ -43,7 +47,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
@@ -107,6 +113,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
@@ -117,10 +127,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -131,7 +147,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - #1 OFF #2 OFF",
         "IsPass": false,
@@ -190,6 +208,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
@@ -200,10 +222,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -214,7 +242,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - #1 ON #2 ON",
         "IsPass": false,
@@ -273,6 +303,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
@@ -283,10 +317,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -297,7 +337,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - #1 ON #2 OFF",
         "IsPass": false,
@@ -356,6 +398,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
@@ -366,10 +412,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -380,7 +432,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - #1 ON #2 ON",
         "IsPass": false,
@@ -439,6 +493,10 @@
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 2,
@@ -449,10 +507,16 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "CompareValue_ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
           "Ni6002_Line": 0,
@@ -463,7 +527,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - #1 OFF #2 ON",
         "IsPass": false,
@@ -500,6 +566,10 @@
         "SwitchRelayChannel": 0,
         "ExtraData": {
           "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 1,
           "Ni6002_Line": 1,
@@ -510,7 +580,9 @@
           "AteCommandDropDwonIndex": 0,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
         },
         "ValueParameter": null,
         "IsWarning": true,
