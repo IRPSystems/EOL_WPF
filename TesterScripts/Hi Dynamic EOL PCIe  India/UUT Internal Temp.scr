@@ -167,6 +167,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -347,6 +352,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -451,7 +461,7 @@
           "CommunicationTimeout": 0
         },
         "CompareValue": 40.0,
-        "ValueDropDwonIndex": -1,
+        "CompareValueDropDwonIndex": -1,
         "Comparation": 4,
         "IsUseAverage": false,
         "AverageOfNRead": 0,

@@ -691,8 +691,8 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "CompareValue": null,
-        "ValueDropDwonIndex": -1,
+        "CompareValue": 4,
+        "CompareValueDropDwonIndex": 4,
         "Comparation": 0,
         "IsUseAverage": false,
         "AverageOfNRead": 0,

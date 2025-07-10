@@ -410,6 +410,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -654,6 +659,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -898,6 +908,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -1142,6 +1157,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -1629,6 +1649,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -1873,6 +1898,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -2117,6 +2147,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -2361,6 +2396,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },

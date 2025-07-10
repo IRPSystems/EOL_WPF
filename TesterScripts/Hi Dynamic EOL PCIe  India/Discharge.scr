@@ -199,8 +199,8 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "CompareValue": null,
-        "ValueDropDwonIndex": -1,
+        "CompareValue": 4,
+        "CompareValueDropDwonIndex": 4,
         "Comparation": 0,
         "IsUseAverage": false,
         "AverageOfNRead": 0,
@@ -477,6 +477,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -875,6 +880,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },
@@ -1104,6 +1129,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -1314,6 +1344,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },
@@ -1532,6 +1582,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_CanDev1Test",
                 "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UARTCommTest",
+                "Value": "31"
               }
             ]
           },
@@ -1932,6 +1987,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },

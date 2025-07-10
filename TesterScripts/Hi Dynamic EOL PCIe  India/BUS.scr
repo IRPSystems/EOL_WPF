@@ -539,8 +539,8 @@
           "ToolTip": null,
           "CommunicationTimeout": 0
         },
-        "CompareValue": null,
-        "ValueDropDwonIndex": -1,
+        "CompareValue": 4,
+        "CompareValueDropDwonIndex": 4,
         "Comparation": 0,
         "IsUseAverage": false,
         "AverageOfNRead": 0,
@@ -708,6 +708,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },
@@ -1126,6 +1146,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },
@@ -1244,26 +1284,7 @@
           "CommunicationTimeout": 0
         },
         "McuNumOfReadings": 10,
-        "RefSensorParam": {
-          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
-          "ExpectedRPM": 0,
-          "Io_port": 0,
-          "Status_paramter": "Rw",
-          "command_to_device": "analog input current",
-          "portLine": 0,
-          "shunt_resistor": 0.0,
-          "numofcounts": 0,
-          "DropDown": null,
-          "ThermistorType": 0,
-          "ThermistorTypeList": null,
-          "IsThermistorUsed": false,
-          "Name": "Analog Input Current",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 9,
-          "ToolTip": null,
-          "CommunicationTimeout": 4000
-        },
+        "RefSensorParam": null,
         "RefSensorNumOfReadings": 10,
         "RefSensorChannel": 0,
         "RefSensorPorts": 21,
@@ -1321,7 +1342,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Bus Current (Monitor) (MCU)\" = \"Analog Input Current\" ±  2 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1496,6 +1517,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesUH",
                 "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
               }
             ]
           },
