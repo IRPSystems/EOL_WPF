@@ -287,6 +287,17 @@
         "ID": 4
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 17",
+        "Interval": 1,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 6,
+        "FailNextId": 0,
+        "ID": 5
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 24",
         "Parameter": {
@@ -336,9 +347,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Current Limit to 10A",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 5
+        "ID": 6
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -404,9 +415,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Output to ON",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 6
+        "ID": 7
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -476,9 +487,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual FOC  to ON",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 7
+        "ID": 8
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -548,9 +559,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 9
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -612,9 +623,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual IQ Command to 50ARMS",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 9
+        "ID": 10
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -676,9 +687,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 300RPM",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 10
+        "ID": 11
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -687,9 +698,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Stablize Speed",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 11
+        "ID": 12
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -718,7 +729,7 @@
         "Tolerance": 30.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:12ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:13ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -771,9 +782,9 @@
         },
         "UserTitle": "Compare UUT Speed to 300RPM",
         "IsPass": false,
-        "PassNextId": 13,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 12
+        "ID": 13
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -798,7 +809,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 250 ±  2 - ID:13ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 250 ±  2 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -851,9 +862,9 @@
         },
         "UserTitle": "Get PS Voltage 250",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 13
+        "ID": 14
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -897,7 +908,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:15ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -950,9 +961,9 @@
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 14
+        "ID": 15
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1014,9 +1025,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 0 RPM",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 15
+        "ID": 16
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1080,7 +1091,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 17
       }
     ]
   },
