@@ -314,7 +314,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -822,97 +822,13 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 17",
-        "Interval": 12,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Stablize Speed",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
         "ID": 14
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 20",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Speed - RPM",
-          "Default": "0",
-          "Cmd": "mspdrpm",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": null,
-          "Name": "Speed - RPM",
-          "Units": "RPM",
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0
-        },
-        "CompareValue": "300",
-        "Tolerance": 30.0,
-        "Comparation": 0,
-        "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Speed - RPM (MCU)\" = 300 ±  30 - ID:15ToleranceTypeGroupName",
-        "IsValueTolerance": true,
-        "IsPercentageTolerance": false,
-        "IsUseParamAverage": false,
-        "AverageOfNRead_Param": 0,
-        "IsUseParamFactor": false,
-        "ParamFactor": 0.0,
-        "IsUseCompareValueAverage": false,
-        "AverageOfNRead_CompareValue": 0,
-        "IsUseCompareValueFactor": false,
-        "CompareValueFactor": 0.0,
-        "Parameter_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Rigol_Channel": 0,
-          "Rigol_Slot": 0,
-          "Rigol_Range": 0,
-          "MX180TP_Channel": 0,
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
-          "DBCInterval": 0,
-          "DBCIntervalUnite": 1
-        },
-        "CompareValue_ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Rigol_Channel": 0,
-          "Rigol_Slot": 0,
-          "Rigol_Range": 0,
-          "MX180TP_Channel": 0,
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
-          "DBCInterval": 0,
-          "DBCIntervalUnite": 1
-        },
-        "UserTitle": "Compare UUT Speed to 300RPM",
-        "IsPass": false,
-        "PassNextId": 16,
-        "FailNextId": 0,
-        "ID": 15
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -937,7 +853,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 430 ±  2 - ID:16ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 430 ±  2 - ID:15ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -990,9 +906,9 @@
         },
         "UserTitle": "Get PS Voltage 430",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 15
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1036,7 +952,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage\" ±  2 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -1089,9 +1005,9 @@
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 17
+        "ID": 16
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1153,9 +1069,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 0 RPM",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 18
+        "ID": 17
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1219,7 +1135,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 19
+        "ID": 18
       }
     ]
   },

@@ -197,7 +197,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -705,48 +705,13 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 18",
-        "Interval": 10,
+        "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Stablize Speed",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
         "ID": 13
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
-        "Name": "Converge 8",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Monitor",
-          "Description": "Speed - RPM",
-          "Default": "0",
-          "Cmd": "mspdrpm",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": null,
-          "Name": "Speed - RPM",
-          "Units": "RPM",
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0
-        },
-        "ConvergeTimeUnite": 2,
-        "ConvergeTime": 5,
-        "TimeoutTimeUnite": 2,
-        "Timeout": 30,
-        "TargetValue": "500",
-        "Tolerance": 100.0,
-        "UserTitle": "Converge Speed RPM 500",
-        "IsPass": false,
-        "PassNextId": 15,
-        "FailNextId": 0,
-        "ID": 14
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -808,9 +773,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual IQ Command to 230ARMS",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 15
+        "ID": 14
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -819,9 +784,9 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 15
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -846,7 +811,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage (EA Power)\" = 350 ±  2 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Actual Voltage\" = 350 ±  2 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -899,9 +864,9 @@
         },
         "UserTitle": "Get PS Voltage 350",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 17
+        "ID": 16
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -945,7 +910,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage (EA Power)\" ±  2 - ID:18ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Vbus (Monitor) (MCU)\" = \"Actual Voltage\" ±  2 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": false,
@@ -998,9 +963,9 @@
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 18
+        "ID": 17
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1062,9 +1027,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual IQ Command to 0A",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 19
+        "ID": 18
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1128,7 +1093,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 20
+        "ID": 19
       }
     ]
   },

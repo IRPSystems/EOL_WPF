@@ -280,7 +280,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -629,7 +629,7 @@
               }
             ]
           },
-          "Name": "Hall Sensor Fault                           - 0x8250",
+          "Name": "Position Sensor",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
