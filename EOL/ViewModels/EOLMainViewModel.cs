@@ -370,7 +370,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.PowerSupplyEA &&
 					device.DeviceType != DeviceTypesEnum.RigolM300 &&
 					device.DeviceType != DeviceTypesEnum.MX180TP &&
-					device.DeviceType != DeviceTypesEnum.ITM3100)
+					device.DeviceType != DeviceTypesEnum.ITM3100 &&
+					device.DeviceType != DeviceTypesEnum.MCU_B2B )
 				{
 					devicesToRemoveList.Add(device);
 					continue;
