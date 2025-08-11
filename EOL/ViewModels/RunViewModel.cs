@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DBCFileParser.Services;
@@ -1038,7 +1038,7 @@ namespace EOL.ViewModels
                         if (script.IsPass == false )
                             isWritingtoWatsReport = false;
 
-                        if (isWritingtoWatsReport || (script.isExecuted && !isWritingtoWatsReport))
+                        if (isWritingtoWatsReport || (script.isExecuted && !isWritingtoWatsReport) && teststep.Steps != null)
 							ProjectStep.Steps.Add(teststep);
 
 
@@ -1198,10 +1198,12 @@ namespace EOL.ViewModels
 						//    Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
 						//    StepType = "Action"
 						//};
+
                         Step Step = _runResultToWatsConverter.HandleStep(stepBase);
 						if (Step != null && !string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
 							watsErrorMessage = Step.StepErrorMessage;
-						if (Step != null)
+
+						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && item is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
 						{
 							totalExecutionTime += Step.TotalTime;
 							watsStep.Steps.Add(Step);
@@ -1220,7 +1222,7 @@ namespace EOL.ViewModels
 				{
 					Step subsctiptstep = new Step();
 
-                    if (subScript is ScriptStepBase subscript)
+                    if (subScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
                     {
                         subsctiptstep = new Step
                         {
@@ -1256,7 +1258,8 @@ namespace EOL.ViewModels
 
 					totalExecutionTime += subsctiptstep.TotalTime;
 
-                    watsStep.Steps.Add(subsctiptstep);
+					if(subsctiptstep != null && subsctiptstep.Steps != null)
+						watsStep.Steps.Add(subsctiptstep);
 
 					if (failedStepTemp != null)
 						failedStep = failedStepTemp;

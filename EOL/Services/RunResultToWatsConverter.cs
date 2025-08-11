@@ -1,4 +1,4 @@
-﻿using DeviceCommunicators.MCU;
+using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using Entities.Models;
 using EOL.Models;
@@ -63,8 +63,15 @@ namespace EOL.Services
             {
                 serializer.Serialize(writer, reports );
             }
-            string backupFilePath = Path.Combine(backUpPath, ReportName + " - " + sn + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")) + fileType);
 
+            // Create "Wats Reports" folder inside the backup path
+            string watsReportsFolder = Path.Combine(backUpPath, "Wats Reports");
+            Directory.CreateDirectory(watsReportsFolder);
+
+            string backupFilePath = Path.Combine(
+                watsReportsFolder,
+                ReportName + " - " + sn + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + fileType
+            );
             using (StreamWriter writer = new StreamWriter(backupFilePath))
             {
                 serializer.Serialize(writer, reports);
