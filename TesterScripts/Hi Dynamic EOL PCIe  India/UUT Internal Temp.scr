@@ -172,6 +172,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_UARTCommTest",
                 "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UC_ENABLE",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_5V_ENABLE",
+                "Value": "33"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GDOutputSense",
+                "Value": "34"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ExtEEPROM",
+                "Value": "35"
               }
             ]
           },
@@ -357,6 +377,26 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_UARTCommTest",
                 "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_UC_ENABLE",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_5V_ENABLE",
+                "Value": "33"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GDOutputSense",
+                "Value": "34"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ExtEEPROM",
+                "Value": "35"
               }
             ]
           },
@@ -435,7 +475,15 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
@@ -509,7 +557,15 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       }
     ]
   },

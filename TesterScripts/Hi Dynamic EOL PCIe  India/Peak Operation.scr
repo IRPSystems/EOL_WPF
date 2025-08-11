@@ -70,7 +70,15 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -81,7 +89,15 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -149,7 +165,15 @@
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -197,7 +221,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -241,7 +265,15 @@
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
-        "ID": 4
+        "ID": 4,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -295,7 +327,15 @@
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
-        "ID": 5
+        "ID": 5,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -306,7 +346,15 @@
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
-        "ID": 6
+        "ID": 6,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -360,7 +408,15 @@
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 7
+        "ID": 7,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -428,7 +484,15 @@
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
-        "ID": 8
+        "ID": 8,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -500,7 +564,15 @@
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 9
+        "ID": 9,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -572,7 +644,15 @@
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 10
+        "ID": 10,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -636,7 +716,15 @@
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 11
+        "ID": 11,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -700,7 +788,15 @@
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 12
+        "ID": 12,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -711,7 +807,15 @@
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 13
+        "ID": 13,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
@@ -746,7 +850,15 @@
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 14
+        "ID": 14,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -810,7 +922,15 @@
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 15
+        "ID": 15,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -821,7 +941,15 @@
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 16
+        "ID": 16,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -901,7 +1029,15 @@
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 17
+        "ID": 17,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -1000,7 +1136,15 @@
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 18
+        "ID": 18,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1064,7 +1208,15 @@
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
-        "ID": 19
+        "ID": 19,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
@@ -1128,7 +1280,15 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 20
+        "ID": 20,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       }
     ]
   },

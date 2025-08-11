@@ -13,7 +13,15 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -32,7 +40,7 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": " FOC Electric Angle",
+          "Name": "Electric Angle",
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
@@ -61,7 +69,7 @@
         "Tolerance": 50.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -116,7 +124,15 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       }
     ]
   },
