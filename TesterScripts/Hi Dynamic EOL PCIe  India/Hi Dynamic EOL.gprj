@@ -39738,7 +39738,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39746,12 +39746,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -39825,7 +39825,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39833,12 +39833,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -39912,7 +39912,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -39920,12 +39920,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
@@ -51054,7 +51054,7 @@
                       "Description": "Flash -  - ID:3",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 5 sec - ID:4",
+                      "PassNextDescription": "Delay 30 sec - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -51082,14 +51082,14 @@
                       "IsError": null,
                       "IsExecuted": false,
                       "IntervalUnite": 2,
-                      "Interval": 5,
+                      "Interval": 30,
                       "Diff_Timeout": "00:00:00",
                       "TsTimeout": "00:00:00",
                       "TimeoutPercentage": 0,
                       "UserTitle": "Delay",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 2",
-                      "Description": "Delay 5 sec - ID:4",
+                      "Description": "Delay 30 sec - ID:4",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Compare with tolerance:  \"SW Version - Major (MCU)\" = 2 ±  0 - ID:5",
