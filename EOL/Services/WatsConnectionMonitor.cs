@@ -1,8 +1,9 @@
-﻿using System;
-using System.Windows;
-using Virinco.WATS.Interface;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Threading;
+using Virinco.WATS.Interface;
 
 
 public class WatsConnectionMonitor
@@ -70,6 +71,7 @@ public class WatsConnectionMonitor
                 {
                     IsConnected = isconnected;
                 }
+
 
             }
             catch (Exception ex)

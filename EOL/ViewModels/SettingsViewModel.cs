@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.ViewModels;
@@ -78,8 +78,8 @@ namespace EOL.ViewModels
 			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
             PSoCPort1_DropDownOpenedCommand = new RelayCommand(PSoCPort1_DropDownOpened);
 			PSoCPort2_DropDownOpenedCommand = new RelayCommand(PSoCPort2_DropDownOpened);
-
 			SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
+            MainScriptEventChanged += SettingsAdminVM.OnMainScriptChanged;
 		}
 
         #endregion Constructor
@@ -89,6 +89,7 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
         {
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
+            _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation.Code.ToString();
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);
@@ -102,6 +103,8 @@ namespace EOL.ViewModels
             //string errorMsg = string.Empty;
             //PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
         }
+
+
 
         public void LoadUserConfigToSettingsView()
         {

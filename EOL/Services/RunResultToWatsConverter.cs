@@ -384,60 +384,61 @@ namespace EOL.Services
                             }
 
                         }
-                    }
-                    else if (compare.ValueRight is string stringValue)
-                    {
+                        else if (compare.ValueRight is string stringValue)
+                        {
 
-                        step.StepType = StepTypes.ET_NLT;
-                        NumericLimit numericlimit = CreateNumericLimit(
-                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
-                            Convert.ToDouble(stringValue),
-                            Convert.ToDouble(stringValue),
-                            Convert.ToDouble(compare.ValueLeft),
-                            compare.Parameter.Units,
-                            compOperator,
-                            numericstatus
-                        );
-                        step.NumericLimits.Add(numericlimit);
+                            step.StepType = StepTypes.ET_NLT;
+                            NumericLimit numericlimit = CreateNumericLimit(
+                                compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
+                                Convert.ToDouble(stringValue),
+                                Convert.ToDouble(stringValue),
+                                Convert.ToDouble(compare.ValueLeft),
+                                compare.Parameter.Units,
+                                compOperator,
+                                numericstatus
+                            );
+                            step.NumericLimits.Add(numericlimit);
+                        }
+                        else if (compare.ValueRight is double Value)
+                        {
+                            step.StepType = StepTypes.ET_NLT;
+                            NumericLimit numericlimit = CreateNumericLimit(
+                                compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
+                                Convert.ToDouble(Value),
+                                Convert.ToDouble(Value),
+                                Convert.ToDouble(compare.ValueLeft),
+                                compare.Parameter.Units,
+                                compOperator,
+                                numericstatus
+                            );
+                            step.NumericLimits.Add(numericlimit);
+                        }
+                        else if (compare.ValueRight is DeviceParameterData paramright)
+                        {
+                            step.StepType = StepTypes.ET_MNLT;
+                            NumericLimit numericlimitparam = CreateNumericLimit(
+                                compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
+                                Convert.ToDouble(paramright.Value),
+                                Convert.ToDouble(paramright.Value),
+                                Convert.ToDouble(compare.ValueLeft),
+                                compare.Parameter.Units,
+                                compOperator,
+                                numericstatus
+                            );
+                            step.NumericLimits.Add(numericlimitparam);
+                            NumericLimit numericlimitcompared = CreateNumericLimit(
+                                paramright.Name + " (" + paramright.DeviceType.ToString() + ")",
+                                0,
+                                0,
+                                Convert.ToDouble(paramright.Value),
+                                compare.Parameter.Units,
+                                CompOperator.LOG,
+                                numericstatus
+                            );
+                            step.NumericLimits.Add(numericlimitcompared);
+                        }
                     }
-                    else if (compare.ValueRight is double Value)
-                    {
-                        step.StepType = StepTypes.ET_NLT;
-                        NumericLimit numericlimit = CreateNumericLimit(
-                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
-                            Convert.ToDouble(Value),
-                            Convert.ToDouble(Value),
-                            Convert.ToDouble(compare.ValueLeft),
-                            compare.Parameter.Units,
-                            compOperator,
-                            numericstatus
-                        );
-                        step.NumericLimits.Add(numericlimit);
-                    }
-                    else if (compare.ValueRight is DeviceParameterData paramright)
-                    {
-                        step.StepType = StepTypes.ET_MNLT;
-                        NumericLimit numericlimitparam = CreateNumericLimit(
-                            compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
-                            Convert.ToDouble(paramright.Value),
-                            Convert.ToDouble(paramright.Value),
-                            Convert.ToDouble(compare.ValueLeft),
-                            compare.Parameter.Units,
-                            compOperator,
-                            numericstatus
-                        );
-                        step.NumericLimits.Add(numericlimitparam);
-                        NumericLimit numericlimitcompared = CreateNumericLimit(
-                            paramright.Name + " (" + paramright.DeviceType.ToString() + ")",
-                            0,
-                            0,
-                            Convert.ToDouble(paramright.Value),
-                            compare.Parameter.Units,
-                            CompOperator.LOG,
-                            numericstatus
-                        );
-                        step.NumericLimits.Add(numericlimitcompared);
-                    }
+                    
 
                 }
 

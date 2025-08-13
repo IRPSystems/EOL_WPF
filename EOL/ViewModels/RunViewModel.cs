@@ -978,7 +978,11 @@ namespace EOL.ViewModels
                     ProjectStep.Name = project.Name;
 					ProjectStep.Sequencecall = new SequenceCall
                     {
-                        Name = project.Name
+                        Name = project.Name,
+						Filename = _settingsViewModel.SettingsAdminVM.SoftwareFilename,
+						Version = _settingsViewModel.SettingsAdminVM.SoftwareVersion,
+						Filepath = _settingsViewModel.SettingsAdminVM.SoftwarePath,
+						
                     }; ;
 
                     if (WatsBLOB != null && RunState != RunStateEnum.Passed)
@@ -1116,8 +1120,8 @@ namespace EOL.ViewModels
                         },
                         Process = new Process
                         {
-                            Code = "100",
-                            Name = "End of line test"
+                            Code = _settingsViewModel.SettingsAdminVM.SelectedTestOperation.Code.ToString(),
+                            Name = _settingsViewModel.SettingsAdminVM.SelectedTestOperation?.Name,
                         },
 
                         Steps = watsSteps
