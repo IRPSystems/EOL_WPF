@@ -89,7 +89,7 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
         {
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
-            _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation.Code.ToString();
+            _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation?.Code.ToString() ?? string.Empty;
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);
