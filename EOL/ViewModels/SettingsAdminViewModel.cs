@@ -52,7 +52,7 @@ namespace EOL.ViewModels
 		{
 			EolSettings = eolSettings;
 			BrowseMCUParametersJsonPathCommand = new RelayCommand(BrowseMCUParametersJsonPath);
-
+            SelectedTestOperation = new Process();
             _ = LoadProcessesOnceAsync(eolSettings.UserDefaultSettings.WatsTestCode ?? string.Empty);
 
 

@@ -979,9 +979,6 @@ namespace EOL.ViewModels
 					ProjectStep.Sequencecall = new SequenceCall
                     {
                         Name = project.Name,
-						Filename = _settingsViewModel.SettingsAdminVM.SoftwareFilename,
-						Version = _settingsViewModel.SettingsAdminVM.SoftwareVersion,
-						Filepath = _settingsViewModel.SettingsAdminVM.SoftwarePath,
 						
                     }; ;
 
@@ -1128,17 +1125,19 @@ namespace EOL.ViewModels
                     }
                 };
 
-                MiscInfo miscInfo = new MiscInfo
-                {
-                    Typedef = string.Empty,
-                    Description = "Error Message",
-                    Text = watsErrorMessage
-                };
-                watsreports.Report.MiscInfo.Add(miscInfo);
+                //MiscInfo miscInfo = new MiscInfo
+                //{
+                //    Typedef = string.Empty,
+                //    Description = "Error Message",
+                //    Text = watsErrorMessage
+                //};				 
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description ="Error Message" , Text = watsErrorMessage });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Name", Text = _settingsViewModel.SettingsAdminVM.SoftwareFilename ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software Version", Text = _settingsViewModel.SettingsAdminVM.SoftwareVersion ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Path", Text = _settingsViewModel.SettingsAdminVM.SoftwarePath ?? string.Empty });
 
-
-			}
-			catch (Exception ex)
+            }
+            catch (Exception ex)
 			{
 				LoggerService.Error(this, "Faild to handle stop tasks", ex);
 			}
