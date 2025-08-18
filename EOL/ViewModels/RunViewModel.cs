@@ -11,6 +11,7 @@ using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
 using EOL.Views;
+using Microsoft.Xaml.Behaviors.Media;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -119,12 +120,14 @@ namespace EOL.ViewModels
         private ObservableCollection<DeviceParameterData> _logParametersList;
 		private string MainScriptReportSubFolder = "Main Script Reports";
         private string MonitorLogSubFolder = "Monitor Logs";
+		private string MonitorLogCurrentRunFolder;
 
         private ScriptStepSetParameter _stepSetParameter;
 
 		private CommSendResLogCsvWriter _commSendResLogCsvWriter;
 
-		private byte[] WatsBLOB;
+		private byte[] WatsBLOB_SendRes;
+        private byte[] WatsBLOB_Monitor;
 
         private AdminView _adminView;
 		private AdminViewModel _adminVM;
@@ -588,6 +591,7 @@ namespace EOL.ViewModels
 
             _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
 
+
             isTestTerminated = false;
             _runData.StartTime = new DateTime();
 			_runData.Duration = TimeSpan.Zero;
@@ -596,14 +600,15 @@ namespace EOL.ViewModels
 			_runData.NumberOfTested++;
 			OperatorErrorMessage = string.Empty;
 			_totalNumOfSteps = 0;
-			string path = _userDefaultSettings.ReportsSavingPath;
-			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
 			foreach (GeneratedProjectData project in _generatedProjectsList)
 			{
-
-				project.RecordingPath = path;
-
-				foreach (GeneratedScriptData scriptData in project.TestsList)
+                MonitorLogCurrentRunFolder = Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder + "\\" + _runData.SerialNumber + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")));
+                project.RecordingPath = MonitorLogCurrentRunFolder;
+                if (!Directory.Exists(project.RecordingPath))
+				{
+					Directory.CreateDirectory(project.RecordingPath);
+				}
+                foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
 					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
                     foreach (GeneratedScriptData script in project.TestsList)
@@ -927,73 +932,112 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,out Reports watsreports)
-		{
-			watsreports = new Reports();
+        private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult, out Reports watsreports)
+        {
+            watsreports = new Reports();
 
             try
             {
                 _timerDuration.Stop();
-				_runData.EndTime = DateTime.Now;
+                _runData.EndTime = DateTime.Now;
 
-				IsRunButtonEnabled = true;
+                IsRunButtonEnabled = true;
                 _commSendResLogCsvWriter.AddLogData(_commSendResLogs);
                 if (stopeMode == ScriptStopModeEnum.Aborted)
-				{
-					RunState = RunStateEnum.Aborted;
-					singleTestResult.StopReason = "Aborted";
-				}
-				else
-					RunState = RunStateEnum.Passed;
+                {
+                    RunState = RunStateEnum.Aborted;
+                    singleTestResult.StopReason = "Aborted";
+                }
+                else
+                    RunState = RunStateEnum.Passed;
 
-				if (ErrorMessage != null)
-					RunState = RunStateEnum.Aborted;
+                if (ErrorMessage != null)
+                    RunState = RunStateEnum.Aborted;
 
+                if (RunState == RunStateEnum.Passed)
+                    singleTestResult.StopReason = "PASSED";
 
-				if (RunState == RunStateEnum.Passed)
-					singleTestResult.StopReason = "PASSED";
-
+                // ----- SendRes blob -----
                 string text = _commSendResLogCsvWriter.csvLineWats.ToString();
-
                 Encoding encoding = Encoding.UTF8;
+                WatsBLOB_SendRes = encoding.GetBytes(text);
 
-                WatsBLOB = encoding.GetBytes(text);
 
                 List<Step> watsSteps = new List<Step>();
-
                 string watsErrorMessage = string.Empty;
 
                 Step ProjectStep = new Step
-				{
-					Steps = new List<Step>(),
+                {
+                    Steps = new List<Step>(),
                     StepType = StepTypes.SequenceCall,
                     Group = "Main"
                 };
 
                 ScriptStepBase failedStep = null;
-				bool iserror = false;
-				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
-				foreach (GeneratedProjectData project in _generatedProjectsList)
-				{
+                bool iserror = false;
+                List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
+
+                foreach (GeneratedProjectData project in _generatedProjectsList)
+                {
                     ProjectStep.Name = project.Name;
-					ProjectStep.Sequencecall = new SequenceCall
+                    ProjectStep.Sequencecall = new SequenceCall
                     {
                         Name = project.Name
-                    }; ;
+                    };
 
-                    if (WatsBLOB != null && RunState != RunStateEnum.Passed)
+                    // ----- Add Blobs -----
+                    if (RunState != RunStateEnum.Passed)
                     {
-                        string base64string = Convert.ToBase64String(WatsBLOB);
-                        Step step = new Step()
+                        // Comm Send/Response CSV
+                        if (WatsBLOB_SendRes != null)
                         {
-                            Name = "WATS BLOB",
-                            StepType = StepTypes.Attachment,
-                            Attachments = new List<Attachment>()
-                        };
-                        step.Attachments.Add(new Attachment() { Name = "CommSendResponseLog.csv", Base64Data = base64string, ContentType = "text/csv" });
-                        ProjectStep.Steps.Add(step);
-                        _commSendResLogCsvWriter.csvLineWats.Clear();
+                            string base64string = Convert.ToBase64String(WatsBLOB_SendRes);
+                            Step step = new Step()
+                            {
+                                Name = "Send Response",
+                                StepType = StepTypes.Attachment,
+                                Attachments = new List<Attachment>()
+                            };
+                            step.Attachments.Add(new Attachment()
+                            {
+                                Name = "CommSendResponseLog.csv",
+                                Base64Data = base64string,
+                                ContentType = "text/csv"
+                            });
+                            ProjectStep.Steps.Add(step);
+                            _commSendResLogCsvWriter.csvLineWats.Clear();
+                        }
+
+                        // Each monitor file → its own Step with one Attachment
+                        if (Directory.Exists(MonitorLogCurrentRunFolder))
+                        {
+                            var allFiles = Directory.EnumerateFiles(MonitorLogCurrentRunFolder, "*", SearchOption.TopDirectoryOnly)
+                                                    .OrderBy(f => File.GetLastWriteTime(f));
+
+							
+
+                            foreach (var file in allFiles)
+                            {
+                                string fileText = File.ReadAllText(file, encoding);
+                                byte[] data = encoding.GetBytes(fileText);
+
+                                Step step = new Step()
+                                {
+                                    Name = "Monitor Log - " + Path.GetFileName(file),
+                                    StepType = StepTypes.Attachment,
+                                    Attachments = new List<Attachment>()
+                                };
+                                step.Attachments.Add(new Attachment()
+                                {
+                                    Name = Path.GetFileName(file),
+                                    Base64Data = Convert.ToBase64String(data),
+                                    ContentType = "text/csv"
+                                });
+                                ProjectStep.Steps.Add(step);
+                            }
+                        }
                     }
+
 
                     //bool to determine wheter to write the test into report
                     bool isWritingtoWatsReport = true;
