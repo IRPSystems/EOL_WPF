@@ -11,6 +11,7 @@ using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
 using EOL.Views;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -23,6 +24,7 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -138,6 +140,8 @@ namespace EOL.ViewModels
 
         private List<CommSendResLog> _commSendResLogs = new();
 
+		List<List<string>> _flashingActionLog = new ();
+
         #endregion Fields
 
         #region Constructor
@@ -167,8 +171,8 @@ namespace EOL.ViewModels
 				PackageJsonFileGenerator.GenerateJsonFile();
                 _timerDuration = new System.Timers.Timer(300);
 				_timerDuration.Elapsed += _timerDuration_Elapsed;
-
-				_currentScriptDeviceList = new List<DeviceTypesEnum>();
+                flashingHandler.OnWriteToTerminalEvent += _flashingHandler_OnWriteToTerminalEvent;
+                _currentScriptDeviceList = new List<DeviceTypesEnum>();
 
 				_commSendResLogCsvWriter = new();
 
@@ -251,13 +255,13 @@ namespace EOL.ViewModels
             }
 		}
 
-		
 
-		#endregion Constructor
 
-		#region Methods
+        #endregion Constructor
 
-		private void LoadPrintFile()
+        #region Methods
+
+        private void LoadPrintFile()
 		{
 			//If user selected printer device, try loading & parse .prn file
 			foreach (var item in _devicesContainer.DevicesList)
@@ -520,7 +524,12 @@ namespace EOL.ViewModels
             savingDataWindow.SetProgress(50);
             savingDataWindow.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
 
-			if(RunState != RunStateEnum.Passed)
+            //Save flashing log
+            WriteFlashingActionLogToCsv();
+			_flashingActionLog.Clear();
+
+
+            if (RunState != RunStateEnum.Passed)
 			{
                 // Write log CSV.
                 _commSendResLogCsvWriter.SaveLog(_commSendResLogs);
@@ -537,6 +546,41 @@ namespace EOL.ViewModels
 
             // Close the progress window.
             savingDataWindow.Close();
+        }
+
+        private void WriteFlashingActionLogToCsv()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FlashingLogs");
+                Directory.CreateDirectory(directoryPath);
+                string timestamp = DateTime.Now.ToString("MM-dd-yyyy_hh-mm-ss_tt", CultureInfo.InvariantCulture);
+                string fileName = $"Flashing Log - {_runData.SerialNumber}_{timestamp}.csv";
+                string filePath = Path.Combine(directoryPath, fileName);
+
+                // Write to CSV
+                using (var writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine("Timestamp,Message");
+
+                    foreach (var entry in _flashingActionLog)
+                    {
+                        string timestampField = entry[0];
+                        string messageField = entry[1].Replace("\"", "\"\"");
+
+                        if (messageField.Contains(",") || messageField.Contains("\""))
+                        {
+                            messageField = $"\"{messageField}\"";
+                        }
+
+                        writer.WriteLine($"{timestampField},{messageField}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving log:\n{ex.Message}", "Export Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void PostRunActions()
@@ -585,8 +629,9 @@ namespace EOL.ViewModels
 			}
 			ErrorMessage = null;
             _commSendResLogs.Clear();
-
             _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
+
+            _flashingActionLog.Clear();
 
             isTestTerminated = false;
             _runData.StartTime = new DateTime();
@@ -637,6 +682,16 @@ namespace EOL.ViewModels
 			RunPercentage = 0;
 			_stepsCounter = 1;
 		}
+
+        private void _flashingHandler_OnWriteToTerminalEvent(string obj)
+        {
+            _flashingActionLog.Add(new List<string>
+			{
+				DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
+				obj
+			});
+        }
+
 
         #region Pre Run Validations
         private bool PreRunValidations()
