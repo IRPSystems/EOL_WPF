@@ -51,6 +51,8 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="8"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="180"/>
@@ -88,6 +90,17 @@
                                VerticalAlignment="Center"/>
                     <TextBox Grid.Row="4" Grid.Column="2"
                              Text="{Binding SoftwareVersion, Mode=OneWay}" 
+                             IsReadOnly="True"
+                             IsReadOnlyCaretVisible="False"
+                             BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"
+                             MinWidth="220"/>
+                    
+                    
+                    <TextBlock Grid.Row="6" Grid.Column="0"
+                               Text="Location"
+                               VerticalAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="2"
+                             Text="{Binding MachineLocation, Mode=OneWay}" 
                              IsReadOnly="True"
                              IsReadOnlyCaretVisible="False"
                              BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"

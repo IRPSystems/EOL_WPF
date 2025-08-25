@@ -32,6 +32,11 @@ namespace EOL.ViewModels
             string.IsNullOrWhiteSpace(SoftwarePath) ? string.Empty : Path.GetFileName(SoftwarePath);
 
         public string SoftwareVersion => GetFileVersion(); // or GetFileVersion()
+        public readonly WatsConnectionMonitor WatsConnectionMonitor;
+
+        private string? _machineLocation;
+        public string MachineLocation => _machineLocation ??=
+            (string.IsNullOrWhiteSpace(GetMachineLocation()) ? "Unknown" : GetMachineLocation());
 
         public ObservableCollection<Process> TestOperations { get; } = new();
         private Process _selectedTestOperation;
@@ -48,14 +53,14 @@ namespace EOL.ViewModels
             }
         }
         public SettingsAdminViewModel(
-			EOLSettings eolSettings)
+			EOLSettings eolSettings,
+            WatsConnectionMonitor watsConnection)
 		{
 			EolSettings = eolSettings;
 			BrowseMCUParametersJsonPathCommand = new RelayCommand(BrowseMCUParametersJsonPath);
             SelectedTestOperation = new Process();
             _ = LoadProcessesOnceAsync(eolSettings.UserDefaultSettings.WatsTestCode ?? string.Empty);
-
-
+            WatsConnectionMonitor = watsConnection;
 
 
         }
@@ -113,6 +118,15 @@ namespace EOL.ViewModels
             OnPropertyChanged(nameof(SoftwareFilename));
         }
 
+        private string GetMachineLocation()
+        {
+            if (WatsConnectionMonitor == null || WatsConnectionMonitor._tdm == null)
+                return string.Empty;
+            var machinelocation = WatsConnectionMonitor._tdm?.Location ?? string.Empty;
+            if (machinelocation == null)
+                return string.Empty;
+            return machinelocation ?? string.Empty;
+        }
         public RelayCommand BrowseMCUParametersJsonPathCommand { get; private set; }
 
 		public event Action LoadDevicesContainer;

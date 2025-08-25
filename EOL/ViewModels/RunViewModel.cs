@@ -1108,7 +1108,7 @@ namespace EOL.ViewModels
                         PartNumber = singleTestResult.PartNumber,
                         MachineName = singleTestResult.RackNumber, // Set as needed
                         MiscInfo = new List<MiscInfo>(),
-
+						Location = 	_settingsViewModel.SettingsAdminVM?.MachineLocation,
                         UUT = new Models.UUT
                         {
                             UserLoginName = singleTestResult.OperatorName,

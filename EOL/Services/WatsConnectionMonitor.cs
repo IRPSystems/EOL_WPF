@@ -8,7 +8,7 @@ using Virinco.WATS.Interface;
 
 public class WatsConnectionMonitor
 {
-    private readonly TDM _tdm;
+    public readonly TDM _tdm;
     private readonly DispatcherTimer _connectionTimer;
 
     public event Action<bool> ConnectionStatusChanged;

@@ -64,7 +64,8 @@ namespace EOL.ViewModels
             EOLSettings eolSettings,
             UserConfigManager userConfigManager,
             FlashingHandler flashingHandler,
-			SetupSelectionViewModel setupSelectionVM)
+			SetupSelectionViewModel setupSelectionVM,
+            WatsConnectionMonitor watsConnection)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
@@ -78,7 +79,7 @@ namespace EOL.ViewModels
 			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
             PSoCPort1_DropDownOpenedCommand = new RelayCommand(PSoCPort1_DropDownOpened);
 			PSoCPort2_DropDownOpenedCommand = new RelayCommand(PSoCPort2_DropDownOpened);
-			SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
+			SettingsAdminVM = new SettingsAdminViewModel(eolSettings , watsConnection);
             MainScriptEventChanged += SettingsAdminVM.OnMainScriptChanged;
 		}
 

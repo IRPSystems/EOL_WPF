@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
@@ -255,7 +255,8 @@ namespace EOL.ViewModels
 					_eolSettings, 
 					_userConfigManager,
 					_flashingHandler,
-					_setupSelectionVM);
+					_setupSelectionVM,
+					_watsConnectionMonitor);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
