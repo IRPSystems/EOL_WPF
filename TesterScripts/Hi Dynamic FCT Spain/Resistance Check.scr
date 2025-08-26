@@ -103,11 +103,11 @@
           "ToolTip": null,
           "CommunicationTimeout": 3000
         },
-        "CompareValue": "120",
-        "Tolerance": 5.0,
+        "CompareValue": "123",
+        "Tolerance": 8.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Measure Resistance (Rigol M300)\" = 120 ±  5 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Measure Resistance (Rigol M300)\" = 123 ±  8 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -158,7 +158,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Measure CAN Termination Resistance",
+        "UserTitle": "Measure CAN2 Termination Resistance",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,

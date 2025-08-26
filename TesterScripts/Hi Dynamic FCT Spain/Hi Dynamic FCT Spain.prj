@@ -5,7 +5,6 @@
   "ScriptsPathsList": {
     "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
     "$values": [
-      "..\\InternalTest.tst",
       "..\\Safety Officer.scr",
       "..\\Abort Script.scr",
       "..\\Interlock.scr",

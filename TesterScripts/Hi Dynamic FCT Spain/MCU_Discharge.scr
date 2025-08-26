@@ -738,7 +738,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read ACTIVE_DIS_FB bit (main uC)",
+        "UserTitle": "Read ACTIVE_DIS_FB bit (main uC) after enabling the active discharge",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -1010,7 +1010,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read ACTIVE_DIS_FB bit (monitoring uC)",
+        "UserTitle": "Read ACTIVE_DIS_FB bit (monitoring uC) after enabling the active discharge",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1117,7 +1117,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Check that Vbus voltage is in a safe level (MCU measurement)",
+        "UserTitle": "Check that Vbus voltage has decayed to a safe level (MCU measurement)",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1275,7 +1275,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Check that Vbus voltage is in a safe level (FCT measurement)",
+        "UserTitle": "Check that Vbus voltage has decayed to a safe level (FCT sensor 1)",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1354,7 +1354,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Check that Vbus voltage is in a safe level (FCT measurement)",
+        "UserTitle": "Check that Vbus voltage has decayed to a safe level (FCT sensor 2)",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1857,7 +1857,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read ACTIVE_DIS_FB bit (main uC)",
+        "UserTitle": "Read ACTIVE_DIS_FB bit (main uC) after disabling the active discharge",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -2129,7 +2129,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read ACTIVE_DIS_FB bit (monitor uC)",
+        "UserTitle": "Read ACTIVE_DIS_FB bit (monitor uC) after disabling the active discharge",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -2512,7 +2512,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Check that Vbus voltage has dropped (sensor 1)",
+        "UserTitle": "Check that Vbus voltage has dropped after turning off all power supplies (sensor 1)",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -2591,7 +2591,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Check that Vbus voltage has dropped (sensor 2)",
+        "UserTitle": "Check that Vbus voltage has dropped after turning off all power supplies (sensor 2)",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,

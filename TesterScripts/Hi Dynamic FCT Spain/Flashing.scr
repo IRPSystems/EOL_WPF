@@ -142,7 +142,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Resolver board 5V ON",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 3,
         "FailNextId": 0,
         "ID": 2,
         "EOLReportsSelectionData": {
@@ -167,9 +167,9 @@
         "IsToolSource": false,
         "MCU_Used": true,
         "MCU2_Used": false,
-        "UserTitle": "Flash Monitor MCU",
+        "UserTitle": "Flash Monitor microcontroller",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -194,9 +194,9 @@
         "IsToolSource": false,
         "MCU_Used": true,
         "MCU2_Used": false,
-        "UserTitle": "Flash Main MCU",
+        "UserTitle": "Flash Main microcontroller",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 5,
         "FailNextId": 0,
         "ID": 4,
         "EOLReportsSelectionData": {
@@ -211,7 +211,7 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 5",
-        "Interval": 5,
+        "Interval": 35,
         "IntervalUnite": 2,
         "UserTitle": "Time for uC to startup",
         "IsPass": false,

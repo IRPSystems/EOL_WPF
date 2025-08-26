@@ -145,7 +145,7 @@
         "UserTitle": "Dummy measurement to ignore contaminated measurement",
         "IsPass": false,
         "PassNextId": 3,
-        "FailNextId": 0,
+        "FailNextId": 3,
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -177,10 +177,10 @@
           "CommunicationTimeout": 3000
         },
         "CompareValue": "24",
-        "Tolerance": 1.0,
+        "Tolerance": 3.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Measure DC Voltage (Rigol M300)\" = 24 ±  1 - ID:3ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Measure DC Voltage (Rigol M300)\" = 24 ±  3 - ID:3ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -395,7 +395,7 @@
         "UserTitle": "Dummy measurement (ignoring contaminated measurement)",
         "IsPass": false,
         "PassNextId": 7,
-        "FailNextId": 0,
+        "FailNextId": 7,
         "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -825,7 +825,7 @@
         "UserTitle": "Dummy measurement to discard contaminated measurement",
         "IsPass": false,
         "PassNextId": 14,
-        "FailNextId": 0,
+        "FailNextId": 14,
         "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",

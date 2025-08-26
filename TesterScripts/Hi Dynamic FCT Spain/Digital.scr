@@ -1017,7 +1017,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN1",
+        "UserTitle": "Read DIG_IN1 (After clear)",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -1284,7 +1284,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN2",
+        "UserTitle": "Read DIG_IN2 (After clear)",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -1551,7 +1551,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN3",
+        "UserTitle": "Read DIG_IN3 (After clear)",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1818,7 +1818,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN4 (by default is 0)",
+        "UserTitle": "Read DIG_IN4 (After clear)",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -2845,7 +2845,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN1",
+        "UserTitle": "Read DIG_IN1 (After set)",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -3112,7 +3112,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN2",
+        "UserTitle": "Read DIG_IN2 (After set)",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -3124,25 +3124,6 @@
           "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false,
           "IsSaveToWats": true
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 19",
-        "Interval": 1,
-        "IntervalUnite": 2,
-        "UserTitle": "Not sure if this delay is necessary",
-        "IsPass": false,
-        "PassNextId": 18,
-        "FailNextId": 0,
-        "ID": 17,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": false,
-          "IsSaveToPdfExecTable": false,
-          "IsSaveToPdfDynTable": false,
-          "IsSaveToCustomerVer": false,
-          "IsSaveToWats": false
         }
       },
       {
@@ -3398,11 +3379,11 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN3",
+        "UserTitle": "Read DIG_IN3 (After set)",
         "IsPass": false,
-        "PassNextId": 19,
-        "FailNextId": 0,
-        "ID": 18,
+        "PassNextId": 18,
+        "FailNextId": -1,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -3665,11 +3646,11 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Read DIG_IN4",
+        "UserTitle": "Read DIG_IN4 (After set)",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 19,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
