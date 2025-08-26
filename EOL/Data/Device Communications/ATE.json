@@ -176,6 +176,41 @@
 			"$type": "Entities.Models.DropDownParamData, Entities",
             "Name": "ATE_SET_EN_5V_OFF",
             "Value": "26"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesVH",
+            "Value": "27"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesWH",
+            "Value": "28"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesUL",
+            "Value": "29"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesVL",
+            "Value": "30"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesWL",
+            "Value": "31"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_VrefTo5V",
+            "Value": "32"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_VrefToRealMeasurement",
+            "Value": "33"
           },		  
           ]
         },
@@ -374,6 +409,16 @@
               "$type": "Entities.Models.DropDownParamData, Entities",
               "Name": "ATE_GET_GDOutputSense",
               "Value": "34"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_ExtEEPROM",
+              "Value": "35"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_HighestFaultSeverity",
+              "Value": "36"
             },
           ]
         },
