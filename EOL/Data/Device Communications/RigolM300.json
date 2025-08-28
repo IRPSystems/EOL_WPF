@@ -204,7 +204,7 @@
         "Channel": null,
         "Slot": null,
         "Range": null,
-        "CommunicationTimeout": 1500,
+        "CommunicationTimeout": 2000,
         "Value": null
       },
 	  {
