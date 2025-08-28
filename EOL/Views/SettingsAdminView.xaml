@@ -53,6 +53,8 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="8"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="180"/>
@@ -99,8 +101,20 @@
                     <TextBlock Grid.Row="6" Grid.Column="0"
                                Text="Location"
                                VerticalAlignment="Center"/>
+                    
                     <TextBox Grid.Row="6" Grid.Column="2"
                              Text="{Binding MachineLocation, Mode=OneWay}" 
+                             IsReadOnly="True"
+                             IsReadOnlyCaretVisible="False"
+                             BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"
+                             MinWidth="220"/>
+
+                    <TextBlock Grid.Row="8" Grid.Column="0"
+                               Text="Purpose"
+                               VerticalAlignment="Center"/>
+
+                    <TextBox Grid.Row="8" Grid.Column="2"
+                             Text="{Binding TestPurpose, Mode=OneWay}" 
                              IsReadOnly="True"
                              IsReadOnlyCaretVisible="False"
                              BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"

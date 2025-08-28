@@ -1164,6 +1164,7 @@ namespace EOL.ViewModels
                         MachineName = singleTestResult.RackNumber, // Set as needed
                         MiscInfo = new List<MiscInfo>(),
 						Location = 	_settingsViewModel.SettingsAdminVM?.MachineLocation,
+						Purpose = _settingsViewModel.SettingsAdminVM?.TestPurpose,
                         UUT = new Models.UUT
                         {
                             UserLoginName = singleTestResult.OperatorName,
@@ -1187,9 +1188,9 @@ namespace EOL.ViewModels
                 //    Text = watsErrorMessage
                 //};				 
                 watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description ="Error Message" , Text = watsErrorMessage });
-                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Name", Text = _settingsViewModel.SettingsAdminVM.SoftwareFilename ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Sequence File Name", Text = _settingsViewModel.SettingsAdminVM.SoftwareFilename ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Sequence File Path", Text = _settingsViewModel.SettingsAdminVM.SoftwarePath ?? string.Empty });
                 watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software Version", Text = _settingsViewModel.SettingsAdminVM.SoftwareVersion ?? string.Empty });
-                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Path", Text = _settingsViewModel.SettingsAdminVM.SoftwarePath ?? string.Empty });
 
             }
             catch (Exception ex)

@@ -23,8 +23,8 @@ namespace EOL.ViewModels
 	public class SettingsAdminViewModel : ObservableObject , INotifyPropertyChanged
 	{
 
-
-		public EOLSettings EolSettings { get; set; }
+        #region fields
+        public EOLSettings EolSettings { get; set; }
 
         public string SoftwarePath => EolSettings?.UserDefaultSettings?.DefaultMainSeqConfigFile ?? string.Empty;
 
@@ -37,6 +37,10 @@ namespace EOL.ViewModels
         private string? _machineLocation;
         public string MachineLocation => _machineLocation ??=
             (string.IsNullOrWhiteSpace(GetMachineLocation()) ? "Unknown" : GetMachineLocation());
+
+        private string? _testPurpose;
+        public string TestPurpose => _testPurpose ??=
+            (string.IsNullOrWhiteSpace(GetTestPurpose()) ? "Unknown" : GetTestPurpose());
 
         public ObservableCollection<Process> TestOperations { get; } = new();
         private Process _selectedTestOperation;
@@ -52,6 +56,9 @@ namespace EOL.ViewModels
                 }
             }
         }
+        #endregion
+
+        #region constructor
         public SettingsAdminViewModel(
 			EOLSettings eolSettings,
             WatsConnectionMonitor watsConnection)
@@ -64,7 +71,9 @@ namespace EOL.ViewModels
 
 
         }
+        #endregion
 
+        #region methods
         // Async method
         public async Task LoadProcessesOnceAsync(string code)
         {
@@ -122,13 +131,24 @@ namespace EOL.ViewModels
         {
             if (WatsConnectionMonitor == null || WatsConnectionMonitor._tdm == null)
                 return string.Empty;
-            var machinelocation = WatsConnectionMonitor._tdm?.Location ?? string.Empty;
-            if (machinelocation == null)
-                return string.Empty;
-            return machinelocation ?? string.Empty;
+
+            return WatsConnectionMonitor._tdm.Location ?? string.Empty;
+            
         }
+
+        private string GetTestPurpose()
+        {
+            if (WatsConnectionMonitor == null || WatsConnectionMonitor._tdm == null)
+                return string.Empty;
+            return WatsConnectionMonitor._tdm.Purpose ?? string.Empty;
+        }
+        #endregion
+
+        #region events
+
         public RelayCommand BrowseMCUParametersJsonPathCommand { get; private set; }
 
 		public event Action LoadDevicesContainer;
-	}
+        #endregion
+    }
 }
