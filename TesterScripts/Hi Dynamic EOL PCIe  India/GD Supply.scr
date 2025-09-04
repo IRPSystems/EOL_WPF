@@ -61,7 +61,15 @@
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 1
+        "ID": 1,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
@@ -72,7 +80,15 @@
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
-        "ID": 2
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
@@ -252,6 +268,21 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_5V_ENABLE",
                 "Value": "33"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_GDOutputSense",
+                "Value": "34"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_ExtEEPROM",
+                "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },
@@ -331,7 +362,15 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 3
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
       }
     ]
   },
