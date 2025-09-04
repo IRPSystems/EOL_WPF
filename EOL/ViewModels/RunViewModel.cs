@@ -1008,15 +1008,13 @@ namespace EOL.ViewModels
                             _commSendResLogCsvWriter.csvLineWats.Clear();
                         }
 
-                        // Each monitor file → its own Step with one Attachment
                         if (Directory.Exists(MonitorLogCurrentRunFolder))
                         {
-                            var allFiles = Directory.EnumerateFiles(MonitorLogCurrentRunFolder, "*", SearchOption.TopDirectoryOnly)
-                                                    .OrderBy(f => File.GetLastWriteTime(f));
+                            var latestTwoFiles = Directory.EnumerateFiles(MonitorLogCurrentRunFolder, "*", SearchOption.TopDirectoryOnly)
+                                                          .OrderByDescending(f => File.GetLastWriteTime(f))
+                                                          .Take(2);
 
-							
-
-                            foreach (var file in allFiles)
+                            foreach (var file in latestTwoFiles)
                             {
                                 string fileText = File.ReadAllText(file, encoding);
                                 byte[] data = encoding.GetBytes(fileText);
@@ -1036,6 +1034,7 @@ namespace EOL.ViewModels
                                 ProjectStep.Steps.Add(step);
                             }
                         }
+
                     }
 
 
