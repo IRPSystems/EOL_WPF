@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
@@ -255,7 +255,8 @@ namespace EOL.ViewModels
 					_eolSettings, 
 					_userConfigManager,
 					_flashingHandler,
-					_setupSelectionVM);
+					_setupSelectionVM,
+					_watsConnectionMonitor);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
@@ -329,18 +330,31 @@ namespace EOL.ViewModels
 			if (ateDevice == null)
 				return;
 
-			MCU_DeviceData mcuDevice =
-				_setupSelectionVM.DevicesSourceList_Full.ToList().Find((d) => d.DeviceType == DeviceTypesEnum.MCU) as MCU_DeviceData;
-			if (mcuDevice == null) 
+            MCU_DeviceData? GetMcu(DeviceTypesEnum type) =>
+                _setupSelectionVM.DevicesSourceList_Full
+                    .FirstOrDefault(d => d.DeviceType == type) as MCU_DeviceData;
+
+            var mcuDevice = GetMcu(DeviceTypesEnum.MCU);
+            var mcu2Device = GetMcu(DeviceTypesEnum.MCU_2);
+            var mcuB2BDevice = GetMcu(DeviceTypesEnum.MCU_B2B);
+
+            var targets = new[] { mcuDevice, mcu2Device, mcuB2BDevice }
+                .Where(d => d is not null)
+                .ToList();
+
+            if (targets.Count == 0) 
 				return;
 
-			mcuDevice.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
-			
-			foreach (var param in ateDevice.MCU_FullList)
+			foreach (var target in targets)
 			{
-				param.DeviceType = mcuDevice.DeviceType;
-				param.Device = mcuDevice;
-				mcuDevice.MCU_FullList.Add(param);
+				target.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
+
+				foreach (var param in ateDevice.MCU_FullList)
+				{
+					param.DeviceType = mcuDevice.DeviceType;
+					param.Device = mcuDevice;
+					target.MCU_FullList.Add(param);
+				}
 			}
 		}
 
@@ -370,7 +384,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.PowerSupplyEA &&
 					device.DeviceType != DeviceTypesEnum.RigolM300 &&
 					device.DeviceType != DeviceTypesEnum.MX180TP &&
-					device.DeviceType != DeviceTypesEnum.ITM3100)
+					device.DeviceType != DeviceTypesEnum.ITM3100 &&
+					device.DeviceType != DeviceTypesEnum.MCU_B2B )
 				{
 					devicesToRemoveList.Add(device);
 					continue;
