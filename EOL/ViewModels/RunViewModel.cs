@@ -1270,7 +1270,7 @@ namespace EOL.ViewModels
 							watsErrorMessage = Step.StepErrorMessage;
 
 
-						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && pare is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
+						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && parentScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
 						{
 							totalExecutionTime += Step.TotalTime;
 							watsStep.Steps.Add(Step);
