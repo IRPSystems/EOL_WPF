@@ -56891,6 +56891,41 @@
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
           "$values": [
             {
+              "$type": "ScriptHandler.Models.ScriptStepStartStopRecording, ScriptHandler",
+              "IsStart": false,
+              "IsError": null,
+              "IsExecuted": false,
+              "UserTitle": "Stop Recording Monitor",
+              "ExecutionTime": "00:00:00",
+              "Name": "Set Parameter 2",
+              "Description": "Stop Recording/Monitoring - ID:2",
+              "OperatorErrorDescription": null,
+              "IsPass": true,
+              "PassNextDescription": "Sub Script = Flash - Repeats: 1 - ID:1",
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 2,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false,
+                "IsSaveToWats": true
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
               "$type": "ScriptHandler.Models.ScriptStepSubScript, ScriptHandler",
               "IsError": null,
               "IsExecuted": false,
