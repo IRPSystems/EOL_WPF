@@ -63,9 +63,9 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Stop Recording Monitor",
         "IsPass": false,
-        "PassNextId": 1,
+        "PassNextId": 2,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 1,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -91,7 +91,7 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 1,
+        "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

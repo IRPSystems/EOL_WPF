@@ -3,8 +3,8 @@
 
 #define Major 1
 #define Minor 0
-#define Rev 4
-#define Build 1
+#define Rev 5
+#define Build 2
 #define MyAppVersion Str(Major) + "." + Str(Minor)  + "." + Str(Rev)  + "." + Str(Build)
 
 
