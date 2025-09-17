@@ -1,7 +1,7 @@
 #include "Infrastructure\Inno Setup\InstallPrerequisits.iss"
 #include "Infrastructure\Inno Setup\CompareIssVersionToCurrent.iss"  
 
-#define MyAppVersion Str "1.0.0.2"
+#define MyAppVersion Str ("1.0.0.2")
 
 
                                              
