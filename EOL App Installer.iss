@@ -1,11 +1,7 @@
 #include "Infrastructure\Inno Setup\InstallPrerequisits.iss"
 #include "Infrastructure\Inno Setup\CompareIssVersionToCurrent.iss"  
 
-#define Major 1
-#define Minor 0
-#define Rev 5
-#define Build 2
-#define MyAppVersion Str(Major) + "." + Str(Minor)  + "." + Str(Rev)  + "." + Str(Build)
+#define MyAppVersion Str "1.0.0.2"
 
 
                                              
