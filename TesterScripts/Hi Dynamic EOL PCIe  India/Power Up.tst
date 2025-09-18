@@ -1294,6 +1294,7 @@
               }
             ]
           },
+          "Command": null,
           "Name": "Safety officer on/off",
           "Units": null,
           "Value": null,

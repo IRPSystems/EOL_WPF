@@ -212,7 +212,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Off",
+                "Name": "Init",
                 "Value": "6"
               }
             ]
@@ -542,6 +542,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ExtEEPROM",
                 "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },
@@ -1025,6 +1030,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesWL",
                 "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefTo5V",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefToRealMeasurement",
+                "Value": "33"
               }
             ]
           },
@@ -1295,6 +1310,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ExtEEPROM",
                 "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },
@@ -1566,6 +1586,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesWL",
                 "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefTo5V",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefToRealMeasurement",
+                "Value": "33"
               }
             ]
           },
@@ -1817,6 +1847,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ExtEEPROM",
                 "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },
@@ -1912,7 +1947,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": 12.0,
+          "Value": "",
           "GroupName": "Monitor",
           "Description": "Faults Vector, 32 bits bitwise\r\nHigher bits of the whole faults vector",
           "Default": "0",
@@ -2278,6 +2313,16 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_SET_PhasesWL",
                 "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefTo5V",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefToRealMeasurement",
+                "Value": "33"
               }
             ]
           },

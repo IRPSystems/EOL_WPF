@@ -1,13 +1,14 @@
-﻿using System;
-using System.Windows;
-using Virinco.WATS.Interface;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Threading;
+using Virinco.WATS.Interface;
 
 
 public class WatsConnectionMonitor
 {
-    private readonly TDM _tdm;
+    public readonly TDM _tdm;
     private readonly DispatcherTimer _connectionTimer;
 
     public event Action<bool> ConnectionStatusChanged;
@@ -70,6 +71,7 @@ public class WatsConnectionMonitor
                 {
                     IsConnected = isconnected;
                 }
+
 
             }
             catch (Exception ex)

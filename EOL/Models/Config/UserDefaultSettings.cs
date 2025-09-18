@@ -1,4 +1,4 @@
-﻿
+
 using FlashingToolLib.FlashingTools;
 using FlashingToolLib.FlashingTools.UDS;
 using System;
@@ -53,7 +53,7 @@ namespace EOL.Models
 		public bool PowerSupplyEA { get; set; }
         public string PSoC_Port1 { get; set; }
         public string PSoC_Port2 { get; set; }
-
+        public string WatsTestCode { get; set; }
 
         public UserDefaultSettings()
 		{

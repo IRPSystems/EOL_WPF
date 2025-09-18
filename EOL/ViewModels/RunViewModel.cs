@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DBCFileParser.Services;
@@ -11,6 +11,8 @@ using EOL.Models;
 using EOL.Models.Config;
 using EOL.Services;
 using EOL.Views;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using Microsoft.Xaml.Behaviors.Media;
 using Newtonsoft.Json;
 using ScriptHandler.Interfaces;
 using ScriptHandler.Models;
@@ -23,6 +25,7 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -119,12 +122,15 @@ namespace EOL.ViewModels
         private ObservableCollection<DeviceParameterData> _logParametersList;
 		private string MainScriptReportSubFolder = "Main Script Reports";
         private string MonitorLogSubFolder = "Monitor Logs";
+		private string MonitorLogCurrentRunFolder;
 
         private ScriptStepSetParameter _stepSetParameter;
 
 		private CommSendResLogCsvWriter _commSendResLogCsvWriter;
 
-		private byte[] WatsBLOB;
+
+		private byte[] WatsBLOB_SendRes;
+        private byte[] WatsBLOB_Monitor;
 
         private AdminView _adminView;
 		private AdminViewModel _adminVM;
@@ -137,6 +143,8 @@ namespace EOL.ViewModels
 		private List<DeviceTypesEnum> _currentScriptDeviceList;
 
         private List<CommSendResLog> _commSendResLogs = new();
+
+		List<List<string>> _flashingActionLog = new ();
 
         #endregion Fields
 
@@ -167,8 +175,7 @@ namespace EOL.ViewModels
 				PackageJsonFileGenerator.GenerateJsonFile();
                 _timerDuration = new System.Timers.Timer(300);
 				_timerDuration.Elapsed += _timerDuration_Elapsed;
-
-				_currentScriptDeviceList = new List<DeviceTypesEnum>();
+                _currentScriptDeviceList = new List<DeviceTypesEnum>();
 
 				_commSendResLogCsvWriter = new();
 
@@ -251,7 +258,7 @@ namespace EOL.ViewModels
             }
 		}
 
-		
+	
 
 		#endregion Constructor
 
@@ -539,6 +546,8 @@ namespace EOL.ViewModels
             savingDataWindow.Close();
         }
 
+
+
         private void PostRunActions()
         {
 			_runData.SerialNumber = string.Empty;
@@ -585,7 +594,6 @@ namespace EOL.ViewModels
 			}
 			ErrorMessage = null;
             _commSendResLogs.Clear();
-
             _commSendResLogCsvWriter.CreatLog(_runData.SerialNumber);
 
             isTestTerminated = false;
@@ -596,14 +604,17 @@ namespace EOL.ViewModels
 			_runData.NumberOfTested++;
 			OperatorErrorMessage = string.Empty;
 			_totalNumOfSteps = 0;
-			string path = _userDefaultSettings.ReportsSavingPath;
-			path = Path.Combine(_userDefaultSettings.ReportsSavingPath, "Monitor Logs");
+
 			foreach (GeneratedProjectData project in _generatedProjectsList)
 			{
 
-				project.RecordingPath = path;
-
-				foreach (GeneratedScriptData scriptData in project.TestsList)
+                MonitorLogCurrentRunFolder = Path.Combine(_userDefaultSettings.ReportsSavingPath, MonitorLogSubFolder + "\\" + _runData.SerialNumber + "_" + DateTime.Now.ToString(("yyyy-MM-dd_HH-mm-ss")));
+                project.RecordingPath = MonitorLogCurrentRunFolder;
+                if (!Directory.Exists(project.RecordingPath))
+				{
+					Directory.CreateDirectory(project.RecordingPath);
+				}
+                foreach (GeneratedScriptData scriptData in project.TestsList)
 				{
 					_totalNumOfSteps += SetDataToScriptTool(scriptData.ScriptItemsList);
                     foreach (GeneratedScriptData script in project.TestsList)
@@ -637,6 +648,8 @@ namespace EOL.ViewModels
 			RunPercentage = 0;
 			_stepsCounter = 1;
 		}
+
+
 
         #region Pre Run Validations
         private bool PreRunValidations()
@@ -927,73 +940,126 @@ namespace EOL.ViewModels
             RunScript.AbortScript("User Abort");
         }
 
-		private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult ,out Reports watsreports)
-		{
-			watsreports = new Reports();
+
+        private void Stop(ScriptStopModeEnum stopeMode, ref RunResult singleTestResult, out Reports watsreports)
+        {
+            watsreports = new Reports();
 
             try
             {
                 _timerDuration.Stop();
-				_runData.EndTime = DateTime.Now;
 
-				IsRunButtonEnabled = true;
+                _runData.EndTime = DateTime.Now;
+
+
+                IsRunButtonEnabled = true;
                 _commSendResLogCsvWriter.AddLogData(_commSendResLogs);
                 if (stopeMode == ScriptStopModeEnum.Aborted)
-				{
-					RunState = RunStateEnum.Aborted;
-					singleTestResult.StopReason = "Aborted";
-				}
-				else
-					RunState = RunStateEnum.Passed;
 
-				if (ErrorMessage != null)
-					RunState = RunStateEnum.Aborted;
+                {
+                    RunState = RunStateEnum.Aborted;
+                    singleTestResult.StopReason = "Aborted";
+                }
+                else
+                    RunState = RunStateEnum.Passed;
 
 
-				if (RunState == RunStateEnum.Passed)
-					singleTestResult.StopReason = "PASSED";
+                if (ErrorMessage != null)
+                    RunState = RunStateEnum.Aborted;
 
+                if (RunState == RunStateEnum.Passed)
+                    singleTestResult.StopReason = "PASSED";
+
+
+                // ----- SendRes blob -----
                 string text = _commSendResLogCsvWriter.csvLineWats.ToString();
-
                 Encoding encoding = Encoding.UTF8;
+                WatsBLOB_SendRes = encoding.GetBytes(text);
 
-                WatsBLOB = encoding.GetBytes(text);
+
 
                 List<Step> watsSteps = new List<Step>();
-
                 string watsErrorMessage = string.Empty;
 
                 Step ProjectStep = new Step
-				{
-					Steps = new List<Step>(),
+
+                {
+                    Steps = new List<Step>(),
                     StepType = StepTypes.SequenceCall,
                     Group = "Main"
                 };
 
                 ScriptStepBase failedStep = null;
-				bool iserror = false;
-				List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
-				foreach (GeneratedProjectData project in _generatedProjectsList)
-				{
-                    ProjectStep.Name = project.Name;
-					ProjectStep.Sequencecall = new SequenceCall
-                    {
-                        Name = project.Name
-                    }; ;
 
-                    if (WatsBLOB != null && RunState != RunStateEnum.Passed)
+                bool iserror = false;
+                List<EOLStepSummeryData> eolStepSummerysList = new List<EOLStepSummeryData>();
+
+                foreach (GeneratedProjectData project in _generatedProjectsList)
+                {
+                    ProjectStep.Name = project.Name;
+
+                    ProjectStep.Sequencecall = new SequenceCall
                     {
-                        string base64string = Convert.ToBase64String(WatsBLOB);
-                        Step step = new Step()
+
+                        Name = project.Name,
+						
+                    };
+
+
+                    // ----- Add Blobs -----
+                    if (RunState != RunStateEnum.Passed)
+                    {
+
+                        // Comm Send/Response CSV
+                        if (WatsBLOB_SendRes != null)
                         {
-                            Name = "WATS BLOB",
-                            StepType = StepTypes.Attachment,
-                            Attachments = new List<Attachment>()
-                        };
-                        step.Attachments.Add(new Attachment() { Name = "CommSendResponseLog.csv", Base64Data = base64string, ContentType = "text/csv" });
-                        ProjectStep.Steps.Add(step);
-                        _commSendResLogCsvWriter.csvLineWats.Clear();
+
+                            string base64string = Convert.ToBase64String(WatsBLOB_SendRes);
+                            Step step = new Step()
+                            {
+                                Name = "Send Response",
+                                StepType = StepTypes.Attachment,
+                                Attachments = new List<Attachment>()
+                            };
+                            step.Attachments.Add(new Attachment()
+                            {
+                                Name = "CommSendResponseLog.csv",
+                                Base64Data = base64string,
+                                ContentType = "text/csv"
+                            });
+                            ProjectStep.Steps.Add(step);
+                            _commSendResLogCsvWriter.csvLineWats.Clear();
+                        }
+
+                        if (Directory.Exists(MonitorLogCurrentRunFolder))
+                        {
+                            var latestTwoFiles = Directory.EnumerateFiles(MonitorLogCurrentRunFolder, "*", SearchOption.TopDirectoryOnly)
+                                                          .OrderByDescending(f => File.GetLastWriteTime(f))
+                                                          .Take(2);
+
+                            foreach (var file in latestTwoFiles)
+                            {
+                                string fileText = File.ReadAllText(file, encoding);
+                                byte[] data = encoding.GetBytes(fileText);
+
+                                Step step = new Step()
+                                {
+                                    Name = "Monitor Log - " + Path.GetFileName(file),
+                                    StepType = StepTypes.Attachment,
+                                    Attachments = new List<Attachment>()
+                                };
+                                step.Attachments.Add(new Attachment()
+                                {
+                                    Name = Path.GetFileName(file),
+                                    Base64Data = Convert.ToBase64String(data),
+                                    ContentType = "text/csv"
+                                });
+                                ProjectStep.Steps.Add(step);
+                            }
+                        }
+
                     }
+
 
                     //bool to determine wheter to write the test into report
                     bool isWritingtoWatsReport = true;
@@ -1038,7 +1104,8 @@ namespace EOL.ViewModels
                         if (script.IsPass == false )
                             isWritingtoWatsReport = false;
 
-                        if (isWritingtoWatsReport || (script.isExecuted && !isWritingtoWatsReport))
+
+                        if (isWritingtoWatsReport || (script.isExecuted && !isWritingtoWatsReport) && teststep.Steps != null)
 							ProjectStep.Steps.Add(teststep);
 
 
@@ -1107,7 +1174,7 @@ namespace EOL.ViewModels
                         PartNumber = singleTestResult.PartNumber,
                         MachineName = singleTestResult.RackNumber, // Set as needed
                         MiscInfo = new List<MiscInfo>(),
-
+						Location = 	_settingsViewModel.SettingsAdminVM?.MachineLocation,
                         UUT = new Models.UUT
                         {
                             UserLoginName = singleTestResult.OperatorName,
@@ -1116,25 +1183,30 @@ namespace EOL.ViewModels
                         },
                         Process = new Process
                         {
-                            Code = "100",
-                            Name = "End of line test"
+
+                            Code = _settingsViewModel.SettingsAdminVM.SelectedTestOperation.Code.ToString(),
+                            Name = _settingsViewModel.SettingsAdminVM.SelectedTestOperation?.Name,
                         },
 
                         Steps = watsSteps
                     }
                 };
 
-                MiscInfo miscInfo = new MiscInfo
-                {
-                    Typedef = string.Empty,
-                    Description = "Error Message",
-                    Text = watsErrorMessage
-                };
-                watsreports.Report.MiscInfo.Add(miscInfo);
+
+                //MiscInfo miscInfo = new MiscInfo
+                //{
+                //    Typedef = string.Empty,
+                //    Description = "Error Message",
+                //    Text = watsErrorMessage
+                //};				 
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description ="Error Message" , Text = watsErrorMessage });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Name", Text = _settingsViewModel.SettingsAdminVM.SoftwareFilename ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software Version", Text = _settingsViewModel.SettingsAdminVM.SoftwareVersion ?? string.Empty });
+                watsreports.Report.MiscInfo.Add(new MiscInfo { Typedef = string.Empty, Description = "Software File Path", Text = _settingsViewModel.SettingsAdminVM.SoftwarePath ?? string.Empty });
 
 
-			}
-			catch (Exception ex)
+            }
+            catch (Exception ex)
 			{
 				LoggerService.Error(this, "Faild to handle stop tasks", ex);
 			}
@@ -1163,9 +1235,10 @@ namespace EOL.ViewModels
             out double totalExecutionTime,
 			out string watsErrorMessage,
 			ref bool iserror,
-            ref Step watsStep
-			)
-		{
+            ref Step watsStep,
+            IScriptItem parentScript = null
+            )
+        {
             watsErrorMessage = string.Empty; 
             totalExecutionTime = 0;
             ScriptStepBase failedStep = null;
@@ -1191,17 +1264,13 @@ namespace EOL.ViewModels
 						{
 							failedStep = stepBase;
 						}
-						//Step Step = new Step
-						//{
-						//    Group = "Main",
-						//    Name = stepBase.UserTitle,
-						//    Status = (stepBase.IsPass == true ? "Passed" : stepBase.IsPass == false ? "Failed" : "Skipped"),
-						//    StepType = "Action"
-						//};
+
                         Step Step = _runResultToWatsConverter.HandleStep(stepBase);
 						if (Step != null && !string.IsNullOrEmpty(Step.StepErrorMessage) && stepBase.IsPass == false)
 							watsErrorMessage = Step.StepErrorMessage;
-						if (Step != null)
+
+
+						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && parentScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
 						{
 							totalExecutionTime += Step.TotalTime;
 							watsStep.Steps.Add(Step);
@@ -1220,7 +1289,8 @@ namespace EOL.ViewModels
 				{
 					Step subsctiptstep = new Step();
 
-                    if (subScript is ScriptStepBase subscript)
+
+                    if (subScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
                     {
                         subsctiptstep = new Step
                         {
@@ -1247,16 +1317,19 @@ namespace EOL.ViewModels
 						subScript.Script,
 						test,
 						eolStepSummerysList,
-						out cumulatedExecutionTime,
+                        out cumulatedExecutionTime,
 						out watsErrorMessage,
 						ref iserror,
-                        ref subsctiptstep);
+                        ref subsctiptstep,
+						subScript);
 
 					subsctiptstep.TotalTime = cumulatedExecutionTime;
 
 					totalExecutionTime += subsctiptstep.TotalTime;
 
-                    watsStep.Steps.Add(subsctiptstep);
+
+					if(subsctiptstep != null && subsctiptstep.Steps != null)
+						watsStep.Steps.Add(subsctiptstep);
 
 					if (failedStepTemp != null)
 						failedStep = failedStepTemp;

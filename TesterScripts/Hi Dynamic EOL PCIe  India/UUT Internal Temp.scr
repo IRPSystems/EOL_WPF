@@ -192,6 +192,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ExtEEPROM",
                 "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },
@@ -397,6 +402,11 @@
                 "$type": "Entities.Models.DropDownParamData, Entities",
                 "Name": "ATE_GET_ExtEEPROM",
                 "Value": "35"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_GET_HighestFaultSeverity",
+                "Value": "36"
               }
             ]
           },

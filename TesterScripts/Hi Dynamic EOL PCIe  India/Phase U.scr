@@ -312,7 +312,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Off",
+                "Name": "Init",
                 "Value": "6"
               }
             ]
@@ -606,7 +606,7 @@
           "ValueChanged": null,
           "Value": "",
           "GroupName": "Operation",
-          "Description": "FOC Manual Electric Angle Value",
+          "Description": "Manual Angle Value",
           "Default": "0",
           "Cmd": "focmanang",
           "Range": {
@@ -617,9 +617,9 @@
             ]
           },
           "Format": null,
-          "Scale": 182.04,
+          "Scale": 182.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
           "Name": "Manual Angle Value",
           "Units": "Deg",
@@ -701,7 +701,7 @@
               }
             ]
           },
-          "Name": "Position Sensor",
+          "Name": "Hall Sensor Fault                           - 0x8250",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
@@ -1023,7 +1023,7 @@
           "ToolTip": null,
           "CommunicationTimeout": 4000
         },
-        "RefSensorNumOfReadings": 20,
+        "RefSensorNumOfReadings": 10,
         "RefSensorChannel": 0,
         "RefSensorPorts": 18,
         "NIDAQShuntResistor": 18.4,
@@ -1270,7 +1270,7 @@
         "Tolerance": 10.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current\" ±  10 - ID:21ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  10 - ID:21ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1278,7 +1278,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 20,
+        "AverageOfNRead_CompareValue": 2,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -1563,7 +1563,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current\" ±  2 - ID:26ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:26ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1571,7 +1571,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 20,
+        "AverageOfNRead_CompareValue": 2,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -1856,7 +1856,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current\" ±  2 - ID:31ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:31ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -1864,7 +1864,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 20,
+        "AverageOfNRead_CompareValue": 2,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -2149,7 +2149,7 @@
         "Tolerance": 2.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current\" ±  2 - ID:36ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Current U (Monitor) (MCU)\" = \"Analog Input Current (NI DUCK)\" ±  2 - ID:36ToleranceTypeGroupName",
         "IsValueTolerance": false,
         "IsPercentageTolerance": true,
         "IsUseParamAverage": true,
@@ -2157,7 +2157,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 20,
+        "AverageOfNRead_CompareValue": 2,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
