@@ -1270,11 +1270,11 @@ namespace EOL.ViewModels
 							watsErrorMessage = Step.StepErrorMessage;
 
 
-						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && parentScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
+						if (Step != null && stepBase.EOLReportsSelectionData.IsSaveToWats && watsStep.Steps != null)
 						{
 							totalExecutionTime += Step.TotalTime;
 							watsStep.Steps.Add(Step);
-						}
+                        }
 
 						if (stepBase.IsError == true)
 						{
@@ -1288,39 +1288,39 @@ namespace EOL.ViewModels
 				if (item is ISubScript subScript)
 				{
 					Step subsctiptstep = new Step();
+					string errorMessage;
 
-
-                    if (subScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
-                    {
-                        subsctiptstep = new Step
-                        {
-                            Group = "Main",
-                            Name = subscript.UserTitle ?? subscript.Name,
-                            Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? StatusCodes.Passed : (subscript.IsExecuted == true) ? StatusCodes.Failed : StatusCodes.Skipped),
-                            Sequencecall = new SequenceCall
-                            {
-                                Name = subscript.UserTitle ?? subscript.Name
-                            },
-                            Steps = new List<Step>(),
-                            StepType = StepTypes.SequenceCall
-                        };
-                    }
+					if (subScript is ScriptStepBase subscript && subscript.EOLReportsSelectionData.IsSaveToWats)
+					{
+						subsctiptstep = new Step
+						{
+							Group = "Main",
+							Name = subscript.UserTitle ?? subscript.Name,
+							Status = ((subscript.IsPass == true && subscript.IsExecuted == true) ? StatusCodes.Passed : (subscript.IsExecuted == true) ? StatusCodes.Failed : StatusCodes.Skipped),
+							Sequencecall = new SequenceCall
+							{
+								Name = subscript.UserTitle ?? subscript.Name
+							},
+							Steps = new List<Step>(),
+							StepType = StepTypes.SequenceCall
+						};
+					}
 
 					double cumulatedExecutionTime;
-                    //               if (item is ScriptStepBase subscriptstep)
-                    //_runResultToWatsConverter.SubScriptList.Add(subscriptstep);
+					//               if (item is ScriptStepBase subscriptstep)
+					//_runResultToWatsConverter.SubScriptList.Add(subscriptstep);
 
-                    if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
+					if ((subScript.Script?.IsPass == false) && !OperatorErrorMessage.Contains("Sub Script"))
 						OperatorErrorMessage += "\r\nSub Script: " + subScript.Script.Name;
-					
+
 					ScriptStepBase failedStepTemp = GetScriptEOLStepSummerys(
 						subScript.Script,
 						test,
 						eolStepSummerysList,
-                        out cumulatedExecutionTime,
-						out watsErrorMessage,
+						out cumulatedExecutionTime,
+						out errorMessage,
 						ref iserror,
-                        ref subsctiptstep,
+						ref subsctiptstep,
 						subScript);
 
 					subsctiptstep.TotalTime = cumulatedExecutionTime;
@@ -1328,11 +1328,14 @@ namespace EOL.ViewModels
 					totalExecutionTime += subsctiptstep.TotalTime;
 
 
-					if(subsctiptstep != null && subsctiptstep.Steps != null)
+					if (subsctiptstep != null && subsctiptstep.Steps != null)
 						watsStep.Steps.Add(subsctiptstep);
 
-					if (failedStepTemp != null)
+					if (failedStepTemp != null && failedStepTemp.IsExecuted)
+					{
 						failedStep = failedStepTemp;
+						watsErrorMessage = errorMessage;
+					}
 				}
 			}
 
