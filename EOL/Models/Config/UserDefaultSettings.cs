@@ -1,4 +1,4 @@
-﻿
+
 using FlashingToolLib.FlashingTools;
 using FlashingToolLib.FlashingTools.UDS;
 using System;
@@ -40,26 +40,25 @@ namespace EOL.Models
         public bool isWritingtoWatsEnabled { get; set; }
         public bool isTogglePower {  get; set; }
         public int ProjectBaudRate { get; set; } = 500;
-        public UInt32 FirstFileUdsRx { get; set; }
-        public UInt32 FirstFileUdsTx { get; set; }
         public ECustomer FirstFlashFileCustomerProp { get; set; }
-        public UInt32 SecondFileUdsRx { get; set; }
-        public UInt32 SecondFileUdsTx { get; set; }
         public ECustomer SecondFlashFileCustomerProp { get; set; }
         public string AutoConfigPref { get; set; }
-
-
-
-		public bool MCU { get; set; }
+        public bool MCU { get; set; }
 		public bool MCU_2 { get; set; }
 		public bool ZimmerPowerMeter { get; set; }
 		public bool NI_6002 { get; set; }
 		public bool NI_6002_2 { get; set; }
 		public bool Printer_TSC { get; set; }
-		public bool NumatoGPIO { get; set; }
+        public bool RigolM300 { get; set; }
+        public bool MX180TP { get; set; }
+        public bool ITM3100 { get; set; }
+        public bool NumatoGPIO { get; set; }
 		public bool PowerSupplyEA { get; set; }
+        public string PSoC_Port1 { get; set; }
+        public string PSoC_Port2 { get; set; }
+        public string WatsTestCode { get; set; }
 
-		public UserDefaultSettings()
+        public UserDefaultSettings()
 		{
 			MCU = true;
 			MCU_2 = true;
@@ -68,7 +67,10 @@ namespace EOL.Models
 			NI_6002_2 = true;
 			Printer_TSC = true;
 			NumatoGPIO = true;
+            RigolM300 = true;
+            MX180TP = true;
+            ITM3100 = true;
 
-		}
+        }
 	}
 }

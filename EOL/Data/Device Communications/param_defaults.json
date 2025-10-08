@@ -2649,566 +2649,611 @@
   },
   {
     "ParamList": [
-      {
-        "Name": "PWM Phases Dead Time",
-        "Value": "",
-        "Description": "PWM Phases Dead Time",
-        "Default": "300",
-        "Cmd": "pwmdtns",
-        "Range": [
-          50,
-          2000
-        ],
-        "Units": "nS",
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PWM Frequency",
-        "Value": "",
-        "Description": "PWM Frequency",
-        "Default": "16000",
-        "Cmd": "pwmfreq",
-        "Range": [
-          10000,
-          30000
-        ],
-        "Units": "Hz",
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "FOC PID Q Kp",
-        "Value": "",
-        "Description": "FOC PID Q Kp",
-        "Default": "500",
-        "Cmd": "focpidkpq",
-        "Range": [
-          0,
-          2147483647
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "FOC PID Q Ki",
-        "Value": "",
-        "Description": "FOC PID Q Ki",
-        "Default": "160",
-        "Cmd": "foxpidkiq",
-        "Range": [
-          0,
-          2147483647
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "FOC PID D Kp",
-        "Value": "",
-        "Description": "FOC PID D Kp",
-        "Default": "500",
-        "Cmd": "focpidkpd",
-        "Range": [
-          0,
-          2147483647
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "FOC PID D Ki",
-        "Value": "",
-        "Description": "FOC PID D Ki",
-        "Default": "160",
-        "Cmd": "foxpidkid",
-        "Range": [
-          0,
-          2147483647
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Speed Limit Kp",
-        "Value": "",
-        "Description": "PID Max Speed Limit Kp",
-        "Default": "20000",
-        "Cmd": "mplkpmxs",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Speed Limit Ki",
-        "Value": "",
-        "Description": "PID Max Speed Limit Ki",
-        "Default": "250",
-        "Cmd": "mplkimxs",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Bus Current Limit Kp",
-        "Value": "",
-        "Description": "PID Max Bus Current Limit Kp",
-        "Default": "50",
-        "Cmd": "mplkpmxbc",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Bus Current Limit Ki",
-        "Value": "",
-        "Description": "PID Max Bus Current Limit Ki",
-        "Default": "32",
-        "Cmd": "mplkimxbc",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Min Bus Current Limit Kp",
-        "Value": "",
-        "Description": "PID Mix Bus Current Limit Kp",
-        "Default": "50",
-        "Cmd": "mplkpmnbc",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Min Bus Current Limit Ki",
-        "Value": "",
-        "Description": "PID Max Bus Current Limit Ki",
-        "Default": "32",
-        "Cmd": "mplkimnbc",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Bus Voltage Limit Kp",
-        "Value": "",
-        "Description": "PID Max Bus Voltage Limit Kp",
-        "Default": "50",
-        "Cmd": "mplkpmxbv",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Max Bus Voltage Limit Ki",
-        "Value": "",
-        "Description": "PID Max Bus Voltage Limit Ki",
-        "Default": "32",
-        "Cmd": "mplkimxbv",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Min Bus Voltage Limit Kp",
-        "Value": "",
-        "Description": "PID Min Bus Voltage Limit Kp",
-        "Default": "50",
-        "Cmd": "mplkpmnbv",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "PID Min Bus Voltage Limit Ki",
-        "Value": "",
-        "Description": "PID Mix Bus Voltage Limit Ki",
-        "Default": "32",
-        "Cmd": "mplkimnbv",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor Flux Auto Max Current",
-        "Value": "",
-        "Description": "Motor Flux Auto Max Current",
-        "Default": "0",
-        "Cmd": "flmxcurr",
-        "Range": [
-          0,
-          400
-        ],
-        "Units": "A",
-        "Scale": 10,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor Flux Auto Saturation",
-        "Value": "",
-        "Description": "Motor Flux Auto Saturation",
-        "Default": "5",
-        "Cmd": "flsatthr",
-        "Range": [
-          0,
-          20
-        ],
-        "Units": "%",
-        "Scale": 10,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "MTPA Mod Speed PID Kp",
-        "Value": "",
-        "Description": "MTPA Mod Speed PID Kp",
-        "Default": "0",
-        "Cmd": "fmspdkp",
-        "Range": [
-          0,
-          1000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "MTPA Mod Speed PID Ki",
-        "Value": "",
-        "Description": "MTPA Mod Speed PID Ki",
-        "Default": "0",
-        "Cmd": "fmspdki",
-        "Range": [
-          0,
-          1000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor Flux Auto PID Kp",
-        "Value": "",
-        "Description": "Motor Flux Auto PID Kp",
-        "Default": "1000",
-        "Cmd": "flpidkp",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor Flux Auto PID Ki",
-        "Value": "",
-        "Description": "Motor Flux Auto PID Ki",
-        "Default": "50",
-        "Cmd": "flpidki",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Over Modulation",
-        "Value": "",
-        "Description": "Over Modulation",
-        "Default": "100",
-        "Cmd": "overmodfac",
-        "Range": [
-          0,
-          100
-        ],
-        "Units": "%",
-        "Scale": 10.24,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Vq Max LPF",
-        "Value": "",
-        "Description": "Vq Max LPF",
-        "Default": "0",
-        "Cmd": "vqmaxlpf",
-        "Range": [
-          0,
-          10
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Vd Size Limit",
-        "Value": "",
-        "Description": "Vd Size Limit",
-        "Default": "0",
-        "Cmd": "vdsizelim",
-        "Range": [
-          0,
-          1000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor PID Speed Control Kp",
-        "Value": "",
-        "Description": "Motor PID Speed Control Kp",
-        "Default": "500",
-        "Cmd": "mtrpidspdctrlkp",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Motor PID Speed Control Ki",
-        "Value": "",
-        "Description": "Motor PID Speed Control Ki",
-        "Default": "160",
-        "Cmd": "mtrpidspdctrlki",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Hill Assist PID Kp",
-        "Value": "",
-        "Description": "Hill Assist PID Kp",
-        "Default": "0",
-        "Cmd": "hillasstkp",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Hill Assist PID Ki",
-        "Value": "",
-        "Description": "Hill Assist PID Ki",
-        "Default": "0",
-        "Cmd": "hillasstki",
-        "Range": [
-          0,
-          100000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "ADC Current Factor, Phase U",
-        "Value": "",
-        "Description": "ADC Count to mA Phase U Current Sensor Factor",
-        "Default": "406",
-        "Cmd": "adccurfacu",
-        "Range": [
-          300,
-          550
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "ADC Current Factor, Phase W",
-        "Value": "",
-        "Description": "ADC Count to mA Phase W Current Sensor Factor",
-        "Default": "406",
-        "Cmd": "adccurfacw",
-        "Range": [
-          300,
-          550
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "ADC Current Factor, Bus",
-        "Value": "",
-        "Description": "ADC Count to mA Bus Current Sensor Factor",
-        "Default": "406",
-        "Cmd": "adccurfacb",
-        "Range": [
-          300,
-          550
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "ADC Vbus Factor",
-        "Value": "",
-        "Description": "ADC Voltage Sensor Gain Factor",
-        "Default": "166",
-        "Cmd": "adcvbusfac1",
-        "Range": [
-          162,
-          170
-        ],
-        "Units": null,
-        "Scale": 32,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "ADC Vbus2 Factor",
-        "Value": "",
-        "Description": "ADC Voltage Sensor Gain Factor",
-        "Default": "166",
-        "Cmd": "adcvbusfac2",
-        "Range": [
-          162,
-          170
-        ],
-        "Units": null,
-        "Scale": 32,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-      {
-        "Name": "Speed Lpf",
-        "Value": "",
-        "Description": "Speed Low Pass Filter",
-        "Default": "5",
-        "Cmd": "mspdlpf",
-        "Range": [
-          0,
-          10
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-	  {
-        "Name": "ATE Duty Cycle",
-        "Value": "",
-        "Description": "ATE Duty Cycle",
-        "Default": "42",
-        "Cmd": "atepwmdc",
-        "Range": [
-          0,
-          1000
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
-	  {
-        "Name": "ATE Duty Cycle Ramp",
-        "Value": "",
-        "Description": "ATE Duty Cycle Ramp",
-        "Default": "1",
-        "Cmd": "atepwmramp",
-        "Range": [
-          0,
-          10
-        ],
-        "Units": null,
-        "Note": null,
-        "Save": true,
-        "DropDown": null
-      },
+        {
+            "Name": "PWM Phases Dead Time",
+            "Value": "",
+            "Description": "PWM Phases Dead Time",
+            "Default": "300",
+            "Cmd": "pwmdtns",
+            "Range": [
+                50,
+                2000
+            ],
+            "Units": "nS",
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PWM Frequency",
+            "Value": "",
+            "Description": "PWM Frequency",
+            "Default": "16000",
+            "Cmd": "pwmfreq",
+            "Range": [
+                10000,
+                30000
+            ],
+            "Units": "Hz",
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "FOC PID Q Kp",
+            "Value": "",
+            "Description": "FOC PID Q Kp",
+            "Default": "500",
+            "Cmd": "focpidkpq",
+            "Range": [
+                0,
+                2147483647
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "FOC PID Q Ki",
+            "Value": "",
+            "Description": "FOC PID Q Ki",
+            "Default": "160",
+            "Cmd": "foxpidkiq",
+            "Range": [
+                0,
+                2147483647
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "FOC PID D Kp",
+            "Value": "",
+            "Description": "FOC PID D Kp",
+            "Default": "500",
+            "Cmd": "focpidkpd",
+            "Range": [
+                0,
+                2147483647
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "FOC PID D Ki",
+            "Value": "",
+            "Description": "FOC PID D Ki",
+            "Default": "160",
+            "Cmd": "foxpidkid",
+            "Range": [
+                0,
+                2147483647
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Speed Limit Kp",
+            "Value": "",
+            "Description": "PID Max Speed Limit Kp",
+            "Default": "20000",
+            "Cmd": "mplkpmxs",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Speed Limit Ki",
+            "Value": "",
+            "Description": "PID Max Speed Limit Ki",
+            "Default": "250",
+            "Cmd": "mplkimxs",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Bus Current Limit Kp",
+            "Value": "",
+            "Description": "PID Max Bus Current Limit Kp",
+            "Default": "50",
+            "Cmd": "mplkpmxbc",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Bus Current Limit Ki",
+            "Value": "",
+            "Description": "PID Max Bus Current Limit Ki",
+            "Default": "32",
+            "Cmd": "mplkimxbc",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Min Bus Current Limit Kp",
+            "Value": "",
+            "Description": "PID Mix Bus Current Limit Kp",
+            "Default": "50",
+            "Cmd": "mplkpmnbc",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Min Bus Current Limit Ki",
+            "Value": "",
+            "Description": "PID Max Bus Current Limit Ki",
+            "Default": "32",
+            "Cmd": "mplkimnbc",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Bus Voltage Limit Kp",
+            "Value": "",
+            "Description": "PID Max Bus Voltage Limit Kp",
+            "Default": "50",
+            "Cmd": "mplkpmxbv",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Max Bus Voltage Limit Ki",
+            "Value": "",
+            "Description": "PID Max Bus Voltage Limit Ki",
+            "Default": "32",
+            "Cmd": "mplkimxbv",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Min Bus Voltage Limit Kp",
+            "Value": "",
+            "Description": "PID Min Bus Voltage Limit Kp",
+            "Default": "50",
+            "Cmd": "mplkpmnbv",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "PID Min Bus Voltage Limit Ki",
+            "Value": "",
+            "Description": "PID Mix Bus Voltage Limit Ki",
+            "Default": "32",
+            "Cmd": "mplkimnbv",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor Flux Auto Max Current",
+            "Value": "",
+            "Description": "Motor Flux Auto Max Current",
+            "Default": "0",
+            "Cmd": "flmxcurr",
+            "Range": [
+                0,
+                400
+            ],
+            "Units": "A",
+            "Scale": 10,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor Flux Auto Saturation",
+            "Value": "",
+            "Description": "Motor Flux Auto Saturation",
+            "Default": "5",
+            "Cmd": "flsatthr",
+            "Range": [
+                0,
+                20
+            ],
+            "Units": "%",
+            "Scale": 10,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "MTPA Mod Speed PID Kp",
+            "Value": "",
+            "Description": "MTPA Mod Speed PID Kp",
+            "Default": "0",
+            "Cmd": "fmspdkp",
+            "Range": [
+                0,
+                1000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "MTPA Mod Speed PID Ki",
+            "Value": "",
+            "Description": "MTPA Mod Speed PID Ki",
+            "Default": "0",
+            "Cmd": "fmspdki",
+            "Range": [
+                0,
+                1000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor Flux Auto PID Kp",
+            "Value": "",
+            "Description": "Motor Flux Auto PID Kp",
+            "Default": "1000",
+            "Cmd": "flpidkp",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor Flux Auto PID Ki",
+            "Value": "",
+            "Description": "Motor Flux Auto PID Ki",
+            "Default": "50",
+            "Cmd": "flpidki",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Over Modulation",
+            "Value": "",
+            "Description": "Over Modulation",
+            "Default": "100",
+            "Cmd": "overmodfac",
+            "Range": [
+                0,
+                100
+            ],
+            "Units": "%",
+            "Scale": 10.24,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Vq Max LPF",
+            "Value": "",
+            "Description": "Vq Max LPF",
+            "Default": "0",
+            "Cmd": "vqmaxlpf",
+            "Range": [
+                0,
+                10
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Vd Size Limit",
+            "Value": "",
+            "Description": "Vd Size Limit",
+            "Default": "0",
+            "Cmd": "vdsizelim",
+            "Range": [
+                0,
+                1000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor PID Speed Control Kp",
+            "Value": "",
+            "Description": "Motor PID Speed Control Kp",
+            "Default": "500",
+            "Cmd": "mtrpidspdctrlkp",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Motor PID Speed Control Ki",
+            "Value": "",
+            "Description": "Motor PID Speed Control Ki",
+            "Default": "160",
+            "Cmd": "mtrpidspdctrlki",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Hill Assist PID Kp",
+            "Value": "",
+            "Description": "Hill Assist PID Kp",
+            "Default": "0",
+            "Cmd": "hillasstkp",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Hill Assist PID Ki",
+            "Value": "",
+            "Description": "Hill Assist PID Ki",
+            "Default": "0",
+            "Cmd": "hillasstki",
+            "Range": [
+                0,
+                100000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Factor, Phase U",
+            "Value": "",
+            "Description": "ADC Count to mA Phase U Current Sensor Factor",
+            "Default": "406",
+            "Cmd": "adccurfacu",
+            "Range": [
+                300,
+                550
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Factor, Phase W",
+            "Value": "",
+            "Description": "ADC Count to mA Phase W Current Sensor Factor",
+            "Default": "406",
+            "Cmd": "adccurfacw",
+            "Range": [
+                300,
+                550
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Factor, Bus",
+            "Value": "",
+            "Description": "ADC Count to mA Bus Current Sensor Factor",
+            "Default": "406",
+            "Cmd": "adccurfacb",
+            "Range": [
+                300,
+                550
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Offset, Phase U",
+            "Value": "",
+            "Description": "ADC Current Offset, Phase U",
+            "Default": "0",
+            "Cmd": "zeroffu",
+            "Range": [
+                2000,
+                2100
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Offset, Phase W",
+            "Value": "",
+            "Description": "ADC Current Offset, Phase W",
+            "Default": "0",
+            "Cmd": "zeroffw",
+            "Range": [
+                2000,
+                2100
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Current Offset, Bus",
+            "Value": "",
+            "Description": "ADC Current Offset, Bus",
+            "Default": "0",
+            "Cmd": "zeroffb",
+            "Range": [
+                2000,
+                2100
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Vbus Factor",
+            "Value": "",
+            "Description": "ADC Voltage Sensor Gain Factor",
+            "Default": "166",
+            "Cmd": "adcvbusfac1",
+            "Range": [
+                162,
+                170
+            ],
+            "Units": null,
+            "Scale": 32,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ADC Vbus2 Factor",
+            "Value": "",
+            "Description": "ADC Voltage Sensor Gain Factor",
+            "Default": "166",
+            "Cmd": "adcvbusfac2",
+            "Range": [
+                162,
+                170
+            ],
+            "Units": null,
+            "Scale": 32,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "Speed Lpf",
+            "Value": "",
+            "Description": "Speed Low Pass Filter",
+            "Default": "5",
+            "Cmd": "mspdlpf",
+            "Range": [
+                0,
+                10
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ATE Duty Cycle",
+            "Value": "",
+            "Description": "ATE Duty Cycle",
+            "Default": "42",
+            "Cmd": "atepwmdc",
+            "Range": [
+                0,
+                1000
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        },
+        {
+            "Name": "ATE Duty Cycle Ramp",
+            "Value": "",
+            "Description": "ATE Duty Cycle Ramp",
+            "Default": "1",
+            "Cmd": "atepwmramp",
+            "Range": [
+                0,
+                10
+            ],
+            "Units": null,
+            "Note": null,
+            "Save": true,
+            "DropDown": null
+        }
     ],
     "GroupName": "Advanced",
     "GroupDescription": "Advanced Settings",

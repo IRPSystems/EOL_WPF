@@ -157,6 +157,61 @@
             "Name": "ATE_SET_PhasesUH",
             "Value": "22"
           },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_UC_EN_ON",
+            "Value": "23"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_UC_EN_OFF",
+            "Value": "24"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_EN_5V_ON",
+            "Value": "25"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_EN_5V_OFF",
+            "Value": "26"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesVH",
+            "Value": "27"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesWH",
+            "Value": "28"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesUL",
+            "Value": "29"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesVL",
+            "Value": "30"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_PhasesWL",
+            "Value": "31"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_VrefTo5V",
+            "Value": "32"
+          },
+		  {
+			"$type": "Entities.Models.DropDownParamData, Entities",
+            "Name": "ATE_SET_VrefToRealMeasurement",
+            "Value": "33"
+          },		  
           ]
         },
         "Value": null,
@@ -334,6 +389,36 @@
               "$type": "Entities.Models.DropDownParamData, Entities",
               "Name": "ATE_GET_CanDev1Test",
               "Value": "30"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_UARTCommTest",
+              "Value": "31"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_UC_ENABLE",
+              "Value": "32"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_5V_ENABLE",
+              "Value": "33"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_GDOutputSense",
+              "Value": "34"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_ExtEEPROM",
+              "Value": "35"
+            },
+			{
+              "$type": "Entities.Models.DropDownParamData, Entities",
+              "Name": "ATE_GET_HighestFaultSeverity",
+              "Value": "36"
             },
           ]
         },

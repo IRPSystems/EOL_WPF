@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.Models;
 using EOL.Models;
 using ScriptHandler.Models;
+using ScriptHandler.Services;
 using Services.Services;
 using System.Windows.Controls;
 
@@ -18,22 +19,23 @@ namespace EOL.ViewModels
 		public RunData RunData { get; set; }
 		public RunViewModel Run { get; set; }
 
-		#endregion Properties
+        #endregion Properties
 
-		#region Fields
+        #region Fields
 
-		
 
-		#endregion Fields
 
-		#region Constructor
+        #endregion Fields
 
-		public OperatorViewModel(
+        #region Constructor
+
+        public OperatorViewModel(
 			DevicesContainer devicesContainer,
 			ScriptUserData scriptUserData,
 			UserDefaultSettings userDefaultSettings,
-			SettingsViewModel viewModel, 
-			RunData runData,
+			SettingsViewModel viewModel,
+            FlashingHandler flashingHandler,
+            RunData runData,
 			RichTextBox richTextBox,
 			LogLineListService logLineList)
 		{
@@ -43,7 +45,8 @@ namespace EOL.ViewModels
                 RunData,
 				userDefaultSettings, 
 				viewModel,
-				logLineList,
+                flashingHandler,
+                logLineList,
 				viewModel.SettingsData);
             RunData.RunScript = Run.RunScript;
 		}

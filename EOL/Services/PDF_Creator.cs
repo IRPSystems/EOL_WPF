@@ -1,4 +1,4 @@
-﻿using EOL.Models;
+using EOL.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -414,7 +414,7 @@ namespace EOL.Services
             //document.Add(PDF_Creator.CreateInfoLine("Win App FW Ver", GeneralAppInfo.AppVersion));
             document.Add(PDF_Creator.CreateInfoLine("JSON Script Ver", Path.GetFileNameWithoutExtension(ScriptPath)));
             if (runResult.CustomerVer != string.Empty)
-                document.Add(PDF_Creator.CreateInfoLine("Customer SW Version", runResult.CustomerVer));
+                document.Add(PDF_Creator.CreateInfoLine("Customer SW VersionAndStatus", runResult.CustomerVer));
             // Add empty space
             document.Add(new Paragraph(""));
 

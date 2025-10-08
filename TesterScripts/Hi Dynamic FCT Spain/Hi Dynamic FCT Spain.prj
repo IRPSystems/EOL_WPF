@@ -1,0 +1,32 @@
+{
+  "$type": "ScriptHandler.Models.ProjectData, ScriptHandler",
+  "Name": "Hi Dynamic FCT Spain",
+  "TestPathsList": null,
+  "ScriptsPathsList": {
+    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "..\\InternalTest.tst",
+      "..\\Safety Officer.scr",
+      "..\\Abort Script.scr",
+      "..\\Interlock.scr",
+      "..\\Config.scr",
+      "..\\Resistance Check.scr",
+      "..\\Voltages_HV.scr",
+      "..\\Flashing.scr",
+      "..\\CAN.scr",
+      "..\\EEPROM.scr",
+      "..\\uC_Enable.scr",
+      "..\\UART.scr",
+      "..\\Resolver.scr",
+      "..\\Voltages_LV.scr",
+      "..\\MCU_meas.scr",
+      "..\\Digital.scr",
+      "..\\PowerStage.scr",
+      "..\\MCU_Discharge.scr",
+      "..\\Abort Script Nothing.scr",
+      "..\\HD_FCT.tst"
+    ]
+  },
+  "RecordParametersFile": null,
+  "IsChangesExist": false
+}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using EOL.ViewModels;
+using FlashingToolLib;
 using MahApps.Metro.Controls;
 
 namespace EOL.Views
@@ -21,10 +22,35 @@ namespace EOL.Views
     /// </summary>
     public partial class WatsConfigSelectorWindow : MetroWindow
     {
+        private bool _authChecked; // guard so we only prompt once
+
         public WatsConfigSelectorWindow(WatsConfigSelectorViewModel vm)
         {
             InitializeComponent();
             DataContext = vm;
+
+            // Show password dialog as soon as this window is loaded/shown
+            ContentRendered += (_, __) =>
+            {
+                if (string.IsNullOrEmpty(vm.eolSettings.StationType))
+                {
+                    var pw = new PasswordWindow { Owner = this, Title = "First Time Setup - Enter Admin Password" };
+                    if (pw.ShowDialog() != true)
+                    {
+                        DialogResult = false; // if this window is shown modally
+                        Close();
+                    }
+                }
+            };
+
+            vm.PasswordRequested += () =>
+            {
+                var pw = new PasswordWindow { Owner = this, Title = "Verify Admin" };
+                if (pw.ShowDialog() != true)
+                    return false;
+                return true;
+            };
+
             vm.CloseEvent += () =>
             {
                 Dispatcher.Invoke(() =>
@@ -36,5 +62,7 @@ namespace EOL.Views
                     }
                 });            //Loaded +=  (s, e) => vm.LoadPackages();
             };
-    }    }
+        }
+
+    }
 }

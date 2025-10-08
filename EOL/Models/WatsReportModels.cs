@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -187,7 +187,7 @@ namespace EOL.Models
         [XmlAttribute("Name")]
         public string Name { get; set; }
 
-        [XmlAttribute("Version")]
+        [XmlAttribute("VersionAndStatus")]
         public string Version { get; set; }
 
         [XmlAttribute("Filename")]

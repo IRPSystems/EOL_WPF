@@ -8,9 +8,9 @@
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Resources\EOL.ico</ApplicationIcon>
 
-	  <Version>1.0.0.3</Version>
-	  <AssemblyVersion>1.0.0.3</AssemblyVersion>
-	  <FileVersion>1.0.0.3</FileVersion>
+	  <Version>1.0.0.7</Version>
+	  <AssemblyVersion>1.0.0.7</AssemblyVersion>
+	  <FileVersion>1.0.0.7</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -60,16 +60,16 @@
       <HintPath>Resources\Virinco.Newtonsoft.JSON.dll</HintPath>
     </Reference>
     <Reference Include="Virinco.WATS.Interface.MES">
-      <HintPath>Resources\Virinco.WATS.Interface.MES.dll</HintPath>
+      <HintPath>..\..\..\EOL_WPF\EOL\Resources\Virinco.WATS.Interface.MES.dll</HintPath>
     </Reference>
     <Reference Include="Virinco.WATS.Interface.TDM">
-      <HintPath>Resources\Virinco.WATS.Interface.TDM.dll</HintPath>
+      <HintPath>..\..\..\EOL_WPF\EOL\Resources\Virinco.WATS.Interface.TDM.dll</HintPath>
     </Reference>
     <Reference Include="Virinco.WATS.Service.MES.Contract">
-      <HintPath>Resources\Virinco.WATS.Service.MES.Contract.dll</HintPath>
+      <HintPath>..\..\..\EOL_WPF\EOL\Resources\Virinco.WATS.Service.MES.Contract.dll</HintPath>
     </Reference>
     <Reference Include="Virinco.WATS.WATS-Core">
-      <HintPath>Resources\Virinco.WATS.WATS-Core.dll</HintPath>
+      <HintPath>..\..\..\EOL_WPF\EOL\Resources\Virinco.WATS.WATS-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

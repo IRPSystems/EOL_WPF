@@ -1,10 +1,12 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
+using ScriptHandler.Services;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
@@ -28,12 +30,16 @@ namespace EOL.ViewModels
 
 		public bool IsAdminMode { get; set; }
 
+        public List<string> PSoCPortsList { get; set; }
+
 		#endregion Properties
 
 		#region Fields
 
 		UserDefaultSettings _userDefaultSettings;
         UserConfigManager _userConfigManager;
+
+        private FlashingHandler _flashingHandler;
 
         #endregion Fields
 
@@ -57,18 +63,24 @@ namespace EOL.ViewModels
 		public SettingsViewModel(
             EOLSettings eolSettings,
             UserConfigManager userConfigManager,
-			SetupSelectionViewModel setupSelectionVM)
+            FlashingHandler flashingHandler,
+			SetupSelectionViewModel setupSelectionVM,
+            WatsConnectionMonitor watsConnection)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
-
+            _flashingHandler = flashingHandler;
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
-
-            SettingsAdminVM = new SettingsAdminViewModel(eolSettings);
+            PSoCPort1_SelectionChangedCommand = new RelayCommand(PSoCPort1_SelectionChanged);
+			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
+            PSoCPort1_DropDownOpenedCommand = new RelayCommand(PSoCPort1_DropDownOpened);
+			PSoCPort2_DropDownOpenedCommand = new RelayCommand(PSoCPort2_DropDownOpened);
+			SettingsAdminVM = new SettingsAdminViewModel(eolSettings , watsConnection);
+            MainScriptEventChanged += SettingsAdminVM.OnMainScriptChanged;
 		}
 
         #endregion Constructor
@@ -78,6 +90,7 @@ namespace EOL.ViewModels
         private void Closing(CancelEventArgs e)
         {
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
+            _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation?.Code.ToString() ?? string.Empty;
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);
@@ -88,7 +101,11 @@ namespace EOL.ViewModels
         private void Loaded()
 		{
 			GetDescriptsionColumnWidth();
-		}
+            //string errorMsg = string.Empty;
+            //PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
+
+
 
         public void LoadUserConfigToSettingsView()
         {
@@ -324,14 +341,43 @@ namespace EOL.ViewModels
             }
         }
 
-		#endregion Methods
+        private void PSoCPort1_SelectionChanged()
+        {
+            _userDefaultSettings.PSoC_Port1 = SettingsData.PSoCPort1;
+        }
 
-		#region Commands
+        private void PSoCPort2_SelectionChanged()
+		{
+            _userDefaultSettings.PSoC_Port2 = SettingsData.PSoCPort2;
 
-		public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
+        }
+
+        private void PSoCPort1_DropDownOpened()
+        {
+            string errorMsg = string.Empty;
+            PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
+
+        private void PSoCPort2_DropDownOpened()
+		{
+            string errorMsg = string.Empty;
+            PSoCPortsList = _flashingHandler.GetPSOCDeviceList(out errorMsg);
+        }
+
+        #endregion Methods
+
+        #region Commands
+
+        public RelayCommand<FilesData> BrowseFilePathCommand { get; private set; }
 		public RelayCommand LoadedCommand { get; private set; }
         public RelayCommand<CancelEventArgs> ClosingCommand { get; private set; }
-		
+
+		public RelayCommand PSoCPort1_SelectionChangedCommand { get; private set; }
+		public RelayCommand PSoCPort2_SelectionChangedCommand { get; private set; }
+
+		public RelayCommand PSoCPort1_DropDownOpenedCommand { get; private set; }
+		public RelayCommand PSoCPort2_DropDownOpenedCommand { get; private set; }
+
 
 		#endregion Commands
 

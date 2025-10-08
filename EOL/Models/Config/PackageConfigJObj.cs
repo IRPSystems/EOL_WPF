@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using FlashingToolLib.FlashingTools;
@@ -39,8 +39,10 @@ namespace EOL.Models.Config
         public bool Printer_TSC { get; set; }
         public bool NumatoGPIO { get; set; }
 		public bool PowerSupplyEA { get; set; }
-
-		public DevicesList()
+        public bool RigolM300 { get; set; }
+        public bool MX180TP { get; set; }
+        public bool ITM3100 { get; set; }
+        public DevicesList()
         {
             MCU = true;
 			MCU_2 = true;

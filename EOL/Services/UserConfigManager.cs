@@ -1,4 +1,4 @@
-﻿using EOL.Models;
+using EOL.Models;
 using EOL.Models.Config;
 using EOL.ViewModels;
 using EOL.Views;
@@ -211,6 +211,9 @@ namespace EOL.Services
 						userDefaultSettings.Printer_TSC = config.DevicesList.Printer_TSC;
 						userDefaultSettings.NumatoGPIO = config.DevicesList.NumatoGPIO;
 						userDefaultSettings.PowerSupplyEA = config.DevicesList.PowerSupplyEA;
+                        userDefaultSettings.ITM3100 = config.DevicesList.ITM3100;
+                        userDefaultSettings.RigolM300 = config.DevicesList.RigolM300;
+                        userDefaultSettings.MX180TP = config.DevicesList.MX180TP;
 					}
 
 				}

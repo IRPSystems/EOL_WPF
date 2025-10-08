@@ -1,4 +1,4 @@
-﻿
+
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
@@ -26,6 +26,8 @@ using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
 using Virinco.WATS.Interface;
+
+using ScriptHandler.Services;
 
 namespace EOL.ViewModels
 {
@@ -100,6 +102,7 @@ namespace EOL.ViewModels
         private bool _isWatsConnected;
 
         private readonly TDM _tdm;
+        private FlashingHandler _flashingHandler;
 
 
         #endregion Fields
@@ -124,10 +127,11 @@ namespace EOL.ViewModels
 
             _isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
-            var watsConfigVM = new WatsConfigSelectorViewModel(_tdm,_eolSettings.UserDefaultSettings);
+            var watsConfigVM = new WatsConfigSelectorViewModel(_eolSettings);
 			var watsConfigWindow = new WatsConfigSelectorWindow(watsConfigVM);
+			watsConfigVM.init();
 			var result = watsConfigWindow.ShowDialog();
-			if ((result != true || watsConfigVM.SelectedPackage == null) && !watsConfigVM.isContinue)
+            if ((result != true || watsConfigVM.SelectedPackage == null) && !watsConfigVM.isContinue)
 			{
 				Application.Current.Shutdown();
 				return;
@@ -263,10 +267,14 @@ namespace EOL.ViewModels
 					};
 				}
 
+				_flashingHandler = new FlashingHandler(DevicesContainter);
+
 				SettingsVM = new SettingsViewModel(
 					_eolSettings, 
 					_userConfigManager,
-					_setupSelectionVM);
+					_flashingHandler,
+					_setupSelectionVM,
+					_watsConnectionMonitor);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
@@ -274,8 +282,9 @@ namespace EOL.ViewModels
 					DevicesContainter, 
 					_eolSettings.ScriptUserData,
 					_eolSettings.UserDefaultSettings, 
-					SettingsVM, 
-					_runData,
+					SettingsVM,
+                    _flashingHandler,
+                    _runData,
 					_richTextBox,
 					_logLineList);
 
@@ -339,18 +348,31 @@ namespace EOL.ViewModels
 			if (ateDevice == null)
 				return;
 
-			MCU_DeviceData mcuDevice =
-				_setupSelectionVM.DevicesSourceList_Full.ToList().Find((d) => d.DeviceType == DeviceTypesEnum.MCU) as MCU_DeviceData;
-			if (mcuDevice == null) 
+            MCU_DeviceData? GetMcu(DeviceTypesEnum type) =>
+                _setupSelectionVM.DevicesSourceList_Full
+                    .FirstOrDefault(d => d.DeviceType == type) as MCU_DeviceData;
+
+            var mcuDevice = GetMcu(DeviceTypesEnum.MCU);
+            var mcu2Device = GetMcu(DeviceTypesEnum.MCU_2);
+            var mcuB2BDevice = GetMcu(DeviceTypesEnum.MCU_B2B);
+
+            var targets = new[] { mcuDevice, mcu2Device, mcuB2BDevice }
+                .Where(d => d is not null)
+                .ToList();
+
+            if (targets.Count == 0) 
 				return;
 
-			mcuDevice.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
-			
-			foreach (var param in ateDevice.MCU_FullList)
+			foreach (var target in targets)
 			{
-				param.DeviceType = mcuDevice.DeviceType;
-				param.Device = mcuDevice;
-				mcuDevice.MCU_FullList.Add(param);
+				target.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
+
+				foreach (var param in ateDevice.MCU_FullList)
+				{
+					param.DeviceType = mcuDevice.DeviceType;
+					param.Device = mcuDevice;
+					target.MCU_FullList.Add(param);
+				}
 			}
 		}
 
@@ -377,7 +399,11 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.NI_6002_2 &&
 					device.DeviceType != DeviceTypesEnum.Printer_TSC &&
 					device.DeviceType != DeviceTypesEnum.NumatoGPIO &&
-					device.DeviceType != DeviceTypesEnum.PowerSupplyEA)
+					device.DeviceType != DeviceTypesEnum.PowerSupplyEA &&
+					device.DeviceType != DeviceTypesEnum.RigolM300 &&
+					device.DeviceType != DeviceTypesEnum.MX180TP &&
+					device.DeviceType != DeviceTypesEnum.ITM3100 &&
+					device.DeviceType != DeviceTypesEnum.MCU_B2B )
 				{
 					devicesToRemoveList.Add(device);
 					continue;
@@ -399,7 +425,13 @@ namespace EOL.ViewModels
 					devicesToRemoveList.Add(device);
 				else if (device.DeviceType == DeviceTypesEnum.PowerSupplyEA && _eolSettings.UserDefaultSettings.PowerSupplyEA == false)
 					devicesToRemoveList.Add(device);
-			}
+                else if (device.DeviceType == DeviceTypesEnum.RigolM300 && _eolSettings.UserDefaultSettings.RigolM300 == false)
+                    devicesToRemoveList.Add(device);
+                else if (device.DeviceType == DeviceTypesEnum.MX180TP && _eolSettings.UserDefaultSettings.MX180TP == false)
+                    devicesToRemoveList.Add(device);
+                else if (device.DeviceType == DeviceTypesEnum.ITM3100 && _eolSettings.UserDefaultSettings.ITM3100 == false)
+                    devicesToRemoveList.Add(device);
+            }
 
 			foreach(DeviceData device in devicesToRemoveList)
 				devicesList.Remove(device);
@@ -456,7 +488,7 @@ namespace EOL.ViewModels
             }
 
 
-            foreach (DeviceData device in newDevices)
+           foreach (DeviceData device in newDevices)
 			{
 				DeviceFullData deviceFullData = DeviceFullData.Factory(device);
 
@@ -573,7 +605,7 @@ namespace EOL.ViewModels
             switch (mode)
             {
                 case "Admin":
-                    var passwordWindow = new PasswordWindow();
+                    var passwordWindow = new PasswordWindow {MaxAttempts = 1 };
                     if (passwordWindow.ShowDialog() == true)
                     {
                         // Check if the entered password is correct

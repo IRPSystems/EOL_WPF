@@ -1,4 +1,4 @@
-﻿
+
 using System.IO;
 using System;
 using Newtonsoft.Json;
@@ -16,7 +16,10 @@ namespace EOL.Models
 
 		public UserDefaultSettings UserDefaultSettings { get; set; }
 
-		public SettingsData GeneralData { get; set; }
+		public string StationType { get; set; }
+		public Guid PackageId { get; set; }
+
+        public SettingsData GeneralData { get; set; }
 
 		public string MCUParametersJsonPath { get; set; }
 
@@ -32,9 +35,10 @@ namespace EOL.Models
 			eolSettings.ScriptUserData = new ScriptUserData();
 			eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
 			eolSettings.UserDefaultSettings = new UserDefaultSettings();
+		    eolSettings.StationType = string.Empty;
+			eolSettings.PackageId = Guid.Empty;
 
-
-			return eolSettings;
+            return eolSettings;
 		}
 
 		public static EOLSettings LoadEOLUserData(string dirName)
@@ -71,7 +75,10 @@ namespace EOL.Models
 			if (eolSettings.UserDefaultSettings == null)
 				eolSettings.UserDefaultSettings = new UserDefaultSettings();
 
-			if (eolSettings != null)
+			if(eolSettings.StationType == null)
+				eolSettings.StationType = string.Empty;
+
+            if (eolSettings != null)
 				return eolSettings;
 
 			eolSettings = GetDefaultSettings();
