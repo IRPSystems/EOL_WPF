@@ -125,7 +125,7 @@ namespace EOL.ViewModels
             _watsConnectionMonitor = new WatsConnectionMonitor(_tdm);
             _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
-            _isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+            //_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
             var watsConfigVM = new WatsConfigSelectorViewModel(_eolSettings);
 			var watsConfigWindow = new WatsConfigSelectorWindow(watsConfigVM);

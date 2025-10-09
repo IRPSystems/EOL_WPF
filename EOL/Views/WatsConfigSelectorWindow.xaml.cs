@@ -32,8 +32,9 @@ namespace EOL.Views
             // Show password dialog as soon as this window is loaded/shown
             ContentRendered += (_, __) =>
             {
-                if (string.IsNullOrEmpty(vm.eolSettings.StationType))
+                if (string.IsNullOrEmpty(vm.eolSettings.StationType) || vm.eolSettings.PackageId == Guid.Empty)
                 {
+                    vm.IsContinueEnabled = false;
                     var pw = new PasswordWindow { Owner = this, Title = "First Time Setup - Enter Admin Password" };
                     if (pw.ShowDialog() != true)
                     {

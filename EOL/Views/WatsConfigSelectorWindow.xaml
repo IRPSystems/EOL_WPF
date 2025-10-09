@@ -74,7 +74,8 @@
                 IsEnabled="{Binding IsReadyToConfirm}"
                 Margin="0,0,50,0"/>
             <Button Content="Continue" Height="30" Width="100"
-                Command="{Binding ContinueCommand}" />
+                Command="{Binding ContinueCommand}" 
+                IsEnabled="{Binding IsContinueEnabled}"/>
         </StackPanel>
     </StackPanel>
 

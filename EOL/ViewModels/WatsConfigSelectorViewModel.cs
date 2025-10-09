@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using EOL.Models;
+using EOL.Models.Config;
 using EOL.Views;
 using Newtonsoft.Json;
 using Serilog.Core;
@@ -12,8 +13,10 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Virinco.Newtonsoft.Json.Linq;
 using Virinco.WATS.Interface.MES.Software;
 using Virinco.WATS.Service.MES.Contract;
 using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
@@ -138,6 +141,12 @@ namespace EOL.ViewModels
             set { if (_isReadyToConfirm != value) { _isReadyToConfirm = value; OnPropertyChanged(nameof(IsReadyToConfirm)); } }
         }
 
+        private bool _isContinueEnabled;
+        public bool IsContinueEnabled
+        {
+            get => _isContinueEnabled;
+            set { if (_isContinueEnabled != value) { _isContinueEnabled = value; OnPropertyChanged(nameof(IsContinueEnabled)); } }
+        }
 
         public WatsConfigSelectorViewModel( EOLSettings eolsettings)
         {
@@ -149,26 +158,20 @@ namespace EOL.ViewModels
 
         public void init()
         {
-            try
-            {
-                 LoadPackages();
+            LoadPackages();
 
-                if (!string.IsNullOrEmpty(eolSettings.StationType))
-                {
-                    if (eolSettings.PackageId != Guid.Empty)
-                    {
-                        var package = DisplayPackages.FirstOrDefault(p => p.Package.PackageId == eolSettings.PackageId);
-                        SelectedStationType = eolSettings.StationType;
-                        IsStationTypesEnabled = false;
-                        SelectedProject = package.Project;
-                        IsProjectEnabled = true;
-                        SelectedPackageVersion = package.VersionAndStatus;
-                    }
-                }
-            }
-            catch (Exception ex)
+            if (!string.IsNullOrEmpty(eolSettings.StationType) && eolSettings.PackageId != Guid.Empty)
             {
-                return;
+                var package = DisplayPackages.FirstOrDefault(p => p.Package.PackageId == eolSettings.PackageId);
+                if (package!= null)
+                {                  
+                    SelectedStationType = eolSettings.StationType;
+                    IsStationTypesEnabled = false;
+                    SelectedProject = package.Project;
+                    IsProjectEnabled = true;
+                    SelectedPackageVersion = package.VersionAndStatus;
+                    IsContinueEnabled = true;
+                }
             }
         }
 
@@ -177,8 +180,8 @@ namespace EOL.ViewModels
             try
             {
                 //var packageavailable = 0;
-                var ReleasedPackages = _software.GetPackages();
-                var PendingPackages = _software.GetPackages(PackageStatus: StatusEnum.Pending);
+                var ReleasedPackages = _software.GetPackages(Install: false);
+                var PendingPackages = _software.GetPackages(Install: false,PackageStatus: StatusEnum.Pending);
                 var allPackages = ReleasedPackages.Concat(PendingPackages).ToList();
 
                 DisplayPackages.Clear();
@@ -221,7 +224,6 @@ namespace EOL.ViewModels
 
             if (SelectedPackage != null)
             {
-                _ =  DownloadPackageAsync(SelectedPackage);
                 if(SelectedPackage.Status == (int)StatusEnum.Pending)
                 {
                     bool? result = PasswordRequested?.Invoke();
@@ -230,6 +232,8 @@ namespace EOL.ViewModels
                         return; // User cancelled or failed authentication
                     }
                 }
+
+                _ = DownloadPackageAsync(SelectedPackage);
                 eolSettings.StationType = SelectedStationType;
                 eolSettings.PackageId = SelectedPackage.PackageId;
                 CloseEvent?.Invoke();
@@ -268,7 +272,7 @@ namespace EOL.ViewModels
                     TopLevelSequenceFiles = topLevelSequences
                      .Select(f => new SequenceFileInfo(f.Name, f.FullName))
                      .ToList();
-                    //SaveInstalledFiles(executeFiles, topLevelSequences, SelectedPackagePath);
+
                     LoadToUserSettings();
 
                 });
@@ -278,33 +282,6 @@ namespace EOL.ViewModels
             {
                 MessageBox.Show($"Installation failed: {ex.Message}");
                 // Optionally display an error dialog to the user
-            }
-        }
-
-        private void SaveInstalledFiles(IEnumerable<FileInfo> executeFiles, IEnumerable<FileInfo> topLevelSequences, string targetDirectory)
-        {
-            try
-            {
-                if (!Directory.Exists(targetDirectory))
-                {
-                    object dir = Directory.CreateDirectory(targetDirectory);
-                }
-
-                // Combine and copy both file sets
-                var allFiles = executeFiles.Concat(topLevelSequences).Distinct();
-
-                foreach (var file in allFiles)
-                {
-                    var destPath = Path.Combine(targetDirectory, file.Name);
-
-                    // Overwrite if already exists
-                    File.Copy(file.FullName, destPath, overwrite: true);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to save installed files: {ex.Message}");
             }
         }
 
@@ -319,7 +296,7 @@ namespace EOL.ViewModels
                 SetScriptPath("merge_boot", path => eolSettings.UserDefaultSettings.SecondFlashFilePath = path);
                 SetScriptPath("monitor", path => eolSettings.UserDefaultSettings.DefaultMonitorLogScript = path);
 
-
+                ApplyConfigJsonOverrides();
             }
             catch (Exception ex)
             {
@@ -418,6 +395,29 @@ namespace EOL.ViewModels
                                && SelectedPackageVersion != null;
         }
 
+        private void ApplyConfigJsonOverrides()
+        {
+            var files = TopLevelSequenceFiles;
+            if (files == null) return;
+
+            // Try to get a full path to config.json (case-insensitive)
+            string configPath = files.FirstOrDefault(p => p.Name.Equals("config.json", StringComparison.OrdinalIgnoreCase))?.FullPath ?? string.Empty;
+
+            if (string.IsNullOrWhiteSpace(configPath) || !File.Exists(configPath))
+                return;
+
+            var json = File.ReadAllText(configPath);
+
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,      // don't overwrite with nulls
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            };
+
+            // json = contents of config.json
+            JsonConvert.PopulateObject(json, eolSettings.UserDefaultSettings, settings);
+
+        }
 
         //private async Task<List<Package>> GetPackagesAsync()
         //{
