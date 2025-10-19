@@ -26,7 +26,7 @@ using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
 using Virinco.WATS.Interface;
-
+using Virinco.WATS.Service.MES.Contract;
 using ScriptHandler.Services;
 
 namespace EOL.ViewModels
@@ -84,8 +84,6 @@ namespace EOL.ViewModels
 
 		private RunData _runData;
 
-        private string baseUrl = "https://irpsystems.wats.com/";  // ← Adjust to your actual WATS API URL
-
         private CommunicationWindowView _communicationWindowView;
 		private SettingsView _settingsView;
 
@@ -97,7 +95,11 @@ namespace EOL.ViewModels
 
 		private bool? _isConfigSelectedByUser;
 
-		private WatsConnectionMonitor _watsConnectionMonitor;
+        private bool? _isConfigFromWats;
+
+        private WatsConnectionMonitor _watsConnectionMonitor;
+
+		private Virinco.WATS.Service.MES.Contract.Package _selectedPackage;
 
         private bool _isWatsConnected;
 
@@ -130,14 +132,15 @@ namespace EOL.ViewModels
             var watsConfigVM = new WatsConfigSelectorViewModel(_eolSettings);
 			var watsConfigWindow = new WatsConfigSelectorWindow(watsConfigVM);
 			watsConfigVM.init();
-			var result = watsConfigWindow.ShowDialog();
+            
+            var result = watsConfigWindow.ShowDialog();
             if ((result != true || watsConfigVM.SelectedPackage == null) && !watsConfigVM.isContinue)
 			{
 				Application.Current.Shutdown();
 				return;
 			}
-
-
+            _isConfigFromWats = watsConfigVM.LoadToUserSettings();
+			_selectedPackage = watsConfigVM.GetSelectedPackageId();
 
             LoadConfigToUI();
 
@@ -211,7 +214,7 @@ namespace EOL.ViewModels
 
 
 
-                if (_isConfigSelectedByUser == null)
+                if (_isConfigSelectedByUser == null && _isConfigFromWats == false)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);
@@ -274,7 +277,8 @@ namespace EOL.ViewModels
 					_userConfigManager,
 					_flashingHandler,
 					_setupSelectionVM,
-					_watsConnectionMonitor);
+					_tdm,
+					_selectedPackage);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 

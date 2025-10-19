@@ -9,10 +9,12 @@ using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -46,6 +48,7 @@ namespace EOL.ViewModels
     {
         public string Version { get; set; }
         public StatusEnum Status { get; set; }
+        public string TesterAppVersion { get; set; }
     }
     public class WatsConfigSelectorViewModel : ObservableObject
     {
@@ -57,8 +60,8 @@ namespace EOL.ViewModels
         }
         public ObservableCollection<TaggedPackage> DisplayPackages { get; } = new();
        
-        public string SelectedPackagePath { get; set; }
-        public List<SequenceFileInfo> TopLevelSequenceFiles { get; private set; } = new();
+        public List<SequenceFileInfo> PackageTopLevelSequenceFiles { get; private set; } = new();
+        public List<SequenceFileInfo> TesterAppTopLevelSequenceFiles { get; private set; } = new();
 
         public EOLSettings eolSettings;
         private readonly Virinco.WATS.Interface.MES.Software.Software _software;
@@ -197,7 +200,8 @@ namespace EOL.ViewModels
                             Project = GetTagValue(pkg, "Project"),
                             VersionAndStatus = new PackageVersion
                             {
-                                Version = GetTagValue(pkg, "SwVersion"),
+                                Version = GetTagValue(pkg, "Version"),
+                                TesterAppVersion = GetTagValue(pkg, "TesterApp"),
                                 Status = (StatusEnum)pkg.Status
                             }
                         };
@@ -217,10 +221,14 @@ namespace EOL.ViewModels
 
         private void OnConfirm()
         {
-            SelectedPackage = DisplayPackages.FirstOrDefault(p =>
+            TaggedPackage selectedtaggedpackage = new TaggedPackage();
+
+            selectedtaggedpackage = DisplayPackages.FirstOrDefault(p =>
                 p.StationType == SelectedStationType &&
                 p.Project == SelectedProject &&
-                p.VersionAndStatus == SelectedPackageVersion)?.Package;
+                p.VersionAndStatus == SelectedPackageVersion);
+
+            SelectedPackage = selectedtaggedpackage?.Package;
 
             if (SelectedPackage != null)
             {
@@ -233,7 +241,12 @@ namespace EOL.ViewModels
                     }
                 }
 
-                _ = DownloadPackageAsync(SelectedPackage);
+                DownloadPackage(SelectedPackage);
+                if(selectedtaggedpackage.VersionAndStatus.TesterAppVersion != null)
+                { 
+                    if(!selectedtaggedpackage.VersionAndStatus.TesterAppVersion.Contains(GetAppVersion()))
+                        DownloadTesterApp(selectedtaggedpackage.VersionAndStatus.TesterAppVersion);
+                }
                 eolSettings.StationType = SelectedStationType;
                 eolSettings.PackageId = SelectedPackage.PackageId;
                 CloseEvent?.Invoke();
@@ -244,38 +257,29 @@ namespace EOL.ViewModels
         {
             isContinue = true;
             SelectedPackage = DisplayPackages.FirstOrDefault(p => p.Package.PackageId == eolSettings.PackageId)?.Package;
-            _ = DownloadPackageAsync(SelectedPackage);
+            DownloadPackage(SelectedPackage);
             CloseEvent?.Invoke();
         }
 
-        private async System.Threading.Tasks.Task DownloadPackageAsync(Package package)
+        private void DownloadPackage(Package package)
         {
             try
             {
                 List<FileInfo> executeFiles;
                 List<FileInfo> topLevelSequences;
 
-                await System.Threading.Tasks.Task.Run(() =>
-                {
-                    _software.InstallPackage(
-                        package,
-                        DisplayProgress: true,     // Let WATS show the built-in progress window
-                        WaitForExecution: true,    // Wait for installation to complete
-                        out executeFiles,
-                        out topLevelSequences
-                    );
-                    string basePath = Path.Combine(
-                        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                        "EOL"
-                    );
-                    SelectedPackagePath = Path.Combine(basePath, package.Name);
-                    TopLevelSequenceFiles = topLevelSequences
-                     .Select(f => new SequenceFileInfo(f.Name, f.FullName))
-                     .ToList();
 
-                    LoadToUserSettings();
+                _software.InstallPackage(
+                    package,
+                    DisplayProgress: true,     // Let WATS show the built-in progress window
+                    WaitForExecution: true,    // Wait for installation to complete
+                    out executeFiles,
+                    out topLevelSequences
+                );
 
-                });
+                PackageTopLevelSequenceFiles = topLevelSequences
+                 .Select(f => new SequenceFileInfo(f.Name, f.FullName))
+                 .ToList();
 
             }
             catch (Exception ex)
@@ -285,7 +289,37 @@ namespace EOL.ViewModels
             }
         }
 
-        private void LoadToUserSettings()
+        private void DownloadTesterApp(string testerversion)
+        {
+            try
+            {
+                List<FileInfo> executeFiles;
+                List<FileInfo> topLevelSequences;
+
+
+                _software.InstallPackage(
+                    package,
+                    DisplayProgress: true,     // Let WATS show the built-in progress window
+                    WaitForExecution: true,    // Wait for installation to complete
+                    out executeFiles,
+                    out topLevelSequences
+                );
+
+                TesterAppTopLevelSequenceFiles = topLevelSequences
+                 .Select(f => new SequenceFileInfo(f.Name, f.FullName))
+                 .ToList();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Installation failed: {ex.Message}");
+                // Optionally display an error dialog to the user
+            }
+        }
+
+        public bool LoadToUserSettings()
         {
             try
             {
@@ -295,18 +329,22 @@ namespace EOL.ViewModels
                 SetScriptPath("merge_app", path => eolSettings.UserDefaultSettings.FirstFlashFilePath = path);
                 SetScriptPath("merge_boot", path => eolSettings.UserDefaultSettings.SecondFlashFilePath = path);
                 SetScriptPath("monitor", path => eolSettings.UserDefaultSettings.DefaultMonitorLogScript = path);
+                SetScriptPath("param_defaults_all", path => eolSettings.MCUParametersJsonPath = path);
 
                 ApplyConfigJsonOverrides();
+
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to load settings: {ex.Message}");
+                return false;
             }
         }
 
         private void SetScriptPath(string fileName, Action<string> assignPath)
         {
-            var file = TopLevelSequenceFiles.FirstOrDefault(f =>
+            var file = PackageTopLevelSequenceFiles.FirstOrDefault(f =>
                 f.Name.Contains(fileName, StringComparison.OrdinalIgnoreCase)); 
             
             if (file != null)
@@ -397,7 +435,7 @@ namespace EOL.ViewModels
 
         private void ApplyConfigJsonOverrides()
         {
-            var files = TopLevelSequenceFiles;
+            var files = PackageTopLevelSequenceFiles;
             if (files == null) return;
 
             // Try to get a full path to config.json (case-insensitive)
@@ -415,31 +453,19 @@ namespace EOL.ViewModels
             };
 
             // json = contents of config.json
-            JsonConvert.PopulateObject(json, eolSettings.UserDefaultSettings, settings);
+            JsonConvert.PopulateObject(json, eolSettings, settings);
 
         }
 
-        //private async Task<List<Package>> GetPackagesAsync()
-        //{
-        //    using (HttpClient http = new HttpClient())
-        //    {
-        //        var apiToken = "UmVzdFRva2VuOmN0M1Y0M3Y2SU5JMXdYUzc2MDNRYTB5SSVQQzhWMg==";
+        public Package GetSelectedPackageId()
+        {
+            return SelectedPackage ?? null ;
+        }
 
-        //        // Set: Authorization: Basic {token}
-        //        http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", apiToken);
-        //        http.DefaultRequestHeaders.Accept.Clear();
-        //        http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderZZZZValue("application/json"));
-
-        //        using var resp = await http.GetAsync("https://irpsystems.wats.com/api/Software/Packages");
-        //        if (!resp.IsSuccessStatusCode)
-        //            throw new HttpRequestException($"WATS {(int)resp.StatusCode} {resp.StatusCode}.");
-
-        //        var json = await resp.Content.ReadAsStringAsync();
-        //        var packages = JsonConvert.DeserializeObject<List<Package>>(json) ?? new List<Package>(); 
-
-        //        return packages;
-        //    }
-        //}
+        private string GetAppVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "Unknown";
+        }
 
         public event Action CloseEvent;
         public event Func<bool> PasswordRequested;

@@ -6,12 +6,17 @@
              xmlns:local="clr-namespace:EOL.Views"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </UserControl.Resources>
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <!-- MCU params row -->
                 <RowDefinition Height="5" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="8" />
                 <RowDefinition Height="Auto" />
                 <!-- WATS config expander -->
                 <RowDefinition Height="*" />
@@ -105,6 +110,55 @@
                              IsReadOnlyCaretVisible="False"
                              BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"
                              MinWidth="220"/>
+                </Grid>
+            </Expander>
+            <Expander Grid.Row="4"
+          Header="Approve pending package"
+          IsExpanded="False"
+          Margin="0,8,0,0"
+          Visibility="{Binding IsPackagePending, Converter={StaticResource BoolToVis}}">
+                <Grid Margin="8,6,8,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="180"/>
+                        <!-- labels -->
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="*"/>
+                        <!-- inputs -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- 1) Pending package name (read-only) -->
+                    <TextBlock Grid.Row="0" Grid.Column="0"
+                   Text="Pending package"
+                   VerticalAlignment="Center"/>
+                    <TextBox  Grid.Row="0" Grid.Column="2"
+                  Text="{Binding PendingPackageName, Mode=OneWay}"
+                  IsReadOnly="True"
+                  BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"
+                  MinWidth="220"/>
+
+                    <!-- 2) Approved by (prompt for name) -->
+                    <TextBlock Grid.Row="2" Grid.Column="0"
+                   Text="Approved by"
+                   VerticalAlignment="Center"/>
+                    <TextBox  Grid.Row="2" Grid.Column="2"
+                  Text="{Binding ApprovedBy, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  MinWidth="220"
+                  ToolTip="Enter approver's full name"/>
+
+                    <!-- 3) Release button -->
+                    <Button Grid.Row="4" Grid.Column="2"
+                Content="Approve package"
+                HorizontalAlignment="Left"
+                Padding="14,4"
+                Command="{Binding ReleasePackageCommand}"
+                IsEnabled="{Binding CanReleasePendingPackage}"/>
                 </Grid>
             </Expander>
 

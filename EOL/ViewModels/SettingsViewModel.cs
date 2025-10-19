@@ -15,6 +15,8 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using FlowDirection = System.Windows.FlowDirection;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using Virinco.WATS.Service.MES.Contract;
+using Virinco.WATS.Interface;
 
 namespace EOL.ViewModels
 {
@@ -65,7 +67,9 @@ namespace EOL.ViewModels
             UserConfigManager userConfigManager,
             FlashingHandler flashingHandler,
 			SetupSelectionViewModel setupSelectionVM,
-            WatsConnectionMonitor watsConnection)
+            TDM tdm,
+            Package selectedpackage
+            )
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
@@ -79,7 +83,7 @@ namespace EOL.ViewModels
 			PSoCPort2_SelectionChangedCommand = new RelayCommand(PSoCPort2_SelectionChanged);
             PSoCPort1_DropDownOpenedCommand = new RelayCommand(PSoCPort1_DropDownOpened);
 			PSoCPort2_DropDownOpenedCommand = new RelayCommand(PSoCPort2_DropDownOpened);
-			SettingsAdminVM = new SettingsAdminViewModel(eolSettings , watsConnection);
+			SettingsAdminVM = new SettingsAdminViewModel(eolSettings , tdm ,selectedpackage);
             MainScriptEventChanged += SettingsAdminVM.OnMainScriptChanged;
 		}
 

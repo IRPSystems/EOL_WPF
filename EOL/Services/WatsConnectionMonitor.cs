@@ -4,11 +4,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using Virinco.WATS.Interface;
+using Virinco.WATS.Interface.MES.Software;
 
 
 public class WatsConnectionMonitor
 {
     public readonly TDM _tdm;
+    public readonly Software _software;
     private readonly DispatcherTimer _connectionTimer;
 
     public event Action<bool> ConnectionStatusChanged;
