@@ -5181,8 +5181,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -5207,8 +5207,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -5226,8 +5226,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -5252,8 +5252,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -5278,8 +5278,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -5304,8 +5304,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]

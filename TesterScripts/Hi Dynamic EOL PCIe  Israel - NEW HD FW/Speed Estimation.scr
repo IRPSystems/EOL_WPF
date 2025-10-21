@@ -62,8 +62,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -142,8 +142,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -222,8 +222,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -302,8 +302,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -402,8 +402,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -487,8 +487,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -567,8 +567,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -647,8 +647,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -657,25 +657,19 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Forward",
-          "Description": "Max Speed Limit Value",
+          "Value": " ",
+          "GroupName": "Monitor",
+          "Description": "Forward Speed Limit Value",
           "Default": "0",
           "Cmd": "mplrs0mxs",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              10000.0
-            ]
-          },
+          "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
-          "Name": "Max Speed Limit Value",
-          "Units": "RPM",
+          "Name": "Forward Speed Limit",
+          "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0
@@ -719,8 +713,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -799,8 +793,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -879,8 +873,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -951,8 +945,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -994,8 +988,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1105,8 +1099,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1177,8 +1171,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1196,8 +1190,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1206,25 +1200,19 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Forward",
-          "Description": "Max Speed Limit Value",
+          "Value": " ",
+          "GroupName": "Monitor",
+          "Description": "Forward Speed Limit Value",
           "Default": "0",
           "Cmd": "mplrs0mxs",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              10000.0
-            ]
-          },
+          "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
-          "Name": "Max Speed Limit Value",
-          "Units": "RPM",
+          "Name": "Forward Speed Limit",
+          "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0
@@ -1268,8 +1256,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1340,8 +1328,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1383,8 +1371,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1494,8 +1482,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1566,8 +1554,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1585,8 +1573,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1595,25 +1583,19 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Forward",
-          "Description": "Max Speed Limit Value",
+          "Value": " ",
+          "GroupName": "Monitor",
+          "Description": "Forward Speed Limit Value",
           "Default": "0",
           "Cmd": "mplrs0mxs",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              10000.0
-            ]
-          },
+          "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
-          "Save": true,
+          "Save": false,
           "DropDown": null,
-          "Name": "Max Speed Limit Value",
-          "Units": "RPM",
+          "Name": "Forward Speed Limit",
+          "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
           "CommunicationTimeout": 0
@@ -1657,8 +1639,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1729,8 +1711,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1772,8 +1754,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1883,8 +1865,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1955,8 +1937,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -2027,8 +2009,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -2127,8 +2109,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]

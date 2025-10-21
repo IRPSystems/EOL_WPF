@@ -72,8 +72,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -91,8 +91,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -163,8 +163,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -182,8 +182,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -254,8 +254,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -273,8 +273,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -345,8 +345,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -364,8 +364,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -436,8 +436,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -455,8 +455,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -527,8 +527,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -546,8 +546,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -625,7 +625,7 @@
         "RefSensorNumOfReadings": 10,
         "RefSensorChannel": 0,
         "RefSensorPorts": 16,
-        "NIDAQShuntResistor": 17.8,
+        "NIDAQShuntResistor": 18.4,
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate Phase W",
         "IsPass": false,
@@ -637,8 +637,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -709,8 +709,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -728,8 +728,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -800,8 +800,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -819,8 +819,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -877,7 +877,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 2,
+        "AverageOfNRead_CompareValue": 4,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -910,7 +910,7 @@
           "Ni6002_IOPort": 16,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 17.8,
+          "NIDAQShuntResistor": 18.4,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
@@ -930,8 +930,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1002,8 +1002,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1021,8 +1021,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1093,8 +1093,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1112,8 +1112,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1170,7 +1170,7 @@
         "IsUseParamFactor": false,
         "ParamFactor": 0.0,
         "IsUseCompareValueAverage": true,
-        "AverageOfNRead_CompareValue": 2,
+        "AverageOfNRead_CompareValue": 4,
         "IsUseCompareValueFactor": false,
         "CompareValueFactor": 0.0,
         "Parameter_ExtraData": {
@@ -1203,7 +1203,7 @@
           "Ni6002_IOPort": 16,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 17.8,
+          "NIDAQShuntResistor": 18.4,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
@@ -1223,8 +1223,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1295,8 +1295,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1314,8 +1314,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1386,8 +1386,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1405,8 +1405,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1496,7 +1496,7 @@
           "Ni6002_IOPort": 16,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 17.8,
+          "NIDAQShuntResistor": 18.4,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
@@ -1516,8 +1516,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1588,8 +1588,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1607,8 +1607,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1679,8 +1679,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1698,8 +1698,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1789,7 +1789,7 @@
           "Ni6002_IOPort": 16,
           "Ni6002_Line": 0,
           "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 17.8,
+          "NIDAQShuntResistor": 18.4,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
           "AteCommandDropDwonIndex": 0,
@@ -1809,8 +1809,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1873,7 +1873,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
         "IsPass": false,
-        "PassNextId": 35,
+        "PassNextId": 36,
         "FailNextId": 0,
         "ID": 34,
         "EOLReportsSelectionData": {
@@ -1881,8 +1881,27 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 24",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 35,
+        "FailNextId": 0,
+        "ID": 36,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -1953,7 +1972,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed to OFF",
         "IsPass": false,
-        "PassNextId": 36,
+        "PassNextId": 37,
         "FailNextId": 0,
         "ID": 35,
         "EOLReportsSelectionData": {
@@ -1961,8 +1980,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -2033,26 +2052,7 @@
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual FOC Control to OFF",
         "IsPass": false,
-        "PassNextId": 37,
-        "FailNextId": 0,
-        "ID": 36,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 24",
-        "Interval": 2,
-        "IntervalUnite": 2,
-        "UserTitle": "Delay",
-        "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 38,
         "FailNextId": 0,
         "ID": 37,
         "EOLReportsSelectionData": {
@@ -2060,8 +2060,27 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 38",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": -1,
+        "FailNextId": 0,
+        "ID": 38,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]

@@ -19,8 +19,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -69,7 +69,7 @@
         "Tolerance": 50.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Electric Angle (MCU)\" = \" Sensor Electric Angle\" ±  50 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -130,8 +130,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]

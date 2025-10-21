@@ -76,8 +76,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -143,8 +143,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -162,8 +162,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -278,8 +278,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -514,8 +514,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -533,8 +533,8 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -625,8 +625,112 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 14",
+        "Interval": 1,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 9,
+        "FailNextId": 0,
+        "ID": 8,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 12",
+        "Parameter": {
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
+          "Io_port": 0,
+          "Status_paramter": "Rw",
+          "command_to_device": "digital output",
+          "portLine": 0,
+          "shunt_resistor": 0.0,
+          "numofcounts": 0,
+          "DropDown": null,
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Digital Output",
+          "Units": null,
+          "Value": null,
+          "DeviceType": 9,
+          "ToolTip": null,
+          "CommunicationTimeout": 0
+        },
+        "Value": 0.0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
+          "Ni6002_ExpectedRPM": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 3,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Toggle OFF VSW",
+        "IsPass": false,
+        "PassNextId": 10,
+        "FailNextId": 0,
+        "ID": 9,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 13",
+        "Interval": 2,
+        "IntervalUnite": 2,
+        "UserTitle": "Delay",
+        "IsPass": false,
+        "PassNextId": 11,
+        "FailNextId": 0,
+        "ID": 10,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -643,16 +747,16 @@
         "SelectedScriptName": "LV Power Up",
         "UserTitle": "LV Power UP",
         "IsPass": false,
-        "PassNextId": 9,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -669,16 +773,16 @@
         "SelectedScriptName": "HV Power Up",
         "UserTitle": "HV Power Up",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 9,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -688,16 +792,16 @@
         "IntervalUnite": 2,
         "UserTitle": "Delay",
         "IsPass": false,
-        "PassNextId": 11,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -716,14 +820,14 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 11,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]

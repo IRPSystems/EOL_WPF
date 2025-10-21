@@ -2621,13 +2621,13 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 8",
+        "Name": "ScriptNodeSubScript 7",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2639,7 +2639,7 @@
         "SelectedScriptName": "Phase U",
         "UserTitle": "Phase U",
         "IsPass": false,
-        "PassNextId": 6,
+        "PassNextId": 3,
         "FailNextId": 0,
         "ID": 2,
         "EOLReportsSelectionData": {
@@ -2647,13 +2647,13 @@
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 6",
+        "Name": "ScriptNodeSubScript 6",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2665,21 +2665,21 @@
         "SelectedScriptName": "Phase W",
         "UserTitle": "Phase W",
         "IsPass": false,
-        "PassNextId": 7,
+        "PassNextId": 8,
         "FailNextId": 0,
-        "ID": 6,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 7",
+        "Name": "ScriptNodeSubScript 8",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2691,16 +2691,16 @@
         "SelectedScriptName": "BUS",
         "UserTitle": "BUS",
         "IsPass": false,
-        "PassNextId": 5,
+        "PassNextId": 4,
         "FailNextId": 0,
-        "ID": 7,
+        "ID": 8,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       },
       {
@@ -2719,14 +2719,14 @@
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
           "IsSaveToPdfExecTable": true,
           "IsSaveToPdfDynTable": true,
-          "IsSaveToWats": true,
-          "IsSaveToCustomerVer": false
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
         }
       }
     ]
