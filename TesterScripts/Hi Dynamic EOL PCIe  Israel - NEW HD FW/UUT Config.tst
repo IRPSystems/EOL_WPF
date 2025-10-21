@@ -2665,7 +2665,7 @@
         "SelectedScriptName": "Write SN",
         "UserTitle": "Write SN",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
         "EOLReportsSelectionData": {
@@ -2676,6 +2676,23 @@
           "IsSaveToCustomerVer": false,
           "IsSaveToWats": true
         }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLSetManufDate, ScriptHandler",
+        "Name": "EOL Set Manufacture Date 4",
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        },
+        "UserTitle": "Set Manufacture Date",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 4
       }
     ]
   },

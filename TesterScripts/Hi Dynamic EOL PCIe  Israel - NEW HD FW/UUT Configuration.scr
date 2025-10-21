@@ -10,7 +10,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 18874372.0,
           "GroupName": "Monitor",
           "Description": "Faults Vector Internal, 32 bits bitwise\r\nLower bits of the whole faults vector",
           "Default": "0",
@@ -217,7 +217,7 @@
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
+          "Value": 2056.0,
           "GroupName": "Monitor",
           "Description": "Faults Vector Internal, 32 bits bitwise\r\nHigher bits of the whole faults vector",
           "Default": "0",
