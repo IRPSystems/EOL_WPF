@@ -1,6 +1,7 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DeviceHandler.Models;
 using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
@@ -27,8 +28,9 @@ namespace EOL.ViewModels
 
 		public SetupSelectionViewModel SetupSelectionVM { get; set; }
         public SettingsAdminViewModel SettingsAdminVM { get; set; }
+        public CANBusSettingsListViewModel CANBusSettingsVM { get; set; }
 
-		public bool IsAdminMode { get; set; }
+        public bool IsAdminMode { get; set; }
 
         public List<string> PSoCPortsList { get; set; }
 
@@ -65,13 +67,17 @@ namespace EOL.ViewModels
             UserConfigManager userConfigManager,
             FlashingHandler flashingHandler,
 			SetupSelectionViewModel setupSelectionVM,
-            WatsConnectionMonitor watsConnection)
+            WatsConnectionMonitor watsConnection,
+            DevicesContainer devicesContainer)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
             _flashingHandler = flashingHandler;
+            CANBusSettingsVM = new CANBusSettingsListViewModel(
+                devicesContainer,
+                setupSelectionVM);
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);

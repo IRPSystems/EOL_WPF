@@ -51,6 +51,8 @@ namespace EOL.Models
 		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
 		public bool PowerSupplyEA { get; set; }
+        public bool CANBus { get; set; }
+
         public string PSoC_Port1 { get; set; }
         public string PSoC_Port2 { get; set; }
         public string WatsTestCode { get; set; }
@@ -64,7 +66,7 @@ namespace EOL.Models
 			NI_6002_2 = true;
 			Printer_TSC = true;
 			NumatoGPIO = true;
-
-		}
+            CANBus = true;
+        }
 	}
 }

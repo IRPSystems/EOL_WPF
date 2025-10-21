@@ -116,7 +116,7 @@ namespace EOL.ViewModels
 
 			_runData = new RunData();
 
-			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+			//_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
 
             LoadConfigToUI();
@@ -256,7 +256,8 @@ namespace EOL.ViewModels
 					_userConfigManager,
 					_flashingHandler,
 					_setupSelectionVM,
-					_watsConnectionMonitor);
+					_watsConnectionMonitor,
+					DevicesContainter);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
@@ -385,7 +386,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.RigolM300 &&
 					device.DeviceType != DeviceTypesEnum.MX180TP &&
 					device.DeviceType != DeviceTypesEnum.ITM3100 &&
-					device.DeviceType != DeviceTypesEnum.MCU_B2B )
+					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
+					device.DeviceType != DeviceTypesEnum.CANBus)
 				{
 					devicesToRemoveList.Add(device);
 					continue;
@@ -407,7 +409,9 @@ namespace EOL.ViewModels
 					devicesToRemoveList.Add(device);
 				else if (device.DeviceType == DeviceTypesEnum.PowerSupplyEA && _eolSettings.UserDefaultSettings.PowerSupplyEA == false)
 					devicesToRemoveList.Add(device);
-			}
+                else if (device.DeviceType == DeviceTypesEnum.CANBus && _eolSettings.UserDefaultSettings.CANBus == false)
+                    devicesToRemoveList.Add(device);
+            }
 
 			foreach(DeviceData device in devicesToRemoveList)
 				devicesList.Remove(device);
