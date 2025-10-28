@@ -5,6 +5,7 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
                  xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                 xmlns:converters="clr-namespace:Converters;assembly=Converters"
                  xmlns:device_handler_views="clr-namespace:DeviceHandler.Views;assembly=DeviceHandler"
                  xmlns:local="clr-namespace:EOL.Views"
                  mc:Ignorable="d"
@@ -12,6 +13,7 @@
                  WindowStartupLocation="CenterOwner">
 
     <Window.Resources>
+        <converters:IsNotNullConverter x:Key="IsNotNullConverter" />
 
         <Style x:Key="FilesListStyle" TargetType="ListViewItem" >
 
@@ -192,8 +194,9 @@
                    Text="CAN BUS"
                    VerticalAlignment="Center"
                    Margin="7,0,0,0"/>
-                <device_handler_views:CANBusSettingsListView Grid.Row="0" Grid.Column="2" 
-                                                     DataContext="{Binding CANBusSettingsVM}"/>
+                <device_handler_views:CANBusSettingsListView Grid.Row="0" Grid.Column="2"
+                            DataContext="{Binding CANBusSettingsVM}"
+                            Visibility="{Binding CANBusSettingsVM, Converter={StaticResource IsNotNullConverter}}"/>
 
             </StackPanel>
             

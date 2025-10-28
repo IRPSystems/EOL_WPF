@@ -5,12 +5,14 @@ using DeviceHandler.Models;
 using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
+using Microsoft.IdentityModel.Tokens;
 using ScriptHandler.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -97,6 +99,21 @@ namespace EOL.ViewModels
         {
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
             _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation?.Code.ToString() ?? string.Empty;
+            //if (CANBusSettingsVM.CANBusDeviceList != null && !CANBusSettingsVM.CANBusDeviceList.IsNullOrEmpty())
+            //{
+            //    foreach (var canBusDevice in CANBusSettingsVM.CANBusDeviceList[0].CANBusDevice.DeviceDataList)
+            //    {
+            //        if (!_userDefaultSettings.CANBus.Any(x => x.DeviceType == canBusDevice.DeviceType))
+            //        {
+            //            CANBusDeviceConfig canBusDeviceconfig = new CANBusDeviceConfig
+            //            {
+            //                DeviceType = canBusDevice.DeviceType,
+            //                NodeId = canBusDevice.NodeId
+            //            };
+            //            _userDefaultSettings.CANBus.Add(canBusDeviceconfig);
+            //        }
+            //    }
+            //}
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);
