@@ -353,12 +353,15 @@ namespace EOL.ViewModels
 
 			foreach (var target in targets)
 			{
+				if(target == null) 
+					continue;
+
 				target.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
 
 				foreach (var param in ateDevice.MCU_FullList)
 				{
-					param.DeviceType = mcuDevice.DeviceType;
-					param.Device = mcuDevice;
+					param.DeviceType = target.DeviceType;
+					param.Device = target;
 					target.MCU_FullList.Add(param);
 				}
 			}
