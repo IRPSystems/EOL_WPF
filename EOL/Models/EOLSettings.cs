@@ -20,6 +20,9 @@ namespace EOL.Models
 
 		public string MCUParametersJsonPath { get; set; }
 
+		[JsonIgnore]
+		public bool IsDefaultSettings { get; set; } = false;
+
 		public EOLSettings()
 		{
 			IsLightTheme = false;
@@ -32,9 +35,10 @@ namespace EOL.Models
 			eolSettings.ScriptUserData = new ScriptUserData();
 			eolSettings.DeviceSetupUserData = new DeviceSetupUserData();
 			eolSettings.UserDefaultSettings = new UserDefaultSettings();
+			eolSettings.IsDefaultSettings = true;
 
 
-			return eolSettings;
+            return eolSettings;
 		}
 
 		public static EOLSettings LoadEOLUserData(string dirName)

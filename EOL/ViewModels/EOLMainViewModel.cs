@@ -197,7 +197,7 @@ namespace EOL.ViewModels
                 _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
 
-                if (_isConfigSelectedByUser == null)
+                if (_eolSettings.IsDefaultSettings)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);
@@ -236,7 +236,7 @@ namespace EOL.ViewModels
 
                 CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				if (_eolSettings.GeneralData == null)
+				if (_eolSettings.GeneralData == null )
 				{
 					_eolSettings.GeneralData = new SettingsData()
 					{
