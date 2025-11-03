@@ -497,23 +497,6 @@ namespace EOL.ViewModels
 				{
 					(deviceFullData.DeviceCommunicator as PowerSupplayEA_Communicator).SetIsUseRampForOnOff(false);
 				}
-				if(deviceFullData.Device is CANBus_DeviceData canbus)
-				{
-					//foreach(var subdevice in _eolSettings.UserDefaultSettings.CANBus)
-					//{ 						
-					//	DeviceData deviceData1 =
-					//		_setupSelectionVM.DevicesSourceList.ToList().Find((d) => d.DeviceType == subdevice.DeviceType);
-     //                   deviceData1.JsonFilePath = _eolSettings.DeviceSetupUserData.MCUJsonPath ?? "Data\\Device Communications\\param_defaults.json";
-					//	deviceData1.NodeId = subdevice.NodeId;
-     //                   if (deviceData1 != null)
-					//	{
-					//		canbus.DeviceDataList.Add(deviceData1);
-     //                   }
-					//	ReadDevicesFileService readDevicesFileService = new ReadDevicesFileService();
-					//	canbus.InitSubDevicesParams(readDevicesFileService);
-					//	MergeATEParamsToMCU(canbus.DeviceDataList);
-     //               }
-                }
 
                 DevicesContainter.DevicesFullDataList.Add(deviceFullData);
 				DevicesContainter.DevicesList.Add(device as DeviceData);
