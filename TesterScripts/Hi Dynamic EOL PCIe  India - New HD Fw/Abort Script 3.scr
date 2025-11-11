@@ -1,44 +1,31 @@
 {
   "$type": "ScriptHandler.Models.ScriptData, ScriptHandler",
-  "Name": "Config Manual FOC",
+  "Name": "Abort Script 3",
   "ScriptItemsList": {
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[ScriptHandler.Interfaces.IScriptItem, ScriptHandler]], System.ObjectModel",
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 21",
+        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "SYST:LOCK",
-          "Max": 1,
-          "ParamType": 0,
-          "ModbusAddress": 402,
+          "Cmd": "SOUR:VOLTAGE",
+          "Max": 100,
+          "ParamType": 2,
+          "ModbusAddress": 500,
           "NumOfRegisters": 1,
           "ValueType": "ushort",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Remote On/Off",
-          "Units": null,
+          "DropDown": null,
+          "Name": "Voltage Limit",
+          "Units": "V",
           "Value": null,
           "DeviceType": 3,
           "ToolTip": null,
-          "CommunicationTimeout": 3000
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -54,10 +41,10 @@
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
           "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
+          "AteCommandDropDwonIndex": -1,
           "Zimmer_Channel": 0,
           "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
+          "NumatoGPIODropDwonIndex": -1,
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
@@ -66,7 +53,7 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set PS to Remote Control",
+        "UserTitle": "Set PS Output to OFF",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -82,24 +69,35 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 8",
+        "Name": "Set Parameter 3",
         "Parameter": {
-          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "SOUR:VOLTAGE",
-          "Max": 100,
-          "ParamType": 2,
-          "ModbusAddress": 500,
-          "NumOfRegisters": 1,
-          "ValueType": "ushort",
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Motor Manual ID Command",
+          "Default": "0",
+          "Cmd": "midcmdman",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -600.0,
+              600.0
+            ]
+          },
+          "Format": null,
+          "Scale": 10.0,
+          "Note": null,
+          "Save": false,
           "DropDown": null,
-          "Name": "Voltage Limit",
-          "Units": "V",
-          "Value": null,
-          "DeviceType": 3,
+          "Name": "Manual ID Command",
+          "Units": "A",
+          "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
-        "Value": 300.0,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -128,10 +126,10 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set VBus Voltage Limit To 300V",
+        "UserTitle": "Set Manual ID Command to 0",
         "IsPass": false,
         "PassNextId": 3,
-        "FailNextId": 0,
+        "FailNextId": 3,
         "ID": 2,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
@@ -144,183 +142,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
-        "Parameter": {
-          "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
-          "Cmd": "OUTP",
-          "Max": 1,
-          "ParamType": 0,
-          "ModbusAddress": 405,
-          "NumOfRegisters": 1,
-          "ValueType": "ushort",
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
-                "Value": "1"
-              }
-            ]
-          },
-          "Name": "Output On/Off",
-          "Units": null,
-          "Value": null,
-          "DeviceType": 3,
-          "ToolTip": null,
-          "CommunicationTimeout": 3000
-        },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Rigol_Channel": 0,
-          "Rigol_Slot": 0,
-          "Rigol_Range": 0,
-          "MX180TP_Channel": 0,
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
-          "DBCInterval": 0,
-          "DBCIntervalUnite": 1
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set PS On",
-        "IsPass": false,
-        "PassNextId": 4,
-        "FailNextId": 0,
-        "ID": 3,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false,
-          "IsSaveToWats": true
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 23",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Operation",
-          "Description": "Motor State",
-          "Default": "Neutral",
-          "Cmd": "mstate",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": {
-            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
-            "$values": [
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Neutral",
-                "Value": "0"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Run",
-                "Value": "1"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Lock",
-                "Value": "2"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Fault",
-                "Value": "3"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ATE",
-                "Value": "4"
-              },
-              {
-                "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
-                "Value": "6"
-              }
-            ]
-          },
-          "Name": "Motor State (Operation)",
-          "Units": null,
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0
-        },
-        "Value": 0,
-        "ValueDropDwonIndex": 0,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Rigol_Channel": 0,
-          "Rigol_Slot": 0,
-          "Rigol_Range": 0,
-          "MX180TP_Channel": 0,
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
-          "DBCInterval": 0,
-          "DBCIntervalUnite": 1
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set UUT Motor State to Neutral",
-        "IsPass": false,
-        "PassNextId": 5,
-        "FailNextId": 0,
-        "ID": 4,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false,
-          "IsSaveToWats": true
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -353,10 +175,11 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
+        "Value": 0,
+        "ValueDropDwonIndex": 0,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
         "ExtraData": {
@@ -384,11 +207,84 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set UUT Manual FOC  to ON",
+        "UserTitle": "Set Manual FOC to OFF",
         "IsPass": false,
-        "PassNextId": 6,
-        "FailNextId": 0,
-        "ID": 5,
+        "PassNextId": 4,
+        "FailNextId": 4,
+        "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 5",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Operation",
+          "Description": "Manual Electric Angle Speed Value",
+          "Default": "0",
+          "Cmd": "manangspd",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              -1000.0,
+              1000.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1000.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "Manual Angle Speed Value",
+          "Units": "Hz",
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
+        },
+        "Value": 0,
+        "ValueDropDwonIndex": -1,
+        "SwitchRelayValue": null,
+        "SwitchRelayChannel": 0,
+        "ExtraData": {
+          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
+          "Rigol_Channel": 0,
+          "Rigol_Slot": 0,
+          "Rigol_Range": 0,
+          "MX180TP_Channel": 0,
+          "Ni6002_ExpectedRPM": 0,
+          "Ni6002_IOPort": 0,
+          "Ni6002_Line": 0,
+          "NI6002_NumofCounts": 0,
+          "NIDAQShuntResistor": 0.0,
+          "AteCommand": 0,
+          "NIThermistorIndex": 0,
+          "AteCommandDropDwonIndex": 0,
+          "Zimmer_Channel": 0,
+          "NumatoGPIOPort": 0,
+          "NumatoGPIODropDwonIndex": 0,
+          "DBCInterval": 0,
+          "DBCIntervalUnite": 1
+        },
+        "ValueParameter": null,
+        "IsWarning": true,
+        "IsFault": false,
+        "IsCriticalFault": false,
+        "SafetyOfficerErrorLevel": 1,
+        "UserTitle": "Set Manual Angle Speed Value",
+        "IsPass": false,
+        "PassNextId": 5,
+        "FailNextId": 5,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -402,112 +298,197 @@
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
         "Name": "Set Parameter 4",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Operation",
-          "Description": "Manual Electric Angle Speed Flag",
-          "Default": "OFF",
-          "Cmd": "flgmanang",
-          "Range": null,
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": false,
-          "DropDown": {
+          "ATECommand": {
             "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
             "$values": [
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "OFF",
+                "Name": "ATE_SET_PhasesOff",
                 "Value": "0"
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "ON",
+                "Name": "ATE_SET_PhasesUHVL",
                 "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUHWL",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHWL",
+                "Value": "3"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVHUL",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHUL",
+                "Value": "5"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWHVL",
+                "Value": "6"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_0",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut1_1",
+                "Value": "9"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_0",
+                "Value": "10"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut2_1",
+                "Value": "11"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_0",
+                "Value": "12"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_DigOut3_1",
+                "Value": "13"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_WatchdogTest",
+                "Value": "14"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ResetWatchdogCounter",
+                "Value": "15"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_0",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EolFlagPass_1",
+                "Value": "17"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ExternalWDTReset",
+                "Value": "18"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeON",
+                "Value": "19"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ActiveDischargeOFF",
+                "Value": "20"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_ClearActiveDisTimoutFault",
+                "Value": "21"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUH",
+                "Value": "22"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_ON",
+                "Value": "23"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_UC_EN_OFF",
+                "Value": "24"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_ON",
+                "Value": "25"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_EN_5V_OFF",
+                "Value": "26"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVH",
+                "Value": "27"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWH",
+                "Value": "28"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesUL",
+                "Value": "29"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesVL",
+                "Value": "30"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_PhasesWL",
+                "Value": "31"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefTo5V",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "ATE_SET_VrefToRealMeasurement",
+                "Value": "33"
               }
             ]
           },
-          "Name": "Manual Angle Speed ",
-          "Units": null,
-          "DeviceType": 1,
-          "ToolTip": null,
-          "CommunicationTimeout": 0
-        },
-        "Value": 1,
-        "ValueDropDwonIndex": 1,
-        "SwitchRelayValue": null,
-        "SwitchRelayChannel": 0,
-        "ExtraData": {
-          "$type": "ScriptHandler.Models.ExtraDataForParameter, ScriptHandler",
-          "Rigol_Channel": 0,
-          "Rigol_Slot": 0,
-          "Rigol_Range": 0,
-          "MX180TP_Channel": 0,
-          "Ni6002_ExpectedRPM": 0,
-          "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
-          "NI6002_NumofCounts": 0,
-          "NIDAQShuntResistor": 0.0,
-          "AteCommand": 0,
-          "NIThermistorIndex": 0,
-          "AteCommandDropDwonIndex": 0,
-          "Zimmer_Channel": 0,
-          "NumatoGPIOPort": 0,
-          "NumatoGPIODropDwonIndex": 0,
-          "DBCInterval": 0,
-          "DBCIntervalUnite": 1
-        },
-        "ValueParameter": null,
-        "IsWarning": true,
-        "IsFault": false,
-        "IsCriticalFault": false,
-        "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set UUT Manual Angle Speed to ON",
-        "IsPass": false,
-        "PassNextId": 7,
-        "FailNextId": 0,
-        "ID": 6,
-        "EOLReportsSelectionData": {
-          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
-          "IsSaveToReport": true,
-          "IsSaveToPdfExecTable": true,
-          "IsSaveToPdfDynTable": true,
-          "IsSaveToCustomerVer": false,
-          "IsSaveToWats": true
-        }
-      },
-      {
-        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 7",
-        "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Operation",
-          "Description": "Manual Angle Speed Ramp",
-          "Default": "0",
-          "Cmd": "manangrmp",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              20.0
-            ]
-          },
+          "Value": null,
+          "GroupName": null,
+          "Description": null,
+          "Default": null,
+          "Cmd": "ate_set",
+          "Range": null,
           "Format": null,
           "Scale": 1.0,
           "Note": null,
           "Save": true,
           "DropDown": null,
-          "Name": "Manual Angle Speed Ramp",
+          "Name": "ATE Set",
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
-        "Value": 3.0,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -536,11 +517,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set Manual Angle Speed Ramp",
+        "UserTitle": "Set Phase Off",
         "IsPass": false,
-        "PassNextId": 8,
-        "FailNextId": 0,
-        "ID": 7,
+        "PassNextId": 6,
+        "FailNextId": 6,
+        "ID": 5,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -552,34 +533,29 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 9",
+        "Name": "Set Parameter 6",
         "Parameter": {
-          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
-          "ValueChanged": null,
-          "Value": "",
-          "GroupName": "Encoder",
-          "Description": "Aqb AB Fault Threshold",
-          "Default": "",
-          "Cmd": "aqbfltcntthr",
-          "Range": {
-            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
-            "$values": [
-              0.0,
-              5000.0
-            ]
-          },
-          "Format": null,
-          "Scale": 1.0,
-          "Note": null,
-          "Save": true,
+          "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
+          "ExpectedRPM": 0,
+          "Io_port": 0,
+          "Status_paramter": "Rw",
+          "command_to_device": "digital output",
+          "portLine": 0,
+          "shunt_resistor": 0.0,
+          "numofcounts": 0,
           "DropDown": null,
-          "Name": "Aqb AB Fault Threshold",
+          "ThermistorType": 0,
+          "ThermistorTypeList": null,
+          "IsThermistorUsed": false,
+          "Name": "Digital Output",
           "Units": null,
-          "DeviceType": 1,
+          "Value": null,
+          "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
-        "Value": 50000.0,
+        "Value": 0.0,
         "ValueDropDwonIndex": -1,
         "SwitchRelayValue": null,
         "SwitchRelayChannel": 0,
@@ -591,7 +567,7 @@
           "MX180TP_Channel": 0,
           "Ni6002_ExpectedRPM": 0,
           "Ni6002_IOPort": 0,
-          "Ni6002_Line": 0,
+          "Ni6002_Line": 4,
           "NI6002_NumofCounts": 0,
           "NIDAQShuntResistor": 0.0,
           "AteCommand": 0,
@@ -608,11 +584,11 @@
         "IsFault": false,
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
-        "UserTitle": "Set AB Fault Count Threshold to 50000",
+        "UserTitle": "Disable 48V Supply Voltage (Load Contactor)",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 8,
+        "ID": 6,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

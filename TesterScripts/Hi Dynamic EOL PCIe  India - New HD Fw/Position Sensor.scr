@@ -39,7 +39,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 1,
         "ValueDropDwonIndex": 0,
@@ -111,7 +112,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -183,7 +185,8 @@
           "Units": "°",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -255,7 +258,8 @@
           "Units": "A",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 30.0,
         "ValueDropDwonIndex": -1,
@@ -346,7 +350,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 60.0,
         "ValueDropDwonIndex": -1,
@@ -431,13 +436,14 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": "60",
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 60 ±  15 - ID:8ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 60 ±  15 - ID:8ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -529,7 +535,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 120.0,
         "ValueDropDwonIndex": -1,
@@ -614,13 +621,14 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": "120",
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 120 ±  15 - ID:11ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 120 ±  15 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -712,7 +720,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 180.0,
         "ValueDropDwonIndex": -1,
@@ -797,13 +806,14 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": "180",
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 180 ±  15 - ID:14ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 180 ±  15 - ID:14ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -895,7 +905,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 240.0,
         "ValueDropDwonIndex": -1,
@@ -980,13 +991,14 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": "240",
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 240 ±  15 - ID:17ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 240 ±  15 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1078,7 +1090,8 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 300.0,
         "ValueDropDwonIndex": -1,
@@ -1163,13 +1176,14 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": "300",
         "Tolerance": 15.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle (MCU)\" = 300 ±  15 - ID:20ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \" Sensor Electric Angle\" = 300 ±  15 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1261,7 +1275,8 @@
           "Units": "A",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
@@ -1341,7 +1356,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": -1,
         "ValueDropDwonIndex": 1,
@@ -1421,7 +1437,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 0,
         "ValueDropDwonIndex": 0,
@@ -1493,7 +1510,8 @@
           "Units": "°",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 37.5,
         "ValueDropDwonIndex": -1,

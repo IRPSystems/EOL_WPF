@@ -35,7 +35,8 @@
           "Value": null,
           "DeviceType": 3,
           "ToolTip": null,
-          "CommunicationTimeout": 3000
+          "CommunicationTimeout": 3000,
+          "IsInCANBus": false
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -97,7 +98,8 @@
           "Value": null,
           "DeviceType": 3,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
         "Value": 300.0,
         "ValueDropDwonIndex": -1,
@@ -173,7 +175,8 @@
           "Value": null,
           "DeviceType": 3,
           "ToolTip": null,
-          "CommunicationTimeout": 3000
+          "CommunicationTimeout": 3000,
+          "IsInCANBus": false
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -264,7 +267,7 @@
               },
               {
                 "$type": "Entities.Models.DropDownParamData, Entities",
-                "Name": "Init",
+                "Name": "Off",
                 "Value": "6"
               }
             ]
@@ -273,7 +276,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 0,
         "ValueDropDwonIndex": 0,
@@ -353,7 +357,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -433,7 +438,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 1,
         "ValueDropDwonIndex": 1,
@@ -505,7 +511,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 3.0,
         "ValueDropDwonIndex": -1,
@@ -577,7 +584,8 @@
           "Units": null,
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Value": 50000.0,
         "ValueDropDwonIndex": -1,

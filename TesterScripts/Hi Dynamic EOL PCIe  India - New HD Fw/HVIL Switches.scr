@@ -25,7 +25,8 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
         "Value": 1.0,
         "ValueDropDwonIndex": -1,
@@ -73,9 +74,9 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 3",
-        "Notification": "Release Both Switches",
+        "Notification": "Disconnect Digital and Power Connectors",
         "NotificationLevel": 2,
-        "UserTitle": "Release Both Switches",
+        "UserTitle": "Disconnect Digital and Power Connectors",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -110,7 +111,8 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
         "CompareValue": "0",
         "Tolerance": 0.0,
@@ -167,7 +169,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Verify Switches State - #1 OFF #2 OFF",
+        "UserTitle": "Verify Switches State - OFF",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 2,
@@ -184,9 +186,9 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 6",
-        "Notification": "Press Both Switches",
+        "Notification": "Connect Digital Connector",
         "NotificationLevel": 2,
-        "UserTitle": "Press Both Switches",
+        "UserTitle": "Connect Digital Connector",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -221,13 +223,14 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
-        "CompareValue": "1",
+        "CompareValue": "0",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:5ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:5ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -278,7 +281,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Verify Switches State - #1 ON #2 ON",
+        "UserTitle": "Verify Switches State - OFF",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 4,
@@ -295,9 +298,9 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 8",
-        "Notification": "Press switch #1 release switch #2",
+        "Notification": "Connect Phases Connector",
         "NotificationLevel": 2,
-        "UserTitle": "Press #1 Release #2",
+        "UserTitle": "Connect Phases Connector",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -332,7 +335,8 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
         "CompareValue": "0",
         "Tolerance": 0.0,
@@ -389,7 +393,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Verify Switches State - #1 ON #2 OFF",
+        "UserTitle": "Verify Switches State - OFF",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 6,
@@ -406,9 +410,9 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 10",
-        "Notification": "Press Both Switches",
+        "Notification": "Disconnect Phases and Connect DC Connector",
         "NotificationLevel": 2,
-        "UserTitle": "Press Both Switches",
+        "UserTitle": "Disconnect Phases and Connect DC Connector",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -443,13 +447,14 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
-        "CompareValue": "1",
+        "CompareValue": "0",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:9ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:9ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -500,7 +505,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Verify Switches State - #1 ON #2 ON",
+        "UserTitle": "Verify Switches State - OFF",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 8,
@@ -517,9 +522,9 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
         "Name": "Notification 12",
-        "Notification": "Release switch #1 press switch #2",
+        "Notification": "Connect Phases Connector",
         "NotificationLevel": 2,
-        "UserTitle": "Release #1 Press #2",
+        "UserTitle": "Connect Phases Connector",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -554,13 +559,14 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
-        "CompareValue": "0",
+        "CompareValue": "1",
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 0 ±  0 - ID:11ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Digital Input (NI DUCK)\" = 1 ±  0 - ID:11ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -611,7 +617,7 @@
           "DBCInterval": 0,
           "DBCIntervalUnite": 1
         },
-        "UserTitle": "Verify Switches State - #1 OFF #2 ON",
+        "UserTitle": "Verify Switches State - ON",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 10,
@@ -646,7 +652,8 @@
           "Value": null,
           "DeviceType": 9,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": false
         },
         "Value": 0.0,
         "ValueDropDwonIndex": -1,
