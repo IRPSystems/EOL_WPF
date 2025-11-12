@@ -26,6 +26,9 @@ using DeviceCommunicators.PowerSupplayEA;
 using DeviceCommunicators.NI_6002;
 using Syncfusion.DocIO.DLS;
 using ScriptHandler.Services;
+using DeviceCommunicators.CANBus;
+using Microsoft.IdentityModel.Tokens;
+using LibUsbDotNet.DeviceNotify;
 
 namespace EOL.ViewModels
 {
@@ -116,7 +119,7 @@ namespace EOL.ViewModels
 
 			_runData = new RunData();
 
-			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+			//_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
 
             LoadConfigToUI();
@@ -153,7 +156,8 @@ namespace EOL.ViewModels
 
         private void Closing(CancelEventArgs e)
 		{
-			EOLSettings.SaveEOLUserData("EOL", _eolSettings);
+            SaveEvvaUserData();
+            EOLSettings.SaveEOLUserData("EOL", _eolSettings);
 			_userConfigManager.SaveConfig(_eolSettings.UserDefaultSettings);
 			OperatorVM.Run.CloseAdmin();
 
@@ -187,13 +191,13 @@ namespace EOL.ViewModels
 					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
 				InitSetupView();
 
-				MergeATEParamsToMCU();
+				MergeATEParamsToMCU(_setupSelectionVM.DevicesSourceList);
 
                 _watsConnectionMonitor = new WatsConnectionMonitor(baseUrl);
                 _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
 
-                if (_isConfigSelectedByUser == null)
+                if (_eolSettings.IsDefaultSettings)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);
@@ -227,11 +231,12 @@ namespace EOL.ViewModels
 				DevicesContainter.DevicesList = new ObservableCollection<DeviceData>();
 				DevicesContainter.TypeToDevicesFullData = new Dictionary<DeviceTypesEnum, DeviceFullData>();
 				UpdateSetup();
+                InitCANBusDevices();
 
 
-				CommunicationSettings = new CommunicationViewModel(DevicesContainter);
+                CommunicationSettings = new CommunicationViewModel(DevicesContainter);
 
-				if (_eolSettings.GeneralData == null)
+				if (_eolSettings.GeneralData == null )
 				{
 					_eolSettings.GeneralData = new SettingsData()
 					{
@@ -256,7 +261,8 @@ namespace EOL.ViewModels
 					_userConfigManager,
 					_flashingHandler,
 					_setupSelectionVM,
-					_watsConnectionMonitor);
+					_watsConnectionMonitor,
+					DevicesContainter);
 				SettingsVM.SettingsWindowClosedEvent += SettingsVM_SettingsWindowClosedEvent;
 				SettingsVM.SettingsAdminVM.LoadDevicesContainer += SettingsAdminVM_LoadDevicesContainer;
 
@@ -318,7 +324,7 @@ namespace EOL.ViewModels
 
 		}
 
-		private void MergeATEParamsToMCU()
+		private void MergeATEParamsToMCU(ObservableCollection<DeviceData> devicedatalist)
 		{
 			// Read the ATE json
 			ObservableCollection<DeviceData> deviceList_ATE = new ObservableCollection<DeviceData>();
@@ -331,7 +337,7 @@ namespace EOL.ViewModels
 				return;
 
             MCU_DeviceData? GetMcu(DeviceTypesEnum type) =>
-                _setupSelectionVM.DevicesSourceList_Full
+                devicedatalist
                     .FirstOrDefault(d => d.DeviceType == type) as MCU_DeviceData;
 
             var mcuDevice = GetMcu(DeviceTypesEnum.MCU);
@@ -347,12 +353,15 @@ namespace EOL.ViewModels
 
 			foreach (var target in targets)
 			{
+				if(target == null) 
+					continue;
+
 				target.MCU_GroupList.Add(ateDevice.MCU_GroupList[0]);
 
 				foreach (var param in ateDevice.MCU_FullList)
 				{
-					param.DeviceType = mcuDevice.DeviceType;
-					param.Device = mcuDevice;
+					param.DeviceType = target.DeviceType;
+					param.Device = target;
 					target.MCU_FullList.Add(param);
 				}
 			}
@@ -385,7 +394,8 @@ namespace EOL.ViewModels
 					device.DeviceType != DeviceTypesEnum.RigolM300 &&
 					device.DeviceType != DeviceTypesEnum.MX180TP &&
 					device.DeviceType != DeviceTypesEnum.ITM3100 &&
-					device.DeviceType != DeviceTypesEnum.MCU_B2B )
+					device.DeviceType != DeviceTypesEnum.MCU_B2B &&
+					device.DeviceType != DeviceTypesEnum.CANBus)
 				{
 					devicesToRemoveList.Add(device);
 					continue;
@@ -407,7 +417,9 @@ namespace EOL.ViewModels
 					devicesToRemoveList.Add(device);
 				else if (device.DeviceType == DeviceTypesEnum.PowerSupplyEA && _eolSettings.UserDefaultSettings.PowerSupplyEA == false)
 					devicesToRemoveList.Add(device);
-			}
+                //else if (device.DeviceType == DeviceTypesEnum.CANBus && !_eolSettings.UserDefaultSettings.CANBus.Any())
+                //    devicesToRemoveList.Add(device);
+            }
 
 			foreach(DeviceData device in devicesToRemoveList)
 				devicesList.Remove(device);
@@ -486,7 +498,6 @@ namespace EOL.ViewModels
 					(deviceFullData.DeviceCommunicator as PowerSupplayEA_Communicator).SetIsUseRampForOnOff(false);
 				}
 
-
                 DevicesContainter.DevicesFullDataList.Add(deviceFullData);
 				DevicesContainter.DevicesList.Add(device as DeviceData);
 				if (DevicesContainter.TypeToDevicesFullData.ContainsKey(device.DeviceType) == false)
@@ -495,14 +506,131 @@ namespace EOL.ViewModels
 				deviceFullData.Connect();
 			}
 
+        }
 
+        #endregion Load
+
+        private void InitCANBusDevices()
+        {
+            // Ensure settings list exists
+            var userList = _eolSettings.UserDefaultSettings.CANBusList
+                           ??= new ObservableCollection<CANBus_DeviceData>();
+
+            // Fast lookup by Name for saved CAN bus devices
+            var byName = userList
+                .Where(d => !string.IsNullOrEmpty(d.Name))
+                .ToDictionary(d => d.Name, d => d, StringComparer.Ordinal);
+
+            // Helper for a stable duplicate key (tweak if you have a better unique ID)
+            static string Key(DeviceData d) => d?.Name ?? string.Empty;
+
+            // 1) Merge saved sub-devices into live devices (no duplicates)
+            foreach (var canBusDevice in DevicesContainter.DevicesList.OfType<CANBus_DeviceData>())
+            {
+                if (!byName.TryGetValue(canBusDevice.Name, out var userDataCANBus))
+                    continue;
+
+                // If userDataCANBus and canBusDevice are the same instance, skip to avoid self-copy duplicates
+                if (ReferenceEquals(canBusDevice, userDataCANBus))
+                    continue;
+
+                // Snapshot both sides to avoid "collection modified" during enumeration
+                var sourceSubs = (userDataCANBus.DeviceDataList as IEnumerable<DeviceData>
+                                  ?? Enumerable.Empty<DeviceData>()).ToList();
+
+                var existingKeys = new HashSet<string>(
+                    (canBusDevice.DeviceDataList as IEnumerable<DeviceData>
+                     ?? Enumerable.Empty<DeviceData>())
+                    .Select(Key),
+                    StringComparer.Ordinal);
+
+                foreach (var sub in sourceSubs)
+                {
+                    if (sub is null) continue;
+                    var k = Key(sub);
+                    if (existingKeys.Add(k))
+                        canBusDevice.DeviceDataList.Add(sub); // add only if new
+                }
+
+                // Final safety: de-dup live list in case it already had duplicates
+                var distinct = (canBusDevice.DeviceDataList as IEnumerable<DeviceData>
+                                ?? Enumerable.Empty<DeviceData>())
+                               .GroupBy(Key, StringComparer.Ordinal)
+                               .Select(g => g.First())
+                               .ToList();
+
+                if (canBusDevice.DeviceDataList.Count != distinct.Count)
+                {
+                    // Replace contents without changing the collection instance (important for bindings)
+                    if (canBusDevice.DeviceDataList is ObservableCollection<DeviceData> oc)
+                    {
+                        oc.Clear();
+                        foreach (var d in distinct) oc.Add(d);
+                    }
+                    else
+                    {
+                        // If it's a List<T> or custom collection with Clear/Add
+                        canBusDevice.DeviceDataList.Clear();
+                        foreach (var d in distinct) canBusDevice.DeviceDataList.Add(d);
+                    }
+                }
+
+                canBusDevice.InitSubDevicesParams(_readDevicesFile);
+            }
+
+            // 2) Replace saved CAN bus list with current live devices (no duplicates here)
+            userList.Clear();
+            foreach (var canBusDevice in DevicesContainter.DevicesList.OfType<CANBus_DeviceData>())
+                userList.Add(canBusDevice);
+
+            // 3) Fire parser event for each sub-device using a snapshot (handler may mutate lists)
+            foreach (var canBusDeviceFullData in DevicesContainter.DevicesFullDataList.OfType<DeviceFullData_CANBus>())
+            {
+                if (canBusDeviceFullData.Device is not CANBus_DeviceData canBusDevice)
+                    continue;
+
+                var subsSnapshot = (canBusDevice.DeviceDataList as IEnumerable<DeviceData>
+                                    ?? Enumerable.Empty<DeviceData>()).ToList();
+
+				foreach (var sub in subsSnapshot)
+					canBusDeviceFullData.DeviceFullData_CANBus_ParserAddedEvent(sub);
+			}
+        }
+
+
+        private void SaveEvvaUserData()
+		{
+			if (DevicesContainter != null &&
+				DevicesContainter.TypeToDevicesFullData != null &&
+				DevicesContainter.TypeToDevicesFullData.Count > 0)
+			{
+				if (DevicesContainter.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.CANBus) == false)
+					return;
+
+
+				DeviceFullData deviceFullData =
+					DevicesContainter.TypeToDevicesFullData[DeviceTypesEnum.CANBus];
+				if (deviceFullData.Device is CANBus_DeviceData cANBusDevice)
+				{
+					foreach (DeviceData device in cANBusDevice.DeviceDataList)
+					{
+						if (device.ParemetersList != null)
+							device.ParemetersList.Clear();
+
+						if (device is MCU_DeviceData mcuDevice)
+						{
+							if (mcuDevice.MCU_GroupList != null)
+								mcuDevice.MCU_GroupList.Clear();
+
+							if (mcuDevice.MCU_FullList != null)
+								mcuDevice.MCU_FullList.Clear();
+						}
+					}
+				}
+			}
 		}
 
-		#endregion Load
-
-
-
-		private void ChangeDarkLight()
+        private void ChangeDarkLight()
 		{
 			_eolSettings.IsLightTheme = !_eolSettings.IsLightTheme;
 			App.ChangeDarkLight(_eolSettings.IsLightTheme);

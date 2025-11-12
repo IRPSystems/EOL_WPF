@@ -1,15 +1,18 @@
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DeviceHandler.Models;
 using DeviceHandler.ViewModels;
 using EOL.Models;
 using EOL.Services;
+using Microsoft.IdentityModel.Tokens;
 using ScriptHandler.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -27,8 +30,9 @@ namespace EOL.ViewModels
 
 		public SetupSelectionViewModel SetupSelectionVM { get; set; }
         public SettingsAdminViewModel SettingsAdminVM { get; set; }
+        public CANBusSettingsListViewModel CANBusSettingsVM { get; set; }
 
-		public bool IsAdminMode { get; set; }
+        public bool IsAdminMode { get; set; }
 
         public List<string> PSoCPortsList { get; set; }
 
@@ -65,13 +69,17 @@ namespace EOL.ViewModels
             UserConfigManager userConfigManager,
             FlashingHandler flashingHandler,
 			SetupSelectionViewModel setupSelectionVM,
-            WatsConnectionMonitor watsConnection)
+            WatsConnectionMonitor watsConnection,
+            DevicesContainer devicesContainer)
         {
 			SettingsData = eolSettings.GeneralData;
             _userDefaultSettings = eolSettings.UserDefaultSettings;
             _userConfigManager = userConfigManager;
             SetupSelectionVM = setupSelectionVM;
             _flashingHandler = flashingHandler;
+            CANBusSettingsVM = new CANBusSettingsListViewModel(
+                devicesContainer,
+                setupSelectionVM);
             BrowseFilePathCommand = new RelayCommand<FilesData>(BrowseFilePath);
 			LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
@@ -91,6 +99,21 @@ namespace EOL.ViewModels
         {
             _userDefaultSettings.EOLRackSN = SettingsData.RackNumber;
             _userDefaultSettings.WatsTestCode = SettingsAdminVM.SelectedTestOperation?.Code.ToString() ?? string.Empty;
+            //if (CANBusSettingsVM.CANBusDeviceList != null && !CANBusSettingsVM.CANBusDeviceList.IsNullOrEmpty())
+            //{
+            //    foreach (var canBusDevice in CANBusSettingsVM.CANBusDeviceList[0].CANBusDevice.DeviceDataList)
+            //    {
+            //        if (!_userDefaultSettings.CANBus.Any(x => x.DeviceType == canBusDevice.DeviceType))
+            //        {
+            //            CANBusDeviceConfig canBusDeviceconfig = new CANBusDeviceConfig
+            //            {
+            //                DeviceType = canBusDevice.DeviceType,
+            //                NodeId = canBusDevice.NodeId
+            //            };
+            //            _userDefaultSettings.CANBus.Add(canBusDeviceconfig);
+            //        }
+            //    }
+            //}
             _userConfigManager.SaveConfig(_userDefaultSettings);
 
             SetupSelectionVM.CloseOKCommand.Execute(null);

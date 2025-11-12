@@ -40,11 +40,12 @@
           "Note": null,
           "Save": false,
           "DropDown": null,
-          "Name": " FOC Electric Angle",
+          "Name": "Electric Angle",
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "CompareValue": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
@@ -64,12 +65,13 @@
           "Units": "Deg",
           "DeviceType": 1,
           "ToolTip": null,
-          "CommunicationTimeout": 0
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
         },
         "Tolerance": 50.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \" FOC Electric Angle (MCU)\" = \" Sensor Electric Angle (MCU)\" ±  50 - ID:2ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"Electric Angle (MCU - CAN BUS)\" = \" Sensor Electric Angle\" ±  50 - ID:2ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,

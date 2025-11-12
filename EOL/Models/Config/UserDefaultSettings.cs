@@ -1,12 +1,22 @@
 
+using DeviceCommunicators.CANBus;
+using Entities.Enums;
 using FlashingToolLib.FlashingTools;
 using FlashingToolLib.FlashingTools.UDS;
+using LibUsbDotNet.DeviceNotify;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using static iso15765.CUdsClient;
 
 namespace EOL.Models
 {
+    public class CANBusDeviceConfig
+    {
+        public DeviceTypesEnum DeviceType { get; set; }
+        public uint NodeId { get; set; }
+    }
     public class UserDefaultSettings
     {
         // Declare variables corresponding to the custom user.config settings
@@ -51,6 +61,9 @@ namespace EOL.Models
 		public bool Printer_TSC { get; set; }
 		public bool NumatoGPIO { get; set; }
 		public bool PowerSupplyEA { get; set; }
+        //public List<CANBusDeviceConfig> CANBus { get; set; }
+        public ObservableCollection<CANBus_DeviceData> CANBusList { get; set; }
+
         public string PSoC_Port1 { get; set; }
         public string PSoC_Port2 { get; set; }
         public string WatsTestCode { get; set; }
@@ -64,7 +77,7 @@ namespace EOL.Models
 			NI_6002_2 = true;
 			Printer_TSC = true;
 			NumatoGPIO = true;
-
-		}
+            CANBusList = new ObservableCollection<CANBus_DeviceData>();
+        }
 	}
 }
