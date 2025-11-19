@@ -2010,7 +2010,7 @@
         },
         "UserTitle": "Read DIG Out 3 ON",
         "IsPass": false,
-        "PassNextId": 0,
+        "PassNextId": -1,
         "FailNextId": 0,
         "ID": 14,
         "EOLReportsSelectionData": {

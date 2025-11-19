@@ -98,6 +98,161 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareBit, ScriptHandler",
+        "Name": "Compare Bit 3",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Monitor",
+          "Description": "Faults Vector Internal, 32 bits bitwise\r\nHigher bits of the whole faults vector",
+          "Default": "0",
+          "Cmd": "fltvwint3",
+          "Range": null,
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": false,
+          "DropDown": {
+            "$type": "System.Collections.Generic.List`1[[Entities.Models.DropDownParamData, Entities]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "No Active Fault",
+                "Value": "0"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom UC State Mismatch",
+                "Value": "1"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Gate Driver EN Mismatch",
+                "Value": "2"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Crash Status Mismatch",
+                "Value": "4"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Active Discharge CMD Mismatch",
+                "Value": "8"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Intercom Bus Inactive",
+                "Value": "16"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "BMS5_10 Timeout",
+                "Value": "32"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Torque Cmd Difference",
+                "Value": "64"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "vcu14 alive count",
+                "Value": "128"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Emergency detection",
+                "Value": "256"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Can end to end",
+                "Value": "512"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Torque sign",
+                "Value": "1024"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Torque execution",
+                "Value": "2048"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Sample Signal Inactive",
+                "Value": "4096"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Bus Current Limit Over Current",
+                "Value": "8192"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Fatal Error",
+                "Value": "16384"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Deep Sleep Failed",
+                "Value": "32768"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "bms5 alive count",
+                "Value": "65536"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "bms5 mismatch",
+                "Value": "131072"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Limp Home Timeout",
+                "Value": "262144"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Unintended Torque Request",
+                "Value": "524288"
+              },
+              {
+                "$type": "Entities.Models.DropDownParamData, Entities",
+                "Name": "Power Efficiency",
+                "Value": "1048576"
+              }
+            ]
+          },
+          "Name": "Faults Vector Internal 3",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
+        },
+        "BitIndex": 5,
+        "ComparedValue": 0,
+        "BitSelectedIndex": 5,
+        "UserTitle": "Check Comm Between uC",
+        "IsPass": false,
+        "PassNextId": 3,
+        "FailNextId": 0,
+        "ID": 2,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
         "Name": "Delay 3",
         "Interval": 500,
@@ -106,7 +261,7 @@
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
-        "ID": 2,
+        "ID": 3,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
