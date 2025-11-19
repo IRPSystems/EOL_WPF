@@ -26,7 +26,7 @@ namespace EOL.Models.Config
 
     public class FlashArguments
     {
-        public ECustomer Customer { get; set; }
+        public string Customer { get; set; }
     }
 
     public class DevicesList

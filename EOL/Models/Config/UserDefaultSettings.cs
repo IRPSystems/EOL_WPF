@@ -50,8 +50,8 @@ namespace EOL.Models
         public bool isWritingtoWatsEnabled { get; set; }
         public bool isTogglePower {  get; set; }
         public int ProjectBaudRate { get; set; } = 500;
-        public ECustomer FirstFlashFileCustomerProp { get; set; }
-        public ECustomer SecondFlashFileCustomerProp { get; set; }
+        public string FirstFlashFileCustomerProp { get; set; }
+        public string SecondFlashFileCustomerProp { get; set; }
         public string AutoConfigPref { get; set; }
         public bool MCU { get; set; }
 		public bool MCU_2 { get; set; }
