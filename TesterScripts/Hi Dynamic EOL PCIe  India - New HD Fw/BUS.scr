@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -72,6 +71,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source VCU",
+        "Name": "ScriptNodeSetParameter 23",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -87,7 +87,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 12",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -145,6 +144,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set BUS Gain to 406",
+        "Name": "Set Parameter 12",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -160,7 +160,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -226,6 +225,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Under Voltage Fault",
+        "Name": "Set Parameter 22",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -241,7 +241,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -307,6 +306,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Low Voltage Fault",
+        "Name": "Set Parameter 23",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -322,7 +322,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -380,6 +379,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set ATE PWM Ramp to 5",
+        "Name": "Set Parameter 21",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -395,7 +395,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -453,6 +452,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set ATE Duty Cycle to 1000",
+        "Name": "Set Parameter 16",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -468,7 +468,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -521,6 +520,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
+        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -536,10 +536,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 25",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 25",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -555,7 +555,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "Compare 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -657,6 +656,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get Motor State ATE",
+        "Name": "Compare 21",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -672,7 +672,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -894,6 +893,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PWM ATE Command OFF",
+        "Name": "Set Parameter 24",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -909,7 +909,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -957,6 +956,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to 30A",
+        "Name": "Set Parameter 8",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -972,7 +972,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 18",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -1020,6 +1019,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Output Voltage to 50V",
+        "Name": "Set Parameter 18",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1035,7 +1035,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 20",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -1097,6 +1096,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Output ON",
+        "Name": "Set Parameter 20",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1112,7 +1112,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1164,6 +1163,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enable Load Contactor ",
+        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -1179,10 +1179,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 7",
         "Interval": 3,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 7",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -1198,7 +1198,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1420,6 +1419,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side ON",
+        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -1435,10 +1435,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 17",
         "Interval": 25,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 17",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -1454,7 +1454,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLCalibrate, ScriptHandler",
-        "Name": "EOL Clibrate 1",
         "GainParam": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1533,6 +1532,7 @@
         "NIDAQShuntResistor": 17.8,
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate BUS",
+        "Name": "EOL Clibrate 1",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": -1,
@@ -1548,7 +1548,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
-        "Name": "Save Parameter 42",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1577,6 +1576,7 @@
           "IsInCANBus": true
         },
         "UserTitle": "Save Bus Gain",
+        "Name": "Save Parameter 42",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -1592,7 +1592,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1690,6 +1689,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate BUS Calibration (30A)",
+        "Name": "Compare With Tolerance 2",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": -1,
@@ -1705,7 +1705,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1927,6 +1926,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side OFF",
+        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -1942,10 +1942,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 27",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 27",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -1961,7 +1961,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 26",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -2009,6 +2008,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to 10A",
+        "Name": "ScriptNodeSetParameter 26",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,
@@ -2024,7 +2024,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 28",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2246,6 +2245,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side ON",
+        "Name": "Set Parameter 28",
         "IsPass": false,
         "PassNextId": 25,
         "FailNextId": 0,
@@ -2261,10 +2261,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 30",
         "Interval": 25,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 30",
         "IsPass": false,
         "PassNextId": 26,
         "FailNextId": 0,
@@ -2280,7 +2280,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 29",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2378,6 +2377,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate BUS Calibration (10A)",
+        "Name": "ScriptNodeCompareWithTolerance 29",
         "IsPass": false,
         "PassNextId": 27,
         "FailNextId": -1,
@@ -2393,7 +2393,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 31",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2615,6 +2614,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side OFF",
+        "Name": "ScriptNodeSetParameter 31",
         "IsPass": false,
         "PassNextId": 28,
         "FailNextId": 0,
@@ -2630,10 +2630,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 33",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 33",
         "IsPass": false,
         "PassNextId": 29,
         "FailNextId": 0,
@@ -2649,7 +2649,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 32",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -2697,6 +2696,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to 60A",
+        "Name": "ScriptNodeSetParameter 32",
         "IsPass": false,
         "PassNextId": 30,
         "FailNextId": 0,
@@ -2712,7 +2712,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 34",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2934,6 +2933,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side ON",
+        "Name": "ScriptNodeSetParameter 34",
         "IsPass": false,
         "PassNextId": 31,
         "FailNextId": 0,
@@ -2949,10 +2949,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 35",
         "Interval": 25,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 35",
         "IsPass": false,
         "PassNextId": 32,
         "FailNextId": 0,
@@ -2968,7 +2968,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 36",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3066,6 +3065,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate BUS Calibration (60A)",
+        "Name": "ScriptNodeCompareWithTolerance 36",
         "IsPass": false,
         "PassNextId": 33,
         "FailNextId": -1,
@@ -3081,7 +3081,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 37",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3303,6 +3302,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Phase U High Side OFF",
+        "Name": "ScriptNodeSetParameter 37",
         "IsPass": false,
         "PassNextId": 34,
         "FailNextId": 0,
@@ -3318,7 +3318,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -3370,6 +3369,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Load Contactor ",
+        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 35,
         "FailNextId": 0,
@@ -3385,10 +3385,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 23",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 23",
         "IsPass": false,
         "PassNextId": 36,
         "FailNextId": 0,
@@ -3404,7 +3404,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -3452,6 +3451,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Output Voltage to 300V",
+        "Name": "ScriptNodeSetParameter 22",
         "IsPass": false,
         "PassNextId": 37,
         "FailNextId": 0,
@@ -3467,10 +3467,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 25",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 25",
         "IsPass": false,
         "PassNextId": 38,
         "FailNextId": 0,
@@ -3486,7 +3486,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3552,6 +3551,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source Manual",
+        "Name": "Set Parameter 25",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

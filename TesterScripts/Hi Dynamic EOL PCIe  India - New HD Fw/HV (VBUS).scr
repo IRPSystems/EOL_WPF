@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -54,6 +53,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 200V",
+        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -69,10 +69,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 20",
         "Interval": 3,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 20",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -88,7 +88,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 17",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -162,6 +161,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (200V)",
+        "Name": "ScriptNodeCompareWithTolerance 17",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -177,7 +177,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -371,7 +370,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -461,6 +460,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (200V)",
+        "Name": "Compare With Tolerance 21",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -476,7 +476,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -760,6 +759,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (200V) (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 22",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -775,7 +775,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -823,6 +822,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 250V",
+        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -838,10 +838,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 19",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 19",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -857,7 +857,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 18",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -931,6 +930,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (250V)",
+        "Name": "ScriptNodeCompareWithTolerance 18",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -946,7 +946,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1140,7 +1139,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1230,6 +1229,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (250V)",
+        "Name": "Compare With Tolerance 22",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1245,7 +1245,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1529,6 +1528,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (250V) (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 23",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1544,7 +1544,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 10",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -1592,6 +1591,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 300V",
+        "Name": "Set Parameter 10",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -1607,10 +1607,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 18",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 18",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1626,7 +1626,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -1700,6 +1699,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (300V)",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1715,7 +1715,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1909,7 +1908,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1999,6 +1998,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (300V)",
+        "Name": "Compare With Tolerance 23",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -2014,7 +2014,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2298,6 +2297,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (300V) (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 24",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -2313,7 +2313,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -2361,6 +2360,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 350V",
+        "Name": "Set Parameter 13",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -2376,10 +2376,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 17",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 17",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -2395,7 +2395,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -2469,6 +2468,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (350V)",
+        "Name": "ScriptNodeCompareWithTolerance 20",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -2484,7 +2484,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2678,7 +2677,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2768,6 +2767,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (350V)",
+        "Name": "Compare With Tolerance 24",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -2783,7 +2783,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3067,6 +3066,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (350V) (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 25",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -3082,7 +3082,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 18",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -3130,6 +3129,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 400V",
+        "Name": "Set Parameter 18",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -3145,10 +3145,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 16",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 16",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -3164,7 +3164,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 21",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -3238,6 +3237,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check PS Voltage (400V)",
+        "Name": "ScriptNodeCompareWithTolerance 21",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,
@@ -3253,7 +3253,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3447,7 +3446,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -3537,6 +3536,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (400V)",
+        "Name": "Compare With Tolerance 25",
         "IsPass": false,
         "PassNextId": 25,
         "FailNextId": 0,
@@ -3552,7 +3552,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 26",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3836,6 +3835,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Vbus to PS Voltage (400V) (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 26",
         "IsPass": false,
         "PassNextId": 26,
         "FailNextId": 0,
@@ -3851,7 +3851,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -3899,6 +3898,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS to 300V",
+        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

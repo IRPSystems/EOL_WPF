@@ -6,10 +6,10 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 2",
         "Notification": "Close The Cover!",
         "NotificationLevel": 2,
         "UserTitle": "InterLock Verification User Note",
+        "Name": "Notification 2",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -25,7 +25,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -103,6 +102,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get Interlock State",
+        "Name": "Compare With Tolerance 1",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

@@ -6,10 +6,10 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 1",
         "Notification": "Check Power Supply Output Is OFF!",
         "NotificationLevel": 1,
         "UserTitle": "PS Off Verification",
+        "Name": "Notification 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -58,6 +57,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle HVIL 1 to ON",
+        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -73,10 +73,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 3",
         "Notification": "Disconnect Digital and Power Connectors",
         "NotificationLevel": 2,
         "UserTitle": "Disconnect Digital and Power Connectors",
+        "Name": "Notification 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -92,7 +92,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -170,6 +169,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - OFF",
+        "Name": "Compare With Tolerance 4",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 2,
@@ -185,10 +185,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 6",
         "Notification": "Connect Digital Connector",
         "NotificationLevel": 2,
         "UserTitle": "Connect Digital Connector",
+        "Name": "Notification 6",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -204,7 +204,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 7",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -282,6 +281,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - OFF",
+        "Name": "Compare With Tolerance 7",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 4,
@@ -297,10 +297,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 8",
         "Notification": "Connect Phases Connector",
         "NotificationLevel": 2,
         "UserTitle": "Connect Phases Connector",
+        "Name": "Notification 8",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -316,7 +316,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 9",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -394,6 +393,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - OFF",
+        "Name": "Compare With Tolerance 9",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 6,
@@ -409,10 +409,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 10",
         "Notification": "Disconnect Phases and Connect DC Connector",
         "NotificationLevel": 2,
         "UserTitle": "Disconnect Phases and Connect DC Connector",
+        "Name": "Notification 10",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -428,7 +428,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -506,6 +505,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - OFF",
+        "Name": "Compare With Tolerance 11",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 8,
@@ -521,10 +521,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 12",
         "Notification": "Connect Phases Connector",
         "NotificationLevel": 2,
         "UserTitle": "Connect Phases Connector",
+        "Name": "Notification 12",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -540,7 +540,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 13",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -618,6 +617,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Switches State - ON",
+        "Name": "Compare With Tolerance 13",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 10,
@@ -633,7 +633,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -685,6 +684,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle HVIL 1 to OFF",
+        "Name": "Set Parameter 14",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -700,10 +700,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "ScriptNodeNotification 13",
         "Notification": "Connect the cables, tight them up!\r\nToggle the WatchDog switches on!\r\n\r\nDont press continue before you close the lid!!! <3",
         "NotificationLevel": 2,
         "UserTitle": "Close The Cover",
+        "Name": "ScriptNodeNotification 13",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

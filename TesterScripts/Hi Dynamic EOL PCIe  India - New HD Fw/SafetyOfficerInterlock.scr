@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -84,6 +83,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get Interlock Off (Cover Closed)",
+        "Name": "Compare With Tolerance 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -99,7 +99,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareBit, ScriptHandler",
-        "Name": "Compare Bit 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -239,6 +238,7 @@
         "ComparedValue": 0,
         "BitSelectedIndex": 5,
         "UserTitle": "Check Comm Between uC",
+        "Name": "Compare Bit 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -254,10 +254,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 3",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "delay",
+        "Name": "Delay 3",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

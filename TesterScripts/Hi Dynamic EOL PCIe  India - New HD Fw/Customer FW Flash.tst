@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -63,6 +62,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Stop Recording Monitor",
+        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -78,7 +78,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 1",
         "ParentScriptName": "Customer FW Flash",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -89,6 +88,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Flash",
         "UserTitle": "Flash",
+        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

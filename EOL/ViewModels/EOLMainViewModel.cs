@@ -191,7 +191,7 @@ namespace EOL.ViewModels
 					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
 				InitSetupView();
 
-				MergeATEParamsToMCU(_setupSelectionVM.DevicesSourceList);
+				MergeATEParamsToMCU(_setupSelectionVM.DevicesSourceList_Full);
 
                 _watsConnectionMonitor = new WatsConnectionMonitor(baseUrl);
                 _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;

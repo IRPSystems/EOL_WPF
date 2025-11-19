@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -5173,6 +5172,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
+        "Name": "ScriptNodeSetParameter 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -5188,7 +5188,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 4",
         "ParentScriptName": "Internal Measurements",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -5199,6 +5198,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "HV (VBUS)",
         "UserTitle": "HV(VBUS)",
+        "Name": "Sub Script 4",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -5214,10 +5214,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 6",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay (voltage stablize between toggle)",
+        "Name": "Delay 6",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -5233,7 +5233,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 3",
         "ParentScriptName": "Internal Measurements",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -5244,6 +5243,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "5VDC",
         "UserTitle": "5VDC",
+        "Name": "Sub Script 3",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -5259,7 +5259,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 4",
         "ParentScriptName": "Internal Measurements",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -5270,6 +5269,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "GD Supply",
         "UserTitle": "GD Supply",
+        "Name": "Sub Script 4",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -5285,7 +5285,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 7",
         "ParentScriptName": "Internal Measurements",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -5296,6 +5295,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "UUT Internal Temp",
         "UserTitle": "UUT Internal Temp",
+        "Name": "Sub Script 7",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

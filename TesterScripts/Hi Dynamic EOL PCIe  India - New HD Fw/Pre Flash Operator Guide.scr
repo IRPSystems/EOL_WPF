@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -68,6 +67,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Turn Off PS",
+        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -83,7 +83,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
           "Io_port": 0,
@@ -171,6 +170,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Turn Off VSW",
+        "Name": "ScriptNodeSetParameter 4",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -186,10 +186,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 2",
         "Interval": 10,
         "IntervalUnite": 2,
         "UserTitle": "Power Off Delay",
+        "Name": "Delay 2",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -205,7 +205,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -279,6 +278,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": null,
+        "Name": "Compare With Tolerance 3",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -294,10 +294,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
-        "Name": "Notification 5",
         "Notification": "Power Is Off.\r\nOpen The Cover And Toggle WatchDog Switch Off",
         "NotificationLevel": 2,
         "UserTitle": "Toggle WatchDog Switch Off",
+        "Name": "Notification 5",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -313,7 +313,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NumatoGPIO.NumatoGPIO_ParamData, DeviceCommunicators",
           "Io_port": 0,
@@ -401,6 +400,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Turn On VSW",
+        "Name": "ScriptNodeSetParameter 6",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -416,10 +416,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 8",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Wake Up Delay",
+        "Name": "ScriptNodeDelay 8",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

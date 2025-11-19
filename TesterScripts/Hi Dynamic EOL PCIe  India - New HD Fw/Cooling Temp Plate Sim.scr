@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -228,6 +227,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Vref to 5V",
+        "Name": "Set Parameter 15",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -243,7 +243,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -465,6 +464,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Vref to 5V",
+        "Name": "ScriptNodeSetParameter 23",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -480,7 +480,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -674,7 +673,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -748,6 +747,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 115",
+        "Name": "Compare With Tolerance 16",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -763,7 +763,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 18",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1031,6 +1030,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 115 (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 18",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -1046,7 +1046,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1098,6 +1097,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Plate Temp To 80 Degrees",
+        "Name": "Set Parameter 16",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -1113,10 +1113,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 10",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 10",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -1132,7 +1132,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1326,7 +1325,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1400,6 +1399,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 80",
+        "Name": "Compare With Tolerance 4",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -1415,7 +1415,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1683,6 +1682,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 80 (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1698,7 +1698,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1750,6 +1749,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Plate Temp To 50 Degrees",
+        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1765,10 +1765,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 18",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 18",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1784,7 +1784,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1978,7 +1977,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2052,6 +2051,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 50",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -2067,7 +2067,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2335,6 +2334,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 50 (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 20",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -2350,7 +2350,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -2402,6 +2401,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Slow Ramp to 20 Degrees",
+        "Name": "Set Parameter 16",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -2417,10 +2417,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 17",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 17",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -2436,7 +2436,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 20",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -2488,6 +2487,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Plate Temp To 20 Degrees",
+        "Name": "ScriptNodeSetParameter 20",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -2503,10 +2503,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 12",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 12",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -2522,7 +2522,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2716,7 +2715,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2790,6 +2789,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 20",
+        "Name": "Compare With Tolerance 7",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -2805,7 +2805,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3073,6 +3072,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 20 (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 21",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -3088,7 +3088,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -3140,6 +3139,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Plate Temp To 5 Degrees",
+        "Name": "ScriptNodeSetParameter 21",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -3155,10 +3155,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 13",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 13",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -3174,7 +3174,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3368,7 +3367,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -3442,6 +3441,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 5",
+        "Name": "Compare With Tolerance 9",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -3457,7 +3457,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3725,6 +3724,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Cooling Plate Temp - 5 (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 22",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -3740,7 +3740,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -3792,6 +3791,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Temperature to 36 ",
+        "Name": "Set Parameter 14",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

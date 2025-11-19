@@ -6,10 +6,10 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 1",
         "Interval": 3,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -25,7 +25,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -123,6 +122,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare FOC Angle to Sensor Angle",
+        "Name": "Compare With Tolerance 2",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

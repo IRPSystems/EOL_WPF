@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -2613,6 +2612,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
+        "Name": "ScriptNodeSetParameter 3",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -2628,7 +2628,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 1",
         "ParentScriptName": "Digital ",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2639,6 +2638,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Digital Input",
         "UserTitle": "Digital Input",
+        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -2654,7 +2654,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 2",
         "ParentScriptName": "Digital ",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2665,6 +2664,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Digital Output",
         "UserTitle": "Digital Output",
+        "Name": "Sub Script 2",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

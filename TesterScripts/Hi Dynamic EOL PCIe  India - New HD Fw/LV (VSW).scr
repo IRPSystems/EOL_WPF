@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -200,7 +199,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -294,6 +293,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT VSW to 12V ATE Measurement",
+        "Name": "Compare With Tolerance 3",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

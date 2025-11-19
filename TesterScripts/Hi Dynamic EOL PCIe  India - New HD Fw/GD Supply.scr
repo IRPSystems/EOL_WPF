@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -59,6 +58,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
+        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -74,10 +74,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 3",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -93,7 +93,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -287,7 +286,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -361,6 +360,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify GD_VOLT PG is ON",
+        "Name": "Compare With Tolerance 1",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

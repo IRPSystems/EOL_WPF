@@ -7971,7 +7971,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -8191,12 +8191,50 @@
               "Description": "Sub Script = Write SN - Repeats: 1 - ID:3",
               "OperatorErrorDescription": null,
               "IsPass": false,
-              "PassNextDescription": null,
+              "PassNextDescription": "Manufacture Date - ID:4",
               "FailNextDescription": null,
               "StopScriptStep": null,
               "BorderBrush": null,
               "StepState": 0,
               "ID": 3,
+              "EOLReportsSelectionData": {
+                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                "IsSaveToReport": true,
+                "IsSaveToPdfExecTable": true,
+                "IsSaveToPdfDynTable": true,
+                "IsSaveToCustomerVer": false,
+                "IsSaveToWats": true
+              },
+              "EOLStepSummerysList": {
+                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                "$values": []
+              },
+              "CommSendResLog": null,
+              "SubScriptName": null,
+              "TestName": null,
+              "ProgressPercentage": 0
+            },
+            {
+              "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepEOLSetManufDate, ScriptHandler",
+              "IsError": null,
+              "IsExecuted": false,
+              "Parameter": null,
+              "Communicator": null,
+              "DeviceType": 27,
+              "DevicesContainer": null,
+              "UserTitle": "Set Manufacture Date",
+              "ExecutionTime": "00:00:00",
+              "Name": "EOL Set Manufacture Date 4",
+              "Description": "Manufacture Date - ID:4",
+              "OperatorErrorDescription": null,
+              "IsPass": false,
+              "PassNextDescription": null,
+              "FailNextDescription": null,
+              "ErrorMessage": "",
+              "StopScriptStep": null,
+              "BorderBrush": null,
+              "StepState": 0,
+              "ID": 4,
               "EOLReportsSelectionData": {
                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                 "IsSaveToReport": true,
@@ -9058,7 +9096,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -9930,7 +9968,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -10802,7 +10840,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -11674,7 +11712,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -12546,7 +12584,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -13483,7 +13521,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -15872,7 +15910,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16231,7 +16269,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16442,7 +16480,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18075,7 +18113,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18815,7 +18853,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -19555,7 +19593,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -20439,7 +20477,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21179,7 +21217,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21941,7 +21979,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -22681,7 +22719,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -23421,7 +23459,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -24161,7 +24199,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -24901,7 +24939,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -31258,7 +31296,7 @@
                                     }
                                   ]
                                 },
-                                "Value": null,
+                                "Value": 12118.0,
                                 "GroupName": null,
                                 "Description": null,
                                 "Default": null,
@@ -32136,7 +32174,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -32732,7 +32770,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -32809,7 +32847,7 @@
                       "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:8",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:9",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -33030,7 +33068,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -33104,16 +33142,16 @@
                       "UserTitle": "Read Dig In 3 OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 8",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:9",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:12",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 10,
+                      "ID": 9,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33328,7 +33366,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -33402,16 +33440,16 @@
                       "UserTitle": "Read Dig In 4 OFF",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 10",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:12",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:14",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:11",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 12,
+                      "ID": 10,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33507,16 +33545,16 @@
                       "UserTitle": "Toggle Dig In 1 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 10",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:14",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:11",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:15",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:12",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 14,
+                      "ID": 11,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33612,16 +33650,16 @@
                       "UserTitle": "Toggle Dig In 2 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 11",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:15",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:12",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:16",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:13",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 15,
+                      "ID": 12,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33717,16 +33755,16 @@
                       "UserTitle": "Toggle Dig In 3 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 12",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:16",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:13",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:17",
+                      "PassNextDescription": "Set  \"Digital Output (NI DUCK)\" - ID:14",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 16,
+                      "ID": 13,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33822,16 +33860,16 @@
                       "UserTitle": "Toggle Dig In 4 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Set Parameter 13",
-                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:17",
+                      "Description": "Set  \"Digital Output (NI DUCK)\" - ID:14",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Delay 200 ms - ID:18",
+                      "PassNextDescription": "Delay 200 ms - ID:15",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 17,
+                      "ID": 14,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -33861,16 +33899,16 @@
                       "UserTitle": "Delay ",
                       "ExecutionTime": "00:00:00",
                       "Name": "Delay 15",
-                      "Description": "Delay 200 ms - ID:18",
+                      "Description": "Delay 200 ms - ID:15",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:16",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 18,
+                      "ID": 15,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -34085,7 +34123,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -34159,16 +34197,16 @@
                       "UserTitle": "Read Dig In 1 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 16",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:20",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 19,
+                      "ID": 16,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -34457,16 +34495,16 @@
                       "UserTitle": "Read Dig In 1 ON (Monitor)",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 23",
-                      "Description": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:20",
+                      "Description": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:21",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 20,
+                      "ID": 17,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -34681,7 +34719,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -34755,16 +34793,16 @@
                       "UserTitle": "Read Dig In 2 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 17",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:21",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:18",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:23",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 21,
+                      "ID": 18,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -34979,7 +35017,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -35053,16 +35091,16 @@
                       "UserTitle": "Read Dig In 3 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 18",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:23",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:25",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:20",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 23,
+                      "ID": 19,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -35277,7 +35315,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -35351,7 +35389,7 @@
                       "UserTitle": "Read Dig In 4 ON",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 19",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:25",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:20",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,
@@ -35360,7 +35398,7 @@
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
-                      "ID": 25,
+                      "ID": 20,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -38595,7 +38633,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -39552,7 +39590,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -40164,7 +40202,7 @@
                             }
                           ]
                         },
-                        "Value": null,
+                        "Value": 12118.0,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -54177,7 +54215,7 @@
                       "Description": "Save  \"ADC Current Factor, Bus (Advanced) (MCU - CAN BUS)\" - ID:3",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Phase U (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Phase U (Advanced) (MCU - CAN BUS)\" ±  0 - ID:4",
+                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Phase U (Advanced)\" = \"ADC Current Factor, Phase U (Advanced) (MCU - CAN BUS)\" ±  0 - ID:4",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -54314,10 +54352,10 @@
                       "UserTitle": "Verify Gains in Monitor uC (U)",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 4",
-                      "Description": "Compare with tolerance:  \"ADC Current Factor, Phase U (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Phase U (Advanced) (MCU - CAN BUS)\" ±  0 - ID:4",
+                      "Description": "Compare with tolerance:  \"ADC Current Factor, Phase U (Advanced)\" = \"ADC Current Factor, Phase U (Advanced) (MCU - CAN BUS)\" ±  0 - ID:4",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Phase W (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Phase W (Advanced) (MCU - CAN BUS)\" ±  0 - ID:5",
+                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Phase W (Advanced)\" = \"ADC Current Factor, Phase W (Advanced) (MCU - CAN BUS)\" ±  0 - ID:5",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -54454,10 +54492,10 @@
                       "UserTitle": "Verify Gains in Monitor uC (W)",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 5",
-                      "Description": "Compare with tolerance:  \"ADC Current Factor, Phase W (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Phase W (Advanced) (MCU - CAN BUS)\" ±  0 - ID:5",
+                      "Description": "Compare with tolerance:  \"ADC Current Factor, Phase W (Advanced)\" = \"ADC Current Factor, Phase W (Advanced) (MCU - CAN BUS)\" ±  0 - ID:5",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Bus (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Bus (Advanced) (MCU - CAN BUS)\" ±  0 - ID:6",
+                      "PassNextDescription": "Compare with tolerance:  \"ADC Current Factor, Bus (Advanced)\" = \"ADC Current Factor, Bus (Advanced) (MCU - CAN BUS)\" ±  0 - ID:6",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -54594,7 +54632,7 @@
                       "UserTitle": "Verify Gains in Monitor uC (BUS)",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 6",
-                      "Description": "Compare with tolerance:  \"ADC Current Factor, Bus (Advanced) (MCU_2 - CAN BUS)\" = \"ADC Current Factor, Bus (Advanced) (MCU - CAN BUS)\" ±  0 - ID:6",
+                      "Description": "Compare with tolerance:  \"ADC Current Factor, Bus (Advanced)\" = \"ADC Current Factor, Bus (Advanced) (MCU - CAN BUS)\" ±  0 - ID:6",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": null,

@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -2613,6 +2612,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
+        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -2628,7 +2628,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 1",
         "ParentScriptName": "UUT Config",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2639,6 +2638,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "UUT Configuration",
         "UserTitle": "UUT Configuration",
+        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -2654,7 +2654,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "UUT Config",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2665,10 +2664,29 @@
         "IsInfinity": false,
         "SelectedScriptName": "Write SN",
         "UserTitle": "Write SN",
+        "Name": "ScriptNodeSubScript 2",
         "IsPass": false,
-        "PassNextId": -1,
+        "PassNextId": 4,
         "FailNextId": 0,
         "ID": 3,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLSetManufDate, ScriptHandler",
+        "DeviceType": 27,
+        "UserTitle": "Set Manufacture Date",
+        "Name": "EOL Set Manufacture Date 4",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

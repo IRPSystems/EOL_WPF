@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -58,6 +57,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 1 OFF",
+        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -73,7 +73,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -125,6 +124,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 2 OFF",
+        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -140,7 +140,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -192,6 +191,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 3 OFF",
+        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -207,7 +207,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -259,6 +258,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 4 OFF",
+        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -274,10 +274,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 11",
         "Interval": 200,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
+        "Name": "Delay 11",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -293,7 +293,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -487,7 +486,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -561,6 +560,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 1 OFF",
+        "Name": "Compare With Tolerance 7",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -576,7 +576,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -844,6 +843,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 1 OFF (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -859,7 +859,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1053,7 +1052,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1127,8 +1126,9 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 2 OFF",
+        "Name": "Compare With Tolerance 9",
         "IsPass": false,
-        "PassNextId": 10,
+        "PassNextId": 9,
         "FailNextId": 0,
         "ID": 8,
         "EOLReportsSelectionData": {
@@ -1142,7 +1142,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1336,7 +1335,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1358,7 +1357,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:9ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1410,10 +1409,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 3 OFF",
+        "Name": "Compare With Tolerance 8",
         "IsPass": false,
-        "PassNextId": 12,
+        "PassNextId": 10,
         "FailNextId": 0,
-        "ID": 10,
+        "ID": 9,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1425,7 +1425,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 10",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1619,7 +1618,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1641,7 +1640,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:12ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 0 ±  0 - ID:10ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -1693,10 +1692,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 4 OFF",
+        "Name": "Compare With Tolerance 10",
         "IsPass": false,
-        "PassNextId": 14,
+        "PassNextId": 11,
         "FailNextId": 0,
-        "ID": 12,
+        "ID": 10,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1708,7 +1708,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 10",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1760,10 +1759,11 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 1 ON",
+        "Name": "Set Parameter 10",
         "IsPass": false,
-        "PassNextId": 15,
+        "PassNextId": 12,
         "FailNextId": 0,
-        "ID": 14,
+        "ID": 11,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1775,7 +1775,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 11",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1827,10 +1826,11 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 2 ON",
+        "Name": "Set Parameter 11",
         "IsPass": false,
-        "PassNextId": 16,
+        "PassNextId": 13,
         "FailNextId": 0,
-        "ID": 15,
+        "ID": 12,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1842,7 +1842,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 12",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1894,10 +1893,11 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 3 ON",
+        "Name": "Set Parameter 12",
         "IsPass": false,
-        "PassNextId": 17,
+        "PassNextId": 14,
         "FailNextId": 0,
-        "ID": 16,
+        "ID": 13,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1909,7 +1909,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1961,10 +1960,11 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle Dig In 4 ON",
+        "Name": "Set Parameter 13",
         "IsPass": false,
-        "PassNextId": 18,
+        "PassNextId": 15,
         "FailNextId": 0,
-        "ID": 17,
+        "ID": 14,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1976,14 +1976,14 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 15",
         "Interval": 200,
         "IntervalUnite": 1,
         "UserTitle": "Delay ",
+        "Name": "Delay 15",
         "IsPass": false,
-        "PassNextId": 19,
+        "PassNextId": 16,
         "FailNextId": 0,
-        "ID": 18,
+        "ID": 15,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -1995,7 +1995,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2189,7 +2188,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2211,7 +2210,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:16ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2263,10 +2262,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 1 ON",
+        "Name": "Compare With Tolerance 16",
         "IsPass": false,
-        "PassNextId": 20,
+        "PassNextId": 17,
         "FailNextId": 0,
-        "ID": 19,
+        "ID": 16,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2278,7 +2278,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2494,7 +2493,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:20ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get\" = 1 ±  0 - ID:17ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2546,10 +2545,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 1 ON (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 23",
         "IsPass": false,
-        "PassNextId": 21,
+        "PassNextId": 18,
         "FailNextId": 0,
-        "ID": 20,
+        "ID": 17,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2561,7 +2561,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2755,7 +2754,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2777,7 +2776,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:21ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:18ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -2829,10 +2828,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 2 ON",
+        "Name": "Compare With Tolerance 17",
         "IsPass": false,
-        "PassNextId": 23,
+        "PassNextId": 19,
         "FailNextId": 0,
-        "ID": 21,
+        "ID": 18,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2844,7 +2844,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 18",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3038,7 +3037,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -3060,7 +3059,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:23ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:19ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -3112,10 +3111,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 3 ON",
+        "Name": "Compare With Tolerance 18",
         "IsPass": false,
-        "PassNextId": 25,
+        "PassNextId": 20,
         "FailNextId": 0,
-        "ID": 23,
+        "ID": 19,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -3127,7 +3127,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3321,7 +3320,7 @@
               }
             ]
           },
-          "Value": null,
+          "Value": 12118.0,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -3343,7 +3342,7 @@
         "Tolerance": 0.0,
         "Comparation": 0,
         "CompareValueDropDwonIndex": 0,
-        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:25ToleranceTypeGroupName",
+        "ToleranceTypeGroupName": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 1 ±  0 - ID:20ToleranceTypeGroupName",
         "IsValueTolerance": true,
         "IsPercentageTolerance": false,
         "IsUseParamAverage": false,
@@ -3395,10 +3394,11 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig In 4 ON",
+        "Name": "Compare With Tolerance 19",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
-        "ID": 25,
+        "ID": 20,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,

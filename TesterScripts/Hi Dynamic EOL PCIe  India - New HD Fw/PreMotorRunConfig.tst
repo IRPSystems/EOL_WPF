@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 1",
         "ParentScriptName": "PreMotorRunConfig",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -17,6 +16,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "PS Config Pre Motor Run",
         "UserTitle": "Config ps pre motor run",
+        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

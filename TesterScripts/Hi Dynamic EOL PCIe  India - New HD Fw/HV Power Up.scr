@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -54,6 +53,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Voltage Limit to 300V",
+        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -69,7 +69,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -117,6 +116,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Current Limit to 2A",
+        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -132,7 +132,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -194,6 +193,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle PS Output ON",
+        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -209,10 +209,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 5",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 5",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -228,7 +228,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -302,6 +301,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify PS Voltage 300V",
+        "Name": "Compare With Tolerance 6",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -317,7 +317,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -365,6 +364,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Current Limit to 15A",
+        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

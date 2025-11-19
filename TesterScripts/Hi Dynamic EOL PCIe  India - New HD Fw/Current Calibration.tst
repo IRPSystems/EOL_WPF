@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -2613,6 +2612,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
+        "Name": "ScriptNodeSetParameter 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -2628,7 +2628,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 8",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2639,6 +2638,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Phase U",
         "UserTitle": "Phase U",
+        "Name": "Sub Script 8",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -2654,7 +2654,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 9",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2665,6 +2664,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Phase W",
         "UserTitle": "Phase W",
+        "Name": "Sub Script 9",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -2680,7 +2680,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 3",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2691,6 +2690,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "BUS",
         "UserTitle": "BUS",
+        "Name": "Sub Script 3",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -2706,7 +2706,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
-        "Name": "Sub Script 4",
         "ParentScriptName": "Current Calibration",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2717,6 +2716,7 @@
         "IsInfinity": false,
         "SelectedScriptName": "Save New Gains",
         "UserTitle": "Save New Gains",
+        "Name": "Sub Script 4",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

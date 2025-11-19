@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SYST:LOCK",
@@ -68,6 +67,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to Remote Control",
+        "Name": "Set Parameter 21",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -83,7 +83,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -145,6 +144,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS On",
+        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -160,7 +160,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -246,6 +245,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Motor State to Neutral",
+        "Name": "Set Parameter 23",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -261,7 +261,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -309,6 +308,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set VBUS Voltage to 250V",
+        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -324,10 +324,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 17",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 17",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -343,7 +343,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -391,6 +390,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Current Limit to 30A",
+        "Name": "Set Parameter 24",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -406,7 +406,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -468,6 +467,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Output to ON",
+        "Name": "Set Parameter 22",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -483,7 +483,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -549,6 +548,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual FOC  to ON",
+        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -564,7 +564,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -630,6 +629,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
+        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -645,7 +645,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -703,6 +702,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual IQ Command to 50ARMS",
+        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -718,10 +718,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 21",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 21",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -737,7 +737,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
-        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -795,6 +794,7 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT to 1000 RPM",
+        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -810,10 +810,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 17",
         "Interval": 30,
         "IntervalUnite": 2,
         "UserTitle": "Stablize Speed",
+        "Name": "Delay 17",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -829,7 +829,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -907,6 +906,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Speed to 1000RPM",
+        "Name": "Compare With Tolerance 20",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -922,7 +922,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1000,6 +999,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare UUT Speed to 1000RPM (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 23",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -1015,7 +1015,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 17",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "MEAS:VOLT",
@@ -1089,6 +1088,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get PS Voltage 250",
+        "Name": "ScriptNodeCompareWithTolerance 17",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -1104,10 +1104,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 20",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
+        "Name": "Delay 20",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -1123,7 +1123,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 10",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1217,6 +1216,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT",
+        "Name": "Compare With Tolerance 10",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -1232,7 +1232,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1326,6 +1325,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare BUS Voltage PS vs UUT (Monitor)",
+        "Name": "ScriptNodeCompareWithTolerance 20",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -1341,7 +1341,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1439,6 +1438,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Phase U Current UUT vs External Current Sensor",
+        "Name": "ScriptNodeCompareWithTolerance 20",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -1454,7 +1454,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1552,6 +1551,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Phase W Current UUT vs External Current Sensor",
+        "Name": "Compare With Tolerance 19",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -1567,7 +1567,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "Compare With Tolerance 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1665,6 +1664,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Phase U Current UUT Main to Monitor",
+        "Name": "Compare With Tolerance 21",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -1680,7 +1680,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
-        "Name": "ScriptNodeCompareWithTolerance 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1778,6 +1777,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Phase W Current UUT Main to Monitor",
+        "Name": "ScriptNodeCompareWithTolerance 22",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

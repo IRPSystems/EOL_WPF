@@ -6,7 +6,6 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "Compare 1",
         "Parameter": null,
         "CompareValue": null,
         "CompareValueDropDwonIndex": -1,
@@ -54,6 +53,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Board Temp Under 75",
+        "Name": "Compare 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -69,10 +69,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "Delay 6",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
+        "Name": "Delay 6",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -88,7 +88,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "Compare 2",
         "Parameter": null,
         "CompareValue": null,
         "CompareValueDropDwonIndex": -1,
@@ -136,6 +135,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check Fault Vector 0",
+        "Name": "Compare 2",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -151,10 +151,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 7",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 7",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -170,7 +170,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "ScriptNodeCompare 3",
         "Parameter": null,
         "CompareValue": null,
         "CompareValueDropDwonIndex": -1,
@@ -218,6 +217,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check Fault Vector 1",
+        "Name": "ScriptNodeCompare 3",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -233,10 +233,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 8",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 8",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -252,7 +252,6 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
-        "Name": "ScriptNodeCompare 4",
         "Parameter": null,
         "CompareValue": null,
         "CompareValueDropDwonIndex": -1,
@@ -300,6 +299,7 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check Fault Vector 3",
+        "Name": "ScriptNodeCompare 4",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -315,10 +315,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
-        "Name": "ScriptNodeDelay 9",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
+        "Name": "ScriptNodeDelay 9",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

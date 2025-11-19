@@ -6,8 +6,8 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLSendSN, ScriptHandler",
-        "Name": "EOL Send SN 1",
         "UserTitle": "Set SN",
+        "Name": "EOL Send SN 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,
