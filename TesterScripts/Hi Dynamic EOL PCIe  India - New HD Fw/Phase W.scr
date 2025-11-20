@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -63,7 +64,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Value ",
-        "Name": "ScriptNodeSetParameter 25",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -79,10 +79,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 26",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 26",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -98,6 +98,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -155,7 +156,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Value ",
-        "Name": "ScriptNodeSetParameter 23",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -171,10 +171,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 27",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 27",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -190,6 +190,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -247,7 +248,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Value ",
-        "Name": "ScriptNodeSetParameter 24",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -263,10 +263,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 28",
         "Interval": 500,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 28",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -282,6 +282,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -339,7 +340,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Value ",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -355,10 +355,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 5",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 5",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -374,6 +374,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -431,7 +432,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 20A",
-        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -447,10 +447,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 12",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 12",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -466,6 +466,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -523,7 +524,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 200A",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -539,10 +539,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 8",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 8",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -558,6 +558,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLCalibrate, ScriptHandler",
+        "Name": "EOL Clibrate 1",
         "GainParam": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -636,7 +637,6 @@
         "NIDAQShuntResistor": 17.8,
         "DeviationLimit": 2.0,
         "UserTitle": "Calibrate Phase W",
-        "Name": "EOL Clibrate 1",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -652,6 +652,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 28",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -709,7 +710,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
-        "Name": "Set Parameter 28",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -725,10 +725,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 44",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 44",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -744,6 +744,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 43",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -772,7 +773,6 @@
           "IsInCANBus": true
         },
         "UserTitle": "Save Phase W Gain",
-        "Name": "Save Parameter 43",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -788,10 +788,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 29",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 29",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -807,6 +807,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -864,7 +865,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 50A",
-        "Name": "Set Parameter 13",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -880,10 +880,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 14",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 14",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -899,6 +899,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -996,7 +997,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (50A)",
-        "Name": "Compare With Tolerance 15",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": -1,
@@ -1012,6 +1012,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 39",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1109,7 +1110,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (50A) (Monitor)",
-        "Name": "Compare With Tolerance 39",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -1125,6 +1125,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 30",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1182,7 +1183,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
-        "Name": "Set Parameter 30",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -1198,10 +1198,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 31",
         "Interval": 10,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 31",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,
@@ -1217,6 +1217,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1274,7 +1275,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 100A",
-        "Name": "Set Parameter 19",
         "IsPass": false,
         "PassNextId": 25,
         "FailNextId": 0,
@@ -1290,10 +1290,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 20",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 20",
         "IsPass": false,
         "PassNextId": 26,
         "FailNextId": 0,
@@ -1309,6 +1309,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1406,7 +1407,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (100A)",
-        "Name": "Compare With Tolerance 21",
         "IsPass": false,
         "PassNextId": 27,
         "FailNextId": 0,
@@ -1422,6 +1422,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 40",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1519,7 +1520,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (100A) (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 40",
         "IsPass": false,
         "PassNextId": 28,
         "FailNextId": 0,
@@ -1535,6 +1535,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 32",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1592,7 +1593,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
-        "Name": "Set Parameter 32",
         "IsPass": false,
         "PassNextId": 29,
         "FailNextId": 0,
@@ -1608,10 +1608,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 33",
         "Interval": 10,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 33",
         "IsPass": false,
         "PassNextId": 30,
         "FailNextId": 0,
@@ -1627,6 +1627,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1684,7 +1685,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 150A",
-        "Name": "ScriptNodeSetParameter 23",
         "IsPass": false,
         "PassNextId": 31,
         "FailNextId": 0,
@@ -1700,10 +1700,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 23",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 23",
         "IsPass": false,
         "PassNextId": 32,
         "FailNextId": 0,
@@ -1719,6 +1719,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1816,7 +1817,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (150A)",
-        "Name": "ScriptNodeCompareWithTolerance 25",
         "IsPass": false,
         "PassNextId": 33,
         "FailNextId": 0,
@@ -1832,6 +1832,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 42",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1929,7 +1930,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (150A) (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 42",
         "IsPass": false,
         "PassNextId": 34,
         "FailNextId": 0,
@@ -1945,6 +1945,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2002,7 +2003,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
-        "Name": "Set Parameter 9",
         "IsPass": false,
         "PassNextId": 35,
         "FailNextId": 0,
@@ -2018,10 +2018,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 34",
         "Interval": 10,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 34",
         "IsPass": false,
         "PassNextId": 36,
         "FailNextId": 0,
@@ -2037,6 +2037,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 35",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2094,7 +2095,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 200A",
-        "Name": "Set Parameter 35",
         "IsPass": false,
         "PassNextId": 37,
         "FailNextId": 0,
@@ -2110,10 +2110,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 37",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 37",
         "IsPass": false,
         "PassNextId": 38,
         "FailNextId": 0,
@@ -2129,6 +2129,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 36",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2226,7 +2227,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (200A)",
-        "Name": "ScriptNodeCompareWithTolerance 36",
         "IsPass": false,
         "PassNextId": 39,
         "FailNextId": 0,
@@ -2242,6 +2242,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 43",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2339,7 +2340,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Validate Phase W Calibration (200A) (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 43",
         "IsPass": false,
         "PassNextId": 40,
         "FailNextId": 0,
@@ -2355,6 +2355,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 38",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2412,7 +2413,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual ID Command to 0A",
-        "Name": "ScriptNodeSetParameter 38",
         "IsPass": false,
         "PassNextId": 41,
         "FailNextId": 0,
@@ -2428,10 +2428,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 38",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 38",
         "IsPass": false,
         "PassNextId": 42,
         "FailNextId": 0,
@@ -2447,6 +2447,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2512,7 +2513,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed to OFF",
-        "Name": "Set Parameter 11",
         "IsPass": false,
         "PassNextId": 43,
         "FailNextId": 0,
@@ -2528,6 +2528,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 10",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2593,7 +2594,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual FOC Control to OFF",
-        "Name": "Set Parameter 10",
         "IsPass": false,
         "PassNextId": 44,
         "FailNextId": 0,
@@ -2609,10 +2609,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 24",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 24",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

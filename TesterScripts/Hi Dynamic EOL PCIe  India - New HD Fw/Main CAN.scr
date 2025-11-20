@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -273,7 +274,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Check Communication With CAN 1",
-        "Name": "Compare With Tolerance 2",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

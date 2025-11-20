@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:POW",
@@ -53,7 +54,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Power Limit 10kW",
-        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -69,6 +69,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:POW:PROT",
@@ -116,7 +117,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Power Protection 10kW",
-        "Name": "ScriptNodeSetParameter 2",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

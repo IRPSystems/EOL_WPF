@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -57,7 +58,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable 12V Supply Voltage (KL30)",
-        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -73,6 +73,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -124,7 +125,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable 48V Supply Voltage (Load Contactor)",
-        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -140,6 +140,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -191,7 +192,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Analog 0 (DAQ 1) to 0915V (Init Cooling Plate Temp)",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -207,6 +207,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -258,7 +259,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Analog 1 (DAQ 1) to 2.296V (Init Motor Temp)",
-        "Name": "Set Parameter 8",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -274,6 +274,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SYST:LOCK",
@@ -335,7 +336,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to Remote Control",
-        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -351,6 +351,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTPut",
@@ -398,7 +399,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "PS Output State - OFF",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -414,6 +414,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -461,7 +462,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Current to 1A",
-        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -477,6 +477,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:POW",
@@ -524,7 +525,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Power Limit to 1A",
-        "Name": "ScriptNodeSetParameter 8",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

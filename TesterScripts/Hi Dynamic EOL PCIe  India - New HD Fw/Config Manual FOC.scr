@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SYST:LOCK",
@@ -67,7 +68,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS to Remote Control",
-        "Name": "Set Parameter 21",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -83,6 +83,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:VOLTAGE",
@@ -130,7 +131,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set VBus Voltage Limit To 300V",
-        "Name": "ScriptNodeSetParameter 8",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -146,6 +146,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -207,7 +208,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS On",
-        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -223,6 +223,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -308,7 +309,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Motor State to Neutral",
-        "Name": "Set Parameter 23",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -324,6 +324,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -389,7 +390,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual FOC  to ON",
-        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -405,6 +405,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -470,7 +471,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Manual Angle Speed to ON",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -486,6 +486,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -543,7 +544,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed Ramp",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -559,6 +559,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -616,7 +617,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set AB Fault Count Threshold to 50000",
-        "Name": "Set Parameter 9",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

@@ -6,10 +6,10 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 5",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -25,6 +25,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -108,7 +109,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Major",
-        "Name": "ScriptNodeCompareWithTolerance 6",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": -1,
@@ -124,6 +124,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -207,7 +208,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Middle",
-        "Name": "ScriptNodeCompareWithTolerance 3",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": -1,
@@ -223,6 +223,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -306,7 +307,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Minor",
-        "Name": "ScriptNodeCompareWithTolerance 4",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": -1,
@@ -322,6 +322,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -405,7 +406,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Major (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 5",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": -1,
@@ -421,6 +421,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -504,7 +505,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Middle (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 6",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": -1,
@@ -520,6 +520,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -603,7 +604,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get SW Version - Minor (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 7",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": -1,

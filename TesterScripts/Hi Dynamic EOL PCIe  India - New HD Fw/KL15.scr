@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -92,7 +93,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": null,
-        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

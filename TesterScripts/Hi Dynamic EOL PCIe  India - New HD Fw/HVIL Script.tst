@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 1",
         "ParentScriptName": "HVIL Script",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -16,7 +17,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "HVIL Switches",
         "UserTitle": "HVIL Switches",
-        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

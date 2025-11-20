@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -57,7 +58,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enable 12V Supply Voltage (KL30)",
-        "Name": "ScriptNodeSetParameter 13",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -73,10 +73,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 15",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 15",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -92,6 +92,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLFlash, ScriptHandler",
+        "Name": "EOL Flash 1",
         "FlashFilePath": null,
         "RXId": null,
         "TXId": null,
@@ -104,7 +105,6 @@
         "MCU2_Used": true,
         "DeviceType": 6,
         "UserTitle": "Flash",
-        "Name": "EOL Flash 1",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -120,10 +120,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 2",
         "Interval": 33,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 2",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -139,6 +139,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -222,7 +223,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "SW Version - Major (MCU)",
-        "Name": "Compare With Tolerance 3",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -238,6 +238,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -321,7 +322,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "SW Version - Middle (MCU)",
-        "Name": "ScriptNodeCompareWithTolerance 4",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -337,6 +337,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -420,7 +421,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "SW Version - Minor (MCU)",
-        "Name": "ScriptNodeCompareWithTolerance 5",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -436,6 +436,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLFlash, ScriptHandler",
+        "Name": "ScriptNodeEOLFlash 9",
         "FlashFilePath": null,
         "RXId": null,
         "TXId": null,
@@ -448,7 +449,6 @@
         "MCU2_Used": true,
         "DeviceType": 6,
         "UserTitle": "Flash",
-        "Name": "ScriptNodeEOLFlash 9",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -464,10 +464,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 12",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 12",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -483,6 +483,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -566,7 +567,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "SW Version - Major (MCU)",
-        "Name": "ScriptNodeCompareWithTolerance 11",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -582,6 +582,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -633,7 +634,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable 12V Supply Voltage (KL30)",
-        "Name": "ScriptNodeSetParameter 14",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

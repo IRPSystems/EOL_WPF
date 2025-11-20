@@ -5519,13 +5519,256 @@
                       "Description": "Compare  ADC Current Offset, Bus (MCU - CAN BUS) != 2047 - ID:7",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Set  \"ATE Mode (MCU - CAN BUS)\" = 0 - ID:8",
+                      "PassNextDescription": "Save  \"ADC Current Offset, Phase U (MCU - CAN BUS)\" - ID:27",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
                       "BorderBrush": null,
                       "StepState": 0,
                       "ID": 7,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
+                        "IsSaveToCustomerVer": false,
+                        "IsSaveToWats": true
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Advanced",
+                        "Description": "ADC Current Offset, Phase U",
+                        "Default": "0",
+                        "Cmd": "zeroffu",
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            2000.0,
+                            2100.0
+                          ]
+                        },
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": null,
+                        "Name": "ADC Current Offset, Phase U",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "IsInCANBus": true
+                      },
+                      "Communicator": {
+                        "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                        "CommService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "CanService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "IsInitialized": true
+                      },
+                      "UserTitle": "Save Offset Calibration Phase U",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "Save Parameter 27",
+                      "Description": "Save  \"ADC Current Offset, Phase U (MCU - CAN BUS)\" - ID:27",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Save  \"ADC Current Offset, Phase W (MCU - CAN BUS)\" - ID:28",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 27,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
+                        "IsSaveToCustomerVer": false,
+                        "IsSaveToWats": true
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Advanced",
+                        "Description": "ADC Current Offset, Phase W",
+                        "Default": "0",
+                        "Cmd": "zeroffw",
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            2000.0,
+                            2100.0
+                          ]
+                        },
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": null,
+                        "Name": "ADC Current Offset, Phase W",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "IsInCANBus": true
+                      },
+                      "Communicator": {
+                        "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                        "CommService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "CanService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "IsInitialized": true
+                      },
+                      "UserTitle": "Save Offset Calibration Phase W",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "Save Parameter 28",
+                      "Description": "Save  \"ADC Current Offset, Phase W (MCU - CAN BUS)\" - ID:28",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Save  \"ADC Current Offset, Bus (MCU - CAN BUS)\" - ID:29",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 28,
+                      "EOLReportsSelectionData": {
+                        "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                        "IsSaveToReport": true,
+                        "IsSaveToPdfExecTable": true,
+                        "IsSaveToPdfDynTable": true,
+                        "IsSaveToCustomerVer": false,
+                        "IsSaveToWats": true
+                      },
+                      "EOLStepSummerysList": {
+                        "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                        "$values": []
+                      },
+                      "CommSendResLog": null,
+                      "SubScriptName": null,
+                      "TestName": null,
+                      "ProgressPercentage": 0
+                    },
+                    {
+                      "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                      "IsError": null,
+                      "IsExecuted": false,
+                      "Parameter": {
+                        "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                        "ValueChanged": null,
+                        "Value": "",
+                        "GroupName": "Advanced",
+                        "Description": "ADC Current Offset, Bus",
+                        "Default": "0",
+                        "Cmd": "zeroffb",
+                        "Range": {
+                          "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                          "$values": [
+                            2000.0,
+                            2100.0
+                          ]
+                        },
+                        "Format": null,
+                        "Scale": 1.0,
+                        "Note": null,
+                        "Save": true,
+                        "DropDown": null,
+                        "Name": "ADC Current Offset, Bus",
+                        "Units": null,
+                        "DeviceType": 1,
+                        "ToolTip": null,
+                        "CommunicationTimeout": 0,
+                        "IsInCANBus": true
+                      },
+                      "Communicator": {
+                        "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                        "CommService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "CanService": {
+                          "$type": "Communication.Services.CanPCanService, Communication",
+                          "Baudrate": 500000,
+                          "IsInitialized": true,
+                          "Name": "MCU_Communicator",
+                          "FromFilterID": 0,
+                          "ToFilterID": 0
+                        },
+                        "IsInitialized": true
+                      },
+                      "UserTitle": "Save Offset Calibration Phase BUS",
+                      "ExecutionTime": "00:00:00",
+                      "Name": "Save Parameter 29",
+                      "Description": "Save  \"ADC Current Offset, Bus (MCU - CAN BUS)\" - ID:29",
+                      "OperatorErrorDescription": null,
+                      "IsPass": false,
+                      "PassNextDescription": "Set  \"ATE Mode (MCU - CAN BUS)\" = 0 - ID:8",
+                      "FailNextDescription": null,
+                      "ErrorMessage": "",
+                      "StopScriptStep": null,
+                      "BorderBrush": null,
+                      "StepState": 0,
+                      "ID": 29,
                       "EOLReportsSelectionData": {
                         "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                         "IsSaveToReport": true,
@@ -7971,7 +8214,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -9096,7 +9339,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -9968,7 +10211,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -10840,7 +11083,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -11712,7 +11955,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -12584,7 +12827,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -13521,7 +13764,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -15910,7 +16153,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16269,7 +16512,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -16480,7 +16723,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18113,7 +18356,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -18853,7 +19096,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -19593,7 +19836,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -20477,7 +20720,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21217,7 +21460,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -21979,7 +22222,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -22719,7 +22962,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -23459,7 +23702,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -24199,7 +24442,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -24939,7 +25182,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -28844,13 +29087,256 @@
                               "Description": "Compare  ADC Current Offset, Bus (MCU - CAN BUS) != 2047 - ID:7",
                               "OperatorErrorDescription": null,
                               "IsPass": false,
-                              "PassNextDescription": "Set  \"ATE Mode (MCU - CAN BUS)\" = 0 - ID:8",
+                              "PassNextDescription": "Save  \"ADC Current Offset, Phase U (MCU - CAN BUS)\" - ID:27",
                               "FailNextDescription": null,
                               "ErrorMessage": "",
                               "StopScriptStep": null,
                               "BorderBrush": null,
                               "StepState": 0,
                               "ID": 7,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": true,
+                                "IsSaveToPdfExecTable": true,
+                                "IsSaveToPdfDynTable": true,
+                                "IsSaveToCustomerVer": false,
+                                "IsSaveToWats": true
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "CommSendResLog": null,
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                              "IsError": null,
+                              "IsExecuted": false,
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Advanced",
+                                "Description": "ADC Current Offset, Phase U",
+                                "Default": "0",
+                                "Cmd": "zeroffu",
+                                "Range": {
+                                  "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                                  "$values": [
+                                    2000.0,
+                                    2100.0
+                                  ]
+                                },
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": null,
+                                "Name": "ADC Current Offset, Phase U",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "ToolTip": null,
+                                "CommunicationTimeout": 0,
+                                "IsInCANBus": true
+                              },
+                              "Communicator": {
+                                "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                                "CommService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "CanService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "IsInitialized": true
+                              },
+                              "UserTitle": "Save Offset Calibration Phase U",
+                              "ExecutionTime": "00:00:00",
+                              "Name": "Save Parameter 27",
+                              "Description": "Save  \"ADC Current Offset, Phase U (MCU - CAN BUS)\" - ID:27",
+                              "OperatorErrorDescription": null,
+                              "IsPass": false,
+                              "PassNextDescription": "Save  \"ADC Current Offset, Phase W (MCU - CAN BUS)\" - ID:28",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 27,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": true,
+                                "IsSaveToPdfExecTable": true,
+                                "IsSaveToPdfDynTable": true,
+                                "IsSaveToCustomerVer": false,
+                                "IsSaveToWats": true
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "CommSendResLog": null,
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                              "IsError": null,
+                              "IsExecuted": false,
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Advanced",
+                                "Description": "ADC Current Offset, Phase W",
+                                "Default": "0",
+                                "Cmd": "zeroffw",
+                                "Range": {
+                                  "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                                  "$values": [
+                                    2000.0,
+                                    2100.0
+                                  ]
+                                },
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": null,
+                                "Name": "ADC Current Offset, Phase W",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "ToolTip": null,
+                                "CommunicationTimeout": 0,
+                                "IsInCANBus": true
+                              },
+                              "Communicator": {
+                                "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                                "CommService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "CanService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "IsInitialized": true
+                              },
+                              "UserTitle": "Save Offset Calibration Phase W",
+                              "ExecutionTime": "00:00:00",
+                              "Name": "Save Parameter 28",
+                              "Description": "Save  \"ADC Current Offset, Phase W (MCU - CAN BUS)\" - ID:28",
+                              "OperatorErrorDescription": null,
+                              "IsPass": false,
+                              "PassNextDescription": "Save  \"ADC Current Offset, Bus (MCU - CAN BUS)\" - ID:29",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 28,
+                              "EOLReportsSelectionData": {
+                                "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+                                "IsSaveToReport": true,
+                                "IsSaveToPdfExecTable": true,
+                                "IsSaveToPdfDynTable": true,
+                                "IsSaveToCustomerVer": false,
+                                "IsSaveToWats": true
+                              },
+                              "EOLStepSummerysList": {
+                                "$type": "System.Collections.Generic.List`1[[ScriptHandler.Models.EOLStepSummeryData, ScriptHandler]], System.Private.CoreLib",
+                                "$values": []
+                              },
+                              "CommSendResLog": null,
+                              "SubScriptName": null,
+                              "TestName": null,
+                              "ProgressPercentage": 0
+                            },
+                            {
+                              "$type": "ScriptHandler.Models.ScriptSteps.ScriptStepSaveParameter, ScriptHandler",
+                              "IsError": null,
+                              "IsExecuted": false,
+                              "Parameter": {
+                                "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+                                "ValueChanged": null,
+                                "Value": "",
+                                "GroupName": "Advanced",
+                                "Description": "ADC Current Offset, Bus",
+                                "Default": "0",
+                                "Cmd": "zeroffb",
+                                "Range": {
+                                  "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+                                  "$values": [
+                                    2000.0,
+                                    2100.0
+                                  ]
+                                },
+                                "Format": null,
+                                "Scale": 1.0,
+                                "Note": null,
+                                "Save": true,
+                                "DropDown": null,
+                                "Name": "ADC Current Offset, Bus",
+                                "Units": null,
+                                "DeviceType": 1,
+                                "ToolTip": null,
+                                "CommunicationTimeout": 0,
+                                "IsInCANBus": true
+                              },
+                              "Communicator": {
+                                "$type": "DeviceCommunicators.CANBus.CANBus_Communicator, DeviceCommunicators",
+                                "CommService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "CanService": {
+                                  "$type": "Communication.Services.CanPCanService, Communication",
+                                  "Baudrate": 500000,
+                                  "IsInitialized": true,
+                                  "Name": "MCU_Communicator",
+                                  "FromFilterID": 0,
+                                  "ToFilterID": 0
+                                },
+                                "IsInitialized": true
+                              },
+                              "UserTitle": "Save Offset Calibration Phase BUS",
+                              "ExecutionTime": "00:00:00",
+                              "Name": "Save Parameter 29",
+                              "Description": "Save  \"ADC Current Offset, Bus (MCU - CAN BUS)\" - ID:29",
+                              "OperatorErrorDescription": null,
+                              "IsPass": false,
+                              "PassNextDescription": "Set  \"ATE Mode (MCU - CAN BUS)\" = 0 - ID:8",
+                              "FailNextDescription": null,
+                              "ErrorMessage": "",
+                              "StopScriptStep": null,
+                              "BorderBrush": null,
+                              "StepState": 0,
+                              "ID": 29,
                               "EOLReportsSelectionData": {
                                 "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
                                 "IsSaveToReport": true,
@@ -31296,7 +31782,7 @@
                                     }
                                   ]
                                 },
-                                "Value": 12118.0,
+                                "Value": null,
                                 "GroupName": null,
                                 "Description": null,
                                 "Default": null,
@@ -32174,7 +32660,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -32770,7 +33256,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -33068,7 +33554,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -33366,7 +33852,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -34123,7 +34609,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -34719,7 +35205,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -35017,7 +35503,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -35315,7 +35801,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -38633,7 +39119,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -39590,7 +40076,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -40202,7 +40688,7 @@
                             }
                           ]
                         },
-                        "Value": 12118.0,
+                        "Value": null,
                         "GroupName": null,
                         "Description": null,
                         "Default": null,
@@ -42980,7 +43466,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -42988,12 +43474,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Phase U Gain",
                       "ExecutionTime": "00:00:00",
@@ -46552,7 +47038,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -46560,12 +47046,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Phase W Gain",
                       "ExecutionTime": "00:00:00",
@@ -51370,7 +51856,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -51378,12 +51864,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Bus Gain",
                       "ExecutionTime": "00:00:00",
@@ -54032,7 +54518,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54040,12 +54526,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -54113,7 +54599,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54121,12 +54607,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -54194,7 +54680,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54202,12 +54688,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": false,
+                          "IsInitialized": true,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": false
+                        "IsInitialized": true
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",

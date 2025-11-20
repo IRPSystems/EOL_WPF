@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -34,7 +35,6 @@
           "IsInCANBus": true
         },
         "UserTitle": "Save Current Gain U",
-        "Name": "Save Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -50,6 +50,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -78,7 +79,6 @@
           "IsInCANBus": true
         },
         "UserTitle": "Save Current Gain V",
-        "Name": "Save Parameter 2",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -94,6 +94,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -122,7 +123,6 @@
           "IsInCANBus": true
         },
         "UserTitle": "Save Current Gain BUS",
-        "Name": "Save Parameter 3",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -138,6 +138,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -247,7 +248,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Gains in Monitor uC (U)",
-        "Name": "Compare With Tolerance 4",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -263,6 +263,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -372,7 +373,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Gains in Monitor uC (W)",
-        "Name": "ScriptNodeCompareWithTolerance 5",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -388,6 +388,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -497,7 +498,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Gains in Monitor uC (BUS)",
-        "Name": "ScriptNodeCompareWithTolerance 6",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

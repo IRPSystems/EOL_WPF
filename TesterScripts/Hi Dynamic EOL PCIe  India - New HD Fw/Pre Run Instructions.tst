@@ -6,10 +6,10 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
+        "Name": "ScriptNodeNotification 4",
         "Notification": "Connect phase's & power cables\r\n",
         "NotificationLevel": 2,
         "UserTitle": "Power Cables User Instrution",
-        "Name": "ScriptNodeNotification 4",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -25,10 +25,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
+        "Name": "ScriptNodeNotification 5",
         "Notification": "Toggle the WatchDog switches on!",
         "NotificationLevel": 2,
         "UserTitle": "WatchDog User Instrution",
-        "Name": "ScriptNodeNotification 5",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -44,10 +44,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeNotification, ScriptHandler",
+        "Name": "ScriptNodeNotification 3",
         "Notification": "Connect Ground Cable",
         "NotificationLevel": 2,
         "UserTitle": "Ground Cable User Instrution",
-        "Name": "ScriptNodeNotification 3",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -63,6 +63,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 2",
         "ParentScriptName": "Pre Run Instructions",
         "ContinueUntilType": 0,
         "Repeats": 3,
@@ -73,7 +74,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "InterLock Verification",
         "UserTitle": "InterLock Verification",
-        "Name": "Sub Script 2",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

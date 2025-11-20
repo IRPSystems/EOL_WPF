@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -57,7 +58,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enable 12V Supply Voltage (KL30)",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -73,10 +73,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 8",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Init Delay",
-        "Name": "Delay 8",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

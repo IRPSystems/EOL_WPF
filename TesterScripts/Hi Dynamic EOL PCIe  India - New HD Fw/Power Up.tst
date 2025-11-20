@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -1332,7 +1333,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -1348,6 +1348,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 3",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -1358,7 +1359,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "LV Power Up",
         "UserTitle": "LV Power Up",
-        "Name": "Sub Script 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -1374,6 +1374,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -1384,7 +1385,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "HV Power Up",
         "UserTitle": "HV Power Up",
-        "Name": "ScriptNodeSubScript 2",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -1400,6 +1400,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 3",
         "ParentScriptName": "Power Up",
         "ContinueUntilType": 1,
         "Repeats": 1,
@@ -1410,7 +1411,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "First Comm Validation",
         "UserTitle": "Establish Communication",
-        "Name": "ScriptNodeSubScript 3",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

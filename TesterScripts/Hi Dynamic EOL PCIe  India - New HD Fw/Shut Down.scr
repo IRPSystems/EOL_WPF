@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -67,7 +68,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Turn OFF PS",
-        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -83,6 +83,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -134,7 +135,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Turn OFF VSW",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -150,10 +150,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 3",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay ",
-        "Name": "Delay 3",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

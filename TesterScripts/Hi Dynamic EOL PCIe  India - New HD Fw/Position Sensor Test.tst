@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -2612,7 +2613,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
-        "Name": "ScriptNodeSetParameter 4",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -2628,6 +2628,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 3",
         "ParentScriptName": "Position Sensor Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2638,7 +2639,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Config Manual FOC",
         "UserTitle": "Configure FOC ",
-        "Name": "ScriptNodeSubScript 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -2654,6 +2654,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 5",
         "ParentScriptName": "Position Sensor Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2664,7 +2665,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Config Position Sensor",
         "UserTitle": "Config Motor",
-        "Name": "ScriptNodeSubScript 5",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -2680,6 +2680,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 1",
         "ParentScriptName": "Position Sensor Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2690,7 +2691,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Speed Estimation",
         "UserTitle": "Speed Estimation",
-        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

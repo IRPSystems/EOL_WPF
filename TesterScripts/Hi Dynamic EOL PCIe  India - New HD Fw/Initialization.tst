@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 4",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -62,7 +63,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Recording Monitor",
-        "Name": "Set Parameter 4",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -78,6 +78,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 10",
         "ParentScriptName": "Initialization",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -88,7 +89,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "ATE Init",
         "UserTitle": "ATE Init",
-        "Name": "Sub Script 10",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -104,6 +104,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 2",
         "ParentScriptName": "Initialization",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -114,7 +115,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Check Ambient Temperature",
         "UserTitle": "Check Ambient Temperature",
-        "Name": "Sub Script 2",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -130,6 +130,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 3",
         "ParentScriptName": "Initialization",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -140,7 +141,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Zero Current Check",
         "UserTitle": "Zero Current Check",
-        "Name": "Sub Script 3",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

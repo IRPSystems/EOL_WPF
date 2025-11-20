@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -199,7 +200,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -410,7 +411,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -483,7 +484,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Board Temp 1 to Board Temp 2",
-        "Name": "Compare With Tolerance 2",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -499,6 +499,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -976,7 +977,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Compare Board Temp 1 to Board Temp 2 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 3",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -992,6 +992,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1059,7 +1060,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Board Temp Is Below 40",
-        "Name": "Compare 9",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -1075,6 +1075,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "ScriptNodeCompare 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1142,7 +1143,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Board Temp Is Below 40 (Monitor)",
-        "Name": "ScriptNodeCompare 4",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

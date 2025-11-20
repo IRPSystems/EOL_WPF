@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "OUTP",
@@ -67,7 +68,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Output to OFF",
-        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -83,6 +83,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -135,7 +136,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
-        "Name": "ScriptNodeSetParameter 7",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -151,10 +151,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 9",
         "Interval": 1,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 9",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -170,6 +170,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -271,7 +272,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get Motor State ATE",
-        "Name": "Compare 8",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -287,6 +287,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -508,7 +509,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable WatchDog Trigger",
-        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -524,10 +524,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 12",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Wake Up Delay",
-        "Name": "ScriptNodeDelay 12",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -543,6 +543,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -620,7 +621,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Run Time",
-        "Name": "ScriptNodeCompareWithTolerance 11",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -636,6 +636,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 12",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -713,7 +714,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Run Time (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 12",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -729,6 +729,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 9",
         "ParentScriptName": "Watch Dog Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -739,7 +740,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "LV Power Up",
         "UserTitle": "LV Power UP",
-        "Name": "Sub Script 9",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -755,6 +755,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 10",
         "ParentScriptName": "Watch Dog Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -765,7 +766,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "HV Power Up",
         "UserTitle": "HV Power Up",
-        "Name": "Sub Script 10",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -781,10 +781,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 11",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 11",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -800,6 +800,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 10",
         "ParentScriptName": "Watch Dog Test",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -810,7 +811,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "UUT Configuration",
         "UserTitle": "UUT Configuration",
-        "Name": "Sub Script 10",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

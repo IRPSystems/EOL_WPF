@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.EvvaDevice.Evva_ParamData, DeviceCommunicators",
           "DropDown": {
@@ -2612,7 +2613,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Start Safety Officer",
-        "Name": "ScriptNodeSetParameter 7",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -2628,6 +2628,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "Sub Script 1",
         "ParentScriptName": "Operational Tests",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2638,7 +2639,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Min. Voltage Operation",
         "UserTitle": "Min. Voltage Operation",
-        "Name": "Sub Script 1",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -2654,10 +2654,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 4",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 4",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -2673,10 +2673,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 4",
         "Interval": 5,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 4",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -2692,6 +2692,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 2",
         "ParentScriptName": "Operational Tests",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2702,7 +2703,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Max. Voltage Operation",
         "UserTitle": "Max. Voltage Operation",
-        "Name": "ScriptNodeSubScript 2",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -2718,6 +2718,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSubScript, ScriptHandler",
+        "Name": "ScriptNodeSubScript 5",
         "ParentScriptName": "Operational Tests",
         "ContinueUntilType": 0,
         "Repeats": 1,
@@ -2728,7 +2729,6 @@
         "IsInfinity": false,
         "SelectedScriptName": "Peak Operation",
         "UserTitle": "Peak Operation",
-        "Name": "ScriptNodeSubScript 5",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -2744,10 +2744,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 6",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 6",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

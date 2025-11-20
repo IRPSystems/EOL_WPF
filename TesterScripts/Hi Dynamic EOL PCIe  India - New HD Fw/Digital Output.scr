@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -227,7 +228,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 1 OFF",
-        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -243,6 +243,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -464,7 +465,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 2 OFF",
-        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -480,6 +480,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -701,7 +702,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 3 OFF",
-        "Name": "Set Parameter 11",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -717,10 +717,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 4",
         "Interval": 200,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 4",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -736,6 +736,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -813,7 +814,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Dig Out 1 OFF",
-        "Name": "Compare With Tolerance 5",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 6,
@@ -829,6 +829,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -906,7 +907,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read DIG Out 2 OFF",
-        "Name": "Compare With Tolerance 6",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 7,
@@ -922,6 +922,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 12",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -999,7 +1000,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read DIG Out 3 OFF",
-        "Name": "Compare With Tolerance 12",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -1015,6 +1015,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1236,7 +1237,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 1 ON",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1252,6 +1252,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1473,7 +1474,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 2 ON",
-        "Name": "Set Parameter 8",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1489,6 +1489,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1710,7 +1711,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Toggle DIG Out 3 ON",
-        "Name": "Set Parameter 13",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1726,10 +1726,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 9",
         "Interval": 200,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 9",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -1745,6 +1745,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 10",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1822,7 +1823,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read DIG Out 1 ON",
-        "Name": "Compare With Tolerance 10",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 13,
@@ -1838,6 +1838,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1915,7 +1916,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read DIG Out 2 ON",
-        "Name": "Compare With Tolerance 11",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 14,
@@ -1931,6 +1931,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 14",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -2008,7 +2009,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read DIG Out 3 ON",
-        "Name": "Compare With Tolerance 14",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

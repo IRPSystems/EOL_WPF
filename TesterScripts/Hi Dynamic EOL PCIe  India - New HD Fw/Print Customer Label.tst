@@ -6,13 +6,13 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLPrint, ScriptHandler",
+        "Name": "EOL Print 1",
         "PartNumber": "HD80-450A00-MH00",
         "CustomerPartNumber": null,
         "Spec": null,
         "HW_Version": "00-G",
         "MCU_Version": null,
         "UserTitle": "Print Label",
-        "Name": "EOL Print 1",
         "IsPass": false,
         "PassNextId": 0,
         "FailNextId": 0,

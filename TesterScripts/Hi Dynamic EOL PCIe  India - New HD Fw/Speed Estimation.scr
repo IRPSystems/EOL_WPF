@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 10",
         "Parameter": {
           "$type": "DeviceCommunicators.PowerSupplayEA.PowerSupplayEA_ParamData, DeviceCommunicators",
           "Cmd": "SOUR:CURRENT",
@@ -53,7 +54,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set PS Current Limit To 5A",
-        "Name": "ScriptNodeSetParameter 10",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -69,6 +69,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -134,7 +135,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Source Manual",
-        "Name": "ScriptNodeSetParameter 23",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -150,6 +150,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 2",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -215,7 +216,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Max Bus Current Limit ",
-        "Name": "Set Parameter 2",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -231,6 +231,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 12",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -296,7 +297,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Max Limit Speed ON",
-        "Name": "ScriptNodeSetParameter 12",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -312,6 +312,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -397,7 +398,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor State To Run",
-        "Name": "ScriptNodeSetParameter 19",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -413,6 +413,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 18",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -483,7 +484,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Drive Direction To FW",
-        "Name": "ScriptNodeSetParameter 18",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -499,6 +499,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -564,7 +565,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual FOC Off",
-        "Name": "ScriptNodeSetParameter 21",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -580,6 +580,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -645,7 +646,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed Off",
-        "Name": "ScriptNodeSetParameter 20",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -661,6 +661,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -712,7 +713,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Max Limit Speed To 1500",
-        "Name": "ScriptNodeSetParameter 3",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -728,6 +728,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 29",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -793,7 +794,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Active Damping",
-        "Name": "ScriptNodeSetParameter 29",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -809,6 +809,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -874,7 +875,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Control Type Torque",
-        "Name": "ScriptNodeSetParameter 22",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -890,6 +890,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -947,7 +948,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command To 5",
-        "Name": "ScriptNodeSetParameter 13",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -963,6 +963,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
+        "Name": "Converge 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -991,7 +992,6 @@
         "TargetValue": "1500",
         "Tolerance": 1000.0,
         "UserTitle": "Converge Speed RPM Value 1500",
-        "Name": "Converge 5",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1007,6 +1007,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1104,7 +1105,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 1500 RPM",
-        "Name": "Compare With Tolerance 1",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -1120,6 +1120,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 33",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1217,7 +1218,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 1500 RPM (Monitor)",
-        "Name": "Compare With Tolerance 33",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -1233,6 +1233,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 22",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1290,7 +1291,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command To 0",
-        "Name": "ScriptNodeSetParameter 22",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -1306,10 +1306,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 23",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 23",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -1325,6 +1325,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 14",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1376,7 +1377,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Max Limit Speed To 2000",
-        "Name": "ScriptNodeSetParameter 14",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -1392,6 +1392,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1449,7 +1450,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command To 5",
-        "Name": "ScriptNodeSetParameter 24",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -1465,6 +1465,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
+        "Name": "ScriptNodeConverge 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1493,7 +1494,6 @@
         "TargetValue": "2000",
         "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM Value 2000",
-        "Name": "ScriptNodeConverge 8",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -1509,6 +1509,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1606,7 +1607,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 2000 RPM",
-        "Name": "ScriptNodeCompareWithTolerance 9",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -1622,6 +1622,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 34",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1719,7 +1720,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 2000 RPM (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 34",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -1735,6 +1735,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1792,7 +1793,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command To 0",
-        "Name": "ScriptNodeSetParameter 25",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,
@@ -1808,10 +1808,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "ScriptNodeDelay 26",
         "Interval": 2,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "ScriptNodeDelay 26",
         "IsPass": false,
         "PassNextId": 25,
         "FailNextId": 0,
@@ -1827,6 +1827,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1878,7 +1879,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Max Limit Speed To 2500",
-        "Name": "ScriptNodeSetParameter 15",
         "IsPass": false,
         "PassNextId": 26,
         "FailNextId": 0,
@@ -1894,6 +1894,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 27",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1951,7 +1952,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command To 5",
-        "Name": "ScriptNodeSetParameter 27",
         "IsPass": false,
         "PassNextId": 27,
         "FailNextId": 0,
@@ -1967,6 +1967,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeConverge, ScriptHandler",
+        "Name": "ScriptNodeConverge 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1995,7 +1996,6 @@
         "TargetValue": "2500",
         "Tolerance": 100.0,
         "UserTitle": "Converge Speed RPM Value 2500",
-        "Name": "ScriptNodeConverge 16",
         "IsPass": false,
         "PassNextId": 28,
         "FailNextId": 0,
@@ -2011,6 +2011,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2108,7 +2109,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 2500 RPM",
-        "Name": "ScriptNodeCompareWithTolerance 17",
         "IsPass": false,
         "PassNextId": 29,
         "FailNextId": 0,
@@ -2124,6 +2124,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 35",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2221,7 +2222,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Speed Sensor 2500 RPM (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 35",
         "IsPass": false,
         "PassNextId": 30,
         "FailNextId": 0,
@@ -2237,6 +2237,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2294,7 +2295,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Manual Angle Speed Value 0",
-        "Name": "ScriptNodeSetParameter 8",
         "IsPass": false,
         "PassNextId": 31,
         "FailNextId": 0,
@@ -2310,6 +2310,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2367,7 +2368,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Torque Command to 0Nm",
-        "Name": "ScriptNodeSetParameter 7",
         "IsPass": false,
         "PassNextId": 32,
         "FailNextId": 0,
@@ -2383,6 +2383,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 29",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2468,7 +2469,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor State to NEUTRAL",
-        "Name": "ScriptNodeSetParameter 29",
         "IsPass": false,
         "PassNextId": 33,
         "FailNextId": 0,
@@ -2484,10 +2484,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 30",
         "Interval": 4,
         "IntervalUnite": 2,
         "UserTitle": "Delay",
-        "Name": "Delay 30",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -199,7 +200,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -273,7 +274,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 5",
-        "Name": "Compare With Tolerance 1",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -289,6 +289,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -556,7 +557,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 5 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 16",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -572,6 +572,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -623,7 +624,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 to 20",
-        "Name": "Set Parameter 15",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -639,10 +639,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 3",
         "Interval": 5000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 3",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -658,6 +658,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -851,7 +852,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -925,7 +926,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 20",
-        "Name": "Compare With Tolerance 4",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -941,6 +941,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1208,7 +1209,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 20 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 17",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -1224,6 +1224,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 16",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1275,7 +1276,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 to 50",
-        "Name": "ScriptNodeSetParameter 16",
         "IsPass": false,
         "PassNextId": 8,
         "FailNextId": 0,
@@ -1291,10 +1291,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 6",
         "Interval": 5000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 6",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -1310,6 +1310,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1503,7 +1504,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -1577,7 +1578,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 50",
-        "Name": "Compare With Tolerance 7",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1593,6 +1593,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 18",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1860,7 +1861,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 50 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 18",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1876,6 +1876,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -1927,7 +1928,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 to 80",
-        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -1943,10 +1943,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 10",
         "Interval": 5000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 10",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1962,6 +1962,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2155,7 +2156,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2229,7 +2230,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 80",
-        "Name": "Compare With Tolerance 11",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -2245,6 +2245,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2512,7 +2513,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 80 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 19",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -2528,6 +2528,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 18",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -2579,7 +2580,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 to 120",
-        "Name": "ScriptNodeSetParameter 18",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -2595,10 +2595,10 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeDelay, ScriptHandler",
+        "Name": "Delay 13",
         "Interval": 5000,
         "IntervalUnite": 1,
         "UserTitle": "Delay",
-        "Name": "Delay 13",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -2614,6 +2614,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2807,7 +2808,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2881,7 +2882,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 120",
-        "Name": "Compare With Tolerance 13",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -2897,6 +2897,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "ScriptNodeCompareWithTolerance 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3164,7 +3165,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Read Motor Temp 1 - 120 (Monitor)",
-        "Name": "ScriptNodeCompareWithTolerance 20",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -3180,6 +3180,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -3231,7 +3232,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Motor Temp 1 Temperature to 7",
-        "Name": "Set Parameter 15",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -3247,6 +3247,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3468,7 +3469,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Vref Back to Actual Voltage",
-        "Name": "Set Parameter 15",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -3484,6 +3484,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 21",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -3705,7 +3706,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set UUT Vref Back to Actual Voltage",
-        "Name": "ScriptNodeSetParameter 21",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

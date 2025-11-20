@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 5",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -83,7 +84,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Zero Current - Phase W",
-        "Name": "Compare With Tolerance 5",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -99,6 +99,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 6",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -176,7 +177,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Zero Current - Phase U",
-        "Name": "Compare With Tolerance 6",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -192,6 +192,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 4",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -269,7 +270,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Zero Current - BUS",
-        "Name": "Compare With Tolerance 4",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompareWithTolerance, ScriptHandler",
+        "Name": "Compare With Tolerance 2",
         "Parameter": {
           "$type": "DeviceCommunicators.NI_6002.NI6002_ParamData, DeviceCommunicators",
           "ExpectedRPM": 0,
@@ -102,7 +103,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Ambient Temperature",
-        "Name": "Compare With Tolerance 2",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,

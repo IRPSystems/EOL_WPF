@@ -6,6 +6,7 @@
     "$values": [
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "Get Register Values 13",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -198,7 +199,6 @@
         },
         "ComparedValue": 0,
         "UserTitle": "Get Fault Reg Vector 0",
-        "Name": "Get Register Values 13",
         "IsPass": false,
         "PassNextId": 2,
         "FailNextId": 0,
@@ -214,6 +214,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 14",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -406,7 +407,6 @@
         },
         "ComparedValue": 0,
         "UserTitle": "Get Fault Reg Vector 1",
-        "Name": "ScriptNodeGetRegisterValues 14",
         "IsPass": false,
         "PassNextId": 3,
         "FailNextId": 0,
@@ -422,6 +422,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 15",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -504,7 +505,6 @@
         },
         "ComparedValue": 0,
         "UserTitle": "Get Fusa P-BIT Fault Vector",
-        "Name": "ScriptNodeGetRegisterValues 15",
         "IsPass": false,
         "PassNextId": 4,
         "FailNextId": 0,
@@ -520,6 +520,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeGetRegisterValues, ScriptHandler",
+        "Name": "ScriptNodeGetRegisterValues 16",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -597,7 +598,6 @@
         },
         "ComparedValue": 0,
         "UserTitle": "Get Fusa C-BIT Fault Vector",
-        "Name": "ScriptNodeGetRegisterValues 16",
         "IsPass": false,
         "PassNextId": 5,
         "FailNextId": 0,
@@ -613,6 +613,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -686,7 +687,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Offset Calibration Phase U",
-        "Name": "Compare 24",
         "IsPass": false,
         "PassNextId": 6,
         "FailNextId": 0,
@@ -702,6 +702,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 25",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -775,7 +776,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Offset Calibration Phase W",
-        "Name": "Compare 25",
         "IsPass": false,
         "PassNextId": 7,
         "FailNextId": 0,
@@ -791,6 +791,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 26",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -864,9 +865,8 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Offset Calibration Bus",
-        "Name": "Compare 26",
         "IsPass": false,
-        "PassNextId": 8,
+        "PassNextId": 27,
         "FailNextId": 0,
         "ID": 7,
         "EOLReportsSelectionData": {
@@ -879,7 +879,140 @@
         }
       },
       {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 27",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Advanced",
+          "Description": "ADC Current Offset, Phase U",
+          "Default": "0",
+          "Cmd": "zeroffu",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              2000.0,
+              2100.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ADC Current Offset, Phase U",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
+        },
+        "UserTitle": "Save Offset Calibration Phase U",
+        "IsPass": false,
+        "PassNextId": 28,
+        "FailNextId": 0,
+        "ID": 27,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 28",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Advanced",
+          "Description": "ADC Current Offset, Phase W",
+          "Default": "0",
+          "Cmd": "zeroffw",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              2000.0,
+              2100.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ADC Current Offset, Phase W",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
+        },
+        "UserTitle": "Save Offset Calibration Phase W",
+        "IsPass": false,
+        "PassNextId": 29,
+        "FailNextId": 0,
+        "ID": 28,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
+        "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSaveParameter, ScriptHandler",
+        "Name": "Save Parameter 29",
+        "Parameter": {
+          "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
+          "ValueChanged": null,
+          "Value": "",
+          "GroupName": "Advanced",
+          "Description": "ADC Current Offset, Bus",
+          "Default": "0",
+          "Cmd": "zeroffb",
+          "Range": {
+            "$type": "System.Collections.Generic.List`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib",
+            "$values": [
+              2000.0,
+              2100.0
+            ]
+          },
+          "Format": null,
+          "Scale": 1.0,
+          "Note": null,
+          "Save": true,
+          "DropDown": null,
+          "Name": "ADC Current Offset, Bus",
+          "Units": null,
+          "DeviceType": 1,
+          "ToolTip": null,
+          "CommunicationTimeout": 0,
+          "IsInCANBus": true
+        },
+        "UserTitle": "Save Offset Calibration Phase BUS",
+        "IsPass": false,
+        "PassNextId": 8,
+        "FailNextId": 0,
+        "ID": 29,
+        "EOLReportsSelectionData": {
+          "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
+          "IsSaveToReport": true,
+          "IsSaveToPdfExecTable": true,
+          "IsSaveToPdfDynTable": true,
+          "IsSaveToCustomerVer": false,
+          "IsSaveToWats": true
+        }
+      },
+      {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 1",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -932,7 +1065,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode",
-        "Name": "Set Parameter 1",
         "IsPass": false,
         "PassNextId": 9,
         "FailNextId": 0,
@@ -948,6 +1080,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 26",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1000,7 +1133,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Enter ATE Mode (Monitor)",
-        "Name": "ScriptNodeSetParameter 26",
         "IsPass": false,
         "PassNextId": 10,
         "FailNextId": 0,
@@ -1016,6 +1148,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1117,7 +1250,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Get Motor State (ATE)",
-        "Name": "Compare 6",
         "IsPass": false,
         "PassNextId": 11,
         "FailNextId": 0,
@@ -1133,6 +1265,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 3",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1198,7 +1331,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Active Damping to OFF",
-        "Name": "Set Parameter 3",
         "IsPass": false,
         "PassNextId": 12,
         "FailNextId": 0,
@@ -1214,6 +1346,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1271,7 +1404,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set AB Fault Threshold to 5000",
-        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 13,
         "FailNextId": 0,
@@ -1287,6 +1419,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 5",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1344,7 +1477,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Start to 150",
-        "Name": "Set Parameter 5",
         "IsPass": false,
         "PassNextId": 14,
         "FailNextId": 0,
@@ -1360,6 +1492,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 6",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1417,7 +1550,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Cooling Temp Plate Max Cut to 150",
-        "Name": "Set Parameter 6",
         "IsPass": false,
         "PassNextId": 15,
         "FailNextId": 0,
@@ -1433,6 +1565,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 8",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1498,7 +1631,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Low Voltage Fault",
-        "Name": "Set Parameter 8",
         "IsPass": false,
         "PassNextId": 16,
         "FailNextId": 0,
@@ -1514,6 +1646,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 9",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1579,7 +1712,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Over Temp Fault",
-        "Name": "Set Parameter 9",
         "IsPass": false,
         "PassNextId": 17,
         "FailNextId": 0,
@@ -1595,6 +1727,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 10",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1660,7 +1793,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Cooling Plate Temp Sensor Fault",
-        "Name": "Set Parameter 10",
         "IsPass": false,
         "PassNextId": 18,
         "FailNextId": 0,
@@ -1676,6 +1808,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 11",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1741,7 +1874,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Current Sensor Factory Gain Fault",
-        "Name": "Set Parameter 11",
         "IsPass": false,
         "PassNextId": 19,
         "FailNextId": 0,
@@ -1757,6 +1889,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 12",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1822,7 +1955,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Bus Under Voltage Fault",
-        "Name": "ScriptNodeSetParameter 12",
         "IsPass": false,
         "PassNextId": 20,
         "FailNextId": 0,
@@ -1838,6 +1970,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 7",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1903,7 +2036,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Disable Can Bus No Communication Fault",
-        "Name": "Set Parameter 7",
         "IsPass": false,
         "PassNextId": 21,
         "FailNextId": 0,
@@ -1919,6 +2051,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 17",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -1976,7 +2109,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Derating Bus Voltage - Max Start To 420",
-        "Name": "ScriptNodeSetParameter 17",
         "IsPass": false,
         "PassNextId": 22,
         "FailNextId": 0,
@@ -1992,6 +2124,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2049,7 +2182,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Derating Bus Voltage - Max Cut To 430",
-        "Name": "ScriptNodeSetParameter 19",
         "IsPass": false,
         "PassNextId": 23,
         "FailNextId": 0,
@@ -2065,6 +2197,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 19",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2122,7 +2255,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Derating Bus Voltage -Min Cut To 245",
-        "Name": "ScriptNodeSetParameter 19",
         "IsPass": false,
         "PassNextId": 24,
         "FailNextId": 0,
@@ -2138,6 +2270,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "ScriptNodeSetParameter 20",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.MCU_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2195,7 +2328,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Derating Bus Voltage - Min Start To 245",
-        "Name": "ScriptNodeSetParameter 20",
         "IsPass": false,
         "PassNextId": 25,
         "FailNextId": 0,
@@ -2211,6 +2343,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeSetParameter, ScriptHandler",
+        "Name": "Set Parameter 24",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2432,7 +2565,6 @@
         "IsCriticalFault": false,
         "SafetyOfficerErrorLevel": 1,
         "UserTitle": "Set Vref To Actual Voltage",
-        "Name": "Set Parameter 24",
         "IsPass": false,
         "PassNextId": 26,
         "FailNextId": 0,
@@ -2448,6 +2580,7 @@
       },
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeCompare, ScriptHandler",
+        "Name": "Compare 23",
         "Parameter": {
           "$type": "DeviceCommunicators.MCU.ATE_ParamData, DeviceCommunicators",
           "ValueChanged": null,
@@ -2641,7 +2774,7 @@
               }
             ]
           },
-          "Value": 12118.0,
+          "Value": null,
           "GroupName": null,
           "Description": null,
           "Default": null,
@@ -2705,7 +2838,6 @@
           "DBCIntervalUnite": 1
         },
         "UserTitle": "Verify Fault Severity Below 2",
-        "Name": "Compare 23",
         "IsPass": false,
         "PassNextId": -1,
         "FailNextId": 0,
