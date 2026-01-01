@@ -119,10 +119,10 @@ namespace EOL.ViewModels
 
 			_runData = new RunData();
 
-			//_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
+			_isConfigSelectedByUser = _userConfigManager.ReadConfig(_eolSettings);
 
 
-            LoadConfigToUI();
+			LoadConfigToUI();
 
 			SelectedMode = "Operator";
 
@@ -191,13 +191,13 @@ namespace EOL.ViewModels
 					new SetupSelectionViewModel(_eolSettings.DeviceSetupUserData, _readDevicesFile);
 				InitSetupView();
 
-				MergeATEParamsToMCU(_setupSelectionVM.DevicesSourceList);
+				MergeATEParamsToMCU(_setupSelectionVM.DevicesSourceList_Full);
 
                 _watsConnectionMonitor = new WatsConnectionMonitor(baseUrl);
                 _watsConnectionMonitor.ConnectionStatusChanged += OnWatsConnectionStatusChanged;
 
 
-                if (_eolSettings.IsDefaultSettings)
+                if (_isConfigSelectedByUser == false)
 				{
 					SetupSelectionWindowView setupSelectionView = new SetupSelectionWindowView();
 					setupSelectionView.SetDataContext(_setupSelectionVM);

@@ -2681,6 +2681,12 @@
       {
         "$type": "ScriptHandler.Models.ScriptNodes.ScriptNodeEOLSetManufDate, ScriptHandler",
         "Name": "EOL Set Manufacture Date 4",
+        "DeviceType": 27,
+        "UserTitle": "Set Manufacture Date",
+        "IsPass": false,
+        "PassNextId": 0,
+        "FailNextId": 0,
+        "ID": 4,
         "EOLReportsSelectionData": {
           "$type": "ScriptHandler.Models.EOLReportsSelectionData, ScriptHandler",
           "IsSaveToReport": true,
@@ -2688,12 +2694,7 @@
           "IsSaveToPdfDynTable": true,
           "IsSaveToCustomerVer": false,
           "IsSaveToWats": true
-        },
-        "UserTitle": "Set Manufacture Date",
-        "IsPass": false,
-        "PassNextId": 0,
-        "FailNextId": 0,
-        "ID": 4
+        }
       }
     ]
   },

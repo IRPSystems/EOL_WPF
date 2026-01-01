@@ -399,6 +399,12 @@ namespace EOL.ViewModels
             settings.TypeNameHandling = TypeNameHandling.All;
             _logParametersList = JsonConvert.DeserializeObject(jsonString, settings) as ObservableCollection<DeviceParameterData>;
 
+			if(_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.CANBus))
+			{
+				foreach (DeviceParameterData parameter in _logParametersList)
+					parameter.IsInCANBus = true;
+			}
+
 			if (string.IsNullOrEmpty(_userDefaultSettings.ReportsSavingPath) == false)
 			{
 				RunScript.ParamRecording.RecordDirectory =
