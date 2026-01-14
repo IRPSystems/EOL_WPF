@@ -10,7 +10,7 @@
         "PartNumber": "HD80-450A00-MH00",
         "CustomerPartNumber": null,
         "Spec": null,
-        "HW_Version": "00-G",
+        "HW_Version": "00-I",
         "MCU_Version": null,
         "UserTitle": "Print Label",
         "IsPass": false,

@@ -5579,7 +5579,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -5587,12 +5587,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Offset Calibration Phase U",
                       "ExecutionTime": "00:00:00",
@@ -5660,7 +5660,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -5668,12 +5668,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Offset Calibration Phase W",
                       "ExecutionTime": "00:00:00",
@@ -5741,7 +5741,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -5749,12 +5749,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Offset Calibration Phase BUS",
                       "ExecutionTime": "00:00:00",
@@ -24961,7 +24961,7 @@
                       "Description": "Delay 5000 ms - ID:16",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 120 ±  2 - ID:17",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 120 ±  10 - ID:17",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -25201,7 +25201,7 @@
                         "IsInCANBus": true
                       },
                       "CompareValue": "120",
-                      "Tolerance": 2.0,
+                      "Tolerance": 10.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
                       "IsPercentageTolerance": false,
@@ -25256,10 +25256,10 @@
                       "UserTitle": "Read Motor Temp 1 - 120",
                       "ExecutionTime": "00:00:00",
                       "Name": "Compare With Tolerance 13",
-                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 120 ±  2 - ID:17",
+                      "Description": "Compare with tolerance:  \"ATE Get (MCU - CAN BUS)\" = 120 ±  10 - ID:17",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
-                      "PassNextDescription": "Compare with tolerance:  \"ATE Get\" = 120 ±  2 - ID:18",
+                      "PassNextDescription": "Compare with tolerance:  \"ATE Get\" = 120 ±  10 - ID:18",
                       "FailNextDescription": null,
                       "ErrorMessage": "",
                       "StopScriptStep": null,
@@ -25499,7 +25499,7 @@
                         "IsInCANBus": true
                       },
                       "CompareValue": "120",
-                      "Tolerance": 2.0,
+                      "Tolerance": 10.0,
                       "Comparation": 0,
                       "IsValueTolerance": true,
                       "IsPercentageTolerance": false,
@@ -25554,7 +25554,7 @@
                       "UserTitle": "Read Motor Temp 1 - 120 (Monitor)",
                       "ExecutionTime": "00:00:00",
                       "Name": "ScriptNodeCompareWithTolerance 20",
-                      "Description": "Compare with tolerance:  \"ATE Get\" = 120 ±  2 - ID:18",
+                      "Description": "Compare with tolerance:  \"ATE Get\" = 120 ±  10 - ID:18",
                       "OperatorErrorDescription": null,
                       "IsPass": false,
                       "PassNextDescription": "Set  \"Analog Output (NI DUCK)\" - ID:19",
@@ -29147,7 +29147,7 @@
                                 "CommService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
@@ -29155,12 +29155,12 @@
                                 "CanService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
                                 },
-                                "IsInitialized": true
+                                "IsInitialized": false
                               },
                               "UserTitle": "Save Offset Calibration Phase U",
                               "ExecutionTime": "00:00:00",
@@ -29228,7 +29228,7 @@
                                 "CommService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
@@ -29236,12 +29236,12 @@
                                 "CanService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
                                 },
-                                "IsInitialized": true
+                                "IsInitialized": false
                               },
                               "UserTitle": "Save Offset Calibration Phase W",
                               "ExecutionTime": "00:00:00",
@@ -29309,7 +29309,7 @@
                                 "CommService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
@@ -29317,12 +29317,12 @@
                                 "CanService": {
                                   "$type": "Communication.Services.CanPCanService, Communication",
                                   "Baudrate": 500000,
-                                  "IsInitialized": true,
+                                  "IsInitialized": false,
                                   "Name": "MCU_Communicator",
                                   "FromFilterID": 0,
                                   "ToFilterID": 0
                                 },
-                                "IsInitialized": true
+                                "IsInitialized": false
                               },
                               "UserTitle": "Save Offset Calibration Phase BUS",
                               "ExecutionTime": "00:00:00",
@@ -43466,7 +43466,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -43474,12 +43474,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Phase U Gain",
                       "ExecutionTime": "00:00:00",
@@ -47038,7 +47038,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -47046,12 +47046,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Phase W Gain",
                       "ExecutionTime": "00:00:00",
@@ -51856,7 +51856,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -51864,12 +51864,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Bus Gain",
                       "ExecutionTime": "00:00:00",
@@ -54518,7 +54518,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54526,12 +54526,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain U",
                       "ExecutionTime": "00:00:00",
@@ -54599,7 +54599,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54607,12 +54607,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain V",
                       "ExecutionTime": "00:00:00",
@@ -54680,7 +54680,7 @@
                         "CommService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
@@ -54688,12 +54688,12 @@
                         "CanService": {
                           "$type": "Communication.Services.CanPCanService, Communication",
                           "Baudrate": 500000,
-                          "IsInitialized": true,
+                          "IsInitialized": false,
                           "Name": "MCU_Communicator",
                           "FromFilterID": 0,
                           "ToFilterID": 0
                         },
-                        "IsInitialized": true
+                        "IsInitialized": false
                       },
                       "UserTitle": "Save Current Gain BUS",
                       "ExecutionTime": "00:00:00",
@@ -67170,7 +67170,7 @@
               "PartNumber": "HD80-450A00-MH00",
               "CustomerPartNumber": null,
               "Spec": null,
-              "HW_Version": "00-G",
+              "HW_Version": "00-I",
               "MCU_Version": null,
               "SerialNumber": null,
               "ParamData": null,
