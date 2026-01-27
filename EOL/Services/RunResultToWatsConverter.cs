@@ -362,7 +362,8 @@ namespace EOL.Services
                         if (dropdownProperty != null)
                         {
                             var dropdownValue = dropdownProperty.GetValue(paramleft);
-                            if (dropdownValue != null && paramleft.Value is string strvalue)
+                            object rawValue = GetValueFromSummary(compare.Parameter, compare.EOLStepSummerysList);
+                            if (dropdownValue != null && rawValue is string strvalue)
                             {
                                 foreach (var item in (List<DropDownParamData>)dropdownValue)
                                 {
@@ -415,11 +416,13 @@ namespace EOL.Services
                         }
                         else if (compare.ValueRight is DeviceParameterData paramright)
                         {
+                            object rawValue = GetValueFromSummary(paramright, compare.EOLStepSummerysList);
+                            double val = Convert.ToDouble(rawValue);
                             step.StepType = StepTypes.ET_MNLT;
                             NumericLimit numericlimitparam = CreateNumericLimit(
                                 compare.Parameter.Name + " (" + compare.Parameter.DeviceType.ToString() + ")",
-                                Convert.ToDouble(paramright.Value),
-                                Convert.ToDouble(paramright.Value),
+                                Convert.ToDouble(rawValue),
+                                Convert.ToDouble(rawValue),
                                 Convert.ToDouble(compare.ValueLeft),
                                 compare.Parameter.Units,
                                 compOperator,
@@ -430,7 +433,7 @@ namespace EOL.Services
                                 paramright.Name + " (" + paramright.DeviceType.ToString() + ")",
                                 0,
                                 0,
-                                Convert.ToDouble(paramright.Value),
+                                Convert.ToDouble(rawValue),
                                 compare.Parameter.Units,
                                 CompOperator.LOG,
                                 numericstatus
@@ -461,7 +464,9 @@ namespace EOL.Services
 
                 if (compareWithTolerance.IsExecuted)
                 {
-                    double parametervalue = (compareWithTolerance.IsUseParamFactor == true) ? Convert.ToDouble(compareWithTolerance.Parameter.Value) * compareWithTolerance.ParamFactor : Convert.ToDouble(compareWithTolerance.Parameter.Value);
+                    object rawValue = GetValueFromSummary(compareWithTolerance.Parameter, compareWithTolerance.EOLStepSummerysList);
+                    double val = Convert.ToDouble(rawValue);
+                    double parametervalue = (compareWithTolerance.IsUseParamFactor == true) ? val * compareWithTolerance.ParamFactor : val;
                     string numericStatus = step.Status;
                     if (step.Status == StatusCodes.Error)
                         numericStatus = StatusCodes.Failed;
@@ -485,9 +490,10 @@ namespace EOL.Services
                     }
                     else if (compareWithTolerance.CompareValue is DeviceParameterData param)
                     {
-
-                        double lowerToleranceValue = CalculateLowerToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
-                        double upperToleranceValue = CalculateUpperToleranceValue(Convert.ToDouble(param.Value), compareWithTolerance);
+                        object comparisonValue = GetComparisonValueFromSummary(compareWithTolerance.Parameter, compareWithTolerance.EOLStepSummerysList);
+                        double compareVal = Convert.ToDouble(comparisonValue);
+                        double lowerToleranceValue = CalculateLowerToleranceValue(compareVal, compareWithTolerance);
+                        double upperToleranceValue = CalculateUpperToleranceValue(compareVal, compareWithTolerance);
 
                         step.StepType = StepTypes.ET_MNLT;
                         NumericLimit numericlimitparam = CreateNumericLimit(
@@ -504,7 +510,7 @@ namespace EOL.Services
                             param.Name + " (" + param.DeviceType.ToString() + ")",
                             0,
                             0,
-                            Convert.ToDouble(param.Value),
+                            compareVal,
                             compareWithTolerance.Parameter.Units,
                             CompOperator.LOG,
                             numericStatus
@@ -595,8 +601,67 @@ namespace EOL.Services
                 ? value + (compareWithTolerance.Tolerance/100 * value)
                 : value + compareWithTolerance.Tolerance;
         }
+        private object GetValueFromSummary(DeviceParameterData parameter, List<EOLStepSummeryData> summaryList)
+        {
+            try
+            {
+                if (parameter != null)
+                {
+                    // Try to find a summary in EOLStepSummerysList with a matching Description
+                    if (summaryList != null)
+                    {
+                        var summary = summaryList.FirstOrDefault(s => s.ParamRefName == parameter.Name);
+                        if (summary != null && summary.TestValue.HasValue)
+                        {
+                            return summary.TestValue.Value;
+                        }
+                    }
 
+                    // Fallback: return the parameter's stored value
+                    return parameter.Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, nameof(GetValueFromSummary));
+            }
 
+            return 0;
+        }
+        private object GetComparisonValueFromSummary(DeviceParameterData parameter, List<EOLStepSummeryData> summaryList)
+        {
+            try
+            {
+                if (parameter != null)
+                {
+                    // Try to find a summary in EOLStepSummerysList with a matching Description
+                    if (summaryList != null)
+                    {
+                        var summary = summaryList.FirstOrDefault(s => s.ParamRefName == parameter.Name);
+                        if (summary != null && summary.ComparisonValue.HasValue)
+                        {
+                            return summary.ComparisonValue.Value;
+                        }
+                    }
+
+                    // Fallback: return the parameter's stored value
+                    if (parameter.Value != null && double.TryParse(parameter.Value.ToString(), out double val))
+                    {
+                        return val;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, nameof(GetComparisonValueFromSummary));
+            }
+
+            return 0;
+        }
     }
 
 }
+
+
+
+

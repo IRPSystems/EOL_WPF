@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DBCFileParser.Services;
+using DeviceCommunicators.CANBus;
 using DeviceCommunicators.MCU;
 using DeviceCommunicators.Models;
 using DeviceHandler.Models;
@@ -206,8 +207,31 @@ namespace EOL.ViewModels
 						Communicator = mcuDeviceFullData.DeviceCommunicator,
 					};
 				}
+				else if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.CANBus))
+				{
+                    DeviceFullData canBusDeviceFullData =
+							_devicesContainer.TypeToDevicesFullData[Entities.Enums.DeviceTypesEnum.CANBus];
+					var device = canBusDeviceFullData.Device as CANBus_DeviceData;
+					var mcuDevice = device.DeviceDataList.FirstOrDefault((p) => p.DeviceType == DeviceTypesEnum.MCU);
+					if (mcuDevice != null)
+					{
+						_stepSetParameter = new ScriptStepSetParameter()
+						{
+							Parameter = new MCU_ParamData()
+							{
+								Name = "Pass/Fail indication",
+								Cmd = "eolpassflag",
+								IsInCANBus = true,
+								DeviceType = DeviceTypesEnum.MCU,
+								Device = mcuDevice
+							},
 
-                _stopScriptStep = new StopScriptStepService();
+							Communicator = canBusDeviceFullData.DeviceCommunicator,
+						};
+					}
+                }
+
+					_stopScriptStep = new StopScriptStepService();
 				RunScript = new RunScriptService(_devicesContainer, _stopScriptStep, null, logLineList);
 				RunScript.ScriptStartedEvent += RunScript_ScriptStartedEvent;
 				RunScript.CurrentStepChangedEvent += RunScript_CurrentStepChangedEvent;
@@ -1138,21 +1162,27 @@ namespace EOL.ViewModels
 				else
 					_runData.NumberOfFailed++;
 
-				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU))
+				if (_devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.MCU) || _devicesContainer.TypeToDevicesFullData.ContainsKey(DeviceTypesEnum.CANBus))
 				{
+					var scriptStepValue = 0;
+
 					if (isPassed == false)
 					{
 						RunState = RunStateEnum.Failed;
 						singleTestResult.TestStatus = "Failed";
-						_stepSetParameter.Value = 0;
+                        scriptStepValue = 0;
 					}
 					else
 					{
 						singleTestResult.TestStatus = "Passed";
-						_stepSetParameter.Value = 1;
+                        scriptStepValue = 1;
 					}
 
-					_stepSetParameter.Execute();
+					if (_stepSetParameter != null)
+					{
+						_stepSetParameter.Value = scriptStepValue;
+                        _stepSetParameter.Execute();
+					}
 				}
 
 
